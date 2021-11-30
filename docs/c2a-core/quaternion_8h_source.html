@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Library/quaternion.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('quaternion_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">quaternion.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="quaternion_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef QUATERNION_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define QUATERNION_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// TODO: このソースコードは現在管理されてません．数学ライブラリは現在別にて実装中です</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// #define ADCS_PI   3.14159265358979323846</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// #define ADCS_PI_2 1.57079632679489661923</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="quaternion_8h.html#a4612140e4f0faf960f13946e699a99b4">Quat2DCM</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>* q, <span class="keywordtype">float</span> DCM[][3]);      <span class="comment">// クォータニオンqに対応するDCMを作成</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="quaternion_8h.html#ab6eb8094e4a750aea17cc496e8b56ab1">DCM2Quat</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> DCM[][3], <span class="keywordtype">float</span>* q);      <span class="comment">// DCMに対応するクォータニオンqを作成</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="quaternion_8h.html#a9f09753903f16a75998d6a7d7abaabf6">Angle2Quat</a>(<span class="keywordtype">float</span> Z, <span class="keywordtype">float</span> Y, <span class="keywordtype">float</span> X, <span class="keywordtype">float</span>* q); <span class="comment">// 各軸まわりの回転角Z, Y, X(オイラー角)からクォータニオンqを作成</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="quaternion_8h.html#aa10a756d0063e09f4607bbd415841557">QuatMul</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>* q1, <span class="keyword">const</span> <span class="keywordtype">float</span>* q2, <span class="keywordtype">float</span>* ans);    <span class="comment">// クォータニオン積q1*q2をansに格納</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">float</span> <a class="code" href="quaternion_8h.html#ad056aed6c51dcd412136afd752e12e3b">QuatNorm</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>* q);                    <span class="comment">// qのノルムを返す</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> <a class="code" href="quaternion_8h.html#acecc409fd7d87cc40bfa2fe07524298d">NormalizeQuat</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>* q, <span class="keywordtype">float</span>* ans);      <span class="comment">// qを正規化したものをansに格納</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="quaternion_8h.html#a0d332b8a9789295aadbeca6ae5d8b647">Quat0Positive</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>* q, <span class="keywordtype">float</span>* ans);     <span class="comment">// qのスカラー成分を正にしたものをansに格納</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="quaternion_8h.html#a10549ef32a4bd157f30906004d88b36b">QuatInverse</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>* q, <span class="keywordtype">float</span>* ans);       <span class="comment">// qの逆クォータニオンをansに格納</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// double ADCS_sin(double x);  // 三角関数の姿勢系実装（mathライブラリが有効化されていない場合に使う）</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// double ADCS_cos(double x);  // 三角関数の姿勢系実装（mathライブラリが有効化されていない場合に使う）</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aquaternion_8h_html_ab6eb8094e4a750aea17cc496e8b56ab1"><div class="ttname"><a href="quaternion_8h.html#ab6eb8094e4a750aea17cc496e8b56ab1">DCM2Quat</a></div><div class="ttdeci">void DCM2Quat(const float DCM[][3], float *q)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00025">quaternion.c:25</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_a0d332b8a9789295aadbeca6ae5d8b647"><div class="ttname"><a href="quaternion_8h.html#a0d332b8a9789295aadbeca6ae5d8b647">Quat0Positive</a></div><div class="ttdeci">void Quat0Positive(const float *q, float *ans)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00106">quaternion.c:106</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_a4612140e4f0faf960f13946e699a99b4"><div class="ttname"><a href="quaternion_8h.html#a4612140e4f0faf960f13946e699a99b4">Quat2DCM</a></div><div class="ttdeci">void Quat2DCM(const float *q, float DCM[][3])</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00012">quaternion.c:12</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_ad056aed6c51dcd412136afd752e12e3b"><div class="ttname"><a href="quaternion_8h.html#ad056aed6c51dcd412136afd752e12e3b">QuatNorm</a></div><div class="ttdeci">float QuatNorm(const float *q)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00078">quaternion.c:78</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_a10549ef32a4bd157f30906004d88b36b"><div class="ttname"><a href="quaternion_8h.html#a10549ef32a4bd157f30906004d88b36b">QuatInverse</a></div><div class="ttdeci">void QuatInverse(const float *q, float *ans)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00126">quaternion.c:126</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_acecc409fd7d87cc40bfa2fe07524298d"><div class="ttname"><a href="quaternion_8h.html#acecc409fd7d87cc40bfa2fe07524298d">NormalizeQuat</a></div><div class="ttdeci">int NormalizeQuat(const float *q, float *ans)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00083">quaternion.c:83</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_a9f09753903f16a75998d6a7d7abaabf6"><div class="ttname"><a href="quaternion_8h.html#a9f09753903f16a75998d6a7d7abaabf6">Angle2Quat</a></div><div class="ttdeci">void Angle2Quat(float Z, float Y, float X, float *q)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00044">quaternion.c:44</a></div></div>
+<div class="ttc" id="aquaternion_8h_html_aa10a756d0063e09f4607bbd415841557"><div class="ttname"><a href="quaternion_8h.html#aa10a756d0063e09f4607bbd415841557">QuatMul</a></div><div class="ttdeci">void QuatMul(const float *q1, const float *q2, float *ans)</div><div class="ttdef"><b>Definition:</b> <a href="quaternion_8c_source.html#l00068">quaternion.c:68</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="quaternion_8h.html">quaternion.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

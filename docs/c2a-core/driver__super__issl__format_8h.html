@@ -1,0 +1,745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Drivers/Super/driver_super_issl_format.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('driver__super__issl__format_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">driver_super_issl_format.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>DriverのためのISSLフォーマット通信のための公開定義，関数など  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="driver__super_8h_source.html">driver_super.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+driver_super_issl_format.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h__incl.svg" width="1723" height="663"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h__dep__incl.svg" width="188" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="driver__super__issl__format_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a9cd042b44199b07cf96215586c274bae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a9cd042b44199b07cf96215586c274bae">DS_ISSLFMT_STX_SIZE</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:a9cd042b44199b07cf96215586c274bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのSTXのサイズ  <a href="driver__super__issl__format_8h.html#a9cd042b44199b07cf96215586c274bae">[詳解]</a><br /></td></tr>
+<tr class="separator:a9cd042b44199b07cf96215586c274bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d044461aa95589c7e5efa8115d357f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a08d044461aa95589c7e5efa8115d357f">DS_ISSLFMT_ETX_SIZE</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:a08d044461aa95589c7e5efa8115d357f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのETXのサイズ  <a href="driver__super__issl__format_8h.html#a08d044461aa95589c7e5efa8115d357f">[詳解]</a><br /></td></tr>
+<tr class="separator:a08d044461aa95589c7e5efa8115d357f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e250e1398822df1bf79d1090fcc6eff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a6e250e1398822df1bf79d1090fcc6eff">DS_ISSLFMT_LEN_SIZE</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:a6e250e1398822df1bf79d1090fcc6eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのLENのサイズ  <a href="driver__super__issl__format_8h.html#a6e250e1398822df1bf79d1090fcc6eff">[詳解]</a><br /></td></tr>
+<tr class="separator:a6e250e1398822df1bf79d1090fcc6eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac78fa2544a8b64b1d055c88da923959b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#ac78fa2544a8b64b1d055c88da923959b">DS_ISSLFMT_CRC_SIZE</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:ac78fa2544a8b64b1d055c88da923959b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのCRCのサイズ  <a href="driver__super__issl__format_8h.html#ac78fa2544a8b64b1d055c88da923959b">[詳解]</a><br /></td></tr>
+<tr class="separator:ac78fa2544a8b64b1d055c88da923959b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8853485a2f5327cd323a6c4cefe17d56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a8853485a2f5327cd323a6c4cefe17d56">DS_ISSLFMT_COMMON_HEADER_SIZE</a>&#160;&#160;&#160;(<a class="el" href="driver__super__issl__format_8h.html#a9cd042b44199b07cf96215586c274bae">DS_ISSLFMT_STX_SIZE</a> + <a class="el" href="driver__super__issl__format_8h.html#a6e250e1398822df1bf79d1090fcc6eff">DS_ISSLFMT_LEN_SIZE</a>)</td></tr>
+<tr class="memdesc:a8853485a2f5327cd323a6c4cefe17d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのコモンヘッダーのサイズ  <a href="driver__super__issl__format_8h.html#a8853485a2f5327cd323a6c4cefe17d56">[詳解]</a><br /></td></tr>
+<tr class="separator:a8853485a2f5327cd323a6c4cefe17d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247f584adcb2a4a5a17b734a4862b1ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a247f584adcb2a4a5a17b734a4862b1ec">DS_ISSLFMT_COMMON_FOOTER_SIZE</a>&#160;&#160;&#160;(<a class="el" href="driver__super__issl__format_8h.html#a08d044461aa95589c7e5efa8115d357f">DS_ISSLFMT_ETX_SIZE</a> + <a class="el" href="driver__super__issl__format_8h.html#ac78fa2544a8b64b1d055c88da923959b">DS_ISSLFMT_CRC_SIZE</a>)</td></tr>
+<tr class="memdesc:a247f584adcb2a4a5a17b734a4862b1ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのコモンフッターのサイズ  <a href="driver__super__issl__format_8h.html#a247f584adcb2a4a5a17b734a4862b1ec">[詳解]</a><br /></td></tr>
+<tr class="separator:a247f584adcb2a4a5a17b734a4862b1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b38c953d5e8a8081cd0ee43722c5fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a44b38c953d5e8a8081cd0ee43722c5fc">DS_ISSLFMT_CMD_HEADER_SIZE</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a44b38c953d5e8a8081cd0ee43722c5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのCMDヘッダーのサイズ  <a href="driver__super__issl__format_8h.html#a44b38c953d5e8a8081cd0ee43722c5fc">[詳解]</a><br /></td></tr>
+<tr class="separator:a44b38c953d5e8a8081cd0ee43722c5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498ec583e46aab67d1479e248cbd0e39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a498ec583e46aab67d1479e248cbd0e39">DS_ISSLFMT_TLM_HEADER_SIZE</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a498ec583e46aab67d1479e248cbd0e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISSL標準フォーマットのTLMヘッダーのサイズ  <a href="driver__super__issl__format_8h.html#a498ec583e46aab67d1479e248cbd0e39">[詳解]</a><br /></td></tr>
+<tr class="separator:a498ec583e46aab67d1479e248cbd0e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d1828740b9898ab41737f69c063111"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#ab3d1828740b9898ab41737f69c063111">DS_ISSLFMT_STX_1ST_BYTE</a>&#160;&#160;&#160;(0xEB)</td></tr>
+<tr class="separator:ab3d1828740b9898ab41737f69c063111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9896c26a8549256a6123a0399e6c6d51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a9896c26a8549256a6123a0399e6c6d51">DS_ISSLFMT_STX_2ND_BYTE</a>&#160;&#160;&#160;(0x90)</td></tr>
+<tr class="separator:a9896c26a8549256a6123a0399e6c6d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97755a2c547c1c47a704fd892cc0499"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#ae97755a2c547c1c47a704fd892cc0499">DS_ISSLFMT_ETX_1ST_BYTE</a>&#160;&#160;&#160;(0xC5)</td></tr>
+<tr class="separator:ae97755a2c547c1c47a704fd892cc0499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c619d2c1aabd316d2bbb24834d88de0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a7c619d2c1aabd316d2bbb24834d88de0">DS_ISSLFMT_ETX_2ND_BYTE</a>&#160;&#160;&#160;(0x79)</td></tr>
+<tr class="separator:a7c619d2c1aabd316d2bbb24834d88de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc78cd10497c60397523f50c0aea4e8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#abc78cd10497c60397523f50c0aea4e8a">DS_C2AFMT_TCP_CMD_PRIMARY_HEADER_SIZE</a>&#160;&#160;&#160;(6)</td></tr>
+<tr class="memdesc:abc78cd10497c60397523f50c0aea4e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A間通信のTCPCMDののPrimary header size  <a href="driver__super__issl__format_8h.html#abc78cd10497c60397523f50c0aea4e8a">[詳解]</a><br /></td></tr>
+<tr class="separator:abc78cd10497c60397523f50c0aea4e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db2a5e909b6c87307cf0c55bb8cde20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a7db2a5e909b6c87307cf0c55bb8cde20">DS_C2AFMT_TCP_CMD_SECONDARY_HEADER_SIZE</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:a7db2a5e909b6c87307cf0c55bb8cde20"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A間通信のTCPCMDののSecondary header size  <a href="driver__super__issl__format_8h.html#a7db2a5e909b6c87307cf0c55bb8cde20">[詳解]</a><br /></td></tr>
+<tr class="separator:a7db2a5e909b6c87307cf0c55bb8cde20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f73cf5ec8cb38e50c03c6420e827dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a56f73cf5ec8cb38e50c03c6420e827dd">DS_C2AFMT_TCP_TLM_PRIMARY_HEADER_SIZE</a>&#160;&#160;&#160;(6)</td></tr>
+<tr class="memdesc:a56f73cf5ec8cb38e50c03c6420e827dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A間通信のTCPのTLMのPrimary header size  <a href="driver__super__issl__format_8h.html#a56f73cf5ec8cb38e50c03c6420e827dd">[詳解]</a><br /></td></tr>
+<tr class="separator:a56f73cf5ec8cb38e50c03c6420e827dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2447e7838183119c9a489384f92c07ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a2447e7838183119c9a489384f92c07ab">DS_C2AFMT_TCP_TLM_SECONDARY_HEADER_SIZE</a>&#160;&#160;&#160;(7)</td></tr>
+<tr class="memdesc:a2447e7838183119c9a489384f92c07ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A間通信のTCPのTLMのSecondary header size．ADU分割無し  <a href="driver__super__issl__format_8h.html#a2447e7838183119c9a489384f92c07ab">[詳解]</a><br /></td></tr>
+<tr class="separator:a2447e7838183119c9a489384f92c07ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:af76ef7ec65f21ab05a758684ec7575ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#af76ef7ec65f21ab05a758684ec7575ba">DS_ISSLFMT_get_tlm_version</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:af76ef7ec65f21ab05a758684ec7575ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM Versionの取得  <a href="driver__super__issl__format_8h.html#af76ef7ec65f21ab05a758684ec7575ba">[詳解]</a><br /></td></tr>
+<tr class="separator:af76ef7ec65f21ab05a758684ec7575ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c266bdbe1d869ff25875b845091a03c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a8c266bdbe1d869ff25875b845091a03c">DS_ISSLFMT_get_tlm_count</a> (const <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> version, const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a8c266bdbe1d869ff25875b845091a03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM countの取得  <a href="driver__super__issl__format_8h.html#a8c266bdbe1d869ff25875b845091a03c">[詳解]</a><br /></td></tr>
+<tr class="separator:a8c266bdbe1d869ff25875b845091a03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc175ee26b442de40c6f13fb117f54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#acfc175ee26b442de40c6f13fb117f54f">DS_ISSLFMT_get_tlm_id</a> (const <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> version, const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:acfc175ee26b442de40c6f13fb117f54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM idの取得  <a href="driver__super__issl__format_8h.html#acfc175ee26b442de40c6f13fb117f54f">[詳解]</a><br /></td></tr>
+<tr class="separator:acfc175ee26b442de40c6f13fb117f54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d20944b40dd5f98a15a88936efd3152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a4d20944b40dd5f98a15a88936efd3152">DS_ISSLFMT_get_tlm_length</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a4d20944b40dd5f98a15a88936efd3152"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM lengthの取得  <a href="driver__super__issl__format_8h.html#a4d20944b40dd5f98a15a88936efd3152">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d20944b40dd5f98a15a88936efd3152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a03615b9bc984c8965b662f0ee3d99b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a0a03615b9bc984c8965b662f0ee3d99b">DS_ISSLFMT_calc_crc</a> (const unsigned char *c, size_t n)</td></tr>
+<tr class="memdesc:a0a03615b9bc984c8965b662f0ee3d99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRCの計算  <a href="driver__super__issl__format_8h.html#a0a03615b9bc984c8965b662f0ee3d99b">[詳解]</a><br /></td></tr>
+<tr class="separator:a0a03615b9bc984c8965b662f0ee3d99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45cf4934bcb3da962db60d8a8e82069e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super__issl__format_8h.html#a45cf4934bcb3da962db60d8a8e82069e">DS_C2AFMT_get_tlm_id</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a45cf4934bcb3da962db60d8a8e82069e"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM idの取得  <a href="driver__super__issl__format_8h.html#a45cf4934bcb3da962db60d8a8e82069e">[詳解]</a><br /></td></tr>
+<tr class="separator:a45cf4934bcb3da962db60d8a8e82069e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>DriverのためのISSLフォーマット通信のための公開定義，関数など </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="abc78cd10497c60397523f50c0aea4e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc78cd10497c60397523f50c0aea4e8a">&#9670;&nbsp;</a></span>DS_C2AFMT_TCP_CMD_PRIMARY_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_C2AFMT_TCP_CMD_PRIMARY_HEADER_SIZE&#160;&#160;&#160;(6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A間通信のTCPCMDののPrimary header size </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7db2a5e909b6c87307cf0c55bb8cde20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db2a5e909b6c87307cf0c55bb8cde20">&#9670;&nbsp;</a></span>DS_C2AFMT_TCP_CMD_SECONDARY_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_C2AFMT_TCP_CMD_SECONDARY_HEADER_SIZE&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A間通信のTCPCMDののSecondary header size </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a56f73cf5ec8cb38e50c03c6420e827dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f73cf5ec8cb38e50c03c6420e827dd">&#9670;&nbsp;</a></span>DS_C2AFMT_TCP_TLM_PRIMARY_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_C2AFMT_TCP_TLM_PRIMARY_HEADER_SIZE&#160;&#160;&#160;(6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A間通信のTCPのTLMのPrimary header size </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2447e7838183119c9a489384f92c07ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2447e7838183119c9a489384f92c07ab">&#9670;&nbsp;</a></span>DS_C2AFMT_TCP_TLM_SECONDARY_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_C2AFMT_TCP_TLM_SECONDARY_HEADER_SIZE&#160;&#160;&#160;(7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A間通信のTCPのTLMのSecondary header size．ADU分割無し </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a44b38c953d5e8a8081cd0ee43722c5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b38c953d5e8a8081cd0ee43722c5fc">&#9670;&nbsp;</a></span>DS_ISSLFMT_CMD_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_CMD_HEADER_SIZE&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのCMDヘッダーのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a247f584adcb2a4a5a17b734a4862b1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247f584adcb2a4a5a17b734a4862b1ec">&#9670;&nbsp;</a></span>DS_ISSLFMT_COMMON_FOOTER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_COMMON_FOOTER_SIZE&#160;&#160;&#160;(<a class="el" href="driver__super__issl__format_8h.html#a08d044461aa95589c7e5efa8115d357f">DS_ISSLFMT_ETX_SIZE</a> + <a class="el" href="driver__super__issl__format_8h.html#ac78fa2544a8b64b1d055c88da923959b">DS_ISSLFMT_CRC_SIZE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのコモンフッターのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8853485a2f5327cd323a6c4cefe17d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8853485a2f5327cd323a6c4cefe17d56">&#9670;&nbsp;</a></span>DS_ISSLFMT_COMMON_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_COMMON_HEADER_SIZE&#160;&#160;&#160;(<a class="el" href="driver__super__issl__format_8h.html#a9cd042b44199b07cf96215586c274bae">DS_ISSLFMT_STX_SIZE</a> + <a class="el" href="driver__super__issl__format_8h.html#a6e250e1398822df1bf79d1090fcc6eff">DS_ISSLFMT_LEN_SIZE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのコモンヘッダーのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac78fa2544a8b64b1d055c88da923959b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac78fa2544a8b64b1d055c88da923959b">&#9670;&nbsp;</a></span>DS_ISSLFMT_CRC_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_CRC_SIZE&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのCRCのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae97755a2c547c1c47a704fd892cc0499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97755a2c547c1c47a704fd892cc0499">&#9670;&nbsp;</a></span>DS_ISSLFMT_ETX_1ST_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_ETX_1ST_BYTE&#160;&#160;&#160;(0xC5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ISSL標準フォーマットのETX 1st byteの取得 これはC2A形式/非C2A形式共通のTLM HEADER仕様である <br  />
+ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7c619d2c1aabd316d2bbb24834d88de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c619d2c1aabd316d2bbb24834d88de0">&#9670;&nbsp;</a></span>DS_ISSLFMT_ETX_2ND_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_ETX_2ND_BYTE&#160;&#160;&#160;(0x79)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ISSL標準フォーマットのETX 2nd byteの取得 これはC2A形式/非C2A形式共通のTLM HEADER仕様である <br  />
+ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a08d044461aa95589c7e5efa8115d357f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d044461aa95589c7e5efa8115d357f">&#9670;&nbsp;</a></span>DS_ISSLFMT_ETX_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_ETX_SIZE&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのETXのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6e250e1398822df1bf79d1090fcc6eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e250e1398822df1bf79d1090fcc6eff">&#9670;&nbsp;</a></span>DS_ISSLFMT_LEN_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_LEN_SIZE&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのLENのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab3d1828740b9898ab41737f69c063111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d1828740b9898ab41737f69c063111">&#9670;&nbsp;</a></span>DS_ISSLFMT_STX_1ST_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_STX_1ST_BYTE&#160;&#160;&#160;(0xEB)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ISSL標準フォーマットのSTX 1st byteの取得 これはC2A形式/非C2A形式共通のTLM HEADER仕様である <br  />
+ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9896c26a8549256a6123a0399e6c6d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9896c26a8549256a6123a0399e6c6d51">&#9670;&nbsp;</a></span>DS_ISSLFMT_STX_2ND_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_STX_2ND_BYTE&#160;&#160;&#160;(0x90)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ISSL標準フォーマットのSTX 2nd byteの取得 これはC2A形式/非C2A形式共通のTLM HEADER仕様である <br  />
+ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9cd042b44199b07cf96215586c274bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd042b44199b07cf96215586c274bae">&#9670;&nbsp;</a></span>DS_ISSLFMT_STX_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_STX_SIZE&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのSTXのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a498ec583e46aab67d1479e248cbd0e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498ec583e46aab67d1479e248cbd0e39">&#9670;&nbsp;</a></span>DS_ISSLFMT_TLM_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DS_ISSLFMT_TLM_HEADER_SIZE&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ISSL標準フォーマットのTLMヘッダーのサイズ </p>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8h_source.html">driver_super_issl_format.h</a> の <a class="el" href="driver__super__issl__format_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a45cf4934bcb3da962db60d8a8e82069e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45cf4934bcb3da962db60d8a8e82069e">&#9670;&nbsp;</a></span>DS_C2AFMT_get_tlm_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> DS_C2AFMT_get_tlm_id </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM idの取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd>
+<dd>
+これはC2A形式で使われるTLM HEADER仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td>DriverSuper構造体のDS_StreamConfig </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>id </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8c_source.html">driver_super_issl_format.c</a> の <a class="el" href="driver__super__issl__format_8c_source.html#l00058">58</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h_a45cf4934bcb3da962db60d8a8e82069e_cgraph.svg" width="387" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0a03615b9bc984c8965b662f0ee3d99b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a03615b9bc984c8965b662f0ee3d99b">&#9670;&nbsp;</a></span>DS_ISSLFMT_calc_crc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_ISSLFMT_calc_crc </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CRCの計算 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>CRC-16-IBMを使う </dd>
+<dd>
+これはC2A形式/非C2A形式共通のTLM HEADER仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>CRCを計算するデータのポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>n データ長 </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8c_source.html">driver_super_issl_format.c</a> の <a class="el" href="driver__super__issl__format_8c_source.html#l00053">53</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h_a0a03615b9bc984c8965b662f0ee3d99b_cgraph.svg" width="354" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8c266bdbe1d869ff25875b845091a03c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c266bdbe1d869ff25875b845091a03c">&#9670;&nbsp;</a></span>DS_ISSLFMT_get_tlm_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> DS_ISSLFMT_get_tlm_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM countの取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd>
+<dd>
+これは非C2A形式で使われるTLM HEADER仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">version</td><td>TLM Version </td></tr>
+    <tr><td class="paramname">p_stream_config</td><td>DriverSuper構造体のDS_StreamConfig </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TLM count（バージョン 0x01ではuint8_tだが将来性のためにuint32_tで返す） </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8c_source.html">driver_super_issl_format.c</a> の <a class="el" href="driver__super__issl__format_8c_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h_a8c266bdbe1d869ff25875b845091a03c_cgraph.svg" width="368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acfc175ee26b442de40c6f13fb117f54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc175ee26b442de40c6f13fb117f54f">&#9670;&nbsp;</a></span>DS_ISSLFMT_get_tlm_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> DS_ISSLFMT_get_tlm_id </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM idの取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd>
+<dd>
+これは非C2A形式で使われるTLM HEADER仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">version</td><td>TLM Version </td></tr>
+    <tr><td class="paramname">p_stream_config</td><td>DriverSuper構造体のDS_StreamConfig </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>id（バージョン 0x01ではuint16_tだが将来性のためにuint32_tで返す） </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8c_source.html">driver_super_issl_format.c</a> の <a class="el" href="driver__super__issl__format_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h_acfc175ee26b442de40c6f13fb117f54f_cgraph.svg" width="388" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4d20944b40dd5f98a15a88936efd3152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d20944b40dd5f98a15a88936efd3152">&#9670;&nbsp;</a></span>DS_ISSLFMT_get_tlm_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> DS_ISSLFMT_get_tlm_length </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM lengthの取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd>
+<dd>
+これはC2A形式/非C2A形式共通のTLM HEADER仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td>DriverSuper構造体のDS_StreamConfig </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>id（バージョン 0x01ではuint16_tだが将来性のためにuint32_tで返す） </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8c_source.html">driver_super_issl_format.c</a> の <a class="el" href="driver__super__issl__format_8c_source.html#l00044">44</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h_a4d20944b40dd5f98a15a88936efd3152_cgraph.svg" width="368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af76ef7ec65f21ab05a758684ec7575ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af76ef7ec65f21ab05a758684ec7575ba">&#9670;&nbsp;</a></span>DS_ISSLFMT_get_tlm_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> DS_ISSLFMT_get_tlm_version </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM Versionの取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd>
+<dd>
+これは非C2A形式で使われるTLM HEADER仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td>DriverSuper構造体のDS_StreamConfig </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>バージョン（バージョン 0x01ではuint8_tだが将来性のためにuint32_tで返す） </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super__issl__format_8c_source.html">driver_super_issl_format.c</a> の <a class="el" href="driver__super__issl__format_8c_source.html#l00011">11</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super__issl__format_8h_af76ef7ec65f21ab05a758684ec7575ba_cgraph.svg" width="368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_5aa36b0b2e2a91a5ba31d755d7179f05.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_ab5bf86cca0ab6d5a740561597b3fd7a.html">Super</a></li><li class="navelem"><a class="el" href="driver__super__issl__format_8h.html">driver_super_issl_format.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

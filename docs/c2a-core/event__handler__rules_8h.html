@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/Settings/System/EventHandlerRules/event_handler_rules.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('event__handler__rules_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">event_handler_rules.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>EH の Rule 共通ヘッダ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler__rules_8h__dep__incl.svg" width="1343" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="event__handler__rules_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:adeb26d5f394a1bc32e9aff9f17c95d8a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a> { <br />
+&#160;&#160;<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aa9748317948270e58a89398327ac5792f">EH_RULE_TEST0</a> = 100, 
+<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aa630531542ba9235496cd4a88bf03b3a7">EH_RULE_TEST1</a> = 101, 
+<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aaba6bad2b8c8145688c8388c666cebe01">EH_RULE_TEST2</a> = 102, 
+<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aa13b9bdd31edbcd0a992122a2d62785b0">EH_RULE_TEST3</a> = 103, 
+<br />
+&#160;&#160;<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aac193a388ee9fc6b6187ffcb5c15723e6">EH_RULE_TEST4</a> = 104, 
+<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aa187fc165c2c6515cef562b1bd8582d6d">EH_RULE_TEST5</a> = 105, 
+<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aa8756a2b01592111f78b46ba16e749fab">EH_RULE_TEST6</a> = 106, 
+<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8aaae8bde602c31b0ccd0deff5786208573">EH_RULE_TEST7</a> = 107
+<br />
+ }</td></tr>
+<tr class="separator:adeb26d5f394a1bc32e9aff9f17c95d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a0c0069644e7b97a939424af1cff3b281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler__rules_8h.html#a0c0069644e7b97a939424af1cff3b281">EH_load_default_rules</a> (void)</td></tr>
+<tr class="memdesc:a0c0069644e7b97a939424af1cff3b281"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_handler のデフォルトルールを読み込む  <a href="event__handler__rules_8h.html#a0c0069644e7b97a939424af1cff3b281">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c0069644e7b97a939424af1cff3b281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7f19d43fe3f1e8c4360f4a010c4441"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler__rules_8h.html#a7c7f19d43fe3f1e8c4360f4a010c4441">EH_load_rule_test</a> (void)</td></tr>
+<tr class="separator:a7c7f19d43fe3f1e8c4360f4a010c4441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>EH の Rule 共通ヘッダ </p>
+
+<p class="definition"> <a class="el" href="event__handler__rules_8h_source.html">event_handler_rules.h</a> に定義があります。</p>
+</div><h2 class="groupheader">列挙型詳解</h2>
+<a id="adeb26d5f394a1bc32e9aff9f17c95d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb26d5f394a1bc32e9aff9f17c95d8a">&#9670;&nbsp;</a></span>EH_RULE_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aa9748317948270e58a89398327ac5792f"></a>EH_RULE_TEST0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aa630531542ba9235496cd4a88bf03b3a7"></a>EH_RULE_TEST1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aaba6bad2b8c8145688c8388c666cebe01"></a>EH_RULE_TEST2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aa13b9bdd31edbcd0a992122a2d62785b0"></a>EH_RULE_TEST3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aac193a388ee9fc6b6187ffcb5c15723e6"></a>EH_RULE_TEST4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aa187fc165c2c6515cef562b1bd8582d6d"></a>EH_RULE_TEST5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aa8756a2b01592111f78b46ba16e749fab"></a>EH_RULE_TEST6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adeb26d5f394a1bc32e9aff9f17c95d8aaae8bde602c31b0ccd0deff5786208573"></a>EH_RULE_TEST7&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__handler__rules_8h_source.html">event_handler_rules.h</a> の <a class="el" href="event__handler__rules_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0c0069644e7b97a939424af1cff3b281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0069644e7b97a939424af1cff3b281">&#9670;&nbsp;</a></span>EH_load_default_rules()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EH_load_default_rules </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_handler のデフォルトルールを読み込む </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler__rules_8c_source.html">event_handler_rules.c</a> の <a class="el" href="event__handler__rules_8c_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler__rules_8h_a0c0069644e7b97a939424af1cff3b281_cgraph.svg" width="943" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler__rules_8h_a0c0069644e7b97a939424af1cff3b281_icgraph.svg" width="1558" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7c7f19d43fe3f1e8c4360f4a010c4441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c7f19d43fe3f1e8c4360f4a010c4441">&#9670;&nbsp;</a></span>EH_load_rule_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EH_load_rule_test </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler__rule__test_8c_source.html">event_handler_rule_test.c</a> の <a class="el" href="event__handler__rule__test_8c_source.html#l00010">10</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler__rules_8h_a7c7f19d43fe3f1e8c4360f4a010c4441_cgraph.svg" width="728" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler__rules_8h_a7c7f19d43fe3f1e8c4360f4a010c4441_icgraph.svg" width="1744" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_a6c80cab417eca370553d013a38aa3d8.html">Settings</a></li><li class="navelem"><a class="el" href="dir_5b4bcf4daeb74033815e8a5e661de116.html">System</a></li><li class="navelem"><a class="el" href="dir_2c3421f3554fae66863adfbef4a70a34.html">EventHandlerRules</a></li><li class="navelem"><a class="el" href="event__handler__rules_8h.html">event_handler_rules.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/Applications/DriverInstances/di_uart_test.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('di__uart__test_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">di_uart_test.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="di__uart__test_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="di__uart__test_8h.html">di_uart_test.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">// for NULL</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">src_core/Library/print.h</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../Settings/port_config.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">   14</a></span>&#160;<span class="keyword">static</span> <a class="code" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a> <a class="code" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="di__uart__test_8h.html#a6133150d5fa512d101162ff13d1438c7">   15</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a>* <a class="code" href="di__uart__test_8c.html#a6133150d5fa512d101162ff13d1438c7">uart_test_instance</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="di__uart__test_8c.html#a649eb3a1621b9766bffaef3609ef520a">UART_TEST_init_by_AM_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="di__uart__test_8c.html#a480c3ad63adf77375e50cf42ea37422d">UART_TEST_init_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5">UART_TEST_update_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// TODO: 実装する</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// static int  UART_TEST_fill_with_zero_(uint32_t no);</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// static int  UART_TEST_abort_fill_nodata_(uint8_t err);</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// static int  UART_TEST_set_rec_flag_(uint32_t no);</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// static int  UART_TEST_unset_rec_flag_(uint32_t no);</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// static int  UART_TEST_is_rec_flag_up_(uint32_t no);</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// !!!!!!!!!! 注意 !!!!!!!!!!</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// このDriverは，AM_initialize_app_ では初期化されない！！</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// initコマンドで初期化すること</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="di__uart__test_8h.html#ac2cadb32ca03377583d0cc1d5b0f39cc">   32</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="di__uart__test_8c.html#ac2cadb32ca03377583d0cc1d5b0f39cc">UART_TEST_update</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a>(<span class="stringliteral">&quot;update_uart_test&quot;</span>, <a class="code" href="di__uart__test_8c.html#a649eb3a1621b9766bffaef3609ef520a">UART_TEST_init_by_AM_</a>, <a class="code" href="di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5">UART_TEST_update_</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="di__uart__test_8c.html#a649eb3a1621b9766bffaef3609ef520a">   38</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="di__uart__test_8c.html#a649eb3a1621b9766bffaef3609ef520a">UART_TEST_init_by_AM_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="di__uart__test_8c.html#a6133150d5fa512d101162ff13d1438c7">uart_test_instance</a> = &amp;<a class="code" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="di__uart__test_8c.html#a480c3ad63adf77375e50cf42ea37422d">   44</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="di__uart__test_8c.html#a480c3ad63adf77375e50cf42ea37422d">UART_TEST_init_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a> ret;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  ret = <a class="code" href="_u_a_r_t___t_e_s_t_8c.html#a0793b2accdbca92a28f5a0ae8852d06c">UART_TEST_init</a>(&amp;<a class="code" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a>, <a class="code" href="port__config_8h.html#a663188f7e1db99163c02898722d4d140">PORT_CH_UART_TEST</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (ret != <a class="code" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4aa98e75a23a2bb5942176404ec5c8b6f3">DS_INIT_OK</a>)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;UART_TEST init Failed! Err:%d \n&quot;</span>, ret);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;######################### \n&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot; UART_TEST init !!!!!!!! \n&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;######################### \n&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5">   60</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5">UART_TEST_update_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="driver__super_8h.html#a73c6f1b4d0bfa0367859ec847407e04d">DS_REC_ERR_CODE</a> ret;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  ret = <a class="code" href="_u_a_r_t___t_e_s_t_8c.html#abb8834a562ff20b065ccb3c8ac8815d5">UART_TEST_rec</a>(&amp;<a class="code" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// TODO: エラー処理</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  (void)ret;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="di__uart__test_8h.html#a21ee058d9a16031d797b696657a137bd">   71</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="di__uart__test_8c.html#a21ee058d9a16031d797b696657a137bd">Cmd_UART_TEST_INIT_DI</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="di__uart__test_8c.html#a480c3ad63adf77375e50cf42ea37422d">UART_TEST_init_</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="di__uart__test_8h.html#ad6cbb9f2a398fb47c34a5602e5515a1f">   81</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="di__uart__test_8c.html#ad6cbb9f2a398fb47c34a5602e5515a1f">Cmd_UART_TEST_UPDATE</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5">UART_TEST_update_</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="di__uart__test_8h.html#affbca026ccae45f4fd722d3760b07eb7">   91</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="di__uart__test_8c.html#affbca026ccae45f4fd722d3760b07eb7">Cmd_UART_TEST_SEND_TEST</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">const</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* param = <a class="code" href="common__tlm__cmd__packet_8h.html#ad98f8912cc698e43db15c2bd8ea0c170">CCP_get_param_head</a>(packet);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> id;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="driver__super_8h.html#a81f032590771b0c11b9190ad7004cd6b">DS_CMD_ERR_CODE</a> ret;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">id</span> = param[0];</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  ret = <a class="code" href="_u_a_r_t___t_e_s_t_8c.html#a2a62d5adc6376f2be5f38edef8aa1165">UART_TEST_send</a>(&amp;<a class="code" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="driver__super_8c.html#a9e96a9d0e22e3931356c2b51aff32d43">DS_conv_cmd_err_to_ccp_exec_sts</a>(ret);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#pragma section</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a></div><div class="ttdeci">@ CCP_EXEC_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8h_source.html#l00033">common_tlm_cmd_packet.h:33</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00017">stdint.h:17</a></div></div>
+<div class="ttc" id="adriver__super_8h_html_a73c6f1b4d0bfa0367859ec847407e04d"><div class="ttname"><a href="driver__super_8h.html#a73c6f1b4d0bfa0367859ec847407e04d">DS_REC_ERR_CODE</a></div><div class="ttdeci">DS_REC_ERR_CODE</div><div class="ttdoc">Driver の受信関数のエラーコード</div><div class="ttdef"><b>Definition:</b> <a href="driver__super_8h_source.html#l00075">driver_super.h:75</a></div></div>
+<div class="ttc" id="adriver__super_8h_html_a81f032590771b0c11b9190ad7004cd6b"><div class="ttname"><a href="driver__super_8h.html#a81f032590771b0c11b9190ad7004cd6b">DS_CMD_ERR_CODE</a></div><div class="ttdeci">DS_CMD_ERR_CODE</div><div class="ttdoc">各DIが Driver にコマンドを送るときに，統一的に使うコード</div><div class="ttdef"><b>Definition:</b> <a href="driver__super_8h_source.html#l00092">driver_super.h:92</a></div></div>
+<div class="ttc" id="adi__uart__test_8h_html"><div class="ttname"><a href="di__uart__test_8h.html">di_uart_test.h</a></div><div class="ttdoc">UARTとDriverSuperテスト用</div></div>
+<div class="ttc" id="adriver__super_8h_html_a63557647f0cd8721358a239372a9eae4"><div class="ttname"><a href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a></div><div class="ttdeci">DS_INIT_ERR_CODE</div><div class="ttdoc">Driver の初期化関数のエラーコード</div><div class="ttdef"><b>Definition:</b> <a href="driver__super_8h_source.html#l00060">driver_super.h:60</a></div></div>
+<div class="ttc" id="a_u_a_r_t___t_e_s_t_8c_html_a0793b2accdbca92a28f5a0ae8852d06c"><div class="ttname"><a href="_u_a_r_t___t_e_s_t_8c.html#a0793b2accdbca92a28f5a0ae8852d06c">UART_TEST_init</a></div><div class="ttdeci">DS_INIT_ERR_CODE UART_TEST_init(UART_TEST_Driver *uart_test_instance, unsigned char ch)</div><div class="ttdoc">UART_TEST初期化</div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t___t_e_s_t_8c_source.html#l00036">UART_TEST.c:36</a></div></div>
+<div class="ttc" id="asrc__core_2_library_2print_8c_html_a4bc499fc724de87725ee7dc60ed1d106"><div class="ttname"><a href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a></div><div class="ttdeci">void Printf(char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="src__core_2_library_2print_8c_source.html#l00011">print.c:11</a></div></div>
+<div class="ttc" id="adriver__super_8c_html_a9e96a9d0e22e3931356c2b51aff32d43"><div class="ttname"><a href="driver__super_8c.html#a9e96a9d0e22e3931356c2b51aff32d43">DS_conv_cmd_err_to_ccp_exec_sts</a></div><div class="ttdeci">CCP_EXEC_STS DS_conv_cmd_err_to_ccp_exec_sts(DS_CMD_ERR_CODE code)</div><div class="ttdoc">DS_CMD_ERR_CODE から CCP_EXEC_STS への変換関数</div><div class="ttdef"><b>Definition:</b> <a href="driver__super_8c_source.html#l01653">driver_super.c:1653</a></div></div>
+<div class="ttc" id="astruct_u_a_r_t___t_e_s_t___driver_html"><div class="ttname"><a href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t___t_e_s_t_8h_source.html#l00027">UART_TEST.h:27</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_a649eb3a1621b9766bffaef3609ef520a"><div class="ttname"><a href="di__uart__test_8c.html#a649eb3a1621b9766bffaef3609ef520a">UART_TEST_init_by_AM_</a></div><div class="ttdeci">static void UART_TEST_init_by_AM_(void)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00038">di_uart_test.c:38</a></div></div>
+<div class="ttc" id="adriver__super_8h_html_a63557647f0cd8721358a239372a9eae4aa98e75a23a2bb5942176404ec5c8b6f3"><div class="ttname"><a href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4aa98e75a23a2bb5942176404ec5c8b6f3">DS_INIT_OK</a></div><div class="ttdeci">@ DS_INIT_OK</div><div class="ttdoc">OK</div><div class="ttdef"><b>Definition:</b> <a href="driver__super_8h_source.html#l00062">driver_super.h:62</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_a480c3ad63adf77375e50cf42ea37422d"><div class="ttname"><a href="di__uart__test_8c.html#a480c3ad63adf77375e50cf42ea37422d">UART_TEST_init_</a></div><div class="ttdeci">static void UART_TEST_init_(void)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00044">di_uart_test.c:44</a></div></div>
+<div class="ttc" id="aprint_8h_html"><div class="ttname"><a href="print_8h.html">print.h</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_ac2cadb32ca03377583d0cc1d5b0f39cc"><div class="ttname"><a href="di__uart__test_8c.html#ac2cadb32ca03377583d0cc1d5b0f39cc">UART_TEST_update</a></div><div class="ttdeci">AppInfo UART_TEST_update(void)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00032">di_uart_test.c:32</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_ad6cbb9f2a398fb47c34a5602e5515a1f"><div class="ttname"><a href="di__uart__test_8c.html#ad6cbb9f2a398fb47c34a5602e5515a1f">Cmd_UART_TEST_UPDATE</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_UART_TEST_UPDATE(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00081">di_uart_test.c:81</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_a8f76f956fd20e62e8cac93ad593cfcd5"><div class="ttname"><a href="di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5">UART_TEST_update_</a></div><div class="ttdeci">static void UART_TEST_update_(void)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00060">di_uart_test.c:60</a></div></div>
+<div class="ttc" id="a_u_a_r_t___t_e_s_t_8c_html_a2a62d5adc6376f2be5f38edef8aa1165"><div class="ttname"><a href="_u_a_r_t___t_e_s_t_8c.html#a2a62d5adc6376f2be5f38edef8aa1165">UART_TEST_send</a></div><div class="ttdeci">DS_CMD_ERR_CODE UART_TEST_send(UART_TEST_Driver *uart_test_instance, uint8_t id)</div><div class="ttdoc">UART_TESTへのコマンド送信</div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t___t_e_s_t_8c_source.html#l00150">UART_TEST.c:150</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_a6133150d5fa512d101162ff13d1438c7"><div class="ttname"><a href="di__uart__test_8c.html#a6133150d5fa512d101162ff13d1438c7">uart_test_instance</a></div><div class="ttdeci">const UART_TEST_Driver * uart_test_instance</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00015">di_uart_test.c:15</a></div></div>
+<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00006">app_info.h:6</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_affbca026ccae45f4fd722d3760b07eb7"><div class="ttname"><a href="di__uart__test_8c.html#affbca026ccae45f4fd722d3760b07eb7">Cmd_UART_TEST_SEND_TEST</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_UART_TEST_SEND_TEST(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00091">di_uart_test.c:91</a></div></div>
+<div class="ttc" id="a_u_a_r_t___t_e_s_t_8c_html_abb8834a562ff20b065ccb3c8ac8815d5"><div class="ttname"><a href="_u_a_r_t___t_e_s_t_8c.html#abb8834a562ff20b065ccb3c8ac8815d5">UART_TEST_rec</a></div><div class="ttdeci">DS_REC_ERR_CODE UART_TEST_rec(UART_TEST_Driver *uart_test_instance)</div><div class="ttdoc">UART_TESTのデータ（テレメ）受信</div><div class="ttdef"><b>Definition:</b> <a href="_u_a_r_t___t_e_s_t_8c_source.html#l00096">UART_TEST.c:96</a></div></div>
+<div class="ttc" id="aport__config_8h_html_a663188f7e1db99163c02898722d4d140"><div class="ttname"><a href="port__config_8h.html#a663188f7e1db99163c02898722d4d140">PORT_CH_UART_TEST</a></div><div class="ttdeci">#define PORT_CH_UART_TEST</div><div class="ttdoc">RS-422 UART ch1</div><div class="ttdef"><b>Definition:</b> <a href="port__config_8h_source.html#l00016">port_config.h:16</a></div></div>
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714b"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a></div><div class="ttdeci">CCP_EXEC_STS</div><div class="ttdoc">コマンド実行結果コード</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8h_source.html#l00025">common_tlm_cmd_packet.h:25</a></div></div>
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_ad98f8912cc698e43db15c2bd8ea0c170"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#ad98f8912cc698e43db15c2bd8ea0c170">CCP_get_param_head</a></div><div class="ttdeci">const uint8_t * CCP_get_param_head(const CTCP *packet)</div><div class="ttdoc">先頭のパラメタのポインタを取得</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8c_source.html#l00121">common_tlm_cmd_packet.c:121</a></div></div>
+<div class="ttc" id="astruct_t_c_p_html"><div class="ttname"><a href="struct_t_c_p.html">TCP</a></div><div class="ttdoc">TCPacket or Space Packet</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_packet_8h_source.html#l00019">TCPacket.h:19</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_a550e126a9e4e0abcb87168a390cea6cd"><div class="ttname"><a href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a></div><div class="ttdeci">static UART_TEST_Driver uart_test_instance_</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00014">di_uart_test.c:14</a></div></div>
+<div class="ttc" id="adi__uart__test_8c_html_a21ee058d9a16031d797b696657a137bd"><div class="ttname"><a href="di__uart__test_8c.html#a21ee058d9a16031d797b696657a137bd">Cmd_UART_TEST_INIT_DI</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_UART_TEST_INIT_DI(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="di__uart__test_8c_source.html#l00071">di_uart_test.c:71</a></div></div>
+<div class="ttc" id="aapp__info_8c_html_a80d1a060d7512364285ead7bdc4c0105"><div class="ttname"><a href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a></div><div class="ttdeci">AppInfo create_app_info(const char *name, void(*initializer)(void), void(*entry_point)(void))</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8c_source.html#l00006">app_info.c:6</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_4ee6211a2ef4316cc067157a00fb7dc2.html">Applications</a></li><li class="navelem"><a class="el" href="dir_f2730db6979c1b7cd23978bcad1c8681.html">DriverInstances</a></li><li class="navelem"><a class="el" href="di__uart__test_8c.html">di_uart_test.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

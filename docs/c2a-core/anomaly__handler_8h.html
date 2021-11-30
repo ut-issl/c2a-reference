@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Applications/anomaly_handler.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('anomaly__handler_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">anomaly_handler.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="anomaly__logger_8h_source.html">../System/AnomalyLogger/anomaly_logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="app__info_8h_source.html">../System/ApplicationManager/app_info.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__tlm__cmd__packet_8h_source.html">../CmdTlm/common_tlm_cmd_packet.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="block__command__definitions_8h_source.html">src_user/CmdTlm/block_command_definitions.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="block__command__table_8h_source.html">../CmdTlm/block_command_table.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="anomaly__group_8h_source.html">src_user/Settings/AnomalyLogger/anomaly_group.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ah__rules_8h_source.html">src_user/Settings/Applications/AnomalyHandlerRules/ah_rules.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="anomaly__handler__params_8h_source.html">src_user/Settings/Applications/anomaly_handler_params.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+anomaly_handler.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h__incl.svg" width="2152" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h__dep__incl.svg" width="644" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="anomaly__handler_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_h___rule.html">AH_Rule</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_h___element.html">AH_Element</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_h___pointer.html">AH_Pointer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_anomaly_handler.html">AnomalyHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_h___anomaly_respond.html">AH_AnomalyRespond</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_h___anomaly_respond_log.html">AH_AnomalyRespondLog</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a874366f360bff1cdf88e1e0244cc6001"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a874366f360bff1cdf88e1e0244cc6001">AH_TLM_PAGE_SIZE</a>&#160;&#160;&#160;(32)</td></tr>
+<tr class="memdesc:a874366f360bff1cdf88e1e0244cc6001"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnomalyHandlerのルールテーブルの1テレメトリパケット(=1ページ)に格納されるルール数（ページネーション用）  <a href="anomaly__handler_8h.html#a874366f360bff1cdf88e1e0244cc6001">[詳解]</a><br /></td></tr>
+<tr class="separator:a874366f360bff1cdf88e1e0244cc6001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70aa8c1b2bce865070a71caa29b0136a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a70aa8c1b2bce865070a71caa29b0136a">AH_TLM_PAGE_MAX</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a70aa8c1b2bce865070a71caa29b0136a"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnomalyHandlerのルールテーブルのページ数（ページネーション用）  <a href="anomaly__handler_8h.html#a70aa8c1b2bce865070a71caa29b0136a">[詳解]</a><br /></td></tr>
+<tr class="separator:a70aa8c1b2bce865070a71caa29b0136a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bd55c2563b22fae41b0253c854e337"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#ad2bd55c2563b22fae41b0253c854e337">AH_MAX_RULES</a>&#160;&#160;&#160;(<a class="el" href="anomaly__handler__params_8h.html#a874366f360bff1cdf88e1e0244cc6001">AH_TLM_PAGE_SIZE</a> * <a class="el" href="anomaly__handler__params_8h.html#a70aa8c1b2bce865070a71caa29b0136a">AH_TLM_PAGE_MAX</a>)</td></tr>
+<tr class="memdesc:ad2bd55c2563b22fae41b0253c854e337"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大何個のルール（アノマリ - イベント対応）を保持できるか  <a href="anomaly__handler_8h.html#ad2bd55c2563b22fae41b0253c854e337">[詳解]</a><br /></td></tr>
+<tr class="separator:ad2bd55c2563b22fae41b0253c854e337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aad302370847aecaca58ff0f1d43479"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a3aad302370847aecaca58ff0f1d43479">AH_LOG_TLM_PAGE_SIZE</a>&#160;&#160;&#160;(32)</td></tr>
+<tr class="memdesc:a3aad302370847aecaca58ff0f1d43479"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnomalyHandlerの発動イベントログテーブルの1テレメトリパケット(=1ページ)に格納される発動イベントログ数（ページネーション用）  <a href="anomaly__handler_8h.html#a3aad302370847aecaca58ff0f1d43479">[詳解]</a><br /></td></tr>
+<tr class="separator:a3aad302370847aecaca58ff0f1d43479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8403b82e94d1df598bbf0c44fd5b2971"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a8403b82e94d1df598bbf0c44fd5b2971">AH_LOG_TLM_PAGE_MAX</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a8403b82e94d1df598bbf0c44fd5b2971"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnomalyHandlerの発動イベントログテーブルのページ数（ページネーション用）  <a href="anomaly__handler_8h.html#a8403b82e94d1df598bbf0c44fd5b2971">[詳解]</a><br /></td></tr>
+<tr class="separator:a8403b82e94d1df598bbf0c44fd5b2971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00c564a585eea3fbd01b605af73c542"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#ae00c564a585eea3fbd01b605af73c542">AH_LOG_MAX</a>&#160;&#160;&#160;(<a class="el" href="anomaly__handler__params_8h.html#a3aad302370847aecaca58ff0f1d43479">AH_LOG_TLM_PAGE_SIZE</a> * <a class="el" href="anomaly__handler__params_8h.html#a8403b82e94d1df598bbf0c44fd5b2971">AH_LOG_TLM_PAGE_MAX</a>)</td></tr>
+<tr class="memdesc:ae00c564a585eea3fbd01b605af73c542"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大何個のイベントログを保持できるか  <a href="anomaly__handler_8h.html#ae00c564a585eea3fbd01b605af73c542">[詳解]</a><br /></td></tr>
+<tr class="separator:ae00c564a585eea3fbd01b605af73c542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ab806a03fdd5059aeb03793b3054bd847"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847">AH_CONDITION</a> { <a class="el" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a74c9fc6c509b28fb59e4a8ba75c6e44d">AH_SINGLE</a>, 
+<a class="el" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a7bb1d4afa921b80488b011cda2849b1e">AH_CONTINUOUS</a>, 
+<a class="el" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a91471c9905c5911546cc0ebac9daec87">AH_CUMULATE</a>
+ }</td></tr>
+<tr class="separator:ab806a03fdd5059aeb03793b3054bd847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a527184a40c59e88853557f2fd32f1c98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a527184a40c59e88853557f2fd32f1c98">AH_create_app</a> (void)</td></tr>
+<tr class="separator:a527184a40c59e88853557f2fd32f1c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7757c6645df4b6945ff228fb705ee38a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a7757c6645df4b6945ff228fb705ee38a">print_ah_status</a> (void)</td></tr>
+<tr class="separator:a7757c6645df4b6945ff228fb705ee38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa346a3ecc03423bcb25f9ccd132708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#afaa346a3ecc03423bcb25f9ccd132708">AH_activate_rule</a> (size_t id)</td></tr>
+<tr class="separator:afaa346a3ecc03423bcb25f9ccd132708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648aa741d802ca23dbb1e7a22b166056"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a648aa741d802ca23dbb1e7a22b166056">AH_inactivate_rule</a> (size_t id)</td></tr>
+<tr class="separator:a648aa741d802ca23dbb1e7a22b166056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68985fbfebc2a62034256fee1ea49f1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a68985fbfebc2a62034256fee1ea49f1c">AH_add_rule</a> (size_t id, const <a class="el" href="struct_a_h___rule.html">AH_Rule</a> *ahr, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> is_active)</td></tr>
+<tr class="separator:a68985fbfebc2a62034256fee1ea49f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a4949a43fca568432aac18330bdcfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#ab3a4949a43fca568432aac18330bdcfb">Cmd_AH_REGISTER_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ab3a4949a43fca568432aac18330bdcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2ef7b108e08e156a65908bb7cf9c27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a6e2ef7b108e08e156a65908bb7cf9c27">Cmd_AH_ACTIVATE_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a6e2ef7b108e08e156a65908bb7cf9c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbcd1d1b036ad7a1c6589ed9f881dc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a5fbcd1d1b036ad7a1c6589ed9f881dc8">Cmd_AH_INACTIVATE_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a5fbcd1d1b036ad7a1c6589ed9f881dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1affce154b56e63ec4e73a0da14a77d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a1affce154b56e63ec4e73a0da14a77d0">Cmd_AH_CLEAR_LOG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a1affce154b56e63ec4e73a0da14a77d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646864196b67f8531288dd994aee8fa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a646864196b67f8531288dd994aee8fa0">Cmd_AH_SET_PAGE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a646864196b67f8531288dd994aee8fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d8ee8e9c92c44bdc62576e7865c486"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a92d8ee8e9c92c44bdc62576e7865c486">Cmd_AHRES_LOG_CLEAR</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a92d8ee8e9c92c44bdc62576e7865c486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90687830b43146a540fda8bfde0eebd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a90687830b43146a540fda8bfde0eebd2">Cmd_AHRES_LOG_SET_PAGE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a90687830b43146a540fda8bfde0eebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:abe8ad2098546bb01917eede5adc9931b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_anomaly_handler.html">AnomalyHandler</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#abe8ad2098546bb01917eede5adc9931b">anomaly_handler</a></td></tr>
+<tr class="separator:abe8ad2098546bb01917eede5adc9931b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5940816a2c2b31cf158cfe4f605c91eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_a_h___anomaly_respond_log.html">AH_AnomalyRespondLog</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="anomaly__handler_8h.html#a5940816a2c2b31cf158cfe4f605c91eb">AH_respond_log</a></td></tr>
+<tr class="separator:a5940816a2c2b31cf158cfe4f605c91eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ae00c564a585eea3fbd01b605af73c542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00c564a585eea3fbd01b605af73c542">&#9670;&nbsp;</a></span>AH_LOG_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_LOG_MAX&#160;&#160;&#160;(<a class="el" href="anomaly__handler__params_8h.html#a3aad302370847aecaca58ff0f1d43479">AH_LOG_TLM_PAGE_SIZE</a> * <a class="el" href="anomaly__handler__params_8h.html#a8403b82e94d1df598bbf0c44fd5b2971">AH_LOG_TLM_PAGE_MAX</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大何個のイベントログを保持できるか </p>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8403b82e94d1df598bbf0c44fd5b2971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8403b82e94d1df598bbf0c44fd5b2971">&#9670;&nbsp;</a></span>AH_LOG_TLM_PAGE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_LOG_TLM_PAGE_MAX&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnomalyHandlerの発動イベントログテーブルのページ数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3aad302370847aecaca58ff0f1d43479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aad302370847aecaca58ff0f1d43479">&#9670;&nbsp;</a></span>AH_LOG_TLM_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_LOG_TLM_PAGE_SIZE&#160;&#160;&#160;(32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnomalyHandlerの発動イベントログテーブルの1テレメトリパケット(=1ページ)に格納される発動イベントログ数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad2bd55c2563b22fae41b0253c854e337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bd55c2563b22fae41b0253c854e337">&#9670;&nbsp;</a></span>AH_MAX_RULES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_MAX_RULES&#160;&#160;&#160;(<a class="el" href="anomaly__handler__params_8h.html#a874366f360bff1cdf88e1e0244cc6001">AH_TLM_PAGE_SIZE</a> * <a class="el" href="anomaly__handler__params_8h.html#a70aa8c1b2bce865070a71caa29b0136a">AH_TLM_PAGE_MAX</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大何個のルール（アノマリ - イベント対応）を保持できるか </p>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a70aa8c1b2bce865070a71caa29b0136a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70aa8c1b2bce865070a71caa29b0136a">&#9670;&nbsp;</a></span>AH_TLM_PAGE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_TLM_PAGE_MAX&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnomalyHandlerのルールテーブルのページ数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a874366f360bff1cdf88e1e0244cc6001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874366f360bff1cdf88e1e0244cc6001">&#9670;&nbsp;</a></span>AH_TLM_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AH_TLM_PAGE_SIZE&#160;&#160;&#160;(32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AnomalyHandlerのルールテーブルの1テレメトリパケット(=1ページ)に格納されるルール数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="ab806a03fdd5059aeb03793b3054bd847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab806a03fdd5059aeb03793b3054bd847">&#9670;&nbsp;</a></span>AH_CONDITION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847">AH_CONDITION</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ab806a03fdd5059aeb03793b3054bd847a74c9fc6c509b28fb59e4a8ba75c6e44d"></a>AH_SINGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab806a03fdd5059aeb03793b3054bd847a7bb1d4afa921b80488b011cda2849b1e"></a>AH_CONTINUOUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab806a03fdd5059aeb03793b3054bd847a91471c9905c5911546cc0ebac9daec87"></a>AH_CUMULATE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="anomaly__handler_8h_source.html">anomaly_handler.h</a> の <a class="el" href="anomaly__handler_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="afaa346a3ecc03423bcb25f9ccd132708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa346a3ecc03423bcb25f9ccd132708">&#9670;&nbsp;</a></span>AH_activate_rule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AH_activate_rule </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00318">318</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_afaa346a3ecc03423bcb25f9ccd132708_icgraph.svg" width="1328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a68985fbfebc2a62034256fee1ea49f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68985fbfebc2a62034256fee1ea49f1c">&#9670;&nbsp;</a></span>AH_add_rule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AH_add_rule </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_a_h___rule.html">AH_Rule</a> *&#160;</td>
+          <td class="paramname"><em>ahr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>is_active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00426">426</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a68985fbfebc2a62034256fee1ea49f1c_cgraph.svg" width="274" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a527184a40c59e88853557f2fd32f1c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527184a40c59e88853557f2fd32f1c98">&#9670;&nbsp;</a></span>AH_create_app()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> AH_create_app </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00035">35</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a527184a40c59e88853557f2fd32f1c98_cgraph.svg" width="1723" height="811"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a527184a40c59e88853557f2fd32f1c98_icgraph.svg" width="956" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a648aa741d802ca23dbb1e7a22b166056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648aa741d802ca23dbb1e7a22b166056">&#9670;&nbsp;</a></span>AH_inactivate_rule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AH_inactivate_rule </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00342">342</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a648aa741d802ca23dbb1e7a22b166056_icgraph.svg" width="1355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6e2ef7b108e08e156a65908bb7cf9c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2ef7b108e08e156a65908bb7cf9c27">&#9670;&nbsp;</a></span>Cmd_AH_ACTIVATE_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AH_ACTIVATE_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00301">301</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a6e2ef7b108e08e156a65908bb7cf9c27_cgraph.svg" width="659" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a6e2ef7b108e08e156a65908bb7cf9c27_icgraph.svg" width="1147" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1affce154b56e63ec4e73a0da14a77d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1affce154b56e63ec4e73a0da14a77d0">&#9670;&nbsp;</a></span>Cmd_AH_CLEAR_LOG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AH_CLEAR_LOG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00348">348</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a1affce154b56e63ec4e73a0da14a77d0_cgraph.svg" width="647" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a1affce154b56e63ec4e73a0da14a77d0_icgraph.svg" width="1120" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5fbcd1d1b036ad7a1c6589ed9f881dc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fbcd1d1b036ad7a1c6589ed9f881dc8">&#9670;&nbsp;</a></span>Cmd_AH_INACTIVATE_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AH_INACTIVATE_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00325">325</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a5fbcd1d1b036ad7a1c6589ed9f881dc8_cgraph.svg" width="674" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a5fbcd1d1b036ad7a1c6589ed9f881dc8_icgraph.svg" width="1162" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab3a4949a43fca568432aac18330bdcfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a4949a43fca568432aac18330bdcfb">&#9670;&nbsp;</a></span>Cmd_AH_REGISTER_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AH_REGISTER_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00256">256</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_ab3a4949a43fca568432aac18330bdcfb_cgraph.svg" width="662" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_ab3a4949a43fca568432aac18330bdcfb_icgraph.svg" width="1150" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a646864196b67f8531288dd994aee8fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646864196b67f8531288dd994aee8fa0">&#9670;&nbsp;</a></span>Cmd_AH_SET_PAGE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AH_SET_PAGE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00370">370</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a646864196b67f8531288dd994aee8fa0_cgraph.svg" width="690" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a646864196b67f8531288dd994aee8fa0_icgraph.svg" width="1178" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a92d8ee8e9c92c44bdc62576e7865c486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d8ee8e9c92c44bdc62576e7865c486">&#9670;&nbsp;</a></span>Cmd_AHRES_LOG_CLEAR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AHRES_LOG_CLEAR </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00399">399</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a92d8ee8e9c92c44bdc62576e7865c486_cgraph.svg" width="412" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a92d8ee8e9c92c44bdc62576e7865c486_icgraph.svg" width="1146" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a90687830b43146a540fda8bfde0eebd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90687830b43146a540fda8bfde0eebd2">&#9670;&nbsp;</a></span>Cmd_AHRES_LOG_SET_PAGE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_AHRES_LOG_SET_PAGE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00407">407</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a90687830b43146a540fda8bfde0eebd2_cgraph.svg" width="680" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a90687830b43146a540fda8bfde0eebd2_icgraph.svg" width="1168" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7757c6645df4b6945ff228fb705ee38a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7757c6645df4b6945ff228fb705ee38a">&#9670;&nbsp;</a></span>print_ah_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> print_ah_status </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00226">226</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="anomaly__handler_8h_a7757c6645df4b6945ff228fb705ee38a_cgraph.svg" width="627" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a5940816a2c2b31cf158cfe4f605c91eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5940816a2c2b31cf158cfe4f605c91eb">&#9670;&nbsp;</a></span>AH_respond_log</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_a_h___anomaly_respond_log.html">AH_AnomalyRespondLog</a>* const AH_respond_log</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abe8ad2098546bb01917eede5adc9931b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8ad2098546bb01917eede5adc9931b">&#9670;&nbsp;</a></span>anomaly_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_anomaly_handler.html">AnomalyHandler</a>* const anomaly_handler</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="anomaly__handler_8c_source.html">anomaly_handler.c</a> の <a class="el" href="anomaly__handler_8c_source.html#l00026">26</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_bac5c72f08f800c1dcf30d4637be4edf.html">Applications</a></li><li class="navelem"><a class="el" href="anomaly__handler_8h.html">anomaly_handler.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

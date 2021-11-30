@@ -1,0 +1,1419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/System/EventManager/event_handler.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('event__handler_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">event_handler.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>イベント発火型処理を行う  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="event__logger_8h_source.html">event_logger.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="obc__time_8h_source.html">../TimeManager/obc_time.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__table_8h_source.html">../../CmdTlm/block_command_table.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="event__handler__rules_8h_source.html">src_user/Settings/System/EventHandlerRules/event_handler_rules.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="event__handler__params_8h_source.html">src_user/Settings/System/event_handler_params.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+event_handler.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h__incl.svg" width="1948" height="603"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h__dep__incl.svg" width="1343" height="260"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="event__handler_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___rule_settings.html">EH_RuleSettings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH_register_rule の引数．Rule登録に必要な情報  <a href="struct_e_h___rule_settings.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___rule.html">EH_Rule</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> に対して対応する <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a>  <a href="struct_e_h___rule.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___rule_table.html">EH_RuleTable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> のテーブル  <a href="struct_e_h___rule_table.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___rule_sorted_index.html">EH_RuleSortedIndex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___log.html">EH_Log</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH 対応のログ  <a href="struct_e_h___log.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___log_table.html">EH_LogTable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH 対応のログテーブル  <a href="struct_e_h___log_table.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___el_event_counter.html">EH_ElEventCounter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EL イベントカウンタ． EL のイベント記録情報と照らし合わせて，対応すべきイベントを探索するために使う  <a href="struct_e_h___el_event_counter.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___register_from_cmd.html">EH_RegisterFromCmd</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド経由で <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> を登録するときに使う内部状態変数  <a href="struct_e_h___register_from_cmd.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___tlm_info.html">EH_TlmInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">tlmのページネーションの情報保持  <a href="struct_e_h___tlm_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_event_handler.html">EventHandler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_event_handler.html" title="EventHandler のInfo構造体">EventHandler</a> のInfo構造体  <a href="struct_event_handler.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a7fc0d8f0de6202abd3f0640b2758fef2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a7fc0d8f0de6202abd3f0640b2758fef2">EH_RULE_TLM_PAGE_SIZE</a>&#160;&#160;&#160;(20)</td></tr>
+<tr class="memdesc:a7fc0d8f0de6202abd3f0640b2758fef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_handler のルールテーブルの1テレメトリパケット(=1ページ)に格納されるルール数（ページネーション用）  <a href="event__handler_8h.html#a7fc0d8f0de6202abd3f0640b2758fef2">[詳解]</a><br /></td></tr>
+<tr class="separator:a7fc0d8f0de6202abd3f0640b2758fef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f8f6a46593d672e036b704da88cb2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a99f8f6a46593d672e036b704da88cb2a">EH_RULE_TLM_PAGE_MAX</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="memdesc:a99f8f6a46593d672e036b704da88cb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_handler のルールテーブルのページ数（ページネーション用）  <a href="event__handler_8h.html#a99f8f6a46593d672e036b704da88cb2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a99f8f6a46593d672e036b704da88cb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b083bc8a1c8e59754fcc00e3efe727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#ad3b083bc8a1c8e59754fcc00e3efe727">EH_RULE_MAX</a>&#160;&#160;&#160;(<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a>)(<a class="el" href="event__handler__params_8h.html#a7fc0d8f0de6202abd3f0640b2758fef2">EH_RULE_TLM_PAGE_SIZE</a> * <a class="el" href="event__handler__params_8h.html#a99f8f6a46593d672e036b704da88cb2a">EH_RULE_TLM_PAGE_MAX</a>)</td></tr>
+<tr class="separator:ad3b083bc8a1c8e59754fcc00e3efe727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e460f40efedae25b3700999ac394a43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a7e460f40efedae25b3700999ac394a43">EH_LOG_TLM_PAGE_SIZE</a>&#160;&#160;&#160;(64)</td></tr>
+<tr class="memdesc:a7e460f40efedae25b3700999ac394a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH対応のログテーブルの1テレメトリパケット(=1ページ)に格納されるログ数（ページネーション用）  <a href="event__handler_8h.html#a7e460f40efedae25b3700999ac394a43">[詳解]</a><br /></td></tr>
+<tr class="separator:a7e460f40efedae25b3700999ac394a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc883d6e8e766c0e897a9ea02a8f91c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#abc883d6e8e766c0e897a9ea02a8f91c1">EH_LOG_TLM_PAGE_MAX</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:abc883d6e8e766c0e897a9ea02a8f91c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH対応のログテーブルのページ数（ページネーション用）  <a href="event__handler_8h.html#abc883d6e8e766c0e897a9ea02a8f91c1">[詳解]</a><br /></td></tr>
+<tr class="separator:abc883d6e8e766c0e897a9ea02a8f91c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ef6834e060edd0411f12617a8e080d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a09ef6834e060edd0411f12617a8e080d">EH_LOG_MAX</a>&#160;&#160;&#160;(<a class="el" href="event__handler__params_8h.html#a7e460f40efedae25b3700999ac394a43">EH_LOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__handler__params_8h.html#abc883d6e8e766c0e897a9ea02a8f91c1">EH_LOG_TLM_PAGE_MAX</a>)</td></tr>
+<tr class="memdesc:a09ef6834e060edd0411f12617a8e080d"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大何個の EH 対応ログを保持できるか  <a href="event__handler_8h.html#a09ef6834e060edd0411f12617a8e080d">[詳解]</a><br /></td></tr>
+<tr class="separator:a09ef6834e060edd0411f12617a8e080d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c94c7d260553f0cc2c21e187557959"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a38c94c7d260553f0cc2c21e187557959">EH_MAX_RULE_NUM_OF_EL_ID_DUPLICATES</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a38c94c7d260553f0cc2c21e187557959"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> の ID が重複した <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> を最大何個まで重複させてよいか  <a href="event__handler_8h.html#a38c94c7d260553f0cc2c21e187557959">[詳解]</a><br /></td></tr>
+<tr class="separator:a38c94c7d260553f0cc2c21e187557959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a6caf6a080f64025ec5fd494d22b76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#af3a6caf6a080f64025ec5fd494d22b76">EH_MAX_RESPONSE_NUM_DEFAULT</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="memdesc:af3a6caf6a080f64025ec5fd494d22b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">一度の実行で対応する最大数（初期値）  <a href="event__handler_8h.html#af3a6caf6a080f64025ec5fd494d22b76">[詳解]</a><br /></td></tr>
+<tr class="separator:af3a6caf6a080f64025ec5fd494d22b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef2d5f01db3bb9148c4f7aab98f4ef3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#acef2d5f01db3bb9148c4f7aab98f4ef3">EH_MAX_CHECK_EVENT_NUM_DEFAULT</a>&#160;&#160;&#160;(64)</td></tr>
+<tr class="separator:acef2d5f01db3bb9148c4f7aab98f4ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a85d43255132f8154481c589c260586bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bf">EH_REGISTER_ACK</a> { <br />
+&#160;&#160;<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfac0bab2c54131a63e5820251712295b96">EH_REGISTER_ACK_OK</a> = 0, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa80f79cc11105ac307a13787a03ab5a6e">EH_REGISTER_ACK_ERR_FULL</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa3ab35a9efb232679bdecfbefc3a54e3d">EH_REGISTER_ACK_ERR_RULE_OVERWRITE</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfaadcbbe005d9042c71b4c65371f558e30">EH_REGISTER_ACK_ERR_DUPLICATE_FULL</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa21f88863a70f5e68d8c4105e9dbe93da">EH_REGISTER_ACK_ILLEGAL_RULE_ID</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa30d6baec933e38d1a8e1f40a39ef58e6">EH_REGISTER_ACK_ILLEGAL_GROUP</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa550e7d523fed08d9f6a2815572a4aa8c">EH_REGISTER_ACK_ILLEGAL_ERROR_LEVEL</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa2606c137268c60c5be88ac7a3bd52c05">EH_REGISTER_ACK_ILLEGAL_MATCH_FLAG</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfaaee9ccaad667897ced8fc7ea4cc22fb9">EH_REGISTER_ACK_ILLEGAL_CONDITION_TYPE</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfae90dcdda5a1ea7aa75a6eb289df7b5ad">EH_REGISTER_ACK_ILLEGAL_COUNT_THRESHOLD</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfad462444448454bd73e962f14d128d352">EH_REGISTER_ACK_ILLEGAL_BCT_ID</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfaea5373540db9a839d723d94135b6ad74">EH_REGISTER_ACK_ILLEGAL_ACTIVE_FLAG</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa7891a1162e6c126ba91b24112f290af0">EH_REGISTER_ACK_UNKNOWN_ERR</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a85d43255132f8154481c589c260586bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH_register_rule の返り値  <a href="event__handler_8h.html#a85d43255132f8154481c589c260586bf">[詳解]</a><br /></td></tr>
+<tr class="separator:a85d43255132f8154481c589c260586bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a0409361027c0e4dd7887b890720a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">EH_CHECK_RULE_ACK</a> { <a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1a9aa0a197bbf21bb6bb7f582b076677d1">EH_CHECK_RULE_ACK_OK</a> = 0, 
+<a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1a0768399d2a032955355100a48e16eec0">EH_CHECK_RULE_ACK_INVALID_RULE_ID</a>, 
+<a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1a9f8efb6a552b7fadf63f066803a87521">EH_CHECK_RULE_ACK_UNREGISTERED</a>
+ }</td></tr>
+<tr class="memdesc:a37a0409361027c0e4dd7887b890720a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> 登録状況確認用  <a href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">[詳解]</a><br /></td></tr>
+<tr class="separator:a37a0409361027c0e4dd7887b890720a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb22131c0151f084b29a29e479743e58"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58">EH_RESPONSE_CONDITION_TYPE</a> { <a class="el" href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58afbdf6f8e0d80f0bc6a0fbad601981366">EH_RESPONSE_CONDITION_SINGLE</a>, 
+<a class="el" href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58a0a15ebc6e8483ad87125b07f3a08a559">EH_RESPONSE_CONDITION_CONTINUOUS</a>, 
+<a class="el" href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58aae3c682da561176d7d2f031ef2055176">EH_RESPONSE_CONDITION_CUMULATIVE</a>, 
+<a class="el" href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58a212b12549c2b78b6e6e1ee12273f1b9c">EH_RESPONSE_CONDITION_TYPE_MAX</a>
+ }</td></tr>
+<tr class="memdesc:adb22131c0151f084b29a29e479743e58"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> 登録に対して，どのように EH 対応させるかの種類  <a href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58">[詳解]</a><br /></td></tr>
+<tr class="separator:adb22131c0151f084b29a29e479743e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a4d66371d471058e8e45db1071e09b654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a4d66371d471058e8e45db1071e09b654">EH_initialize</a> (void)</td></tr>
+<tr class="memdesc:a4d66371d471058e8e45db1071e09b654"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_handler の初期化  <a href="event__handler_8h.html#a4d66371d471058e8e45db1071e09b654">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d66371d471058e8e45db1071e09b654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ddd224739890733cbd318e2d5c015b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a76ddd224739890733cbd318e2d5c015b">EH_execute</a> (void)</td></tr>
+<tr class="memdesc:a76ddd224739890733cbd318e2d5c015b"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_handler の実行  <a href="event__handler_8h.html#a76ddd224739890733cbd318e2d5c015b">[詳解]</a><br /></td></tr>
+<tr class="separator:a76ddd224739890733cbd318e2d5c015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081e868576a32e8518a0d73a17c30010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bf">EH_REGISTER_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a081e868576a32e8518a0d73a17c30010">EH_register_rule</a> (<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a> id, const <a class="el" href="struct_e_h___rule_settings.html">EH_RuleSettings</a> *settings)</td></tr>
+<tr class="memdesc:a081e868576a32e8518a0d73a17c30010"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルールの登録  <a href="event__handler_8h.html#a081e868576a32e8518a0d73a17c30010">[詳解]</a><br /></td></tr>
+<tr class="separator:a081e868576a32e8518a0d73a17c30010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ea5d3a648f85871e35b36893f15007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">EH_CHECK_RULE_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a94ea5d3a648f85871e35b36893f15007">EH_activate_rule</a> (<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a> id)</td></tr>
+<tr class="memdesc:a94ea5d3a648f85871e35b36893f15007"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルールの有効化  <a href="event__handler_8h.html#a94ea5d3a648f85871e35b36893f15007">[詳解]</a><br /></td></tr>
+<tr class="separator:a94ea5d3a648f85871e35b36893f15007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addeafcef3304c68bbb5d46ba92992307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">EH_CHECK_RULE_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#addeafcef3304c68bbb5d46ba92992307">EH_inactivate_rule</a> (<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a> id)</td></tr>
+<tr class="memdesc:addeafcef3304c68bbb5d46ba92992307"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルールの無効化  <a href="event__handler_8h.html#addeafcef3304c68bbb5d46ba92992307">[詳解]</a><br /></td></tr>
+<tr class="separator:addeafcef3304c68bbb5d46ba92992307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce222b0f2b5da74cb20954b7062c498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a6ce222b0f2b5da74cb20954b7062c498">EH_match_event_counter_to_el</a> (void)</td></tr>
+<tr class="memdesc:a6ce222b0f2b5da74cb20954b7062c498"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントカウンタを EL のそれに合わせる  <a href="event__handler_8h.html#a6ce222b0f2b5da74cb20954b7062c498">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ce222b0f2b5da74cb20954b7062c498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ed902053a6e846de7d4fd0e919369c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_e_h___log.html">EH_Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a29ed902053a6e846de7d4fd0e919369c">EH_get_the_nth_log_from_the_latest</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> n)</td></tr>
+<tr class="memdesc:a29ed902053a6e846de7d4fd0e919369c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_h___log_table.html" title="EH 対応のログテーブル">EH_LogTable</a> の最新からn番目の対応ログを取得  <a href="event__handler_8h.html#a29ed902053a6e846de7d4fd0e919369c">[詳解]</a><br /></td></tr>
+<tr class="separator:a29ed902053a6e846de7d4fd0e919369c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b6da2eb8e4d2e9394339f345d09844"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a28b6da2eb8e4d2e9394339f345d09844">Cmd_EH_INIT</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a28b6da2eb8e4d2e9394339f345d09844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b06877e0d9565824f95ae74448dea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a23b06877e0d9565824f95ae74448dea8">Cmd_EH_CLEAR_ALL_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a23b06877e0d9565824f95ae74448dea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dc0eb8f4787ace6ff42b7bfd09bebd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#ab4dc0eb8f4787ace6ff42b7bfd09bebd">Cmd_EH_LOAD_DEFAULT_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ab4dc0eb8f4787ace6ff42b7bfd09bebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac06541d941e34ba7cac1d4a8df618e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#afac06541d941e34ba7cac1d4a8df618e">Cmd_EH_SET_REGISTER_RULE_EVENT_PARAM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:afac06541d941e34ba7cac1d4a8df618e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f5dad393151a3f945f7fe30afe6e43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a15f5dad393151a3f945f7fe30afe6e43">Cmd_EH_SET_REGISTER_RULE_CONDITION_PARAM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a15f5dad393151a3f945f7fe30afe6e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac708e24b6d85cd3536a5185bf9da06cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#ac708e24b6d85cd3536a5185bf9da06cf">Cmd_EH_REGISTER_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ac708e24b6d85cd3536a5185bf9da06cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcc95a83b2c1e6a0ebaa0bfddc059e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a3dcc95a83b2c1e6a0ebaa0bfddc059e1">Cmd_EH_DELETE_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a3dcc95a83b2c1e6a0ebaa0bfddc059e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481b6c3c268ecd6c5281e5a8f2328010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a481b6c3c268ecd6c5281e5a8f2328010">Cmd_EH_ACTIVATE_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a481b6c3c268ecd6c5281e5a8f2328010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862cc2a449ad9fa844535388168532d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a862cc2a449ad9fa844535388168532d0">Cmd_EH_INACTIVATE_RULE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a862cc2a449ad9fa844535388168532d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2f1d313b3ea1be70c1f221acb292d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a6d2f1d313b3ea1be70c1f221acb292d5">Cmd_EH_CLEAR_LOG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a6d2f1d313b3ea1be70c1f221acb292d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d48856239b08a03aa9227def96eeaca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a0d48856239b08a03aa9227def96eeaca">Cmd_EH_SET_MAX_RESPONSE_NUM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a0d48856239b08a03aa9227def96eeaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1b8f5175a837ab1734fbcee12f54e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a4a1b8f5175a837ab1734fbcee12f54e7">Cmd_EH_SET_MAX_CHECK_EVENT_NUM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a4a1b8f5175a837ab1734fbcee12f54e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927e26c890b101dd28b8338222a234c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a927e26c890b101dd28b8338222a234c1">Cmd_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a927e26c890b101dd28b8338222a234c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b1b3ac8872d2e5e2eaac0559aeff39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#af2b1b3ac8872d2e5e2eaac0559aeff39">Cmd_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:af2b1b3ac8872d2e5e2eaac0559aeff39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a026cf5d2e22f624b8c20cb0e6b81f340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a026cf5d2e22f624b8c20cb0e6b81f340">Cmd_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a026cf5d2e22f624b8c20cb0e6b81f340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac6bf4098714de080e006148450c00be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#aac6bf4098714de080e006148450c00be">Cmd_EH_SET_TARGET_ID_OF_RULE_TABLE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:aac6bf4098714de080e006148450c00be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d6d84c1a06359455296f67ccc07110"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#ae5d6d84c1a06359455296f67ccc07110">Cmd_EH_MATCH_EVENT_COUNTER_TO_EL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:ae5d6d84c1a06359455296f67ccc07110"><td class="mdescLeft">&#160;</td><td class="mdescRight">新しい <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> 発生を検出するためのカウンタを強制的に EL のカウンタに合わせる  <a href="event__handler_8h.html#ae5d6d84c1a06359455296f67ccc07110">[詳解]</a><br /></td></tr>
+<tr class="separator:ae5d6d84c1a06359455296f67ccc07110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a0dce90e75a38c6ddf6114f90d9e12d52"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_event_handler.html">EventHandler</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a0dce90e75a38c6ddf6114f90d9e12d52">event_handler</a></td></tr>
+<tr class="separator:a0dce90e75a38c6ddf6114f90d9e12d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>イベント発火型処理を行う </p>
+<dl class="section note"><dt>覚え書き</dt><dd>event_logger の情報を元に BC を展開する ( Event 発火に応じて対応を行う ) </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a09ef6834e060edd0411f12617a8e080d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ef6834e060edd0411f12617a8e080d">&#9670;&nbsp;</a></span>EH_LOG_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_LOG_MAX&#160;&#160;&#160;(<a class="el" href="event__handler__params_8h.html#a7e460f40efedae25b3700999ac394a43">EH_LOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__handler__params_8h.html#abc883d6e8e766c0e897a9ea02a8f91c1">EH_LOG_TLM_PAGE_MAX</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大何個の EH 対応ログを保持できるか </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abc883d6e8e766c0e897a9ea02a8f91c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc883d6e8e766c0e897a9ea02a8f91c1">&#9670;&nbsp;</a></span>EH_LOG_TLM_PAGE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_LOG_TLM_PAGE_MAX&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EH対応のログテーブルのページ数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7e460f40efedae25b3700999ac394a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e460f40efedae25b3700999ac394a43">&#9670;&nbsp;</a></span>EH_LOG_TLM_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_LOG_TLM_PAGE_SIZE&#160;&#160;&#160;(64)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EH対応のログテーブルの1テレメトリパケット(=1ページ)に格納されるログ数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acef2d5f01db3bb9148c4f7aab98f4ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef2d5f01db3bb9148c4f7aab98f4ef3">&#9670;&nbsp;</a></span>EH_MAX_CHECK_EVENT_NUM_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_MAX_CHECK_EVENT_NUM_DEFAULT&#160;&#160;&#160;(64)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>一度の実行でチェックする event_logger の event log の最大値（初期値） TL内での実行時間を調整するために設定する． </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af3a6caf6a080f64025ec5fd494d22b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a6caf6a080f64025ec5fd494d22b76">&#9670;&nbsp;</a></span>EH_MAX_RESPONSE_NUM_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_MAX_RESPONSE_NUM_DEFAULT&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一度の実行で対応する最大数（初期値） </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a38c94c7d260553f0cc2c21e187557959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c94c7d260553f0cc2c21e187557959">&#9670;&nbsp;</a></span>EH_MAX_RULE_NUM_OF_EL_ID_DUPLICATES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_MAX_RULE_NUM_OF_EL_ID_DUPLICATES&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> の ID が重複した <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> を最大何個まで重複させてよいか </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad3b083bc8a1c8e59754fcc00e3efe727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b083bc8a1c8e59754fcc00e3efe727">&#9670;&nbsp;</a></span>EH_RULE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_RULE_MAX&#160;&#160;&#160;(<a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a>)(<a class="el" href="event__handler__params_8h.html#a7fc0d8f0de6202abd3f0640b2758fef2">EH_RULE_TLM_PAGE_SIZE</a> * <a class="el" href="event__handler__params_8h.html#a99f8f6a46593d672e036b704da88cb2a">EH_RULE_TLM_PAGE_MAX</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最大何個のルール ( <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> - <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> 対応) を保持できるか 基本的に， EH_RULE_ID として使うので，キャストする enum上で定義しないのは， <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> の最大値を，初期に定義する数よりも多くしたいため また，この値は， Rule 未定義値（ないしは初期値）としても使う </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a99f8f6a46593d672e036b704da88cb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f8f6a46593d672e036b704da88cb2a">&#9670;&nbsp;</a></span>EH_RULE_TLM_PAGE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_RULE_TLM_PAGE_MAX&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_handler のルールテーブルのページ数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7fc0d8f0de6202abd3f0640b2758fef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc0d8f0de6202abd3f0640b2758fef2">&#9670;&nbsp;</a></span>EH_RULE_TLM_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_RULE_TLM_PAGE_SIZE&#160;&#160;&#160;(20)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_handler のルールテーブルの1テレメトリパケット(=1ページ)に格納されるルール数（ページネーション用） </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a37a0409361027c0e4dd7887b890720a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a0409361027c0e4dd7887b890720a1">&#9670;&nbsp;</a></span>EH_CHECK_RULE_ACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">EH_CHECK_RULE_ACK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> 登録状況確認用 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>EH_{in}activate_rule の返り値などにも用いる </dd>
+<dd>
+uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a37a0409361027c0e4dd7887b890720a1a9aa0a197bbf21bb6bb7f582b076677d1"></a>EH_CHECK_RULE_ACK_OK&#160;</td><td class="fielddoc"><p>正常 or ルール登録済み </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37a0409361027c0e4dd7887b890720a1a0768399d2a032955355100a48e16eec0"></a>EH_CHECK_RULE_ACK_INVALID_RULE_ID&#160;</td><td class="fielddoc"><p>EH_RULE_ID が不正 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a37a0409361027c0e4dd7887b890720a1a9f8efb6a552b7fadf63f066803a87521"></a>EH_CHECK_RULE_ACK_UNREGISTERED&#160;</td><td class="fielddoc"><p>ルールが未登録 </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00079">79</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a85d43255132f8154481c589c260586bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d43255132f8154481c589c260586bf">&#9670;&nbsp;</a></span>EH_REGISTER_ACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bf">EH_REGISTER_ACK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EH_register_rule の返り値 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfac0bab2c54131a63e5820251712295b96"></a>EH_REGISTER_ACK_OK&#160;</td><td class="fielddoc"><p>正常に登録完了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa80f79cc11105ac307a13787a03ab5a6e"></a>EH_REGISTER_ACK_ERR_FULL&#160;</td><td class="fielddoc"><p>これ以上登録できない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa3ab35a9efb232679bdecfbefc3a54e3d"></a>EH_REGISTER_ACK_ERR_RULE_OVERWRITE&#160;</td><td class="fielddoc"><p>すでに同じ ID にルールが登録されているため棄却 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfaadcbbe005d9042c71b4c65371f558e30"></a>EH_REGISTER_ACK_ERR_DUPLICATE_FULL&#160;</td><td class="fielddoc"><p>これ以上， <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> の重複した <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> を登録できない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa21f88863a70f5e68d8c4105e9dbe93da"></a>EH_REGISTER_ACK_ILLEGAL_RULE_ID&#160;</td><td class="fielddoc"><p>不正な EH_RULE_ID </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa30d6baec933e38d1a8e1f40a39ef58e6"></a>EH_REGISTER_ACK_ILLEGAL_GROUP&#160;</td><td class="fielddoc"><p>不正な <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa550e7d523fed08d9f6a2815572a4aa8c"></a>EH_REGISTER_ACK_ILLEGAL_ERROR_LEVEL&#160;</td><td class="fielddoc"><p>不正な <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa2606c137268c60c5be88ac7a3bd52c05"></a>EH_REGISTER_ACK_ILLEGAL_MATCH_FLAG&#160;</td><td class="fielddoc"><p>不正な should_match_err_level </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfaaee9ccaad667897ced8fc7ea4cc22fb9"></a>EH_REGISTER_ACK_ILLEGAL_CONDITION_TYPE&#160;</td><td class="fielddoc"><p>不正な EH_RESPONSE_CONDITION_TYPE </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfae90dcdda5a1ea7aa75a6eb289df7b5ad"></a>EH_REGISTER_ACK_ILLEGAL_COUNT_THRESHOLD&#160;</td><td class="fielddoc"><p>不正な condition.count_threshold </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfad462444448454bd73e962f14d128d352"></a>EH_REGISTER_ACK_ILLEGAL_BCT_ID&#160;</td><td class="fielddoc"><p>不正な deploy_bct_id </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfaea5373540db9a839d723d94135b6ad74"></a>EH_REGISTER_ACK_ILLEGAL_ACTIVE_FLAG&#160;</td><td class="fielddoc"><p>不正な is_active </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa7891a1162e6c126ba91b24112f290af0"></a>EH_REGISTER_ACK_UNKNOWN_ERR&#160;</td><td class="fielddoc"><p>不明なエラー </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adb22131c0151f084b29a29e479743e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb22131c0151f084b29a29e479743e58">&#9670;&nbsp;</a></span>EH_RESPONSE_CONDITION_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__handler_8h.html#adb22131c0151f084b29a29e479743e58">EH_RESPONSE_CONDITION_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> 登録に対して，どのように EH 対応させるかの種類 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="adb22131c0151f084b29a29e479743e58afbdf6f8e0d80f0bc6a0fbad601981366"></a>EH_RESPONSE_CONDITION_SINGLE&#160;</td><td class="fielddoc"><p>Event 登録に対して即座に EH 対応 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb22131c0151f084b29a29e479743e58a0a15ebc6e8483ad87125b07f3a08a559"></a>EH_RESPONSE_CONDITION_CONTINUOUS&#160;</td><td class="fielddoc"><p>Event 登録後 N 秒以内に再び同じ Event 登録が発生することが M 回連続で発生した場合に EH 対応 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb22131c0151f084b29a29e479743e58aae3c682da561176d7d2f031ef2055176"></a>EH_RESPONSE_CONDITION_CUMULATIVE&#160;</td><td class="fielddoc"><p>Event が M 回登録した場合に EH 対応 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb22131c0151f084b29a29e479743e58a212b12549c2b78b6e6e1ee12273f1b9c"></a>EH_RESPONSE_CONDITION_TYPE_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a481b6c3c268ecd6c5281e5a8f2328010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481b6c3c268ecd6c5281e5a8f2328010">&#9670;&nbsp;</a></span>Cmd_EH_ACTIVATE_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_ACTIVATE_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01099">1099</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a481b6c3c268ecd6c5281e5a8f2328010_cgraph.svg" width="658" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a481b6c3c268ecd6c5281e5a8f2328010_icgraph.svg" width="1146" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a23b06877e0d9565824f95ae74448dea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b06877e0d9565824f95ae74448dea8">&#9670;&nbsp;</a></span>Cmd_EH_CLEAR_ALL_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_CLEAR_ALL_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00977">977</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a23b06877e0d9565824f95ae74448dea8_cgraph.svg" width="382" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a23b06877e0d9565824f95ae74448dea8_icgraph.svg" width="1156" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6d2f1d313b3ea1be70c1f221acb292d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2f1d313b3ea1be70c1f221acb292d5">&#9670;&nbsp;</a></span>Cmd_EH_CLEAR_LOG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_CLEAR_LOG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01143">1143</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a6d2f1d313b3ea1be70c1f221acb292d5_cgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a6d2f1d313b3ea1be70c1f221acb292d5_icgraph.svg" width="1119" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3dcc95a83b2c1e6a0ebaa0bfddc059e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcc95a83b2c1e6a0ebaa0bfddc059e1">&#9670;&nbsp;</a></span>Cmd_EH_DELETE_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_DELETE_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01077">1077</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a3dcc95a83b2c1e6a0ebaa0bfddc059e1_cgraph.svg" width="1507" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a3dcc95a83b2c1e6a0ebaa0bfddc059e1_icgraph.svg" width="1134" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a862cc2a449ad9fa844535388168532d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862cc2a449ad9fa844535388168532d0">&#9670;&nbsp;</a></span>Cmd_EH_INACTIVATE_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_INACTIVATE_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01121">1121</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a862cc2a449ad9fa844535388168532d0_cgraph.svg" width="672" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a862cc2a449ad9fa844535388168532d0_icgraph.svg" width="1160" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a28b6da2eb8e4d2e9394339f345d09844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b6da2eb8e4d2e9394339f345d09844">&#9670;&nbsp;</a></span>Cmd_EH_INIT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_INIT </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00969">969</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a28b6da2eb8e4d2e9394339f345d09844_cgraph.svg" width="1274" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a28b6da2eb8e4d2e9394339f345d09844_icgraph.svg" width="1070" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab4dc0eb8f4787ace6ff42b7bfd09bebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4dc0eb8f4787ace6ff42b7bfd09bebd">&#9670;&nbsp;</a></span>Cmd_EH_LOAD_DEFAULT_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_LOAD_DEFAULT_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00985">985</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ab4dc0eb8f4787ace6ff42b7bfd09bebd_cgraph.svg" width="1216" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ab4dc0eb8f4787ace6ff42b7bfd09bebd_icgraph.svg" width="1184" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae5d6d84c1a06359455296f67ccc07110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d6d84c1a06359455296f67ccc07110">&#9670;&nbsp;</a></span>Cmd_EH_MATCH_EVENT_COUNTER_TO_EL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_MATCH_EVENT_COUNTER_TO_EL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>新しい <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> 発生を検出するためのカウンタを強制的に EL のカウンタに合わせる </p>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01208">1208</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ae5d6d84c1a06359455296f67ccc07110_cgraph.svg" width="427" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ae5d6d84c1a06359455296f67ccc07110_icgraph.svg" width="1139" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac708e24b6d85cd3536a5185bf9da06cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac708e24b6d85cd3536a5185bf9da06cf">&#9670;&nbsp;</a></span>Cmd_EH_REGISTER_RULE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_REGISTER_RULE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01047">1047</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ac708e24b6d85cd3536a5185bf9da06cf_cgraph.svg" width="779" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ac708e24b6d85cd3536a5185bf9da06cf_icgraph.svg" width="1148" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4a1b8f5175a837ab1734fbcee12f54e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1b8f5175a837ab1734fbcee12f54e7">&#9670;&nbsp;</a></span>Cmd_EH_SET_MAX_CHECK_EVENT_NUM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_MAX_CHECK_EVENT_NUM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01158">1158</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a4a1b8f5175a837ab1734fbcee12f54e7_cgraph.svg" width="668" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a4a1b8f5175a837ab1734fbcee12f54e7_icgraph.svg" width="1156" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0d48856239b08a03aa9227def96eeaca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d48856239b08a03aa9227def96eeaca">&#9670;&nbsp;</a></span>Cmd_EH_SET_MAX_RESPONSE_NUM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_MAX_RESPONSE_NUM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01151">1151</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a0d48856239b08a03aa9227def96eeaca_cgraph.svg" width="731" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a0d48856239b08a03aa9227def96eeaca_icgraph.svg" width="1219" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a026cf5d2e22f624b8c20cb0e6b81f340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a026cf5d2e22f624b8c20cb0e6b81f340">&#9670;&nbsp;</a></span>Cmd_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01183">1183</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a026cf5d2e22f624b8c20cb0e6b81f340_cgraph.svg" width="646" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a026cf5d2e22f624b8c20cb0e6b81f340_icgraph.svg" width="1134" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af2b1b3ac8872d2e5e2eaac0559aeff39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b1b3ac8872d2e5e2eaac0559aeff39">&#9670;&nbsp;</a></span>Cmd_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01174">1174</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_af2b1b3ac8872d2e5e2eaac0559aeff39_cgraph.svg" width="691" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_af2b1b3ac8872d2e5e2eaac0559aeff39_icgraph.svg" width="1179" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a927e26c890b101dd28b8338222a234c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927e26c890b101dd28b8338222a234c1">&#9670;&nbsp;</a></span>Cmd_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01165">1165</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a927e26c890b101dd28b8338222a234c1_cgraph.svg" width="650" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a927e26c890b101dd28b8338222a234c1_icgraph.svg" width="1138" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a15f5dad393151a3f945f7fe30afe6e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f5dad393151a3f945f7fe30afe6e43">&#9670;&nbsp;</a></span>Cmd_EH_SET_REGISTER_RULE_CONDITION_PARAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_REGISTER_RULE_CONDITION_PARAM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01025">1025</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a15f5dad393151a3f945f7fe30afe6e43_cgraph.svg" width="670" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a15f5dad393151a3f945f7fe30afe6e43_icgraph.svg" width="1158" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afac06541d941e34ba7cac1d4a8df618e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac06541d941e34ba7cac1d4a8df618e">&#9670;&nbsp;</a></span>Cmd_EH_SET_REGISTER_RULE_EVENT_PARAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_REGISTER_RULE_EVENT_PARAM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00993">993</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_afac06541d941e34ba7cac1d4a8df618e_cgraph.svg" width="650" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_afac06541d941e34ba7cac1d4a8df618e_icgraph.svg" width="1138" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aac6bf4098714de080e006148450c00be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6bf4098714de080e006148450c00be">&#9670;&nbsp;</a></span>Cmd_EH_SET_TARGET_ID_OF_RULE_TABLE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_TARGET_ID_OF_RULE_TABLE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01191">1191</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_aac6bf4098714de080e006148450c00be_cgraph.svg" width="674" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_aac6bf4098714de080e006148450c00be_icgraph.svg" width="1162" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a94ea5d3a648f85871e35b36893f15007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ea5d3a648f85871e35b36893f15007">&#9670;&nbsp;</a></span>EH_activate_rule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">EH_CHECK_RULE_ACK</a> EH_activate_rule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ルールの有効化 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>基本的にはコマンドで操作するので，直接使うことはあまり想定していない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>EH_RULE_ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00920">920</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a94ea5d3a648f85871e35b36893f15007_cgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a94ea5d3a648f85871e35b36893f15007_icgraph.svg" width="1326" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a76ddd224739890733cbd318e2d5c015b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ddd224739890733cbd318e2d5c015b">&#9670;&nbsp;</a></span>EH_execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EH_execute </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_handler の実行 </p>
+<pre class="fragment">    EL にて登録されたイベントを走査し，対応するBCを展開する
+</pre> <dl class="section note"><dt>覚え書き</dt><dd>event_utility app などから定期実行されることを想定 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00265">265</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a76ddd224739890733cbd318e2d5c015b_cgraph.svg" width="2446" height="1150"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a76ddd224739890733cbd318e2d5c015b_icgraph.svg" width="1415" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a29ed902053a6e846de7d4fd0e919369c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ed902053a6e846de7d4fd0e919369c">&#9670;&nbsp;</a></span>EH_get_the_nth_log_from_the_latest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_e_h___log.html">EH_Log</a>* EH_get_the_nth_log_from_the_latest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_e_h___log_table.html" title="EH 対応のログテーブル">EH_LogTable</a> の最新からn番目の対応ログを取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>n が大きすぎる場合は，最新のものを返す </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>n番目（0のとき最新） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_e_h___log.html" title="EH 対応のログ">EH_Log</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00951">951</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a29ed902053a6e846de7d4fd0e919369c_icgraph.svg" width="1262" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="addeafcef3304c68bbb5d46ba92992307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addeafcef3304c68bbb5d46ba92992307">&#9670;&nbsp;</a></span>EH_inactivate_rule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">EH_CHECK_RULE_ACK</a> EH_inactivate_rule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ルールの無効化 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>基本的にはコマンドで操作するので，直接使うことはあまり想定していない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>EH_RULE_ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00930">930</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_addeafcef3304c68bbb5d46ba92992307_cgraph.svg" width="346" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_addeafcef3304c68bbb5d46ba92992307_icgraph.svg" width="2446" height="234"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4d66371d471058e8e45db1071e09b654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d66371d471058e8e45db1071e09b654">&#9670;&nbsp;</a></span>EH_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EH_initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_handler の初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00217">217</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a4d66371d471058e8e45db1071e09b654_cgraph.svg" width="1115" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a4d66371d471058e8e45db1071e09b654_icgraph.svg" width="1220" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6ce222b0f2b5da74cb20954b7062c498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce222b0f2b5da74cb20954b7062c498">&#9670;&nbsp;</a></span>EH_match_event_counter_to_el()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EH_match_event_counter_to_el </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>イベントカウンタを EL のそれに合わせる </p>
+<dl class="section note"><dt>覚え書き</dt><dd>EL 側をリセットした際に呼び出さないと，不整合が発生する（まあ，勝手に解消されるけど） </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00940">940</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a6ce222b0f2b5da74cb20954b7062c498_icgraph.svg" width="1960" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a081e868576a32e8518a0d73a17c30010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081e868576a32e8518a0d73a17c30010">&#9670;&nbsp;</a></span>EH_register_rule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bf">EH_REGISTER_ACK</a> EH_register_rule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__handler__rules_8h.html#adeb26d5f394a1bc32e9aff9f17c95d8a">EH_RULE_ID</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_e_h___rule_settings.html">EH_RuleSettings</a> *&#160;</td>
+          <td class="paramname"><em>settings</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ルールの登録 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>基本的には， EH_load_default_rules 内部でのみ使われることを想定 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td><a class="el" href="struct_e_h___rule_settings.html" title="EH_register_rule の引数．Rule登録に必要な情報">EH_RuleSettings</a> </td></tr>
+    <tr><td class="paramname">id</td><td>EH_RULE_ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>EH_REGISTER_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00860">860</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a081e868576a32e8518a0d73a17c30010_cgraph.svg" width="542" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a081e868576a32e8518a0d73a17c30010_icgraph.svg" width="1944" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a0dce90e75a38c6ddf6114f90d9e12d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dce90e75a38c6ddf6114f90d9e12d52">&#9670;&nbsp;</a></span>event_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_event_handler.html">EventHandler</a>* const event_handler</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00214">214</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6b45b0e7f9199277896746cad9df186b.html">System</a></li><li class="navelem"><a class="el" href="dir_9c060f6614f66753f784535d0ca0f362.html">EventManager</a></li><li class="navelem"><a class="el" href="event__handler_8h.html">event_handler.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

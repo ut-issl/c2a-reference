@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Library/majority_vote_for3.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('majority__vote__for3_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">majority_vote_for3.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>3重冗長用汎用多数決関数  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+majority_vote_for3.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="majority__vote__for3_8h__incl.svg" width="280" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="majority__vote__for3_8h__dep__incl.svg" width="174" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="majority__vote__for3_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a813a14e23b536804ecaf06cd93863c84"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> { <a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84aba72c94444f8813a15dc573b058cea28">MAJORITY_VOTE_MATCH</a> = 0, 
+<a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84a3d73716fa9dc6fc93d69b5a28044084c">MAJORITY_VOTE_MAJORITY</a> = 1, 
+<a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84ac809963476758f4d761fd355effadd7b">MAJORITY_VOTE_ERROR</a> = 2
+ }</td></tr>
+<tr class="separator:a813a14e23b536804ecaf06cd93863c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:abefd8e69379cdc2f6947e1be1d3740a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="majority__vote__for3_8h.html#abefd8e69379cdc2f6947e1be1d3740a9">majority_vote_for3_copy</a> (void *res_arg, void *array1_arg, void *array2_arg, void *array3_arg, size_t type_len, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> length)</td></tr>
+<tr class="memdesc:abefd8e69379cdc2f6947e1be1d3740a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">3重冗長用汎用多数決関数 (コピー)  <a href="majority__vote__for3_8h.html#abefd8e69379cdc2f6947e1be1d3740a9">[詳解]</a><br /></td></tr>
+<tr class="separator:abefd8e69379cdc2f6947e1be1d3740a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11bcfe7bba6a077b824bd1e3a0c62f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="majority__vote__for3_8h.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">majority_vote_for3_sync</a> (void *array1_arg, void *array2_arg, void *array3_arg, size_t type_len, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> length)</td></tr>
+<tr class="memdesc:ac11bcfe7bba6a077b824bd1e3a0c62f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">3重冗長用汎用多数決関数 (同期)  <a href="majority__vote__for3_8h.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">[詳解]</a><br /></td></tr>
+<tr class="separator:ac11bcfe7bba6a077b824bd1e3a0c62f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>3重冗長用汎用多数決関数 </p>
+
+<p class="definition"> <a class="el" href="majority__vote__for3_8h_source.html">majority_vote_for3.h</a> に定義があります。</p>
+</div><h2 class="groupheader">列挙型詳解</h2>
+<a id="a813a14e23b536804ecaf06cd93863c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813a14e23b536804ecaf06cd93863c84">&#9670;&nbsp;</a></span>MAJORITY_VOTE_FOR3_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a813a14e23b536804ecaf06cd93863c84aba72c94444f8813a15dc573b058cea28"></a>MAJORITY_VOTE_MATCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a813a14e23b536804ecaf06cd93863c84a3d73716fa9dc6fc93d69b5a28044084c"></a>MAJORITY_VOTE_MAJORITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a813a14e23b536804ecaf06cd93863c84ac809963476758f4d761fd355effadd7b"></a>MAJORITY_VOTE_ERROR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="majority__vote__for3_8h_source.html">majority_vote_for3.h</a> の <a class="el" href="majority__vote__for3_8h_source.html#l00011">11</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="abefd8e69379cdc2f6947e1be1d3740a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefd8e69379cdc2f6947e1be1d3740a9">&#9670;&nbsp;</a></span>majority_vote_for3_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> majority_vote_for3_copy </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>res_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array1_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array2_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array3_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>type_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>3重冗長用汎用多数決関数 (コピー) </p>
+<pre class="fragment">   3重冗長用配列を受け取って多数決を行った結果をresに入れ, 冗長の状態を返す
+</pre> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array1_arg</td><td>~ array3_arg 判定したい3重冗長 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_len</td><td>sizeof(型)を入れる </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>配列の長さ, 多次元でも実体は1次元なので全長を入れる, 単体の場合は1を </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">res_arg</td><td>返り値のポインタ, あらかじめ確保しておくように </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">MAJORITY_VOTE_ERROR</td><td>全不一致が少なくとも1つ存在, 異常 </td></tr>
+    <tr><td class="paramname">MAJORITY_VOTE_MAJORITY</td><td>2:1が少なくとも1つ存在, 正常 </td></tr>
+    <tr><td class="paramname">MAJORITY_VOTE_MATCH</td><td>全てについて全一致, 正常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>配列に対して行われるので, 複数のindexで多数決が行われていてもMAJORITY_VOTE_MAJORITYが返ります. </dd></dl>
+
+<p class="definition"> <a class="el" href="majority__vote__for3_8c_source.html">majority_vote_for3.c</a> の <a class="el" href="majority__vote__for3_8c_source.html#l00009">9</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac11bcfe7bba6a077b824bd1e3a0c62f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11bcfe7bba6a077b824bd1e3a0c62f4">&#9670;&nbsp;</a></span>majority_vote_for3_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> majority_vote_for3_sync </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array1_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array2_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array3_arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>type_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>3重冗長用汎用多数決関数 (同期) </p>
+<pre class="fragment">   3重冗長用配列を受け取って多数決を行い、全てを一致させた状態にする
+</pre> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array1_arg</td><td>~ array3_arg 判定したい3重冗長 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_len</td><td>sizeof(型)を入れる </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>配列の長さ, 多次元でも実体は1次元なので全長を入れる, 単体の場合は1を </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">MAJORITY_VOTE_ERROR</td><td>全不一致が少なくとも1つ存在, 異常 </td></tr>
+    <tr><td class="paramname">MAJORITY_VOTE_MAJORITY</td><td>2:1が少なくとも1つ存在, 正常 </td></tr>
+    <tr><td class="paramname">MAJORITY_VOTE_MATCH</td><td>全てについて全一致, 正常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>配列に対して行われるので, 複数のindexで多数決が行われていてもMAJORITY_VOTE_MAJORITYが返ります. また, これを使えば同期されるので三重冗長されたものの [0] のポインタを取って操作できます. </dd></dl>
+
+<p class="definition"> <a class="el" href="majority__vote__for3_8c_source.html">majority_vote_for3.c</a> の <a class="el" href="majority__vote__for3_8c_source.html#l00068">68</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="majority__vote__for3_8h.html">majority_vote_for3.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

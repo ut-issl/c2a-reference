@@ -1,0 +1,1645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/CmdTlm/block_command_table.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('block__command__table_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">block_command_table.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>BCTの定義, BCT周りの関数  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="block__command__table_8h_source.html">block_command_table.h</a>&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__executor_8h_source.html">block_command_executor.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="block__command__user__settings_8h_source.html">src_user/CmdTlm/block_command_user_settings.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="block__command__definitions_8h_source.html">src_user/CmdTlm/block_command_definitions.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="packet__handler_8h_source.html">packet_handler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="command__analyze_8h_source.html">command_analyze.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="command__definitions_8h_source.html">src_user/CmdTlm/command_definitions.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="time__manager_8h_source.html">../System/TimeManager/time_manager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="endian__memcpy_8h_source.html">../Library/endian_memcpy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="watchdog__timer_8h_source.html">../System/WatchdogTimer/watchdog_timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__tlm__cmd__packet__util_8h_source.html">common_tlm_cmd_packet_util.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+block_command_table.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c__incl.svg" width="1634" height="931"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="block__command__table_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a068d22be2fdc3ea2b123e362d96554d3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a068d22be2fdc3ea2b123e362d96554d3">BCT_load_default_func_pointer_</a> (void)</td></tr>
+<tr class="memdesc:a068d22be2fdc3ea2b123e362d96554d3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_b_c_t___func.html" title="各setter, getter が入る">BCT_Func</a> にデフォルトの関数ポインタを入れる  <a href="block__command__table_8c.html#a068d22be2fdc3ea2b123e362d96554d3">[詳解]</a><br /></td></tr>
+<tr class="separator:a068d22be2fdc3ea2b123e362d96554d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bc34c100ca20fd3cae78e27543f16d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ac7bc34c100ca20fd3cae78e27543f16d">BC_get_bc_cmd_data_default_</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos)</td></tr>
+<tr class="separator:ac7bc34c100ca20fd3cae78e27543f16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307e46bbf996b01737b52860e06228d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a307e46bbf996b01737b52860e06228d1">BC_get_bc_length_default_</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
+<tr class="separator:a307e46bbf996b01737b52860e06228d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9d23d545119b004d740c680643ab9d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a4c9d23d545119b004d740c680643ab9d">BC_set_bc_cmd_data_default_</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos, const <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *value)</td></tr>
+<tr class="separator:a4c9d23d545119b004d740c680643ab9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a91cf518bb7e30a0fb330e6ec7c67d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ab4a91cf518bb7e30a0fb330e6ec7c67d">BC_set_bc_length_default_</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> length)</td></tr>
+<tr class="separator:ab4a91cf518bb7e30a0fb330e6ec7c67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2653a11ef1264594f19869ed916daa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#aad2653a11ef1264594f19869ed916daa">BCT_get_bc_cmd_data_</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos)</td></tr>
+<tr class="separator:aad2653a11ef1264594f19869ed916daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5099527d441a777f4656300ab41037da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a5099527d441a777f4656300ab41037da">BCT_set_bc_cmd_data_</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos, const <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *value)</td></tr>
+<tr class="separator:a5099527d441a777f4656300ab41037da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de02d89c561030741c771739016db35"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a8de02d89c561030741c771739016db35">BCT_set_bc_length_</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> length)</td></tr>
+<tr class="separator:a8de02d89c561030741c771739016db35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5916badfb70fafe423f089b8d18ac8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a8f5916badfb70fafe423f089b8d18ac8">BCT_clear_pos_</a> (void)</td></tr>
+<tr class="memdesc:a8f5916badfb70fafe423f089b8d18ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">pos, pos_stored を initialize  <a href="block__command__table_8c.html#a8f5916badfb70fafe423f089b8d18ac8">[詳解]</a><br /></td></tr>
+<tr class="separator:a8f5916badfb70fafe423f089b8d18ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabca8ff51da2e3b3c4e2e76a557ee98"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#adabca8ff51da2e3b3c4e2e76a557ee98">BCT_set_position_</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos)</td></tr>
+<tr class="separator:adabca8ff51da2e3b3c4e2e76a557ee98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452f0a76d249ba2bd1d66a0312d71f02"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a452f0a76d249ba2bd1d66a0312d71f02">BCT_save_cmd_</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a452f0a76d249ba2bd1d66a0312d71f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">pos の指す場所に packet の内容を保存 (TCP_PRM_HDR_LEN の長さも考慮)  <a href="block__command__table_8c.html#a452f0a76d249ba2bd1d66a0312d71f02">[詳解]</a><br /></td></tr>
+<tr class="separator:a452f0a76d249ba2bd1d66a0312d71f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626372f9ceecbe91c090aac87437edd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a626372f9ceecbe91c090aac87437edd1">BCT_initialize</a> (void)</td></tr>
+<tr class="memdesc:a626372f9ceecbe91c090aac87437edd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT の初期化関数  <a href="block__command__table_8c.html#a626372f9ceecbe91c090aac87437edd1">[詳解]</a><br /></td></tr>
+<tr class="separator:a626372f9ceecbe91c090aac87437edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8309b21152d399c390600563bf817f17"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a8309b21152d399c390600563bf817f17">BCT_get_bc_cmd_data</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos)</td></tr>
+<tr class="memdesc:a8309b21152d399c390600563bf817f17"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_b_c_t___cmd_data.html" title="Cmd の保存場所">BCT_CmdData</a> の const pointer getter  <a href="block__command__table_8c.html#a8309b21152d399c390600563bf817f17">[詳解]</a><br /></td></tr>
+<tr class="separator:a8309b21152d399c390600563bf817f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2db8412ac7b28b2e61d99638daaac5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#add2db8412ac7b28b2e61d99638daaac5">BCT_get_bc_length</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
+<tr class="memdesc:add2db8412ac7b28b2e61d99638daaac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT の length の getter  <a href="block__command__table_8c.html#add2db8412ac7b28b2e61d99638daaac5">[詳解]</a><br /></td></tr>
+<tr class="separator:add2db8412ac7b28b2e61d99638daaac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25a57a4a97b49bf13a4caa0b5e8ff76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ae25a57a4a97b49bf13a4caa0b5e8ff76">BCT_check_position</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos)</td></tr>
+<tr class="memdesc:ae25a57a4a97b49bf13a4caa0b5e8ff76"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT_Pos* の validate  <a href="block__command__table_8c.html#ae25a57a4a97b49bf13a4caa0b5e8ff76">[詳解]</a><br /></td></tr>
+<tr class="separator:ae25a57a4a97b49bf13a4caa0b5e8ff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203d4e8714245fd65719d10d35ae0d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a203d4e8714245fd65719d10d35ae0d09">BCT_register_cmd</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a203d4e8714245fd65719d10d35ae0d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd を block_command_table-&gt;pos に登録する  <a href="block__command__table_8c.html#a203d4e8714245fd65719d10d35ae0d09">[詳解]</a><br /></td></tr>
+<tr class="separator:a203d4e8714245fd65719d10d35ae0d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c68ae4cb7426d4d93eea6d94f4948fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a6c68ae4cb7426d4d93eea6d94f4948fd">BCT_overwrite_cmd</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a6c68ae4cb7426d4d93eea6d94f4948fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">既に登録されている BC の Cmd の中身を外部から上書きする  <a href="block__command__table_8c.html#a6c68ae4cb7426d4d93eea6d94f4948fd">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c68ae4cb7426d4d93eea6d94f4948fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68a5f1f378750e90316a78de887f554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ae68a5f1f378750e90316a78de887f554">BCT_load_cmd</a> (const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos, <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:ae68a5f1f378750e90316a78de887f554"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存データをCTCPにコピーする.  <a href="block__command__table_8c.html#ae68a5f1f378750e90316a78de887f554">[詳解]</a><br /></td></tr>
+<tr class="separator:ae68a5f1f378750e90316a78de887f554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08026371114c87034cf4f4b877401093"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a08026371114c87034cf4f4b877401093">BCT_copy_bct</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> dst_block, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> src_block)</td></tr>
+<tr class="memdesc:a08026371114c87034cf4f4b877401093"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT の中身を 他の BCT に COPY する  <a href="block__command__table_8c.html#a08026371114c87034cf4f4b877401093">[詳解]</a><br /></td></tr>
+<tr class="separator:a08026371114c87034cf4f4b877401093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2476d37af5b2e36a6d66c60885651f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#aa2476d37af5b2e36a6d66c60885651f7">BCT_get_id</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> cmd)</td></tr>
+<tr class="memdesc:aa2476d37af5b2e36a6d66c60885651f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT 内の Cmd の CMD_CODE の getter  <a href="block__command__table_8c.html#aa2476d37af5b2e36a6d66c60885651f7">[詳解]</a><br /></td></tr>
+<tr class="separator:aa2476d37af5b2e36a6d66c60885651f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213d6506107e0b2ff1c4b9f789bf0f20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a213d6506107e0b2ff1c4b9f789bf0f20">BCT_get_ti</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> cmd)</td></tr>
+<tr class="memdesc:a213d6506107e0b2ff1c4b9f789bf0f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT 内の Cmd の TI の getter  <a href="block__command__table_8c.html#a213d6506107e0b2ff1c4b9f789bf0f20">[詳解]</a><br /></td></tr>
+<tr class="separator:a213d6506107e0b2ff1c4b9f789bf0f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13676f357de98e4604968c2d6f6f720c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a13676f357de98e4604968c2d6f6f720c">BCT_get_param_head</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> cmd)</td></tr>
+<tr class="memdesc:a13676f357de98e4604968c2d6f6f720c"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT 内の Cmd の param_head の getter  <a href="block__command__table_8c.html#a13676f357de98e4604968c2d6f6f720c">[詳解]</a><br /></td></tr>
+<tr class="separator:a13676f357de98e4604968c2d6f6f720c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab267a5795fb4b8be5df08ab86465f2a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ab267a5795fb4b8be5df08ab86465f2a4">BCT_store_pos</a> (void)</td></tr>
+<tr class="memdesc:ab267a5795fb4b8be5df08ab86465f2a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">pos を pos_stored に保存  <a href="block__command__table_8c.html#ab267a5795fb4b8be5df08ab86465f2a4">[詳解]</a><br /></td></tr>
+<tr class="separator:ab267a5795fb4b8be5df08ab86465f2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23bedf8b5329bf20bcd79b3b79db01f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a23bedf8b5329bf20bcd79b3b79db01f7">BCT_restore_pos</a> (void)</td></tr>
+<tr class="memdesc:a23bedf8b5329bf20bcd79b3b79db01f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">pos を pos_stored から復旧  <a href="block__command__table_8c.html#a23bedf8b5329bf20bcd79b3b79db01f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a23bedf8b5329bf20bcd79b3b79db01f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2843560950369ecdb9e35801795b54db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a2843560950369ecdb9e35801795b54db">BCT_make_pos</a> (<a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *pos, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> cmd)</td></tr>
+<tr class="memdesc:a2843560950369ecdb9e35801795b54db"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT_Pos* を引数から作る  <a href="block__command__table_8c.html#a2843560950369ecdb9e35801795b54db">[詳解]</a><br /></td></tr>
+<tr class="separator:a2843560950369ecdb9e35801795b54db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac930b9a87cdf5f47772be072b2bf5c34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ac930b9a87cdf5f47772be072b2bf5c34">BCT_swap_address</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_a, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_b)</td></tr>
+<tr class="memdesc:ac930b9a87cdf5f47772be072b2bf5c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT の block の指すポインタ &amp; func を入れ替える  <a href="block__command__table_8c.html#ac930b9a87cdf5f47772be072b2bf5c34">[詳解]</a><br /></td></tr>
+<tr class="separator:ac930b9a87cdf5f47772be072b2bf5c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f6b4e37c6106ca8b93abef278d3ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ac8f6b4e37c6106ca8b93abef278d3ef4">BCT_swap_contents</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_a, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_b)</td></tr>
+<tr class="memdesc:ac8f6b4e37c6106ca8b93abef278d3ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT の block の指す中身を入れ替える  <a href="block__command__table_8c.html#ac8f6b4e37c6106ca8b93abef278d3ef4">[詳解]</a><br /></td></tr>
+<tr class="separator:ac8f6b4e37c6106ca8b93abef278d3ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05cc77d3ebebc7fabf203a7cf44ac52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ad05cc77d3ebebc7fabf203a7cf44ac52">BCT_convert_bct_ack_to_ctcp_exec_sts</a> (<a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> ack)</td></tr>
+<tr class="memdesc:ad05cc77d3ebebc7fabf203a7cf44ac52"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum変換用関数  <a href="block__command__table_8c.html#ad05cc77d3ebebc7fabf203a7cf44ac52">[詳解]</a><br /></td></tr>
+<tr class="separator:ad05cc77d3ebebc7fabf203a7cf44ac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725e48926ae4709db0ec5b075e93ac2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a725e48926ae4709db0ec5b075e93ac2b">Cmd_BCT_CLEAR_BLOCK</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a725e48926ae4709db0ec5b075e93ac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebc0b01cb3816d89903243ac30b882e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a1ebc0b01cb3816d89903243ac30b882e">BCT_clear_block</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
+<tr class="memdesc:a1ebc0b01cb3816d89903243ac30b882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された block の BCT を初期化する  <a href="block__command__table_8c.html#a1ebc0b01cb3816d89903243ac30b882e">[詳解]</a><br /></td></tr>
+<tr class="separator:a1ebc0b01cb3816d89903243ac30b882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ad6e4bb1f8c1d31ea880e112234b26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a29ad6e4bb1f8c1d31ea880e112234b26">Cmd_BCT_SET_BLOCK_POSITION</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a29ad6e4bb1f8c1d31ea880e112234b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffe387530a9bccfc5f49ecfe04e56b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a2ffe387530a9bccfc5f49ecfe04e56b0">Cmd_BCT_COPY_BCT</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a2ffe387530a9bccfc5f49ecfe04e56b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bb3a363273909b0e009a55d4d5ce6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a67bb3a363273909b0e009a55d4d5ce6a">Cmd_BCT_OVERWRITE_CMD</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a67bb3a363273909b0e009a55d4d5ce6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ae7e940570400a046c9394dedbda49897"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_block_command_table.html">BlockCommandTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#ae7e940570400a046c9394dedbda49897">block_command_table_</a></td></tr>
+<tr class="separator:ae7e940570400a046c9394dedbda49897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9505fde3e675731e8d22907a71bb06ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_block_command_table.html">BlockCommandTable</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8c.html#a9505fde3e675731e8d22907a71bb06ca">block_command_table</a> = &amp;<a class="el" href="block__command__table_8c.html#ae7e940570400a046c9394dedbda49897">block_command_table_</a></td></tr>
+<tr class="separator:a9505fde3e675731e8d22907a71bb06ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>BCTの定義, BCT周りの関数 </p>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac7bc34c100ca20fd3cae78e27543f16d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bc34c100ca20fd3cae78e27543f16d">&#9670;&nbsp;</a></span>BC_get_bc_cmd_data_default_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> * BC_get_bc_cmd_data_default_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00088">88</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ac7bc34c100ca20fd3cae78e27543f16d_icgraph.svg" width="1148" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a307e46bbf996b01737b52860e06228d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307e46bbf996b01737b52860e06228d1">&#9670;&nbsp;</a></span>BC_get_bc_length_default_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> BC_get_bc_length_default_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00100">100</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a307e46bbf996b01737b52860e06228d1_icgraph.svg" width="1186" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4c9d23d545119b004d740c680643ab9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9d23d545119b004d740c680643ab9d">&#9670;&nbsp;</a></span>BC_set_bc_cmd_data_default_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BC_set_bc_cmd_data_default_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00093">93</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a4c9d23d545119b004d740c680643ab9d_icgraph.svg" width="1147" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab4a91cf518bb7e30a0fb330e6ec7c67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a91cf518bb7e30a0fb330e6ec7c67d">&#9670;&nbsp;</a></span>BC_set_bc_length_default_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BC_set_bc_length_default_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00105">105</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ab4a91cf518bb7e30a0fb330e6ec7c67d_icgraph.svg" width="1184" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae25a57a4a97b49bf13a4caa0b5e8ff76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25a57a4a97b49bf13a4caa0b5e8ff76">&#9670;&nbsp;</a></span>BCT_check_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_check_position </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT_Pos* の validate </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>BCTの位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00155">155</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ae25a57a4a97b49bf13a4caa0b5e8ff76_icgraph.svg" width="1558" height="1362"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1ebc0b01cb3816d89903243ac30b882e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebc0b01cb3816d89903243ac30b882e">&#9670;&nbsp;</a></span>BCT_clear_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_clear_block </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定された block の BCT を初期化する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>BC の idx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00431">431</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a1ebc0b01cb3816d89903243ac30b882e_cgraph.svg" width="815" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a1ebc0b01cb3816d89903243ac30b882e_icgraph.svg" width="2343" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8f5916badfb70fafe423f089b8d18ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f5916badfb70fafe423f089b8d18ac8">&#9670;&nbsp;</a></span>BCT_clear_pos_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BCT_clear_pos_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pos, pos_stored を initialize </p>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00136">136</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a8f5916badfb70fafe423f089b8d18ac8_icgraph.svg" width="892" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad05cc77d3ebebc7fabf203a7cf44ac52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05cc77d3ebebc7fabf203a7cf44ac52">&#9670;&nbsp;</a></span>BCT_convert_bct_ack_to_ctcp_exec_sts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_convert_bct_ack_to_ctcp_exec_sts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td>
+          <td class="paramname"><em>ack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enum変換用関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ack</td><td>BCT_ACK </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCP_EXEC_STS </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00381">381</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ad05cc77d3ebebc7fabf203a7cf44ac52_icgraph.svg" width="1695" height="584"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a08026371114c87034cf4f4b877401093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08026371114c87034cf4f4b877401093">&#9670;&nbsp;</a></span>BCT_copy_bct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_copy_bct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>dst_block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>src_block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT の中身を 他の BCT に COPY する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dst_block</td><td>コピー先の bct_id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src_block</td><td>コピー元の bct_id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00246">246</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a08026371114c87034cf4f4b877401093_cgraph.svg" width="1054" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a08026371114c87034cf4f4b877401093_icgraph.svg" width="1280" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8309b21152d399c390600563bf817f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8309b21152d399c390600563bf817f17">&#9670;&nbsp;</a></span>BCT_get_bc_cmd_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a>* BCT_get_bc_cmd_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_b_c_t___cmd_data.html" title="Cmd の保存場所">BCT_CmdData</a> の const pointer getter </p>
+<dl class="section note"><dt>覚え書き</dt><dd>アサーションはされない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>const BCT_Pos* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>const BCT_Pos* </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00125">125</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a8309b21152d399c390600563bf817f17_icgraph.svg" width="1498" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aad2653a11ef1264594f19869ed916daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2653a11ef1264594f19869ed916daa">&#9670;&nbsp;</a></span>BCT_get_bc_cmd_data_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> * BCT_get_bc_cmd_data_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00110">110</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_aad2653a11ef1264594f19869ed916daa_icgraph.svg" width="1962" height="387"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="add2db8412ac7b28b2e61d99638daaac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2db8412ac7b28b2e61d99638daaac5">&#9670;&nbsp;</a></span>BCT_get_bc_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> BCT_get_bc_length </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT の length の getter </p>
+<dl class="section note"><dt>覚え書き</dt><dd>アサーションはされない．有効でない block の場合， 0 を返す </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>BC の idx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>length </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00130">130</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_add2db8412ac7b28b2e61d99638daaac5_icgraph.svg" width="1183" height="1574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa2476d37af5b2e36a6d66c60885651f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2476d37af5b2e36a6d66c60885651f7">&#9670;&nbsp;</a></span>BCT_get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> BCT_get_id </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT 内の Cmd の CMD_CODE の getter </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>BC の idx </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>Cmds_data 内での idx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CMD_CODE </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>(block, cmd) が異常値だった場合は Cmd_CODE_MAX を返す </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00267">267</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_aa2476d37af5b2e36a6d66c60885651f7_cgraph.svg" width="567" height="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_aa2476d37af5b2e36a6d66c60885651f7_icgraph.svg" width="1194" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a13676f357de98e4604968c2d6f6f720c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13676f357de98e4604968c2d6f6f720c">&#9670;&nbsp;</a></span>BCT_get_param_head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* BCT_get_param_head </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT 内の Cmd の param_head の getter </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>BC の idx </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>Cmds_data 内での idx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>const uint8_t* ポインタ </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>(block, cmd) が異常値だった場合は (0, 0) のものを返す </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00285">285</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a13676f357de98e4604968c2d6f6f720c_cgraph.svg" width="647" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a13676f357de98e4604968c2d6f6f720c_icgraph.svg" width="1239" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a213d6506107e0b2ff1c4b9f789bf0f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213d6506107e0b2ff1c4b9f789bf0f20">&#9670;&nbsp;</a></span>BCT_get_ti()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> BCT_get_ti </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT 内の Cmd の TI の getter </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>BC の idx </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>Cmds_data 内での idx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TI </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>(block, cmd) が異常値だった場合は 0 を返す </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00276">276</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a213d6506107e0b2ff1c4b9f789bf0f20_cgraph.svg" width="527" height="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a213d6506107e0b2ff1c4b9f789bf0f20_icgraph.svg" width="1191" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a626372f9ceecbe91c090aac87437edd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626372f9ceecbe91c090aac87437edd1">&#9670;&nbsp;</a></span>BCT_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BCT_initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT の初期化関数 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>BCT と書いているが内部では BCE_init も呼ばれるため BC が関係する有象無象が初期化される. </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00054">54</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a626372f9ceecbe91c090aac87437edd1_cgraph.svg" width="1558" height="1126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a626372f9ceecbe91c090aac87437edd1_icgraph.svg" width="720" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae68a5f1f378750e90316a78de887f554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68a5f1f378750e90316a78de887f554">&#9670;&nbsp;</a></span>BCT_load_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_load_cmd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保存データをCTCPにコピーする. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>コピー元のpacketの位置 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">packet</td><td>コピーされる CTCP* </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>コマンド長は気にせず最大長を読み出すこととする. 実際の長さ情報はコピーされているヘッダに格納されている. </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00234">234</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ae68a5f1f378750e90316a78de887f554_cgraph.svg" width="354" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ae68a5f1f378750e90316a78de887f554_icgraph.svg" width="1692" height="264"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a068d22be2fdc3ea2b123e362d96554d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068d22be2fdc3ea2b123e362d96554d3">&#9670;&nbsp;</a></span>BCT_load_default_func_pointer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BCT_load_default_func_pointer_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_b_c_t___func.html" title="各setter, getter が入る">BCT_Func</a> にデフォルトの関数ポインタを入れる </p>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00075">75</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a068d22be2fdc3ea2b123e362d96554d3_cgraph.svg" width="428" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a068d22be2fdc3ea2b123e362d96554d3_icgraph.svg" width="939" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2843560950369ecdb9e35801795b54db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2843560950369ecdb9e35801795b54db">&#9670;&nbsp;</a></span>BCT_make_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_make_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>cmd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT_Pos* を引数から作る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pos</td><td>そこに作る pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>BC の idx </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>Cmds_data 内での idx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00316">316</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a2843560950369ecdb9e35801795b54db_cgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a2843560950369ecdb9e35801795b54db_icgraph.svg" width="1630" height="655"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6c68ae4cb7426d4d93eea6d94f4948fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c68ae4cb7426d4d93eea6d94f4948fd">&#9670;&nbsp;</a></span>BCT_overwrite_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_overwrite_cmd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>既に登録されている BC の Cmd の中身を外部から上書きする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>上書きする位置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>上書きされる packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00207">207</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a6c68ae4cb7426d4d93eea6d94f4948fd_cgraph.svg" width="779" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a6c68ae4cb7426d4d93eea6d94f4948fd_icgraph.svg" width="1647" height="402"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a203d4e8714245fd65719d10d35ae0d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203d4e8714245fd65719d10d35ae0d09">&#9670;&nbsp;</a></span>BCT_register_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_register_cmd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cmd を block_command_table-&gt;pos に登録する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>登録する Cmd の内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00169">169</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a203d4e8714245fd65719d10d35ae0d09_cgraph.svg" width="772" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a203d4e8714245fd65719d10d35ae0d09_icgraph.svg" width="2863" height="1002"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a23bedf8b5329bf20bcd79b3b79db01f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23bedf8b5329bf20bcd79b3b79db01f7">&#9670;&nbsp;</a></span>BCT_restore_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BCT_restore_pos </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pos を pos_stored から復旧 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00309">309</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a23bedf8b5329bf20bcd79b3b79db01f7_icgraph.svg" width="2318" height="284"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a452f0a76d249ba2bd1d66a0312d71f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452f0a76d249ba2bd1d66a0312d71f02">&#9670;&nbsp;</a></span>BCT_save_cmd_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_save_cmd_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pos の指す場所に packet の内容を保存 (TCP_PRM_HDR_LEN の長さも考慮) </p>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00219">219</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a452f0a76d249ba2bd1d66a0312d71f02_cgraph.svg" width="560" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a452f0a76d249ba2bd1d66a0312d71f02_icgraph.svg" width="2052" height="1342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5099527d441a777f4656300ab41037da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5099527d441a777f4656300ab41037da">&#9670;&nbsp;</a></span>BCT_set_bc_cmd_data_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BCT_set_bc_cmd_data_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___cmd_data.html">BCT_CmdData</a> *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00115">115</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a5099527d441a777f4656300ab41037da_icgraph.svg" width="2294" height="1208"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8de02d89c561030741c771739016db35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de02d89c561030741c771739016db35">&#9670;&nbsp;</a></span>BCT_set_bc_length_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BCT_set_bc_length_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00120">120</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a8de02d89c561030741c771739016db35_icgraph.svg" width="2992" height="1078"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adabca8ff51da2e3b3c4e2e76a557ee98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabca8ff51da2e3b3c4e2e76a557ee98">&#9670;&nbsp;</a></span>BCT_set_position_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_set_position_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_b_c_t___pos.html">BCT_Pos</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00144">144</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_adabca8ff51da2e3b3c4e2e76a557ee98_cgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_adabca8ff51da2e3b3c4e2e76a557ee98_icgraph.svg" width="1384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab267a5795fb4b8be5df08ab86465f2a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab267a5795fb4b8be5df08ab86465f2a4">&#9670;&nbsp;</a></span>BCT_store_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BCT_store_pos </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pos を pos_stored に保存 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>地上局とOBC内部のBCのポインタが混ざっておかしくならないようにするための改修. 詳細はC2Aドキュメント 「ブロックコマンド追加方法.md」 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00302">302</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ab267a5795fb4b8be5df08ab86465f2a4_icgraph.svg" width="2306" height="284"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac930b9a87cdf5f47772be072b2bf5c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac930b9a87cdf5f47772be072b2bf5c34">&#9670;&nbsp;</a></span>BCT_swap_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_swap_address </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block_a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block_b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT の block の指すポインタ &amp; func を入れ替える </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_a</td><td>入れ替える BC </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_b</td><td>入れ替える BC </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK 実行結果 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>ID1:HK:SRAM, ID2:AH:MRAM があった時に ID1:AH:MRAM, ID2:HK:SRAM が出来る <code>BCT_swap_contents</code> と組み合わせることで番号 - 中身はそのままで RAM だけを切り替えることが出来る 必ず <code>BCE_swap_address</code> と共に使用すること </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00324">324</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ac930b9a87cdf5f47772be072b2bf5c34_cgraph.svg" width="551" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac8f6b4e37c6106ca8b93abef278d3ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f6b4e37c6106ca8b93abef278d3ef4">&#9670;&nbsp;</a></span>BCT_swap_contents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> BCT_swap_contents </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block_a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block_b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BCT の block の指す中身を入れ替える </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_a</td><td>入れ替える BC </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_b</td><td>入れ替える BC </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>BCT_ACK 実行結果 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>ID1:AH:MRAM, ID2:HK:SRAM があった時に ID1:HK:MRAM, ID2:AH:SRAM が出来る <code>BCT_swap_ram</code> と組み合わせることで番号 - 中身はそのままで RAM だけを切り替えることが出来る 必ず <code>BCE_swap_contents</code> と共に使用すること </dd></dl>
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00343">343</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_ac8f6b4e37c6106ca8b93abef278d3ef4_cgraph.svg" width="619" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a725e48926ae4709db0ec5b075e93ac2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725e48926ae4709db0ec5b075e93ac2b">&#9670;&nbsp;</a></span>Cmd_BCT_CLEAR_BLOCK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_CLEAR_BLOCK </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00411">411</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a725e48926ae4709db0ec5b075e93ac2b_cgraph.svg" width="1131" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a725e48926ae4709db0ec5b075e93ac2b_icgraph.svg" width="1144" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2ffe387530a9bccfc5f49ecfe04e56b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffe387530a9bccfc5f49ecfe04e56b0">&#9670;&nbsp;</a></span>Cmd_BCT_COPY_BCT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_COPY_BCT </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00465">465</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a2ffe387530a9bccfc5f49ecfe04e56b0_cgraph.svg" width="1338" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a2ffe387530a9bccfc5f49ecfe04e56b0_icgraph.svg" width="1119" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a67bb3a363273909b0e009a55d4d5ce6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67bb3a363273909b0e009a55d4d5ce6a">&#9670;&nbsp;</a></span>Cmd_BCT_OVERWRITE_CMD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_OVERWRITE_CMD </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00479">479</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a67bb3a363273909b0e009a55d4d5ce6a_cgraph.svg" width="1140" height="671"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a67bb3a363273909b0e009a55d4d5ce6a_icgraph.svg" width="1167" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a29ad6e4bb1f8c1d31ea880e112234b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ad6e4bb1f8c1d31ea880e112234b26">&#9670;&nbsp;</a></span>Cmd_BCT_SET_BLOCK_POSITION()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_SET_BLOCK_POSITION </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00444">444</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a29ad6e4bb1f8c1d31ea880e112234b26_cgraph.svg" width="707" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8c_a29ad6e4bb1f8c1d31ea880e112234b26_icgraph.svg" width="1195" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a9505fde3e675731e8d22907a71bb06ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9505fde3e675731e8d22907a71bb06ca">&#9670;&nbsp;</a></span>block_command_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_block_command_table.html">BlockCommandTable</a>* const block_command_table = &amp;<a class="el" href="block__command__table_8c.html#ae7e940570400a046c9394dedbda49897">block_command_table_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae7e940570400a046c9394dedbda49897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e940570400a046c9394dedbda49897">&#9670;&nbsp;</a></span>block_command_table_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_block_command_table.html">BlockCommandTable</a> block_command_table_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00023">23</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_caedce1072596b48fa715a3e5eba49b3.html">CmdTlm</a></li><li class="navelem"><a class="el" href="block__command__table_8c.html">block_command_table.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

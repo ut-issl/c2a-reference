@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/System/ModeManager/mode_manager.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mode__manager_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">mode_manager.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>モード遷移の制御  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="mode__manager_8h_source.html">mode_manager.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="time__manager_8h_source.html">../TimeManager/time_manager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="task__dispatcher_8h_source.html">../TaskManager/task_dispatcher.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="anomaly__logger_8h_source.html">../AnomalyLogger/anomaly_logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="event__logger_8h_source.html">../EventManager/event_logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__executor_8h_source.html">../../CmdTlm/block_command_executor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__tlm__cmd__packet__util_8h_source.html">../../CmdTlm/common_tlm_cmd_packet_util.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="command__definitions_8h_source.html">src_user/CmdTlm/command_definitions.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="packet__handler_8h_source.html">../../CmdTlm/packet_handler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timeline__command__dispatcher_8h_source.html">../../Applications/timeline_command_dispatcher.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="endian__memcpy_8h_source.html">../../Library/endian_memcpy.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+mode_manager.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c__incl.svg" width="2658" height="842"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="mode__manager_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ae4381c1c84d8b5d8aa033e522530436d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#ae4381c1c84d8b5d8aa033e522530436d">MM_start_transition_</a> (<a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a> id)</td></tr>
+<tr class="memdesc:ae4381c1c84d8b5d8aa033e522530436d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd_MM_START_TRANSITIONの実体  <a href="mode__manager_8c.html#ae4381c1c84d8b5d8aa033e522530436d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4381c1c84d8b5d8aa033e522530436d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47323ca76824c1d3acd39db890aea966"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a47323ca76824c1d3acd39db890aea966">MM_finish_transition_</a> (void)</td></tr>
+<tr class="memdesc:a47323ca76824c1d3acd39db890aea966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd_MM_FINISH_TRANSITIONの実体  <a href="mode__manager_8c.html#a47323ca76824c1d3acd39db890aea966">[詳解]</a><br /></td></tr>
+<tr class="separator:a47323ca76824c1d3acd39db890aea966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a483437e28116e6067d488392922a8f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a4a483437e28116e6067d488392922a8f">MM_deploy_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> index)</td></tr>
+<tr class="memdesc:a4a483437e28116e6067d488392922a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(モード遷移に対応する)ブロックコマンドのタイムラインへの展開を行う  <a href="mode__manager_8c.html#a4a483437e28116e6067d488392922a8f">[詳解]</a><br /></td></tr>
+<tr class="separator:a4a483437e28116e6067d488392922a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75aa16db5f27f32cce78bf1fadb814b2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a75aa16db5f27f32cce78bf1fadb814b2">MM_clear_transition_table_</a> (void)</td></tr>
+<tr class="memdesc:a75aa16db5f27f32cce78bf1fadb814b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード遷移テーブルをすべて未定義に初期化する  <a href="mode__manager_8c.html#a75aa16db5f27f32cce78bf1fadb814b2">[詳解]</a><br /></td></tr>
+<tr class="separator:a75aa16db5f27f32cce78bf1fadb814b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fbf516698fe6c690438e21ec8efd82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a89fbf516698fe6c690438e21ec8efd82">MM_initialize</a> (void)</td></tr>
+<tr class="memdesc:a89fbf516698fe6c690438e21ec8efd82"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード遷移を管理する <a class="el" href="struct_mode_manager.html" title="ModeManager 本体">ModeManager</a> 構造体 (mode_manager_) の初期化  <a href="mode__manager_8c.html#a89fbf516698fe6c690438e21ec8efd82">[詳解]</a><br /></td></tr>
+<tr class="separator:a89fbf516698fe6c690438e21ec8efd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7370161c6690579bbe7b185234733a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#af7370161c6690579bbe7b185234733a9">Cmd_MM_SET_MODE_LIST</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:af7370161c6690579bbe7b185234733a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード遷移後にタスクリストとして実行するブロックコマンドを設定するコマンド  <a href="mode__manager_8c.html#af7370161c6690579bbe7b185234733a9">[詳解]</a><br /></td></tr>
+<tr class="separator:af7370161c6690579bbe7b185234733a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4996faf1b1545bd0a9ba50db676e8c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a4996faf1b1545bd0a9ba50db676e8c21">MM_set_mode_list</a> (<a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a> mode, <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> bc_index)</td></tr>
+<tr class="memdesc:a4996faf1b1545bd0a9ba50db676e8c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd_MM_SET_MODE_LISTの実体  <a href="mode__manager_8c.html#a4996faf1b1545bd0a9ba50db676e8c21">[詳解]</a><br /></td></tr>
+<tr class="separator:a4996faf1b1545bd0a9ba50db676e8c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa90b20116438de837bf2b015ea92fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a0aa90b20116438de837bf2b015ea92fa">Cmd_MM_SET_TRANSITION_TABLE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a0aa90b20116438de837bf2b015ea92fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード遷移時に実行するブロックコマンドを設定するコマンド  <a href="mode__manager_8c.html#a0aa90b20116438de837bf2b015ea92fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a0aa90b20116438de837bf2b015ea92fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac717e1371ece68f1852c5051a24046d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#ac717e1371ece68f1852c5051a24046d7">MM_set_transition_table</a> (<a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a> from, <a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a> to, <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> bc_index)</td></tr>
+<tr class="memdesc:ac717e1371ece68f1852c5051a24046d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd_MM_SET_TRANSITION_TABLEの実体  <a href="mode__manager_8c.html#ac717e1371ece68f1852c5051a24046d7">[詳解]</a><br /></td></tr>
+<tr class="separator:ac717e1371ece68f1852c5051a24046d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa127fcef7255363d46cf121c9399ce7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#aa127fcef7255363d46cf121c9399ce7a">Cmd_MM_START_TRANSITION</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:aa127fcef7255363d46cf121c9399ce7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード遷移を開始するコマンド  <a href="mode__manager_8c.html#aa127fcef7255363d46cf121c9399ce7a">[詳解]</a><br /></td></tr>
+<tr class="separator:aa127fcef7255363d46cf121c9399ce7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac394184090d10b207742dbfe546acf17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#ac394184090d10b207742dbfe546acf17">Cmd_MM_FINISH_TRANSITION</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:ac394184090d10b207742dbfe546acf17"><td class="mdescLeft">&#160;</td><td class="mdescRight">モード遷移終了を示すコマンド モード遷移のブロックコマンドの最後に入れて使う 入っていない場合、タスクリストが遷移先のモードに置き換わらないので注意  <a href="mode__manager_8c.html#ac394184090d10b207742dbfe546acf17">[詳解]</a><br /></td></tr>
+<tr class="separator:ac394184090d10b207742dbfe546acf17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3f5457b74a1bd89c6bde7dba027299"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#acd3f5457b74a1bd89c6bde7dba027299">Cmd_MM_UPDATE_TRANSITION_TABLE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:acd3f5457b74a1bd89c6bde7dba027299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed9b7b729136f2239b78c2bb219d217"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#aeed9b7b729136f2239b78c2bb219d217">MM_update_transition_table_for_tlm</a> (void)</td></tr>
+<tr class="memdesc:aeed9b7b729136f2239b78c2bb219d217"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM 用情報の生成  <a href="mode__manager_8c.html#aeed9b7b729136f2239b78c2bb219d217">[詳解]</a><br /></td></tr>
+<tr class="separator:aeed9b7b729136f2239b78c2bb219d217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b45d00aa2f1380d22408cc09ba20a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#af4b45d00aa2f1380d22408cc09ba20a9">MM_get_tasklist_id_of_mode</a> (<a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a> mode)</td></tr>
+<tr class="memdesc:af4b45d00aa2f1380d22408cc09ba20a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">mode に対応した TL の BCT ID を取得する  <a href="mode__manager_8c.html#af4b45d00aa2f1380d22408cc09ba20a9">[詳解]</a><br /></td></tr>
+<tr class="separator:af4b45d00aa2f1380d22408cc09ba20a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:aa147066c6e36f9c5318167d83b1cca1c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_mode_manager.html">ModeManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#aa147066c6e36f9c5318167d83b1cca1c">mode_manager_</a></td></tr>
+<tr class="separator:aa147066c6e36f9c5318167d83b1cca1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a684d1d03653356c1233d146e7f1d88"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_mode_manager.html">ModeManager</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mode__manager_8c.html#a6a684d1d03653356c1233d146e7f1d88">mode_manager</a> = &amp;<a class="el" href="mode__manager_8c.html#aa147066c6e36f9c5318167d83b1cca1c">mode_manager_</a></td></tr>
+<tr class="separator:a6a684d1d03653356c1233d146e7f1d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>モード遷移の制御 </p>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac394184090d10b207742dbfe546acf17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac394184090d10b207742dbfe546acf17">&#9670;&nbsp;</a></span>Cmd_MM_FINISH_TRANSITION()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_MM_FINISH_TRANSITION </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>モード遷移終了を示すコマンド モード遷移のブロックコマンドの最後に入れて使う 入っていない場合、タスクリストが遷移先のモードに置き換わらないので注意 </p>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00261">261</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_ac394184090d10b207742dbfe546acf17_cgraph.svg" width="1604" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_ac394184090d10b207742dbfe546acf17_icgraph.svg" width="1180" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af7370161c6690579bbe7b185234733a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7370161c6690579bbe7b185234733a9">&#9670;&nbsp;</a></span>Cmd_MM_SET_MODE_LIST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_MM_SET_MODE_LIST </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>モード遷移後にタスクリストとして実行するブロックコマンドを設定するコマンド </p>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00086">86</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_af7370161c6690579bbe7b185234733a9_cgraph.svg" width="898" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_af7370161c6690579bbe7b185234733a9_icgraph.svg" width="1154" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0aa90b20116438de837bf2b015ea92fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa90b20116438de837bf2b015ea92fa">&#9670;&nbsp;</a></span>Cmd_MM_SET_TRANSITION_TABLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_MM_SET_TRANSITION_TABLE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>モード遷移時に実行するブロックコマンドを設定するコマンド </p>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00138">138</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a0aa90b20116438de837bf2b015ea92fa_cgraph.svg" width="923" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a0aa90b20116438de837bf2b015ea92fa_icgraph.svg" width="1160" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa127fcef7255363d46cf121c9399ce7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa127fcef7255363d46cf121c9399ce7a">&#9670;&nbsp;</a></span>Cmd_MM_START_TRANSITION()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_MM_START_TRANSITION </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>モード遷移を開始するコマンド </p>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00193">193</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_aa127fcef7255363d46cf121c9399ce7a_cgraph.svg" width="1654" height="1134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_aa127fcef7255363d46cf121c9399ce7a_icgraph.svg" width="1176" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acd3f5457b74a1bd89c6bde7dba027299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3f5457b74a1bd89c6bde7dba027299">&#9670;&nbsp;</a></span>Cmd_MM_UPDATE_TRANSITION_TABLE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_MM_UPDATE_TRANSITION_TABLE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00319">319</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_acd3f5457b74a1bd89c6bde7dba027299_cgraph.svg" width="455" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_acd3f5457b74a1bd89c6bde7dba027299_icgraph.svg" width="1188" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a75aa16db5f27f32cce78bf1fadb814b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75aa16db5f27f32cce78bf1fadb814b2">&#9670;&nbsp;</a></span>MM_clear_transition_table_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MM_clear_transition_table_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モード遷移テーブルをすべて未定義に初期化する </p>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00068">68</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a75aa16db5f27f32cce78bf1fadb814b2_icgraph.svg" width="922" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4a483437e28116e6067d488392922a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a483437e28116e6067d488392922a8f">&#9670;&nbsp;</a></span>MM_deploy_block_cmd_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void MM_deploy_block_cmd_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(モード遷移に対応する)ブロックコマンドのタイムラインへの展開を行う </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>展開する BC ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>MM_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00310">310</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a4a483437e28116e6067d488392922a8f_cgraph.svg" width="1363" height="747"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a4a483437e28116e6067d488392922a8f_icgraph.svg" width="1612" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a47323ca76824c1d3acd39db890aea966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47323ca76824c1d3acd39db890aea966">&#9670;&nbsp;</a></span>MM_finish_transition_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a> MM_finish_transition_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cmd_MM_FINISH_TRANSITIONの実体 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>MM_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00273">273</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a47323ca76824c1d3acd39db890aea966_cgraph.svg" width="1335" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a47323ca76824c1d3acd39db890aea966_icgraph.svg" width="1392" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af4b45d00aa2f1380d22408cc09ba20a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b45d00aa2f1380d22408cc09ba20a9">&#9670;&nbsp;</a></span>MM_get_tasklist_id_of_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> MM_get_tasklist_id_of_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>mode に対応した TL の BCT ID を取得する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>引数アサーションは行わない．不正な mode の場合は 0 を返す． </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>対応するモード </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>モード対応する BC ID </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00350">350</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_af4b45d00aa2f1380d22408cc09ba20a9_icgraph.svg" width="1588" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a89fbf516698fe6c690438e21ec8efd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89fbf516698fe6c690438e21ec8efd82">&#9670;&nbsp;</a></span>MM_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MM_initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>モード遷移を管理する <a class="el" href="struct_mode_manager.html" title="ModeManager 本体">ModeManager</a> 構造体 (mode_manager_) の初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00051">51</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a89fbf516698fe6c690438e21ec8efd82_cgraph.svg" width="1560" height="982"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a89fbf516698fe6c690438e21ec8efd82_icgraph.svg" width="719" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4996faf1b1545bd0a9ba50db676e8c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4996faf1b1545bd0a9ba50db676e8c21">&#9670;&nbsp;</a></span>MM_set_mode_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a> MM_set_mode_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>bc_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cmd_MM_SET_MODE_LISTの実体 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>対応 Mode ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bc_index</td><td>Mode に対応する BC ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>MM_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00110">110</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a4996faf1b1545bd0a9ba50db676e8c21_cgraph.svg" width="548" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_a4996faf1b1545bd0a9ba50db676e8c21_icgraph.svg" width="1352" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac717e1371ece68f1852c5051a24046d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac717e1371ece68f1852c5051a24046d7">&#9670;&nbsp;</a></span>MM_set_transition_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a> MM_set_transition_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a>&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>bc_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cmd_MM_SET_TRANSITION_TABLEの実体 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">from</td><td>遷移元 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">to</td><td>遷移先 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bc_index</td><td>遷移に対応する BC ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>MM_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00163">163</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_ac717e1371ece68f1852c5051a24046d7_cgraph.svg" width="587" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_ac717e1371ece68f1852c5051a24046d7_icgraph.svg" width="1398" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae4381c1c84d8b5d8aa033e522530436d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4381c1c84d8b5d8aa033e522530436d">&#9670;&nbsp;</a></span>MM_start_transition_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="mode__manager_8h.html#a82672041166d42f3221d2911dd8897a3">MM_ACK</a> MM_start_transition_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d">MD_MODEID</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cmd_MM_START_TRANSITIONの実体 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>移行先の Mode ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>MM_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00209">209</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_ae4381c1c84d8b5d8aa033e522530436d_cgraph.svg" width="1588" height="880"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_ae4381c1c84d8b5d8aa033e522530436d_icgraph.svg" width="1383" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aeed9b7b729136f2239b78c2bb219d217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed9b7b729136f2239b78c2bb219d217">&#9670;&nbsp;</a></span>MM_update_transition_table_for_tlm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> MM_update_transition_table_for_tlm </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM 用情報の生成 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>uint8_t: 遷移 Edge 本数 </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>テレメの上部で呼び出されるようにするとテレメ生成時に勝手に情報が更新されて便利 (tlm update cmd を打つ必要が無い) </dd></dl>
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00327">327</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="mode__manager_8c_aeed9b7b729136f2239b78c2bb219d217_icgraph.svg" width="1403" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a6a684d1d03653356c1233d146e7f1d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a684d1d03653356c1233d146e7f1d88">&#9670;&nbsp;</a></span>mode_manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_mode_manager.html">ModeManager</a>* const mode_manager = &amp;<a class="el" href="mode__manager_8c.html#aa147066c6e36f9c5318167d83b1cca1c">mode_manager_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa147066c6e36f9c5318167d83b1cca1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa147066c6e36f9c5318167d83b1cca1c">&#9670;&nbsp;</a></span>mode_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mode_manager.html">ModeManager</a> mode_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mode__manager_8c_source.html">mode_manager.c</a> の <a class="el" href="mode__manager_8c_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6b45b0e7f9199277896746cad9df186b.html">System</a></li><li class="navelem"><a class="el" href="dir_b8f4ad119c1313b5390c21b77b270f88.html">ModeManager</a></li><li class="navelem"><a class="el" href="mode__manager_8c.html">mode_manager.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

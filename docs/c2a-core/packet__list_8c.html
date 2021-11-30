@@ -1,0 +1,1084 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/CmdTlm/packet_list.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('packet__list_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">packet_list.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>CTCPのリストとしてのデータ構造を定義. 片方向リストとして実装されている  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="packet__list_8h_source.html">packet_list.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time__manager_8h_source.html">../System/TimeManager/time_manager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__executor_8h_source.html">block_command_executor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__table_8h_source.html">block_command_table.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+packet_list.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c__incl.svg" width="1584" height="559"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="packet__list_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a70aad047c68c6c6683a064418c9d566b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a70aad047c68c6c6683a064418c9d566b">PL_drop_head_</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a70aad047c68c6c6683a064418c9d566b"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭ノードを落とす  <a href="packet__list_8c.html#a70aad047c68c6c6683a064418c9d566b">[詳解]</a><br /></td></tr>
+<tr class="separator:a70aad047c68c6c6683a064418c9d566b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5126c65c48ec09b499008986571eb24"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#ac5126c65c48ec09b499008986571eb24">PL_get_free_node_</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:ac5126c65c48ec09b499008986571eb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">未使用ノードを新規に取得  <a href="packet__list_8c.html#ac5126c65c48ec09b499008986571eb24">[詳解]</a><br /></td></tr>
+<tr class="separator:ac5126c65c48ec09b499008986571eb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3f57ac00a8332d16c1e078a0f7b0536"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#ae3f57ac00a8332d16c1e078a0f7b0536">PL_initialize</a> (<a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *stock, size_t size, <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:ae3f57ac00a8332d16c1e078a0f7b0536"><td class="mdescLeft">&#160;</td><td class="mdescRight">static に確保された PL_Node 配列を受け取りその領域を使用して PL を初期化  <a href="packet__list_8c.html#ae3f57ac00a8332d16c1e078a0f7b0536">[詳解]</a><br /></td></tr>
+<tr class="separator:ae3f57ac00a8332d16c1e078a0f7b0536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62249d5f34ee1b3ac76d5f181a00c99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#ac62249d5f34ee1b3ac76d5f181a00c99">PL_clear_list</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:ac62249d5f34ee1b3ac76d5f181a00c99"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> をクリア  <a href="packet__list_8c.html#ac62249d5f34ee1b3ac76d5f181a00c99">[詳解]</a><br /></td></tr>
+<tr class="separator:ac62249d5f34ee1b3ac76d5f181a00c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356bc26884b064cc7010de9c50972223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a356bc26884b064cc7010de9c50972223">PL_count_executed_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a356bc26884b064cc7010de9c50972223"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で実行されたノード数を返す  <a href="packet__list_8c.html#a356bc26884b064cc7010de9c50972223">[詳解]</a><br /></td></tr>
+<tr class="separator:a356bc26884b064cc7010de9c50972223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e4900f365e6983a9a59adebf950cec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#ad4e4900f365e6983a9a59adebf950cec">PL_count_active_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:ad4e4900f365e6983a9a59adebf950cec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で有効な(実行待ち)ノード数を返す  <a href="packet__list_8c.html#ad4e4900f365e6983a9a59adebf950cec">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4e4900f365e6983a9a59adebf950cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2893355007a4c7efbc565ef4c4cc536a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a2893355007a4c7efbc565ef4c4cc536a">PL_count_inactive_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a2893355007a4c7efbc565ef4c4cc536a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で使用されていないノード数を返す  <a href="packet__list_8c.html#a2893355007a4c7efbc565ef4c4cc536a">[詳解]</a><br /></td></tr>
+<tr class="separator:a2893355007a4c7efbc565ef4c4cc536a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4caae06aa17abcc1d983f5e43f7b00ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a4caae06aa17abcc1d983f5e43f7b00ac">PL_is_empty</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a4caae06aa17abcc1d983f5e43f7b00ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> が空かどうか  <a href="packet__list_8c.html#a4caae06aa17abcc1d983f5e43f7b00ac">[詳解]</a><br /></td></tr>
+<tr class="separator:a4caae06aa17abcc1d983f5e43f7b00ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10b32675a0dae5c5539aef97e597a719"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a10b32675a0dae5c5539aef97e597a719">PL_is_full</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a10b32675a0dae5c5539aef97e597a719"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> が一杯かどうか  <a href="packet__list_8c.html#a10b32675a0dae5c5539aef97e597a719">[詳解]</a><br /></td></tr>
+<tr class="separator:a10b32675a0dae5c5539aef97e597a719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6b5b3ed753070e0ef0b14556311263"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a2b6b5b3ed753070e0ef0b14556311263">PL_get_head</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a2b6b5b3ed753070e0ef0b14556311263"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の active 先頭ノードを取得  <a href="packet__list_8c.html#a2b6b5b3ed753070e0ef0b14556311263">[詳解]</a><br /></td></tr>
+<tr class="separator:a2b6b5b3ed753070e0ef0b14556311263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5027b1d6d804ce0c4b650ef214df53"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a7b5027b1d6d804ce0c4b650ef214df53">PL_get_tail</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:a7b5027b1d6d804ce0c4b650ef214df53"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の active 末端ノードを取得  <a href="packet__list_8c.html#a7b5027b1d6d804ce0c4b650ef214df53">[詳解]</a><br /></td></tr>
+<tr class="separator:a7b5027b1d6d804ce0c4b650ef214df53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f57e8f9c5e997c46938d70a2fb1b39b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a5f57e8f9c5e997c46938d70a2fb1b39b">PL_get_next</a> (const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *node)</td></tr>
+<tr class="memdesc:a5f57e8f9c5e997c46938d70a2fb1b39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">次のNode を取得  <a href="packet__list_8c.html#a5f57e8f9c5e997c46938d70a2fb1b39b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5f57e8f9c5e997c46938d70a2fb1b39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb900f5ab625fa14385440dc6bd094f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#aeb900f5ab625fa14385440dc6bd094f2">PL_push_front</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:aeb900f5ab625fa14385440dc6bd094f2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の先頭に packet を挿入  <a href="packet__list_8c.html#aeb900f5ab625fa14385440dc6bd094f2">[詳解]</a><br /></td></tr>
+<tr class="separator:aeb900f5ab625fa14385440dc6bd094f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f61ade454579898c70f5b8b2f934c02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a3f61ade454579898c70f5b8b2f934c02">PL_push_back</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a3f61ade454579898c70f5b8b2f934c02"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の末尾に packet を挿入  <a href="packet__list_8c.html#a3f61ade454579898c70f5b8b2f934c02">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f61ade454579898c70f5b8b2f934c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb87ef8426d4173eb621da1e3ab23be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a1eb87ef8426d4173eb621da1e3ab23be">PL_insert_after</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *pos, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a1eb87ef8426d4173eb621da1e3ab23be"><td class="mdescLeft">&#160;</td><td class="mdescRight">ある Node の直後に packet を挿入  <a href="packet__list_8c.html#a1eb87ef8426d4173eb621da1e3ab23be">[詳解]</a><br /></td></tr>
+<tr class="separator:a1eb87ef8426d4173eb621da1e3ab23be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e7cc1a1593ad27aacb7081f2aaa7fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a98e7cc1a1593ad27aacb7081f2aaa7fe">PL_insert_tl_cmd</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> now)</td></tr>
+<tr class="memdesc:a98e7cc1a1593ad27aacb7081f2aaa7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">ある Node の直後に packet を挿入  <a href="packet__list_8c.html#a98e7cc1a1593ad27aacb7081f2aaa7fe">[詳解]</a><br /></td></tr>
+<tr class="separator:a98e7cc1a1593ad27aacb7081f2aaa7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6be9c107ae8ba21af73164bdf63e31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a0a6be9c107ae8ba21af73164bdf63e31">PL_deploy_block_cmd</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> start_at)</td></tr>
+<tr class="memdesc:a0a6be9c107ae8ba21af73164bdf63e31"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> 上に BC を展開する  <a href="packet__list_8c.html#a0a6be9c107ae8ba21af73164bdf63e31">[詳解]</a><br /></td></tr>
+<tr class="separator:a0a6be9c107ae8ba21af73164bdf63e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6462a546e2492c306a9f334c5a2d48d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#ae6462a546e2492c306a9f334c5a2d48d">PL_check_tl_cmd</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> time)</td></tr>
+<tr class="memdesc:ae6462a546e2492c306a9f334c5a2d48d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の先頭と time を比較  <a href="packet__list_8c.html#ae6462a546e2492c306a9f334c5a2d48d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae6462a546e2492c306a9f334c5a2d48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd75e39baffa930cee6287e9821030b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#afdd75e39baffa930cee6287e9821030b">PL_drop_executed</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
+<tr class="memdesc:afdd75e39baffa930cee6287e9821030b"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭ノードを落とす  <a href="packet__list_8c.html#afdd75e39baffa930cee6287e9821030b">[詳解]</a><br /></td></tr>
+<tr class="separator:afdd75e39baffa930cee6287e9821030b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aaa9b2a53ee423ebf1bb66cc1b4a8ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8c.html#a5aaa9b2a53ee423ebf1bb66cc1b4a8ba">PL_drop_node</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli, <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *prev, <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *current)</td></tr>
+<tr class="memdesc:a5aaa9b2a53ee423ebf1bb66cc1b4a8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたノードを落とす  <a href="packet__list_8c.html#a5aaa9b2a53ee423ebf1bb66cc1b4a8ba">[詳解]</a><br /></td></tr>
+<tr class="separator:a5aaa9b2a53ee423ebf1bb66cc1b4a8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>CTCPのリストとしてのデータ構造を定義. 片方向リストとして実装されている </p>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ae6462a546e2492c306a9f334c5a2d48d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6462a546e2492c306a9f334c5a2d48d">&#9670;&nbsp;</a></span>PL_check_tl_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_check_tl_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の先頭と time を比較 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>比較する時刻 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_ACK </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>TaskList も TimeLine もこれを使うので start_at は time </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00292">292</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ae6462a546e2492c306a9f334c5a2d48d_cgraph.svg" width="472" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ae6462a546e2492c306a9f334c5a2d48d_icgraph.svg" width="1544" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac62249d5f34ee1b3ac76d5f181a00c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62249d5f34ee1b3ac76d5f181a00c99">&#9670;&nbsp;</a></span>PL_clear_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PL_clear_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> をクリア </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td>クリアする <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>全 active Node を削除して 全て inactive の stock にする </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00037">37</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ac62249d5f34ee1b3ac76d5f181a00c99_icgraph.svg" width="1643" height="616"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad4e4900f365e6983a9a59adebf950cec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e4900f365e6983a9a59adebf950cec">&#9670;&nbsp;</a></span>PL_count_active_nodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> PL_count_active_nodes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で有効な(実行待ち)ノード数を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>uint16_t: 有効な(実行待ち)ノード数 </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00061">61</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ad4e4900f365e6983a9a59adebf950cec_icgraph.svg" width="1616" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a356bc26884b064cc7010de9c50972223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356bc26884b064cc7010de9c50972223">&#9670;&nbsp;</a></span>PL_count_executed_nodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> PL_count_executed_nodes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で実行されたノード数を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>uint32_t: 実行されたノード数 </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00056">56</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a356bc26884b064cc7010de9c50972223_icgraph.svg" width="1536" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2893355007a4c7efbc565ef4c4cc536a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2893355007a4c7efbc565ef4c4cc536a">&#9670;&nbsp;</a></span>PL_count_inactive_nodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> PL_count_inactive_nodes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で使用されていないノード数を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>uint16_t: 使用されていないノード数 </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00066">66</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a2893355007a4c7efbc565ef4c4cc536a_icgraph.svg" width="1704" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0a6be9c107ae8ba21af73164bdf63e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6be9c107ae8ba21af73164bdf63e31">&#9670;&nbsp;</a></span>PL_deploy_block_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_deploy_block_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>start_at</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> 上に BC を展開する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>展開する BC の ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_at</td><td>開始基準時刻 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_ACK </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>TaskList も TimeLine もこれを使うので start_at は uint32_t </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00238">238</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a0a6be9c107ae8ba21af73164bdf63e31_cgraph.svg" width="1391" height="646"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a0a6be9c107ae8ba21af73164bdf63e31_icgraph.svg" width="1471" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afdd75e39baffa930cee6287e9821030b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd75e39baffa930cee6287e9821030b">&#9670;&nbsp;</a></span>PL_drop_executed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PL_drop_executed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>先頭ノードを落とす </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00306">306</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_afdd75e39baffa930cee6287e9821030b_cgraph.svg" width="316" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_afdd75e39baffa930cee6287e9821030b_icgraph.svg" width="1914" height="400"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a70aad047c68c6c6683a064418c9d566b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70aad047c68c6c6683a064418c9d566b">&#9670;&nbsp;</a></span>PL_drop_head_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void PL_drop_head_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>先頭ノードを落とす </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00333">333</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a70aad047c68c6c6683a064418c9d566b_icgraph.svg" width="2159" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5aaa9b2a53ee423ebf1bb66cc1b4a8ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aaa9b2a53ee423ebf1bb66cc1b4a8ba">&#9670;&nbsp;</a></span>PL_drop_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PL_drop_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td>
+          <td class="paramname"><em>prev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td>
+          <td class="paramname"><em>current</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定されたノードを落とす </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prev</td><td>落とす直前 Node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>落とす Node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00312">312</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a5aaa9b2a53ee423ebf1bb66cc1b4a8ba_cgraph.svg" width="290" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a5aaa9b2a53ee423ebf1bb66cc1b4a8ba_icgraph.svg" width="1530" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac5126c65c48ec09b499008986571eb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5126c65c48ec09b499008986571eb24">&#9670;&nbsp;</a></span>PL_get_free_node_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> * PL_get_free_node_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>未使用ノードを新規に取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_Node* </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00353">353</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ac5126c65c48ec09b499008986571eb24_icgraph.svg" width="3195" height="647"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2b6b5b3ed753070e0ef0b14556311263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6b5b3ed753070e0ef0b14556311263">&#9670;&nbsp;</a></span>PL_get_head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* PL_get_head </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の active 先頭ノードを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>const PL_Node* </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00081">81</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a2b6b5b3ed753070e0ef0b14556311263_icgraph.svg" width="1910" height="767"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5f57e8f9c5e997c46938d70a2fb1b39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f57e8f9c5e997c46938d70a2fb1b39b">&#9670;&nbsp;</a></span>PL_get_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* PL_get_next </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次のNode を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>現ノード </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>const PL_Node* </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00091">91</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a5f57e8f9c5e997c46938d70a2fb1b39b_icgraph.svg" width="1519" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7b5027b1d6d804ce0c4b650ef214df53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b5027b1d6d804ce0c4b650ef214df53">&#9670;&nbsp;</a></span>PL_get_tail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* PL_get_tail </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の active 末端ノードを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>const PL_Node* </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00086">86</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a7b5027b1d6d804ce0c4b650ef214df53_icgraph.svg" width="3224" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae3f57ac00a8332d16c1e078a0f7b0536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f57ac00a8332d16c1e078a0f7b0536">&#9670;&nbsp;</a></span>PL_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PL_initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td>
+          <td class="paramname"><em>stock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>static に確保された PL_Node 配列を受け取りその領域を使用して PL を初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stock</td><td>使用する PL_Node 配列 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size_t</td><td>配列のサイズ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pli</td><td>初期化する <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00027">27</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ae3f57ac00a8332d16c1e078a0f7b0536_cgraph.svg" width="262" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_ae3f57ac00a8332d16c1e078a0f7b0536_icgraph.svg" width="1027" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1eb87ef8426d4173eb621da1e3ab23be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eb87ef8426d4173eb621da1e3ab23be">&#9670;&nbsp;</a></span>PL_insert_after()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_insert_after </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ある Node の直後に packet を挿入 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>直後に挿入される packet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>挿入する packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00152">152</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a1eb87ef8426d4173eb621da1e3ab23be_cgraph.svg" width="864" height="100"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a1eb87ef8426d4173eb621da1e3ab23be_icgraph.svg" width="3250" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a98e7cc1a1593ad27aacb7081f2aaa7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e7cc1a1593ad27aacb7081f2aaa7fe">&#9670;&nbsp;</a></span>PL_insert_tl_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_insert_tl_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>now</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ある Node の直後に packet を挿入 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>挿入する packet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">now</td><td>これの指定実行時間 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_ACK </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>TaskList も TimeLine もこれを使うので now は uint32_t </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00174">174</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a98e7cc1a1593ad27aacb7081f2aaa7fe_cgraph.svg" width="1059" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a98e7cc1a1593ad27aacb7081f2aaa7fe_icgraph.svg" width="3083" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4caae06aa17abcc1d983f5e43f7b00ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caae06aa17abcc1d983f5e43f7b00ac">&#9670;&nbsp;</a></span>PL_is_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PL_is_empty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> が空かどうか </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 1: True 0: False </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00071">71</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a4caae06aa17abcc1d983f5e43f7b00ac_icgraph.svg" width="2579" height="935"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a10b32675a0dae5c5539aef97e597a719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10b32675a0dae5c5539aef97e597a719">&#9670;&nbsp;</a></span>PL_is_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PL_is_full </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> が一杯かどうか </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 1: True 0: False </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a10b32675a0dae5c5539aef97e597a719_icgraph.svg" width="3214" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3f61ade454579898c70f5b8b2f934c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f61ade454579898c70f5b8b2f934c02">&#9670;&nbsp;</a></span>PL_push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_push_back </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の末尾に packet を挿入 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>挿入する packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00119">119</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a3f61ade454579898c70f5b8b2f934c02_cgraph.svg" width="698" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_a3f61ade454579898c70f5b8b2f934c02_icgraph.svg" width="3467" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aeb900f5ab625fa14385440dc6bd094f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb900f5ab625fa14385440dc6bd094f2">&#9670;&nbsp;</a></span>PL_push_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_push_front </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramname"><em>pli</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の先頭に packet を挿入 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pli</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>挿入する packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00098">98</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_aeb900f5ab625fa14385440dc6bd094f2_cgraph.svg" width="698" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8c_aeb900f5ab625fa14385440dc6bd094f2_icgraph.svg" width="3244" height="595"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_caedce1072596b48fa715a3e5eba49b3.html">CmdTlm</a></li><li class="navelem"><a class="el" href="packet__list_8c.html">packet_list.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

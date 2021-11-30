@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/CmdTlm/Ccsds/vcdu.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('vcdu_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">vcdu.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="vcdu_8h_source.html">vcdu.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+vcdu.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c__incl.svg" width="268" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="vcdu_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a8a036d0b06e3ee3749bfe4011d383ce6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a8a036d0b06e3ee3749bfe4011d383ce6">VCDU_set_common_hdr_</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a8a036d0b06e3ee3749bfe4011d383ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d355871787f0fb884d2b0daf89ac571"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a2d355871787f0fb884d2b0daf89ac571">VCDU_clear_spare_</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a2d355871787f0fb884d2b0daf89ac571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0036a3bd47665896c744295427b6689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#aa0036a3bd47665896c744295427b6689">VCDU_generate_byte_stream</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> byte_stream[<a class="el" href="vcdu_8h.html#aa3ed3a3cb957aa2745118d044a49ddd1">VCDU_LEN</a>])</td></tr>
+<tr class="separator:aa0036a3bd47665896c744295427b6689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd5f03afb6c0a3f2999aacf2b8c7811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a0dd5f03afb6c0a3f2999aacf2b8c7811">VCDU_setup_fill_vcdu</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a0dd5f03afb6c0a3f2999aacf2b8c7811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14324b6a9e7fd2f05eea88b40ff04385"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a14324b6a9e7fd2f05eea88b40ff04385">VCDU_setup_realtime_vcdu_hdr</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter)</td></tr>
+<tr class="separator:a14324b6a9e7fd2f05eea88b40ff04385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52327e9419edb19e22336dc4d17212fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a52327e9419edb19e22336dc4d17212fc">VCDU_setup_replay_vcdu_hdr</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter)</td></tr>
+<tr class="separator:a52327e9419edb19e22336dc4d17212fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8612d86fba9a429417dbbd9239be249b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a8612d86fba9a429417dbbd9239be249b">VCDU_get_ver</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a8612d86fba9a429417dbbd9239be249b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127278c3bdf7dd58928a73a20b27752b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a127278c3bdf7dd58928a73a20b27752b">VCDU_set_ver</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a> ver)</td></tr>
+<tr class="separator:a127278c3bdf7dd58928a73a20b27752b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d10add9f59a69fff247ff408783515"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vcdu_8h.html#a1248b848499fc287a5d5a25ffcc768ca">VCDU_SCID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#ac0d10add9f59a69fff247ff408783515">VCDU_get_scdi</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:ac0d10add9f59a69fff247ff408783515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68ac6360e962c6c1441b2a2d3ce65a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#ae68ac6360e962c6c1441b2a2d3ce65a8">VCDU_set_scid</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="vcdu_8h.html#a1248b848499fc287a5d5a25ffcc768ca">VCDU_SCID</a> scid)</td></tr>
+<tr class="separator:ae68ac6360e962c6c1441b2a2d3ce65a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9108bc384af5e105709d4df0a9295b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#af9108bc384af5e105709d4df0a9295b1">VCDU_get_vcid</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:af9108bc384af5e105709d4df0a9295b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb2b7a9918da51af20a5f64ccbf7f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a9eb2b7a9918da51af20a5f64ccbf7f95">VCDU_set_vcid</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a> vcid)</td></tr>
+<tr class="separator:a9eb2b7a9918da51af20a5f64ccbf7f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e60ee31e4f4540b0da058c9eeeb7e33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a5e60ee31e4f4540b0da058c9eeeb7e33">VCDU_get_vcdu_counter</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a5e60ee31e4f4540b0da058c9eeeb7e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3412413236b6da283bbbb3ed685ec6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#aec3412413236b6da283bbbb3ed685ec6">VCDU_set_vcdu_counter</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter)</td></tr>
+<tr class="separator:aec3412413236b6da283bbbb3ed685ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d35c9ae9dbe88ed97324b369df47820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a5d35c9ae9dbe88ed97324b369df47820">VCDU_get_replay_flag</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a5d35c9ae9dbe88ed97324b369df47820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af839100f63734de14013577d4796db53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#af839100f63734de14013577d4796db53">VCDU_set_replay_flag</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a> flag)</td></tr>
+<tr class="separator:af839100f63734de14013577d4796db53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c295a8afd0fd1b8f033cd2c40bf6c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a07c295a8afd0fd1b8f033cd2c40bf6c5">VCDU_get_clcw</a> (const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu)</td></tr>
+<tr class="separator:a07c295a8afd0fd1b8f033cd2c40bf6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd2902c840cc2a52736b8fee9d4bee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a1dd2902c840cc2a52736b8fee9d4bee4">VCDU_set_clcw</a> (<a class="el" href="struct_v_c_d_u.html">VCDU</a> *vcdu, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> clcw)</td></tr>
+<tr class="separator:a1dd2902c840cc2a52736b8fee9d4bee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984334aeaa482d753cf0b74251d50d4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vcdu_8c.html#a984334aeaa482d753cf0b74251d50d4c">VCDU_calc_next_counter</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> prev)</td></tr>
+<tr class="separator:a984334aeaa482d753cf0b74251d50d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a984334aeaa482d753cf0b74251d50d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a984334aeaa482d753cf0b74251d50d4c">&#9670;&nbsp;</a></span>VCDU_calc_next_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> VCDU_calc_next_counter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>prev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00217">217</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a984334aeaa482d753cf0b74251d50d4c_icgraph.svg" width="1523" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2d355871787f0fb884d2b0daf89ac571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d355871787f0fb884d2b0daf89ac571">&#9670;&nbsp;</a></span>VCDU_clear_spare_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void VCDU_clear_spare_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a2d355871787f0fb884d2b0daf89ac571_icgraph.svg" width="1987" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa0036a3bd47665896c744295427b6689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0036a3bd47665896c744295427b6689">&#9670;&nbsp;</a></span>VCDU_generate_byte_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_generate_byte_stream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>byte_stream</em>[VCDU_LEN]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00009">9</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_aa0036a3bd47665896c744295427b6689_cgraph.svg" width="391" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_aa0036a3bd47665896c744295427b6689_icgraph.svg" width="1663" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a07c295a8afd0fd1b8f033cd2c40bf6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c295a8afd0fd1b8f033cd2c40bf6c5">&#9670;&nbsp;</a></span>VCDU_get_clcw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> VCDU_get_clcw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00191">191</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5d35c9ae9dbe88ed97324b369df47820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d35c9ae9dbe88ed97324b369df47820">&#9670;&nbsp;</a></span>VCDU_get_replay_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a> VCDU_get_replay_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00173">173</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac0d10add9f59a69fff247ff408783515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d10add9f59a69fff247ff408783515">&#9670;&nbsp;</a></span>VCDU_get_scdi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vcdu_8h.html#a1248b848499fc287a5d5a25ffcc768ca">VCDU_SCID</a> VCDU_get_scdi </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00088">88</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5e60ee31e4f4540b0da058c9eeeb7e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e60ee31e4f4540b0da058c9eeeb7e33">&#9670;&nbsp;</a></span>VCDU_get_vcdu_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> VCDU_get_vcdu_counter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00150">150</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a5e60ee31e4f4540b0da058c9eeeb7e33_icgraph.svg" width="1684" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af9108bc384af5e105709d4df0a9295b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9108bc384af5e105709d4df0a9295b1">&#9670;&nbsp;</a></span>VCDU_get_vcid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a> VCDU_get_vcid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00121">121</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_af9108bc384af5e105709d4df0a9295b1_icgraph.svg" width="1624" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8612d86fba9a429417dbbd9239be249b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8612d86fba9a429417dbbd9239be249b">&#9670;&nbsp;</a></span>VCDU_get_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a> VCDU_get_ver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1dd2902c840cc2a52736b8fee9d4bee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd2902c840cc2a52736b8fee9d4bee4">&#9670;&nbsp;</a></span>VCDU_set_clcw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_set_clcw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>clcw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00206">206</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a1dd2902c840cc2a52736b8fee9d4bee4_icgraph.svg" width="1460" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8a036d0b06e3ee3749bfe4011d383ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a036d0b06e3ee3749bfe4011d383ce6">&#9670;&nbsp;</a></span>VCDU_set_common_hdr_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void VCDU_set_common_hdr_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00044">44</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a8a036d0b06e3ee3749bfe4011d383ce6_cgraph.svg" width="412" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a8a036d0b06e3ee3749bfe4011d383ce6_icgraph.svg" width="1790" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af839100f63734de14013577d4796db53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af839100f63734de14013577d4796db53">&#9670;&nbsp;</a></span>VCDU_set_replay_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_set_replay_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00181">181</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_af839100f63734de14013577d4796db53_icgraph.svg" width="2004" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae68ac6360e962c6c1441b2a2d3ce65a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68ac6360e962c6c1441b2a2d3ce65a8">&#9670;&nbsp;</a></span>VCDU_set_scid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_set_scid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vcdu_8h.html#a1248b848499fc287a5d5a25ffcc768ca">VCDU_SCID</a>&#160;</td>
+          <td class="paramname"><em>scid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00108">108</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_ae68ac6360e962c6c1441b2a2d3ce65a8_icgraph.svg" width="1958" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aec3412413236b6da283bbbb3ed685ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3412413236b6da283bbbb3ed685ec6">&#9670;&nbsp;</a></span>VCDU_set_vcdu_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_set_vcdu_counter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>counter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00163">163</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_aec3412413236b6da283bbbb3ed685ec6_icgraph.svg" width="1784" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9eb2b7a9918da51af20a5f64ccbf7f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb2b7a9918da51af20a5f64ccbf7f95">&#9670;&nbsp;</a></span>VCDU_set_vcid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_set_vcid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a>&#160;</td>
+          <td class="paramname"><em>vcid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00140">140</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a9eb2b7a9918da51af20a5f64ccbf7f95_icgraph.svg" width="1724" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a127278c3bdf7dd58928a73a20b27752b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127278c3bdf7dd58928a73a20b27752b">&#9670;&nbsp;</a></span>VCDU_set_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_set_ver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a>&#160;</td>
+          <td class="paramname"><em>ver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00077">77</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a127278c3bdf7dd58928a73a20b27752b_icgraph.svg" width="1952" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0dd5f03afb6c0a3f2999aacf2b8c7811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd5f03afb6c0a3f2999aacf2b8c7811">&#9670;&nbsp;</a></span>VCDU_setup_fill_vcdu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_setup_fill_vcdu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00021">21</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a0dd5f03afb6c0a3f2999aacf2b8c7811_cgraph.svg" width="642" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a14324b6a9e7fd2f05eea88b40ff04385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14324b6a9e7fd2f05eea88b40ff04385">&#9670;&nbsp;</a></span>VCDU_setup_realtime_vcdu_hdr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_setup_realtime_vcdu_hdr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>counter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a14324b6a9e7fd2f05eea88b40ff04385_cgraph.svg" width="626" height="215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a14324b6a9e7fd2f05eea88b40ff04385_icgraph.svg" width="1503" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a52327e9419edb19e22336dc4d17212fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52327e9419edb19e22336dc4d17212fc">&#9670;&nbsp;</a></span>VCDU_setup_replay_vcdu_hdr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VCDU_setup_replay_vcdu_hdr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_v_c_d_u.html">VCDU</a> *&#160;</td>
+          <td class="paramname"><em>vcdu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>counter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="vcdu_8c_source.html">vcdu.c</a> の <a class="el" href="vcdu_8c_source.html#l00036">36</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a52327e9419edb19e22336dc4d17212fc_cgraph.svg" width="678" height="215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vcdu_8c_a52327e9419edb19e22336dc4d17212fc_icgraph.svg" width="1540" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_580de7066e810e9591da0a7a5b4129a6.html">CmdTlm</a></li><li class="navelem"><a class="el" href="dir_3f31b3c29f01700c46f8beb32f05d4bf.html">Ccsds</a></li><li class="navelem"><a class="el" href="vcdu_8c.html">vcdu.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

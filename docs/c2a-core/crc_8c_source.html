@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Library/crc.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('crc_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">crc.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="crc_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="crc_8h.html">crc.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="crc_8c.html#a73125d7c1c4db76add1a87dffc438e9a">    8</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="crc_8c.html#a73125d7c1c4db76add1a87dffc438e9a">crc_16_ibm_right_table_</a>[256] = {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    0x0000, 0xc0c1, 0xc181, 0x0140, 0xc301, 0x03c0, 0x0280, 0xc241,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    0xc601, 0x06c0, 0x0780, 0xc741, 0x0500, 0xc5c1, 0xc481, 0x0440,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    0xcc01, 0x0cc0, 0x0d80, 0xcd41, 0x0f00, 0xcfc1, 0xce81, 0x0e40,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    0x0a00, 0xcac1, 0xcb81, 0x0b40, 0xc901, 0x09c0, 0x0880, 0xc841,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    0xd801, 0x18c0, 0x1980, 0xd941, 0x1b00, 0xdbc1, 0xda81, 0x1a40,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    0x1e00, 0xdec1, 0xdf81, 0x1f40, 0xdd01, 0x1dc0, 0x1c80, 0xdc41,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    0x1400, 0xd4c1, 0xd581, 0x1540, 0xd701, 0x17c0, 0x1680, 0xd641,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    0xd201, 0x12c0, 0x1380, 0xd341, 0x1100, 0xd1c1, 0xd081, 0x1040,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    0xf001, 0x30c0, 0x3180, 0xf141, 0x3300, 0xf3c1, 0xf281, 0x3240,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    0x3600, 0xf6c1, 0xf781, 0x3740, 0xf501, 0x35c0, 0x3480, 0xf441,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    0x3c00, 0xfcc1, 0xfd81, 0x3d40, 0xff01, 0x3fc0, 0x3e80, 0xfe41,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    0xfa01, 0x3ac0, 0x3b80, 0xfb41, 0x3900, 0xf9c1, 0xf881, 0x3840,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    0x2800, 0xe8c1, 0xe981, 0x2940, 0xeb01, 0x2bc0, 0x2a80, 0xea41,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    0xee01, 0x2ec0, 0x2f80, 0xef41, 0x2d00, 0xedc1, 0xec81, 0x2c40,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    0xe401, 0x24c0, 0x2580, 0xe541, 0x2700, 0xe7c1, 0xe681, 0x2640,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    0x2200, 0xe2c1, 0xe381, 0x2340, 0xe101, 0x21c0, 0x2080, 0xe041,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    0xa001, 0x60c0, 0x6180, 0xa141, 0x6300, 0xa3c1, 0xa281, 0x6240,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    0x6600, 0xa6c1, 0xa781, 0x6740, 0xa501, 0x65c0, 0x6480, 0xa441,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    0x6c00, 0xacc1, 0xad81, 0x6d40, 0xaf01, 0x6fc0, 0x6e80, 0xae41,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    0xaa01, 0x6ac0, 0x6b80, 0xab41, 0x6900, 0xa9c1, 0xa881, 0x6840,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    0x7800, 0xb8c1, 0xb981, 0x7940, 0xbb01, 0x7bc0, 0x7a80, 0xba41,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    0xbe01, 0x7ec0, 0x7f80, 0xbf41, 0x7d00, 0xbdc1, 0xbc81, 0x7c40,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    0xb401, 0x74c0, 0x7580, 0xb541, 0x7700, 0xb7c1, 0xb681, 0x7640,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    0x7200, 0xb2c1, 0xb381, 0x7340, 0xb101, 0x71c0, 0x7080, 0xb041,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    0x5000, 0x90c1, 0x9181, 0x5140, 0x9301, 0x53c0, 0x5280, 0x9241,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    0x9601, 0x56c0, 0x5780, 0x9741, 0x5500, 0x95c1, 0x9481, 0x5440,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    0x9c01, 0x5cc0, 0x5d80, 0x9d41, 0x5f00, 0x9fc1, 0x9e81, 0x5e40,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    0x5a00, 0x9ac1, 0x9b81, 0x5b40, 0x9901, 0x59c0, 0x5880, 0x9841,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    0x8801, 0x48c0, 0x4980, 0x8941, 0x4b00, 0x8bc1, 0x8a81, 0x4a40,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    0x4e00, 0x8ec1, 0x8f81, 0x4f40, 0x8d01, 0x4dc0, 0x4c80, 0x8c41,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    0x4400, 0x84c1, 0x8581, 0x4540, 0x8701, 0x47c0, 0x4680, 0x8641,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    0x8201, 0x42c0, 0x4380, 0x8341, 0x4100, 0x81c1, 0x8081, 0x4040</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="crc_8c.html#aa9943b1ed86b1fd7b95fc75b5e0a261b">   43</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="crc_8c.html#aa9943b1ed86b1fd7b95fc75b5e0a261b">crc_16_ccitt_left_table_</a>[256] = {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50a5, 0x60c6, 0x70e7,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    0x8108, 0x9129, 0xa14a, 0xb16b, 0xc18c, 0xd1ad, 0xe1ce, 0xf1ef,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    0x1231, 0x0210, 0x3273, 0x2252, 0x52b5, 0x4294, 0x72f7, 0x62d6,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    0x9339, 0x8318, 0xb37b, 0xa35a, 0xd3bd, 0xc39c, 0xf3ff, 0xe3de,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    0x2462, 0x3443, 0x0420, 0x1401, 0x64e6, 0x74c7, 0x44a4, 0x5485,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    0xa56a, 0xb54b, 0x8528, 0x9509, 0xe5ee, 0xf5cf, 0xc5ac, 0xd58d,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    0x3653, 0x2672, 0x1611, 0x0630, 0x76d7, 0x66f6, 0x5695, 0x46b4,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    0xb75b, 0xa77a, 0x9719, 0x8738, 0xf7df, 0xe7fe, 0xd79d, 0xc7bc,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    0x48c4, 0x58e5, 0x6886, 0x78a7, 0x0840, 0x1861, 0x2802, 0x3823,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    0xc9cc, 0xd9ed, 0xe98e, 0xf9af, 0x8948, 0x9969, 0xa90a, 0xb92b,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    0x5af5, 0x4ad4, 0x7ab7, 0x6a96, 0x1a71, 0x0a50, 0x3a33, 0x2a12,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    0xdbfd, 0xcbdc, 0xfbbf, 0xeb9e, 0x9b79, 0x8b58, 0xbb3b, 0xab1a,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    0x6ca6, 0x7c87, 0x4ce4, 0x5cc5, 0x2c22, 0x3c03, 0x0c60, 0x1c41,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    0xedae, 0xfd8f, 0xcdec, 0xddcd, 0xad2a, 0xbd0b, 0x8d68, 0x9d49,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    0x7e97, 0x6eb6, 0x5ed5, 0x4ef4, 0x3e13, 0x2e32, 0x1e51, 0x0e70,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    0xff9f, 0xefbe, 0xdfdd, 0xcffc, 0xbf1b, 0xaf3a, 0x9f59, 0x8f78,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    0x9188, 0x81a9, 0xb1ca, 0xa1eb, 0xd10c, 0xc12d, 0xf14e, 0xe16f,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    0x1080, 0x00a1, 0x30c2, 0x20e3, 0x5004, 0x4025, 0x7046, 0x6067,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    0x83b9, 0x9398, 0xa3fb, 0xb3da, 0xc33d, 0xd31c, 0xe37f, 0xf35e,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    0x02b1, 0x1290, 0x22f3, 0x32d2, 0x4235, 0x5214, 0x6277, 0x7256,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    0xb5ea, 0xa5cb, 0x95a8, 0x8589, 0xf56e, 0xe54f, 0xd52c, 0xc50d,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    0x34e2, 0x24c3, 0x14a0, 0x0481, 0x7466, 0x6447, 0x5424, 0x4405,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    0xa7db, 0xb7fa, 0x8799, 0x97b8, 0xe75f, 0xf77e, 0xc71d, 0xd73c,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    0x26d3, 0x36f2, 0x0691, 0x16b0, 0x6657, 0x7676, 0x4615, 0x5634,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    0xd94c, 0xc96d, 0xf90e, 0xe92f, 0x99c8, 0x89e9, 0xb98a, 0xa9ab,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    0x5844, 0x4865, 0x7806, 0x6827, 0x18c0, 0x08e1, 0x3882, 0x28a3,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    0xcb7d, 0xdb5c, 0xeb3f, 0xfb1e, 0x8bf9, 0x9bd8, 0xabbb, 0xbb9a,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    0x4a75, 0x5a54, 0x6a37, 0x7a16, 0x0af1, 0x1ad0, 0x2ab3, 0x3a92,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    0xfd2e, 0xed0f, 0xdd6c, 0xcd4d, 0xbdaa, 0xad8b, 0x9de8, 0x8dc9,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    0x7c26, 0x6c07, 0x5c64, 0x4c45, 0x3ca2, 0x2c83, 0x1ce0, 0x0cc1,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    0xef1f, 0xff3e, 0xcf5d, 0xdf7c, 0xaf9b, 0xbfba, 0x8fd9, 0x9ff8,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    0x6e17, 0x7e36, 0x4e55, 0x5e74, 0x2e93, 0x3eb2, 0x0ed1, 0x1ef0</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="crc_8c.html#a36a12fe219ee2b8a1fcc60392355ce06">   78</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="crc_8c.html#a36a12fe219ee2b8a1fcc60392355ce06">crc_16_ccitt_right_table_</a>[256] = {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    0x0000, 0x1189, 0x2312, 0x329b, 0x4624, 0x57ad, 0x6536, 0x74bf,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    0x8c48, 0x9dc1, 0xaf5a, 0xbed3, 0xca6c, 0xdbe5, 0xe97e, 0xf8f7,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    0x1081, 0x0108, 0x3393, 0x221a, 0x56a5, 0x472c, 0x75b7, 0x643e,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    0x9cc9, 0x8d40, 0xbfdb, 0xae52, 0xdaed, 0xcb64, 0xf9ff, 0xe876,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    0x2102, 0x308b, 0x0210, 0x1399, 0x6726, 0x76af, 0x4434, 0x55bd,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    0xad4a, 0xbcc3, 0x8e58, 0x9fd1, 0xeb6e, 0xfae7, 0xc87c, 0xd9f5,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    0x3183, 0x200a, 0x1291, 0x0318, 0x77a7, 0x662e, 0x54b5, 0x453c,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    0xbdcb, 0xac42, 0x9ed9, 0x8f50, 0xfbef, 0xea66, 0xd8fd, 0xc974,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    0x4204, 0x538d, 0x6116, 0x709f, 0x0420, 0x15a9, 0x2732, 0x36bb,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    0xce4c, 0xdfc5, 0xed5e, 0xfcd7, 0x8868, 0x99e1, 0xab7a, 0xbaf3,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    0x5285, 0x430c, 0x7197, 0x601e, 0x14a1, 0x0528, 0x37b3, 0x263a,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    0xdecd, 0xcf44, 0xfddf, 0xec56, 0x98e9, 0x8960, 0xbbfb, 0xaa72,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    0x6306, 0x728f, 0x4014, 0x519d, 0x2522, 0x34ab, 0x0630, 0x17b9,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    0xef4e, 0xfec7, 0xcc5c, 0xddd5, 0xa96a, 0xb8e3, 0x8a78, 0x9bf1,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    0x7387, 0x620e, 0x5095, 0x411c, 0x35a3, 0x242a, 0x16b1, 0x0738,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    0xffcf, 0xee46, 0xdcdd, 0xcd54, 0xb9eb, 0xa862, 0x9af9, 0x8b70,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    0x8408, 0x9581, 0xa71a, 0xb693, 0xc22c, 0xd3a5, 0xe13e, 0xf0b7,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    0x0840, 0x19c9, 0x2b52, 0x3adb, 0x4e64, 0x5fed, 0x6d76, 0x7cff,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    0x9489, 0x8500, 0xb79b, 0xa612, 0xd2ad, 0xc324, 0xf1bf, 0xe036,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    0x18c1, 0x0948, 0x3bd3, 0x2a5a, 0x5ee5, 0x4f6c, 0x7df7, 0x6c7e,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    0xa50a, 0xb483, 0x8618, 0x9791, 0xe32e, 0xf2a7, 0xc03c, 0xd1b5,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    0x2942, 0x38cb, 0x0a50, 0x1bd9, 0x6f66, 0x7eef, 0x4c74, 0x5dfd,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    0xb58b, 0xa402, 0x9699, 0x8710, 0xf3af, 0xe226, 0xd0bd, 0xc134,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    0x39c3, 0x284a, 0x1ad1, 0x0b58, 0x7fe7, 0x6e6e, 0x5cf5, 0x4d7c,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    0xc60c, 0xd785, 0xe51e, 0xf497, 0x8028, 0x91a1, 0xa33a, 0xb2b3,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    0x4a44, 0x5bcd, 0x6956, 0x78df, 0x0c60, 0x1de9, 0x2f72, 0x3efb,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    0xd68d, 0xc704, 0xf59f, 0xe416, 0x90a9, 0x8120, 0xb3bb, 0xa232,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    0x5ac5, 0x4b4c, 0x79d7, 0x685e, 0x1ce1, 0x0d68, 0x3ff3, 0x2e7a,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    0xe70e, 0xf687, 0xc41c, 0xd595, 0xa12a, 0xb0a3, 0x8238, 0x93b1,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    0x6b46, 0x7acf, 0x4854, 0x59dd, 0x2d62, 0x3ceb, 0x0e70, 0x1ff9,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    0xf78f, 0xe606, 0xd49d, 0xc514, 0xb1ab, 0xa022, 0x92b9, 0x8330,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    0x7bc7, 0x6a4e, 0x58d5, 0x495c, 0x3de3, 0x2c6a, 0x1ef1, 0x0f78</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="crc_8h.html#aa7c2e60adbdd2fd9f2cad355b82d0730">  113</a></span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="crc_8c.html#aa7c2e60adbdd2fd9f2cad355b82d0730">crc_16_ibm_right</a>(<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* c, <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> rev_flag)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    crc = (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(<a class="code" href="crc_8c.html#a73125d7c1c4db76add1a87dffc438e9a">crc_16_ibm_right_table_</a>[(crc ^ c[i]) &amp; 0xff] ^ (crc &gt;&gt; 8));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">if</span> (rev_flag) <span class="keywordflow">return</span> (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)~crc;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="crc_8h.html#ab2f8121390ab82feea7f7318b888f209">  126</a></span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="crc_8c.html#ab2f8121390ab82feea7f7318b888f209">crc_16_ccitt_left</a>(<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* c, <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> rev_flag)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    crc = (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(<a class="code" href="crc_8c.html#aa9943b1ed86b1fd7b95fc75b5e0a261b">crc_16_ccitt_left_table_</a>[((crc &gt;&gt; 8) ^ c[i]) &amp; 0xff] ^ (crc &lt;&lt; 8));</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (rev_flag) <span class="keywordflow">return</span> (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)~crc;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="crc_8h.html#a3f96a52b0a044f9a3d4964dfe72fd771">  139</a></span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="crc_8c.html#a3f96a52b0a044f9a3d4964dfe72fd771">crc_16_ccitt_right</a>(<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* c, <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> rev_flag)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    crc = (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(<a class="code" href="crc_8c.html#a36a12fe219ee2b8a1fcc60392355ce06">crc_16_ccitt_right_table_</a>[(crc ^ c[i]) &amp; 0xff] ^ (crc &gt;&gt; 8));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">if</span> (rev_flag) <span class="keywordflow">return</span> (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)~crc;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">return</span> crc;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="crc_8h.html#a02ed89eb6995a0e2c80a7206b86bd285">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="crc_8c.html#a02ed89eb6995a0e2c80a7206b86bd285">make_crc_8_table</a>(<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* table, <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> crc_poly, <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; 256; ++i)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> c = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)i;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; 8; ++j)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> (c &amp; 1) c = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(crc_poly ^ (c &gt;&gt; 1));</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">else</span> c &gt;&gt;= 1;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span> (c &amp; 0x80) c = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(crc_poly ^ (c &lt;&lt; 1));</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">else</span> c &lt;&lt;= 1;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    table[i] = c;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="crc_8h.html#acb12862b6e4dc8ebb6dcb4e6b8966187">  176</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="crc_8c.html#acb12862b6e4dc8ebb6dcb4e6b8966187">make_crc_16_table</a>(<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>* table, <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_poly, <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; 256; ++i)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> c = (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)i;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (!shift) c &lt;&lt;= 8;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; 8; ++j)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> (c &amp; 1) c = (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(crc_poly ^ (c &gt;&gt; 1));</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">else</span> c &gt;&gt;= 1;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">if</span> (c &amp; 0x8000) c = (<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)(crc_poly ^ (c &lt;&lt; 1));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">else</span> c &lt;&lt;= 1;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    table[i] = c;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="crc_8h.html#a7dcb03e18ad0fa03466cfc71ef7f545e">  201</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="crc_8c.html#a7dcb03e18ad0fa03466cfc71ef7f545e">make_crc_32_table</a>(<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>* table, <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> crc_poly, <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; 255; ++i)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> c = (<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>)i;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">if</span> (!shift) c &lt;&lt;= 24;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; 8; ++j)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <span class="keywordflow">if</span> (shift)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> (c &amp; 1) c = crc_poly ^ (c &gt;&gt; 1);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">else</span> c &gt;&gt;= 1;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">if</span> (c &amp; 0x80000000) c = crc_poly ^ (c &lt;&lt; 1);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">else</span> c &lt;&lt;= 1;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    table[i] = c;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">uint16_t crc_16_right_calc(uint16_t crc, uint16_t crc_poly, const unsigned char* c, size_t n, int rev_flag)</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">  size_t i;</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">  uint8_t j;</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">  for (i = 0 ;i &lt; n; ++i)</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">  {</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">    crc ^= c[i];</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">    for (j = 0;j &lt; 8;++j)</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">      if (crc &amp; 1) crc = (crc &gt;&gt; 1)^crc_poly;</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">      else crc &gt;&gt;= 1;</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">  }</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">  if (rev_flag) return (uint16_t)~crc;</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">  else return crc;</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">uint16_t crc_16_left_calc(uint16_t crc, uint16_t crc_poly, const unsigned char* c, size_t n, int rev_flag)</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">  size_t i;</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">  uint8_t j;</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">  for (i = 0 ;i &lt; n; ++i)</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">  {</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">    crc ^= (c[i] &lt;&lt; 8);</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">    for (j = 0;j &lt; 8;++j)</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">      if (crc &amp; 0x8000) crc = (crc &lt;&lt; 1)^crc_poly;</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">      else crc &lt;&lt;= 1;</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">  }</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">  if (rev_flag) return (uint16_t)~crc;</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment">  else return crc;</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#pragma section</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="acrc_8c_html_aa9943b1ed86b1fd7b95fc75b5e0a261b"><div class="ttname"><a href="crc_8c.html#aa9943b1ed86b1fd7b95fc75b5e0a261b">crc_16_ccitt_left_table_</a></div><div class="ttdeci">static const uint16_t crc_16_ccitt_left_table_[256]</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00043">crc.c:43</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00017">stdint.h:17</a></div></div>
+<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="acrc_8c_html_a02ed89eb6995a0e2c80a7206b86bd285"><div class="ttname"><a href="crc_8c.html#a02ed89eb6995a0e2c80a7206b86bd285">make_crc_8_table</a></div><div class="ttdeci">void make_crc_8_table(uint8_t *table, uint8_t crc_poly, uint8_t shift)</div><div class="ttdoc">crc用のテーブル作成</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00152">crc.c:152</a></div></div>
+<div class="ttc" id="acrc_8c_html_a36a12fe219ee2b8a1fcc60392355ce06"><div class="ttname"><a href="crc_8c.html#a36a12fe219ee2b8a1fcc60392355ce06">crc_16_ccitt_right_table_</a></div><div class="ttdeci">static const uint16_t crc_16_ccitt_right_table_[256]</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00078">crc.c:78</a></div></div>
+<div class="ttc" id="acrc_8h_html"><div class="ttname"><a href="crc_8h.html">crc.h</a></div><div class="ttdoc">CRC用のライブラリ</div></div>
+<div class="ttc" id="acrc_8c_html_a7dcb03e18ad0fa03466cfc71ef7f545e"><div class="ttname"><a href="crc_8c.html#a7dcb03e18ad0fa03466cfc71ef7f545e">make_crc_32_table</a></div><div class="ttdeci">void make_crc_32_table(uint32_t *table, uint32_t crc_poly, uint8_t shift)</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00201">crc.c:201</a></div></div>
+<div class="ttc" id="acrc_8c_html_acb12862b6e4dc8ebb6dcb4e6b8966187"><div class="ttname"><a href="crc_8c.html#acb12862b6e4dc8ebb6dcb4e6b8966187">make_crc_16_table</a></div><div class="ttdeci">void make_crc_16_table(uint16_t *table, uint16_t crc_poly, uint8_t shift)</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00176">crc.c:176</a></div></div>
+<div class="ttc" id="acrc_8c_html_aa7c2e60adbdd2fd9f2cad355b82d0730"><div class="ttname"><a href="crc_8c.html#aa7c2e60adbdd2fd9f2cad355b82d0730">crc_16_ibm_right</a></div><div class="ttdeci">uint16_t crc_16_ibm_right(uint16_t crc, const unsigned char *c, size_t n, int rev_flag)</div><div class="ttdoc">CRC-16-IBM</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00113">crc.c:113</a></div></div>
+<div class="ttc" id="acrc_8c_html_a3f96a52b0a044f9a3d4964dfe72fd771"><div class="ttname"><a href="crc_8c.html#a3f96a52b0a044f9a3d4964dfe72fd771">crc_16_ccitt_right</a></div><div class="ttdeci">uint16_t crc_16_ccitt_right(uint16_t crc, const unsigned char *c, size_t n, int rev_flag)</div><div class="ttdoc">CRC-16-CCITT</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00139">crc.c:139</a></div></div>
+<div class="ttc" id="acrc_8c_html_ab2f8121390ab82feea7f7318b888f209"><div class="ttname"><a href="crc_8c.html#ab2f8121390ab82feea7f7318b888f209">crc_16_ccitt_left</a></div><div class="ttdeci">uint16_t crc_16_ccitt_left(uint16_t crc, const unsigned char *c, size_t n, int rev_flag)</div><div class="ttdoc">CRC-16-CCITT</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00126">crc.c:126</a></div></div>
+<div class="ttc" id="acrc_8c_html_a73125d7c1c4db76add1a87dffc438e9a"><div class="ttname"><a href="crc_8c.html#a73125d7c1c4db76add1a87dffc438e9a">crc_16_ibm_right_table_</a></div><div class="ttdeci">static const uint16_t crc_16_ibm_right_table_[256]</div><div class="ttdef"><b>Definition:</b> <a href="crc_8c_source.html#l00008">crc.c:8</a></div></div>
+<div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00019">stdint.h:19</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="crc_8c.html">crc.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

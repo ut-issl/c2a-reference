@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/CmdTlm/user_packet_handler.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('user__packet__handler_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">user_packet_handler.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>packet_handlerのコマンドルーター，コマンドアナライザのユーザー定義部分  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="user__packet__handler_8h_source.html">user_packet_handler.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+user_packet_handler.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c__incl.svg" width="1379" height="887"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="user__packet__handler_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:abd195e5e5ea01a26064fe925bddd48fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#abd195e5e5ea01a26064fe925bddd48fd">PH_AOBC_CMD_LIST_MAX</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="memdesc:abd195e5e5ea01a26064fe925bddd48fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC CMD QUEUEサイズ  <a href="user__packet__handler_8c.html#abd195e5e5ea01a26064fe925bddd48fd">[詳解]</a><br /></td></tr>
+<tr class="separator:abd195e5e5ea01a26064fe925bddd48fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e0ab04594b0e09bb438eacd3e570ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#ab0e0ab04594b0e09bb438eacd3e570ef">PH_TOBC_CMD_LIST_MAX</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="memdesc:ab0e0ab04594b0e09bb438eacd3e570ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOBC CMD QUEUEサイズ  <a href="user__packet__handler_8c.html#ab0e0ab04594b0e09bb438eacd3e570ef">[詳解]</a><br /></td></tr>
+<tr class="separator:ab0e0ab04594b0e09bb438eacd3e570ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a332307ab21899718d5f63b9e1b6ad5f4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a332307ab21899718d5f63b9e1b6ad5f4">PH_add_aobc_cmd_</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a332307ab21899718d5f63b9e1b6ad5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e5c78799967759518cedd4bd4ee477"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a78e5c78799967759518cedd4bd4ee477">PH_add_tobc_cmd_</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a78e5c78799967759518cedd4bd4ee477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2a18728b408dce5756d4910d4cf67f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#afc2a18728b408dce5756d4910d4cf67f">PH_user_init</a> (void)</td></tr>
+<tr class="memdesc:afc2a18728b408dce5756d4910d4cf67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHのユーザー固有部初期化処理  <a href="user__packet__handler_8c.html#afc2a18728b408dce5756d4910d4cf67f">[詳解]</a><br /></td></tr>
+<tr class="separator:afc2a18728b408dce5756d4910d4cf67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d7e1b202022e1c41bec947f499c8b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a74d7e1b202022e1c41bec947f499c8b9">PH_user_analyze_cmd</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a74d7e1b202022e1c41bec947f499c8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHのanalyze_cmd_のユーザー処理関数  <a href="user__packet__handler_8c.html#a74d7e1b202022e1c41bec947f499c8b9">[詳解]</a><br /></td></tr>
+<tr class="separator:a74d7e1b202022e1c41bec947f499c8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8901bfc5a2d7cfec42de995ad728b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a1d8901bfc5a2d7cfec42de995ad728b3">PH_user_cmd_router</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a1d8901bfc5a2d7cfec42de995ad728b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHのcmd_router_のユーザー処理関数  <a href="user__packet__handler_8c.html#a1d8901bfc5a2d7cfec42de995ad728b3">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d8901bfc5a2d7cfec42de995ad728b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a932542f68a777297ba3a84a378128e24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_packet_list.html">PacketList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a932542f68a777297ba3a84a378128e24">PH_aobc_cmd_list</a></td></tr>
+<tr class="separator:a932542f68a777297ba3a84a378128e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b98333253c171ffd98aa58f1b522d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_packet_list.html">PacketList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a12b98333253c171ffd98aa58f1b522d2">PH_tobc_cmd_list</a></td></tr>
+<tr class="separator:a12b98333253c171ffd98aa58f1b522d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeba09032f8bca8fae625eea6a7739af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#aaeba09032f8bca8fae625eea6a7739af">PH_aobc_cmd_stock_</a> [<a class="el" href="user__packet__handler_8c.html#abd195e5e5ea01a26064fe925bddd48fd">PH_AOBC_CMD_LIST_MAX</a>]</td></tr>
+<tr class="separator:aaeba09032f8bca8fae625eea6a7739af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a59b03c4b247066622d70507bcc086a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a8a59b03c4b247066622d70507bcc086a">PH_tobc_cmd_stock_</a> [<a class="el" href="user__packet__handler_8c.html#ab0e0ab04594b0e09bb438eacd3e570ef">PH_TOBC_CMD_LIST_MAX</a>]</td></tr>
+<tr class="separator:a8a59b03c4b247066622d70507bcc086a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>packet_handlerのコマンドルーター，コマンドアナライザのユーザー定義部分 </p>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="abd195e5e5ea01a26064fe925bddd48fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd195e5e5ea01a26064fe925bddd48fd">&#9670;&nbsp;</a></span>PH_AOBC_CMD_LIST_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PH_AOBC_CMD_LIST_MAX&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AOBC CMD QUEUEサイズ </p>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00010">10</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab0e0ab04594b0e09bb438eacd3e570ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e0ab04594b0e09bb438eacd3e570ef">&#9670;&nbsp;</a></span>PH_TOBC_CMD_LIST_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PH_TOBC_CMD_LIST_MAX&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TOBC CMD QUEUEサイズ </p>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00011">11</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a332307ab21899718d5f63b9e1b6ad5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332307ab21899718d5f63b9e1b6ad5f4">&#9670;&nbsp;</a></span>PH_add_aobc_cmd_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> PH_add_aobc_cmd_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00065">65</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a332307ab21899718d5f63b9e1b6ad5f4_cgraph.svg" width="896" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a332307ab21899718d5f63b9e1b6ad5f4_icgraph.svg" width="3116" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a78e5c78799967759518cedd4bd4ee477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e5c78799967759518cedd4bd4ee477">&#9670;&nbsp;</a></span>PH_add_tobc_cmd_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> PH_add_tobc_cmd_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a78e5c78799967759518cedd4bd4ee477_cgraph.svg" width="894" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a78e5c78799967759518cedd4bd4ee477_icgraph.svg" width="3114" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a74d7e1b202022e1c41bec947f499c8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d7e1b202022e1c41bec947f499c8b9">&#9670;&nbsp;</a></span>PH_user_analyze_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> PH_user_analyze_cmd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PHのanalyze_cmd_のユーザー処理関数 </p>
+<pre class="fragment">    Coreの処理より優先される
+    C2Aを搭載したコンポのキュー（GSC，RTC，TLC，BC）に即座に直接追加される．
+    正確には，add_rt_cmd_の送信先版を作り，そこにキューイングされ，DI (dispatcher) によって回収される．
+    つまり，本OBCにとってはRTCだが，転送対象OBCにとっては各種Cmd扱いなCmdを転送する処理
+</pre> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*packet</td><td>CTCP packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">PH_FORWARDED</td><td>無事に転送するキューに追加された </td></tr>
+    <tr><td class="paramname">PH_PL_LIST_FULL</td><td>PL LIST FULL </td></tr>
+    <tr><td class="paramname">PH_FORWARDED以外（PH_UNKNOWNを想定）</td><td>ユーザー処理に引っかからなかった場合．Core側の処理に回される </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00030">30</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a74d7e1b202022e1c41bec947f499c8b9_cgraph.svg" width="1182" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a74d7e1b202022e1c41bec947f499c8b9_icgraph.svg" width="2918" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1d8901bfc5a2d7cfec42de995ad728b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8901bfc5a2d7cfec42de995ad728b3">&#9670;&nbsp;</a></span>PH_user_cmd_router()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> PH_user_cmd_router </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PHのcmd_router_のユーザー処理関数 </p>
+<pre class="fragment">    C2Aを搭載したコンポにCmdが転送される．
+    つまり，転送対象OBCにとってはRTC扱いになる
+    ここからDriverを叩いて送信まで行うことになる（実行時間はcmdExecと同じだけ許容されているのでOK）
+</pre> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*packet</td><td>CTCP packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CCP_EXEC_SUCCESS</td><td>など: 無事に転送された．転送先の結果を返す </td></tr>
+    <tr><td class="paramname">CCP_EXEC_ROUTING_FAILED</td><td>転送失敗（詳細エラーはDriverSuperを参照） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00048">48</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a1d8901bfc5a2d7cfec42de995ad728b3_cgraph.svg" width="503" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a1d8901bfc5a2d7cfec42de995ad728b3_icgraph.svg" width="2926" height="712"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afc2a18728b408dce5756d4910d4cf67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc2a18728b408dce5756d4910d4cf67f">&#9670;&nbsp;</a></span>PH_user_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PH_user_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PHのユーザー固有部初期化処理 </p>
+<pre class="fragment">    PacketListの初期化を行う
+</pre> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00023">23</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_afc2a18728b408dce5756d4910d4cf67f_cgraph.svg" width="412" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_afc2a18728b408dce5756d4910d4cf67f_icgraph.svg" width="828" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a932542f68a777297ba3a84a378128e24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932542f68a777297ba3a84a378128e24">&#9670;&nbsp;</a></span>PH_aobc_cmd_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_packet_list.html">PacketList</a> PH_aobc_cmd_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaeba09032f8bca8fae625eea6a7739af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeba09032f8bca8fae625eea6a7739af">&#9670;&nbsp;</a></span>PH_aobc_cmd_stock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> PH_aobc_cmd_stock_[<a class="el" href="user__packet__handler_8c.html#abd195e5e5ea01a26064fe925bddd48fd">PH_AOBC_CMD_LIST_MAX</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a12b98333253c171ffd98aa58f1b522d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b98333253c171ffd98aa58f1b522d2">&#9670;&nbsp;</a></span>PH_tobc_cmd_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_packet_list.html">PacketList</a> PH_tobc_cmd_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00017">17</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8a59b03c4b247066622d70507bcc086a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a59b03c4b247066622d70507bcc086a">&#9670;&nbsp;</a></span>PH_tobc_cmd_stock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> PH_tobc_cmd_stock_[<a class="el" href="user__packet__handler_8c.html#ab0e0ab04594b0e09bb438eacd3e570ef">PH_TOBC_CMD_LIST_MAX</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_580de7066e810e9591da0a7a5b4129a6.html">CmdTlm</a></li><li class="navelem"><a class="el" href="user__packet__handler_8c.html">user_packet_handler.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

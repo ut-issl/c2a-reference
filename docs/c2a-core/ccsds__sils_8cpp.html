@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/IfWrapper/Sils/ccsds_sils.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('ccsds__sils_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">ccsds_sils.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>CCSDS通信ラッパーのクラスです。  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="ccsds__user_8h_source.html">../ccsds_user.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ccsds_sils.cpp の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8cpp__incl.svg" width="227" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="ccsds__sils_8cpp_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a26492ce1d9a60d10c7522df2d14934ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#a26492ce1d9a60d10c7522df2d14934ad">CCSDS_TX_VALID_SIZE</a>&#160;&#160;&#160;(444)</td></tr>
+<tr class="separator:a26492ce1d9a60d10c7522df2d14934ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a56a19fe9cab1f813caef3bb1c5170c1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#a56a19fe9cab1f813caef3bb1c5170c1c">CCSDS_init</a> (void *my_ccsds_v)</td></tr>
+<tr class="memdesc:a56a19fe9cab1f813caef3bb1c5170c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS の init  <a href="ccsds__sils_8cpp.html#a56a19fe9cab1f813caef3bb1c5170c1c">[詳解]</a><br /></td></tr>
+<tr class="separator:a56a19fe9cab1f813caef3bb1c5170c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa179f5ce8b2954a51602282f977f55e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a> (void *my_ccsds_v, void *data_v, int buffer_size)</td></tr>
+<tr class="memdesc:aa179f5ce8b2954a51602282f977f55e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS 受信. API を呼び出し, buffer に受信結果をコピーする  <a href="ccsds__sils_8cpp.html#aa179f5ce8b2954a51602282f977f55e6">[詳解]</a><br /></td></tr>
+<tr class="separator:aa179f5ce8b2954a51602282f977f55e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d8a2ef0a54d2f5e95061502b7d0b06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a> (void *my_ccsds_v, void *data_v, int data_size)</td></tr>
+<tr class="memdesc:ab1d8a2ef0a54d2f5e95061502b7d0b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS 送信. API を呼び出し, 送信を行う  <a href="ccsds__sils_8cpp.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">[詳解]</a><br /></td></tr>
+<tr class="separator:ab1d8a2ef0a54d2f5e95061502b7d0b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48a0947151ed3b335b0d717fc97d464"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a> (void *my_ccsds_v, int reason)</td></tr>
+<tr class="memdesc:ad48a0947151ed3b335b0d717fc97d464"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS reopen  <a href="ccsds__sils_8cpp.html#ad48a0947151ed3b335b0d717fc97d464">[詳解]</a><br /></td></tr>
+<tr class="separator:ad48a0947151ed3b335b0d717fc97d464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d0d3a68d1e803d5bb1c812f46f602f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ccsds__user_8h.html#af6caa4a05a4b3fa2fa092f2b9ad22b03">CCSDS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#ad1d0d3a68d1e803d5bb1c812f46f602f">CCSDS_read_sequence</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> select, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> *uip_stat)</td></tr>
+<tr class="memdesc:ad1d0d3a68d1e803d5bb1c812f46f602f"><td class="mdescLeft">&#160;</td><td class="mdescRight">FPGA が保持する CCSDS sequence counter を読む API を呼び出す  <a href="ccsds__sils_8cpp.html#ad1d0d3a68d1e803d5bb1c812f46f602f">[詳解]</a><br /></td></tr>
+<tr class="separator:ad1d0d3a68d1e803d5bb1c812f46f602f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab593331e1e83b667b22146dd79146727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#ab593331e1e83b667b22146dd79146727">CCSDS_get_buffer_num</a> (void)</td></tr>
+<tr class="memdesc:ab593331e1e83b667b22146dd79146727"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS TX の残り buffer をカウントするAPI を呼びだす  <a href="ccsds__sils_8cpp.html#ab593331e1e83b667b22146dd79146727">[詳解]</a><br /></td></tr>
+<tr class="separator:ab593331e1e83b667b22146dd79146727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9795c99b9b23ea5918e0ed1e08168ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8cpp.html#a9795c99b9b23ea5918e0ed1e08168ad6">CCSDS_set_rate</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> ui_rate, <a class="el" href="struct_c_c_s_d_s___config.html">CCSDS_Config</a> *config)</td></tr>
+<tr class="memdesc:a9795c99b9b23ea5918e0ed1e08168ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS のレートを設定する API を呼び出す  <a href="ccsds__sils_8cpp.html#a9795c99b9b23ea5918e0ed1e08168ad6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9795c99b9b23ea5918e0ed1e08168ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>CCSDS通信ラッパーのクラスです。 </p>
+<p>CCSDS通信ラッパーは、 CCSDSのインターフェースを実現し、 CCSDSポートの初期化、データ送信、データ受信を行う、 CCSDS通信ラッパーのクラスです。 個々の機器のインターフェースモジュールに継承させて使用します。 </p><dl class="section note"><dt>覚え書き</dt><dd>OBC模擬コンポ&lt;-&gt;SILSとはUARTと同様にデータ通信を行う </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a26492ce1d9a60d10c7522df2d14934ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26492ce1d9a60d10c7522df2d14934ad">&#9670;&nbsp;</a></span>CCSDS_TX_VALID_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CCSDS_TX_VALID_SIZE&#160;&#160;&#160;(444)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab593331e1e83b667b22146dd79146727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab593331e1e83b667b22146dd79146727">&#9670;&nbsp;</a></span>CCSDS_get_buffer_num()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> CCSDS_get_buffer_num </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCSDS TX の残り buffer をカウントするAPI を呼びだす </p>
+<dl class="section return"><dt>戻り値</dt><dd>残り buffer 数 </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8cpp_ab593331e1e83b667b22146dd79146727_icgraph.svg" width="320" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a56a19fe9cab1f813caef3bb1c5170c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a19fe9cab1f813caef3bb1c5170c1c">&#9670;&nbsp;</a></span>CCSDS_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCSDS_init </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_ccsds_v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCSDS の init </p>
+<dl class="section note"><dt>覚え書き</dt><dd>実際には初期化 API は無いので bps の設定のみ行っている </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_ccsds_v</td><td>CCSDS config </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int: 初期化結果 (OK) </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8cpp_a56a19fe9cab1f813caef3bb1c5170c1c_cgraph.svg" width="280" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad1d0d3a68d1e803d5bb1c812f46f602f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d0d3a68d1e803d5bb1c812f46f602f">&#9670;&nbsp;</a></span>CCSDS_read_sequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ccsds__user_8h.html#af6caa4a05a4b3fa2fa092f2b9ad22b03">CCSDS_ERR_CODE</a> CCSDS_read_sequence </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>select</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>uip_stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FPGA が保持する CCSDS sequence counter を読む API を呼び出す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">select</td><td>レジスタ読み出しを選択 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uip_stat</td><td>状態 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCSDS_ERR_CODE </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad48a0947151ed3b335b0d717fc97d464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48a0947151ed3b335b0d717fc97d464">&#9670;&nbsp;</a></span>CCSDS_reopen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCSDS_reopen </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_ccsds_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCSDS reopen </p>
+<dl class="section note"><dt>覚え書き</dt><dd>実際には reopen API は無いので何もしない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_ccsds_v</td><td>CCSDS config </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reason</td><td>reopen 理由 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>0 </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00063">63</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa179f5ce8b2954a51602282f977f55e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa179f5ce8b2954a51602282f977f55e6">&#9670;&nbsp;</a></span>CCSDS_rx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCSDS_rx </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_ccsds_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buffer_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCSDS 受信. API を呼び出し, buffer に受信結果をコピーする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_ccsds_v</td><td>CCSDS config </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_v</td><td>buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_size</td><td>buffer size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int: 非負の場合は受信データサイズ, 負の場合は CCSDS_ERR_CODE に従う </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8cpp_aa179f5ce8b2954a51602282f977f55e6_cgraph.svg" width="474" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9795c99b9b23ea5918e0ed1e08168ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9795c99b9b23ea5918e0ed1e08168ad6">&#9670;&nbsp;</a></span>CCSDS_set_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCSDS_set_rate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>ui_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_c_c_s_d_s___config.html">CCSDS_Config</a> *&#160;</td>
+          <td class="paramname"><em>config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCSDS のレートを設定する API を呼び出す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ui_rate</td><td>40000000u をこれで割ったレートが設定される. 0xFF 以下である必要がある (超えていたら 0xFF 扱いになる) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td><a class="el" href="struct_c_c_s_d_s___config.html" title="CCSDS ポートの初期化, データ送信, データ受信の際に必要となる設定情報を格納する構造体">CCSDS_Config</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00081">81</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8cpp_a9795c99b9b23ea5918e0ed1e08168ad6_icgraph.svg" width="280" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab1d8a2ef0a54d2f5e95061502b7d0b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d8a2ef0a54d2f5e95061502b7d0b06">&#9670;&nbsp;</a></span>CCSDS_tx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CCSDS_tx </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_ccsds_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CCSDS 送信. API を呼び出し, 送信を行う </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_ccsds_v</td><td>CCSDS config </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data_v</td><td>送信 データ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_size</td><td>送信 size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCSDS_ERR_CODE </dd></dl>
+
+<p class="definition"> <a class="el" href="ccsds__sils_8cpp_source.html">ccsds_sils.cpp</a> の <a class="el" href="ccsds__sils_8cpp_source.html#l00046">46</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8cpp_ab1d8a2ef0a54d2f5e95061502b7d0b06_cgraph.svg" width="507" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_82a6d08b74acde068a893bd36b924818.html">IfWrapper</a></li><li class="navelem"><a class="el" href="dir_95bd36b56c408dd37cca77aa41f9b072.html">Sils</a></li><li class="navelem"><a class="el" href="ccsds__sils_8cpp.html">ccsds_sils.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

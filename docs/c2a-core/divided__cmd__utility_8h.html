@@ -1,0 +1,834 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Applications/divided_cmd_utility.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('divided__cmd__utility_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">divided_cmd_utility.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>コマンド分割をサポートするUtil  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="app__info_8h_source.html">../System/ApplicationManager/app_info.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__tlm__cmd__packet_8h_source.html">../CmdTlm/common_tlm_cmd_packet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="obc__time_8h_source.html">../System/TimeManager/obc_time.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="command__definitions_8h_source.html">src_user/CmdTlm/command_definitions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="divided__cmd__utility__params_8h_source.html">src_user/Settings/Applications/divided_cmd_utility_params.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+divided_cmd_utility.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h__incl.svg" width="1411" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h__dep__incl.svg" width="800" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="divided__cmd__utility_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_c_u___exec_status.html">DCU_ExecStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行状況  <a href="struct_d_c_u___exec_status.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_divided_cmd_utility.html">DividedCmdUtility</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_divided_cmd_utility.html" title="DividedCmdUtility の AppInfo 構造体">DividedCmdUtility</a> の <a class="el" href="struct_app_info.html">AppInfo</a> 構造体  <a href="struct_divided_cmd_utility.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a285975a8d2e8a9fee464ca2a54d85fb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a285975a8d2e8a9fee464ca2a54d85fb3">DCU_LOG_MAX</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="memdesc:a285975a8d2e8a9fee464ca2a54d85fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存するログの最大数  <a href="divided__cmd__utility_8h.html#a285975a8d2e8a9fee464ca2a54d85fb3">[詳解]</a><br /></td></tr>
+<tr class="separator:a285975a8d2e8a9fee464ca2a54d85fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a6078780ababada2906fdfa172872250e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250e">DCU_ACK</a> { <a class="el" href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250ea5e25831a5d00962de866959f9e06b33f">DCU_ACK_OK</a> = 0, 
+<a class="el" href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250ead60d8596b6a47ac5f3489fcc5a6c745c">DCU_ACK_ERR</a>
+ }</td></tr>
+<tr class="memdesc:a6078780ababada2906fdfa172872250e"><td class="mdescLeft">&#160;</td><td class="mdescRight">汎用返り値  <a href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250e">[詳解]</a><br /></td></tr>
+<tr class="separator:a6078780ababada2906fdfa172872250e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1774785ce24ddc8b5a9123d976700d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700d">DCU_STATUS</a> { <a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700dae0df34b56987d2adb9a6d8de99580d9e">DCU_STATUS_FINISHED</a> = 0, 
+<a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700daa3fa7242608ed59b1eea0a0ba8c91b00">DCU_STATUS_PROGRESS</a>, 
+<a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700da6593fd56dcbcc1eccd52f577ec71444e">DCU_STATUS_ABORTED_BY_ERR</a>, 
+<a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700dab674508b997889f7f0dd0d2f52f34b97">DCU_STATUS_ABORTED_BY_CMD</a>
+ }</td></tr>
+<tr class="memdesc:acb1774785ce24ddc8b5a9123d976700d"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行状況  <a href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700d">[詳解]</a><br /></td></tr>
+<tr class="separator:acb1774785ce24ddc8b5a9123d976700d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec65bc3b924c0851757ea0991d088c8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8">DCU_LOG_ACK</a> { <a class="el" href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8a4d617525ec244c9019e7533bbde96168">DCU_LOG_ACK_OK</a> = 0, 
+<a class="el" href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8a0505e2c78ebc5e10cf08550bf9789c36">DCU_LOG_ACK_NOT_FOUND</a>
+ }</td></tr>
+<tr class="memdesc:a5ec65bc3b924c0851757ea0991d088c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログ操作の返り値  <a href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ec65bc3b924c0851757ea0991d088c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a84cf58a5349ef5691992551cf0882674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a84cf58a5349ef5691992551cf0882674">DCU_create_app</a> (void)</td></tr>
+<tr class="separator:a84cf58a5349ef5691992551cf0882674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad403eb696499ec36e837376be62c2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700d">DCU_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#aaad403eb696499ec36e837376be62c2a">DCU_check_in</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *exec_counter)</td></tr>
+<tr class="memdesc:aaad403eb696499ec36e837376be62c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DCUにチェックインする．分割コマンド実行時，最初に呼び出す関数．  <a href="divided__cmd__utility_8h.html#aaad403eb696499ec36e837376be62c2a">[詳解]</a><br /></td></tr>
+<tr class="separator:aaad403eb696499ec36e837376be62c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ad0b8aa0af1c9c0bdd74aa37b15b15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250e">DCU_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a65ad0b8aa0af1c9c0bdd74aa37b15b15">DCU_register_next</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *param, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:a65ad0b8aa0af1c9c0bdd74aa37b15b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">次の分割の実行を登録  <a href="divided__cmd__utility_8h.html#a65ad0b8aa0af1c9c0bdd74aa37b15b15">[詳解]</a><br /></td></tr>
+<tr class="separator:a65ad0b8aa0af1c9c0bdd74aa37b15b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40540dcb7caa23a6eec4197bda6ebcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#ae40540dcb7caa23a6eec4197bda6ebcf">DCU_report_finish</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code, <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> last_exec_sts)</td></tr>
+<tr class="memdesc:ae40540dcb7caa23a6eec4197bda6ebcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">DCUに，分割コマンドが実行終了したことを伝える  <a href="divided__cmd__utility_8h.html#ae40540dcb7caa23a6eec4197bda6ebcf">[詳解]</a><br /></td></tr>
+<tr class="separator:ae40540dcb7caa23a6eec4197bda6ebcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acc22aa0545ff17883837d22091b267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a3acc22aa0545ff17883837d22091b267">DCU_report_err</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code, <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> last_exec_sts)</td></tr>
+<tr class="memdesc:a3acc22aa0545ff17883837d22091b267"><td class="mdescLeft">&#160;</td><td class="mdescRight">DCUに，途中でエラーが発生したことを伝える  <a href="divided__cmd__utility_8h.html#a3acc22aa0545ff17883837d22091b267">[詳解]</a><br /></td></tr>
+<tr class="separator:a3acc22aa0545ff17883837d22091b267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964ce9f9bbbe021febcd12168eace3d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a964ce9f9bbbe021febcd12168eace3d0">DCU_donw_abort_flag</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code)</td></tr>
+<tr class="memdesc:a964ce9f9bbbe021febcd12168eace3d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラー，またはコマンドによって中断ステータスとなっているコマンドを，実行可能状態に戻す  <a href="divided__cmd__utility_8h.html#a964ce9f9bbbe021febcd12168eace3d0">[詳解]</a><br /></td></tr>
+<tr class="separator:a964ce9f9bbbe021febcd12168eace3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a7fb7ac0a231142d85734218d1d117"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a14a7fb7ac0a231142d85734218d1d117">DCU_abort_cmd</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code)</td></tr>
+<tr class="memdesc:a14a7fb7ac0a231142d85734218d1d117"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行中の分割コマンドを外部から強制的に中断させる  <a href="divided__cmd__utility_8h.html#a14a7fb7ac0a231142d85734218d1d117">[詳解]</a><br /></td></tr>
+<tr class="separator:a14a7fb7ac0a231142d85734218d1d117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e84e47c2145f6df0d683c33af74a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8">DCU_LOG_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#ad8e84e47c2145f6df0d683c33af74a9c">DCU_search_and_get_log</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code, const <a class="el" href="struct_d_c_u___exec_status.html">DCU_ExecStatus</a> *exec_log)</td></tr>
+<tr class="memdesc:ad8e84e47c2145f6df0d683c33af74a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログを探して，指定したコマンドログを取得する  <a href="divided__cmd__utility_8h.html#ad8e84e47c2145f6df0d683c33af74a9c">[詳解]</a><br /></td></tr>
+<tr class="separator:ad8e84e47c2145f6df0d683c33af74a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51777d5a92740e7505b40bf01df3e30a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a51777d5a92740e7505b40bf01df3e30a">Cmd_DCU_ABORT_CMD</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a51777d5a92740e7505b40bf01df3e30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行中の分割コマンドを停止する  <a href="divided__cmd__utility_8h.html#a51777d5a92740e7505b40bf01df3e30a">[詳解]</a><br /></td></tr>
+<tr class="separator:a51777d5a92740e7505b40bf01df3e30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1304cf11156a2ac71482320bd1ccb472"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a1304cf11156a2ac71482320bd1ccb472">Cmd_DCU_DOWN_ABORT_FLAG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a1304cf11156a2ac71482320bd1ccb472"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラー，またはコマンドによって中断ステータスとなっているコマンドを，実行可能状態に戻す  <a href="divided__cmd__utility_8h.html#a1304cf11156a2ac71482320bd1ccb472">[詳解]</a><br /></td></tr>
+<tr class="separator:a1304cf11156a2ac71482320bd1ccb472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75bb810248ed2fbdf7e121fa126bec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#ac75bb810248ed2fbdf7e121fa126bec4">Cmd_DCU_CLEAR_LOG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:ac75bb810248ed2fbdf7e121fa126bec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログをクリアする  <a href="divided__cmd__utility_8h.html#ac75bb810248ed2fbdf7e121fa126bec4">[詳解]</a><br /></td></tr>
+<tr class="separator:ac75bb810248ed2fbdf7e121fa126bec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a774280347effd9c2a794061665fb3c75"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_divided_cmd_utility.html">DividedCmdUtility</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="divided__cmd__utility_8h.html#a774280347effd9c2a794061665fb3c75">divided_cmd_utility</a></td></tr>
+<tr class="separator:a774280347effd9c2a794061665fb3c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>コマンド分割をサポートするUtil </p>
+<dl class="section note"><dt>覚え書き</dt><dd>HOW TO USE<ol type="1">
+<li>各Cmdにて初めに DCU_check_in を実行し，現在の実行状況を取得する</li>
+<li>実行が終了し 再度再帰させる必要がある場合は DCU_register_next で登録する</li>
+<li>すべての処理が終了した場合は DCU_report_finish を実行する</li>
+<li>実行中のエラーは DCU_report_err で報告する．すると中断される</li>
+<li>中断したいときは DCU_abort_cmd を実行する</li>
+<li>中断された状態をリセットする場合は DCU_donw_abort_flag を実行する </li>
+</ol>
+</dd>
+<dd>
+telemetry_manager などで使っているので，それを参照のこと </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8h_source.html">divided_cmd_utility.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a285975a8d2e8a9fee464ca2a54d85fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285975a8d2e8a9fee464ca2a54d85fb3">&#9670;&nbsp;</a></span>DCU_LOG_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DCU_LOG_MAX&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保存するログの最大数 </p>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8h_source.html">divided_cmd_utility.h</a> の <a class="el" href="divided__cmd__utility_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a6078780ababada2906fdfa172872250e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6078780ababada2906fdfa172872250e">&#9670;&nbsp;</a></span>DCU_ACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250e">DCU_ACK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>汎用返り値 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a6078780ababada2906fdfa172872250ea5e25831a5d00962de866959f9e06b33f"></a>DCU_ACK_OK&#160;</td><td class="fielddoc"><p>正常終了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6078780ababada2906fdfa172872250ead60d8596b6a47ac5f3489fcc5a6c745c"></a>DCU_ACK_ERR&#160;</td><td class="fielddoc"><p>エラー </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8h_source.html">divided_cmd_utility.h</a> の <a class="el" href="divided__cmd__utility_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5ec65bc3b924c0851757ea0991d088c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec65bc3b924c0851757ea0991d088c8">&#9670;&nbsp;</a></span>DCU_LOG_ACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8">DCU_LOG_ACK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログ操作の返り値 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a5ec65bc3b924c0851757ea0991d088c8a4d617525ec244c9019e7533bbde96168"></a>DCU_LOG_ACK_OK&#160;</td><td class="fielddoc"><p>正常終了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ec65bc3b924c0851757ea0991d088c8a0505e2c78ebc5e10cf08550bf9789c36"></a>DCU_LOG_ACK_NOT_FOUND&#160;</td><td class="fielddoc"><p>指定ログが見つからず </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8h_source.html">divided_cmd_utility.h</a> の <a class="el" href="divided__cmd__utility_8h_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acb1774785ce24ddc8b5a9123d976700d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1774785ce24ddc8b5a9123d976700d">&#9670;&nbsp;</a></span>DCU_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700d">DCU_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実行状況 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="acb1774785ce24ddc8b5a9123d976700dae0df34b56987d2adb9a6d8de99580d9e"></a>DCU_STATUS_FINISHED&#160;</td><td class="fielddoc"><p>実行終了 or 未実行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acb1774785ce24ddc8b5a9123d976700daa3fa7242608ed59b1eea0a0ba8c91b00"></a>DCU_STATUS_PROGRESS&#160;</td><td class="fielddoc"><p>実行中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acb1774785ce24ddc8b5a9123d976700da6593fd56dcbcc1eccd52f577ec71444e"></a>DCU_STATUS_ABORTED_BY_ERR&#160;</td><td class="fielddoc"><p>エラーにより中断 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acb1774785ce24ddc8b5a9123d976700dab674508b997889f7f0dd0d2f52f34b97"></a>DCU_STATUS_ABORTED_BY_CMD&#160;</td><td class="fielddoc"><p>コマンドにより中断 </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8h_source.html">divided_cmd_utility.h</a> の <a class="el" href="divided__cmd__utility_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a51777d5a92740e7505b40bf01df3e30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51777d5a92740e7505b40bf01df3e30a">&#9670;&nbsp;</a></span>Cmd_DCU_ABORT_CMD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_DCU_ABORT_CMD </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実行中の分割コマンドを停止する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>もし，指定した Cmd が実行中ではなくても CCP_EXEC_SUCCESS を返す </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00288">288</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a51777d5a92740e7505b40bf01df3e30a_cgraph.svg" width="1990" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a51777d5a92740e7505b40bf01df3e30a_icgraph.svg" width="1136" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac75bb810248ed2fbdf7e121fa126bec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75bb810248ed2fbdf7e121fa126bec4">&#9670;&nbsp;</a></span>Cmd_DCU_CLEAR_LOG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_DCU_CLEAR_LOG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログをクリアする </p>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00324">324</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_ac75bb810248ed2fbdf7e121fa126bec4_cgraph.svg" width="742" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_ac75bb810248ed2fbdf7e121fa126bec4_icgraph.svg" width="1130" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1304cf11156a2ac71482320bd1ccb472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1304cf11156a2ac71482320bd1ccb472">&#9670;&nbsp;</a></span>Cmd_DCU_DOWN_ABORT_FLAG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_DCU_DOWN_ABORT_FLAG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エラー，またはコマンドによって中断ステータスとなっているコマンドを，実行可能状態に戻す </p>
+<dl class="section note"><dt>覚え書き</dt><dd>もし，指定した Cmd が中断ステータスではなくても CCP_EXEC_SUCCESS を返す </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00306">306</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a1304cf11156a2ac71482320bd1ccb472_cgraph.svg" width="2044" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a1304cf11156a2ac71482320bd1ccb472_icgraph.svg" width="1190" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a14a7fb7ac0a231142d85734218d1d117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a7fb7ac0a231142d85734218d1d117">&#9670;&nbsp;</a></span>DCU_abort_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCU_abort_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実行中の分割コマンドを外部から強制的に中断させる </p>
+<dl class="section note"><dt>覚え書き</dt><dd>内部エラーは DCU_report_err を使うべきで，基本的には使わないはず </dd>
+<dd>
+abort からの復帰は，初期化される（途中からの再開は不可） </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>停止させるコマンドの CMD_CODE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00261">261</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a14a7fb7ac0a231142d85734218d1d117_cgraph.svg" width="1727" height="322"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a14a7fb7ac0a231142d85734218d1d117_icgraph.svg" width="1311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aaad403eb696499ec36e837376be62c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad403eb696499ec36e837376be62c2a">&#9670;&nbsp;</a></span>DCU_check_in()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700d">DCU_STATUS</a> DCU_check_in </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td>
+          <td class="paramname"><em>exec_counter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DCUにチェックインする．分割コマンド実行時，最初に呼び出す関数． </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>自身の CMD_CODE </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">exec_counter</td><td>次の実行回数が何回目か？ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DCU_STATUS_FINISHED</td><td>初回実行である． exec_counter は 0 を返す． </td></tr>
+    <tr><td class="paramname">DCU_STATUS_PROGRESS</td><td>分割2回目以降の実行である </td></tr>
+    <tr><td class="paramname">DCU_STATUS_ABORTED_BY_ERR</td><td>エラーが発生しているので，実行を中止すべき（ CCP_EXEC_ILLEGAL_CONTEXT を返すべき ） </td></tr>
+    <tr><td class="paramname">DCU_STATUS_ABORTED_BY_CMD</td><td>実行中断コマンドを受信しているので，実行を中止すべき（ CCP_EXEC_ILLEGAL_CONTEXT を返すべき ） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00178">178</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_aaad403eb696499ec36e837376be62c2a_cgraph.svg" width="1715" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_aaad403eb696499ec36e837376be62c2a_icgraph.svg" width="1371" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a84cf58a5349ef5691992551cf0882674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84cf58a5349ef5691992551cf0882674">&#9670;&nbsp;</a></span>DCU_create_app()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> DCU_create_app </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00077">77</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a84cf58a5349ef5691992551cf0882674_cgraph.svg" width="876" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a84cf58a5349ef5691992551cf0882674_icgraph.svg" width="967" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a964ce9f9bbbe021febcd12168eace3d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964ce9f9bbbe021febcd12168eace3d0">&#9670;&nbsp;</a></span>DCU_donw_abort_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCU_donw_abort_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エラー，またはコマンドによって中断ステータスとなっているコマンドを，実行可能状態に戻す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>実行可能状態に戻すコマンドの CMD_CODE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00250">250</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a964ce9f9bbbe021febcd12168eace3d0_cgraph.svg" width="1766" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a964ce9f9bbbe021febcd12168eace3d0_icgraph.svg" width="1403" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a65ad0b8aa0af1c9c0bdd74aa37b15b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ad0b8aa0af1c9c0bdd74aa37b15b15">&#9670;&nbsp;</a></span>DCU_register_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="divided__cmd__utility_8h.html#a6078780ababada2906fdfa172872250e">DCU_ACK</a> DCU_register_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>次の分割の実行を登録 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>自身の CMD_CODE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>コマンドパラメタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>パラメタ長 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>DCU_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00206">206</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a65ad0b8aa0af1c9c0bdd74aa37b15b15_cgraph.svg" width="1136" height="1219"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a65ad0b8aa0af1c9c0bdd74aa37b15b15_icgraph.svg" width="1400" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3acc22aa0545ff17883837d22091b267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acc22aa0545ff17883837d22091b267">&#9670;&nbsp;</a></span>DCU_report_err()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCU_report_err </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td>
+          <td class="paramname"><em>last_exec_sts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DCUに，途中でエラーが発生したことを伝える </p>
+<dl class="section note"><dt>覚え書き</dt><dd>以後の実行は中断される </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>自身の CMD_CODE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last_exec_sts</td><td>コマンド実行結果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00238">238</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a3acc22aa0545ff17883837d22091b267_cgraph.svg" width="1723" height="322"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_a3acc22aa0545ff17883837d22091b267_icgraph.svg" width="1379" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae40540dcb7caa23a6eec4197bda6ebcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40540dcb7caa23a6eec4197bda6ebcf">&#9670;&nbsp;</a></span>DCU_report_finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCU_report_finish </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td>
+          <td class="paramname"><em>last_exec_sts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DCUに，分割コマンドが実行終了したことを伝える </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>自身の CMD_CODE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last_exec_sts</td><td>コマンド実行結果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00226">226</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_ae40540dcb7caa23a6eec4197bda6ebcf_cgraph.svg" width="1739" height="322"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_ae40540dcb7caa23a6eec4197bda6ebcf_icgraph.svg" width="1395" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad8e84e47c2145f6df0d683c33af74a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e84e47c2145f6df0d683c33af74a9c">&#9670;&nbsp;</a></span>DCU_search_and_get_log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="divided__cmd__utility_8h.html#a5ec65bc3b924c0851757ea0991d088c8">DCU_LOG_ACK</a> DCU_search_and_get_log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_d_c_u___exec_status.html">DCU_ExecStatus</a> *&#160;</td>
+          <td class="paramname"><em>exec_log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログを探して，指定したコマンドログを取得する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>exec_log は divided_cmd_utility の該当のログへのポインタに差し替える． </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>探すコマンド </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">exec_log</td><td>取得したログ．constポインタで，参照先を書き換えるため，NULLポインタを渡すのもOK </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DCU_LOG_ACK_OK</td><td>見つかった </td></tr>
+    <tr><td class="paramname">DCU_LOG_ACK_NOT_FOUND</td><td>見つからず </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00272">272</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="divided__cmd__utility_8h_ad8e84e47c2145f6df0d683c33af74a9c_cgraph.svg" width="380" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a774280347effd9c2a794061665fb3c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774280347effd9c2a794061665fb3c75">&#9670;&nbsp;</a></span>divided_cmd_utility</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_divided_cmd_utility.html">DividedCmdUtility</a>* const divided_cmd_utility</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="divided__cmd__utility_8c_source.html">divided_cmd_utility.c</a> の <a class="el" href="divided__cmd__utility_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_bac5c72f08f800c1dcf30d4637be4edf.html">Applications</a></li><li class="navelem"><a class="el" href="divided__cmd__utility_8h.html">divided_cmd_utility.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Applications/anomaly_handler.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('anomaly__handler_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">anomaly_handler.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="anomaly__handler_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ANOMALY_HANDLER_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ANOMALY_HANDLER_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">// for size_t</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../System/AnomalyLogger/anomaly_logger.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../System/ApplicationManager/app_info.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../CmdTlm/common_tlm_cmd_packet.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__definitions_8h.html">src_user/CmdTlm/block_command_definitions.h</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../CmdTlm/block_command_table.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="anomaly__group_8h.html">src_user/Settings/AnomalyLogger/anomaly_group.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ah__rules_8h.html">src_user/Settings/Applications/AnomalyHandlerRules/ah_rules.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#a874366f360bff1cdf88e1e0244cc6001">   14</a></span>&#160;<span class="preprocessor">#define AH_TLM_PAGE_SIZE (32)                                  </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#a70aa8c1b2bce865070a71caa29b0136a">   15</a></span>&#160;<span class="preprocessor">#define AH_TLM_PAGE_MAX  (4)                                   </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#ad2bd55c2563b22fae41b0253c854e337">   16</a></span>&#160;<span class="preprocessor">#define AH_MAX_RULES (AH_TLM_PAGE_SIZE * AH_TLM_PAGE_MAX)        </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#a3aad302370847aecaca58ff0f1d43479">   18</a></span>&#160;<span class="preprocessor">#define AH_LOG_TLM_PAGE_SIZE (32)                              </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#a8403b82e94d1df598bbf0c44fd5b2971">   19</a></span>&#160;<span class="preprocessor">#define AH_LOG_TLM_PAGE_MAX  (4)                               </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#ae00c564a585eea3fbd01b605af73c542">   20</a></span>&#160;<span class="preprocessor">#define AH_LOG_MAX (AH_LOG_TLM_PAGE_SIZE * AH_LOG_TLM_PAGE_MAX)  </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">// 2018-12-11</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// ↑これって， AL_RECORD_MAX とサイズ揃える必要ないの？</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// なさそう？</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="anomaly__handler__params_8h.html">src_user/Settings/Applications/anomaly_handler_params.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a74c9fc6c509b28fb59e4a8ba75c6e44d">   29</a></span>&#160;  <a class="code" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a74c9fc6c509b28fb59e4a8ba75c6e44d">AH_SINGLE</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a7bb1d4afa921b80488b011cda2849b1e">   30</a></span>&#160;  <a class="code" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a7bb1d4afa921b80488b011cda2849b1e">AH_CONTINUOUS</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a91471c9905c5911546cc0ebac9daec87">   31</a></span>&#160;  <a class="code" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a91471c9905c5911546cc0ebac9daec87">AH_CUMULATE</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <a class="code" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847">AH_CONDITION</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_a_h___rule.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_a_h___rule.html#a6e387e5ba3ba4e2065001f95a41bea23">   36</a></span>&#160;  <a class="code" href="struct_a_l___anomaly_code.html">AL_AnomalyCode</a>  <a class="code" href="struct_a_h___rule.html#a6e387e5ba3ba4e2065001f95a41bea23">code</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_a_h___rule.html#a3e91c25fa522659813adbef5f97bf989">   37</a></span>&#160;  <a class="code" href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847">AH_CONDITION</a> <a class="code" href="struct_a_h___rule.html#a3e91c25fa522659813adbef5f97bf989">cond</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_a_h___rule.html#ae2248567e3988f63cb5fe976795dbca6">   38</a></span>&#160;  <span class="keywordtype">size_t</span>       <a class="code" href="struct_a_h___rule.html#ae2248567e3988f63cb5fe976795dbca6">threshold</a>;     <span class="comment">// tlmではunit8_tだ....    AH_CUMULATE用のカウンタ</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_a_h___rule.html#ad08ad4c9a7b982cd4aba631834a291f5">   39</a></span>&#160;  <a class="code" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>     <a class="code" href="struct_a_h___rule.html#ad08ad4c9a7b982cd4aba631834a291f5">bc_id</a>;         <span class="comment">// tlmではunit8_tだ....    // TODO 2019/08/30 BCTの形が変わったので，TLMも直す！！！</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <a class="code" href="struct_a_h___rule.html">AH_Rule</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_a_h___element.html">   42</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_a_h___element.html#a49e74ec974c1878346edd82cccbe63d8">   44</a></span>&#160;  <span class="keywordtype">int</span>     <a class="code" href="struct_a_h___element.html#a49e74ec974c1878346edd82cccbe63d8">is_active</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_a_h___element.html#a34a95cff8950b59c687333f23e64bf2d">   45</a></span>&#160;  <a class="code" href="struct_a_h___rule.html">AH_Rule</a> <a class="code" href="struct_a_h___element.html#a34a95cff8950b59c687333f23e64bf2d">rule</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_a_h___element.html#a2d593f0ada8a5818ada3f6410141bcad">   46</a></span>&#160;  <span class="keywordtype">size_t</span>  <a class="code" href="struct_a_h___element.html#a2d593f0ada8a5818ada3f6410141bcad">counter</a>;            <span class="comment">// AH_CUMULATE用のカウンタ</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <a class="code" href="struct_a_h___element.html">AH_Element</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_a_h___pointer.html">   49</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_a_h___pointer.html#a76d971a3c552bc58ba9f0d5fceae9806">   51</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="struct_a_h___pointer.html#a76d971a3c552bc58ba9f0d5fceae9806">count</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_a_h___pointer.html#a5438a597ee291f523ae04a9fe355924f">   52</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="struct_a_h___pointer.html#a5438a597ee291f523ae04a9fe355924f">pos</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <a class="code" href="struct_a_h___pointer.html">AH_Pointer</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html">   55</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#a428965f2bd2aa9e5401dd74efb40c8f5">   57</a></span>&#160;  <a class="code" href="struct_a_h___element.html">AH_Element</a> elements[<a class="code" href="anomaly__handler_8h.html#ad2bd55c2563b22fae41b0253c854e337">AH_MAX_RULES</a>];</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#af4ea46801a695d9cbb7a7aec691f1e50">   58</a></span>&#160;  <a class="code" href="struct_a_h___pointer.html">AH_Pointer</a> <a class="code" href="struct_anomaly_handler.html#af4ea46801a695d9cbb7a7aec691f1e50">al_pointer</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#ad4442db6d45ff49acf79ecb646f04023">   59</a></span>&#160;  <a class="code" href="struct_obc_time.html">ObcTime</a>    <a class="code" href="struct_anomaly_handler.html#ad4442db6d45ff49acf79ecb646f04023">respond_at</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#a3dda13180b2f9b7c416a16dd588b014a">   60</a></span>&#160;  <span class="keywordtype">size_t</span>     <a class="code" href="struct_anomaly_handler.html#a3dda13180b2f9b7c416a16dd588b014a">latest_id</a>;             <span class="comment">// tlmではunit8_tだ....</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#a02d73d3098f43d3ac0cab6617e0cfe06">   61</a></span>&#160;  <span class="keywordtype">size_t</span>     <a class="code" href="struct_anomaly_handler.html#a02d73d3098f43d3ac0cab6617e0cfe06">action_counter</a>;        <span class="comment">// tlmではunit8_tだ....</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#ab73866570b8138ffc601187e3414014e">   62</a></span>&#160;  <span class="keywordtype">size_t</span>     <a class="code" href="struct_anomaly_handler.html#ab73866570b8138ffc601187e3414014e">latest_run_length</a>;     <span class="comment">// tlmではunit8_tだ....</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_anomaly_handler.html#ab9fd8bec8daeaa10e8b9f50c7f54f826">   63</a></span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>    <a class="code" href="struct_anomaly_handler.html#ab9fd8bec8daeaa10e8b9f50c7f54f826">page_no</a>;               <span class="comment">// tlmではunit8_tだ....</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <a class="code" href="struct_anomaly_handler.html">AnomalyHandler</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond.html">   66</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond.html#ac890bf89916670c4d6407767599bf645">   68</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="struct_a_h___anomaly_respond.html#ac890bf89916670c4d6407767599bf645">respond_at_master</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond.html#a469728b8b90539555282c974b09072b7">   69</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="struct_a_h___anomaly_respond.html#a469728b8b90539555282c974b09072b7">rule_num</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} <a class="code" href="struct_a_h___anomaly_respond.html">AH_AnomalyRespond</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond_log.html">   72</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond_log.html#ac79a2d43454656eb31550825688ae81f">   74</a></span>&#160;  <a class="code" href="struct_a_h___anomaly_respond.html">AH_AnomalyRespond</a> log[<a class="code" href="anomaly__handler_8h.html#ae00c564a585eea3fbd01b605af73c542">AH_LOG_MAX</a>];</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond_log.html#ac5632cd6a3b4badbf3c41648069dd88f">   75</a></span>&#160;  <span class="keywordtype">size_t</span>            <a class="code" href="struct_a_h___anomaly_respond_log.html#ac5632cd6a3b4badbf3c41648069dd88f">pointer</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_a_h___anomaly_respond_log.html#ab9fd8bec8daeaa10e8b9f50c7f54f826">   76</a></span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>           <a class="code" href="struct_a_h___anomaly_respond_log.html#ab9fd8bec8daeaa10e8b9f50c7f54f826">page_no</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;} <a class="code" href="struct_a_h___anomaly_respond_log.html">AH_AnomalyRespondLog</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="struct_anomaly_handler.html">AnomalyHandler</a>* <span class="keyword">const</span> <a class="code" href="anomaly__handler_8h.html#abe8ad2098546bb01917eede5adc9931b">anomaly_handler</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="struct_a_h___anomaly_respond_log.html">AH_AnomalyRespondLog</a>* <span class="keyword">const</span> <a class="code" href="anomaly__handler_8h.html#a5940816a2c2b31cf158cfe4f605c91eb">AH_respond_log</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="anomaly__handler_8h.html#a527184a40c59e88853557f2fd32f1c98">AH_create_app</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="anomaly__handler_8h.html#a7757c6645df4b6945ff228fb705ee38a">print_ah_status</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="anomaly__handler_8h.html#afaa346a3ecc03423bcb25f9ccd132708">AH_activate_rule</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> <a class="code" href="anomaly__handler_8h.html#a648aa741d802ca23dbb1e7a22b166056">AH_inactivate_rule</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">// staticな方はデフォルトでは無効だが，</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">// こいつは初期化時に使われるので，選択制にした</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="anomaly__handler_8h.html#a68985fbfebc2a62034256fee1ea49f1c">AH_add_rule</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="struct_a_h___rule.html">AH_Rule</a>* ahr, <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> is_active);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#ab3a4949a43fca568432aac18330bdcfb">Cmd_AH_REGISTER_RULE</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#a6e2ef7b108e08e156a65908bb7cf9c27">Cmd_AH_ACTIVATE_RULE</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#a5fbcd1d1b036ad7a1c6589ed9f881dc8">Cmd_AH_INACTIVATE_RULE</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#a1affce154b56e63ec4e73a0da14a77d0">Cmd_AH_CLEAR_LOG</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#a646864196b67f8531288dd994aee8fa0">Cmd_AH_SET_PAGE_FOR_TLM</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#a92d8ee8e9c92c44bdc62576e7865c486">Cmd_AHRES_LOG_CLEAR</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="anomaly__handler_8h.html#a90687830b43146a540fda8bfde0eebd2">Cmd_AHRES_LOG_SET_PAGE_FOR_TLM</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aanomaly__handler_8h_html_a646864196b67f8531288dd994aee8fa0"><div class="ttname"><a href="anomaly__handler_8h.html#a646864196b67f8531288dd994aee8fa0">Cmd_AH_SET_PAGE_FOR_TLM</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AH_SET_PAGE_FOR_TLM(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00370">anomaly_handler.c:370</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00017">stdint.h:17</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ab806a03fdd5059aeb03793b3054bd847a91471c9905c5911546cc0ebac9daec87"><div class="ttname"><a href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a91471c9905c5911546cc0ebac9daec87">AH_CUMULATE</a></div><div class="ttdeci">@ AH_CUMULATE</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00031">anomaly_handler.h:31</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a92d8ee8e9c92c44bdc62576e7865c486"><div class="ttname"><a href="anomaly__handler_8h.html#a92d8ee8e9c92c44bdc62576e7865c486">Cmd_AHRES_LOG_CLEAR</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AHRES_LOG_CLEAR(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00399">anomaly_handler.c:399</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ab806a03fdd5059aeb03793b3054bd847"><div class="ttname"><a href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847">AH_CONDITION</a></div><div class="ttdeci">AH_CONDITION</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00027">anomaly_handler.h:27</a></div></div>
+<div class="ttc" id="astruct_anomaly_handler_html_ad4442db6d45ff49acf79ecb646f04023"><div class="ttname"><a href="struct_anomaly_handler.html#ad4442db6d45ff49acf79ecb646f04023">AnomalyHandler::respond_at</a></div><div class="ttdeci">ObcTime respond_at</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00059">anomaly_handler.h:59</a></div></div>
+<div class="ttc" id="astruct_a_h___rule_html_a3e91c25fa522659813adbef5f97bf989"><div class="ttname"><a href="struct_a_h___rule.html#a3e91c25fa522659813adbef5f97bf989">AH_Rule::cond</a></div><div class="ttdeci">AH_CONDITION cond</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00037">anomaly_handler.h:37</a></div></div>
+<div class="ttc" id="astruct_obc_time_html"><div class="ttname"><a href="struct_obc_time.html">ObcTime</a></div><div class="ttdef"><b>Definition:</b> <a href="obc__time_8h_source.html#l00017">obc_time.h:17</a></div></div>
+<div class="ttc" id="astruct_a_h___anomaly_respond_html_a469728b8b90539555282c974b09072b7"><div class="ttname"><a href="struct_a_h___anomaly_respond.html#a469728b8b90539555282c974b09072b7">AH_AnomalyRespond::rule_num</a></div><div class="ttdeci">size_t rule_num</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00069">anomaly_handler.h:69</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ab806a03fdd5059aeb03793b3054bd847a7bb1d4afa921b80488b011cda2849b1e"><div class="ttname"><a href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a7bb1d4afa921b80488b011cda2849b1e">AH_CONTINUOUS</a></div><div class="ttdeci">@ AH_CONTINUOUS</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00030">anomaly_handler.h:30</a></div></div>
+<div class="ttc" id="astruct_a_h___element_html_a2d593f0ada8a5818ada3f6410141bcad"><div class="ttname"><a href="struct_a_h___element.html#a2d593f0ada8a5818ada3f6410141bcad">AH_Element::counter</a></div><div class="ttdeci">size_t counter</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00046">anomaly_handler.h:46</a></div></div>
+<div class="ttc" id="astruct_anomaly_handler_html_a02d73d3098f43d3ac0cab6617e0cfe06"><div class="ttname"><a href="struct_anomaly_handler.html#a02d73d3098f43d3ac0cab6617e0cfe06">AnomalyHandler::action_counter</a></div><div class="ttdeci">size_t action_counter</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00061">anomaly_handler.h:61</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_afaa346a3ecc03423bcb25f9ccd132708"><div class="ttname"><a href="anomaly__handler_8h.html#afaa346a3ecc03423bcb25f9ccd132708">AH_activate_rule</a></div><div class="ttdeci">void AH_activate_rule(size_t id)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00318">anomaly_handler.c:318</a></div></div>
+<div class="ttc" id="astruct_a_h___rule_html_ae2248567e3988f63cb5fe976795dbca6"><div class="ttname"><a href="struct_a_h___rule.html#ae2248567e3988f63cb5fe976795dbca6">AH_Rule::threshold</a></div><div class="ttdeci">size_t threshold</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00038">anomaly_handler.h:38</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a6e2ef7b108e08e156a65908bb7cf9c27"><div class="ttname"><a href="anomaly__handler_8h.html#a6e2ef7b108e08e156a65908bb7cf9c27">Cmd_AH_ACTIVATE_RULE</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AH_ACTIVATE_RULE(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00301">anomaly_handler.c:301</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a5fbcd1d1b036ad7a1c6589ed9f881dc8"><div class="ttname"><a href="anomaly__handler_8h.html#a5fbcd1d1b036ad7a1c6589ed9f881dc8">Cmd_AH_INACTIVATE_RULE</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AH_INACTIVATE_RULE(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00325">anomaly_handler.c:325</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a5940816a2c2b31cf158cfe4f605c91eb"><div class="ttname"><a href="anomaly__handler_8h.html#a5940816a2c2b31cf158cfe4f605c91eb">AH_respond_log</a></div><div class="ttdeci">const AH_AnomalyRespondLog *const AH_respond_log</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00029">anomaly_handler.c:29</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ab3a4949a43fca568432aac18330bdcfb"><div class="ttname"><a href="anomaly__handler_8h.html#ab3a4949a43fca568432aac18330bdcfb">Cmd_AH_REGISTER_RULE</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AH_REGISTER_RULE(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00256">anomaly_handler.c:256</a></div></div>
+<div class="ttc" id="astruct_anomaly_handler_html_ab9fd8bec8daeaa10e8b9f50c7f54f826"><div class="ttname"><a href="struct_anomaly_handler.html#ab9fd8bec8daeaa10e8b9f50c7f54f826">AnomalyHandler::page_no</a></div><div class="ttdeci">uint8_t page_no</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00063">anomaly_handler.h:63</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a68985fbfebc2a62034256fee1ea49f1c"><div class="ttname"><a href="anomaly__handler_8h.html#a68985fbfebc2a62034256fee1ea49f1c">AH_add_rule</a></div><div class="ttdeci">void AH_add_rule(size_t id, const AH_Rule *ahr, uint8_t is_active)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00426">anomaly_handler.c:426</a></div></div>
+<div class="ttc" id="astruct_a_h___rule_html_ad08ad4c9a7b982cd4aba631834a291f5"><div class="ttname"><a href="struct_a_h___rule.html#ad08ad4c9a7b982cd4aba631834a291f5">AH_Rule::bc_id</a></div><div class="ttdeci">bct_id_t bc_id</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00039">anomaly_handler.h:39</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ab806a03fdd5059aeb03793b3054bd847a74c9fc6c509b28fb59e4a8ba75c6e44d"><div class="ttname"><a href="anomaly__handler_8h.html#ab806a03fdd5059aeb03793b3054bd847a74c9fc6c509b28fb59e4a8ba75c6e44d">AH_SINGLE</a></div><div class="ttdeci">@ AH_SINGLE</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00029">anomaly_handler.h:29</a></div></div>
+<div class="ttc" id="astruct_a_h___anomaly_respond_html"><div class="ttname"><a href="struct_a_h___anomaly_respond.html">AH_AnomalyRespond</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00066">anomaly_handler.h:66</a></div></div>
+<div class="ttc" id="astruct_a_l___anomaly_code_html"><div class="ttname"><a href="struct_a_l___anomaly_code.html">AL_AnomalyCode</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__logger_8h_source.html#l00056">anomaly_logger.h:56</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a648aa741d802ca23dbb1e7a22b166056"><div class="ttname"><a href="anomaly__handler_8h.html#a648aa741d802ca23dbb1e7a22b166056">AH_inactivate_rule</a></div><div class="ttdeci">void AH_inactivate_rule(size_t id)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00342">anomaly_handler.c:342</a></div></div>
+<div class="ttc" id="ablock__command__table_8h_html_ac59bf9456699df5fd82e711b1c0347cc"><div class="ttname"><a href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a></div><div class="ttdeci">uint16_t bct_id_t</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8h_source.html#l00031">block_command_table.h:31</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_abe8ad2098546bb01917eede5adc9931b"><div class="ttname"><a href="anomaly__handler_8h.html#abe8ad2098546bb01917eede5adc9931b">anomaly_handler</a></div><div class="ttdeci">const AnomalyHandler *const anomaly_handler</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00026">anomaly_handler.c:26</a></div></div>
+<div class="ttc" id="astruct_anomaly_handler_html_af4ea46801a695d9cbb7a7aec691f1e50"><div class="ttname"><a href="struct_anomaly_handler.html#af4ea46801a695d9cbb7a7aec691f1e50">AnomalyHandler::al_pointer</a></div><div class="ttdeci">AH_Pointer al_pointer</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00058">anomaly_handler.h:58</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a527184a40c59e88853557f2fd32f1c98"><div class="ttname"><a href="anomaly__handler_8h.html#a527184a40c59e88853557f2fd32f1c98">AH_create_app</a></div><div class="ttdeci">AppInfo AH_create_app(void)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00035">anomaly_handler.c:35</a></div></div>
+<div class="ttc" id="ablock__command__definitions_8h_html"><div class="ttname"><a href="block__command__definitions_8h.html">block_command_definitions.h</a></div><div class="ttdoc">ブロックコマンド定義</div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ad2bd55c2563b22fae41b0253c854e337"><div class="ttname"><a href="anomaly__handler_8h.html#ad2bd55c2563b22fae41b0253c854e337">AH_MAX_RULES</a></div><div class="ttdeci">#define AH_MAX_RULES</div><div class="ttdoc">最大何個のルール（アノマリ - イベント対応）を保持できるか</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00016">anomaly_handler.h:16</a></div></div>
+<div class="ttc" id="astruct_anomaly_handler_html"><div class="ttname"><a href="struct_anomaly_handler.html">AnomalyHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00055">anomaly_handler.h:55</a></div></div>
+<div class="ttc" id="astruct_a_h___element_html_a49e74ec974c1878346edd82cccbe63d8"><div class="ttname"><a href="struct_a_h___element.html#a49e74ec974c1878346edd82cccbe63d8">AH_Element::is_active</a></div><div class="ttdeci">int is_active</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00044">anomaly_handler.h:44</a></div></div>
+<div class="ttc" id="astruct_a_h___anomaly_respond_html_ac890bf89916670c4d6407767599bf645"><div class="ttname"><a href="struct_a_h___anomaly_respond.html#ac890bf89916670c4d6407767599bf645">AH_AnomalyRespond::respond_at_master</a></div><div class="ttdeci">size_t respond_at_master</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00068">anomaly_handler.h:68</a></div></div>
+<div class="ttc" id="astruct_a_h___anomaly_respond_log_html_ac5632cd6a3b4badbf3c41648069dd88f"><div class="ttname"><a href="struct_a_h___anomaly_respond_log.html#ac5632cd6a3b4badbf3c41648069dd88f">AH_AnomalyRespondLog::pointer</a></div><div class="ttdeci">size_t pointer</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00075">anomaly_handler.h:75</a></div></div>
+<div class="ttc" id="aanomaly__group_8h_html"><div class="ttname"><a href="anomaly__group_8h.html">anomaly_group.h</a></div></div>
+<div class="ttc" id="astruct_a_h___anomaly_respond_log_html"><div class="ttname"><a href="struct_a_h___anomaly_respond_log.html">AH_AnomalyRespondLog</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00072">anomaly_handler.h:72</a></div></div>
+<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00006">app_info.h:6</a></div></div>
+<div class="ttc" id="astruct_a_h___element_html_a34a95cff8950b59c687333f23e64bf2d"><div class="ttname"><a href="struct_a_h___element.html#a34a95cff8950b59c687333f23e64bf2d">AH_Element::rule</a></div><div class="ttdeci">AH_Rule rule</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00045">anomaly_handler.h:45</a></div></div>
+<div class="ttc" id="astruct_a_h___pointer_html"><div class="ttname"><a href="struct_a_h___pointer.html">AH_Pointer</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00049">anomaly_handler.h:49</a></div></div>
+<div class="ttc" id="aanomaly__handler__params_8h_html"><div class="ttname"><a href="anomaly__handler__params_8h.html">anomaly_handler_params.h</a></div><div class="ttdoc">AHのCoreAppパラメタのオーバーライド用ヘッダー</div></div>
+<div class="ttc" id="astruct_a_h___pointer_html_a76d971a3c552bc58ba9f0d5fceae9806"><div class="ttname"><a href="struct_a_h___pointer.html#a76d971a3c552bc58ba9f0d5fceae9806">AH_Pointer::count</a></div><div class="ttdeci">size_t count</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00051">anomaly_handler.h:51</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a7757c6645df4b6945ff228fb705ee38a"><div class="ttname"><a href="anomaly__handler_8h.html#a7757c6645df4b6945ff228fb705ee38a">print_ah_status</a></div><div class="ttdeci">AppInfo print_ah_status(void)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00226">anomaly_handler.c:226</a></div></div>
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714b"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a></div><div class="ttdeci">CCP_EXEC_STS</div><div class="ttdoc">コマンド実行結果コード</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8h_source.html#l00025">common_tlm_cmd_packet.h:25</a></div></div>
+<div class="ttc" id="aah__rules_8h_html"><div class="ttname"><a href="ah__rules_8h.html">ah_rules.h</a></div><div class="ttdoc">AHのユーザー定義部分をCoreから分離</div></div>
+<div class="ttc" id="astruct_anomaly_handler_html_ab73866570b8138ffc601187e3414014e"><div class="ttname"><a href="struct_anomaly_handler.html#ab73866570b8138ffc601187e3414014e">AnomalyHandler::latest_run_length</a></div><div class="ttdeci">size_t latest_run_length</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00062">anomaly_handler.h:62</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a1affce154b56e63ec4e73a0da14a77d0"><div class="ttname"><a href="anomaly__handler_8h.html#a1affce154b56e63ec4e73a0da14a77d0">Cmd_AH_CLEAR_LOG</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AH_CLEAR_LOG(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00348">anomaly_handler.c:348</a></div></div>
+<div class="ttc" id="astruct_a_h___pointer_html_a5438a597ee291f523ae04a9fe355924f"><div class="ttname"><a href="struct_a_h___pointer.html#a5438a597ee291f523ae04a9fe355924f">AH_Pointer::pos</a></div><div class="ttdeci">size_t pos</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00052">anomaly_handler.h:52</a></div></div>
+<div class="ttc" id="astruct_t_c_p_html"><div class="ttname"><a href="struct_t_c_p.html">TCP</a></div><div class="ttdoc">TCPacket or Space Packet</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_packet_8h_source.html#l00019">TCPacket.h:19</a></div></div>
+<div class="ttc" id="astruct_a_h___rule_html"><div class="ttname"><a href="struct_a_h___rule.html">AH_Rule</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00034">anomaly_handler.h:34</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_ae00c564a585eea3fbd01b605af73c542"><div class="ttname"><a href="anomaly__handler_8h.html#ae00c564a585eea3fbd01b605af73c542">AH_LOG_MAX</a></div><div class="ttdeci">#define AH_LOG_MAX</div><div class="ttdoc">最大何個のイベントログを保持できるか</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00020">anomaly_handler.h:20</a></div></div>
+<div class="ttc" id="aanomaly__handler_8h_html_a90687830b43146a540fda8bfde0eebd2"><div class="ttname"><a href="anomaly__handler_8h.html#a90687830b43146a540fda8bfde0eebd2">Cmd_AHRES_LOG_SET_PAGE_FOR_TLM</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_AHRES_LOG_SET_PAGE_FOR_TLM(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8c_source.html#l00407">anomaly_handler.c:407</a></div></div>
+<div class="ttc" id="astruct_anomaly_handler_html_a3dda13180b2f9b7c416a16dd588b014a"><div class="ttname"><a href="struct_anomaly_handler.html#a3dda13180b2f9b7c416a16dd588b014a">AnomalyHandler::latest_id</a></div><div class="ttdeci">size_t latest_id</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00060">anomaly_handler.h:60</a></div></div>
+<div class="ttc" id="astruct_a_h___element_html"><div class="ttname"><a href="struct_a_h___element.html">AH_Element</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00042">anomaly_handler.h:42</a></div></div>
+<div class="ttc" id="astruct_a_h___rule_html_a6e387e5ba3ba4e2065001f95a41bea23"><div class="ttname"><a href="struct_a_h___rule.html#a6e387e5ba3ba4e2065001f95a41bea23">AH_Rule::code</a></div><div class="ttdeci">AL_AnomalyCode code</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00036">anomaly_handler.h:36</a></div></div>
+<div class="ttc" id="astruct_a_h___anomaly_respond_log_html_ab9fd8bec8daeaa10e8b9f50c7f54f826"><div class="ttname"><a href="struct_a_h___anomaly_respond_log.html#ab9fd8bec8daeaa10e8b9f50c7f54f826">AH_AnomalyRespondLog::page_no</a></div><div class="ttdeci">uint8_t page_no</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__handler_8h_source.html#l00076">anomaly_handler.h:76</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_bac5c72f08f800c1dcf30d4637be4edf.html">Applications</a></li><li class="navelem"><a class="el" href="anomaly__handler_8h.html">anomaly_handler.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

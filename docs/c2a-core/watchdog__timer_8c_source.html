@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/System/WatchdogTimer/watchdog_timer.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('watchdog__timer_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">watchdog_timer.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="watchdog__timer_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="watchdog__timer_8h.html">watchdog_timer.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../Library/print.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">   10</a></span>&#160;<span class="keyword">static</span> <a class="code" href="struct_w_d_t___config.html">WDT_Config</a> <a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#aa4b6de6a44e18410c23db259d68e1ec2">   11</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_w_d_t___config.html">WDT_Config</a>* <span class="keyword">const</span> <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a> = &amp;<a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="watchdog__timer_8c.html#a945b94824a858411b66630dad7c15840">wdt_init_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// WDT初期化の公開関数</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// BootLoaderからはこれが呼ばれる</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#a3b6f1e6b8d84973fe3273975bfbb1908">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="watchdog__timer_8c.html#a3b6f1e6b8d84973fe3273975bfbb1908">WDT_init</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="watchdog__timer_8c.html#a945b94824a858411b66630dad7c15840">wdt_init_</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="watchdog__timer_8c.html#a945b94824a858411b66630dad7c15840">   22</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="watchdog__timer_8c.html#a945b94824a858411b66630dad7c15840">wdt_init_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  ret = <a class="code" href="wdt_8h.html#a9a8311bd52077f109af8fecfeb69b81e">WDT_initialize</a>((<span class="keywordtype">void</span>*)&amp;<a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">if</span> (ret != 0)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;WDT init Error (%d)\n&quot;</span>, ret);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#ae9fcaca2f54130f889937deb0c46e817">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="watchdog__timer_8c.html#ae9fcaca2f54130f889937deb0c46e817">WDT_clear_wdt</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// IF wrapper のものをよぶ</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="wdt_8h.html#af3567f91375b210554b07571f3a5120b">WDT_clear</a>((<span class="keywordtype">void</span>*)&amp;<a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// ###########################################################</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// ###########################################################</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// ###########################################################</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// ここからリプロ対象内！！</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#aae70a2bf9766f4c4e19c3beb62fa9f2d">   46</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="watchdog__timer_8c.html#aae70a2bf9766f4c4e19c3beb62fa9f2d">Cmd_WDT_INIT</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="watchdog__timer_8c.html#a945b94824a858411b66630dad7c15840">wdt_init_</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#a8f799a77e6be827942718912fdf10c8d">   54</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="watchdog__timer_8c.html#a8f799a77e6be827942718912fdf10c8d">Cmd_WDT_ENABLE</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  ret = <a class="code" href="wdt_8h.html#a39393ed268d27180f33a72a876cb3f31">WDT_enable</a>((<span class="keywordtype">void</span>*)&amp;<a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>.<a class="code" href="struct_w_d_t___config.html#ad69597a5bf2ad3b61a3c0efd946ea93b">is_wdt_enable</a> = 1;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (ret != 0)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714bac123b0c2d64d5cb071015562f0aac418">CCP_EXEC_ILLEGAL_CONTEXT</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#a33ae87cd7bc6abacb97bec4c3bff1258">   70</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="watchdog__timer_8c.html#a33ae87cd7bc6abacb97bec4c3bff1258">Cmd_WDT_DISABLE</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  ret =  <a class="code" href="wdt_8h.html#ad7563877133c3f84fc3e4c54e97bd8e7">WDT_disable</a>((<span class="keywordtype">void</span>*)&amp;<a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>.<a class="code" href="struct_w_d_t___config.html#ad69597a5bf2ad3b61a3c0efd946ea93b">is_wdt_enable</a> = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (ret != 0)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714bac123b0c2d64d5cb071015562f0aac418">CCP_EXEC_ILLEGAL_CONTEXT</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#abb82aff15fef3d5f8b1bc1e04463a87b">   86</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="watchdog__timer_8c.html#abb82aff15fef3d5f8b1bc1e04463a87b">Cmd_WDT_STOP_CLEAR</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>.<a class="code" href="struct_w_d_t___config.html#ac86d594cabdaf3ef5010e8d1d5cefc94">is_clear_enable</a> = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="watchdog__timer_8h.html#a829cbeb216418894c49ec0635e1941d2">   95</a></span>&#160;<a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="watchdog__timer_8c.html#a829cbeb216418894c49ec0635e1941d2">Cmd_WDT_START_CLEAR</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_p.html">CTCP</a>* packet)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a>.<a class="code" href="struct_w_d_t___config.html#ac86d594cabdaf3ef5010e8d1d5cefc94">is_clear_enable</a> = 1;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">// ###</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// !!!!! this line should not delete!!!</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">// ###</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a></div><div class="ttdeci">@ CCP_EXEC_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8h_source.html#l00033">common_tlm_cmd_packet.h:33</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_a829cbeb216418894c49ec0635e1941d2"><div class="ttname"><a href="watchdog__timer_8c.html#a829cbeb216418894c49ec0635e1941d2">Cmd_WDT_START_CLEAR</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_WDT_START_CLEAR(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00095">watchdog_timer.c:95</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_a8f799a77e6be827942718912fdf10c8d"><div class="ttname"><a href="watchdog__timer_8c.html#a8f799a77e6be827942718912fdf10c8d">Cmd_WDT_ENABLE</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_WDT_ENABLE(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00054">watchdog_timer.c:54</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_abb82aff15fef3d5f8b1bc1e04463a87b"><div class="ttname"><a href="watchdog__timer_8c.html#abb82aff15fef3d5f8b1bc1e04463a87b">Cmd_WDT_STOP_CLEAR</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_WDT_STOP_CLEAR(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00086">watchdog_timer.c:86</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_aa4b6de6a44e18410c23db259d68e1ec2"><div class="ttname"><a href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a></div><div class="ttdeci">const WDT_Config *const wdt_config</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00011">watchdog_timer.c:11</a></div></div>
+<div class="ttc" id="astruct_w_d_t___config_html_ac86d594cabdaf3ef5010e8d1d5cefc94"><div class="ttname"><a href="struct_w_d_t___config.html#ac86d594cabdaf3ef5010e8d1d5cefc94">WDT_Config::is_clear_enable</a></div><div class="ttdeci">uint8_t is_clear_enable</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00014">wdt.h:14</a></div></div>
+<div class="ttc" id="asrc__core_2_library_2print_8c_html_a4bc499fc724de87725ee7dc60ed1d106"><div class="ttname"><a href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a></div><div class="ttdeci">void Printf(char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="src__core_2_library_2print_8c_source.html#l00011">print.c:11</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_a945b94824a858411b66630dad7c15840"><div class="ttname"><a href="watchdog__timer_8c.html#a945b94824a858411b66630dad7c15840">wdt_init_</a></div><div class="ttdeci">static void wdt_init_(void)</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00022">watchdog_timer.c:22</a></div></div>
+<div class="ttc" id="astruct_w_d_t___config_html_ad69597a5bf2ad3b61a3c0efd946ea93b"><div class="ttname"><a href="struct_w_d_t___config.html#ad69597a5bf2ad3b61a3c0efd946ea93b">WDT_Config::is_wdt_enable</a></div><div class="ttdeci">uint8_t is_wdt_enable</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00013">wdt.h:13</a></div></div>
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714bac123b0c2d64d5cb071015562f0aac418"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714bac123b0c2d64d5cb071015562f0aac418">CCP_EXEC_ILLEGAL_CONTEXT</a></div><div class="ttdeci">@ CCP_EXEC_ILLEGAL_CONTEXT</div><div class="ttdoc">コマンド実行時のその他のエラー</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8h_source.html#l00030">common_tlm_cmd_packet.h:30</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_aae70a2bf9766f4c4e19c3beb62fa9f2d"><div class="ttname"><a href="watchdog__timer_8c.html#aae70a2bf9766f4c4e19c3beb62fa9f2d">Cmd_WDT_INIT</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_WDT_INIT(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00046">watchdog_timer.c:46</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_ae9fcaca2f54130f889937deb0c46e817"><div class="ttname"><a href="watchdog__timer_8c.html#ae9fcaca2f54130f889937deb0c46e817">WDT_clear_wdt</a></div><div class="ttdeci">void WDT_clear_wdt(void)</div><div class="ttdoc">WDTのクリア</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00032">watchdog_timer.c:32</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_a33ae87cd7bc6abacb97bec4c3bff1258"><div class="ttname"><a href="watchdog__timer_8c.html#a33ae87cd7bc6abacb97bec4c3bff1258">Cmd_WDT_DISABLE</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_WDT_DISABLE(const CTCP *packet)</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00070">watchdog_timer.c:70</a></div></div>
+<div class="ttc" id="awdt_8h_html_a9a8311bd52077f109af8fecfeb69b81e"><div class="ttname"><a href="wdt_8h.html#a9a8311bd52077f109af8fecfeb69b81e">WDT_initialize</a></div><div class="ttdeci">int WDT_initialize(void *wdt_config)</div><div class="ttdoc">WDTの初期化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00003">wdt_sils.cpp:3</a></div></div>
+<div class="ttc" id="awdt_8h_html_a39393ed268d27180f33a72a876cb3f31"><div class="ttname"><a href="wdt_8h.html#a39393ed268d27180f33a72a876cb3f31">WDT_enable</a></div><div class="ttdeci">int WDT_enable(void *wdt_config)</div><div class="ttdoc">WDTの有効化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00018">wdt_sils.cpp:18</a></div></div>
+<div class="ttc" id="awatchdog__timer_8h_html"><div class="ttname"><a href="watchdog__timer_8h.html">watchdog_timer.h</a></div><div class="ttdoc">watchdog timer</div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_a3b6f1e6b8d84973fe3273975bfbb1908"><div class="ttname"><a href="watchdog__timer_8c.html#a3b6f1e6b8d84973fe3273975bfbb1908">WDT_init</a></div><div class="ttdeci">void WDT_init(void)</div><div class="ttdoc">WDTの初期化</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00017">watchdog_timer.c:17</a></div></div>
+<div class="ttc" id="acommon__tlm__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714b"><div class="ttname"><a href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a></div><div class="ttdeci">CCP_EXEC_STS</div><div class="ttdoc">コマンド実行結果コード</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__cmd__packet_8h_source.html#l00025">common_tlm_cmd_packet.h:25</a></div></div>
+<div class="ttc" id="astruct_t_c_p_html"><div class="ttname"><a href="struct_t_c_p.html">TCP</a></div><div class="ttdoc">TCPacket or Space Packet</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_packet_8h_source.html#l00019">TCPacket.h:19</a></div></div>
+<div class="ttc" id="awdt_8h_html_ad7563877133c3f84fc3e4c54e97bd8e7"><div class="ttname"><a href="wdt_8h.html#ad7563877133c3f84fc3e4c54e97bd8e7">WDT_disable</a></div><div class="ttdeci">int WDT_disable(void *wdt_config)</div><div class="ttdoc">WDTの有効化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00023">wdt_sils.cpp:23</a></div></div>
+<div class="ttc" id="astruct_w_d_t___config_html"><div class="ttname"><a href="struct_w_d_t___config.html">WDT_Config</a></div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00010">wdt.h:10</a></div></div>
+<div class="ttc" id="awdt_8h_html_af3567f91375b210554b07571f3a5120b"><div class="ttname"><a href="wdt_8h.html#af3567f91375b210554b07571f3a5120b">WDT_clear</a></div><div class="ttdeci">int WDT_clear(void *wdt_config)</div><div class="ttdoc">WDTのカウンタクリア</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00013">wdt_sils.cpp:13</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_a0747f4b638baa0ef5d924504ee6b8627"><div class="ttname"><a href="watchdog__timer_8c.html#a0747f4b638baa0ef5d924504ee6b8627">wdt_config_</a></div><div class="ttdeci">static WDT_Config wdt_config_</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00010">watchdog_timer.c:10</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6b45b0e7f9199277896746cad9df186b.html">System</a></li><li class="navelem"><a class="el" href="dir_6045e932c3309be9148128c06d42a431.html">WatchdogTimer</a></li><li class="navelem"><a class="el" href="watchdog__timer_8c.html">watchdog_timer.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

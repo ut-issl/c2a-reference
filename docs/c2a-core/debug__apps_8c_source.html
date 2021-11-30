@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/Applications/UserDefined/debug_apps.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('debug__apps_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">debug_apps.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="debug__apps_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="debug__apps_8h.html">debug_apps.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">// for NULL</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">src_core/Library/print.h</a>&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="time__manager_8h.html">src_core/System/TimeManager/time_manager.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="mode__manager_8h.html">src_core/System/ModeManager/mode_manager.h</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="task__dispatcher_8h.html">src_core/System/TaskManager/task_dispatcher.h</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="anomaly__logger_8h.html">src_core/System/AnomalyLogger/anomaly_logger.h</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// #include &quot;../../ReProgramming/ReProg.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="packet__handler_8h.html">src_core/CmdTlm/packet_handler.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../../CmdTlm/telemetry_definitions.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__table_8h.html">src_core/CmdTlm/block_command_table.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// #include &quot;stt_sel_detector.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="memory__dump_8h.html">src_core/Applications/memory_dump.h</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gs__command__dispatcher_8h.html">src_core/Applications/gs_command_dispatcher.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="realtime__command__dispatcher_8h.html">src_core/Applications/realtime_command_dispatcher.h</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="timeline__command__dispatcher_8h.html">src_core/Applications/timeline_command_dispatcher.h</a>&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../../Applications/DriverInstances/di_gs.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// #include &lt;src_core/CmdTlm/telemetry_generator.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../../Library/git_revision.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;../../Library/VT100.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;../../Library/stdint.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#a17baafdaa5ac23a02932d87a2cf22cf5">APP_DBG_flush_screen_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#a4e4f46aae5e3d479d0d926c381734242">APP_DBG_print_time_stamp_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#afe3184e9f0118e022152cf5a1bce5736">APP_DBG_print_cmd_status_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#a81b36bc119bdcbf565e301f61634c8e0">APP_DBG_print_git_rev_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="debug__apps_8h.html#a448f4269bd049fc9e6e7ec800427a7ae">   31</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="debug__apps_8c.html#a448f4269bd049fc9e6e7ec800427a7ae">APP_DBG_flush_screen</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a>(<span class="stringliteral">&quot;fscr&quot;</span>, NULL, <a class="code" href="debug__apps_8c.html#a17baafdaa5ac23a02932d87a2cf22cf5">APP_DBG_flush_screen_</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="debug__apps_8h.html#a6c47dcced795ca54bde0910ccbccdcc6">   36</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="debug__apps_8c.html#a6c47dcced795ca54bde0910ccbccdcc6">APP_DBG_print_time_stamp</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a>(<span class="stringliteral">&quot;tstm&quot;</span>, NULL, <a class="code" href="debug__apps_8c.html#a4e4f46aae5e3d479d0d926c381734242">APP_DBG_print_time_stamp_</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="debug__apps_8h.html#a67dbccb31d8e1a91fa6bd81f2e2d89e6">   41</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="debug__apps_8c.html#a67dbccb31d8e1a91fa6bd81f2e2d89e6">APP_DBG_print_cmd_status</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a>(<span class="stringliteral">&quot;cmds&quot;</span>, NULL, <a class="code" href="debug__apps_8c.html#afe3184e9f0118e022152cf5a1bce5736">APP_DBG_print_cmd_status_</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="debug__apps_8h.html#a1f97b9428a5b3c4fdc8ec2257f2485d6">   46</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="debug__apps_8c.html#a1f97b9428a5b3c4fdc8ec2257f2485d6">APP_DBG_print_git_rev</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a>(<span class="stringliteral">&quot;git_rev&quot;</span>, NULL, <a class="code" href="debug__apps_8c.html#a81b36bc119bdcbf565e301f61634c8e0">APP_DBG_print_git_rev_</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="debug__apps_8c.html#a17baafdaa5ac23a02932d87a2cf22cf5">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#a17baafdaa5ac23a02932d87a2cf22cf5">APP_DBG_flush_screen_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="_v_t100_8c.html#acec41474080025b75a039ecb0942a4d0">VT100_erase_down</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="_v_t100_8c.html#a9ea69f5885bf43fe6e80a6b132144f22">VT100_reset_cursor</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;-- C2A SAMPLE Flight S/W (H-ON, F-ON) --\n&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;BUILD: %s %s\n&quot;</span>, __DATE__, __TIME__);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="debug__apps_8c.html#a4e4f46aae5e3d479d0d926c381734242">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#a4e4f46aae5e3d479d0d926c381734242">APP_DBG_print_time_stamp_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;CYCLE: TOTAL %04d, MODE %04d\n&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;         <a class="code" href="time__manager_8c.html#a576e42803f8f3896524dbb266a47a08f">TMGR_get_master_total_cycle</a>(), <a class="code" href="time__manager_8c.html#a3a3ca9f8e7de61150cc2c555753ae32f">TMGR_get_master_mode_cycle</a>());</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;MODE: STAT %d, PREV %d, CURR %d\n&quot;</span>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;         <a class="code" href="mode__manager_8c.html#a6a684d1d03653356c1233d146e7f1d88">mode_manager</a>-&gt;<a class="code" href="struct_mode_manager.html#a5219bd1701695e82790a03392fb6f9df">stat</a>, <a class="code" href="mode__manager_8c.html#a6a684d1d03653356c1233d146e7f1d88">mode_manager</a>-&gt;<a class="code" href="struct_mode_manager.html#a40848bd725e482b7287795b4d035b5d3">previous_id</a>, <a class="code" href="mode__manager_8c.html#a6a684d1d03653356c1233d146e7f1d88">mode_manager</a>-&gt;<a class="code" href="struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599">current_id</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="debug__apps_8c.html#afe3184e9f0118e022152cf5a1bce5736">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#afe3184e9f0118e022152cf5a1bce5736">APP_DBG_print_cmd_status_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;CMD: GS %3d, RT %3d, Ack %3d, Code 0x%02x, Sts %3d\n&quot;</span>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;         (<a class="code" href="packet__list_8c.html#a356bc26884b064cc7010de9c50972223">PL_count_executed_nodes</a>(&amp;<a class="code" href="packet__handler_8c.html#af2825084e197973e11a2b205bedd9521">PH_gs_cmd_list</a>) &amp; 0xff),</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;         (<a class="code" href="packet__list_8c.html#a356bc26884b064cc7010de9c50972223">PL_count_executed_nodes</a>(&amp;<a class="code" href="packet__handler_8c.html#a2ce73fe6a780eceaf0c2c5f24cb801b0">PH_rt_cmd_list</a>) &amp; 0xff),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;         <a class="code" href="di__gs_8c.html#a6cc7f6f83757709fb44d51b49db03714">gs_driver</a>-&gt;<a class="code" href="struct_g_s___driver.html#a6fbaad1c7d3c40e315106a7544beb1c0">info</a>[<a class="code" href="gs_8h.html#a6e434698e4c842fb9a3d15fa772deb09a1ae7091cdcfc6510723a9a817dcb6d8f">GS_PORT_TYPE_NUM</a>].<a class="code" href="struct_g_s___info.html#aa3adfb37079715aaa166b2db8c19915b">cmd_ack</a>, <a class="code" href="gs__command__dispatcher_8c.html#ac33bc1c41591ff492d264e825b4b6808">gs_command_dispatcher</a>-&gt;<a class="code" href="struct_command_dispatcher.html#a1baad49235247d0f74b19cab3c41059c">prev</a>.<a class="code" href="struct_c_d_i_s___e_x_e_c___i_n_f_o.html#a63c1c349306354d7539841d096390d46">code</a>, <a class="code" href="gs__command__dispatcher_8c.html#ac33bc1c41591ff492d264e825b4b6808">gs_command_dispatcher</a>-&gt;<a class="code" href="struct_command_dispatcher.html#a1baad49235247d0f74b19cab3c41059c">prev</a>.<a class="code" href="struct_c_d_i_s___e_x_e_c___i_n_f_o.html#a02bb26294e925bbe6c7a92b0b9a570af">sts</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="debug__apps_8c.html#a81b36bc119bdcbf565e301f61634c8e0">   80</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="debug__apps_8c.html#a81b36bc119bdcbf565e301f61634c8e0">APP_DBG_print_git_rev_</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a>(<span class="stringliteral">&quot;Git rev: CORE 0x%07x, USER 0x%07x\n&quot;</span>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;         <a class="code" href="git__revision_8c.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a>, <a class="code" href="git__revision_8c.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#pragma section</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="ags__command__dispatcher_8h_html"><div class="ttname"><a href="gs__command__dispatcher_8h.html">gs_command_dispatcher.h</a></div></div>
+<div class="ttc" id="apacket__handler_8c_html_a2ce73fe6a780eceaf0c2c5f24cb801b0"><div class="ttname"><a href="packet__handler_8c.html#a2ce73fe6a780eceaf0c2c5f24cb801b0">PH_rt_cmd_list</a></div><div class="ttdeci">PacketList PH_rt_cmd_list</div><div class="ttdef"><b>Definition:</b> <a href="packet__handler_8c_source.html#l00013">packet_handler.c:13</a></div></div>
+<div class="ttc" id="astruct_mode_manager_html_a40848bd725e482b7287795b4d035b5d3"><div class="ttname"><a href="struct_mode_manager.html#a40848bd725e482b7287795b4d035b5d3">ModeManager::previous_id</a></div><div class="ttdeci">MD_MODEID previous_id</div><div class="ttdoc">ひとつ前のモードID</div><div class="ttdef"><b>Definition:</b> <a href="mode__manager_8h_source.html#l00066">mode_manager.h:66</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a67dbccb31d8e1a91fa6bd81f2e2d89e6"><div class="ttname"><a href="debug__apps_8c.html#a67dbccb31d8e1a91fa6bd81f2e2d89e6">APP_DBG_print_cmd_status</a></div><div class="ttdeci">AppInfo APP_DBG_print_cmd_status(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00041">debug_apps.c:41</a></div></div>
+<div class="ttc" id="atimeline__command__dispatcher_8h_html"><div class="ttname"><a href="timeline__command__dispatcher_8h.html">timeline_command_dispatcher.h</a></div></div>
+<div class="ttc" id="apacket__handler_8c_html_af2825084e197973e11a2b205bedd9521"><div class="ttname"><a href="packet__handler_8c.html#af2825084e197973e11a2b205bedd9521">PH_gs_cmd_list</a></div><div class="ttdeci">PacketList PH_gs_cmd_list</div><div class="ttdef"><b>Definition:</b> <a href="packet__handler_8c_source.html#l00012">packet_handler.c:12</a></div></div>
+<div class="ttc" id="amemory__dump_8h_html"><div class="ttname"><a href="memory__dump_8h.html">memory_dump.h</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_afe3184e9f0118e022152cf5a1bce5736"><div class="ttname"><a href="debug__apps_8c.html#afe3184e9f0118e022152cf5a1bce5736">APP_DBG_print_cmd_status_</a></div><div class="ttdeci">void APP_DBG_print_cmd_status_(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00071">debug_apps.c:71</a></div></div>
+<div class="ttc" id="ags_8h_html_a6e434698e4c842fb9a3d15fa772deb09a1ae7091cdcfc6510723a9a817dcb6d8f"><div class="ttname"><a href="gs_8h.html#a6e434698e4c842fb9a3d15fa772deb09a1ae7091cdcfc6510723a9a817dcb6d8f">GS_PORT_TYPE_NUM</a></div><div class="ttdeci">@ GS_PORT_TYPE_NUM</div><div class="ttdoc">port 数</div><div class="ttdef"><b>Definition:</b> <a href="gs_8h_source.html#l00038">gs.h:38</a></div></div>
+<div class="ttc" id="a_v_t100_8c_html_a163b2dc2ab211cce8bd25edb61369302"><div class="ttname"><a href="_v_t100_8c.html#a163b2dc2ab211cce8bd25edb61369302">VT100_erase_line</a></div><div class="ttdeci">void VT100_erase_line(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_t100_8c_source.html#l00031">VT100.c:31</a></div></div>
+<div class="ttc" id="astruct_mode_manager_html_a5219bd1701695e82790a03392fb6f9df"><div class="ttname"><a href="struct_mode_manager.html#a5219bd1701695e82790a03392fb6f9df">ModeManager::stat</a></div><div class="ttdeci">MM_STATUS stat</div><div class="ttdoc">モード遷移状態</div><div class="ttdef"><b>Definition:</b> <a href="mode__manager_8h_source.html#l00065">mode_manager.h:65</a></div></div>
+<div class="ttc" id="agit__revision_8c_html_abf9bc37acbbc3b9f66b84acb0d24667b"><div class="ttname"><a href="git__revision_8c.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a></div><div class="ttdeci">const uint32_t GIT_REV_CORE_SHORT</div><div class="ttdef"><b>Definition:</b> <a href="git__revision_8c_source.html#l00010">git_revision.c:10</a></div></div>
+<div class="ttc" id="amode__manager_8h_html"><div class="ttname"><a href="mode__manager_8h.html">mode_manager.h</a></div><div class="ttdoc">モード遷移の制御の定義</div></div>
+<div class="ttc" id="astruct_c_d_i_s___e_x_e_c___i_n_f_o_html_a63c1c349306354d7539841d096390d46"><div class="ttname"><a href="struct_c_d_i_s___e_x_e_c___i_n_f_o.html#a63c1c349306354d7539841d096390d46">CDIS_EXEC_INFO::code</a></div><div class="ttdeci">CMD_CODE code</div><div class="ttdef"><b>Definition:</b> <a href="command__dispatcher_8h_source.html#l00012">command_dispatcher.h:12</a></div></div>
+<div class="ttc" id="astruct_c_d_i_s___e_x_e_c___i_n_f_o_html_a02bb26294e925bbe6c7a92b0b9a570af"><div class="ttname"><a href="struct_c_d_i_s___e_x_e_c___i_n_f_o.html#a02bb26294e925bbe6c7a92b0b9a570af">CDIS_EXEC_INFO::sts</a></div><div class="ttdeci">CCP_EXEC_STS sts</div><div class="ttdef"><b>Definition:</b> <a href="command__dispatcher_8h_source.html#l00013">command_dispatcher.h:13</a></div></div>
+<div class="ttc" id="asrc__core_2_library_2print_8c_html_a4bc499fc724de87725ee7dc60ed1d106"><div class="ttname"><a href="src__core_2_library_2print_8c.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a></div><div class="ttdeci">void Printf(char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="src__core_2_library_2print_8c_source.html#l00011">print.c:11</a></div></div>
+<div class="ttc" id="astruct_command_dispatcher_html_a1baad49235247d0f74b19cab3c41059c"><div class="ttname"><a href="struct_command_dispatcher.html#a1baad49235247d0f74b19cab3c41059c">CommandDispatcher::prev</a></div><div class="ttdeci">CDIS_EXEC_INFO prev</div><div class="ttdef"><b>Definition:</b> <a href="command__dispatcher_8h_source.html#l00018">command_dispatcher.h:18</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a81b36bc119bdcbf565e301f61634c8e0"><div class="ttname"><a href="debug__apps_8c.html#a81b36bc119bdcbf565e301f61634c8e0">APP_DBG_print_git_rev_</a></div><div class="ttdeci">void APP_DBG_print_git_rev_(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00080">debug_apps.c:80</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a448f4269bd049fc9e6e7ec800427a7ae"><div class="ttname"><a href="debug__apps_8c.html#a448f4269bd049fc9e6e7ec800427a7ae">APP_DBG_flush_screen</a></div><div class="ttdeci">AppInfo APP_DBG_flush_screen(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00031">debug_apps.c:31</a></div></div>
+<div class="ttc" id="ags__command__dispatcher_8c_html_ac33bc1c41591ff492d264e825b4b6808"><div class="ttname"><a href="gs__command__dispatcher_8c.html#ac33bc1c41591ff492d264e825b4b6808">gs_command_dispatcher</a></div><div class="ttdeci">const CommandDispatcher *const gs_command_dispatcher</div><div class="ttdef"><b>Definition:</b> <a href="gs__command__dispatcher_8c_source.html#l00009">gs_command_dispatcher.c:9</a></div></div>
+<div class="ttc" id="astruct_g_s___driver_html_a6fbaad1c7d3c40e315106a7544beb1c0"><div class="ttname"><a href="struct_g_s___driver.html#a6fbaad1c7d3c40e315106a7544beb1c0">GS_Driver::info</a></div><div class="ttdeci">GS_Info info[GS_PORT_TYPE_NUM]</div><div class="ttdoc">CCSDS 用と UART 用 2 つ</div><div class="ttdef"><b>Definition:</b> <a href="gs_8h_source.html#l00082">gs.h:82</a></div></div>
+<div class="ttc" id="a_v_t100_8c_html_acec41474080025b75a039ecb0942a4d0"><div class="ttname"><a href="_v_t100_8c.html#acec41474080025b75a039ecb0942a4d0">VT100_erase_down</a></div><div class="ttdeci">void VT100_erase_down(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_t100_8c_source.html#l00006">VT100.c:6</a></div></div>
+<div class="ttc" id="amode__manager_8c_html_a6a684d1d03653356c1233d146e7f1d88"><div class="ttname"><a href="mode__manager_8c.html#a6a684d1d03653356c1233d146e7f1d88">mode_manager</a></div><div class="ttdeci">const ModeManager *const mode_manager</div><div class="ttdef"><b>Definition:</b> <a href="mode__manager_8c_source.html#l00049">mode_manager.c:49</a></div></div>
+<div class="ttc" id="apacket__list_8c_html_a356bc26884b064cc7010de9c50972223"><div class="ttname"><a href="packet__list_8c.html#a356bc26884b064cc7010de9c50972223">PL_count_executed_nodes</a></div><div class="ttdeci">uint32_t PL_count_executed_nodes(const PacketList *pli)</div><div class="ttdoc">PacketList で実行されたノード数を返す</div><div class="ttdef"><b>Definition:</b> <a href="packet__list_8c_source.html#l00056">packet_list.c:56</a></div></div>
+<div class="ttc" id="atime__manager_8c_html_a576e42803f8f3896524dbb266a47a08f"><div class="ttname"><a href="time__manager_8c.html#a576e42803f8f3896524dbb266a47a08f">TMGR_get_master_total_cycle</a></div><div class="ttdeci">cycle_t TMGR_get_master_total_cycle(void)</div><div class="ttdef"><b>Definition:</b> <a href="time__manager_8c_source.html#l00053">time_manager.c:53</a></div></div>
+<div class="ttc" id="aprint_8h_html"><div class="ttname"><a href="print_8h.html">print.h</a></div></div>
+<div class="ttc" id="agit__revision_8c_html_a6a80c38667063635c8000379c55a7ecc"><div class="ttname"><a href="git__revision_8c.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a></div><div class="ttdeci">const uint32_t GIT_REV_USER_SHORT</div><div class="ttdef"><b>Definition:</b> <a href="git__revision_8c_source.html#l00012">git_revision.c:12</a></div></div>
+<div class="ttc" id="adi__gs_8c_html_a6cc7f6f83757709fb44d51b49db03714"><div class="ttname"><a href="di__gs_8c.html#a6cc7f6f83757709fb44d51b49db03714">gs_driver</a></div><div class="ttdeci">const GS_Driver *const gs_driver</div><div class="ttdef"><b>Definition:</b> <a href="di__gs_8c_source.html#l00015">di_gs.c:15</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a1f97b9428a5b3c4fdc8ec2257f2485d6"><div class="ttname"><a href="debug__apps_8c.html#a1f97b9428a5b3c4fdc8ec2257f2485d6">APP_DBG_print_git_rev</a></div><div class="ttdeci">AppInfo APP_DBG_print_git_rev(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00046">debug_apps.c:46</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a4e4f46aae5e3d479d0d926c381734242"><div class="ttname"><a href="debug__apps_8c.html#a4e4f46aae5e3d479d0d926c381734242">APP_DBG_print_time_stamp_</a></div><div class="ttdeci">void APP_DBG_print_time_stamp_(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00061">debug_apps.c:61</a></div></div>
+<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00006">app_info.h:6</a></div></div>
+<div class="ttc" id="atime__manager_8h_html"><div class="ttname"><a href="time__manager_8h.html">time_manager.h</a></div></div>
+<div class="ttc" id="astruct_g_s___info_html_aa3adfb37079715aaa166b2db8c19915b"><div class="ttname"><a href="struct_g_s___info.html#aa3adfb37079715aaa166b2db8c19915b">GS_Info::cmd_ack</a></div><div class="ttdeci">PH_ACK cmd_ack</div><div class="ttdoc">受信した CMD の実行結果</div><div class="ttdef"><b>Definition:</b> <a href="gs_8h_source.html#l00055">gs.h:55</a></div></div>
+<div class="ttc" id="arealtime__command__dispatcher_8h_html"><div class="ttname"><a href="realtime__command__dispatcher_8h.html">realtime_command_dispatcher.h</a></div></div>
+<div class="ttc" id="atask__dispatcher_8h_html"><div class="ttname"><a href="task__dispatcher_8h.html">task_dispatcher.h</a></div></div>
+<div class="ttc" id="aanomaly__logger_8h_html"><div class="ttname"><a href="anomaly__logger_8h.html">anomaly_logger.h</a></div></div>
+<div class="ttc" id="atime__manager_8c_html_a3a3ca9f8e7de61150cc2c555753ae32f"><div class="ttname"><a href="time__manager_8c.html#a3a3ca9f8e7de61150cc2c555753ae32f">TMGR_get_master_mode_cycle</a></div><div class="ttdeci">cycle_t TMGR_get_master_mode_cycle(void)</div><div class="ttdef"><b>Definition:</b> <a href="time__manager_8c_source.html#l00057">time_manager.c:57</a></div></div>
+<div class="ttc" id="a_v_t100_8c_html_a9ea69f5885bf43fe6e80a6b132144f22"><div class="ttname"><a href="_v_t100_8c.html#a9ea69f5885bf43fe6e80a6b132144f22">VT100_reset_cursor</a></div><div class="ttdeci">void VT100_reset_cursor(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_t100_8c_source.html#l00093">VT100.c:93</a></div></div>
+<div class="ttc" id="ablock__command__table_8h_html"><div class="ttname"><a href="block__command__table_8h.html">block_command_table.h</a></div><div class="ttdoc">BCTの定義, BCT周りの関数</div></div>
+<div class="ttc" id="apacket__handler_8h_html"><div class="ttname"><a href="packet__handler_8h.html">packet_handler.h</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a17baafdaa5ac23a02932d87a2cf22cf5"><div class="ttname"><a href="debug__apps_8c.html#a17baafdaa5ac23a02932d87a2cf22cf5">APP_DBG_flush_screen_</a></div><div class="ttdeci">void APP_DBG_flush_screen_(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00051">debug_apps.c:51</a></div></div>
+<div class="ttc" id="aapp__info_8c_html_a80d1a060d7512364285ead7bdc4c0105"><div class="ttname"><a href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a></div><div class="ttdeci">AppInfo create_app_info(const char *name, void(*initializer)(void), void(*entry_point)(void))</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8c_source.html#l00006">app_info.c:6</a></div></div>
+<div class="ttc" id="adebug__apps_8h_html"><div class="ttname"><a href="debug__apps_8h.html">debug_apps.h</a></div></div>
+<div class="ttc" id="astruct_mode_manager_html_a1e3fffe537bd131701b1d6126871d599"><div class="ttname"><a href="struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599">ModeManager::current_id</a></div><div class="ttdeci">MD_MODEID current_id</div><div class="ttdoc">現在のモードID</div><div class="ttdef"><b>Definition:</b> <a href="mode__manager_8h_source.html#l00067">mode_manager.h:67</a></div></div>
+<div class="ttc" id="adebug__apps_8c_html_a6c47dcced795ca54bde0910ccbccdcc6"><div class="ttname"><a href="debug__apps_8c.html#a6c47dcced795ca54bde0910ccbccdcc6">APP_DBG_print_time_stamp</a></div><div class="ttdeci">AppInfo APP_DBG_print_time_stamp(void)</div><div class="ttdef"><b>Definition:</b> <a href="debug__apps_8c_source.html#l00036">debug_apps.c:36</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_4ee6211a2ef4316cc067157a00fb7dc2.html">Applications</a></li><li class="navelem"><a class="el" href="dir_a9a8a3fc123373310fda1c2ed91afdc8.html">UserDefined</a></li><li class="navelem"><a class="el" href="debug__apps_8c.html">debug_apps.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

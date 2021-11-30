@@ -1,0 +1,2111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/System/EventManager/event_logger.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('event__logger_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">event_logger.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>アノマリやエラーなどの各種イベントを記録する  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="common__tlm__cmd__packet_8h_source.html">../../CmdTlm/common_tlm_cmd_packet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="obc__time_8h_source.html">../TimeManager/obc_time.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="event__logger__group_8h_source.html">src_user/Settings/System/event_logger_group.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="event__logger__params_8h_source.html">src_user/Settings/System/event_logger_params.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+event_logger.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h__incl.svg" width="1848" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h__dep__incl.svg" width="2419" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="event__logger_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l___event.html">EL_Event</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベント  <a href="struct_e_l___event.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l___event_statistics.html">EL_EventStatistics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベント統計情報  <a href="struct_e_l___event_statistics.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l___time_series_log.html">EL_TimeSeriesLog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">時系列ログ (TLog) のログ構造定義  <a href="struct_e_l___time_series_log.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l___c_log_element.html">EL_CLogElement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">累積ログ (CLog) の１要素 note group, local が同じイベントを同一とみなす  <a href="struct_e_l___c_log_element.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l___cumulative_log.html">EL_CumulativeLog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">累積ログ (CLog) のログ構造定義  <a href="struct_e_l___cumulative_log.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l___tlm_info.html">EL_TlmInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_event_logger.html">EventLogger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a5a42e2c7143c200cc22c9b428d331710"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a>&#160;&#160;&#160;(32)</td></tr>
+<tr class="memdesc:a5a42e2c7143c200cc22c9b428d331710"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLogにて，テレメ１ページにおろせるlog数  <a href="event__logger_8h.html#a5a42e2c7143c200cc22c9b428d331710">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a42e2c7143c200cc22c9b428d331710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e4398fa1089176bc6204e4e4fcb627"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a59e4398fa1089176bc6204e4e4fcb627">EL_TLOG_TLM_PAGE_MAX_HIGH</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a59e4398fa1089176bc6204e4e4fcb627"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLogで保存するログのページ数 (EL_ERROR_LEVEL_HIGH)  <a href="event__logger_8h.html#a59e4398fa1089176bc6204e4e4fcb627">[詳解]</a><br /></td></tr>
+<tr class="separator:a59e4398fa1089176bc6204e4e4fcb627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56760785bcaca7b7b5af545c0a51132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ad56760785bcaca7b7b5af545c0a51132">EL_TLOG_TLM_PAGE_MAX_MIDDLE</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:ad56760785bcaca7b7b5af545c0a51132"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLogで保存するログのページ数 (EL_ERROR_LEVEL_MIDDLE)  <a href="event__logger_8h.html#ad56760785bcaca7b7b5af545c0a51132">[詳解]</a><br /></td></tr>
+<tr class="separator:ad56760785bcaca7b7b5af545c0a51132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa036654c2108955b572722b668d7f1be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aa036654c2108955b572722b668d7f1be">EL_TLOG_TLM_PAGE_MAX_LOW</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:aa036654c2108955b572722b668d7f1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLogで保存するログのページ数 (EL_ERROR_LEVEL_LOW)  <a href="event__logger_8h.html#aa036654c2108955b572722b668d7f1be">[詳解]</a><br /></td></tr>
+<tr class="separator:aa036654c2108955b572722b668d7f1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c46a23ef74b6bdaac663307618b631"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a>&#160;&#160;&#160;(32)</td></tr>
+<tr class="memdesc:a72c46a23ef74b6bdaac663307618b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLogにて，テレメ１ページにおろせるlog数  <a href="event__logger_8h.html#a72c46a23ef74b6bdaac663307618b631">[詳解]</a><br /></td></tr>
+<tr class="separator:a72c46a23ef74b6bdaac663307618b631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0785d1d6b5633040d55251c041061909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a0785d1d6b5633040d55251c041061909">EL_CLOG_TLM_PAGE_MAX_HIGH</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a0785d1d6b5633040d55251c041061909"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLogで保存するログのページ数 (EL_ERROR_LEVEL_HIGH)  <a href="event__logger_8h.html#a0785d1d6b5633040d55251c041061909">[詳解]</a><br /></td></tr>
+<tr class="separator:a0785d1d6b5633040d55251c041061909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dda9d32639c44e82dd84bdaf3cb676"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a00dda9d32639c44e82dd84bdaf3cb676">EL_CLOG_TLM_PAGE_MAX_MIDDLE</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a00dda9d32639c44e82dd84bdaf3cb676"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLogで保存するログのページ数 (EL_ERROR_LEVEL_MIDDLE)  <a href="event__logger_8h.html#a00dda9d32639c44e82dd84bdaf3cb676">[詳解]</a><br /></td></tr>
+<tr class="separator:a00dda9d32639c44e82dd84bdaf3cb676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f3650759a5b05fab3eed2e5e575d3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">EL_CLOG_TLM_PAGE_MAX_LOW</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a88f3650759a5b05fab3eed2e5e575d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLogで保存するログのページ数 (EL_ERROR_LEVEL_LOW)  <a href="event__logger_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">[詳解]</a><br /></td></tr>
+<tr class="separator:a88f3650759a5b05fab3eed2e5e575d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0501d2c583448672cdc333b8985422"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aad0501d2c583448672cdc333b8985422">EL_TLOG_LOG_SIZE_MAX_EL</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="memdesc:aad0501d2c583448672cdc333b8985422"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLogにて保存するログ数 (EL_ERROR_LEVEL_EL)  <a href="event__logger_8h.html#aad0501d2c583448672cdc333b8985422">[詳解]</a><br /></td></tr>
+<tr class="separator:aad0501d2c583448672cdc333b8985422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeaeae643d18ddf9f8835932e834ccb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#adeaeae643d18ddf9f8835932e834ccb6">EL_CLOG_LOG_SIZE_MAX_EL</a>&#160;&#160;&#160;(8)</td></tr>
+<tr class="memdesc:adeaeae643d18ddf9f8835932e834ccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLogにて保存するログ数 (EL_ERROR_LEVEL_EL)  <a href="event__logger_8h.html#adeaeae643d18ddf9f8835932e834ccb6">[詳解]</a><br /></td></tr>
+<tr class="separator:adeaeae643d18ddf9f8835932e834ccb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d98f503ca5f0d374f0f5ca68ecf0776"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a3d98f503ca5f0d374f0f5ca68ecf0776">EL_IS_ENABLE_TLOG</a></td></tr>
+<tr class="memdesc:a3d98f503ca5f0d374f0f5ca68ecf0776"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog を有効にするか？ → これがないと event_handler は使えない  <a href="event__logger_8h.html#a3d98f503ca5f0d374f0f5ca68ecf0776">[詳解]</a><br /></td></tr>
+<tr class="separator:a3d98f503ca5f0d374f0f5ca68ecf0776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057ff6c0bd4ee96467d917188adad7fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a057ff6c0bd4ee96467d917188adad7fe">EL_IS_ENABLE_CLOG</a></td></tr>
+<tr class="memdesc:a057ff6c0bd4ee96467d917188adad7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLog を有効にするか？  <a href="event__logger_8h.html#a057ff6c0bd4ee96467d917188adad7fe">[詳解]</a><br /></td></tr>
+<tr class="separator:a057ff6c0bd4ee96467d917188adad7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b65e39decb888497279e3878d64602b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a4b65e39decb888497279e3878d64602b">EL_IS_ENABLE_EVENT_NOTE</a></td></tr>
+<tr class="memdesc:a4b65e39decb888497279e3878d64602b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_e_l___event.html#a17ee567ce4e36612b2d5106514d2f8b7">EL_Event.note</a> を有効にするか？ event としては (event_handler などで) 同じだが，補足情報や区別用の id を使うか？  <a href="event__logger_8h.html#a4b65e39decb888497279e3878d64602b">[詳解]</a><br /></td></tr>
+<tr class="separator:a4b65e39decb888497279e3878d64602b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc12c33985faba4c9baa91caabd34698"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#acc12c33985faba4c9baa91caabd34698">EL_IS_ENABLE_MIDDLE_ERROR_LEVEL</a></td></tr>
+<tr class="memdesc:acc12c33985faba4c9baa91caabd34698"><td class="mdescLeft">&#160;</td><td class="mdescRight">EL_ERROR_LEVEL_MIDDLE を有効にするか？ （C2A coreでは使わないので，基本無効でOK．使いたいなら有効に）  <a href="event__logger_8h.html#acc12c33985faba4c9baa91caabd34698">[詳解]</a><br /></td></tr>
+<tr class="separator:acc12c33985faba4c9baa91caabd34698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a96f7fbdd81aaba863257261c1a4a3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a2a96f7fbdd81aaba863257261c1a4a3e">EL_IS_ENABLE_EL_ERROR_LEVEL</a></td></tr>
+<tr class="separator:a2a96f7fbdd81aaba863257261c1a4a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61cae12fb3287ab3c58258900eb447fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a61cae12fb3287ab3c58258900eb447fa">SIZE_OF_EL_CLOG_COUNTER_T</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:a61cae12fb3287ab3c58258900eb447fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">el_clog_counter_t の型サイズ．メモリインパクトがそれなりにあるので，可変に  <a href="event__logger_8h.html#a61cae12fb3287ab3c58258900eb447fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a61cae12fb3287ab3c58258900eb447fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa817f1db5a04c7faa741c7614703479c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aa817f1db5a04c7faa741c7614703479c">EL_LOG_MINIMUM_REQUIRED</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:aa817f1db5a04c7faa741c7614703479c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログに求められる最小要素数  <a href="event__logger_8h.html#aa817f1db5a04c7faa741c7614703479c">[詳解]</a><br /></td></tr>
+<tr class="separator:aa817f1db5a04c7faa741c7614703479c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8cdaffc511b03af9c43c99f1e9b117"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ade8cdaffc511b03af9c43c99f1e9b117">EL_LOG_MINIMUM_REQUIRED_EL_LOG</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:ade8cdaffc511b03af9c43c99f1e9b117"><td class="mdescLeft">&#160;</td><td class="mdescRight">ELログに求められる最小要素数  <a href="event__logger_8h.html#ade8cdaffc511b03af9c43c99f1e9b117">[詳解]</a><br /></td></tr>
+<tr class="separator:ade8cdaffc511b03af9c43c99f1e9b117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc710c4c73614e4f2d6602be2da15e3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#acc710c4c73614e4f2d6602be2da15e3b">EL_TLOG_LOG_SIZE_MAX_HIGH</a>&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a59e4398fa1089176bc6204e4e4fcb627">EL_TLOG_TLM_PAGE_MAX_HIGH</a>)</td></tr>
+<tr class="separator:acc710c4c73614e4f2d6602be2da15e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f16afa4ba87d5bcf613ef418c1a8366"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a6f16afa4ba87d5bcf613ef418c1a8366">EL_TLOG_LOG_SIZE_MAX_MIDDLE</a>&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#ad56760785bcaca7b7b5af545c0a51132">EL_TLOG_TLM_PAGE_MAX_MIDDLE</a>)</td></tr>
+<tr class="separator:a6f16afa4ba87d5bcf613ef418c1a8366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7fff4db3d62a9f3457e775b4189c63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a3e7fff4db3d62a9f3457e775b4189c63">EL_TLOG_LOG_SIZE_MAX_LOW</a>&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#aa036654c2108955b572722b668d7f1be">EL_TLOG_TLM_PAGE_MAX_LOW</a>)</td></tr>
+<tr class="separator:a3e7fff4db3d62a9f3457e775b4189c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f86694de0550142a6422012013d597"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a39f86694de0550142a6422012013d597">EL_CLOG_LOG_SIZE_MAX_HIGH</a>&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a0785d1d6b5633040d55251c041061909">EL_CLOG_TLM_PAGE_MAX_HIGH</a>)</td></tr>
+<tr class="separator:a39f86694de0550142a6422012013d597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7723fe7b2569937b7fd9786532b773d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aa7723fe7b2569937b7fd9786532b773d">EL_CLOG_LOG_SIZE_MAX_MIDDLE</a>&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a00dda9d32639c44e82dd84bdaf3cb676">EL_CLOG_TLM_PAGE_MAX_MIDDLE</a>)</td></tr>
+<tr class="separator:aa7723fe7b2569937b7fd9786532b773d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36cb0758508d4118e5d83d68fb4f213"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ab36cb0758508d4118e5d83d68fb4f213">EL_CLOG_LOG_SIZE_MAX_LOW</a>&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">EL_CLOG_TLM_PAGE_MAX_LOW</a>)</td></tr>
+<tr class="separator:ab36cb0758508d4118e5d83d68fb4f213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ada95c41f981f5b79e04affc15450aa5a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ada95c41f981f5b79e04affc15450aa5a">el_clog_counter_t</a></td></tr>
+<tr class="separator:ada95c41f981f5b79e04affc15450aa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a66edf6d5dc4a12fbd8565ed752559c33"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33">EL_CORE_GROUP</a> { <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33ae0ba294238c1577b3391f91f0e28ea7e">EL_CORE_GROUP_NULL</a> = 0, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a1c86fb4bff288acd348171209d984f02">EL_CORE_GROUP_EVENT_LOGGER</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aafd9394151eaa23c9bad51ccea2ee6c8">EL_CORE_GROUP_MODE_MANAGER</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aba6e6b4c86e67b9f14181f9fee81c11f">EL_CORE_GROUP_TASK_DISPATCHER</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aac45665fd5ab764421f0ce921b9edb62">EL_CORE_GROUP_APP_MANAGER</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aaadab0938661b88d85ff391d367412a0">EL_CORE_GROUP_TLCD_PAST_TIME</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af208f89a56c7baa8b98336fadff0b200">EL_CORE_GROUP_TLCD_DEPLOY_BLOCK</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a15476b039c7faff69f65fd6c2fba316c">EL_CORE_GROUP_DCU</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af3cd26d75fdc29c868b4d66c9531fb06">EL_CORE_GROUP_EVENT_HANDLER</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872">EL_CORE_GROUP_EL_DROP_CLOG1</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe">EL_CORE_GROUP_EL_DROP_CLOG2</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6">EL_CORE_GROUP_MAX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a66edf6d5dc4a12fbd8565ed752559c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の Event Group の C2A core 使用分  <a href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33">[詳解]</a><br /></td></tr>
+<tr class="separator:a66edf6d5dc4a12fbd8565ed752559c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ce022007a3fee570838f8d0af4c00a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00a">EL_EVENT_LOCAL</a> { <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa59325b5aae01d83965ad87a9b072a834">EL_EVENT_LOCAL_UNKNOWN_ERR</a>, 
+<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa36bc11742710cbd87f7f11dbbfd78f23">EL_EVENT_LOCAL_TLOG_HIGH_HALF_FULL</a>, 
+<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa922831dd0a03b26767d727f299c3912a">EL_EVENT_LOCAL_TLOG_HIGH_FULL</a>, 
+<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa2fb2216c4f4b6ce2932f0a51eb54233c">EL_EVENT_LOCAL_TLOG_MIDDLE_HALF_FULL</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa35f144c0a6b2d058673d4ff276870081">EL_EVENT_LOCAL_TLOG_MIDDLE_FULL</a>, 
+<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa561a0d4b8306dc7c295ce12f3f9aac36">EL_EVENT_LOCAL_TLOG_LOW_HALF_FULL</a>, 
+<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa62d5cb38f23f7eb56f5387383b455246">EL_EVENT_LOCAL_TLOG_LOW_FULL</a>, 
+<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aaf49d1ef7e4e961b2398337cc38dc0aaf">EL_EVENT_LOCAL_MAX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ae9ce022007a3fee570838f8d0af4c00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">EL_CORE_GROUP_EVENT_LOGGER の local id  <a href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00a">[詳解]</a><br /></td></tr>
+<tr class="separator:ae9ce022007a3fee570838f8d0af4c00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae574b6e1365b0b0c0af97f6f8abd7af0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> { <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a2f31ef7ac735fbc6484f9a6277e3b934">EL_ERROR_LEVEL_HIGH</a> = 0, 
+<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a25b47724843e3a08bd06fffd74918d6b">EL_ERROR_LEVEL_MIDDLE</a>, 
+<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a653dda7718442dd2ad5cf51a224c5c13">EL_ERROR_LEVEL_LOW</a>, 
+<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0ad920427ef302d463b3a72ef4f6e9390f">EL_ERROR_LEVEL_EL</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a00ec2f0b002fdb180a9d565dca3314c0">EL_ERROR_LEVEL_MAX</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ae574b6e1365b0b0c0af97f6f8abd7af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の エラーレベル  <a href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">[詳解]</a><br /></td></tr>
+<tr class="separator:ae574b6e1365b0b0c0af97f6f8abd7af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b9c600633a7f6780f59741c4cc9a0e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> { <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ead50309d986f45ede550b4ca4bcf9d9cb">EL_ACK_OK</a>, 
+<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea69caf5b7b5c0cfb054719976ae608783">EL_ACK_ILLEGAL_GROUP</a>, 
+<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea8e43bab40a180855a96cc2a500ea90ab">EL_ACK_ILLEGAL_ERROR_LEVEL</a>, 
+<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea2931f20fe2063f23fb89b93353dadc22">EL_ACK_DISABLE_LOGGING</a>, 
+<br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0eaf8c49f8e049bbf61292a52a2c35175f2">EL_ACK_TLOG_FULL</a>, 
+<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea6edd485965053b329ad0d0bda75449cb">EL_ACK_OTHER_ERR</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a89b9c600633a7f6780f59741c4cc9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の汎用返り値  <a href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">[詳解]</a><br /></td></tr>
+<tr class="separator:a89b9c600633a7f6780f59741c4cc9a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a5b3f522390f30515e9561d47da40bcec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a5b3f522390f30515e9561d47da40bcec">EL_initialize</a> (void)</td></tr>
+<tr class="memdesc:a5b3f522390f30515e9561d47da40bcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の初期化  <a href="event__logger_8h.html#a5b3f522390f30515e9561d47da40bcec">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b3f522390f30515e9561d47da40bcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a74a48375dfc1f3f80be68e0ac00ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a25a74a48375dfc1f3f80be68e0ac00ea">EL_record_event</a> (<a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a> group, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> local, <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> err_level, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> note)</td></tr>
+<tr class="memdesc:a25a74a48375dfc1f3f80be68e0ac00ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベント (<a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a>) を記録  <a href="event__logger_8h.html#a25a74a48375dfc1f3f80be68e0ac00ea">[詳解]</a><br /></td></tr>
+<tr class="separator:a25a74a48375dfc1f3f80be68e0ac00ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c40416dcf2fbd69ff494597928ed70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a00c40416dcf2fbd69ff494597928ed70">EL_enable_logging</a> (<a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a> group)</td></tr>
+<tr class="memdesc:a00c40416dcf2fbd69ff494597928ed70"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の有効化  <a href="event__logger_8h.html#a00c40416dcf2fbd69ff494597928ed70">[詳解]</a><br /></td></tr>
+<tr class="separator:a00c40416dcf2fbd69ff494597928ed70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbfe5cde6286f88550a76ebf005dbf12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#acbfe5cde6286f88550a76ebf005dbf12">EL_disable_logging</a> (<a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a> group)</td></tr>
+<tr class="memdesc:acbfe5cde6286f88550a76ebf005dbf12"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の無効化  <a href="event__logger_8h.html#acbfe5cde6286f88550a76ebf005dbf12">[詳解]</a><br /></td></tr>
+<tr class="separator:acbfe5cde6286f88550a76ebf005dbf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ba2fe43a96f7351951a4109227ba6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a50ba2fe43a96f7351951a4109227ba6f">EL_is_logging_enable</a> (<a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a> group)</td></tr>
+<tr class="memdesc:a50ba2fe43a96f7351951a4109227ba6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> が有効か？  <a href="event__logger_8h.html#a50ba2fe43a96f7351951a4109227ba6f">[詳解]</a><br /></td></tr>
+<tr class="separator:a50ba2fe43a96f7351951a4109227ba6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd067da025cae3c883fda60506998f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aadd067da025cae3c883fda60506998f6">EL_enable_all_logging</a> (void)</td></tr>
+<tr class="memdesc:aadd067da025cae3c883fda60506998f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の全 <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の有効化  <a href="event__logger_8h.html#aadd067da025cae3c883fda60506998f6">[詳解]</a><br /></td></tr>
+<tr class="separator:aadd067da025cae3c883fda60506998f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d2fa608e20ebaad0c04dbf1ce49acf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ab2d2fa608e20ebaad0c04dbf1ce49acf">EL_disable_all_logging</a> (void)</td></tr>
+<tr class="memdesc:ab2d2fa608e20ebaad0c04dbf1ce49acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の全 <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の無効化  <a href="event__logger_8h.html#ab2d2fa608e20ebaad0c04dbf1ce49acf">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2d2fa608e20ebaad0c04dbf1ce49acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeec85a9222f596b2ff75f679b3f5442"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#abeec85a9222f596b2ff75f679b3f5442">EL_enable_tlog_overwrite</a> (<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> err_level)</td></tr>
+<tr class="memdesc:abeec85a9222f596b2ff75f679b3f5442"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog のイベントテーブルの上書きを有効化  <a href="event__logger_8h.html#abeec85a9222f596b2ff75f679b3f5442">[詳解]</a><br /></td></tr>
+<tr class="separator:abeec85a9222f596b2ff75f679b3f5442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ac0b53c23731d075998dff4f4fefc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aa6ac0b53c23731d075998dff4f4fefc0">EL_disable_tlog_overwrite</a> (<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> err_level)</td></tr>
+<tr class="memdesc:aa6ac0b53c23731d075998dff4f4fefc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog のイベントテーブルの上書きを無効化  <a href="event__logger_8h.html#aa6ac0b53c23731d075998dff4f4fefc0">[詳解]</a><br /></td></tr>
+<tr class="separator:aa6ac0b53c23731d075998dff4f4fefc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e9c3b7d0def1c166f028712b351a0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ac5e9c3b7d0def1c166f028712b351a0e">EL_enable_tlog_overwrite_all</a> (void)</td></tr>
+<tr class="memdesc:ac5e9c3b7d0def1c166f028712b351a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog のイベントテーブルの上書きをすべて有効化  <a href="event__logger_8h.html#ac5e9c3b7d0def1c166f028712b351a0e">[詳解]</a><br /></td></tr>
+<tr class="separator:ac5e9c3b7d0def1c166f028712b351a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef273bfec9d8ab55c62bff7bbf7f9bd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aef273bfec9d8ab55c62bff7bbf7f9bd2">EL_disable_tlog_overwrite_all</a> (void)</td></tr>
+<tr class="memdesc:aef273bfec9d8ab55c62bff7bbf7f9bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog のイベントテーブルの上書きをすべて無効化  <a href="event__logger_8h.html#aef273bfec9d8ab55c62bff7bbf7f9bd2">[詳解]</a><br /></td></tr>
+<tr class="separator:aef273bfec9d8ab55c62bff7bbf7f9bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af088469f27d5dfca608a9cacee9fbc17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#af088469f27d5dfca608a9cacee9fbc17">EL_is_tlog_overwrite_enable</a> (<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> err_level)</td></tr>
+<tr class="memdesc:af088469f27d5dfca608a9cacee9fbc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog のイベントテーブルの上書きが有効か？  <a href="event__logger_8h.html#af088469f27d5dfca608a9cacee9fbc17">[詳解]</a><br /></td></tr>
+<tr class="separator:af088469f27d5dfca608a9cacee9fbc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fdaa66af22854e97bb22c6fecf33ad8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_e_l___event.html">EL_Event</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a7fdaa66af22854e97bb22c6fecf33ad8">EL_get_the_nth_tlog_from_the_latest</a> (<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> err_level, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> n)</td></tr>
+<tr class="memdesc:a7fdaa66af22854e97bb22c6fecf33ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLog のイベントテーブルの最新からn番目のイベントを取得  <a href="event__logger_8h.html#a7fdaa66af22854e97bb22c6fecf33ad8">[詳解]</a><br /></td></tr>
+<tr class="separator:a7fdaa66af22854e97bb22c6fecf33ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc99703dc430e6b9ed9243bdc718238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a4bc99703dc430e6b9ed9243bdc718238">Cmd_EL_INIT</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a4bc99703dc430e6b9ed9243bdc718238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0bf586d275ecec704e951cbc5b2e6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a1d0bf586d275ecec704e951cbc5b2e6d">Cmd_EL_CLEAR_LOG_ALL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a1d0bf586d275ecec704e951cbc5b2e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a57a0936a5490032e26e9c94d3108f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aa3a57a0936a5490032e26e9c94d3108f">Cmd_EL_CLEAR_LOG_BY_ERR_LEVEL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:aa3a57a0936a5490032e26e9c94d3108f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf83096e56ce5bd739f7e7fca38ab423"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aaf83096e56ce5bd739f7e7fca38ab423">Cmd_EL_CLEAR_STATISTICS</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:aaf83096e56ce5bd739f7e7fca38ab423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d82c5586999163e6e1e83a4f593e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ac5d82c5586999163e6e1e83a4f593e32">Cmd_EL_CLEAR_TLOG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ac5d82c5586999163e6e1e83a4f593e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8837fe5f397adee44ffb2c94da4cab03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a8837fe5f397adee44ffb2c94da4cab03">Cmd_EL_CLEAR_CLOG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a8837fe5f397adee44ffb2c94da4cab03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cabd560aa69cd66a8c42a9ea7a8afe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a6cabd560aa69cd66a8c42a9ea7a8afe7">Cmd_EL_RECORD_EVENT</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a6cabd560aa69cd66a8c42a9ea7a8afe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9e4431500f265f6daa102a5fdae83a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a0a9e4431500f265f6daa102a5fdae83a">Cmd_EL_TLOG_SET_PAGE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a0a9e4431500f265f6daa102a5fdae83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5074797ff61e2abe215de3ce3045c280"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a5074797ff61e2abe215de3ce3045c280">Cmd_EL_CLOG_SET_PAGE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a5074797ff61e2abe215de3ce3045c280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8289e6d30d2097fb347ca60b5b1fcc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ab8289e6d30d2097fb347ca60b5b1fcc2">Cmd_EL_INIT_LOGGING_SETTINGS</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ab8289e6d30d2097fb347ca60b5b1fcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9968807b7ab073c8bc527b7eccb12f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#af9968807b7ab073c8bc527b7eccb12f9">Cmd_EL_ENABLE_LOGGING</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:af9968807b7ab073c8bc527b7eccb12f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e10fc79f23390781c35251ac8f3934c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a2e10fc79f23390781c35251ac8f3934c">Cmd_EL_DISABLE_LOGGING</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a2e10fc79f23390781c35251ac8f3934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a983c1e51424b7d068d6d105ef83e06da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a983c1e51424b7d068d6d105ef83e06da">Cmd_EL_ENABLE_LOGGING_ALL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a983c1e51424b7d068d6d105ef83e06da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ed479e7dcffaabcb67da9080c8586e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a96ed479e7dcffaabcb67da9080c8586e">Cmd_EL_DISABLE_LOGGING_ALL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a96ed479e7dcffaabcb67da9080c8586e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6339fa6a199f0b9f13375be67988aa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ae6339fa6a199f0b9f13375be67988aa5">Cmd_EL_ENABLE_TLOG_OVERWRITE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ae6339fa6a199f0b9f13375be67988aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e38db0221924fc36b70e504f74815e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a6e38db0221924fc36b70e504f74815e6">Cmd_EL_DISABLE_TLOG_OVERWRITE</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a6e38db0221924fc36b70e504f74815e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc7966341692781ce685743c6eb7261"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a6fc7966341692781ce685743c6eb7261">Cmd_EL_ENABLE_TLOG_OVERWRITE_ALL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:a6fc7966341692781ce685743c6eb7261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac993ab2867f58bed77a3176547ecf446"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ac993ab2867f58bed77a3176547ecf446">Cmd_EL_DISABLE_TLOG_OVERWRITE_ALL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="separator:ac993ab2867f58bed77a3176547ecf446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:aec2c93b88dfe4bb8f16a477ece74c6de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_event_logger.html">EventLogger</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#aec2c93b88dfe4bb8f16a477ece74c6de">event_logger</a></td></tr>
+<tr class="separator:aec2c93b88dfe4bb8f16a477ece74c6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>アノマリやエラーなどの各種イベントを記録する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>このイベントをもとに event_handler を発火させることができる </dd>
+<dd>
+ログは TLog (TimeSeriesLog) と CLog (<a class="el" href="struct_e_l___cumulative_log.html" title="累積ログ (CLog) のログ構造定義">EL_CumulativeLog</a>) の二種類を準備し，必要なもののみを使う </dd>
+<dd>
+今後， NvLog (不揮発Log) が実装予定 </dd>
+<dd>
+TLog (TimeSeriesLog) 時系列ログ ひたすら，新しい <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> をテーブルに追記していく． EL_get_the_nth_tlog_from_the_latest で最新からn番目が取得できる． これを有効化しないと， event_handler は使えない． テーブルが満杯になった場合，上書きするかしないかは is_enable_overwrite にて選択可能． </dd>
+<dd>
+CLog (<a class="el" href="struct_e_l___cumulative_log.html" title="累積ログ (CLog) のログ構造定義">EL_CumulativeLog</a>) 累積ログ <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> (<a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a>, <a class="el" href="struct_e_l___event.html#af21fb2ee922c87e8ab65df087b22e7cd">EL_Event.local</a> にて特定) ごとの累積カウンタを保持し，時系列ソートされる． テーブルが満杯になると最も古いものが捨てられる． 以下のような動きをする フォーマット: | log index | event | counter | time | dt |<ol type="1">
+<li>時刻 t1: event1 が発生 | 0 | event1 | 1 | t1 | 0 |</li>
+<li>時刻 t2: event2 が発生 | 0 | event2 | 1 | t2 | 0 | | 1 | event1 | 1 | t1 | 0 |</li>
+<li>時刻 t3: event2 が発生 | 0 | event2 | 2 | t3 | t3 - t2 | | 1 | event1 | 1 | t1 | 0 |</li>
+<li>時刻 t4: event1 が発生 | 0 | event1 | 2 | t4 | t4 - t1 | | 1 | event2 | 2 | t3 | t3 - t2 |</li>
+<li>時刻 t5: event3 が発生 | 0 | event3 | 1 | t5 | 0 | | 1 | event1 | 2 | t4 | t4 - t1 | | 2 | event2 | 2 | t3 | t3 - t2 | </li>
+</ol>
+</dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="adeaeae643d18ddf9f8835932e834ccb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeaeae643d18ddf9f8835932e834ccb6">&#9670;&nbsp;</a></span>EL_CLOG_LOG_SIZE_MAX_EL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_LOG_SIZE_MAX_EL&#160;&#160;&#160;(8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLogにて保存するログ数 (EL_ERROR_LEVEL_EL) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a39f86694de0550142a6422012013d597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f86694de0550142a6422012013d597">&#9670;&nbsp;</a></span>EL_CLOG_LOG_SIZE_MAX_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_LOG_SIZE_MAX_HIGH&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a0785d1d6b5633040d55251c041061909">EL_CLOG_TLM_PAGE_MAX_HIGH</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00136">136</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab36cb0758508d4118e5d83d68fb4f213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36cb0758508d4118e5d83d68fb4f213">&#9670;&nbsp;</a></span>EL_CLOG_LOG_SIZE_MAX_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_LOG_SIZE_MAX_LOW&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">EL_CLOG_TLM_PAGE_MAX_LOW</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00148">148</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa7723fe7b2569937b7fd9786532b773d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7723fe7b2569937b7fd9786532b773d">&#9670;&nbsp;</a></span>EL_CLOG_LOG_SIZE_MAX_MIDDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_LOG_SIZE_MAX_MIDDLE&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a72c46a23ef74b6bdaac663307618b631">EL_CLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a00dda9d32639c44e82dd84bdaf3cb676">EL_CLOG_TLM_PAGE_MAX_MIDDLE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00141">141</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0785d1d6b5633040d55251c041061909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0785d1d6b5633040d55251c041061909">&#9670;&nbsp;</a></span>EL_CLOG_TLM_PAGE_MAX_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_TLM_PAGE_MAX_HIGH&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLogで保存するログのページ数 (EL_ERROR_LEVEL_HIGH) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a88f3650759a5b05fab3eed2e5e575d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f3650759a5b05fab3eed2e5e575d3d">&#9670;&nbsp;</a></span>EL_CLOG_TLM_PAGE_MAX_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_TLM_PAGE_MAX_LOW&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLogで保存するログのページ数 (EL_ERROR_LEVEL_LOW) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a00dda9d32639c44e82dd84bdaf3cb676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00dda9d32639c44e82dd84bdaf3cb676">&#9670;&nbsp;</a></span>EL_CLOG_TLM_PAGE_MAX_MIDDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_TLM_PAGE_MAX_MIDDLE&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLogで保存するログのページ数 (EL_ERROR_LEVEL_MIDDLE) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a72c46a23ef74b6bdaac663307618b631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c46a23ef74b6bdaac663307618b631">&#9670;&nbsp;</a></span>EL_CLOG_TLM_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_CLOG_TLM_PAGE_SIZE&#160;&#160;&#160;(32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLogにて，テレメ１ページにおろせるlog数 </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a057ff6c0bd4ee96467d917188adad7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057ff6c0bd4ee96467d917188adad7fe">&#9670;&nbsp;</a></span>EL_IS_ENABLE_CLOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_IS_ENABLE_CLOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLog を有効にするか？ </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00064">64</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2a96f7fbdd81aaba863257261c1a4a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a96f7fbdd81aaba863257261c1a4a3e">&#9670;&nbsp;</a></span>EL_IS_ENABLE_EL_ERROR_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_IS_ENABLE_EL_ERROR_LEVEL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>EL_ERROR_LEVEL_EL を有効にするか？ 再帰呼び出し &amp; 無限ループを防ぐために，EL内部のイベントは別の専用のエラーレベルで記録される． これを有効化すると，EL内部のアノマリを記録できる． </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00068">68</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4b65e39decb888497279e3878d64602b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b65e39decb888497279e3878d64602b">&#9670;&nbsp;</a></span>EL_IS_ENABLE_EVENT_NOTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_IS_ENABLE_EVENT_NOTE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_e_l___event.html#a17ee567ce4e36612b2d5106514d2f8b7">EL_Event.note</a> を有効にするか？ event としては (event_handler などで) 同じだが，補足情報や区別用の id を使うか？ </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00066">66</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acc12c33985faba4c9baa91caabd34698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc12c33985faba4c9baa91caabd34698">&#9670;&nbsp;</a></span>EL_IS_ENABLE_MIDDLE_ERROR_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_IS_ENABLE_MIDDLE_ERROR_LEVEL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EL_ERROR_LEVEL_MIDDLE を有効にするか？ （C2A coreでは使わないので，基本無効でOK．使いたいなら有効に） </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00067">67</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3d98f503ca5f0d374f0f5ca68ecf0776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d98f503ca5f0d374f0f5ca68ecf0776">&#9670;&nbsp;</a></span>EL_IS_ENABLE_TLOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_IS_ENABLE_TLOG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog を有効にするか？ → これがないと event_handler は使えない </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00063">63</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa817f1db5a04c7faa741c7614703479c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa817f1db5a04c7faa741c7614703479c">&#9670;&nbsp;</a></span>EL_LOG_MINIMUM_REQUIRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_LOG_MINIMUM_REQUIRED&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログに求められる最小要素数 </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00085">85</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ade8cdaffc511b03af9c43c99f1e9b117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8cdaffc511b03af9c43c99f1e9b117">&#9670;&nbsp;</a></span>EL_LOG_MINIMUM_REQUIRED_EL_LOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_LOG_MINIMUM_REQUIRED_EL_LOG&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ELログに求められる最小要素数 </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00086">86</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aad0501d2c583448672cdc333b8985422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0501d2c583448672cdc333b8985422">&#9670;&nbsp;</a></span>EL_TLOG_LOG_SIZE_MAX_EL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_LOG_SIZE_MAX_EL&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLogにて保存するログ数 (EL_ERROR_LEVEL_EL) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acc710c4c73614e4f2d6602be2da15e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc710c4c73614e4f2d6602be2da15e3b">&#9670;&nbsp;</a></span>EL_TLOG_LOG_SIZE_MAX_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_LOG_SIZE_MAX_HIGH&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#a59e4398fa1089176bc6204e4e4fcb627">EL_TLOG_TLM_PAGE_MAX_HIGH</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00094">94</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3e7fff4db3d62a9f3457e775b4189c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7fff4db3d62a9f3457e775b4189c63">&#9670;&nbsp;</a></span>EL_TLOG_LOG_SIZE_MAX_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_LOG_SIZE_MAX_LOW&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#aa036654c2108955b572722b668d7f1be">EL_TLOG_TLM_PAGE_MAX_LOW</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00106">106</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6f16afa4ba87d5bcf613ef418c1a8366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f16afa4ba87d5bcf613ef418c1a8366">&#9670;&nbsp;</a></span>EL_TLOG_LOG_SIZE_MAX_MIDDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_LOG_SIZE_MAX_MIDDLE&#160;&#160;&#160;(<a class="el" href="event__logger__params_8h.html#a5a42e2c7143c200cc22c9b428d331710">EL_TLOG_TLM_PAGE_SIZE</a> * <a class="el" href="event__logger__params_8h.html#ad56760785bcaca7b7b5af545c0a51132">EL_TLOG_TLM_PAGE_MAX_MIDDLE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00099">99</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a59e4398fa1089176bc6204e4e4fcb627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e4398fa1089176bc6204e4e4fcb627">&#9670;&nbsp;</a></span>EL_TLOG_TLM_PAGE_MAX_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_TLM_PAGE_MAX_HIGH&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLogで保存するログのページ数 (EL_ERROR_LEVEL_HIGH) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa036654c2108955b572722b668d7f1be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa036654c2108955b572722b668d7f1be">&#9670;&nbsp;</a></span>EL_TLOG_TLM_PAGE_MAX_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_TLM_PAGE_MAX_LOW&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLogで保存するログのページ数 (EL_ERROR_LEVEL_LOW) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad56760785bcaca7b7b5af545c0a51132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56760785bcaca7b7b5af545c0a51132">&#9670;&nbsp;</a></span>EL_TLOG_TLM_PAGE_MAX_MIDDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_TLM_PAGE_MAX_MIDDLE&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLogで保存するログのページ数 (EL_ERROR_LEVEL_MIDDLE) </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5a42e2c7143c200cc22c9b428d331710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a42e2c7143c200cc22c9b428d331710">&#9670;&nbsp;</a></span>EL_TLOG_TLM_PAGE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EL_TLOG_TLM_PAGE_SIZE&#160;&#160;&#160;(32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLogにて，テレメ１ページにおろせるlog数 </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a61cae12fb3287ab3c58258900eb447fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cae12fb3287ab3c58258900eb447fa">&#9670;&nbsp;</a></span>SIZE_OF_EL_CLOG_COUNTER_T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SIZE_OF_EL_CLOG_COUNTER_T&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>el_clog_counter_t の型サイズ．メモリインパクトがそれなりにあるので，可変に </p>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ada95c41f981f5b79e04affc15450aa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada95c41f981f5b79e04affc15450aa5a">&#9670;&nbsp;</a></span>el_clog_counter_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="el" href="event__logger_8h.html#ada95c41f981f5b79e04affc15450aa5a">el_clog_counter_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00164">164</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a89b9c600633a7f6780f59741c4cc9a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b9c600633a7f6780f59741c4cc9a0e">&#9670;&nbsp;</a></span>EL_ACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の汎用返り値 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a89b9c600633a7f6780f59741c4cc9a0ead50309d986f45ede550b4ca4bcf9d9cb"></a>EL_ACK_OK&#160;</td><td class="fielddoc"><p>正常終了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a89b9c600633a7f6780f59741c4cc9a0ea69caf5b7b5c0cfb054719976ae608783"></a>EL_ACK_ILLEGAL_GROUP&#160;</td><td class="fielddoc"><p>不正な <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a89b9c600633a7f6780f59741c4cc9a0ea8e43bab40a180855a96cc2a500ea90ab"></a>EL_ACK_ILLEGAL_ERROR_LEVEL&#160;</td><td class="fielddoc"><p>不正な <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a89b9c600633a7f6780f59741c4cc9a0ea2931f20fe2063f23fb89b93353dadc22"></a>EL_ACK_DISABLE_LOGGING&#160;</td><td class="fielddoc"><p>ロギングが無効により，棄却 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a89b9c600633a7f6780f59741c4cc9a0eaf8c49f8e049bbf61292a52a2c35175f2"></a>EL_ACK_TLOG_FULL&#160;</td><td class="fielddoc"><p>TLogの追記が不能のため，TLog記録ができず </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a89b9c600633a7f6780f59741c4cc9a0ea6edd485965053b329ad0d0bda75449cb"></a>EL_ACK_OTHER_ERR&#160;</td><td class="fielddoc"><p>その他のエラー </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00257">257</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a66edf6d5dc4a12fbd8565ed752559c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66edf6d5dc4a12fbd8565ed752559c33">&#9670;&nbsp;</a></span>EL_CORE_GROUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33">EL_CORE_GROUP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の Event Group の C2A core 使用分 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint32_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33ae0ba294238c1577b3391f91f0e28ea7e"></a>EL_CORE_GROUP_NULL&#160;</td><td class="fielddoc"><p>初期値 or NULL．これは 0 であることを要求 (clear で memset 0x00 をするなら) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a1c86fb4bff288acd348171209d984f02"></a>EL_CORE_GROUP_EVENT_LOGGER&#160;</td><td class="fielddoc"><p>EL </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33aafd9394151eaa23c9bad51ccea2ee6c8"></a>EL_CORE_GROUP_MODE_MANAGER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33aba6e6b4c86e67b9f14181f9fee81c11f"></a>EL_CORE_GROUP_TASK_DISPATCHER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33aac45665fd5ab764421f0ce921b9edb62"></a>EL_CORE_GROUP_APP_MANAGER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33aaadab0938661b88d85ff391d367412a0"></a>EL_CORE_GROUP_TLCD_PAST_TIME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33af208f89a56c7baa8b98336fadff0b200"></a>EL_CORE_GROUP_TLCD_DEPLOY_BLOCK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a15476b039c7faff69f65fd6c2fba316c"></a>EL_CORE_GROUP_DCU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33af3cd26d75fdc29c868b4d66c9531fb06"></a>EL_CORE_GROUP_EVENT_HANDLER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872"></a>EL_CORE_GROUP_EL_DROP_CLOG1&#160;</td><td class="fielddoc"><p>EL CLogs で古いエラーを上書きするとき (group, err_level を保存) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe"></a>EL_CORE_GROUP_EL_DROP_CLOG2&#160;</td><td class="fielddoc"><p>EL CLogs で古いエラーを上書きするとき (local, count を保存) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6"></a>EL_CORE_GROUP_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00187">187</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae574b6e1365b0b0c0af97f6f8abd7af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae574b6e1365b0b0c0af97f6f8abd7af0">&#9670;&nbsp;</a></span>EL_ERROR_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の エラーレベル </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd>
+<dd>
+C2A Core では HIGH, LOW しか使わないため， MIDDLE はユーザー定義とする </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae574b6e1365b0b0c0af97f6f8abd7af0a2f31ef7ac735fbc6484f9a6277e3b934"></a>EL_ERROR_LEVEL_HIGH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae574b6e1365b0b0c0af97f6f8abd7af0a25b47724843e3a08bd06fffd74918d6b"></a>EL_ERROR_LEVEL_MIDDLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae574b6e1365b0b0c0af97f6f8abd7af0a653dda7718442dd2ad5cf51a224c5c13"></a>EL_ERROR_LEVEL_LOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae574b6e1365b0b0c0af97f6f8abd7af0ad920427ef302d463b3a72ef4f6e9390f"></a>EL_ERROR_LEVEL_EL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae574b6e1365b0b0c0af97f6f8abd7af0a00ec2f0b002fdb180a9d565dca3314c0"></a>EL_ERROR_LEVEL_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00238">238</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae9ce022007a3fee570838f8d0af4c00a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ce022007a3fee570838f8d0af4c00a">&#9670;&nbsp;</a></span>EL_EVENT_LOCAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00a">EL_EVENT_LOCAL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EL_CORE_GROUP_EVENT_LOGGER の local id </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint32_t を想定 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa59325b5aae01d83965ad87a9b072a834"></a>EL_EVENT_LOCAL_UNKNOWN_ERR&#160;</td><td class="fielddoc"><p>不明のエラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa36bc11742710cbd87f7f11dbbfd78f23"></a>EL_EVENT_LOCAL_TLOG_HIGH_HALF_FULL&#160;</td><td class="fielddoc"><p>TLog のテーブルの半分が埋まった (HIGH) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa922831dd0a03b26767d727f299c3912a"></a>EL_EVENT_LOCAL_TLOG_HIGH_FULL&#160;</td><td class="fielddoc"><p>TLog のテーブルが埋まった．wpは最初に戻り，古いものから上書きしていく (HIGH) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa2fb2216c4f4b6ce2932f0a51eb54233c"></a>EL_EVENT_LOCAL_TLOG_MIDDLE_HALF_FULL&#160;</td><td class="fielddoc"><p>TLog のテーブルの半分が埋まった (MIDDLE) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa35f144c0a6b2d058673d4ff276870081"></a>EL_EVENT_LOCAL_TLOG_MIDDLE_FULL&#160;</td><td class="fielddoc"><p>TLog のテーブルが埋まった．wpは最初に戻り，古いものから上書きしていく (MIDDLE) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa561a0d4b8306dc7c295ce12f3f9aac36"></a>EL_EVENT_LOCAL_TLOG_LOW_HALF_FULL&#160;</td><td class="fielddoc"><p>TLog のテーブルの半分が埋まった (LOW) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aa62d5cb38f23f7eb56f5387383b455246"></a>EL_EVENT_LOCAL_TLOG_LOW_FULL&#160;</td><td class="fielddoc"><p>TLog のテーブルが埋まった．wpは最初に戻り，古いものから上書きしていく (LOW) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aaf49d1ef7e4e961b2398337cc38dc0aaf"></a>EL_EVENT_LOCAL_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00214">214</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8837fe5f397adee44ffb2c94da4cab03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8837fe5f397adee44ffb2c94da4cab03">&#9670;&nbsp;</a></span>Cmd_EL_CLEAR_CLOG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_CLEAR_CLOG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00822">822</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a8837fe5f397adee44ffb2c94da4cab03_cgraph.svg" width="638" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a8837fe5f397adee44ffb2c94da4cab03_icgraph.svg" width="1126" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1d0bf586d275ecec704e951cbc5b2e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0bf586d275ecec704e951cbc5b2e6d">&#9670;&nbsp;</a></span>Cmd_EL_CLEAR_LOG_ALL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_CLEAR_LOG_ALL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00760">760</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a1d0bf586d275ecec704e951cbc5b2e6d_cgraph.svg" width="652" height="198"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a1d0bf586d275ecec704e951cbc5b2e6d_icgraph.svg" width="1146" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa3a57a0936a5490032e26e9c94d3108f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a57a0936a5490032e26e9c94d3108f">&#9670;&nbsp;</a></span>Cmd_EL_CLEAR_LOG_BY_ERR_LEVEL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_CLEAR_LOG_BY_ERR_LEVEL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00779">779</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aa3a57a0936a5490032e26e9c94d3108f_cgraph.svg" width="651" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aa3a57a0936a5490032e26e9c94d3108f_icgraph.svg" width="1139" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aaf83096e56ce5bd739f7e7fca38ab423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf83096e56ce5bd739f7e7fca38ab423">&#9670;&nbsp;</a></span>Cmd_EL_CLEAR_STATISTICS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_CLEAR_STATISTICS </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00798">798</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aaf83096e56ce5bd739f7e7fca38ab423_cgraph.svg" width="647" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aaf83096e56ce5bd739f7e7fca38ab423_icgraph.svg" width="1162" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac5d82c5586999163e6e1e83a4f593e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d82c5586999163e6e1e83a4f593e32">&#9670;&nbsp;</a></span>Cmd_EL_CLEAR_TLOG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_CLEAR_TLOG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00807">807</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ac5d82c5586999163e6e1e83a4f593e32_cgraph.svg" width="636" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ac5d82c5586999163e6e1e83a4f593e32_icgraph.svg" width="1124" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5074797ff61e2abe215de3ce3045c280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5074797ff61e2abe215de3ce3045c280">&#9670;&nbsp;</a></span>Cmd_EL_CLOG_SET_PAGE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_CLOG_SET_PAGE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00916">916</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a5074797ff61e2abe215de3ce3045c280_cgraph.svg" width="660" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a5074797ff61e2abe215de3ce3045c280_icgraph.svg" width="1148" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2e10fc79f23390781c35251ac8f3934c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e10fc79f23390781c35251ac8f3934c">&#9670;&nbsp;</a></span>Cmd_EL_DISABLE_LOGGING()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_DISABLE_LOGGING </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00990">990</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a2e10fc79f23390781c35251ac8f3934c_cgraph.svg" width="676" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a2e10fc79f23390781c35251ac8f3934c_icgraph.svg" width="1164" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a96ed479e7dcffaabcb67da9080c8586e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ed479e7dcffaabcb67da9080c8586e">&#9670;&nbsp;</a></span>Cmd_EL_DISABLE_LOGGING_ALL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_DISABLE_LOGGING_ALL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l01023">1023</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a96ed479e7dcffaabcb67da9080c8586e_cgraph.svg" width="463" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a96ed479e7dcffaabcb67da9080c8586e_icgraph.svg" width="1194" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6e38db0221924fc36b70e504f74815e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e38db0221924fc36b70e504f74815e6">&#9670;&nbsp;</a></span>Cmd_EL_DISABLE_TLOG_OVERWRITE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_DISABLE_TLOG_OVERWRITE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l01051">1051</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a6e38db0221924fc36b70e504f74815e6_cgraph.svg" width="678" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a6e38db0221924fc36b70e504f74815e6_icgraph.svg" width="1138" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac993ab2867f58bed77a3176547ecf446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac993ab2867f58bed77a3176547ecf446">&#9670;&nbsp;</a></span>Cmd_EL_DISABLE_TLOG_OVERWRITE_ALL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_DISABLE_TLOG_OVERWRITE_ALL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l01078">1078</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ac993ab2867f58bed77a3176547ecf446_cgraph.svg" width="692" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ac993ab2867f58bed77a3176547ecf446_icgraph.svg" width="1138" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af9968807b7ab073c8bc527b7eccb12f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9968807b7ab073c8bc527b7eccb12f9">&#9670;&nbsp;</a></span>Cmd_EL_ENABLE_LOGGING()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_ENABLE_LOGGING </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00965">965</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_af9968807b7ab073c8bc527b7eccb12f9_cgraph.svg" width="671" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_af9968807b7ab073c8bc527b7eccb12f9_icgraph.svg" width="1159" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a983c1e51424b7d068d6d105ef83e06da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a983c1e51424b7d068d6d105ef83e06da">&#9670;&nbsp;</a></span>Cmd_EL_ENABLE_LOGGING_ALL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_ENABLE_LOGGING_ALL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l01015">1015</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a983c1e51424b7d068d6d105ef83e06da_cgraph.svg" width="456" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a983c1e51424b7d068d6d105ef83e06da_icgraph.svg" width="1190" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae6339fa6a199f0b9f13375be67988aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6339fa6a199f0b9f13375be67988aa5">&#9670;&nbsp;</a></span>Cmd_EL_ENABLE_TLOG_OVERWRITE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_ENABLE_TLOG_OVERWRITE </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l01032">1032</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ae6339fa6a199f0b9f13375be67988aa5_cgraph.svg" width="671" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ae6339fa6a199f0b9f13375be67988aa5_icgraph.svg" width="1134" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6fc7966341692781ce685743c6eb7261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc7966341692781ce685743c6eb7261">&#9670;&nbsp;</a></span>Cmd_EL_ENABLE_TLOG_OVERWRITE_ALL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_ENABLE_TLOG_OVERWRITE_ALL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l01070">1070</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a6fc7966341692781ce685743c6eb7261_cgraph.svg" width="683" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a6fc7966341692781ce685743c6eb7261_icgraph.svg" width="1134" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4bc99703dc430e6b9ed9243bdc718238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc99703dc430e6b9ed9243bdc718238">&#9670;&nbsp;</a></span>Cmd_EL_INIT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_INIT </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00752">752</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a4bc99703dc430e6b9ed9243bdc718238_cgraph.svg" width="763" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a4bc99703dc430e6b9ed9243bdc718238_icgraph.svg" width="1066" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab8289e6d30d2097fb347ca60b5b1fcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8289e6d30d2097fb347ca60b5b1fcc2">&#9670;&nbsp;</a></span>Cmd_EL_INIT_LOGGING_SETTINGS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_INIT_LOGGING_SETTINGS </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00956">956</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ab8289e6d30d2097fb347ca60b5b1fcc2_cgraph.svg" width="418" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ab8289e6d30d2097fb347ca60b5b1fcc2_icgraph.svg" width="1134" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6cabd560aa69cd66a8c42a9ea7a8afe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cabd560aa69cd66a8c42a9ea7a8afe7">&#9670;&nbsp;</a></span>Cmd_EL_RECORD_EVENT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_RECORD_EVENT </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00836">836</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a6cabd560aa69cd66a8c42a9ea7a8afe7_cgraph.svg" width="1332" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a6cabd560aa69cd66a8c42a9ea7a8afe7_icgraph.svg" width="1146" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0a9e4431500f265f6daa102a5fdae83a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9e4431500f265f6daa102a5fdae83a">&#9670;&nbsp;</a></span>Cmd_EL_TLOG_SET_PAGE_FOR_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EL_TLOG_SET_PAGE_FOR_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00875">875</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a0a9e4431500f265f6daa102a5fdae83a_cgraph.svg" width="659" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a0a9e4431500f265f6daa102a5fdae83a_icgraph.svg" width="1147" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab2d2fa608e20ebaad0c04dbf1ce49acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d2fa608e20ebaad0c04dbf1ce49acf">&#9670;&nbsp;</a></span>EL_disable_all_logging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EL_disable_all_logging </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の全 <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の無効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00664">664</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ab2d2fa608e20ebaad0c04dbf1ce49acf_icgraph.svg" width="1411" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acbfe5cde6286f88550a76ebf005dbf12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbfe5cde6286f88550a76ebf005dbf12">&#9670;&nbsp;</a></span>EL_disable_logging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> EL_disable_logging </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a>&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の無効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>無効化する <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">EL_ACK_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">EL_ACK_ILLEGAL_GROUP</td><td>不正な <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00617">617</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_acbfe5cde6286f88550a76ebf005dbf12_icgraph.svg" width="1359" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa6ac0b53c23731d075998dff4f4fefc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ac0b53c23731d075998dff4f4fefc0">&#9670;&nbsp;</a></span>EL_disable_tlog_overwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> EL_disable_tlog_overwrite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>err_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog のイベントテーブルの上書きを無効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err_level</td><td>無効化する <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">EL_ACK_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">EL_ACK_ILLEGAL_ERROR_LEVEL</td><td>不正な <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00681">681</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aa6ac0b53c23731d075998dff4f4fefc0_icgraph.svg" width="1640" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aef273bfec9d8ab55c62bff7bbf7f9bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef273bfec9d8ab55c62bff7bbf7f9bd2">&#9670;&nbsp;</a></span>EL_disable_tlog_overwrite_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EL_disable_tlog_overwrite_all </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog のイベントテーブルの上書きをすべて無効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00702">702</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aef273bfec9d8ab55c62bff7bbf7f9bd2_cgraph.svg" width="466" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aef273bfec9d8ab55c62bff7bbf7f9bd2_icgraph.svg" width="1400" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aadd067da025cae3c883fda60506998f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd067da025cae3c883fda60506998f6">&#9670;&nbsp;</a></span>EL_enable_all_logging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EL_enable_all_logging </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の全 <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の有効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00658">658</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_aadd067da025cae3c883fda60506998f6_icgraph.svg" width="1627" height="168"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a00c40416dcf2fbd69ff494597928ed70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c40416dcf2fbd69ff494597928ed70">&#9670;&nbsp;</a></span>EL_enable_logging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> EL_enable_logging </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a>&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> の有効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>有効化する <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">EL_ACK_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">EL_ACK_ILLEGAL_GROUP</td><td>不正な <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00597">597</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a00c40416dcf2fbd69ff494597928ed70_icgraph.svg" width="1350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abeec85a9222f596b2ff75f679b3f5442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeec85a9222f596b2ff75f679b3f5442">&#9670;&nbsp;</a></span>EL_enable_tlog_overwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> EL_enable_tlog_overwrite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>err_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog のイベントテーブルの上書きを有効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err_level</td><td>有効化する <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">EL_ACK_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">EL_ACK_ILLEGAL_ERROR_LEVEL</td><td>不正な <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00671">671</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_abeec85a9222f596b2ff75f679b3f5442_icgraph.svg" width="1786" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac5e9c3b7d0def1c166f028712b351a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e9c3b7d0def1c166f028712b351a0e">&#9670;&nbsp;</a></span>EL_enable_tlog_overwrite_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EL_enable_tlog_overwrite_all </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog のイベントテーブルの上書きをすべて有効化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00691">691</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ac5e9c3b7d0def1c166f028712b351a0e_cgraph.svg" width="460" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_ac5e9c3b7d0def1c166f028712b351a0e_icgraph.svg" width="1548" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7fdaa66af22854e97bb22c6fecf33ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fdaa66af22854e97bb22c6fecf33ad8">&#9670;&nbsp;</a></span>EL_get_the_nth_tlog_from_the_latest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_e_l___event.html">EL_Event</a>* EL_get_the_nth_tlog_from_the_latest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>err_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog のイベントテーブルの最新からn番目のイベントを取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>n が大きすぎる場合は，最新のものを返す </dd>
+<dd>
+err_level が不正な場合は， EL_ERROR_LEVEL_HIGH のものを返す </dd>
+<dd>
+つまり，アサーションエラーを出さない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err_level</td><td>取得する <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </td></tr>
+    <tr><td class="paramname">n</td><td>n番目（0のとき最新） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00722">722</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a7fdaa66af22854e97bb22c6fecf33ad8_icgraph.svg" width="2042" height="160"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5b3f522390f30515e9561d47da40bcec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3f522390f30515e9561d47da40bcec">&#9670;&nbsp;</a></span>EL_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EL_initialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00184">184</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a5b3f522390f30515e9561d47da40bcec_cgraph.svg" width="608" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a5b3f522390f30515e9561d47da40bcec_icgraph.svg" width="1214" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a50ba2fe43a96f7351951a4109227ba6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ba2fe43a96f7351951a4109227ba6f">&#9670;&nbsp;</a></span>EL_is_logging_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EL_is_logging_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a>&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>event_logger の <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> が有効か？ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>無効化する <a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>無効 or 無効な引数 </td></tr>
+    <tr><td class="paramname">1</td><td>有効 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00638">638</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a50ba2fe43a96f7351951a4109227ba6f_icgraph.svg" width="1942" height="1416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af088469f27d5dfca608a9cacee9fbc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af088469f27d5dfca608a9cacee9fbc17">&#9670;&nbsp;</a></span>EL_is_tlog_overwrite_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EL_is_tlog_overwrite_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>err_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLog のイベントテーブルの上書きが有効か？ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err_level</td><td>無効化する <a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>無効 or 無効な引数 </td></tr>
+    <tr><td class="paramname">1</td><td>有効 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00713">713</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_af088469f27d5dfca608a9cacee9fbc17_icgraph.svg" width="2147" height="1306"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a25a74a48375dfc1f3f80be68e0ac00ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a74a48375dfc1f3f80be68e0ac00ea">&#9670;&nbsp;</a></span>EL_record_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> EL_record_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">EL_GROUP</a>&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>local</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a>&#160;</td>
+          <td class="paramname"><em>err_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>note</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>イベント (<a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a>) を記録 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>C2A 上の任意の場所から発行可能 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td><a class="el" href="struct_e_l___event.html#a10a3852796aa084881e438be75d7dfe9" title="イベントを特定する group id">EL_Event.group</a> </td></tr>
+    <tr><td class="paramname">local</td><td><a class="el" href="struct_e_l___event.html#af21fb2ee922c87e8ab65df087b22e7cd">EL_Event.local</a> </td></tr>
+    <tr><td class="paramname">err_level</td><td><a class="el" href="struct_e_l___event.html#afe5994cf1d52b1c73aecd1b79cbedfb0" title="エラーレベル">EL_Event.err_level</a> EL_ERROR_LEVEL_EL は禁止 </td></tr>
+    <tr><td class="paramname">note</td><td><a class="el" href="struct_e_l___event.html#a17ee567ce4e36612b2d5106514d2f8b7">EL_Event.note</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>EL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00260">260</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a25a74a48375dfc1f3f80be68e0ac00ea_cgraph.svg" width="999" height="322"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a25a74a48375dfc1f3f80be68e0ac00ea_icgraph.svg" width="2398" height="1212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="aec2c93b88dfe4bb8f16a477ece74c6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2c93b88dfe4bb8f16a477ece74c6de">&#9670;&nbsp;</a></span>event_logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_event_logger.html">EventLogger</a>* const event_logger</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00155">155</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6b45b0e7f9199277896746cad9df186b.html">System</a></li><li class="navelem"><a class="el" href="dir_9c060f6614f66753f784535d0ca0f362.html">EventManager</a></li><li class="navelem"><a class="el" href="event__logger_8h.html">event_logger.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

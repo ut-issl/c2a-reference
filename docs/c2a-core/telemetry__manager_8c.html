@@ -1,0 +1,1503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Applications/telemetry_manager.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('telemetry__manager_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">telemetry_manager.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>userがテレメトリ詰まりをやTL溢れを防ぎつつ，またCDHなどがテレメトリを管理しやすくするためのApp  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="divided__cmd__utility_8h_source.html">./divided_cmd_utility.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__loader_8h_source.html">../CmdTlm/block_command_loader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="block__command__executor_8h_source.html">../CmdTlm/block_command_executor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="command__analyze_8h_source.html">../CmdTlm/command_analyze.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="print_8h_source.html">../Library/print.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="endian__memcpy_8h_source.html">../Library/endian_memcpy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="watchdog__timer_8h_source.html">../System/WatchdogTimer/watchdog_timer.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="block__command__definitions_8h_source.html">src_user/CmdTlm/block_command_definitions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="command__definitions_8h_source.html">src_user/CmdTlm/command_definitions.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+telemetry_manager.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c__incl.svg" width="2387" height="827"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="telemetry__manager_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a2c2734264842cd85879182f1f4a1e6af"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a2c2734264842cd85879182f1f4a1e6af">TLM_MGR_init_by_am_</a> (void)</td></tr>
+<tr class="memdesc:a2c2734264842cd85879182f1f4a1e6af"><td class="mdescLeft">&#160;</td><td class="mdescRight">App初期化関数  <a href="telemetry__manager_8c.html#a2c2734264842cd85879182f1f4a1e6af">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c2734264842cd85879182f1f4a1e6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacc4ea29cf0223edc8f8e563eae3ba3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#aaacc4ea29cf0223edc8f8e563eae3ba3">TLM_MGR_init_1_</a> (void)</td></tr>
+<tr class="memdesc:aaacc4ea29cf0223edc8f8e563eae3ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="telemetry__manager_8c.html#aaacc4ea29cf0223edc8f8e563eae3ba3">[詳解]</a><br /></td></tr>
+<tr class="separator:aaacc4ea29cf0223edc8f8e563eae3ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3b4b5320fcb767e79ec2581c80b310"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a0d3b4b5320fcb767e79ec2581c80b310">TLM_MGR_init_2_</a> (void)</td></tr>
+<tr class="separator:a0d3b4b5320fcb767e79ec2581c80b310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b75fadd08a5f2641b2f656727b4cb2c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a0b75fadd08a5f2641b2f656727b4cb2c">TLM_MGR_init_3_</a> (void)</td></tr>
+<tr class="separator:a0b75fadd08a5f2641b2f656727b4cb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b153bbb4a7d281564275efdf95667e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a86b153bbb4a7d281564275efdf95667e">TLM_MGR_init_4_</a> (void)</td></tr>
+<tr class="separator:a86b153bbb4a7d281564275efdf95667e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3c25b77bafbf7a7b15d5ed410e22c0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#aeb3c25b77bafbf7a7b15d5ed410e22c0">TLM_MGR_clear_info_</a> (void)</td></tr>
+<tr class="memdesc:aeb3c25b77bafbf7a7b15d5ed410e22c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">AppInfo構造体のクリア  <a href="telemetry__manager_8c.html#aeb3c25b77bafbf7a7b15d5ed410e22c0">[詳解]</a><br /></td></tr>
+<tr class="separator:aeb3c25b77bafbf7a7b15d5ed410e22c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de2a6e56b5bd06b0116cc912fc4ef1b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a5de2a6e56b5bd06b0116cc912fc4ef1b">TLM_MGR_clear_register_info_all_</a> (void)</td></tr>
+<tr class="memdesc:a5de2a6e56b5bd06b0116cc912fc4ef1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">すべてのTLM_MGR_RegisterInfoのクリア  <a href="telemetry__manager_8c.html#a5de2a6e56b5bd06b0116cc912fc4ef1b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5de2a6e56b5bd06b0116cc912fc4ef1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e7cc8d944b0b9dfc209b4dee57fe36"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#ad4e7cc8d944b0b9dfc209b4dee57fe36">TLM_MGR_clear_register_info_</a> (<a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *register_info)</td></tr>
+<tr class="memdesc:ad4e7cc8d944b0b9dfc209b4dee57fe36"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM_MGR_RegisterInfoのクリア  <a href="telemetry__manager_8c.html#ad4e7cc8d944b0b9dfc209b4dee57fe36">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4e7cc8d944b0b9dfc209b4dee57fe36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b48756e83b551349cf04c30585b1cbf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a0b48756e83b551349cf04c30585b1cbf">TLM_MGR_clear_bc_to_nop_all_</a> (void)</td></tr>
+<tr class="memdesc:a0b48756e83b551349cf04c30585b1cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">すべてのBCを NOP x TLM_MGR_MAX_TLM_NUM_PER_BC で埋める  <a href="telemetry__manager_8c.html#a0b48756e83b551349cf04c30585b1cbf">[詳解]</a><br /></td></tr>
+<tr class="separator:a0b48756e83b551349cf04c30585b1cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6344c0e7a1eb93e72a2c07f36ba89e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#aca6344c0e7a1eb93e72a2c07f36ba89e">TLM_MGR_clear_bc_to_nop_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> bc_id)</td></tr>
+<tr class="memdesc:aca6344c0e7a1eb93e72a2c07f36ba89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したBCを NOP x TLM_MGR_MAX_TLM_NUM_PER_BC で埋める  <a href="telemetry__manager_8c.html#aca6344c0e7a1eb93e72a2c07f36ba89e">[詳解]</a><br /></td></tr>
+<tr class="separator:aca6344c0e7a1eb93e72a2c07f36ba89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8096296bd6334a29aa18c7622eb987cb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a8096296bd6334a29aa18c7622eb987cb">TLM_MGR_calc_register_info_from_bc_info_</a> (void)</td></tr>
+<tr class="memdesc:a8096296bd6334a29aa18c7622eb987cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">設定された <a class="el" href="struct_t_l_m___m_g_r___bc_info.html" title="BCの情報">TLM_MGR_BcInfo</a> から内部で使う情報 <a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> の構築  <a href="telemetry__manager_8c.html#a8096296bd6334a29aa18c7622eb987cb">[詳解]</a><br /></td></tr>
+<tr class="separator:a8096296bd6334a29aa18c7622eb987cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ac1f2b3531856337a1e90c6eb6254e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a42ac1f2b3531856337a1e90c6eb6254e">TLM_MGR_add_bc_info_to_register_info_</a> (<a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *register_info, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> bc_info_idx)</td></tr>
+<tr class="memdesc:a42ac1f2b3531856337a1e90c6eb6254e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> に使う BC 情報を登録  <a href="telemetry__manager_8c.html#a42ac1f2b3531856337a1e90c6eb6254e">[詳解]</a><br /></td></tr>
+<tr class="separator:a42ac1f2b3531856337a1e90c6eb6254e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ffec9b70960e1c8ffb5bff194ce24c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#af5ffec9b70960e1c8ffb5bff194ce24c">TLM_MGR_clear_bc_of_register_info_</a> (<a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *register_info)</td></tr>
+<tr class="memdesc:af5ffec9b70960e1c8ffb5bff194ce24c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> 登録されている BC をクリアして NOP で埋める  <a href="telemetry__manager_8c.html#af5ffec9b70960e1c8ffb5bff194ce24c">[詳解]</a><br /></td></tr>
+<tr class="separator:af5ffec9b70960e1c8ffb5bff194ce24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf8d6a2174e6649a0f079f3a292fcd4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a2cf8d6a2174e6649a0f079f3a292fcd4">TLM_MGR_register_generate_tlm_</a> (<a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *register_info, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *param)</td></tr>
+<tr class="memdesc:a2cf8d6a2174e6649a0f079f3a292fcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> に テレメ生成コマンドを登録する  <a href="telemetry__manager_8c.html#a2cf8d6a2174e6649a0f079f3a292fcd4">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cf8d6a2174e6649a0f079f3a292fcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73e2b57fc1dc9c21cacd12f0772a84d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#ac73e2b57fc1dc9c21cacd12f0772a84d">TLM_MGR_load_master_bc_</a> (void)</td></tr>
+<tr class="memdesc:ac73e2b57fc1dc9c21cacd12f0772a84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">BC全体を展開していくmaster BCの構築  <a href="telemetry__manager_8c.html#ac73e2b57fc1dc9c21cacd12f0772a84d">[詳解]</a><br /></td></tr>
+<tr class="separator:ac73e2b57fc1dc9c21cacd12f0772a84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb254dddda35d23891f16afbfd91e039"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#abb254dddda35d23891f16afbfd91e039">TLM_MGR_load_nop_bc_</a> (void)</td></tr>
+<tr class="memdesc:abb254dddda35d23891f16afbfd91e039"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOP で埋められた BCの構築  <a href="telemetry__manager_8c.html#abb254dddda35d23891f16afbfd91e039">[詳解]</a><br /></td></tr>
+<tr class="separator:abb254dddda35d23891f16afbfd91e039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac32b3a7a00616f559cc1d4b06fa21ccd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#ac32b3a7a00616f559cc1d4b06fa21ccd">TLM_MGR_create_app</a> (void)</td></tr>
+<tr class="separator:ac32b3a7a00616f559cc1d4b06fa21ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec62df9e704e03a65977223bc8dfea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#afec62df9e704e03a65977223bc8dfea8">Cmd_TLM_MGR_INIT</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:afec62df9e704e03a65977223bc8dfea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <a href="telemetry__manager_8c.html#afec62df9e704e03a65977223bc8dfea8">[詳解]</a><br /></td></tr>
+<tr class="separator:afec62df9e704e03a65977223bc8dfea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7978f2345a5be74745b820546d1e2fcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a7978f2345a5be74745b820546d1e2fcb">Cmd_TLM_MGR_INIT_MASTER_BC</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a7978f2345a5be74745b820546d1e2fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">master bc の初期化  <a href="telemetry__manager_8c.html#a7978f2345a5be74745b820546d1e2fcb">[詳解]</a><br /></td></tr>
+<tr class="separator:a7978f2345a5be74745b820546d1e2fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbf984b66811c2f5f3ec88e525b3e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#aadbf984b66811c2f5f3ec88e525b3e37">Cmd_TLM_MGR_CLEAR_HK_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:aadbf984b66811c2f5f3ec88e525b3e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">HKテレメを初期化  <a href="telemetry__manager_8c.html#aadbf984b66811c2f5f3ec88e525b3e37">[詳解]</a><br /></td></tr>
+<tr class="separator:aadbf984b66811c2f5f3ec88e525b3e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0acf9585d0fd81a0a99523c2def1db85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a0acf9585d0fd81a0a99523c2def1db85">Cmd_TLM_MGR_CLEAR_SYSTEM_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a0acf9585d0fd81a0a99523c2def1db85"><td class="mdescLeft">&#160;</td><td class="mdescRight">systemテレメを初期化  <a href="telemetry__manager_8c.html#a0acf9585d0fd81a0a99523c2def1db85">[詳解]</a><br /></td></tr>
+<tr class="separator:a0acf9585d0fd81a0a99523c2def1db85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c555aa2de00da40edc0fc99eb05de9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a6c555aa2de00da40edc0fc99eb05de9a">Cmd_TLM_MGR_CLEAR_USER_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a6c555aa2de00da40edc0fc99eb05de9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">high_freq_tlm, low_freq_tlm を初期化  <a href="telemetry__manager_8c.html#a6c555aa2de00da40edc0fc99eb05de9a">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c555aa2de00da40edc0fc99eb05de9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af41630c9342747ebc11cc9547e11f213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#af41630c9342747ebc11cc9547e11f213">Cmd_TLM_MGR_START_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:af41630c9342747ebc11cc9547e11f213"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM送出開始  <a href="telemetry__manager_8c.html#af41630c9342747ebc11cc9547e11f213">[詳解]</a><br /></td></tr>
+<tr class="separator:af41630c9342747ebc11cc9547e11f213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3ae92748987f44cc271a5a3a073952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#acf3ae92748987f44cc271a5a3a073952">Cmd_TLM_MGR_STOP_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:acf3ae92748987f44cc271a5a3a073952"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM送出一時停止  <a href="telemetry__manager_8c.html#acf3ae92748987f44cc271a5a3a073952">[詳解]</a><br /></td></tr>
+<tr class="separator:acf3ae92748987f44cc271a5a3a073952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a287498fbf93c470382a4944b0a0a9245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a287498fbf93c470382a4944b0a0a9245">Cmd_TLM_MGR_CLEAR_TLM_TL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a287498fbf93c470382a4944b0a0a9245"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLM送出用TLをクリア  <a href="telemetry__manager_8c.html#a287498fbf93c470382a4944b0a0a9245">[詳解]</a><br /></td></tr>
+<tr class="separator:a287498fbf93c470382a4944b0a0a9245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0dd1814a1ccfd6ff0d23d450358c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a8a0dd1814a1ccfd6ff0d23d450358c4d">Cmd_TLM_MGR_REGISTER_HK_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a8a0dd1814a1ccfd6ff0d23d450358c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">HKテレメを登録  <a href="telemetry__manager_8c.html#a8a0dd1814a1ccfd6ff0d23d450358c4d">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a0dd1814a1ccfd6ff0d23d450358c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3f27e83fb8639f4d03002ca1ba0c47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a9f3f27e83fb8639f4d03002ca1ba0c47">Cmd_TLM_MGR_REGISTER_SYSTEM_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a9f3f27e83fb8639f4d03002ca1ba0c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">systemテレメを登録  <a href="telemetry__manager_8c.html#a9f3f27e83fb8639f4d03002ca1ba0c47">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f3f27e83fb8639f4d03002ca1ba0c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575fa7238aa684bbcd5f52996f0325ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a575fa7238aa684bbcd5f52996f0325ca">Cmd_TLM_MGR_REGISTER_HIGH_FREQ_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a575fa7238aa684bbcd5f52996f0325ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">high_freq_tlm を登録  <a href="telemetry__manager_8c.html#a575fa7238aa684bbcd5f52996f0325ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a575fa7238aa684bbcd5f52996f0325ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6995ee0906c66b1cf84433e460724f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#ab6995ee0906c66b1cf84433e460724f0">Cmd_TLM_MGR_REGISTER_LOW_FREQ_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:ab6995ee0906c66b1cf84433e460724f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">low_freq_tlm を登録  <a href="telemetry__manager_8c.html#ab6995ee0906c66b1cf84433e460724f0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab6995ee0906c66b1cf84433e460724f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a3d9a8901c7586aa95af9507a31c9c79f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_telemetry_manager.html">TelemetryManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a3d9a8901c7586aa95af9507a31c9c79f">telemetry_manager_</a></td></tr>
+<tr class="separator:a3d9a8901c7586aa95af9507a31c9c79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6745dd68410b8b00b49d2fbb993d488c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_telemetry_manager.html">TelemetryManager</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a6745dd68410b8b00b49d2fbb993d488c">telemetry_manager</a> = &amp;<a class="el" href="telemetry__manager_8c.html#a3d9a8901c7586aa95af9507a31c9c79f">telemetry_manager_</a></td></tr>
+<tr class="separator:a6745dd68410b8b00b49d2fbb993d488c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eebc16b0fc21aed1aad1a12a14afce3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8c.html#a5eebc16b0fc21aed1aad1a12a14afce3">TLM_MGR_packet_</a></td></tr>
+<tr class="separator:a5eebc16b0fc21aed1aad1a12a14afce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>userがテレメトリ詰まりをやTL溢れを防ぎつつ，またCDHなどがテレメトリを管理しやすくするためのApp </p>
+<dl class="section note"><dt>覚え書き</dt><dd><a href="https://gitlab.com/ut_issl/c2a/c2a_core_oss/-/issues/81">https://gitlab.com/ut_issl/c2a/c2a_core_oss/-/issues/81</a> や <a class="el" href="telemetry__manager_8h.html" title="userがテレメトリ詰まりをやTL溢れを防ぎつつ，またCDHなどがテレメトリを管理しやすくするためのApp">telemetry_manager.h</a> の最下部を参照（FIXME: あとでdocumentに移す） </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aadbf984b66811c2f5f3ec88e525b3e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbf984b66811c2f5f3ec88e525b3e37">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_CLEAR_HK_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_CLEAR_HK_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HKテレメを初期化 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00466">466</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aadbf984b66811c2f5f3ec88e525b3e37_cgraph.svg" width="2262" height="820"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aadbf984b66811c2f5f3ec88e525b3e37_icgraph.svg" width="1192" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0acf9585d0fd81a0a99523c2def1db85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acf9585d0fd81a0a99523c2def1db85">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_CLEAR_SYSTEM_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_CLEAR_SYSTEM_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>systemテレメを初期化 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00478">478</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0acf9585d0fd81a0a99523c2def1db85_cgraph.svg" width="2295" height="820"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0acf9585d0fd81a0a99523c2def1db85_icgraph.svg" width="1226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a287498fbf93c470382a4944b0a0a9245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287498fbf93c470382a4944b0a0a9245">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_CLEAR_TLM_TL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_CLEAR_TLM_TL </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM送出用TLをクリア </p>
+<dl class="section note"><dt>覚え書き</dt><dd>Cmd_TLCD_CLEAR_ALL_TIMELINE しているだけ </dd>
+<dd>
+Cmd_TLCD_CLEAR_ALL_TIMELINE をGSから送ってもいいが， TL No がマジックナンバーになるので． </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00607">607</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a287498fbf93c470382a4944b0a0a9245_cgraph.svg" width="1383" height="1203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a287498fbf93c470382a4944b0a0a9245_icgraph.svg" width="1188" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6c555aa2de00da40edc0fc99eb05de9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c555aa2de00da40edc0fc99eb05de9a">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_CLEAR_USER_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_CLEAR_USER_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>high_freq_tlm, low_freq_tlm を初期化 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>便宜上 TLM_MGR_BC_TYPE_RESERVE の BC も初期化してしまう </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00492">492</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a6c555aa2de00da40edc0fc99eb05de9a_cgraph.svg" width="1379" height="1270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a6c555aa2de00da40edc0fc99eb05de9a_icgraph.svg" width="1208" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afec62df9e704e03a65977223bc8dfea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec62df9e704e03a65977223bc8dfea8">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_INIT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_INIT </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00392">392</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_afec62df9e704e03a65977223bc8dfea8_cgraph.svg" width="1319" height="1031"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_afec62df9e704e03a65977223bc8dfea8_icgraph.svg" width="1116" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7978f2345a5be74745b820546d1e2fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7978f2345a5be74745b820546d1e2fcb">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_INIT_MASTER_BC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_INIT_MASTER_BC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>master bc の初期化 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00451">451</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a7978f2345a5be74745b820546d1e2fcb_cgraph.svg" width="1888" height="911"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a7978f2345a5be74745b820546d1e2fcb_icgraph.svg" width="1202" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a575fa7238aa684bbcd5f52996f0325ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575fa7238aa684bbcd5f52996f0325ca">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_REGISTER_HIGH_FREQ_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_REGISTER_HIGH_FREQ_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>high_freq_tlm を登録 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00661">661</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a575fa7238aa684bbcd5f52996f0325ca_cgraph.svg" width="1451" height="798"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a575fa7238aa684bbcd5f52996f0325ca_icgraph.svg" width="1154" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8a0dd1814a1ccfd6ff0d23d450358c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0dd1814a1ccfd6ff0d23d450358c4d">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_REGISTER_HK_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_REGISTER_HK_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HKテレメを登録 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00623">623</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a8a0dd1814a1ccfd6ff0d23d450358c4d_cgraph.svg" width="1451" height="798"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a8a0dd1814a1ccfd6ff0d23d450358c4d_icgraph.svg" width="1154" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab6995ee0906c66b1cf84433e460724f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6995ee0906c66b1cf84433e460724f0">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_REGISTER_LOW_FREQ_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_REGISTER_LOW_FREQ_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>low_freq_tlm を登録 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00680">680</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ab6995ee0906c66b1cf84433e460724f0_cgraph.svg" width="1451" height="798"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ab6995ee0906c66b1cf84433e460724f0_icgraph.svg" width="1154" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9f3f27e83fb8639f4d03002ca1ba0c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f3f27e83fb8639f4d03002ca1ba0c47">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_REGISTER_SYSTEM_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_REGISTER_SYSTEM_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>systemテレメを登録 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00642">642</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a9f3f27e83fb8639f4d03002ca1ba0c47_cgraph.svg" width="1451" height="798"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a9f3f27e83fb8639f4d03002ca1ba0c47_icgraph.svg" width="1154" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af41630c9342747ebc11cc9547e11f213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41630c9342747ebc11cc9547e11f213">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_START_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_START_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM送出開始 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>master bc の末尾を Cmd_TLCD_DEPLOY_BLOCK にして deploy block しているだけ </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00536">536</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_af41630c9342747ebc11cc9547e11f213_cgraph.svg" width="1378" height="1168"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_af41630c9342747ebc11cc9547e11f213_icgraph.svg" width="1164" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acf3ae92748987f44cc271a5a3a073952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3ae92748987f44cc271a5a3a073952">&#9670;&nbsp;</a></span>Cmd_TLM_MGR_STOP_TLM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TLM_MGR_STOP_TLM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TLM送出一時停止 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>master bc の末尾の Cmd_TLCD_DEPLOY_BLOCK を NOP に差し替えているだけ </dd>
+<dd>
+Cmd_TLCD_CLEAR_ALL_TIMELINE / Cmd_TLM_MGR_CLEAR_TLM_TL だと他のものも消えてしまう </dd>
+<dd>
+Cmd_TLCD_CLEAR_ALL_TIMELINE / Cmd_TLM_MGR_CLEAR_TLM_TL のほうが適切な場合もあるのでよく考えること </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00576">576</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_acf3ae92748987f44cc271a5a3a073952_cgraph.svg" width="1114" height="519"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_acf3ae92748987f44cc271a5a3a073952_icgraph.svg" width="1158" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a42ac1f2b3531856337a1e90c6eb6254e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ac1f2b3531856337a1e90c6eb6254e">&#9670;&nbsp;</a></span>TLM_MGR_add_bc_info_to_register_info_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a> TLM_MGR_add_bc_info_to_register_info_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *&#160;</td>
+          <td class="paramname"><em>register_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>bc_info_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> に使う BC 情報を登録 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">register_info</td><td>登録先の <a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TLM_MGR_ERR_CODE </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00289">289</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a42ac1f2b3531856337a1e90c6eb6254e_icgraph.svg" width="1747" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8096296bd6334a29aa18c7622eb987cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8096296bd6334a29aa18c7622eb987cb">&#9670;&nbsp;</a></span>TLM_MGR_calc_register_info_from_bc_info_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a> TLM_MGR_calc_register_info_from_bc_info_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>設定された <a class="el" href="struct_t_l_m___m_g_r___bc_info.html" title="BCの情報">TLM_MGR_BcInfo</a> から内部で使う情報 <a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> の構築 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TLM_MGR_ERR_CODE </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00241">241</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a8096296bd6334a29aa18c7622eb987cb_cgraph.svg" width="650" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a8096296bd6334a29aa18c7622eb987cb_icgraph.svg" width="1527" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af5ffec9b70960e1c8ffb5bff194ce24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ffec9b70960e1c8ffb5bff194ce24c">&#9670;&nbsp;</a></span>TLM_MGR_clear_bc_of_register_info_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_clear_bc_of_register_info_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *&#160;</td>
+          <td class="paramname"><em>register_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> 登録されている BC をクリアして NOP で埋める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">register_info</td><td>消す BC が登録されている <a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00300">300</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_af5ffec9b70960e1c8ffb5bff194ce24c_cgraph.svg" width="1980" height="820"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_af5ffec9b70960e1c8ffb5bff194ce24c_icgraph.svg" width="1442" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aca6344c0e7a1eb93e72a2c07f36ba89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6344c0e7a1eb93e72a2c07f36ba89e">&#9670;&nbsp;</a></span>TLM_MGR_clear_bc_to_nop_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_clear_bc_to_nop_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>bc_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定したBCを NOP x TLM_MGR_MAX_TLM_NUM_PER_BC で埋める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bc_id</td><td>NOPでうめるBC ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00234">234</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aca6344c0e7a1eb93e72a2c07f36ba89e_cgraph.svg" width="1764" height="820"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aca6344c0e7a1eb93e72a2c07f36ba89e_icgraph.svg" width="1912" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0b48756e83b551349cf04c30585b1cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b48756e83b551349cf04c30585b1cbf">&#9670;&nbsp;</a></span>TLM_MGR_clear_bc_to_nop_all_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_clear_bc_to_nop_all_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>すべてのBCを NOP x TLM_MGR_MAX_TLM_NUM_PER_BC で埋める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00223">223</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0b48756e83b551349cf04c30585b1cbf_cgraph.svg" width="1980" height="874"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0b48756e83b551349cf04c30585b1cbf_icgraph.svg" width="1518" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aeb3c25b77bafbf7a7b15d5ed410e22c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3c25b77bafbf7a7b15d5ed410e22c0">&#9670;&nbsp;</a></span>TLM_MGR_clear_info_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_clear_info_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AppInfo構造体のクリア </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00191">191</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aeb3c25b77bafbf7a7b15d5ed410e22c0_cgraph.svg" width="638" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aeb3c25b77bafbf7a7b15d5ed410e22c0_icgraph.svg" width="1515" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad4e7cc8d944b0b9dfc209b4dee57fe36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e7cc8d944b0b9dfc209b4dee57fe36">&#9670;&nbsp;</a></span>TLM_MGR_clear_register_info_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_clear_register_info_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *&#160;</td>
+          <td class="paramname"><em>register_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>TLM_MGR_RegisterInfoのクリア </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">register_info</td><td>クリアしたい <a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00217">217</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ad4e7cc8d944b0b9dfc209b4dee57fe36_icgraph.svg" width="1988" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5de2a6e56b5bd06b0116cc912fc4ef1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de2a6e56b5bd06b0116cc912fc4ef1b">&#9670;&nbsp;</a></span>TLM_MGR_clear_register_info_all_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_clear_register_info_all_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>すべてのTLM_MGR_RegisterInfoのクリア </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00206">206</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a5de2a6e56b5bd06b0116cc912fc4ef1b_cgraph.svg" width="424" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a5de2a6e56b5bd06b0116cc912fc4ef1b_icgraph.svg" width="1758" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac32b3a7a00616f559cc1d4b06fa21ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32b3a7a00616f559cc1d4b06fa21ccd">&#9670;&nbsp;</a></span>TLM_MGR_create_app()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> TLM_MGR_create_app </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00111">111</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ac32b3a7a00616f559cc1d4b06fa21ccd_cgraph.svg" width="399" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ac32b3a7a00616f559cc1d4b06fa21ccd_icgraph.svg" width="1003" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aaacc4ea29cf0223edc8f8e563eae3ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacc4ea29cf0223edc8f8e563eae3ba3">&#9670;&nbsp;</a></span>TLM_MGR_init_1_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TLM_MGR_init_1_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>実行時間の問題からし分割している </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>0:OK, 1:NG </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00125">125</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aaacc4ea29cf0223edc8f8e563eae3ba3_cgraph.svg" width="823" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_aaacc4ea29cf0223edc8f8e563eae3ba3_icgraph.svg" width="1302" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0d3b4b5320fcb767e79ec2581c80b310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3b4b5320fcb767e79ec2581c80b310">&#9670;&nbsp;</a></span>TLM_MGR_init_2_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TLM_MGR_init_2_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00158">158</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0d3b4b5320fcb767e79ec2581c80b310_cgraph.svg" width="835" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0d3b4b5320fcb767e79ec2581c80b310_icgraph.svg" width="1302" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0b75fadd08a5f2641b2f656727b4cb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b75fadd08a5f2641b2f656727b4cb2c">&#9670;&nbsp;</a></span>TLM_MGR_init_3_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TLM_MGR_init_3_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00175">175</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0b75fadd08a5f2641b2f656727b4cb2c_cgraph.svg" width="2166" height="848"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a0b75fadd08a5f2641b2f656727b4cb2c_icgraph.svg" width="1302" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a86b153bbb4a7d281564275efdf95667e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b153bbb4a7d281564275efdf95667e">&#9670;&nbsp;</a></span>TLM_MGR_init_4_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TLM_MGR_init_4_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00182">182</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a86b153bbb4a7d281564275efdf95667e_cgraph.svg" width="1783" height="911"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a86b153bbb4a7d281564275efdf95667e_icgraph.svg" width="1302" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2c2734264842cd85879182f1f4a1e6af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2734264842cd85879182f1f4a1e6af">&#9670;&nbsp;</a></span>TLM_MGR_init_by_am_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_init_by_am_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>App初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00117">117</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a2c2734264842cd85879182f1f4a1e6af_icgraph.svg" width="1224" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac73e2b57fc1dc9c21cacd12f0772a84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73e2b57fc1dc9c21cacd12f0772a84d">&#9670;&nbsp;</a></span>TLM_MGR_load_master_bc_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_load_master_bc_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BC全体を展開していくmaster BCの構築 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00349">349</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ac73e2b57fc1dc9c21cacd12f0772a84d_cgraph.svg" width="1587" height="772"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_ac73e2b57fc1dc9c21cacd12f0772a84d_icgraph.svg" width="1639" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abb254dddda35d23891f16afbfd91e039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb254dddda35d23891f16afbfd91e039">&#9670;&nbsp;</a></span>TLM_MGR_load_nop_bc_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TLM_MGR_load_nop_bc_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NOP で埋められた BCの構築 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00379">379</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_abb254dddda35d23891f16afbfd91e039_cgraph.svg" width="1499" height="582"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_abb254dddda35d23891f16afbfd91e039_icgraph.svg" width="2143" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2cf8d6a2174e6649a0f079f3a292fcd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf8d6a2174e6649a0f079f3a292fcd4">&#9670;&nbsp;</a></span>TLM_MGR_register_generate_tlm_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a> TLM_MGR_register_generate_tlm_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_l_m___m_g_r___register_info.html">TLM_MGR_RegisterInfo</a> *&#160;</td>
+          <td class="paramname"><em>register_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> に テレメ生成コマンドを登録する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">register_info</td><td>コマンド登録先 BC が登録されている <a class="el" href="struct_t_l_m___m_g_r___register_info.html" title="どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報">TLM_MGR_RegisterInfo</a> </td></tr>
+    <tr><td class="paramname">param</td><td>Cmd_GENERATE_TLM のコマンドパラメタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TLM_MGR_ERR_CODE </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00314">314</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a2cf8d6a2174e6649a0f079f3a292fcd4_cgraph.svg" width="1160" height="519"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="telemetry__manager_8c_a2cf8d6a2174e6649a0f079f3a292fcd4_icgraph.svg" width="1447" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a6745dd68410b8b00b49d2fbb993d488c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6745dd68410b8b00b49d2fbb993d488c">&#9670;&nbsp;</a></span>telemetry_manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_telemetry_manager.html">TelemetryManager</a>* const telemetry_manager = &amp;<a class="el" href="telemetry__manager_8c.html#a3d9a8901c7586aa95af9507a31c9c79f">telemetry_manager_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00107">107</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3d9a8901c7586aa95af9507a31c9c79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9a8901c7586aa95af9507a31c9c79f">&#9670;&nbsp;</a></span>telemetry_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_telemetry_manager.html">TelemetryManager</a> telemetry_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00106">106</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5eebc16b0fc21aed1aad1a12a14afce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eebc16b0fc21aed1aad1a12a14afce3">&#9670;&nbsp;</a></span>TLM_MGR_packet_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> TLM_MGR_packet_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00109">109</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_bac5c72f08f800c1dcf30d4637be4edf.html">Applications</a></li><li class="navelem"><a class="el" href="telemetry__manager_8c.html">telemetry_manager.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

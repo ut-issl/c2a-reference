@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/IfWrapper/uart.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('uart_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">uart.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>UART通信ラッパーのクラスです。  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+uart.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="uart_8h__incl.svg" width="190" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="uart_8h__dep__incl.svg" width="1484" height="707"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="uart_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_a_r_t___config.html">UART_Config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UARTポートの初期化、データ送信、データ受信の際に必要となる設定情報を格納する構造体  <a href="struct_u_a_r_t___config.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a8a95cc05a2b55bffdae8d53d73743814"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814">PARITY_SETTINGS</a> { <br />
+&#160;&#160;<a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814a061d25ce6384ee8bc11561122c3bd0f5">PARITY_SETTINGS_NONE</a>, 
+<a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814aff9daa3ef632d7f5c2c8e1da46daf2fe">PARITY_SETTINGS_ODD</a>, 
+<a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814a2619480b9c837609f85c34a72ae3367d">PARITY_SETTINGS_EVEN</a>, 
+<a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814aff040b2bc4e8f199578917bd9b526025">PARITY_SETTINGS_MARK</a>, 
+<br />
+&#160;&#160;<a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814a2953181b2514937568a497f36d1b48b4">PARITY_SETTINGS_SPACE</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a8a95cc05a2b55bffdae8d53d73743814"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART 用のパリティ設定  <a href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a95cc05a2b55bffdae8d53d73743814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e445348a214115bb88cfe3f7993e4b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#a85e445348a214115bb88cfe3f7993e4b">UART_DATA_LENGTH</a> { <a class="el" href="uart_8h.html#a85e445348a214115bb88cfe3f7993e4ba6c1b8a4df99834250af2c0b9bfad3c9d">UART_DATA_LENGTH_7BIT</a>, 
+<a class="el" href="uart_8h.html#a85e445348a214115bb88cfe3f7993e4bad0731846cebdac443739aabf0c593fd4">UART_DATA_LENGTH_8BIT</a>
+ }</td></tr>
+<tr class="memdesc:a85e445348a214115bb88cfe3f7993e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART データ長 (7 or 8)  <a href="uart_8h.html#a85e445348a214115bb88cfe3f7993e4b">[詳解]</a><br /></td></tr>
+<tr class="separator:a85e445348a214115bb88cfe3f7993e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89c21fdb2336f3783a1ec5876246043"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#aa89c21fdb2336f3783a1ec5876246043">UART_STOP_BIT</a> { <a class="el" href="uart_8h.html#aa89c21fdb2336f3783a1ec5876246043a72d89563c7983b6189c745c7e52d7b45">UART_STOP_BIT_1BIT</a>, 
+<a class="el" href="uart_8h.html#aa89c21fdb2336f3783a1ec5876246043a7afaafb4938d42cb1d6004c83ce94f51">UART_STOP_BIT_15BIT</a>, 
+<a class="el" href="uart_8h.html#aa89c21fdb2336f3783a1ec5876246043a8f3063800eb609a19f7d58b7f917dc18">UART_STOP_BIT_2BIT</a>
+ }</td></tr>
+<tr class="memdesc:aa89c21fdb2336f3783a1ec5876246043"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART ストップビット  <a href="uart_8h.html#aa89c21fdb2336f3783a1ec5876246043">[詳解]</a><br /></td></tr>
+<tr class="separator:aa89c21fdb2336f3783a1ec5876246043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419bd051382a1b43260fd0849dadadb3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3">UART_ERR_CODE</a> { <br />
+&#160;&#160;<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a0557f7a0801642a79ae1fc50cf814989">UART_UNKNOWN_ERR</a> = -14, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a51ec95fe1b2e4e3ec5fcfede61bbf87d">UART_DATA_NEGA_ERR</a> = -13, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a43e8bca6453467b84480012b7e143b82">UART_FIFO_FULL_ERR</a> = -12, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a558162b457313948bd87d4e8de7b7ec8">UART_RX_ALL_ERR</a> = -11, 
+<br />
+&#160;&#160;<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a376499b297f7e95b36dcc63d9c98af14">UART_FIFO_STOP_ERR</a> = -10, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a1c49440eee1df7754bc1a345891a1dc2">UART_PARITY_STOP_ERR</a> = -9, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a488a47eccf82781efc508b05633e6656">UART_STOP_BIT_ERR</a> = -8, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a26d9ba0fc49aa4eb669a6d26fe3eaff6">UART_PARITY_FIFO_ERR</a> = -7, 
+<br />
+&#160;&#160;<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a18c6c1911bacfe048e76db5e97555c37">UART_FIFO_OVER_ERR</a> = -6, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a93e1a6617858153f2c39c1ec54cbfade">UART_PARITY_ERR</a> = -5, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3ac3af3a63a7260d5ba9e65c62937dae10">UART_YET_ERR</a> = -4, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3ad6128d3b6ac3783599f213ae709a6326">UART_ALREADY_ERR</a> = -3, 
+<br />
+&#160;&#160;<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3aa1d699834fe14c2aad249441c72b119d">UART_BAUDRATE_ERR</a> = -2, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a4e255fdd83c98b2429d26208b4cfc78d">UART_CH_ERR</a> = -1, 
+<a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3a525187963c0aaa465f2a35b30b894d07">UART_OK</a> = 0
+<br />
+ }</td></tr>
+<tr class="memdesc:a419bd051382a1b43260fd0849dadadb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART用の汎用エラーコード  <a href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3">[詳解]</a><br /></td></tr>
+<tr class="separator:a419bd051382a1b43260fd0849dadadb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a1a7950b01305890cb8b48d8ee74c2133"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#a1a7950b01305890cb8b48d8ee74c2133">UART_init</a> (void *my_uart_v)</td></tr>
+<tr class="memdesc:a1a7950b01305890cb8b48d8ee74c2133"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART_CONFIG構造体をグローバルインスタンスとして定義し, ポインタを渡すことでポートを初期化する.  <a href="uart_8h.html#a1a7950b01305890cb8b48d8ee74c2133">[詳解]</a><br /></td></tr>
+<tr class="separator:a1a7950b01305890cb8b48d8ee74c2133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c60be4aa418a3d4abb73b83a49d093"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#ae3c60be4aa418a3d4abb73b83a49d093">UART_rx</a> (void *my_uart_v, void *data_v, int buffer_size)</td></tr>
+<tr class="memdesc:ae3c60be4aa418a3d4abb73b83a49d093"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART_CONFIG構造体にて指定されたchからデータを受信します  <a href="uart_8h.html#ae3c60be4aa418a3d4abb73b83a49d093">[詳解]</a><br /></td></tr>
+<tr class="separator:ae3c60be4aa418a3d4abb73b83a49d093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632db0edd9d931de93163df758ee3eae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#a632db0edd9d931de93163df758ee3eae">UART_tx</a> (void *my_uart_v, void *data_v, int data_size)</td></tr>
+<tr class="memdesc:a632db0edd9d931de93163df758ee3eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART_CONFIG構造体にて指定されたchへデータを送信します  <a href="uart_8h.html#a632db0edd9d931de93163df758ee3eae">[詳解]</a><br /></td></tr>
+<tr class="separator:a632db0edd9d931de93163df758ee3eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a534cedcefff43590c260f621a29bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8h.html#a19a534cedcefff43590c260f621a29bb">UART_reopen</a> (void *my_uart_v, int reason)</td></tr>
+<tr class="memdesc:a19a534cedcefff43590c260f621a29bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたchを開きなおす  <a href="uart_8h.html#a19a534cedcefff43590c260f621a29bb">[詳解]</a><br /></td></tr>
+<tr class="separator:a19a534cedcefff43590c260f621a29bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>UART通信ラッパーのクラスです。 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>UART，具体的にはUARTやLVTTLを想定している UART通信ラッパーは、 UARTのインターフェースを実現し、 UARTポートの初期化、データ送信、データ受信を行う、 UART通信ラッパーのクラスです。 個々の機器のインターフェースモジュールに継承させて使用します。 </dd></dl>
+
+<p class="definition"> <a class="el" href="uart_8h_source.html">uart.h</a> に定義があります。</p>
+</div><h2 class="groupheader">列挙型詳解</h2>
+<a id="a8a95cc05a2b55bffdae8d53d73743814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a95cc05a2b55bffdae8d53d73743814">&#9670;&nbsp;</a></span>PARITY_SETTINGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uart_8h.html#a8a95cc05a2b55bffdae8d53d73743814">PARITY_SETTINGS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART 用のパリティ設定 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8a95cc05a2b55bffdae8d53d73743814a061d25ce6384ee8bc11561122c3bd0f5"></a>PARITY_SETTINGS_NONE&#160;</td><td class="fielddoc"><p>パリティチェックをしない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a95cc05a2b55bffdae8d53d73743814aff9daa3ef632d7f5c2c8e1da46daf2fe"></a>PARITY_SETTINGS_ODD&#160;</td><td class="fielddoc"><p>奇数パリティ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a95cc05a2b55bffdae8d53d73743814a2619480b9c837609f85c34a72ae3367d"></a>PARITY_SETTINGS_EVEN&#160;</td><td class="fielddoc"><p>偶数パリティ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a95cc05a2b55bffdae8d53d73743814aff040b2bc4e8f199578917bd9b526025"></a>PARITY_SETTINGS_MARK&#160;</td><td class="fielddoc"><p>パリティが常に 1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a95cc05a2b55bffdae8d53d73743814a2953181b2514937568a497f36d1b48b4"></a>PARITY_SETTINGS_SPACE&#160;</td><td class="fielddoc"><p>パリティが常に 0 </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="uart_8h_source.html">uart.h</a> の <a class="el" href="uart_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a85e445348a214115bb88cfe3f7993e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e445348a214115bb88cfe3f7993e4b">&#9670;&nbsp;</a></span>UART_DATA_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uart_8h.html#a85e445348a214115bb88cfe3f7993e4b">UART_DATA_LENGTH</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART データ長 (7 or 8) </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a85e445348a214115bb88cfe3f7993e4ba6c1b8a4df99834250af2c0b9bfad3c9d"></a>UART_DATA_LENGTH_7BIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a85e445348a214115bb88cfe3f7993e4bad0731846cebdac443739aabf0c593fd4"></a>UART_DATA_LENGTH_8BIT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="uart_8h_source.html">uart.h</a> の <a class="el" href="uart_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a419bd051382a1b43260fd0849dadadb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419bd051382a1b43260fd0849dadadb3">&#9670;&nbsp;</a></span>UART_ERR_CODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uart_8h.html#a419bd051382a1b43260fd0849dadadb3">UART_ERR_CODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART用の汎用エラーコード </p>
+<dl class="section note"><dt>覚え書き</dt><dd>型はint8_tを想定しているが, if_listでラップされているためUARTの公開関数の返り値はintとなっている 基本負なのはRXの返り値は正が送ったByte数, 負がエラーコードとなっているため </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a0557f7a0801642a79ae1fc50cf814989"></a>UART_UNKNOWN_ERR&#160;</td><td class="fielddoc"><p>原因不明 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a51ec95fe1b2e4e3ec5fcfede61bbf87d"></a>UART_DATA_NEGA_ERR&#160;</td><td class="fielddoc"><p>送受信データサイズが負のエラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a43e8bca6453467b84480012b7e143b82"></a>UART_FIFO_FULL_ERR&#160;</td><td class="fielddoc"><p>TX時に送信FIFOフル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a558162b457313948bd87d4e8de7b7ec8"></a>UART_RX_ALL_ERR&#160;</td><td class="fielddoc"><p>パリティ and FIFO and ストップビット </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a376499b297f7e95b36dcc63d9c98af14"></a>UART_FIFO_STOP_ERR&#160;</td><td class="fielddoc"><p>FIFO and ストップビット </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a1c49440eee1df7754bc1a345891a1dc2"></a>UART_PARITY_STOP_ERR&#160;</td><td class="fielddoc"><p>パリティ and ストップビット </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a488a47eccf82781efc508b05633e6656"></a>UART_STOP_BIT_ERR&#160;</td><td class="fielddoc"><p>ストップビットエラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a26d9ba0fc49aa4eb669a6d26fe3eaff6"></a>UART_PARITY_FIFO_ERR&#160;</td><td class="fielddoc"><p>パリティ and FIFO </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a18c6c1911bacfe048e76db5e97555c37"></a>UART_FIFO_OVER_ERR&#160;</td><td class="fielddoc"><p>FIFOオーバーラン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a93e1a6617858153f2c39c1ec54cbfade"></a>UART_PARITY_ERR&#160;</td><td class="fielddoc"><p>パリティエラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3ac3af3a63a7260d5ba9e65c62937dae10"></a>UART_YET_ERR&#160;</td><td class="fielddoc"><p>チャンネル未オープン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3ad6128d3b6ac3783599f213ae709a6326"></a>UART_ALREADY_ERR&#160;</td><td class="fielddoc"><p>チャンネルオープン済み </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3aa1d699834fe14c2aad249441c72b119d"></a>UART_BAUDRATE_ERR&#160;</td><td class="fielddoc"><p>ボーレート異常 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a4e255fdd83c98b2429d26208b4cfc78d"></a>UART_CH_ERR&#160;</td><td class="fielddoc"><p>チャンネル異常 (Port_configに無い) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a419bd051382a1b43260fd0849dadadb3a525187963c0aaa465f2a35b30b894d07"></a>UART_OK&#160;</td><td class="fielddoc"><p>OKは0を踏襲 </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="uart_8h_source.html">uart.h</a> の <a class="el" href="uart_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa89c21fdb2336f3783a1ec5876246043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89c21fdb2336f3783a1ec5876246043">&#9670;&nbsp;</a></span>UART_STOP_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="uart_8h.html#aa89c21fdb2336f3783a1ec5876246043">UART_STOP_BIT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART ストップビット </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aa89c21fdb2336f3783a1ec5876246043a72d89563c7983b6189c745c7e52d7b45"></a>UART_STOP_BIT_1BIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa89c21fdb2336f3783a1ec5876246043a7afaafb4938d42cb1d6004c83ce94f51"></a>UART_STOP_BIT_15BIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa89c21fdb2336f3783a1ec5876246043a8f3063800eb609a19f7d58b7f917dc18"></a>UART_STOP_BIT_2BIT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="uart_8h_source.html">uart.h</a> の <a class="el" href="uart_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a1a7950b01305890cb8b48d8ee74c2133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7950b01305890cb8b48d8ee74c2133">&#9670;&nbsp;</a></span>UART_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UART_init </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_uart_v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART_CONFIG構造体をグローバルインスタンスとして定義し, ポインタを渡すことでポートを初期化する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_uart_v</td><td>初期化するUART_CONFIG構造体へのポインタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int if_listでintと統一されている </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>UART通信ラッパーのクラスを使用する時は起動時に必ず実施してください. この関数を実行する前にUART_CONFIG構造体内の設定値を設定しておく必要があります. </dd></dl>
+
+<p class="definition"> <a class="el" href="uart__sils_8cpp_source.html">uart_sils.cpp</a> の <a class="el" href="uart__sils_8cpp_source.html#l00012">12</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a19a534cedcefff43590c260f621a29bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a534cedcefff43590c260f621a29bb">&#9670;&nbsp;</a></span>UART_reopen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UART_reopen </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_uart_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定されたchを開きなおす </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_uart_v</td><td>: 開きなおす際のポート設定 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reason</td><td>: repoenの理由を示すコードなど </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="uart__sils_8cpp_source.html">uart_sils.cpp</a> の <a class="el" href="uart__sils_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae3c60be4aa418a3d4abb73b83a49d093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c60be4aa418a3d4abb73b83a49d093">&#9670;&nbsp;</a></span>UART_rx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UART_rx </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_uart_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buffer_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART_CONFIG構造体にて指定されたchからデータを受信します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_uart_v</td><td>: 対象とするUART_CONFIG構造体へのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_v</td><td>: 受信データ格納先へのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_size</td><td>: 受信データ格納先のデータサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>受信データなし </td></tr>
+    <tr><td class="paramname">正</td><td>受信データバイト数 </td></tr>
+    <tr><td class="paramname">負</td><td>エラー. UART_ERR_CODE に従う </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="uart__sils_8cpp_source.html">uart_sils.cpp</a> の <a class="el" href="uart__sils_8cpp_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="uart_8h_ae3c60be4aa418a3d4abb73b83a49d093_cgraph.svg" width="563" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a632db0edd9d931de93163df758ee3eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632db0edd9d931de93163df758ee3eae">&#9670;&nbsp;</a></span>UART_tx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UART_tx </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_uart_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART_CONFIG構造体にて指定されたchへデータを送信します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_uart_v</td><td>: 対象とするUART_CONFIG構造体へのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_v</td><td>: 送信データ格納先へのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_size</td><td>: 送信データサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int: UART_ERR_CODE に従う </dd></dl>
+
+<p class="definition"> <a class="el" href="uart__sils_8cpp_source.html">uart_sils.cpp</a> の <a class="el" href="uart__sils_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="uart_8h_a632db0edd9d931de93163df758ee3eae_cgraph.svg" width="531" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="uart_8h_a632db0edd9d931de93163df758ee3eae_icgraph.svg" width="1436" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_8e763dae40fd04f364fce2c27a9d1042.html">IfWrapper</a></li><li class="navelem"><a class="el" href="uart_8h.html">uart.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/CmdTlm/Ccsds/TCFrame.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_t_c_frame_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TCFrame.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_c_frame_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_t_c_frame_8h.html">TCFrame.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span> <span class="comment">// for memcpy</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#ad8eb293e8d4ba07d2e7a63a1f0a427a9">    6</a></span>&#160;<a class="code" href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4">TCF_VER</a> <a class="code" href="_t_c_frame_8c.html#ad8eb293e8d4ba07d2e7a63a1f0a427a9">TCF_get_ver</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0xc0; <span class="comment">// 1100 0000b</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4">TCF_VER</a> ver = (<a class="code" href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4">TCF_VER</a>)((tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos] &amp; mask) &gt;&gt; 6);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">switch</span> (ver)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4a2b63b31e6f7d54070e2f14bdfa9f01ca">TCF_VER_1</a>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> ver;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4af4547dd2a45b6d67a93135b347de20d0">TCF_VER_UNKNOWN</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#a8a5d82abf326db4fbaf4b8acfafda642">   23</a></span>&#160;<a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0b">TCF_TYPE</a> <a class="code" href="_t_c_frame_8c.html#a8a5d82abf326db4fbaf4b8acfafda642">TCF_get_type</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x30; <span class="comment">// 0011 0000b</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0b">TCF_TYPE</a> type = (<a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0b">TCF_TYPE</a>)((tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos] &amp; mask) &gt;&gt; 4);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0baa678b684020dbd226cb50a44f89ecf59">TCF_TYPE_AD</a>: <span class="comment">// FALL THROUGH</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0bacf0a99ebcefab082e3c8f8883a090dc4">TCF_TYPE_BD</a>: <span class="comment">// FALL THROUGH</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0bad49a3f0a5ce0a4198ca705af4692045c">TCF_TYPE_BC</a>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0ba8f68bb7ce8f963f419888d10c56b84c4">TCF_TYPE_UNKNOWN</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#aa3623d4290306565079220af3049d786">   42</a></span>&#160;<a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899f">TCF_SCID</a> <a class="code" href="_t_c_frame_8c.html#aa3623d4290306565079220af3049d786">TCF_get_scid</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x03; <span class="comment">// 0000 0011b</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// pos = 0の下位2bitsとpos = 1の8bitsを合わせた10bits</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899f">TCF_SCID</a> scid = (<a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899f">TCF_SCID</a>)(tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos] &amp; mask);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  scid = (<a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899f">TCF_SCID</a>)(scid &lt;&lt; 8);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  scid = (<a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899f">TCF_SCID</a>)(scid + tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos + 1]);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">switch</span> (scid)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899fac4e50f787b0699cb9796cd38a654bbcc">TCF_SCID_SAMPLE_SATELLITE</a>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> scid;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899fa3009007fba2970613a2400983505d667">TCF_SCID_UNKNOWN</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#a5f478a4f679efc9097899d4807bdf14a">   62</a></span>&#160;<a class="code" href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040">TCF_VCID</a> <a class="code" href="_t_c_frame_8c.html#a5f478a4f679efc9097899d4807bdf14a">TCF_get_vcid</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0xfc; <span class="comment">// 1111 1100b</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040">TCF_VCID</a> vcid = (<a class="code" href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040">TCF_VCID</a>)((tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos] &amp; mask) &gt;&gt; 2);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">switch</span> (vcid)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040a7b32901e4209b8edd9dc205a266380a4">TCF_VCID_REALTIME</a>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> vcid;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040a13f08e0ceef8619c1329179a46056eee">TCF_VCID_UNKNOWN</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#a51c2ff49351bbe9db73730fe65c93233">   79</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="_t_c_frame_8c.html#a51c2ff49351bbe9db73730fe65c93233">TCF_get_frame_len</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 2;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x03; <span class="comment">// 0000 0011b</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// pos = 0の下位2bitsとpos = 1の8bitsを合わせた10bits</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">size_t</span> len = (tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos] &amp; mask);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  len &lt;&lt;= 8;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  len += tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos + 1];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// TC Frameの長さ表記は0起算なので1起算に変換した値を返す</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">return</span> len + 1;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#ae24783beaa1ebc5af4b55c18fb7673b4">   93</a></span>&#160;<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="_t_c_frame_8c.html#ae24783beaa1ebc5af4b55c18fb7673b4">TCF_get_frame_seq_num</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">size_t</span> pos = 4;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(tcf-&gt;<a class="code" href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">header</a>[pos]);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="_t_c_frame_8h.html#a62e961b89b74500836ec82639b9f492d">   99</a></span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="_t_c_frame_8c.html#a62e961b89b74500836ec82639b9f492d">TCF_get_fecw</a>(<span class="keyword">const</span> <a class="code" href="struct_t_c_f.html">TCF</a>* tcf)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> fecw = tcf-&gt;<a class="code" href="struct_t_c_f.html#a32d4967329581deceb2b7ffbb1942000">fecf</a>[pos];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  fecw &lt;&lt;= 8;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  fecw += tcf-&gt;<a class="code" href="struct_t_c_f.html#a32d4967329581deceb2b7ffbb1942000">fecf</a>[pos + 1];</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> fecw;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#pragma section</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_t_c_frame_8c_html_a8a5d82abf326db4fbaf4b8acfafda642"><div class="ttname"><a href="_t_c_frame_8c.html#a8a5d82abf326db4fbaf4b8acfafda642">TCF_get_type</a></div><div class="ttdeci">TCF_TYPE TCF_get_type(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00023">TCFrame.c:23</a></div></div>
+<div class="ttc" id="a_t_c_frame_8c_html_a5f478a4f679efc9097899d4807bdf14a"><div class="ttname"><a href="_t_c_frame_8c.html#a5f478a4f679efc9097899d4807bdf14a">TCF_get_vcid</a></div><div class="ttdeci">TCF_VCID TCF_get_vcid(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00062">TCFrame.c:62</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00017">stdint.h:17</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_aac002ce1ce26f37cc6a573477877899f"><div class="ttname"><a href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899f">TCF_SCID</a></div><div class="ttdeci">TCF_SCID</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00038">TCFrame.h:38</a></div></div>
+<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="a_t_c_frame_8c_html_ad8eb293e8d4ba07d2e7a63a1f0a427a9"><div class="ttname"><a href="_t_c_frame_8c.html#ad8eb293e8d4ba07d2e7a63a1f0a427a9">TCF_get_ver</a></div><div class="ttdeci">TCF_VER TCF_get_ver(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00006">TCFrame.c:6</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_ab552c3389c79a6d785ab25d0cea2fb0baa678b684020dbd226cb50a44f89ecf59"><div class="ttname"><a href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0baa678b684020dbd226cb50a44f89ecf59">TCF_TYPE_AD</a></div><div class="ttdeci">@ TCF_TYPE_AD</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00032">TCFrame.h:32</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_aaa67dfa04fee638d52e8a118059ec3d4a2b63b31e6f7d54070e2f14bdfa9f01ca"><div class="ttname"><a href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4a2b63b31e6f7d54070e2f14bdfa9f01ca">TCF_VER_1</a></div><div class="ttdeci">@ TCF_VER_1</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00026">TCFrame.h:26</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_a39bbe8ee0fc17b0a8a49ba41279ed040a13f08e0ceef8619c1329179a46056eee"><div class="ttname"><a href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040a13f08e0ceef8619c1329179a46056eee">TCF_VCID_UNKNOWN</a></div><div class="ttdeci">@ TCF_VCID_UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00047">TCFrame.h:47</a></div></div>
+<div class="ttc" id="a_t_c_frame_8c_html_a62e961b89b74500836ec82639b9f492d"><div class="ttname"><a href="_t_c_frame_8c.html#a62e961b89b74500836ec82639b9f492d">TCF_get_fecw</a></div><div class="ttdeci">uint16_t TCF_get_fecw(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00099">TCFrame.c:99</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_aaa67dfa04fee638d52e8a118059ec3d4af4547dd2a45b6d67a93135b347de20d0"><div class="ttname"><a href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4af4547dd2a45b6d67a93135b347de20d0">TCF_VER_UNKNOWN</a></div><div class="ttdeci">@ TCF_VER_UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00027">TCFrame.h:27</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_ab552c3389c79a6d785ab25d0cea2fb0ba8f68bb7ce8f963f419888d10c56b84c4"><div class="ttname"><a href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0ba8f68bb7ce8f963f419888d10c56b84c4">TCF_TYPE_UNKNOWN</a></div><div class="ttdeci">@ TCF_TYPE_UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00035">TCFrame.h:35</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_a39bbe8ee0fc17b0a8a49ba41279ed040"><div class="ttname"><a href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040">TCF_VCID</a></div><div class="ttdeci">TCF_VCID</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00044">TCFrame.h:44</a></div></div>
+<div class="ttc" id="a_t_c_frame_8c_html_ae24783beaa1ebc5af4b55c18fb7673b4"><div class="ttname"><a href="_t_c_frame_8c.html#ae24783beaa1ebc5af4b55c18fb7673b4">TCF_get_frame_seq_num</a></div><div class="ttdeci">uint8_t TCF_get_frame_seq_num(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00093">TCFrame.c:93</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html"><div class="ttname"><a href="_t_c_frame_8h.html">TCFrame.h</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_ab552c3389c79a6d785ab25d0cea2fb0b"><div class="ttname"><a href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0b">TCF_TYPE</a></div><div class="ttdeci">TCF_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00030">TCFrame.h:30</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_aac002ce1ce26f37cc6a573477877899fa3009007fba2970613a2400983505d667"><div class="ttname"><a href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899fa3009007fba2970613a2400983505d667">TCF_SCID_UNKNOWN</a></div><div class="ttdeci">@ TCF_SCID_UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00041">TCFrame.h:41</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_a39bbe8ee0fc17b0a8a49ba41279ed040a7b32901e4209b8edd9dc205a266380a4"><div class="ttname"><a href="_t_c_frame_8h.html#a39bbe8ee0fc17b0a8a49ba41279ed040a7b32901e4209b8edd9dc205a266380a4">TCF_VCID_REALTIME</a></div><div class="ttdeci">@ TCF_VCID_REALTIME</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00046">TCFrame.h:46</a></div></div>
+<div class="ttc" id="a_t_c_frame_8c_html_a51c2ff49351bbe9db73730fe65c93233"><div class="ttname"><a href="_t_c_frame_8c.html#a51c2ff49351bbe9db73730fe65c93233">TCF_get_frame_len</a></div><div class="ttdeci">size_t TCF_get_frame_len(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00079">TCFrame.c:79</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_aac002ce1ce26f37cc6a573477877899fac4e50f787b0699cb9796cd38a654bbcc"><div class="ttname"><a href="_t_c_frame_8h.html#aac002ce1ce26f37cc6a573477877899fac4e50f787b0699cb9796cd38a654bbcc">TCF_SCID_SAMPLE_SATELLITE</a></div><div class="ttdeci">@ TCF_SCID_SAMPLE_SATELLITE</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00040">TCFrame.h:40</a></div></div>
+<div class="ttc" id="a_t_c_frame_8c_html_aa3623d4290306565079220af3049d786"><div class="ttname"><a href="_t_c_frame_8c.html#aa3623d4290306565079220af3049d786">TCF_get_scid</a></div><div class="ttdeci">TCF_SCID TCF_get_scid(const TCF *tcf)</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8c_source.html#l00042">TCFrame.c:42</a></div></div>
+<div class="ttc" id="astruct_t_c_f_html_a9b62e07fa9e4afd378a156ff23ffa017"><div class="ttname"><a href="struct_t_c_f.html#a9b62e07fa9e4afd378a156ff23ffa017">TCF::header</a></div><div class="ttdeci">uint8_t header[TCF_HEADER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00019">TCFrame.h:19</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_ab552c3389c79a6d785ab25d0cea2fb0bad49a3f0a5ce0a4198ca705af4692045c"><div class="ttname"><a href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0bad49a3f0a5ce0a4198ca705af4692045c">TCF_TYPE_BC</a></div><div class="ttdeci">@ TCF_TYPE_BC</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00034">TCFrame.h:34</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_aaa67dfa04fee638d52e8a118059ec3d4"><div class="ttname"><a href="_t_c_frame_8h.html#aaa67dfa04fee638d52e8a118059ec3d4">TCF_VER</a></div><div class="ttdeci">TCF_VER</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00024">TCFrame.h:24</a></div></div>
+<div class="ttc" id="a_t_c_frame_8h_html_ab552c3389c79a6d785ab25d0cea2fb0bacf0a99ebcefab082e3c8f8883a090dc4"><div class="ttname"><a href="_t_c_frame_8h.html#ab552c3389c79a6d785ab25d0cea2fb0bacf0a99ebcefab082e3c8f8883a090dc4">TCF_TYPE_BD</a></div><div class="ttdeci">@ TCF_TYPE_BD</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00033">TCFrame.h:33</a></div></div>
+<div class="ttc" id="astruct_t_c_f_html"><div class="ttname"><a href="struct_t_c_f.html">TCF</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00017">TCFrame.h:17</a></div></div>
+<div class="ttc" id="astruct_t_c_f_html_a32d4967329581deceb2b7ffbb1942000"><div class="ttname"><a href="struct_t_c_f.html#a32d4967329581deceb2b7ffbb1942000">TCF::fecf</a></div><div class="ttdeci">uint8_t fecf[TCF_FECF_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_frame_8h_source.html#l00021">TCFrame.h:21</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_580de7066e810e9591da0a7a5b4129a6.html">CmdTlm</a></li><li class="navelem"><a class="el" href="dir_3f31b3c29f01700c46f8beb32f05d4bf.html">Ccsds</a></li><li class="navelem"><a class="el" href="_t_c_frame_8c.html">TCFrame.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
