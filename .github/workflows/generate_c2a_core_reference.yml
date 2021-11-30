@@ -26,7 +26,7 @@ jobs:
           rm -rf ./Examples
           rm -rf ./Docs
 
-      - name: clearn previous html
+      - name: clean previous html
         working-directory: ./docs
         run: |
           rm -rf ./c2a-core
