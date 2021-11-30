@@ -19,11 +19,12 @@ jobs:
         shell: bash
         run: |
           mkdir temp && cd $_
-          git clone https://github.com/ut-issl/c2a-core.git
-          cd c2a-core/Examples/minimum_user_for_s2e/src
-          git clone https://github.com/ut-issl/c2a-core.git
-          mv c2a-core/ src_core/
-          cd src_core/
+          mkdir clone && cd $_
+          git clone --depth 1 https://github.com/ut-issl/c2a-core.git
+          cd ..
+          cp -r ./clone/c2a-core/ ./c2a-core/
+          cp -r ./clone/c2a-core/ ./c2a-core/Examples/minimum_user_for_s2e/src/src_core/
+          cd ./c2a-core/Examples/minimum_user_for_s2e/src/src_core/
           rm -rf ./Examples
           rm -rf ./Docs
 
@@ -44,7 +45,6 @@ jobs:
       - name: deploy
         run: |
           git branch -a
-          git pull
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
