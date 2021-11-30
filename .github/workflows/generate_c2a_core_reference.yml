@@ -1,0 +1,41 @@
+name: Generate C2A Core Reference
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate_c2a_core_reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install deps
+        run: |
+          sudo apt install -y doxygen graphviz
+
+      - name: clone c2a and setup
+        shell: bash
+        run: |
+          mkdir temp && cd $_
+          git clone -b feature/add_dixygen_makefile https://github.com/ut-issl/c2a-core.git
+          cd c2a-core
+          ./setup.sh
+
+      - name: clearn previous html
+        working-directory: ./docs
+        run: |
+          rm -rf ./c2a-core
+          mkdir ./c2a-core
+
+      - name: build
+        working-directory: ./temp/c2a-core/Examples/minimum_user_for_s2e
+        run: doxygen
+
+      - name: deploy
+        run: |
+          git pull
+          git config --local user.email "ryo.suzumoto@gmail.com"
+          git config --local user.name "Ryo Suzumoto"
+          git add .
+          git commit -am "update doxygen: C2A Core"
+          git push origin main
