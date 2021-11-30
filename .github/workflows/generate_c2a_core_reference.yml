@@ -26,6 +26,16 @@ jobs:
           rm -rf ./Examples
           rm -rf ./Docs
 
+      - name: get commit hash
+        id: c2a_commit
+        run: |
+          hash=$(git rev-parse HEAD)
+          hash_short=$(git rev-parse --short HEAD)
+          echo "commit hash: ${hash}"
+          echo "commit hash(short): ${hash_short}"
+          echo "::set-output name=hash::${hash}"
+          echo "::set-output name=hash_short::${hash_short}"
+
       - name: clean previous html
         working-directory: ./docs
         run: |
@@ -39,6 +49,20 @@ jobs:
       - name: move files
         working-directory: ./docs/c2a-core/html
         run: mv * ../
+
+      - name: add commit info for status badge
+        working-directory: ./docs/c2a-core
+        run: |
+          JSON=$(cat << EOS
+          {
+            "schemaVersion": 1,
+            "label": "commit hash",
+            "message": "${{ steps.c2a_commit.outputs.hash_short }}",
+            "color": "orange"
+          }
+          EOS
+          )
+          echo "$JSON" | jq | tee ./status_commit.json
 
       - name: deploy
         run: |
