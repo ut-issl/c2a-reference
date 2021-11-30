@@ -45,7 +45,8 @@ jobs:
           git branch -a
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git diff --exit-code
+          git add .
+          git diff --exit-code --cached
           if [ $? -ne 0 ]; then \
             git commit -am "update doxygen: C2A Core"; \
             git push origin; \
