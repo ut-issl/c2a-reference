@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: pages
 
       - name: install deps
         run: |
@@ -35,11 +37,16 @@ jobs:
         working-directory: ./temp/c2a-core/Examples/minimum_user_for_s2e
         run: doxygen
 
+      - name: move files
+        working-directory: ./docs/c2a-core/html
+        run: mv * ../
+
       - name: deploy
         run: |
+          git branch -a
           git pull
-          git config --local user.email "ryo.suzumoto@gmail.com"
-          git config --local user.name "Ryo Suzumoto"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -am "update doxygen: C2A Core"
-          git push origin main
+          git push origin
