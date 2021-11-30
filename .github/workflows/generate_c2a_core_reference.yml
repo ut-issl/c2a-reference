@@ -19,9 +19,9 @@ jobs:
         shell: bash
         run: |
           mkdir temp && cd $_
-          git clone -b feature/add_dixygen_makefile https://github.com/ut-issl/c2a-core.git
+          git clone https://github.com/ut-issl/c2a-core.git
           cd c2a-core/Examples/minimum_user_for_s2e/src
-          git clone -b feature/add_dixygen_makefile https://github.com/ut-issl/c2a-core.git
+          git clone https://github.com/ut-issl/c2a-core.git
           mv c2a-core/ src_core/
           cd src_core/
           rm -rf ./Examples
