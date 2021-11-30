@@ -48,6 +48,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           # 1 file changed, 2 insertions(+), 3 deletions(-) みたいなのをひっかける
           if (git diff --shortstat | grep '[0-9]'); then \
-            git commit -am "update doxygen: C2A Core";  \
-            git push origin;  \
+            git commit -am "update doxygen: C2A Core"; \
+            git push origin; \
+            echo "New reference is deployed!"; \
+          else \
+            echo "There is no update"; \
           fi
