@@ -46,6 +46,8 @@ jobs:
           git branch -a
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -am "update doxygen: C2A Core"
-          git push origin
+          # 1 file changed, 2 insertions(+), 3 deletions(-) みたいなのをひっかける
+          if (git diff --shortstat | grep '[0-9]'); then \
+            git commit -am "update doxygen: C2A Core";  \
+            git push origin;  \
+          fi
