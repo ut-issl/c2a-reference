@@ -64,6 +64,21 @@ jobs:
           )
           echo "$JSON" | jq | tee ./status_commit.json
 
+      - name: add update date info for status badge
+        working-directory: ./docs/c2a-core
+        run: |
+          DATE=$(TZ=Asia/Tokyo date -u +"%Y-%m-%d %H:%M:%S")
+          JSON=$(cat << EOS
+          {
+            "schemaVersion": 1,
+            "label": "updated",
+            "message": "${DATE}",
+            "color": "orange"
+          }
+          EOS
+          )
+          echo "$JSON" | jq | tee ./status_updated.json
+
       - name: deploy
         run: |
           git branch -a
