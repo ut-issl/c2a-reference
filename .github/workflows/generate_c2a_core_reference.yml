@@ -29,6 +29,7 @@ jobs:
 
       - name: get commit hash
         id: c2a_commit
+        working-directory: ./temp/clone/c2a-core
         run: |
           hash=$(git rev-parse HEAD)
           hash_short=$(git rev-parse --short HEAD)
