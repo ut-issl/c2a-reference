@@ -13,8 +13,6 @@ var telemetry__frame_8c =
     [ "TF_copy_u8", "telemetry__frame_8c.html#a3ddf3d3883e35734d54a78e04abfdf89", null ],
     [ "TF_generate_contents", "telemetry__frame_8c.html#a43dad479e72825ab429f5b2336ab3e45", null ],
     [ "TF_initialize", "telemetry__frame_8c.html#a76cf4c72318af4ce953abdb8b522e787", null ],
-    [ "TF_page_no", "telemetry__frame_8c.html#a0141871cca13ac9e79794dc331cba248", null ],
-    [ "TF_page_no_", "telemetry__frame_8c.html#a29b0122340290be6db9a55bfd35e9872", null ],
-    [ "tlm_table", "telemetry__frame_8c.html#a45cc2e1af0c320e4436b04dfab25ced2", null ],
-    [ "tlm_table_", "telemetry__frame_8c.html#ab3224addb01940e1560e8735322fa002", null ]
+    [ "telemetry_frame", "telemetry__frame_8c.html#ab2806697d5d9429f811feacb114252d7", null ],
+    [ "telemetry_frame_", "telemetry__frame_8c.html#afad8b1a2a7bcb599d75b4022983bac71", null ]
 ];

@@ -111,8 +111,10 @@ telemetry_frame.c の依存先関係図:</div>
 <tr class="memitem:aa2b0b8f13e2b7f5ea479194835a6e2c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#aa2b0b8f13e2b7f5ea479194835a6e2c6">initialize_tlm_table_</a> (void)</td></tr>
 <tr class="separator:aa2b0b8f13e2b7f5ea479194835a6e2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43dad479e72825ab429f5b2336ab3e45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#a43dad479e72825ab429f5b2336ab3e45">TF_generate_contents</a> (int packet_id, unsigned char *contents, int max_len)</td></tr>
+<tr class="memdesc:a43dad479e72825ab429f5b2336ab3e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">テレメを実際に生成する関数  <a href="telemetry__frame_8c.html#a43dad479e72825ab429f5b2336ab3e45">[詳解]</a><br /></td></tr>
 <tr class="separator:a43dad479e72825ab429f5b2336ab3e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76cf4c72318af4ce953abdb8b522e787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#a76cf4c72318af4ce953abdb8b522e787">TF_initialize</a> (void)</td></tr>
+<tr class="memdesc:a76cf4c72318af4ce953abdb8b522e787"><td class="mdescLeft">&#160;</td><td class="mdescRight">TF の初期化  <a href="telemetry__frame_8c.html#a76cf4c72318af4ce953abdb8b522e787">[詳解]</a><br /></td></tr>
 <tr class="separator:a76cf4c72318af4ce953abdb8b522e787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ddf3d3883e35734d54a78e04abfdf89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#a3ddf3d3883e35734d54a78e04abfdf89">TF_copy_u8</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *ptr, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data)</td></tr>
 <tr class="separator:a3ddf3d3883e35734d54a78e04abfdf89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,14 +139,10 @@ telemetry_frame.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:ab3224addb01940e1560e8735322fa002"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_tlm_info.html">TlmInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#ab3224addb01940e1560e8735322fa002">tlm_table_</a> [<a class="el" href="telemetry__frame__params_8h.html#aae05defac6da81379d78bd56c20276c2">TLM_MAX_TLMS</a>]</td></tr>
-<tr class="separator:ab3224addb01940e1560e8735322fa002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45cc2e1af0c320e4436b04dfab25ced2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_tlm_info.html">TlmInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#a45cc2e1af0c320e4436b04dfab25ced2">tlm_table</a></td></tr>
-<tr class="separator:a45cc2e1af0c320e4436b04dfab25ced2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29b0122340290be6db9a55bfd35e9872"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#a29b0122340290be6db9a55bfd35e9872">TF_page_no_</a></td></tr>
-<tr class="separator:a29b0122340290be6db9a55bfd35e9872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0141871cca13ac9e79794dc331cba248"><td class="memItemLeft" align="right" valign="top">const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#a0141871cca13ac9e79794dc331cba248">TF_page_no</a></td></tr>
-<tr class="separator:a0141871cca13ac9e79794dc331cba248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad8b1a2a7bcb599d75b4022983bac71"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_telemetry_frame.html">TelemetryFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#afad8b1a2a7bcb599d75b4022983bac71">telemetry_frame_</a></td></tr>
+<tr class="separator:afad8b1a2a7bcb599d75b4022983bac71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2806697d5d9429f811feacb114252d7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_telemetry_frame.html">TelemetryFrame</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__frame_8c.html#ab2806697d5d9429f811feacb114252d7">telemetry_frame</a> = &amp;<a class="el" href="telemetry__frame_8c.html#afad8b1a2a7bcb599d75b4022983bac71">telemetry_frame_</a></td></tr>
+<tr class="separator:ab2806697d5d9429f811feacb114252d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>テレメトリの登録，テレメトリ関連処理 </p>
@@ -167,7 +165,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00147">147</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00142">142</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -199,7 +197,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00168">168</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00162">162</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -239,7 +237,7 @@ telemetry_frame.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00050">50</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -275,7 +273,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00129">129</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00124">124</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -311,7 +309,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00111">111</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00106">106</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -341,7 +339,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00095">95</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00090">90</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -371,7 +369,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00102">102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00097">97</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -407,7 +405,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00089">89</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00084">84</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -443,7 +441,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00073">73</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00068">68</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -479,7 +477,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00080">80</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00075">75</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -515,7 +513,7 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00067">67</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00062">62</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -557,7 +555,18 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00021">21</a> 行目に定義があります。</p>
+<p>テレメを実際に生成する関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet_id</td><td>Tlm ID </td></tr>
+    <tr><td class="paramname">contents</td><td>テレメを作る body へのポインタ </td></tr>
+    <tr><td class="paramname">max_len</td><td>テレメの body として使える最大長 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功時はテレメ長，失敗時は TF_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00020">20</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -583,7 +592,16 @@ telemetry_frame.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00038">38</a> 行目に定義があります。</p>
+<p>TF の初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00036">36</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -600,14 +618,14 @@ telemetry_frame.c の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="a0141871cca13ac9e79794dc331cba248"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0141871cca13ac9e79794dc331cba248">&#9670;&nbsp;</a></span>TF_page_no</h2>
+<a id="ab2806697d5d9429f811feacb114252d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2806697d5d9429f811feacb114252d7">&#9670;&nbsp;</a></span>telemetry_frame</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int* TF_page_no</td>
+          <td class="memname">const <a class="el" href="struct_telemetry_frame.html">TelemetryFrame</a>* const telemetry_frame = &amp;<a class="el" href="telemetry__frame_8c.html#afad8b1a2a7bcb599d75b4022983bac71">telemetry_frame_</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -616,8 +634,8 @@ telemetry_frame.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a29b0122340290be6db9a55bfd35e9872"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29b0122340290be6db9a55bfd35e9872">&#9670;&nbsp;</a></span>TF_page_no_</h2>
+<a id="afad8b1a2a7bcb599d75b4022983bac71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad8b1a2a7bcb599d75b4022983bac71">&#9670;&nbsp;</a></span>telemetry_frame_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -626,7 +644,7 @@ telemetry_frame.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int TF_page_no_</td>
+          <td class="memname"><a class="el" href="struct_telemetry_frame.html">TelemetryFrame</a> telemetry_frame_</td>
         </tr>
       </table>
   </td>
@@ -637,46 +655,6 @@ telemetry_frame.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00016">16</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a45cc2e1af0c320e4436b04dfab25ced2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45cc2e1af0c320e4436b04dfab25ced2">&#9670;&nbsp;</a></span>tlm_table</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="struct_tlm_info.html">TlmInfo</a>* tlm_table</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00015">15</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ab3224addb01940e1560e8735322fa002"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3224addb01940e1560e8735322fa002">&#9670;&nbsp;</a></span>tlm_table_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_tlm_info.html">TlmInfo</a> tlm_table_[<a class="el" href="telemetry__frame__params_8h.html#aae05defac6da81379d78bd56c20276c2">TLM_MAX_TLMS</a>]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="telemetry__frame_8c_source.html">telemetry_frame.c</a> の <a class="el" href="telemetry__frame_8c_source.html#l00014">14</a> 行目に定義があります。</p>
 
 </div>
 </div>

@@ -114,8 +114,11 @@ command_analyze.h の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_cmd_info.html">CmdInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドテーブルの要素となる構造体  <a href="struct_cmd_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a___cmd_info.html">CA_CmdInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドテーブルの要素となる構造体  <a href="struct_c_a___cmd_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_command_analyze.html">CommandAnalyze</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_command_analyze.html" title="CommandAnalyze の Info 構造体">CommandAnalyze</a> の Info 構造体  <a href="struct_command_analyze.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -126,9 +129,9 @@ command_analyze.h の依存先関係図:</div>
 <tr class="memitem:a7d6acf0bfcb333af3a2fdf0924501987"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a7d6acf0bfcb333af3a2fdf0924501987">CA_TLM_PAGE_MAX</a>&#160;&#160;&#160;(24)</td></tr>
 <tr class="memdesc:a7d6acf0bfcb333af3a2fdf0924501987"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドテーブルページ数（ページネーション用）  <a href="command__analyze_8h.html#a7d6acf0bfcb333af3a2fdf0924501987">[詳解]</a><br /></td></tr>
 <tr class="separator:a7d6acf0bfcb333af3a2fdf0924501987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19fe77f583126a0cac9454c4749e4778"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a19fe77f583126a0cac9454c4749e4778">CMD_MAX_CMDS</a>&#160;&#160;&#160;(<a class="el" href="command__analyze__params_8h.html#abddb99784453f0241b5aaa10d3be1c63">CA_TLM_PAGE_SIZE</a> * <a class="el" href="command__analyze__params_8h.html#a7d6acf0bfcb333af3a2fdf0924501987">CA_TLM_PAGE_MAX</a>)</td></tr>
-<tr class="memdesc:a19fe77f583126a0cac9454c4749e4778"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドテーブルサイズ．すなわち登録できる最大コマンド数  <a href="command__analyze_8h.html#a19fe77f583126a0cac9454c4749e4778">[詳解]</a><br /></td></tr>
-<tr class="separator:a19fe77f583126a0cac9454c4749e4778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb0fc70c120891458e17ef1d8714171"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a9bb0fc70c120891458e17ef1d8714171">CA_MAX_CMDS</a>&#160;&#160;&#160;(<a class="el" href="command__analyze__params_8h.html#abddb99784453f0241b5aaa10d3be1c63">CA_TLM_PAGE_SIZE</a> * <a class="el" href="command__analyze__params_8h.html#a7d6acf0bfcb333af3a2fdf0924501987">CA_TLM_PAGE_MAX</a>)</td></tr>
+<tr class="memdesc:a9bb0fc70c120891458e17ef1d8714171"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドテーブルサイズ．すなわち登録できる最大コマンド数  <a href="command__analyze_8h.html#a9bb0fc70c120891458e17ef1d8714171">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bb0fc70c120891458e17ef1d8714171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
@@ -146,7 +149,7 @@ command_analyze.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:ae6d1f376bf4e1c9c4b63bc3f04924c8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#ae6d1f376bf4e1c9c4b63bc3f04924c8a">CA_initialize</a> (void)</td></tr>
-<tr class="memdesc:ae6d1f376bf4e1c9c4b63bc3f04924c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAの初期化  <a href="command__analyze_8h.html#ae6d1f376bf4e1c9c4b63bc3f04924c8a">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ae6d1f376bf4e1c9c4b63bc3f04924c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CA の初期化  <a href="command__analyze_8h.html#ae6d1f376bf4e1c9c4b63bc3f04924c8a">[詳解]</a><br /></td></tr>
 <tr class="separator:ae6d1f376bf4e1c9c4b63bc3f04924c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bfd90a24682bbb8a68779d95ef31ee0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a2bfd90a24682bbb8a68779d95ef31ee0">CA_execute_cmd</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
 <tr class="memdesc:a2bfd90a24682bbb8a68779d95ef31ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド実行の本体  <a href="command__analyze_8h.html#a2bfd90a24682bbb8a68779d95ef31ee0">[詳解]</a><br /></td></tr>
@@ -154,9 +157,9 @@ command_analyze.h の依存先関係図:</div>
 <tr class="memitem:ae878a1a8ce00cc7468fbdd5bc5aba864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="command__analyze_8h.html#acf28189c75b3845a1ce8c1010da7ea79">CA_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#ae878a1a8ce00cc7468fbdd5bc5aba864">CA_ckeck_cmd_param_len</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_code, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> param_len)</td></tr>
 <tr class="memdesc:ae878a1a8ce00cc7468fbdd5bc5aba864"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドパラメタ長をチェックする  <a href="command__analyze_8h.html#ae878a1a8ce00cc7468fbdd5bc5aba864">[詳解]</a><br /></td></tr>
 <tr class="separator:ae878a1a8ce00cc7468fbdd5bc5aba864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad36fa8ab7c3cc0d70e411f238f79fe4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#ad36fa8ab7c3cc0d70e411f238f79fe4b">CA_load_cmd_table</a> (<a class="el" href="struct_cmd_info.html">CmdInfo</a> <a class="el" href="command__analyze_8c.html#ab066cb588853f30da10410f068abd7ff">cmd_table_</a>[<a class="el" href="command__analyze__params_8h.html#a19fe77f583126a0cac9454c4749e4778">CMD_MAX_CMDS</a>])</td></tr>
-<tr class="memdesc:ad36fa8ab7c3cc0d70e411f238f79fe4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd Tableのロード  <a href="command__analyze_8h.html#ad36fa8ab7c3cc0d70e411f238f79fe4b">[詳解]</a><br /></td></tr>
-<tr class="separator:ad36fa8ab7c3cc0d70e411f238f79fe4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa375895192b16d8e7f0ff4545b54e6c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#aa375895192b16d8e7f0ff4545b54e6c4">CA_load_cmd_table</a> (<a class="el" href="struct_c_a___cmd_info.html">CA_CmdInfo</a> cmd_table[<a class="el" href="command__analyze__params_8h.html#a9bb0fc70c120891458e17ef1d8714171">CA_MAX_CMDS</a>])</td></tr>
+<tr class="memdesc:aa375895192b16d8e7f0ff4545b54e6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cmd Tableのロード  <a href="command__analyze_8h.html#aa375895192b16d8e7f0ff4545b54e6c4">[詳解]</a><br /></td></tr>
+<tr class="separator:aa375895192b16d8e7f0ff4545b54e6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab9b069d2040830c8016249999266fbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#aab9b069d2040830c8016249999266fbd">Cmd_CA_REGISTER_CMD</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
 <tr class="separator:aab9b069d2040830c8016249999266fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ee20a734a5524845009a71a43fd6836"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a5ee20a734a5524845009a71a43fd6836">Cmd_CA_SET_PAGE_FOR_TLM</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
@@ -164,16 +167,32 @@ command_analyze.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:adcf7c0468dfaf27da682197b280f29a9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_cmd_info.html">CmdInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#adcf7c0468dfaf27da682197b280f29a9">cmd_table</a></td></tr>
-<tr class="separator:adcf7c0468dfaf27da682197b280f29a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f8b9ec1e402806ff9e2411a42806a7d"><td class="memItemLeft" align="right" valign="top">const int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a3f8b9ec1e402806ff9e2411a42806a7d">CA_page_no</a></td></tr>
-<tr class="separator:a3f8b9ec1e402806ff9e2411a42806a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8df03712e5fc0231be29d1e1ba7d57c0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_command_analyze.html">CommandAnalyze</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__analyze_8h.html#a8df03712e5fc0231be29d1e1ba7d57c0">command_analyze</a></td></tr>
+<tr class="separator:a8df03712e5fc0231be29d1e1ba7d57c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コマンドの実行・登録，コマンド関連処理 </p>
 
 <p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> に定義があります。</p>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a9bb0fc70c120891458e17ef1d8714171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb0fc70c120891458e17ef1d8714171">&#9670;&nbsp;</a></span>CA_MAX_CMDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CA_MAX_CMDS&#160;&#160;&#160;(<a class="el" href="command__analyze__params_8h.html#abddb99784453f0241b5aaa10d3be1c63">CA_TLM_PAGE_SIZE</a> * <a class="el" href="command__analyze__params_8h.html#a7d6acf0bfcb333af3a2fdf0924501987">CA_TLM_PAGE_MAX</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コマンドテーブルサイズ．すなわち登録できる最大コマンド数 </p>
+
+<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a7d6acf0bfcb333af3a2fdf0924501987"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d6acf0bfcb333af3a2fdf0924501987">&#9670;&nbsp;</a></span>CA_TLM_PAGE_MAX</h2>
 
@@ -207,24 +226,6 @@ command_analyze.h の依存先関係図:</div>
 <p>コマンドテーブルの1テレメトリパケット(=1ページ)に格納されるコマンド数（ページネーション用） </p>
 
 <p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00011">11</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a19fe77f583126a0cac9454c4749e4778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19fe77f583126a0cac9454c4749e4778">&#9670;&nbsp;</a></span>CMD_MAX_CMDS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CMD_MAX_CMDS&#160;&#160;&#160;(<a class="el" href="command__analyze__params_8h.html#abddb99784453f0241b5aaa10d3be1c63">CA_TLM_PAGE_SIZE</a> * <a class="el" href="command__analyze__params_8h.html#a7d6acf0bfcb333af3a2fdf0924501987">CA_TLM_PAGE_MAX</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>コマンドテーブルサイズ．すなわち登録できる最大コマンド数 </p>
-
-<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00013">13</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -315,7 +316,7 @@ command_analyze.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>CA_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00068">68</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -356,7 +357,7 @@ command_analyze.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>CCP_EXEC_STS </dd></dl>
 
-<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00050">50</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00046">46</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -388,7 +389,7 @@ command_analyze.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>CAの初期化 </p>
+<p>CA の初期化 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td></td></tr>
@@ -397,7 +398,7 @@ command_analyze.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00017">17</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -413,8 +414,8 @@ command_analyze.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ad36fa8ab7c3cc0d70e411f238f79fe4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad36fa8ab7c3cc0d70e411f238f79fe4b">&#9670;&nbsp;</a></span>CA_load_cmd_table()</h2>
+<a id="aa375895192b16d8e7f0ff4545b54e6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa375895192b16d8e7f0ff4545b54e6c4">&#9670;&nbsp;</a></span>CA_load_cmd_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,8 +423,8 @@ command_analyze.h の依存先関係図:</div>
         <tr>
           <td class="memname">void CA_load_cmd_table </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_cmd_info.html">CmdInfo</a>&#160;</td>
-          <td class="paramname"><em>cmd_table_</em>[CMD_MAX_CMDS]</td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_c_a___cmd_info.html">CA_CmdInfo</a>&#160;</td>
+          <td class="paramname"><em>cmd_table</em>[CA_MAX_CMDS]</td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -433,7 +434,7 @@ command_analyze.h の依存先関係図:</div>
 <dl class="section note"><dt>覚え書き</dt><dd>定義は /src_user/CmdTlm/CommandDefinitions.c にある </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cmd_table_</td><td>Cmd Tableの実体 </td></tr>
+    <tr><td class="paramname">cmd_table</td><td>Cmd Tableの実体 </td></tr>
   </table>
   </dd>
 </dl>
@@ -443,7 +444,7 @@ command_analyze.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="command__analyze_8h_ad36fa8ab7c3cc0d70e411f238f79fe4b_icgraph.svg" width="911" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="command__analyze_8h_aa375895192b16d8e7f0ff4545b54e6c4_icgraph.svg" width="911" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -465,7 +466,7 @@ command_analyze.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00094">94</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00090">90</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -497,7 +498,7 @@ command_analyze.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00120">120</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00116">116</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -514,35 +515,19 @@ command_analyze.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="a3f8b9ec1e402806ff9e2411a42806a7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f8b9ec1e402806ff9e2411a42806a7d">&#9670;&nbsp;</a></span>CA_page_no</h2>
+<a id="a8df03712e5fc0231be29d1e1ba7d57c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df03712e5fc0231be29d1e1ba7d57c0">&#9670;&nbsp;</a></span>command_analyze</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int* CA_page_no</td>
+          <td class="memname">const <a class="el" href="struct_command_analyze.html">CommandAnalyze</a>* const command_analyze</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00014">14</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="adcf7c0468dfaf27da682197b280f29a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcf7c0468dfaf27da682197b280f29a9">&#9670;&nbsp;</a></span>cmd_table</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="struct_cmd_info.html">CmdInfo</a>* cmd_table</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="command__analyze_8c_source.html">command_analyze.c</a> の <a class="el" href="command__analyze_8c_source.html#l00012">12</a> 行目に定義があります。</p>
 
 </div>
 </div>

@@ -6,8 +6,6 @@ var command__analyze_8c =
     [ "CA_initialize_cmd_table_", "command__analyze_8c.html#a1c14bffa7fb046793b95bc26378899b1", null ],
     [ "Cmd_CA_REGISTER_CMD", "command__analyze_8c.html#aab9b069d2040830c8016249999266fbd", null ],
     [ "Cmd_CA_SET_PAGE_FOR_TLM", "command__analyze_8c.html#a5ee20a734a5524845009a71a43fd6836", null ],
-    [ "CA_page_no", "command__analyze_8c.html#a3f8b9ec1e402806ff9e2411a42806a7d", null ],
-    [ "CA_page_no_", "command__analyze_8c.html#a0d012a5f9ee5b9279dcb29cf40dae4c2", null ],
-    [ "cmd_table", "command__analyze_8c.html#adcf7c0468dfaf27da682197b280f29a9", null ],
-    [ "cmd_table_", "command__analyze_8c.html#ab066cb588853f30da10410f068abd7ff", null ]
+    [ "command_analyze", "command__analyze_8c.html#a8df03712e5fc0231be29d1e1ba7d57c0", null ],
+    [ "command_analyze_", "command__analyze_8c.html#a10532e831dc74ee9ece0e97c6380efe4", null ]
 ];
