@@ -22,11 +22,23 @@ jobs:
           git clone --depth 1 https://github.com/ut-issl/c2a-core.git ./clone/c2a-core
           cp -r ./clone/c2a-core/ ./c2a-core/
           cp -r ./clone/c2a-core/ ./c2a-core/Examples/minimum_user_for_s2e/src/src_core/
+          rm -rf ./c2a-core/Examples/minimum_user_for_s2e/src/s2e_mockup
           cd ./c2a-core/Examples/minimum_user_for_s2e/src/src_core/
           rm -rf ./Examples
           rm -rf ./Docs
 
-      - name: clearn previous html
+      - name: get commit hash
+        id: c2a_commit
+        working-directory: ./temp/clone/c2a-core
+        run: |
+          hash=$(git rev-parse HEAD)
+          hash_short=$(git rev-parse --short HEAD)
+          echo "commit hash: ${hash}"
+          echo "commit hash(short): ${hash_short}"
+          echo "::set-output name=hash::${hash}"
+          echo "::set-output name=hash_short::${hash_short}"
+
+      - name: clean previous html
         working-directory: ./docs
         run: |
           rm -rf ./c2a-core
@@ -39,6 +51,42 @@ jobs:
       - name: move files
         working-directory: ./docs/c2a-core/html
         run: mv * ../
+
+      - name: add commit info for status badge
+        working-directory: ./docs/c2a-core
+        run: |
+          JSON=$(cat << EOS
+          {
+            "schemaVersion": 1,
+            "label": "commit hash",
+            "message": "${{ steps.c2a_commit.outputs.hash_short }}",
+            "color": "orange"
+          }
+          EOS
+          )
+          echo "$JSON" | jq | tee ./status_commit.json
+
+      - name: add update date info for status badge
+        working-directory: ./docs/c2a-core
+        run: |
+          DATE=$(TZ=Asia/Tokyo date -u +"%Y-%m-%d %H:%M:%S")
+          JSON=$(cat << EOS
+          {
+            "schemaVersion": 1,
+            "label": "updated",
+            "message": "${DATE}",
+            "color": "orange"
+          }
+          EOS
+          )
+          echo "$JSON" | jq | tee ./status_updated.json
+
+      - name: add github link
+        working-directory: ./docs/c2a-core
+        run: |
+          cat > redirect.html << EOS
+          <meta http-equiv="refresh" content="1;URL=https://github.com/ut-issl/c2a-core/tree/${{ steps.c2a_commit.outputs.hash }}">
+          EOS
 
       - name: deploy
         run: |
