@@ -8,6 +8,7 @@ var obc__time_8h =
     [ "OBCT_STEPS_PER_CYCLE", "obc__time_8h.html#ad4d252a60b3bc45c8b2606765691e613", null ],
     [ "cycle_t", "obc__time_8h.html#ab23c4cc9af553742108d56de692e750f", null ],
     [ "step_t", "obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773", null ],
+    [ "OBCT_add", "obc__time_8h.html#a66a185dfe9d335e03678035de616964e", null ],
     [ "OBCT_clear", "obc__time_8h.html#af728cdbeae57ea5bf7f25ba5a3776e60", null ],
     [ "OBCT_clear_unix_time_info", "obc__time_8h.html#a33aa7a29137ba1988a645bd94f4ab2bd", null ],
     [ "OBCT_compare", "obc__time_8h.html#a8d70081c0b7615e9381c431ae5f8dca2", null ],
