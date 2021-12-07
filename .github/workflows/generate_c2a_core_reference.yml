@@ -58,7 +58,7 @@ jobs:
           JSON=$(cat << EOS
           {
             "schemaVersion": 1,
-            "label": "commit hash",
+            "label": "Target commit",
             "message": "${{ steps.c2a_commit.outputs.hash_short }}",
             "color": "orange"
           }
@@ -73,7 +73,7 @@ jobs:
           JSON=$(cat << EOS
           {
             "schemaVersion": 1,
-            "label": "updated",
+            "label": "Updated at",
             "message": "${DATE}",
             "color": "orange"
           }
