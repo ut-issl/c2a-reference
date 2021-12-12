@@ -22,6 +22,7 @@ var annotated_dup =
     [ "BlockCommandLoader", "struct_block_command_loader.html", "struct_block_command_loader" ],
     [ "BlockCommandTable", "struct_block_command_table.html", "struct_block_command_table" ],
     [ "CA_CmdInfo", "struct_c_a___cmd_info.html", "struct_c_a___cmd_info" ],
+    [ "CA_PackedParamSizeInfo", "struct_c_a___packed_param_size_info.html", "struct_c_a___packed_param_size_info" ],
     [ "CCSDS_Config", "struct_c_c_s_d_s___config.html", "struct_c_c_s_d_s___config" ],
     [ "CCSDS_Info", "struct_c_c_s_d_s___info.html", "struct_c_c_s_d_s___info" ],
     [ "CDIS_EXEC_INFO", "struct_c_d_i_s___e_x_e_c___i_n_f_o.html", "struct_c_d_i_s___e_x_e_c___i_n_f_o" ],

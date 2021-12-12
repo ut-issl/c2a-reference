@@ -92,23 +92,26 @@ $(document).ready(function(){initNavTree('struct_c_a___cmd_info.html',''); initR
  <a href="struct_c_a___cmd_info.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="command__analyze_8h_source.html">command_analyze.h</a>&gt;</code></p>
+<div class="dynheader">
+CA_CmdInfo 連携図</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_c_a___cmd_info__coll__graph.svg" width="223" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 フィールド</h2></td></tr>
 <tr class="memitem:ae1b7227a66134896a453cdfa2b733cbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a___cmd_info.html#ae1b7227a66134896a453cdfa2b733cbb">cmd_func</a> )(const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *)</td></tr>
 <tr class="memdesc:ae1b7227a66134896a453cdfa2b733cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドとなる関数  <a href="struct_c_a___cmd_info.html#ae1b7227a66134896a453cdfa2b733cbb">[詳解]</a><br /></td></tr>
 <tr class="separator:ae1b7227a66134896a453cdfa2b733cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a482a32cb51cfab02176e9fd1071b002a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="command__analyze_8h.html#a72bfc079489b2490b5bb5dc1dcf2458f">CA_CMD_PARAM_LEN_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a___cmd_info.html#a482a32cb51cfab02176e9fd1071b002a">param_len_type</a></td></tr>
-<tr class="memdesc:a482a32cb51cfab02176e9fd1071b002a"><td class="mdescLeft">&#160;</td><td class="mdescRight">パラメタ長の種別  <a href="struct_c_a___cmd_info.html#a482a32cb51cfab02176e9fd1071b002a">[詳解]</a><br /></td></tr>
-<tr class="separator:a482a32cb51cfab02176e9fd1071b002a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97704109da0d8dddc0bf0252196e6f2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a___cmd_info.html#a97704109da0d8dddc0bf0252196e6f2a">param_len</a></td></tr>
-<tr class="memdesc:a97704109da0d8dddc0bf0252196e6f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">パラメタ長  <a href="struct_c_a___cmd_info.html#a97704109da0d8dddc0bf0252196e6f2a">[詳解]</a><br /></td></tr>
-<tr class="separator:a97704109da0d8dddc0bf0252196e6f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab864449342b055d33f9304b23d7b8010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_a___packed_param_size_info.html">CA_PackedParamSizeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_a___cmd_info.html#ab864449342b055d33f9304b23d7b8010">param_size_infos</a> [(<a class="el" href="command__analyze_8h.html#a7231fbef344ffdb0629329f20e3f74f6">CA_MAX_CMD_PARAM_NUM</a>+1)/2]</td></tr>
+<tr class="memdesc:ab864449342b055d33f9304b23d7b8010"><td class="mdescLeft">&#160;</td><td class="mdescRight">パラメタサイズ情報  <a href="struct_c_a___cmd_info.html#ab864449342b055d33f9304b23d7b8010">[詳解]</a><br /></td></tr>
+<tr class="separator:ab864449342b055d33f9304b23d7b8010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コマンドテーブルの要素となる構造体 </p>
 
-<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00068">68</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
 <a id="ae1b7227a66134896a453cdfa2b733cbb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1b7227a66134896a453cdfa2b733cbb">&#9670;&nbsp;</a></span>cmd_func</h2>
@@ -124,43 +127,25 @@ $(document).ready(function(){initNavTree('struct_c_a___cmd_info.html',''); initR
 
 <p>コマンドとなる関数 </p>
 
-<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00070">70</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a97704109da0d8dddc0bf0252196e6f2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97704109da0d8dddc0bf0252196e6f2a">&#9670;&nbsp;</a></span>param_len</h2>
+<a id="ab864449342b055d33f9304b23d7b8010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab864449342b055d33f9304b23d7b8010">&#9670;&nbsp;</a></span>param_size_infos</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> param_len</td>
+          <td class="memname"><a class="el" href="struct_c_a___packed_param_size_info.html">CA_PackedParamSizeInfo</a> param_size_infos[(<a class="el" href="command__analyze_8h.html#a7231fbef344ffdb0629329f20e3f74f6">CA_MAX_CMD_PARAM_NUM</a>+1)/2]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>パラメタ長 </p>
+<p>パラメタサイズ情報 </p>
 
-<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00048">48</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a482a32cb51cfab02176e9fd1071b002a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a482a32cb51cfab02176e9fd1071b002a">&#9670;&nbsp;</a></span>param_len_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="command__analyze_8h.html#a72bfc079489b2490b5bb5dc1dcf2458f">CA_CMD_PARAM_LEN_TYPE</a> param_len_type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>パラメタ長の種別 </p>
-
-<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="command__analyze_8h_source.html">command_analyze.h</a> の <a class="el" href="command__analyze_8h_source.html#l00071">71</a> 行目に定義があります。</p>
 
 </div>
 </div>
