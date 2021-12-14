@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"block__command__table__params_8h.html#ab2ea5560dbba5406c85fca87a15d5841":[1,0,0,1,5,2,0,1],
 "block__command__table__params_8h.html#af919c21e041ca993487360bd9a0b255a":[1,0,0,1,5,2,0,2],
 "block__command__table__params_8h_source.html":[1,0,0,1,5,2,0],
 "block__command__user__settings_8c.html":[1,0,0,1,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9830cf8c1415a45bc7a71499a823e67f":[1,0,0,1,1,7,0,12],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a98e11d95d998fd75c13a7ae4111de218":[1,0,0,1,1,7,0,123],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a99a7ce95cdcf0d1678afeca11a70d275":[1,0,0,1,1,7,0,109],
-"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9a09dc2b6960e0e677b21c3c64431045":[1,0,0,1,1,7,0,69],
-"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9e26f40ee51d2d47fb2e40b727a9fe0d":[1,0,0,1,1,7,0,131]
+"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9a09dc2b6960e0e677b21c3c64431045":[1,0,0,1,1,7,0,69]
 };

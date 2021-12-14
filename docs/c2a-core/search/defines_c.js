@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['uart_5ftest_5ffooter_5fsize_5276',['UART_TEST_FOOTER_SIZE',['../_u_a_r_t___t_e_s_t_8c.html#aa5bb4f43ad2ad1b63e09e6358f66f576',1,'UART_TEST.c']]],
-  ['uart_5ftest_5fheader_5fsize_5277',['UART_TEST_HEADER_SIZE',['../_u_a_r_t___t_e_s_t_8c.html#ab89e983d5cd5077ad290c0f223d4087c',1,'UART_TEST.c']]],
-  ['uart_5ftest_5fstream_5ffix_5278',['UART_TEST_STREAM_FIX',['../_u_a_r_t___t_e_s_t_8c.html#a5d06bd62501f1365a227587d7233c698',1,'UART_TEST.c']]],
-  ['uart_5ftest_5fstream_5fvar_5279',['UART_TEST_STREAM_VAR',['../_u_a_r_t___t_e_s_t_8c.html#ad58a47dc7353bd162a3e33923ca52321',1,'UART_TEST.c']]],
-  ['uart_5ftest_5ftx_5fframe_5fsize_5fmax_5280',['UART_TEST_TX_FRAME_SIZE_MAX',['../_u_a_r_t___t_e_s_t_8c.html#a442dcfec47352ae3c80bedeaa87c143d',1,'UART_TEST.c']]],
-  ['util_5fcmd_5fsize_5fmax_5281',['UTIL_CMD_SIZE_MAX',['../utility__command_8h.html#ac6d69b063077570cd2db65cc0bd3a5ea',1,'utility_command.h']]]
+  ['vcdu_5fcounter_5fmax_5160',['VCDU_COUNTER_MAX',['../vcdu_8h.html#ac6ce6c84fc79ae5ff4fb1d86b56c12e8',1,'vcdu.h']]],
+  ['vcdu_5fheader_5fsize_5161',['VCDU_HEADER_SIZE',['../vcdu_8h.html#aeedbe60e5870d030b890fe8849bb3bbe',1,'vcdu.h']]],
+  ['vcdu_5flen_5162',['VCDU_LEN',['../vcdu_8h.html#aa3ed3a3cb957aa2745118d044a49ddd1',1,'vcdu.h']]],
+  ['vcdu_5ftrailer_5fsize_5163',['VCDU_TRAILER_SIZE',['../vcdu_8h.html#a254c3ecdfe5413c0195ae674c1851a0a',1,'vcdu.h']]]
 ];

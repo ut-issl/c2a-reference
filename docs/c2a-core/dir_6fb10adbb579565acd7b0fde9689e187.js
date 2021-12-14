@@ -10,18 +10,8 @@ var dir_6fb10adbb579565acd7b0fde9689e187 =
     [ "endian_conv.h", "endian__conv_8h.html", "endian__conv_8h" ],
     [ "endian_memcpy.c", "endian__memcpy_8c.html", "endian__memcpy_8c" ],
     [ "endian_memcpy.h", "endian__memcpy_8h.html", "endian__memcpy_8h" ],
-    [ "exor.c", "exor_8c.html", "exor_8c" ],
-    [ "exor.h", "exor_8h.html", "exor_8h" ],
     [ "majority_vote_for3.c", "majority__vote__for3_8c.html", "majority__vote__for3_8c" ],
     [ "majority_vote_for3.h", "majority__vote__for3_8h.html", "majority__vote__for3_8h" ],
-    [ "matrix.c", "matrix_8c.html", "matrix_8c" ],
-    [ "matrix.h", "matrix_8h.html", "matrix_8h" ],
     [ "print.c", "src__core_2_library_2print_8c.html", "src__core_2_library_2print_8c" ],
-    [ "print.h", "print_8h.html", "print_8h" ],
-    [ "quaternion.c", "quaternion_8c.html", "quaternion_8c" ],
-    [ "quaternion.h", "quaternion_8h.html", "quaternion_8h" ],
-    [ "sum.c", "sum_8c.html", "sum_8c" ],
-    [ "sum.h", "sum_8h.html", "sum_8h" ],
-    [ "vector.c", "vector_8c.html", "vector_8c" ],
-    [ "vector.h", "vector_8h.html", "vector_8h" ]
+    [ "print.h", "print_8h.html", "print_8h" ]
 ];

@@ -21,7 +21,8 @@ var block__command__definitions_8h =
       [ "BC_TLM_MGR7", "block__command__definitions_8h.html#a52f6dfca872c98d5df1d27a9519f61efaa1f00a59e4eebb00fa779637f96c6396", null ],
       [ "BC_TLM_MGR8", "block__command__definitions_8h.html#a52f6dfca872c98d5df1d27a9519f61efa696f86ae15b1ea55f01d894fe51b788d", null ],
       [ "BC_TLM_MGR9", "block__command__definitions_8h.html#a52f6dfca872c98d5df1d27a9519f61efabe4ab6234c3bdbdcc9254a0dd46e5783", null ],
-      [ "BC_TEST_EH_RESPOND", "block__command__definitions_8h.html#a52f6dfca872c98d5df1d27a9519f61efaea9e313a0b05c9b4255f234cc75bfe3b", null ]
+      [ "BC_TEST_EH_RESPOND", "block__command__definitions_8h.html#a52f6dfca872c98d5df1d27a9519f61efaea9e313a0b05c9b4255f234cc75bfe3b", null ],
+      [ "BC_ID_MAX", "block__command__definitions_8h.html#a52f6dfca872c98d5df1d27a9519f61efa4ac175ee698942e0a50c68afbf19f461", null ]
     ] ],
     [ "BC_load_defaults", "block__command__definitions_8h.html#a522491947d97b89960b9228a8a86c3ec", null ]
 ];
