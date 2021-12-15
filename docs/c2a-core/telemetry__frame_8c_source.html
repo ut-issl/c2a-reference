@@ -232,7 +232,7 @@ $(document).ready(function(){initNavTree('telemetry__frame_8c_source.html',''); 
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <a class="code" href="endian__memcpy_8c.html#a153793f6939a1cb0f6bc3968d953f31e">endian_memcpy</a>(&amp;index, param, 1);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <a class="code" href="endian__memcpy_8c.html#a153793f6939a1cb0f6bc3968d953f31e">endian_memcpy</a>(&amp;tlm_func, param + 1, 4);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">if</span> (index &gt;= <a class="code" href="telemetry__frame_8h.html#a811b7327fbc540efe5a83fc418caeb1a">TF_MAX_TLMS</a>)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)index &gt;= <a class="code" href="telemetry__frame_8h.html#a811b7327fbc540efe5a83fc418caeb1a">TF_MAX_TLMS</a>)</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  {</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">// 登録指定位置がテレメトリ数上限を超えている場合は異常判定</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba4b94d1766aadbf48ade81516ef274ff0">CCP_EXEC_ILLEGAL_PARAMETER</a>;</div>
