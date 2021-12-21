@@ -1,5 +1,9 @@
 var command__analyze_8c =
 [
+    [ "CA_EL_LOCAL_ID", "command__analyze_8c.html#a2e4af434242f7fb9bc33ec13a57d224b", [
+      [ "CA_EL_LOCAL_ID_ILLEGAL_CMD_CODE", "command__analyze_8c.html#a2e4af434242f7fb9bc33ec13a57d224ba57a494ec3e521d04c36db901b5475d5e", null ],
+      [ "CA_EL_LOCAL_ID_NULL_CMD_CODE", "command__analyze_8c.html#a2e4af434242f7fb9bc33ec13a57d224ba7923186aaded58cdc6481502d39dd467", null ]
+    ] ],
     [ "CA_ckeck_cmd_param_len", "command__analyze_8c.html#ae878a1a8ce00cc7468fbdd5bc5aba864", null ],
     [ "CA_execute_cmd", "command__analyze_8c.html#a2bfd90a24682bbb8a68779d95ef31ee0", null ],
     [ "CA_get_cmd_param_min_len", "command__analyze_8c.html#ac95557475d470f986e1eb46befbc2ae9", null ],

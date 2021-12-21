@@ -2,11 +2,11 @@ var obc__time_8c =
 [
     [ "OBCT_add", "obc__time_8c.html#a66a185dfe9d335e03678035de616964e", null ],
     [ "OBCT_clear", "obc__time_8c.html#af728cdbeae57ea5bf7f25ba5a3776e60", null ],
-    [ "OBCT_clear_unix_time_info", "obc__time_8c.html#a33aa7a29137ba1988a645bd94f4ab2bd", null ],
+    [ "OBCT_clear_unixtime_info", "obc__time_8c.html#ae72247fec74fee72ad94d2b5cf1debe0", null ],
     [ "OBCT_compare", "obc__time_8c.html#a8d70081c0b7615e9381c431ae5f8dca2", null ],
     [ "OBCT_count_up", "obc__time_8c.html#a13a546bfda84dcbcae9222394a38f0ab", null ],
     [ "OBCT_create", "obc__time_8c.html#a70416835a40bdacbb04f6f06b1e6d1e1", null ],
-    [ "OBCT_create_unix_time_info", "obc__time_8c.html#a193f5d641971598427c185d71b743a58", null ],
+    [ "OBCT_create_unixtime_info", "obc__time_8c.html#a19370bcf64c5ec7da2ee2d3227f8995c", null ],
     [ "OBCT_cycle2msec", "obc__time_8c.html#a77eb810c809f22fe8a938de04a9ddd3b", null ],
     [ "OBCT_cycle2sec", "obc__time_8c.html#a4d5f48c88462c3ff575c18ee1a566847", null ],
     [ "OBCT_diff", "obc__time_8c.html#a02512f745375636ab21f468838587942", null ],
@@ -21,7 +21,7 @@ var obc__time_8c =
     [ "OBCT_get_total_cycle", "obc__time_8c.html#ac42c1d017a2cbb8dab608771907c97d5", null ],
     [ "OBCT_get_total_cycle_in_msec", "obc__time_8c.html#afe5440fad08b30200644678b02c6791e", null ],
     [ "OBCT_get_total_cycle_in_sec", "obc__time_8c.html#a25bff1e1b4264e0b0db5494dbd8788e4", null ],
-    [ "OBCT_modify_unix_time_info", "obc__time_8c.html#a67199d7cb14eb12938800ce37bf52535", null ],
+    [ "OBCT_modify_unixtime_info", "obc__time_8c.html#ae9c02769b77f86df924e3741abbc6f55", null ],
     [ "OBCT_msec2cycle", "obc__time_8c.html#a9f8ccfb267e9abd0baaa2fa43869e79d", null ],
     [ "OBCT_print", "obc__time_8c.html#a4d31fad7eb84c89644c61c62ae57b2b9", null ],
     [ "OBCT_sec2cycle", "obc__time_8c.html#a1b1c3452d2b2f014d72324bb7b03ac87", null ]

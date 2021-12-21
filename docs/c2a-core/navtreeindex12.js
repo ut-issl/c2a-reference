@@ -1,5 +1,10 @@
 var NAVTREEINDEX12 =
 {
+"struct_event_logger.html":[0,0,55],
+"struct_event_logger.html#a8a21a682b9d9e94bb6c35bafbe5209a1":[0,0,55,3],
+"struct_event_logger.html#a96e387c68c405f8f76c76adf52b74cc6":[0,0,55,4],
+"struct_event_logger.html#a9bc9302840022f35ff0c21719a88422d":[0,0,55,1],
+"struct_event_logger.html#abb364e25cdcdc0ac3e0534437d07a19c":[0,0,55,5],
 "struct_event_logger.html#ae7af29649204de7640852137d2931436":[0,0,55,2],
 "struct_event_logger.html#aedac801e8ccc442c39cc5d8e27e4a9d0":[0,0,55,0],
 "struct_event_utility.html":[0,0,56],
@@ -66,9 +71,9 @@ var NAVTREEINDEX12 =
 "struct_mode_manager.html#a40848bd725e482b7287795b4d035b5d3":[0,0,66,3],
 "struct_mode_manager.html#a5219bd1701695e82790a03392fb6f9df":[0,0,66,4],
 "struct_mode_manager.html#adc38de19e5e423c652f6be4cc9bb8c54":[0,0,66,1],
-"struct_o_b_c_t___unix_time_info.html":[0,0,67],
-"struct_o_b_c_t___unix_time_info.html#a5a8f0af0561d026cad4fc354211eb726":[0,0,67,1],
-"struct_o_b_c_t___unix_time_info.html#ae87c071221f944d12b066eafa263bbe3":[0,0,67,0],
+"struct_o_b_c_t___unixtime_info.html":[0,0,67],
+"struct_o_b_c_t___unixtime_info.html#a62aa40519c532de716a1f21de8bc9d8a":[0,0,67,0],
+"struct_o_b_c_t___unixtime_info.html#a9fd29dab1560f5098a5b473f5f996885":[0,0,67,1],
 "struct_obc_time.html":[0,0,68],
 "struct_obc_time.html#a995233df4884e293857b1fdf1b896b0c":[0,0,68,2],
 "struct_obc_time.html#acc32368fe8e02cd2e50eec5201906d35":[0,0,68,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX12 =
 "telemetry__definitions_8c.html#a9e1c304f530d0cb63f2d02040efde77f":[1,0,0,1,1,10,2],
 "telemetry__definitions_8c.html#aa29630540f47a2a243214819ee553d1b":[1,0,0,1,1,10,18],
 "telemetry__definitions_8c.html#aa9d55f8b1b7d27b68cd476e3363fa5af":[1,0,0,1,1,10,7],
-"telemetry__definitions_8c.html#ac5d37c9d67fa05ad65c0f7ba2b33a458":[1,0,0,1,1,10,19],
-"telemetry__definitions_8c.html#ac8fb0f07bd6fcc52d11b2b6dbac77dca":[1,0,0,1,1,10,4],
-"telemetry__definitions_8c.html#acc7c065b88dbab27b6b1717a261a7c3b":[1,0,0,1,1,10,14],
-"telemetry__definitions_8c.html#ad4d0390169754caa4bc104503b0a1635":[1,0,0,1,1,10,16],
-"telemetry__definitions_8c.html#aec2c20ee6a688de4f0d42b654befa446":[1,0,0,1,1,10,22],
-"telemetry__definitions_8c.html#af62b0d2e9ac736856d458bf3fd587977":[1,0,0,1,1,10,5]
+"telemetry__definitions_8c.html#ac5d37c9d67fa05ad65c0f7ba2b33a458":[1,0,0,1,1,10,19]
 };

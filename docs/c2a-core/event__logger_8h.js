@@ -50,6 +50,7 @@ var event__logger_8h =
       [ "EL_CORE_GROUP_TLCD_DEPLOY_BLOCK", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af208f89a56c7baa8b98336fadff0b200", null ],
       [ "EL_CORE_GROUP_DCU", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a15476b039c7faff69f65fd6c2fba316c", null ],
       [ "EL_CORE_GROUP_EVENT_HANDLER", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af3cd26d75fdc29c868b4d66c9531fb06", null ],
+      [ "EL_CORE_GROUP_COMMAND_ANALYZE", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a3a131063ef30aab8c655a12228edfd4a", null ],
       [ "EL_CORE_GROUP_EL_DROP_CLOG1", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872", null ],
       [ "EL_CORE_GROUP_EL_DROP_CLOG2", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe", null ],
       [ "EL_CORE_GROUP_MAX", "event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6", null ]

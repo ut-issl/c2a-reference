@@ -1,5 +1,10 @@
 var NAVTREEINDEX11 =
 {
+"struct_anomaly_handler.html#a428965f2bd2aa9e5401dd74efb40c8f5":[0,0,8,2],
+"struct_anomaly_handler.html#ab73866570b8138ffc601187e3414014e":[0,0,8,4],
+"struct_anomaly_handler.html#ab9fd8bec8daeaa10e8b9f50c7f54f826":[0,0,8,5],
+"struct_anomaly_handler.html#ad4442db6d45ff49acf79ecb646f04023":[0,0,8,6],
+"struct_anomaly_handler.html#af4ea46801a695d9cbb7a7aec691f1e50":[0,0,8,1],
 "struct_anomaly_logger.html":[0,0,9],
 "struct_anomaly_logger.html#a2d593f0ada8a5818ada3f6410141bcad":[0,0,9,0],
 "struct_anomaly_logger.html#a590170e14ee928498e0f6331bc9d0d49":[0,0,9,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX11 =
 "struct_event_handler.html#ab2623b7ede7bda7a765842ee85361af7":[0,0,54,1],
 "struct_event_handler.html#ab36cbaf319dfc380e0cb68b3bdebdfc8":[0,0,54,2],
 "struct_event_handler.html#abd85e1a516b840b4e1290e079238668d":[0,0,54,6],
-"struct_event_handler.html#ade9683442b3ac00e1c6366c2a8cfea78":[0,0,54,7],
-"struct_event_logger.html":[0,0,55],
-"struct_event_logger.html#a8a21a682b9d9e94bb6c35bafbe5209a1":[0,0,55,3],
-"struct_event_logger.html#a96e387c68c405f8f76c76adf52b74cc6":[0,0,55,4],
-"struct_event_logger.html#a9bc9302840022f35ff0c21719a88422d":[0,0,55,1],
-"struct_event_logger.html#abb364e25cdcdc0ac3e0534437d07a19c":[0,0,55,5]
+"struct_event_handler.html#ade9683442b3ac00e1c6366c2a8cfea78":[0,0,54,7]
 };
