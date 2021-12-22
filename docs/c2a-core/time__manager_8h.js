@@ -14,9 +14,9 @@ var time__manager_8h =
     [ "TMGR_get_master_step", "time__manager_8h.html#ad9e9bb447228d24c1b07022a1ed94289", null ],
     [ "TMGR_get_master_total_cycle", "time__manager_8h.html#a576e42803f8f3896524dbb266a47a08f", null ],
     [ "TMGR_get_master_total_cycle_in_msec", "time__manager_8h.html#a18f1e47cee01f2c69afeabdb6430b6af", null ],
+    [ "TMGR_get_obc_time_from_unixtime", "time__manager_8h.html#a6c28540819ef9469512a845101805438", null ],
     [ "TMGR_get_obct_unixtime_info", "time__manager_8h.html#a443932e590a40cc1847cc5b26d627281", null ],
-    [ "TMGR_get_ObcTime_from_unixtime", "time__manager_8h.html#aabf90d7b377059bf0622eb3d3282f405", null ],
-    [ "TMGR_get_unixtime_from_ObcTime", "time__manager_8h.html#adeda0ee5988bf3f5ded89b2a84d66b66", null ],
+    [ "TMGR_get_unixtime_from_obc_time", "time__manager_8h.html#a8b7c8185e427826dfa88140833410499", null ],
     [ "TMGR_init", "time__manager_8h.html#a418722e38c58b8ba7fb2e62b1b6f293b", null ],
     [ "TMGR_modify_unixtime_criteria", "time__manager_8h.html#aed4faa75eee907be7db12d05c7d8da78", null ],
     [ "time_manager", "time__manager_8h.html#a1c8cc3fb35232cc7bf987f0df1758bf5", null ]
