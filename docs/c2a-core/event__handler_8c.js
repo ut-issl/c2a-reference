@@ -25,8 +25,7 @@ var event__handler_8c =
       [ "EH_RULE_SORTED_INDEX_ACK_NOT_FOUND", "event__handler_8c.html#aa4f662d6a649a05fdbbc4beea0eb3191a917c8fe9d3f277256ab4fe7ccce3350e", null ],
       [ "EH_RULE_SORTED_INDEX_ACK_FULL", "event__handler_8c.html#aa4f662d6a649a05fdbbc4beea0eb3191ae445191700f5c545bfbfc6c864750f9f", null ],
       [ "EH_RULE_SORTED_INDEX_ACK_RULE_OVERWRITE", "event__handler_8c.html#aa4f662d6a649a05fdbbc4beea0eb3191a1b3dccfd7af1da7638508af567ff7245", null ],
-      [ "EH_RULE_SORTED_INDEX_ACK_DUPLICATE_FULL", "event__handler_8c.html#aa4f662d6a649a05fdbbc4beea0eb3191aa8a8b085d3838867288dd4664af188fe", null ],
-      [ "EH_RULE_SORTED_INDEX_ACK_UNKNOWN_ERR", "event__handler_8c.html#aa4f662d6a649a05fdbbc4beea0eb3191af4c609660aba9c410fedae006afbb8a3", null ]
+      [ "EH_RULE_SORTED_INDEX_ACK_DUPLICATE_FULL", "event__handler_8c.html#aa4f662d6a649a05fdbbc4beea0eb3191aa8a8b085d3838867288dd4664af188fe", null ]
     ] ],
     [ "Cmd_EH_ACTIVATE_RULE", "event__handler_8c.html#a481b6c3c268ecd6c5281e5a8f2328010", null ],
     [ "Cmd_EH_CLEAR_ALL_RULE", "event__handler_8c.html#a23b06877e0d9565824f95ae74448dea8", null ],
@@ -55,6 +54,7 @@ var event__handler_8c =
     [ "EH_check_single_rule_and_respond_", "event__handler_8c.html#a00aa6763c6a5dbb4bd0364e1efc99d96", null ],
     [ "EH_clear_log_", "event__handler_8c.html#ae6aaa6faf62ea451114f6c4f6895d8e6", null ],
     [ "EH_clear_rules_", "event__handler_8c.html#aa49a40dcd4c6ec1cf342f4e4647de471", null ],
+    [ "EH_compare_sorted_index_for_bsearch_", "event__handler_8c.html#a1d5bd0374a75859e6b0bf5b4455a50d9", null ],
     [ "EH_delete_rule_table_", "event__handler_8c.html#a77f7769c0392e3092be9b96df1159033", null ],
     [ "EH_execute", "event__handler_8c.html#a76ddd224739890733cbd318e2d5c015b", null ],
     [ "EH_get_oldest_event_", "event__handler_8c.html#a5ce774f31ba9167015120126261d4a5e", null ],
