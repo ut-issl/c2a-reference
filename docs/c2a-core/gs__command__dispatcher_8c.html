@@ -88,6 +88,9 @@ $(document).ready(function(){initNavTree('gs__command__dispatcher_8c.html',''); 
 <div class="title">gs_command_dispatcher.c ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>地上局から発行された RTC (Real Time Cmd) を実行する  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="gs__command__dispatcher_8h_source.html">gs_command_dispatcher.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="packet__handler_8h_source.html">../CmdTlm/packet_handler.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -102,10 +105,13 @@ gs_command_dispatcher.c の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a3de52d571d95af7924100404ef36e130"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__command__dispatcher_8c.html#a3de52d571d95af7924100404ef36e130">GSCD_init_</a> (void)</td></tr>
+<tr class="memdesc:a3de52d571d95af7924100404ef36e130"><td class="mdescLeft">&#160;</td><td class="mdescRight">GSCD App 初期化関数  <a href="gs__command__dispatcher_8c.html#a3de52d571d95af7924100404ef36e130">[詳解]</a><br /></td></tr>
 <tr class="separator:a3de52d571d95af7924100404ef36e130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe4cfc8c0f816a286dc50d8797cef54"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__command__dispatcher_8c.html#a4fe4cfc8c0f816a286dc50d8797cef54">GSCD_dispatch_</a> (void)</td></tr>
+<tr class="memdesc:a4fe4cfc8c0f816a286dc50d8797cef54"><td class="mdescLeft">&#160;</td><td class="mdescRight">GSCD App 実行関数  <a href="gs__command__dispatcher_8c.html#a4fe4cfc8c0f816a286dc50d8797cef54">[詳解]</a><br /></td></tr>
 <tr class="separator:a4fe4cfc8c0f816a286dc50d8797cef54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0195f703ab1a606ae7541ef886e609bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__command__dispatcher_8c.html#a0195f703ab1a606ae7541ef886e609bc">GSCD_create_app</a> (void)</td></tr>
+<tr class="memdesc:a0195f703ab1a606ae7541ef886e609bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">GSCD App 生成関数  <a href="gs__command__dispatcher_8c.html#a0195f703ab1a606ae7541ef886e609bc">[詳解]</a><br /></td></tr>
 <tr class="separator:a0195f703ab1a606ae7541ef886e609bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ca92b80864216dbaf8342b41ac8bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__command__dispatcher_8c.html#aa8ca92b80864216dbaf8342b41ac8bee">Cmd_GSCD_CLEAR_ERR_LOG</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
 <tr class="separator:aa8ca92b80864216dbaf8342b41ac8bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,7 +123,11 @@ gs_command_dispatcher.c の依存先関係図:</div>
 <tr class="memitem:ac33bc1c41591ff492d264e825b4b6808"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__command__dispatcher_8c.html#ac33bc1c41591ff492d264e825b4b6808">gs_command_dispatcher</a> = &amp;<a class="el" href="gs__command__dispatcher_8c.html#a127b87fa39a44bedaebfec85e229d374">gs_command_dispatcher_</a></td></tr>
 <tr class="separator:ac33bc1c41591ff492d264e825b4b6808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>地上局から発行された RTC (Real Time Cmd) を実行する </p>
+
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
 <a id="aa8ca92b80864216dbaf8342b41ac8bee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8ca92b80864216dbaf8342b41ac8bee">&#9670;&nbsp;</a></span>Cmd_GSCD_CLEAR_ERR_LOG()</h2>
 
@@ -134,7 +144,7 @@ gs_command_dispatcher.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00038">38</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00046">46</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -166,11 +176,20 @@ gs_command_dispatcher.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00014">14</a> 行目に定義があります。</p>
+<p>GSCD App 生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>GSCD <a class="el" href="struct_app_info.html">AppInfo</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00031">31</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__command__dispatcher_8c_a0195f703ab1a606ae7541ef886e609bc_cgraph.svg" width="2200" height="576"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__command__dispatcher_8c_a0195f703ab1a606ae7541ef886e609bc_cgraph.svg" width="2219" height="576"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -206,7 +225,18 @@ gs_command_dispatcher.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00026">26</a> 行目に定義があります。</p>
+<p>GSCD App 実行関数 </p>
+<pre class="fragment">    PH_add_gs_cmd_ にて， GS からの RTC が gs_command_dispatcher に紐付けられたコマンドキュー PH_gs_cmd_list に push back される．
+    そのキューから１つコマンドを取り出し実行する
+</pre> <dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00041">41</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -246,7 +276,16 @@ gs_command_dispatcher.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00021">21</a> 行目に定義があります。</p>
+<p>GSCD App 初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00036">36</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -275,7 +314,7 @@ gs_command_dispatcher.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00009">9</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00011">11</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -299,7 +338,7 @@ gs_command_dispatcher.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__command__dispatcher_8c_source.html">gs_command_dispatcher.c</a> の <a class="el" href="gs__command__dispatcher_8c_source.html#l00010">10</a> 行目に定義があります。</p>
 
 </div>
 </div>

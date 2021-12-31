@@ -97,17 +97,27 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__handler_8c.html#a94ea5d3a648f85871e35b36893f15007">event_handler.c</a>
 , <a class="el" href="event__handler_8h.html#a94ea5d3a648f85871e35b36893f15007">event_handler.h</a>
 </li>
-<li>EH_check_continuous_rule_and_respond_()
-: <a class="el" href="event__handler_8c.html#a2341dd2caef39ab44cf7b7f48677fa7e">event_handler.c</a>
+<li>EH_activate_rule_for_multi_level()
+: <a class="el" href="event__handler_8c.html#abc4f7d94bf567d8b7f47738a97008edc">event_handler.c</a>
+, <a class="el" href="event__handler_8h.html#abc4f7d94bf567d8b7f47738a97008edc">event_handler.h</a>
 </li>
-<li>EH_check_cumulative_rule_and_respond_()
-: <a class="el" href="event__handler_8c.html#a8181c591bd4a29577d9b0803924e1feb">event_handler.c</a>
+<li>EH_check_continuous_rule_()
+: <a class="el" href="event__handler_8c.html#aa8f8643b631236606e67efd8f301d88c">event_handler.c</a>
+</li>
+<li>EH_check_cumulative_rule_()
+: <a class="el" href="event__handler_8c.html#af067cdf04b4ff6b4a8663cbeb9447c62">event_handler.c</a>
 </li>
 <li>EH_check_el_event_counter_()
 : <a class="el" href="event__handler_8c.html#aa6c5760770a17a2baba1e6f62fa8bfde">event_handler.c</a>
 </li>
 <li>EH_check_event_and_respond_()
-: <a class="el" href="event__handler_8c.html#a6f0a35f30f997892cca6b09c225e4688">event_handler.c</a>
+: <a class="el" href="event__handler_8c.html#a227ed3b7079c58dee50a81ce408549a2">event_handler.c</a>
+</li>
+<li>EH_check_higher_level_rule_and_respond_()
+: <a class="el" href="event__handler_8c.html#af084576db8b00a4c7e4b117314b128db">event_handler.c</a>
+</li>
+<li>EH_check_rule_()
+: <a class="el" href="event__handler_8c.html#a36acbf29023faf34e8f2d16f01cc44d3">event_handler.c</a>
 </li>
 <li>EH_CHECK_RULE_ACK
 : <a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1">event_handler.h</a>
@@ -122,31 +132,33 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__handler_8h.html#a37a0409361027c0e4dd7887b890720a1a9f8efb6a552b7fadf63f066803a87521">event_handler.h</a>
 </li>
 <li>EH_check_rule_and_respond_()
-: <a class="el" href="event__handler_8c.html#ae88a5f73ec5311c9fa7311d086103109">event_handler.c</a>
+: <a class="el" href="event__handler_8c.html#ac7461e79109f06783e2c620a6d999a6b">event_handler.c</a>
 </li>
 <li>EH_check_rule_id_()
 : <a class="el" href="event__handler_8c.html#a59de6a0bd2f3bfae3758c0cada7c5ca6">event_handler.c</a>
 </li>
-<li>EH_check_single_rule_and_respond_()
-: <a class="el" href="event__handler_8c.html#a00aa6763c6a5dbb4bd0364e1efc99d96">event_handler.c</a>
+<li>EH_check_single_rule_()
+: <a class="el" href="event__handler_8c.html#aaafb8f63aa347235b58cd1aec79911a0">event_handler.c</a>
 </li>
-<li>EH_CKECK_AND_RESPOND_ACK
-: <a class="el" href="event__handler_8c.html#a6db8138352797c489c0fbb9238ba02e7">event_handler.c</a>
+<li>EH_CKECK_RULE_ACK
+: <a class="el" href="event__handler_8c.html#aac5d7586eeb712de8fcb635ab6b6662a">event_handler.c</a>
 </li>
-<li>EH_CKECK_AND_RESPOND_ACK_NO_UNPROCESSED_EVENT
-: <a class="el" href="event__handler_8c.html#a6db8138352797c489c0fbb9238ba02e7ad6b3cb4fba7eeb64a68bb44c4f155e83">event_handler.c</a>
+<li>EH_CKECK_RULE_ACK_MATCH
+: <a class="el" href="event__handler_8c.html#aac5d7586eeb712de8fcb635ab6b6662aa2f14491746a9b2a56f740fffd1968e79">event_handler.c</a>
 </li>
-<li>EH_CKECK_AND_RESPOND_ACK_NOT_RESPONDED
-: <a class="el" href="event__handler_8c.html#a6db8138352797c489c0fbb9238ba02e7a1f381ae25a11dc20e21613478ff537be">event_handler.c</a>
-</li>
-<li>EH_CKECK_AND_RESPOND_ACK_RESPONDED
-: <a class="el" href="event__handler_8c.html#a6db8138352797c489c0fbb9238ba02e7a5e65cdd1071d352f32c26b89d540b738">event_handler.c</a>
-</li>
-<li>EH_CKECK_AND_RESPOND_ACK_UNKNOWN_ERR
-: <a class="el" href="event__handler_8c.html#a6db8138352797c489c0fbb9238ba02e7ae9f8699a8800cc24f1358706d09b625d">event_handler.c</a>
+<li>EH_CKECK_RULE_ACK_NOT_MATCH
+: <a class="el" href="event__handler_8c.html#aac5d7586eeb712de8fcb635ab6b6662aaf9e63379fbadb2e3038497d9f3d10cfa">event_handler.c</a>
 </li>
 <li>EH_clear_log_()
 : <a class="el" href="event__handler_8c.html#ae6aaa6faf62ea451114f6c4f6895d8e6">event_handler.c</a>
+</li>
+<li>EH_clear_rule_counter()
+: <a class="el" href="event__handler_8c.html#a7ef25ddb66d3268593fe7b80e71e59ed">event_handler.c</a>
+, <a class="el" href="event__handler_8h.html#a7ef25ddb66d3268593fe7b80e71e59ed">event_handler.h</a>
+</li>
+<li>EH_clear_rule_counter_by_event()
+: <a class="el" href="event__handler_8c.html#a4f18856b3535342c3b93b478d78ad832">event_handler.c</a>
+, <a class="el" href="event__handler_8h.html#a4f18856b3535342c3b93b478d78ad832">event_handler.h</a>
 </li>
 <li>EH_clear_rules_()
 : <a class="el" href="event__handler_8c.html#aa49a40dcd4c6ec1cf342f4e4647de471">event_handler.c</a>
@@ -185,8 +197,11 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__handler_8c.html#a76ddd224739890733cbd318e2d5c015b">event_handler.c</a>
 , <a class="el" href="event__handler_8h.html#a76ddd224739890733cbd318e2d5c015b">event_handler.h</a>
 </li>
-<li>EH_get_oldest_event_()
-: <a class="el" href="event__handler_8c.html#a5ce774f31ba9167015120126261d4a5e">event_handler.c</a>
+<li>EH_get_event_to_check_rule_()
+: <a class="el" href="event__handler_8c.html#a72998c8b7483b567b31589c801650114">event_handler.c</a>
+</li>
+<li>EH_get_oldest_event_excluding_eh_error_level_()
+: <a class="el" href="event__handler_8c.html#a9e1add42ee2e4353c89ab65a8a9cf1d2">event_handler.c</a>
 </li>
 <li>EH_get_the_nth_log_from_the_latest()
 : <a class="el" href="event__handler_8c.html#a29ed902053a6e846de7d4fd0e919369c">event_handler.c</a>
@@ -195,6 +210,10 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 <li>EH_inactivate_rule()
 : <a class="el" href="event__handler_8c.html#addeafcef3304c68bbb5d46ba92992307">event_handler.c</a>
 , <a class="el" href="event__handler_8h.html#addeafcef3304c68bbb5d46ba92992307">event_handler.h</a>
+</li>
+<li>EH_inactivate_rule_for_multi_level()
+: <a class="el" href="event__handler_8c.html#af099854359b045025e9887956c19769f">event_handler.c</a>
+, <a class="el" href="event__handler_8h.html#af099854359b045025e9887956c19769f">event_handler.h</a>
 </li>
 <li>EH_initialize()
 : <a class="el" href="event__handler_8c.html#a4d66371d471058e8e45db1071e09b654">event_handler.c</a>
@@ -367,6 +386,10 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 <li>EH_search_rule_table_index_()
 : <a class="el" href="event__handler_8c.html#a4d77e82a40fe0de25c75cc34a1ed818a">event_handler.c</a>
 </li>
+<li>EH_set_rule_counter()
+: <a class="el" href="event__handler_8c.html#a849447829aa68239351929abc5f10ef4">event_handler.c</a>
+, <a class="el" href="event__handler_8h.html#a849447829aa68239351929abc5f10ef4">event_handler.h</a>
+</li>
 <li>EL_ACK
 : <a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">event_logger.h</a>
 </li>
@@ -421,6 +444,9 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 <li>EL_CLOG_LOG_ACK_OK
 : <a class="el" href="event__logger_8c.html#aae59e148fe8d6ede4bc058f247770fcbad5fcd3147075710ea2ee6d4537464dc7">event_logger.c</a>
 </li>
+<li>EL_clog_log_order_table_eh_
+: <a class="el" href="event__logger_8c.html#a202f2c427294e4ac2d073db3a5706503">event_logger.c</a>
+</li>
 <li>EL_clog_log_order_table_el_
 : <a class="el" href="event__logger_8c.html#a20c51afcd4dedafc26bcc4353d4458f4">event_logger.c</a>
 </li>
@@ -433,6 +459,9 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 <li>EL_clog_log_order_table_middle_
 : <a class="el" href="event__logger_8c.html#a42b512e4fba60c200c9f5343de3b04f5">event_logger.c</a>
 </li>
+<li>EL_CLOG_LOG_SIZE_MAX_EH
+: <a class="el" href="event__logger_8h.html#a39d4816375ea415c939d1d8b1b6b1c61">event_logger.h</a>
+</li>
 <li>EL_CLOG_LOG_SIZE_MAX_EL
 : <a class="el" href="event__logger_8h.html#adeaeae643d18ddf9f8835932e834ccb6">event_logger.h</a>
 </li>
@@ -444,6 +473,9 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 </li>
 <li>EL_CLOG_LOG_SIZE_MAX_MIDDLE
 : <a class="el" href="event__logger_8h.html#aa7723fe7b2569937b7fd9786532b773d">event_logger.h</a>
+</li>
+<li>EL_clog_log_table_eh_
+: <a class="el" href="event__logger_8c.html#af17c6c93a18575e41e9d607a6e2df5bc">event_logger.c</a>
 </li>
 <li>EL_clog_log_table_el_
 : <a class="el" href="event__logger_8c.html#a2127d7f30fbc94207ce8d8465d276a90">event_logger.c</a>
@@ -465,8 +497,8 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 , <a class="el" href="event__logger__params_8h.html#a0785d1d6b5633040d55251c041061909">event_logger_params.h</a>
 </li>
 <li>EL_CLOG_TLM_PAGE_MAX_LOW
-: <a class="el" href="event__logger_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">event_logger.h</a>
-, <a class="el" href="event__logger__params_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">event_logger_params.h</a>
+: <a class="el" href="event__logger__params_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">event_logger_params.h</a>
+, <a class="el" href="event__logger_8h.html#a88f3650759a5b05fab3eed2e5e575d3d">event_logger.h</a>
 </li>
 <li>EL_CLOG_TLM_PAGE_MAX_MIDDLE
 : <a class="el" href="event__logger_8h.html#a00dda9d32639c44e82dd84bdaf3cb676">event_logger.h</a>
@@ -487,6 +519,12 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 </li>
 <li>EL_CORE_GROUP_DCU
 : <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a15476b039c7faff69f65fd6c2fba316c">event_logger.h</a>
+</li>
+<li>EL_CORE_GROUP_EH_MATCH_RULE
+: <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a604f2f69e947ae16d2381a13f768d0e0">event_logger.h</a>
+</li>
+<li>EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE
+: <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a2e8132e7a397fc01908de8be8058ea2e">event_logger.h</a>
 </li>
 <li>EL_CORE_GROUP_EL_DROP_CLOG1
 : <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872">event_logger.h</a>
@@ -534,27 +572,30 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 , <a class="el" href="event__logger_8h.html#aa6ac0b53c23731d075998dff4f4fefc0">event_logger.h</a>
 </li>
 <li>EL_disable_tlog_overwrite_all()
-: <a class="el" href="event__logger_8c.html#aef273bfec9d8ab55c62bff7bbf7f9bd2">event_logger.c</a>
-, <a class="el" href="event__logger_8h.html#aef273bfec9d8ab55c62bff7bbf7f9bd2">event_logger.h</a>
+: <a class="el" href="event__logger_8h.html#aef273bfec9d8ab55c62bff7bbf7f9bd2">event_logger.h</a>
+, <a class="el" href="event__logger_8c.html#aef273bfec9d8ab55c62bff7bbf7f9bd2">event_logger.c</a>
 </li>
 <li>EL_enable_all_logging()
 : <a class="el" href="event__logger_8c.html#aadd067da025cae3c883fda60506998f6">event_logger.c</a>
 , <a class="el" href="event__logger_8h.html#aadd067da025cae3c883fda60506998f6">event_logger.h</a>
 </li>
 <li>EL_enable_logging()
-: <a class="el" href="event__logger_8c.html#a00c40416dcf2fbd69ff494597928ed70">event_logger.c</a>
-, <a class="el" href="event__logger_8h.html#a00c40416dcf2fbd69ff494597928ed70">event_logger.h</a>
+: <a class="el" href="event__logger_8h.html#a00c40416dcf2fbd69ff494597928ed70">event_logger.h</a>
+, <a class="el" href="event__logger_8c.html#a00c40416dcf2fbd69ff494597928ed70">event_logger.c</a>
 </li>
 <li>EL_enable_tlog_overwrite()
 : <a class="el" href="event__logger_8c.html#abeec85a9222f596b2ff75f679b3f5442">event_logger.c</a>
 , <a class="el" href="event__logger_8h.html#abeec85a9222f596b2ff75f679b3f5442">event_logger.h</a>
 </li>
 <li>EL_enable_tlog_overwrite_all()
-: <a class="el" href="event__logger_8c.html#ac5e9c3b7d0def1c166f028712b351a0e">event_logger.c</a>
-, <a class="el" href="event__logger_8h.html#ac5e9c3b7d0def1c166f028712b351a0e">event_logger.h</a>
+: <a class="el" href="event__logger_8h.html#ac5e9c3b7d0def1c166f028712b351a0e">event_logger.h</a>
+, <a class="el" href="event__logger_8c.html#ac5e9c3b7d0def1c166f028712b351a0e">event_logger.c</a>
 </li>
 <li>EL_ERROR_LEVEL
 : <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">event_logger.h</a>
+</li>
+<li>EL_ERROR_LEVEL_EH
+: <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a2cb57d9084afeb9f5cbe8a7dd1268a6b">event_logger.h</a>
 </li>
 <li>EL_ERROR_LEVEL_EL
 : <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0ad920427ef302d463b3a72ef4f6e9390f">event_logger.h</a>
@@ -599,8 +640,8 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa59325b5aae01d83965ad87a9b072a834">event_logger.h</a>
 </li>
 <li>EL_get_the_nth_tlog_from_the_latest()
-: <a class="el" href="event__logger_8c.html#a7fdaa66af22854e97bb22c6fecf33ad8">event_logger.c</a>
-, <a class="el" href="event__logger_8h.html#a7fdaa66af22854e97bb22c6fecf33ad8">event_logger.h</a>
+: <a class="el" href="event__logger_8h.html#a7fdaa66af22854e97bb22c6fecf33ad8">event_logger.h</a>
+, <a class="el" href="event__logger_8c.html#a7fdaa66af22854e97bb22c6fecf33ad8">event_logger.c</a>
 </li>
 <li>EL_GROUP
 : <a class="el" href="event__logger__group_8h.html#a562766726e548259f6f9144e561191f7">event_logger_group.h</a>
@@ -645,8 +686,8 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 , <a class="el" href="event__logger_8h.html#a2a96f7fbdd81aaba863257261c1a4a3e">event_logger.h</a>
 </li>
 <li>EL_IS_ENABLE_EVENT_NOTE
-: <a class="el" href="event__logger_8h.html#a4b65e39decb888497279e3878d64602b">event_logger.h</a>
-, <a class="el" href="event__logger__params_8h.html#a4b65e39decb888497279e3878d64602b">event_logger_params.h</a>
+: <a class="el" href="event__logger__params_8h.html#a4b65e39decb888497279e3878d64602b">event_logger_params.h</a>
+, <a class="el" href="event__logger_8h.html#a4b65e39decb888497279e3878d64602b">event_logger.h</a>
 </li>
 <li>EL_IS_ENABLE_MIDDLE_ERROR_LEVEL
 : <a class="el" href="event__logger__params_8h.html#acc12c33985faba4c9baa91caabd34698">event_logger_params.h</a>
@@ -678,8 +719,8 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__logger_8c.html#a605a3ff223ddae8830c09ff5aa57cc94">event_logger.c</a>
 </li>
 <li>EL_record_event()
-: <a class="el" href="event__logger_8h.html#a25a74a48375dfc1f3f80be68e0ac00ea">event_logger.h</a>
-, <a class="el" href="event__logger_8c.html#a25a74a48375dfc1f3f80be68e0ac00ea">event_logger.c</a>
+: <a class="el" href="event__logger_8c.html#a25a74a48375dfc1f3f80be68e0ac00ea">event_logger.c</a>
+, <a class="el" href="event__logger_8h.html#a25a74a48375dfc1f3f80be68e0ac00ea">event_logger.h</a>
 </li>
 <li>EL_record_event_()
 : <a class="el" href="event__logger_8c.html#a80a1b60c587d1e3402b02e3bde1db899">event_logger.c</a>
@@ -693,6 +734,9 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 <li>EL_search_clog_()
 : <a class="el" href="event__logger_8c.html#a987cce8c848158cc3038bb59dc100de3">event_logger.c</a>
 </li>
+<li>EL_tlog_event_table_eh_
+: <a class="el" href="event__logger_8c.html#ac60dfbbbe89f7683bbe54d425e9eb217">event_logger.c</a>
+</li>
 <li>EL_tlog_event_table_el_
 : <a class="el" href="event__logger_8c.html#aafe00b63a4da1376f355833b0cb49ea9">event_logger.c</a>
 </li>
@@ -704,6 +748,9 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 </li>
 <li>EL_tlog_event_table_middle_
 : <a class="el" href="event__logger_8c.html#a88d4976b030660e6869035a04747d90b">event_logger.c</a>
+</li>
+<li>EL_TLOG_LOG_SIZE_MAX_EH
+: <a class="el" href="event__logger_8h.html#a0e1498be3e55eb02caf5c59fdc4d80be">event_logger.h</a>
 </li>
 <li>EL_TLOG_LOG_SIZE_MAX_EL
 : <a class="el" href="event__logger_8h.html#aad0501d2c583448672cdc333b8985422">event_logger.h</a>
@@ -721,12 +768,12 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__logger__params_8h.html#ab7c1cbf131d697f9c17b0594649c3690">event_logger_params.h</a>
 </li>
 <li>EL_TLOG_TLM_PAGE_MAX_HIGH
-: <a class="el" href="event__logger__params_8h.html#a59e4398fa1089176bc6204e4e4fcb627">event_logger_params.h</a>
-, <a class="el" href="event__logger_8h.html#a59e4398fa1089176bc6204e4e4fcb627">event_logger.h</a>
+: <a class="el" href="event__logger_8h.html#a59e4398fa1089176bc6204e4e4fcb627">event_logger.h</a>
+, <a class="el" href="event__logger__params_8h.html#a59e4398fa1089176bc6204e4e4fcb627">event_logger_params.h</a>
 </li>
 <li>EL_TLOG_TLM_PAGE_MAX_LOW
-: <a class="el" href="event__logger_8h.html#aa036654c2108955b572722b668d7f1be">event_logger.h</a>
-, <a class="el" href="event__logger__params_8h.html#aa036654c2108955b572722b668d7f1be">event_logger_params.h</a>
+: <a class="el" href="event__logger__params_8h.html#aa036654c2108955b572722b668d7f1be">event_logger_params.h</a>
+, <a class="el" href="event__logger_8h.html#aa036654c2108955b572722b668d7f1be">event_logger.h</a>
 </li>
 <li>EL_TLOG_TLM_PAGE_MAX_MIDDLE
 : <a class="el" href="event__logger_8h.html#ad56760785bcaca7b7b5af545c0a51132">event_logger.h</a>
@@ -749,22 +796,22 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 , <a class="el" href="endian__memcpy_8h.html#a153793f6939a1cb0f6bc3968d953f31e">endian_memcpy.h</a>
 </li>
 <li>event_handler
-: <a class="el" href="event__handler_8c.html#a0dce90e75a38c6ddf6114f90d9e12d52">event_handler.c</a>
-, <a class="el" href="event__handler_8h.html#a0dce90e75a38c6ddf6114f90d9e12d52">event_handler.h</a>
+: <a class="el" href="event__handler_8h.html#a0dce90e75a38c6ddf6114f90d9e12d52">event_handler.h</a>
+, <a class="el" href="event__handler_8c.html#a0dce90e75a38c6ddf6114f90d9e12d52">event_handler.c</a>
 </li>
 <li>event_handler_
 : <a class="el" href="event__handler_8c.html#a0f0b415e18ee8d95d95a6f8d5a8ce7b3">event_handler.c</a>
 </li>
 <li>event_logger
-: <a class="el" href="event__logger_8h.html#aec2c93b88dfe4bb8f16a477ece74c6de">event_logger.h</a>
-, <a class="el" href="event__logger_8c.html#aec2c93b88dfe4bb8f16a477ece74c6de">event_logger.c</a>
+: <a class="el" href="event__logger_8c.html#aec2c93b88dfe4bb8f16a477ece74c6de">event_logger.c</a>
+, <a class="el" href="event__logger_8h.html#aec2c93b88dfe4bb8f16a477ece74c6de">event_logger.h</a>
 </li>
 <li>event_logger_
 : <a class="el" href="event__logger_8c.html#a398225a6a61204d5b39e84c4031bc66a">event_logger.c</a>
 </li>
 <li>EVENT_UTIL_create_app()
-: <a class="el" href="event__utility_8h.html#aa819ee69e6cd34b9217e9627ee12f70c">event_utility.h</a>
-, <a class="el" href="event__utility_8c.html#aa819ee69e6cd34b9217e9627ee12f70c">event_utility.c</a>
+: <a class="el" href="event__utility_8c.html#aa819ee69e6cd34b9217e9627ee12f70c">event_utility.c</a>
+, <a class="el" href="event__utility_8h.html#aa819ee69e6cd34b9217e9627ee12f70c">event_utility.h</a>
 </li>
 <li>EVENT_UTIL_init_()
 : <a class="el" href="event__utility_8c.html#a9317e2b79883e73e093614dde5b346aa">event_utility.c</a>
@@ -773,8 +820,8 @@ $(document).ready(function(){initNavTree('globals_e.html',''); initResizable(); 
 : <a class="el" href="event__utility_8c.html#a548bb66aea76e09e9f801c10fad11b98">event_utility.c</a>
 </li>
 <li>event_utility
-: <a class="el" href="event__utility_8h.html#ae5d16dd04923705c8eb4be69f2c0ba58">event_utility.h</a>
-, <a class="el" href="event__utility_8c.html#ae5d16dd04923705c8eb4be69f2c0ba58">event_utility.c</a>
+: <a class="el" href="event__utility_8c.html#ae5d16dd04923705c8eb4be69f2c0ba58">event_utility.c</a>
+, <a class="el" href="event__utility_8h.html#ae5d16dd04923705c8eb4be69f2c0ba58">event_utility.h</a>
 </li>
 <li>event_utility_
 : <a class="el" href="event__utility_8c.html#a82c05a96293789dc0dccea0453ef1e8b">event_utility.c</a>

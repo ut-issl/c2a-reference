@@ -86,39 +86,40 @@ $(document).ready(function(){initNavTree('app__info_8c_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="app__info_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="app__info_8h.html">app_info.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">// for NULL</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="app__info_8h.html#a80d1a060d7512364285ead7bdc4c0105">    6</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                        <span class="keywordtype">void</span> (*initializer)(<span class="keywordtype">void</span>),</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                        <span class="keywordtype">void</span> (*entry_point)(<span class="keywordtype">void</span>))</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="struct_app_info.html">AppInfo</a> ai;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  ai.<a class="code" href="struct_app_info.html#a8f8f80d37794cde9472343e4487ba3eb">name</a> = name;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  ai.<a class="code" href="struct_app_info.html#ac49163c8d1463b91c4b466fa6932fa99">init_duration</a> = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  ai.<a class="code" href="struct_app_info.html#a308ae6ec9f26323998fbc844491a0f14">prev</a> = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  ai.<a class="code" href="struct_app_info.html#abe6b4295e3c72c11f123eea1cd33fa42">max</a> = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  ai.<a class="code" href="struct_app_info.html#a5438b04abe209b98e47de9b515dcc5e8">min</a> = 0xffffffff;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  ai.<a class="code" href="struct_app_info.html#ac77d8508ba8345f02ea51c4949df7768">initializer</a> = initializer;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  ai.<a class="code" href="struct_app_info.html#aaf104d99975b618cacfb49008647d667">entry_point</a> = entry_point;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> ai;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="app__info_8h.html">app_info.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="app__info_8h.html#a0d81b42bb05772083032b2f23bac9202">    9</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="app__info_8c.html#a0d81b42bb05772083032b2f23bac9202">AI_create_app_info</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                           <span class="keywordtype">void</span> (*initializer)(<span class="keywordtype">void</span>),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                           <span class="keywordtype">void</span> (*entry_point)(<span class="keywordtype">void</span>))</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="struct_app_info.html">AppInfo</a> ai;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  ai.<a class="code" href="struct_app_info.html#a8f8f80d37794cde9472343e4487ba3eb">name</a> = name;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  ai.<a class="code" href="struct_app_info.html#ac49163c8d1463b91c4b466fa6932fa99">init_duration</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  ai.<a class="code" href="struct_app_info.html#a308ae6ec9f26323998fbc844491a0f14">prev</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  ai.<a class="code" href="struct_app_info.html#abe6b4295e3c72c11f123eea1cd33fa42">max</a> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  ai.<a class="code" href="struct_app_info.html#a5438b04abe209b98e47de9b515dcc5e8">min</a> = 0xffffffff;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  ai.<a class="code" href="struct_app_info.html#ac77d8508ba8345f02ea51c4949df7768">initializer</a> = initializer;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  ai.<a class="code" href="struct_app_info.html#aaf104d99975b618cacfb49008647d667">entry_point</a> = entry_point;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> ai;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma section</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astruct_app_info_html_a5438b04abe209b98e47de9b515dcc5e8"><div class="ttname"><a href="struct_app_info.html#a5438b04abe209b98e47de9b515dcc5e8">AppInfo::min</a></div><div class="ttdeci">step_t min</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00011">app_info.h:11</a></div></div>
-<div class="ttc" id="astruct_app_info_html_ac49163c8d1463b91c4b466fa6932fa99"><div class="ttname"><a href="struct_app_info.html#ac49163c8d1463b91c4b466fa6932fa99">AppInfo::init_duration</a></div><div class="ttdeci">step_t init_duration</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00009">app_info.h:9</a></div></div>
-<div class="ttc" id="astruct_app_info_html_a308ae6ec9f26323998fbc844491a0f14"><div class="ttname"><a href="struct_app_info.html#a308ae6ec9f26323998fbc844491a0f14">AppInfo::prev</a></div><div class="ttdeci">step_t prev</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00010">app_info.h:10</a></div></div>
-<div class="ttc" id="astruct_app_info_html_abe6b4295e3c72c11f123eea1cd33fa42"><div class="ttname"><a href="struct_app_info.html#abe6b4295e3c72c11f123eea1cd33fa42">AppInfo::max</a></div><div class="ttdeci">step_t max</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00012">app_info.h:12</a></div></div>
-<div class="ttc" id="astruct_app_info_html_ac77d8508ba8345f02ea51c4949df7768"><div class="ttname"><a href="struct_app_info.html#ac77d8508ba8345f02ea51c4949df7768">AppInfo::initializer</a></div><div class="ttdeci">void(* initializer)(void)</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00013">app_info.h:13</a></div></div>
-<div class="ttc" id="aapp__info_8h_html"><div class="ttname"><a href="app__info_8h.html">app_info.h</a></div></div>
-<div class="ttc" id="astruct_app_info_html_aaf104d99975b618cacfb49008647d667"><div class="ttname"><a href="struct_app_info.html#aaf104d99975b618cacfb49008647d667">AppInfo::entry_point</a></div><div class="ttdeci">void(* entry_point)(void)</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00014">app_info.h:14</a></div></div>
-<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00006">app_info.h:6</a></div></div>
-<div class="ttc" id="astruct_app_info_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="struct_app_info.html#a8f8f80d37794cde9472343e4487ba3eb">AppInfo::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00008">app_info.h:8</a></div></div>
-<div class="ttc" id="aapp__info_8c_html_a80d1a060d7512364285ead7bdc4c0105"><div class="ttname"><a href="app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105">create_app_info</a></div><div class="ttdeci">AppInfo create_app_info(const char *name, void(*initializer)(void), void(*entry_point)(void))</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8c_source.html#l00006">app_info.c:6</a></div></div>
+<div class="ttc" id="astruct_app_info_html_a5438b04abe209b98e47de9b515dcc5e8"><div class="ttname"><a href="struct_app_info.html#a5438b04abe209b98e47de9b515dcc5e8">AppInfo::min</a></div><div class="ttdeci">step_t min</div><div class="ttdoc">アプリ実行処理時間（最小値）</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00015">app_info.h:15</a></div></div>
+<div class="ttc" id="astruct_app_info_html_ac49163c8d1463b91c4b466fa6932fa99"><div class="ttname"><a href="struct_app_info.html#ac49163c8d1463b91c4b466fa6932fa99">AppInfo::init_duration</a></div><div class="ttdeci">step_t init_duration</div><div class="ttdoc">アプリ初期化処理時間</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00013">app_info.h:13</a></div></div>
+<div class="ttc" id="astruct_app_info_html_a308ae6ec9f26323998fbc844491a0f14"><div class="ttname"><a href="struct_app_info.html#a308ae6ec9f26323998fbc844491a0f14">AppInfo::prev</a></div><div class="ttdeci">step_t prev</div><div class="ttdoc">アプリ実行処理時間（直近）</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00014">app_info.h:14</a></div></div>
+<div class="ttc" id="aapp__info_8c_html_a0d81b42bb05772083032b2f23bac9202"><div class="ttname"><a href="app__info_8c.html#a0d81b42bb05772083032b2f23bac9202">AI_create_app_info</a></div><div class="ttdeci">AppInfo AI_create_app_info(const char *name, void(*initializer)(void), void(*entry_point)(void))</div><div class="ttdoc">AppInfo を作る</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8c_source.html#l00009">app_info.c:9</a></div></div>
+<div class="ttc" id="astruct_app_info_html_abe6b4295e3c72c11f123eea1cd33fa42"><div class="ttname"><a href="struct_app_info.html#abe6b4295e3c72c11f123eea1cd33fa42">AppInfo::max</a></div><div class="ttdeci">step_t max</div><div class="ttdoc">アプリ実行処理時間（最大値）</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00016">app_info.h:16</a></div></div>
+<div class="ttc" id="astruct_app_info_html_ac77d8508ba8345f02ea51c4949df7768"><div class="ttname"><a href="struct_app_info.html#ac77d8508ba8345f02ea51c4949df7768">AppInfo::initializer</a></div><div class="ttdeci">void(* initializer)(void)</div><div class="ttdoc">アプリ初期化関数</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00017">app_info.h:17</a></div></div>
+<div class="ttc" id="aapp__info_8h_html"><div class="ttname"><a href="app__info_8h.html">app_info.h</a></div><div class="ttdoc">App 情報構造体定義と App 作成</div></div>
+<div class="ttc" id="astruct_app_info_html_aaf104d99975b618cacfb49008647d667"><div class="ttname"><a href="struct_app_info.html#aaf104d99975b618cacfb49008647d667">AppInfo::entry_point</a></div><div class="ttdeci">void(* entry_point)(void)</div><div class="ttdoc">アプリ実行関数（エントリーポイント）</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00018">app_info.h:18</a></div></div>
+<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00010">app_info.h:10</a></div></div>
+<div class="ttc" id="astruct_app_info_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="struct_app_info.html#a8f8f80d37794cde9472343e4487ba3eb">AppInfo::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">アプリ名 (C2A 内部では使用されていない )</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00012">app_info.h:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

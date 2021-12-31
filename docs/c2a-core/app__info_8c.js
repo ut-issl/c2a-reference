@@ -1,4 +1,4 @@
 var app__info_8c =
 [
-    [ "create_app_info", "app__info_8c.html#a80d1a060d7512364285ead7bdc4c0105", null ]
+    [ "AI_create_app_info", "app__info_8c.html#a0d81b42bb05772083032b2f23bac9202", null ]
 ];
