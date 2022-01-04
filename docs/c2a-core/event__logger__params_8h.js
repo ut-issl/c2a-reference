@@ -1,7 +1,7 @@
 var event__logger__params_8h =
 [
-    [ "EL_CLOG_SIZE_MAX_EL", "event__logger__params_8h.html#a91292586bf7f5110cf834cfea391c692", null ],
-    [ "EL_CLOG_SIZE_MAX_EL", "event__logger__params_8h.html#a91292586bf7f5110cf834cfea391c692", null ],
+    [ "EL_CLOG_LOG_SIZE_MAX_EH", "event__logger__params_8h.html#a39d4816375ea415c939d1d8b1b6b1c61", null ],
+    [ "EL_CLOG_LOG_SIZE_MAX_EL", "event__logger__params_8h.html#adeaeae643d18ddf9f8835932e834ccb6", null ],
     [ "EL_CLOG_TLM_PAGE_MAX_HIGH", "event__logger__params_8h.html#a0785d1d6b5633040d55251c041061909", null ],
     [ "EL_CLOG_TLM_PAGE_MAX_LOW", "event__logger__params_8h.html#a88f3650759a5b05fab3eed2e5e575d3d", null ],
     [ "EL_CLOG_TLM_PAGE_MAX_MIDDLE", "event__logger__params_8h.html#a00dda9d32639c44e82dd84bdaf3cb676", null ],
@@ -11,8 +11,8 @@ var event__logger__params_8h =
     [ "EL_IS_ENABLE_EVENT_NOTE", "event__logger__params_8h.html#a4b65e39decb888497279e3878d64602b", null ],
     [ "EL_IS_ENABLE_MIDDLE_ERROR_LEVEL", "event__logger__params_8h.html#acc12c33985faba4c9baa91caabd34698", null ],
     [ "EL_IS_ENABLE_TLOG", "event__logger__params_8h.html#a3d98f503ca5f0d374f0f5ca68ecf0776", null ],
-    [ "EL_TLOG_SIZE_MAX_EL", "event__logger__params_8h.html#ab7c1cbf131d697f9c17b0594649c3690", null ],
-    [ "EL_TLOG_SIZE_MAX_EL", "event__logger__params_8h.html#ab7c1cbf131d697f9c17b0594649c3690", null ],
+    [ "EL_TLOG_LOG_SIZE_MAX_EH", "event__logger__params_8h.html#a0e1498be3e55eb02caf5c59fdc4d80be", null ],
+    [ "EL_TLOG_LOG_SIZE_MAX_EL", "event__logger__params_8h.html#aad0501d2c583448672cdc333b8985422", null ],
     [ "EL_TLOG_TLM_PAGE_MAX_HIGH", "event__logger__params_8h.html#a59e4398fa1089176bc6204e4e4fcb627", null ],
     [ "EL_TLOG_TLM_PAGE_MAX_LOW", "event__logger__params_8h.html#aa036654c2108955b572722b668d7f1be", null ],
     [ "EL_TLOG_TLM_PAGE_MAX_MIDDLE", "event__logger__params_8h.html#ad56760785bcaca7b7b5af545c0a51132", null ],

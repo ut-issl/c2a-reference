@@ -57,7 +57,7 @@ var NAVTREEINDEX =
 "di__gs_8c.html#aa33f6832c0a9c1f249019195686104fe",
 "driver__super_8h.html#a42c80644b6772ae2596e20b75804c0c3",
 "event__handler_8h.html#a85d43255132f8154481c589c260586bfa30d6baec933e38d1a8e1f40a39ef58e6",
-"event__logger__params_8h.html#a59e4398fa1089176bc6204e4e4fcb627",
+"event__logger__params_8h.html#a3d98f503ca5f0d374f0f5ca68ecf0776",
 "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebba99212d97f8168160dce398fe1ec55f9d",
 "obc__time_8h.html#a8d70081c0b7615e9381c431ae5f8dca2",
 "stdint_8h.html#a831d6234342279926bb11bad3a37add9",
