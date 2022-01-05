@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('obc__time_8h.html',''); initResizable(
 <div class="title">obc_time.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>OBCの時刻情報の定義と演算  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="obc__time__params_8h_source.html">src_user/Settings/System/obc_time_params.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -110,6 +113,7 @@ obc_time.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 データ構造</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_obc_time.html">ObcTime</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OBCの時刻情報を保持する構造体  <a href="struct_obc_time.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">unixtimeとObcTimeを紐づける構造体  <a href="struct_o_b_c_t___unixtime_info.html#details">[詳解]</a><br /></td></tr>
@@ -118,16 +122,16 @@ obc_time.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a9b36df3746c314172a6b7740b6301af0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a9b36df3746c314172a6b7740b6301af0">OBCT_STEP_IN_MSEC</a>&#160;&#160;&#160;(1)</td></tr>
-<tr class="memdesc:a9b36df3746c314172a6b7740b6301af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">1stepで何msか  <a href="obc__time_8h.html#a9b36df3746c314172a6b7740b6301af0">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a9b36df3746c314172a6b7740b6301af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 step で何 ms か  <a href="obc__time_8h.html#a9b36df3746c314172a6b7740b6301af0">[詳解]</a><br /></td></tr>
 <tr class="separator:a9b36df3746c314172a6b7740b6301af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4d252a60b3bc45c8b2606765691e613"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#ad4d252a60b3bc45c8b2606765691e613">OBCT_STEPS_PER_CYCLE</a>&#160;&#160;&#160;(100)</td></tr>
-<tr class="memdesc:ad4d252a60b3bc45c8b2606765691e613"><td class="mdescLeft">&#160;</td><td class="mdescRight">何stepで1cycleか  <a href="obc__time_8h.html#ad4d252a60b3bc45c8b2606765691e613">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ad4d252a60b3bc45c8b2606765691e613"><td class="mdescLeft">&#160;</td><td class="mdescRight">何 step で 1 cycle か  <a href="obc__time_8h.html#ad4d252a60b3bc45c8b2606765691e613">[詳解]</a><br /></td></tr>
 <tr class="separator:ad4d252a60b3bc45c8b2606765691e613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa38c36293579fed0faf15095698906"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a9aa38c36293579fed0faf15095698906">OBCT_CYCLES_PER_SEC</a>&#160;&#160;&#160;(1000 / <a class="el" href="obc__time__params_8h.html#a9b36df3746c314172a6b7740b6301af0">OBCT_STEP_IN_MSEC</a> / <a class="el" href="obc__time__params_8h.html#ad4d252a60b3bc45c8b2606765691e613">OBCT_STEPS_PER_CYCLE</a>)</td></tr>
-<tr class="memdesc:a9aa38c36293579fed0faf15095698906"><td class="mdescLeft">&#160;</td><td class="mdescRight">1sで何cycleか  <a href="obc__time_8h.html#a9aa38c36293579fed0faf15095698906">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a9aa38c36293579fed0faf15095698906"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 s で何 cycle か  <a href="obc__time_8h.html#a9aa38c36293579fed0faf15095698906">[詳解]</a><br /></td></tr>
 <tr class="separator:a9aa38c36293579fed0faf15095698906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f627a5dbe2f7d16f75e7ceeff6fa5c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a1f627a5dbe2f7d16f75e7ceeff6fa5c2">OBCT_MAX_CYCLE</a>&#160;&#160;&#160;(0xfffffff0u)</td></tr>
-<tr class="memdesc:a1f627a5dbe2f7d16f75e7ceeff6fa5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大cycle数．つまりTIがいくつでオーバーフローするか  <a href="obc__time_8h.html#a1f627a5dbe2f7d16f75e7ceeff6fa5c2">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a1f627a5dbe2f7d16f75e7ceeff6fa5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大 cycle 数．つまり TI がいくつでオーバーフローするか  <a href="obc__time_8h.html#a1f627a5dbe2f7d16f75e7ceeff6fa5c2">[詳解]</a><br /></td></tr>
 <tr class="separator:a1f627a5dbe2f7d16f75e7ceeff6fa5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -140,61 +144,86 @@ obc_time.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a70416835a40bdacbb04f6f06b1e6d1e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a70416835a40bdacbb04f6f06b1e6d1e1">OBCT_create</a> (<a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> total_cycle, <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> mode_cycle, <a class="el" href="obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773">step_t</a> step)</td></tr>
+<tr class="memdesc:a70416835a40bdacbb04f6f06b1e6d1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数から <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> を作成する  <a href="obc__time_8h.html#a70416835a40bdacbb04f6f06b1e6d1e1">[詳解]</a><br /></td></tr>
 <tr class="separator:a70416835a40bdacbb04f6f06b1e6d1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af728cdbeae57ea5bf7f25ba5a3776e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#af728cdbeae57ea5bf7f25ba5a3776e60">OBCT_clear</a> (<a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:af728cdbeae57ea5bf7f25ba5a3776e60"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> をクリアし全てゼロにする  <a href="obc__time_8h.html#af728cdbeae57ea5bf7f25ba5a3776e60">[詳解]</a><br /></td></tr>
 <tr class="separator:af728cdbeae57ea5bf7f25ba5a3776e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13a546bfda84dcbcae9222394a38f0ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a13a546bfda84dcbcae9222394a38f0ab">OBCT_count_up</a> (<a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:a13a546bfda84dcbcae9222394a38f0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ObcTimeをstep刻みでインクリメントする  <a href="obc__time_8h.html#a13a546bfda84dcbcae9222394a38f0ab">[詳解]</a><br /></td></tr>
 <tr class="separator:a13a546bfda84dcbcae9222394a38f0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d49c8a8ccbdfee20ee8af350dc35c47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a5d49c8a8ccbdfee20ee8af350dc35c47">OBCT_get_max</a> (void)</td></tr>
+<tr class="memdesc:a5d49c8a8ccbdfee20ee8af350dc35c47"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> が取りうる最大値を返す  <a href="obc__time_8h.html#a5d49c8a8ccbdfee20ee8af350dc35c47">[詳解]</a><br /></td></tr>
 <tr class="separator:a5d49c8a8ccbdfee20ee8af350dc35c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42c1d017a2cbb8dab608771907c97d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#ac42c1d017a2cbb8dab608771907c97d5">OBCT_get_total_cycle</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:ac42c1d017a2cbb8dab608771907c97d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の total_cycle を返す  <a href="obc__time_8h.html#ac42c1d017a2cbb8dab608771907c97d5">[詳解]</a><br /></td></tr>
 <tr class="separator:ac42c1d017a2cbb8dab608771907c97d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac89b170b2f703898ce4e41b6da402314"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#ac89b170b2f703898ce4e41b6da402314">OBCT_get_mode_cycle</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:ac89b170b2f703898ce4e41b6da402314"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の mode_cycle を返す  <a href="obc__time_8h.html#ac89b170b2f703898ce4e41b6da402314">[詳解]</a><br /></td></tr>
 <tr class="separator:ac89b170b2f703898ce4e41b6da402314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42bd831d04337c9fc2ff10513e66d699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773">step_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a42bd831d04337c9fc2ff10513e66d699">OBCT_get_step</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:a42bd831d04337c9fc2ff10513e66d699"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の step を返す  <a href="obc__time_8h.html#a42bd831d04337c9fc2ff10513e66d699">[詳解]</a><br /></td></tr>
 <tr class="separator:a42bd831d04337c9fc2ff10513e66d699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe5440fad08b30200644678b02c6791e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#afe5440fad08b30200644678b02c6791e">OBCT_get_total_cycle_in_msec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:afe5440fad08b30200644678b02c6791e"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の total_cycle をミリ秒単位で返す  <a href="obc__time_8h.html#afe5440fad08b30200644678b02c6791e">[詳解]</a><br /></td></tr>
 <tr class="separator:afe5440fad08b30200644678b02c6791e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed90577ab2d3335348c8389d36070470"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#aed90577ab2d3335348c8389d36070470">OBCT_get_mode_cycle_in_msec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:aed90577ab2d3335348c8389d36070470"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の mode_cycle をミリ秒単位で返す  <a href="obc__time_8h.html#aed90577ab2d3335348c8389d36070470">[詳解]</a><br /></td></tr>
 <tr class="separator:aed90577ab2d3335348c8389d36070470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25bff1e1b4264e0b0db5494dbd8788e4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a25bff1e1b4264e0b0db5494dbd8788e4">OBCT_get_total_cycle_in_sec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
-<tr class="separator:a25bff1e1b4264e0b0db5494dbd8788e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e07cb2b7d97b570ab63fd221a34cbca"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a6e07cb2b7d97b570ab63fd221a34cbca">OBCT_get_mode_cycle_in_sec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
-<tr class="separator:a6e07cb2b7d97b570ab63fd221a34cbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3276bbf1e25cda02c8b12a92c5b6490e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a3276bbf1e25cda02c8b12a92c5b6490e">OBCT_get_total_cycle_in_sec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:a3276bbf1e25cda02c8b12a92c5b6490e"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の total_cycle を秒単位で返す  <a href="obc__time_8h.html#a3276bbf1e25cda02c8b12a92c5b6490e">[詳解]</a><br /></td></tr>
+<tr class="separator:a3276bbf1e25cda02c8b12a92c5b6490e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a94d8ef0225e201510e8b30dd86c190"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a5a94d8ef0225e201510e8b30dd86c190">OBCT_get_mode_cycle_in_sec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:a5a94d8ef0225e201510e8b30dd86c190"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の mode_cycle を秒単位で返す  <a href="obc__time_8h.html#a5a94d8ef0225e201510e8b30dd86c190">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a94d8ef0225e201510e8b30dd86c190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8ccfb267e9abd0baaa2fa43869e79d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a9f8ccfb267e9abd0baaa2fa43869e79d">OBCT_msec2cycle</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> msec)</td></tr>
+<tr class="memdesc:a9f8ccfb267e9abd0baaa2fa43869e79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミリ秒を cycle に変換する  <a href="obc__time_8h.html#a9f8ccfb267e9abd0baaa2fa43869e79d">[詳解]</a><br /></td></tr>
 <tr class="separator:a9f8ccfb267e9abd0baaa2fa43869e79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77eb810c809f22fe8a938de04a9ddd3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a77eb810c809f22fe8a938de04a9ddd3b">OBCT_cycle2msec</a> (<a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> cycle)</td></tr>
+<tr class="memdesc:a77eb810c809f22fe8a938de04a9ddd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">cycle をミリ秒に変換する  <a href="obc__time_8h.html#a77eb810c809f22fe8a938de04a9ddd3b">[詳解]</a><br /></td></tr>
 <tr class="separator:a77eb810c809f22fe8a938de04a9ddd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b1c3452d2b2f014d72324bb7b03ac87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a1b1c3452d2b2f014d72324bb7b03ac87">OBCT_sec2cycle</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> sec)</td></tr>
+<tr class="memdesc:a1b1c3452d2b2f014d72324bb7b03ac87"><td class="mdescLeft">&#160;</td><td class="mdescRight">秒を cycle に変換する  <a href="obc__time_8h.html#a1b1c3452d2b2f014d72324bb7b03ac87">[詳解]</a><br /></td></tr>
 <tr class="separator:a1b1c3452d2b2f014d72324bb7b03ac87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d5f48c88462c3ff575c18ee1a566847"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a4d5f48c88462c3ff575c18ee1a566847">OBCT_cycle2sec</a> (<a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> cycle)</td></tr>
+<tr class="memdesc:a4d5f48c88462c3ff575c18ee1a566847"><td class="mdescLeft">&#160;</td><td class="mdescRight">cycle を秒に変換する  <a href="obc__time_8h.html#a4d5f48c88462c3ff575c18ee1a566847">[詳解]</a><br /></td></tr>
 <tr class="separator:a4d5f48c88462c3ff575c18ee1a566847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02512f745375636ab21f468838587942"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a02512f745375636ab21f468838587942">OBCT_diff</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *before, const <a class="el" href="struct_obc_time.html">ObcTime</a> *after)</td></tr>
+<tr class="memdesc:a02512f745375636ab21f468838587942"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算を行う  <a href="obc__time_8h.html#a02512f745375636ab21f468838587942">[詳解]</a><br /></td></tr>
 <tr class="separator:a02512f745375636ab21f468838587942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3adce1b790eb67e1eff3cb1e79fc197f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773">step_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a3adce1b790eb67e1eff3cb1e79fc197f">OBCT_diff_in_step</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *before, const <a class="el" href="struct_obc_time.html">ObcTime</a> *after)</td></tr>
+<tr class="memdesc:a3adce1b790eb67e1eff3cb1e79fc197f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算を step 単位で行う  <a href="obc__time_8h.html#a3adce1b790eb67e1eff3cb1e79fc197f">[詳解]</a><br /></td></tr>
 <tr class="separator:a3adce1b790eb67e1eff3cb1e79fc197f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f2c2c48be7ec8985ec47f36bef1335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a51f2c2c48be7ec8985ec47f36bef1335">OBCT_diff_in_msec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *before, const <a class="el" href="struct_obc_time.html">ObcTime</a> *after)</td></tr>
+<tr class="memdesc:a51f2c2c48be7ec8985ec47f36bef1335"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算をミリ秒単位で行う  <a href="obc__time_8h.html#a51f2c2c48be7ec8985ec47f36bef1335">[詳解]</a><br /></td></tr>
 <tr class="separator:a51f2c2c48be7ec8985ec47f36bef1335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27757cb6f9cd89e1739f42fe7fb35163"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a27757cb6f9cd89e1739f42fe7fb35163">OBCT_diff_in_sec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *before, const <a class="el" href="struct_obc_time.html">ObcTime</a> *after)</td></tr>
-<tr class="separator:a27757cb6f9cd89e1739f42fe7fb35163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726e416698ccbad0b6ecced8ca02d2a4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a726e416698ccbad0b6ecced8ca02d2a4">OBCT_diff_in_sec</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *before, const <a class="el" href="struct_obc_time.html">ObcTime</a> *after)</td></tr>
+<tr class="memdesc:a726e416698ccbad0b6ecced8ca02d2a4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算を秒単位で行う  <a href="obc__time_8h.html#a726e416698ccbad0b6ecced8ca02d2a4">[詳解]</a><br /></td></tr>
+<tr class="separator:a726e416698ccbad0b6ecced8ca02d2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a185dfe9d335e03678035de616964e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a66a185dfe9d335e03678035de616964e">OBCT_add</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *left, const <a class="el" href="struct_obc_time.html">ObcTime</a> *right)</td></tr>
+<tr class="memdesc:a66a185dfe9d335e03678035de616964e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の足し算を行う  <a href="obc__time_8h.html#a66a185dfe9d335e03678035de616964e">[詳解]</a><br /></td></tr>
 <tr class="separator:a66a185dfe9d335e03678035de616964e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d70081c0b7615e9381c431ae5f8dca2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a8d70081c0b7615e9381c431ae5f8dca2">OBCT_compare</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *t1, const <a class="el" href="struct_obc_time.html">ObcTime</a> *t2)</td></tr>
-<tr class="memdesc:a8d70081c0b7615e9381c431ae5f8dca2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html">ObcTime</a> の比較  <a href="obc__time_8h.html#a8d70081c0b7615e9381c431ae5f8dca2">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a8d70081c0b7615e9381c431ae5f8dca2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の比較  <a href="obc__time_8h.html#a8d70081c0b7615e9381c431ae5f8dca2">[詳解]</a><br /></td></tr>
 <tr class="separator:a8d70081c0b7615e9381c431ae5f8dca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d31fad7eb84c89644c61c62ae57b2b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a4d31fad7eb84c89644c61c62ae57b2b9">OBCT_print</a> (const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:a4d31fad7eb84c89644c61c62ae57b2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ出力に <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> を表示する  <a href="obc__time_8h.html#a4d31fad7eb84c89644c61c62ae57b2b9">[詳解]</a><br /></td></tr>
 <tr class="separator:a4d31fad7eb84c89644c61c62ae57b2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19370bcf64c5ec7da2ee2d3227f8995c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#a19370bcf64c5ec7da2ee2d3227f8995c">OBCT_create_unixtime_info</a> (const double unixtime, const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
-<tr class="memdesc:a19370bcf64c5ec7da2ee2d3227f8995c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> 作成関数  <a href="obc__time_8h.html#a19370bcf64c5ec7da2ee2d3227f8995c">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a19370bcf64c5ec7da2ee2d3227f8995c"><td class="mdescLeft">&#160;</td><td class="mdescRight">観測した UnixTime とそれを観測した時の <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> を受け取り <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> を作成する  <a href="obc__time_8h.html#a19370bcf64c5ec7da2ee2d3227f8995c">[詳解]</a><br /></td></tr>
 <tr class="separator:a19370bcf64c5ec7da2ee2d3227f8995c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae72247fec74fee72ad94d2b5cf1debe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#ae72247fec74fee72ad94d2b5cf1debe0">OBCT_clear_unixtime_info</a> (<a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a> *uti)</td></tr>
-<tr class="memdesc:ae72247fec74fee72ad94d2b5cf1debe0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> クリア関数, 全て0にする  <a href="obc__time_8h.html#ae72247fec74fee72ad94d2b5cf1debe0">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ae72247fec74fee72ad94d2b5cf1debe0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> をクリアして全て0にする  <a href="obc__time_8h.html#ae72247fec74fee72ad94d2b5cf1debe0">[詳解]</a><br /></td></tr>
 <tr class="separator:ae72247fec74fee72ad94d2b5cf1debe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9c02769b77f86df924e3741abbc6f55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#ae9c02769b77f86df924e3741abbc6f55">OBCT_modify_unixtime_info</a> (<a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a> *uti, const double unixtime, const <a class="el" href="struct_obc_time.html">ObcTime</a> time)</td></tr>
-<tr class="memdesc:ae9c02769b77f86df924e3741abbc6f55"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> 修正関数  <a href="obc__time_8h.html#ae9c02769b77f86df924e3741abbc6f55">[詳解]</a><br /></td></tr>
-<tr class="separator:ae9c02769b77f86df924e3741abbc6f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5d36bf78b79afa358d0924f376097a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obc__time_8h.html#abb5d36bf78b79afa358d0924f376097a">OBCT_update_unixtime_info</a> (<a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a> *uti, const double unixtime, const <a class="el" href="struct_obc_time.html">ObcTime</a> *time)</td></tr>
+<tr class="memdesc:abb5d36bf78b79afa358d0924f376097a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> を観測情報を用いて更新する  <a href="obc__time_8h.html#abb5d36bf78b79afa358d0924f376097a">[詳解]</a><br /></td></tr>
+<tr class="separator:abb5d36bf78b79afa358d0924f376097a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>OBCの時刻情報の定義と演算 </p>
+
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a9aa38c36293579fed0faf15095698906"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9aa38c36293579fed0faf15095698906">&#9670;&nbsp;</a></span>OBCT_CYCLES_PER_SEC</h2>
 
@@ -207,9 +236,9 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>1sで何cycleか </p>
+<p>1 s で何 cycle か </p>
 
-<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00013">13</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -225,9 +254,9 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>最大cycle数．つまりTIがいくつでオーバーフローするか </p>
+<p>最大 cycle 数．つまり TI がいくつでオーバーフローするか </p>
 
-<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00010">10</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00014">14</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -243,9 +272,9 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>1stepで何msか </p>
+<p>1 step で何 ms か </p>
 
-<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00011">11</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -261,9 +290,9 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>何stepで1cycleか </p>
+<p>何 step で 1 cycle か </p>
 
-<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00012">12</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -280,7 +309,7 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00018">18</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -296,7 +325,7 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8h_source.html">obc_time.h</a> の <a class="el" href="obc__time_8h_source.html#l00019">19</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -327,7 +356,18 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00161">161</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の足し算を行う </p>
+<dl class="section note"><dt>覚え書き</dt><dd>オーバーフローに注意 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>一項目 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>二項目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>引数を足し合わせた結果の <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00165">165</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -353,7 +393,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> をクリアし全てゼロにする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>クリアされる <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> 構造体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00022">22</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -379,15 +428,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> クリア関数, 全て0にする </p>
+<p><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> をクリアして全て0にする </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">uti</td><td>クリアする <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00205">205</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00203">203</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -423,8 +473,8 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_obc_time.html">ObcTime</a> の比較 </p>
-<dl class="section note"><dt>覚え書き</dt><dd>mode_cycle はみない </dd></dl>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の比較 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>mode_cycle は見ない </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">t1</td><td>比較対象 </td></tr>
@@ -432,17 +482,20 @@ obc_time.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>1 : t1 &lt; t2 </dd>
-<dd>
-0 : t1 == t2 </dd>
-<dd>
--1 : t2 &gt; t1 </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>: t1 &lt; t2 </td></tr>
+    <tr><td class="paramname">0</td><td>: t1 == t2 </td></tr>
+    <tr><td class="paramname">-1</td><td>: t2 &gt; t1 </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00176">176</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00180">180</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a8d70081c0b7615e9381c431ae5f8dca2_icgraph.svg" width="2018" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a8d70081c0b7615e9381c431ae5f8dca2_icgraph.svg" width="2522" height="1459"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -464,7 +517,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00026">26</a> 行目に定義があります。</p>
+<p>ObcTimeをstep刻みでインクリメントする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>カウントアップされる <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> 構造体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00029">29</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -506,11 +568,22 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00006">6</a> 行目に定義があります。</p>
+<p>引数から <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> を作成する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">total_cycle</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode_cycle</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">step</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>新規に作成した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> 構造体 </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00009">9</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a70416835a40bdacbb04f6f06b1e6d1e1_icgraph.svg" width="1572" height="1339"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a70416835a40bdacbb04f6f06b1e6d1e1_icgraph.svg" width="1431" height="1428"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -542,22 +615,21 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> 作成関数 </p>
-<pre class="fragment">   観測した UnixTime とそれを観測した時の ObcTime を受け取り OBCT_UnixtimeInfo へ変える.
-</pre> <dl class="params"><dt>引数</dt><dd>
+<p>観測した UnixTime とそれを観測した時の <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> を受け取り <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> を作成する </p>
+<dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>(GPS 等から) unixtime を観測した時の <a class="el" href="struct_obc_time.html">ObcTime</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">unixtime</td><td>(GPS 等から観測した) unixtime </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>(GPS 等から) unixtime を観測した時の <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> 引数から計算した <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>引数から計算した <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00192">192</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00196">196</a> 行目に定義があります。</p>
 <div class="dynheader">
-被呼び出し関係図:</div>
+呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a19370bcf64c5ec7da2ee2d3227f8995c_icgraph.svg" width="1892" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a19370bcf64c5ec7da2ee2d3227f8995c_cgraph.svg" width="680" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -579,7 +651,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00104">104</a> 行目に定義があります。</p>
+<p>cycle をミリ秒に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cycle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ミリ秒単位に変換された cycle </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00102">102</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -599,7 +680,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00113">113</a> 行目に定義があります。</p>
+<p>cycle を秒に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cycle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>秒単位に変換されたcycle (端数は切り捨てて整数にする) </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00111">111</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -629,11 +719,33 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00117">117</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算を行う </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">before</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">after</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">after</td><td>&gt;= before の場合: after から before を引いた結果の <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> </td></tr>
+    <tr><td class="paramname">after</td><td>&lt; before の場合: {0, 0, 0} </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00115">115</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a02512f745375636ab21f468838587942_cgraph.svg" width="268" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a02512f745375636ab21f468838587942_icgraph.svg" width="2166" height="1436"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a02512f745375636ab21f468838587942_icgraph.svg" width="2202" height="1448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -665,30 +777,46 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00149">149</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算をミリ秒単位で行う </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">before</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">after</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">after</td><td>&gt;= before の場合: after - before をミリ秒単位に変換したもの </td></tr>
+    <tr><td class="paramname">after</td><td>&lt; before の場合: 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00152">152</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a51f2c2c48be7ec8985ec47f36bef1335_cgraph.svg" width="480" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a51f2c2c48be7ec8985ec47f36bef1335_cgraph.svg" width="651" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a51f2c2c48be7ec8985ec47f36bef1335_icgraph.svg" width="2664" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a51f2c2c48be7ec8985ec47f36bef1335_icgraph.svg" width="2596" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a27757cb6f9cd89e1739f42fe7fb35163"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27757cb6f9cd89e1739f42fe7fb35163">&#9670;&nbsp;</a></span>OBCT_diff_in_sec()</h2>
+<a id="a726e416698ccbad0b6ecced8ca02d2a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726e416698ccbad0b6ecced8ca02d2a4">&#9670;&nbsp;</a></span>OBCT_diff_in_sec()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float OBCT_diff_in_sec </td>
+          <td class="memname">double OBCT_diff_in_sec </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_obc_time.html">ObcTime</a> *&#160;</td>
           <td class="paramname"><em>before</em>, </td>
@@ -707,17 +835,27 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00155">155</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算を秒単位で行う </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">before</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">after</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">after</td><td>&gt;= before の場合: after - before を秒単位に変換したもの </td></tr>
+    <tr><td class="paramname">after</td><td>&lt; before の場合: 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00158">158</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a27757cb6f9cd89e1739f42fe7fb35163_cgraph.svg" width="663" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a27757cb6f9cd89e1739f42fe7fb35163_icgraph.svg" width="386" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a726e416698ccbad0b6ecced8ca02d2a4_cgraph.svg" width="528" height="130"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -749,17 +887,34 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00142">142</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の引き算を step 単位で行う </p>
+<dl class="section note"><dt>覚え書き</dt><dd>オーバーフローに注意 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">before</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">after</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">after</td><td>&gt;= before の場合: after - before を step 単位に変換したもの </td></tr>
+    <tr><td class="paramname">after</td><td>&lt; before の場合: 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00145">145</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a3adce1b790eb67e1eff3cb1e79fc197f_cgraph.svg" width="286" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a3adce1b790eb67e1eff3cb1e79fc197f_cgraph.svg" width="456" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a3adce1b790eb67e1eff3cb1e79fc197f_icgraph.svg" width="2898" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a3adce1b790eb67e1eff3cb1e79fc197f_icgraph.svg" width="2936" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -781,7 +936,22 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00050">50</a> 行目に定義があります。</p>
+<p><a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> が取りうる最大値を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>各メンバーを最大値にして新規作成した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> 構造体 </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00053">53</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a5d49c8a8ccbdfee20ee8af350dc35c47_cgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -807,7 +977,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00065">65</a> 行目に定義があります。</p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の mode_cycle を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>mode_cycle </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00063">63</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -833,7 +1012,19 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00080">80</a> 行目に定義があります。</p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の mode_cycle をミリ秒単位で返す </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint32_t がオーバーフローする可能性があるので注意 </dd>
+<dd>
+計算上はstepも考慮 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ミリ秒単位の mode_cycle </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00078">78</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -843,14 +1034,14 @@ obc_time.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a6e07cb2b7d97b570ab63fd221a34cbca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e07cb2b7d97b570ab63fd221a34cbca">&#9670;&nbsp;</a></span>OBCT_get_mode_cycle_in_sec()</h2>
+<a id="a5a94d8ef0225e201510e8b30dd86c190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a94d8ef0225e201510e8b30dd86c190">&#9670;&nbsp;</a></span>OBCT_get_mode_cycle_in_sec()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float OBCT_get_mode_cycle_in_sec </td>
+          <td class="memname">double OBCT_get_mode_cycle_in_sec </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_obc_time.html">ObcTime</a> *&#160;</td>
           <td class="paramname"><em>time</em></td><td>)</td>
@@ -859,7 +1050,17 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00092">92</a> 行目に定義があります。</p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の mode_cycle を秒単位で返す </p>
+<dl class="section note"><dt>覚え書き</dt><dd>計算上はstepも考慮 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>秒単位の mode_cycle. 少数点以下も保持 </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00090">90</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -879,7 +1080,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00070">70</a> 行目に定義があります。</p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の step を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>step </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00068">68</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -905,11 +1115,20 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00060">60</a> 行目に定義があります。</p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の total_cycle を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>total_cycle </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00058">58</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_ac42c1d017a2cbb8dab608771907c97d5_icgraph.svg" width="1559" height="1110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_ac42c1d017a2cbb8dab608771907c97d5_icgraph.svg" width="1586" height="1199"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -931,7 +1150,19 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00075">75</a> 行目に定義があります。</p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の total_cycle をミリ秒単位で返す </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint32_t がオーバーフローする可能性があるので注意 </dd>
+<dd>
+計算上はstepも考慮 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ミリ秒単位の total_cycle </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00073">73</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -941,14 +1172,14 @@ obc_time.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a25bff1e1b4264e0b0db5494dbd8788e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25bff1e1b4264e0b0db5494dbd8788e4">&#9670;&nbsp;</a></span>OBCT_get_total_cycle_in_sec()</h2>
+<a id="a3276bbf1e25cda02c8b12a92c5b6490e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3276bbf1e25cda02c8b12a92c5b6490e">&#9670;&nbsp;</a></span>OBCT_get_total_cycle_in_sec()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float OBCT_get_total_cycle_in_sec </td>
+          <td class="memname">double OBCT_get_total_cycle_in_sec </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_obc_time.html">ObcTime</a> *&#160;</td>
           <td class="paramname"><em>time</em></td><td>)</td>
@@ -957,63 +1188,21 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00085">85</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ae9c02769b77f86df924e3741abbc6f55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9c02769b77f86df924e3741abbc6f55">&#9670;&nbsp;</a></span>OBCT_modify_unixtime_info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void OBCT_modify_unixtime_info </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a> *&#160;</td>
-          <td class="paramname"><em>uti</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>unixtime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td>
-          <td class="paramname"><em>time</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> 修正関数 </p>
+<p>引数で指定した <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> の total_cycle を秒単位で返す </p>
+<dl class="section note"><dt>覚え書き</dt><dd>計算上はstepも考慮 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">uti</td><td>修正する <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>(GPS 等から) unixtime を観測した時の <a class="el" href="struct_obc_time.html">ObcTime</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">unixtime</td><td>(GPS 等から観測した) unixtime </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>戻り値</dt><dd>秒単位の total_cycle. 少数点以下も保持 </dd></dl>
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00211">211</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_ae9c02769b77f86df924e3741abbc6f55_cgraph.svg" width="468" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00083">83</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_ae9c02769b77f86df924e3741abbc6f55_icgraph.svg" width="1642" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a3276bbf1e25cda02c8b12a92c5b6490e_icgraph.svg" width="1886" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1035,7 +1224,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00099">99</a> 行目に定義があります。</p>
+<p>ミリ秒を cycle に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msec</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>cycle (端数は切り捨て) </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00097">97</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1055,7 +1253,16 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00187">187</a> 行目に定義があります。</p>
+<p>デバッグ出力に <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> を表示する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00191">191</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1081,11 +1288,79 @@ obc_time.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00108">108</a> 行目に定義があります。</p>
+<p>秒を cycle に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sec</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>cycle </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00106">106</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_a1b1c3452d2b2f014d72324bb7b03ac87_icgraph.svg" width="1670" height="199"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abb5d36bf78b79afa358d0924f376097a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5d36bf78b79afa358d0924f376097a">&#9670;&nbsp;</a></span>OBCT_update_unixtime_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OBCT_update_unixtime_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a> *&#160;</td>
+          <td class="paramname"><em>uti</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>unixtime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_obc_time.html">ObcTime</a> *&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> を観測情報を用いて更新する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uti</td><td>更新する <a class="el" href="struct_o_b_c_t___unixtime_info.html" title="unixtimeとObcTimeを紐づける構造体">OBCT_UnixtimeInfo</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unixtime</td><td>(GPS 等から観測した) unixtime </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>(GPS 等から) unixtime を観測した時の <a class="el" href="struct_obc_time.html" title="OBCの時刻情報を保持する構造体">ObcTime</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="obc__time_8c_source.html">obc_time.c</a> の <a class="el" href="obc__time_8c_source.html#l00209">209</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_abb5d36bf78b79afa358d0924f376097a_cgraph.svg" width="430" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="obc__time_8h_abb5d36bf78b79afa358d0924f376097a_icgraph.svg" width="1674" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

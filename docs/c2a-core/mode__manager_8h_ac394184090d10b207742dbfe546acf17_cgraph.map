@@ -1,28 +1,29 @@
 <map id="Cmd_MM_FINISH_TRANSITION" name="Cmd_MM_FINISH_TRANSITION">
-<area shape="rect" id="node1" title="モード遷移終了を示すコマンド モード遷移のブロックコマンドの最後に入れて使う 入っていない場合、タスクリストが遷移先のモードに置き換わらないので注意" alt="" coords="5,368,227,395"/>
-<area shape="rect" id="node2" href="$mode__manager_8c.html#a47323ca76824c1d3acd39db890aea966" title="Cmd_MM_FINISH_TRANSITIONの実体" alt="" coords="275,368,439,395"/>
+<area shape="rect" id="node1" title="モード遷移終了を示すコマンド モード遷移のブロックコマンドの最後に入れて使う 入っていない場合、タスクリストが遷移先のモードに置き換わらないので注意" alt="" coords="5,435,227,461"/>
+<area shape="rect" id="node2" href="$mode__manager_8c.html#a47323ca76824c1d3acd39db890aea966" title="Cmd_MM_FINISH_TRANSITIONの実体" alt="" coords="275,435,439,461"/>
 <area shape="rect" id="node3" href="$anomaly__logger_8c.html#a0ea6626c89aa7e883a23da90b4c34e66" title=" " alt="" coords="519,107,652,133"/>
-<area shape="rect" id="node9" href="$event__logger_8c.html#a25a74a48375dfc1f3f80be68e0ac00ea" title="イベント (EL_Event) を記録" alt="" coords="521,309,650,336"/>
-<area shape="rect" id="node21" href="$mode__manager_8c.html#af4b45d00aa2f1380d22408cc09ba20a9" title="mode に対応した TL の BCT ID を取得する" alt="" coords="511,361,659,402"/>
-<area shape="rect" id="node22" href="$task__dispatcher_8c.html#ad6d233cacf6325f2f6357566f0360119" title="指定した BC を TaskList に展開するものとして登録" alt="" coords="503,427,667,453"/>
-<area shape="rect" id="node26" href="$time__manager_8c.html#abd264fef4aa6f3428e3c0bb5030c8af6" title=" " alt="" coords="487,478,684,519"/>
+<area shape="rect" id="node9" href="$event__logger_8c.html#a25a74a48375dfc1f3f80be68e0ac00ea" title="イベント (EL_Event) を記録" alt="" coords="521,376,650,403"/>
+<area shape="rect" id="node22" href="$mode__manager_8c.html#af4b45d00aa2f1380d22408cc09ba20a9" title="mode に対応した TL の BCT ID を取得する" alt="" coords="511,427,659,469"/>
+<area shape="rect" id="node23" href="$task__dispatcher_8c.html#ad6d233cacf6325f2f6357566f0360119" title="指定した BC を TaskList に展開するものとして登録" alt="" coords="503,493,667,520"/>
+<area shape="rect" id="node27" href="$time__manager_8c.html#abd264fef4aa6f3428e3c0bb5030c8af6" title="master_clock_ の mode_cycle をゼロにする" alt="" coords="487,545,684,586"/>
 <area shape="rect" id="node4" href="$anomaly__logger_8c.html#a0d3195f9dcd9ab90f9672a90ed701932" title=" " alt="" coords="763,5,871,32"/>
 <area shape="rect" id="node5" href="$anomaly__logger_8c.html#a20757d941f0e6a6fe45076e1b799d58c" title=" " alt="" coords="737,56,896,83"/>
 <area shape="rect" id="node6" href="$anomaly__logger_8c.html#af0545eca5524e201925fa77dd122fd8c" title=" " alt="" coords="732,107,901,133"/>
-<area shape="rect" id="node7" href="$time__manager_8c.html#a9d04b4d9b622cbe5a90cf65e58b828bc" title=" " alt="" coords="1181,208,1364,235"/>
-<area shape="rect" id="node8" href="$obc__time_8c.html#a70416835a40bdacbb04f6f06b1e6d1e1" title=" " alt="" coords="1452,208,1559,235"/>
-<area shape="rect" id="node10" href="$event__logger_8c.html#a80a1b60c587d1e3402b02e3bde1db899" title="イベント (EL_Event) を記録" alt="" coords="749,309,885,336"/>
-<area shape="rect" id="node11" href="$event__logger_8c.html#aeae14f21b4e29006f709a61e7de52d67" title="TLog の wp をチェックし， event を生成する" alt="" coords="968,208,1115,235"/>
-<area shape="rect" id="node12" href="$event__logger_8c.html#a0b42c2f5d1eafdad83481ec6e63365e2" title="イベント (EL_Event) を初期化" alt="" coords="983,259,1099,285"/>
-<area shape="rect" id="node13" href="$event__logger_8c.html#a50ba2fe43a96f7351951a4109227ba6f" title="event_logger の EL_Event.group が有効か？" alt="" coords="961,309,1122,336"/>
-<area shape="rect" id="node14" href="$event__logger_8c.html#a69fb9dbc85ad467d048f1c9f31d2442c" title="イベント (EL_Event) を CLog に記録" alt="" coords="967,361,1116,402"/>
-<area shape="rect" id="node19" href="$event__logger_8c.html#a93cb3659efd373de0856c92b3c08896a" title="イベント (EL_Event) を TLog に記録" alt="" coords="967,426,1116,467"/>
-<area shape="rect" id="node15" href="$event__logger_8c.html#a605a3ff223ddae8830c09ff5aa57cc94" title="該当イベントの CLog を，イベントテーブルの先頭に出す" alt="" coords="1193,309,1352,350"/>
-<area shape="rect" id="node18" href="$obc__time_8c.html#a02512f745375636ab21f468838587942" title=" " alt="" coords="1229,375,1316,401"/>
-<area shape="rect" id="node16" href="$event__logger_8c.html#a60dac03ee61b8b3fb3ac6335babb7209" title="イベントテーブル先頭に該当イベントの CLog をつくる" alt="" coords="1412,429,1599,456"/>
-<area shape="rect" id="node17" href="$event__logger_8c.html#a987cce8c848158cc3038bb59dc100de3" title="該当イベントの CLog を検索し取得する" alt="" coords="1441,316,1569,343"/>
-<area shape="rect" id="node20" href="$event__logger_8c.html#af088469f27d5dfca608a9cacee9fbc17" title="TLog のイベントテーブルの上書きが有効か？" alt="" coords="1195,426,1351,467"/>
-<area shape="rect" id="node23" href="$block__command__executor_8c.html#abefa2f3f0811c707ebb5af66e2d73762" title="BCT の length の getter" alt="" coords="760,427,873,453"/>
-<area shape="rect" id="node25" href="$block__command__table_8c.html#add2db8412ac7b28b2e61d99638daaac5" title="BCT の length の getter" alt="" coords="743,477,890,504"/>
-<area shape="rect" id="node24" href="$block__command__executor_8c.html#ab093b73c94e0d7fe1936d95e66d5e51f" title="BCE_Params の const getter" alt="" coords="949,543,1133,569"/>
+<area shape="rect" id="node7" href="$time__manager_8c.html#a9d04b4d9b622cbe5a90cf65e58b828bc" title="現在の master_clock_ を取得する" alt="" coords="1181,157,1364,184"/>
+<area shape="rect" id="node8" href="$obc__time_8c.html#a70416835a40bdacbb04f6f06b1e6d1e1" title="引数から ObcTime を作成する" alt="" coords="1452,157,1559,184"/>
+<area shape="rect" id="node10" href="$event__logger_8c.html#a80a1b60c587d1e3402b02e3bde1db899" title="イベント (EL_Event) を記録" alt="" coords="749,376,885,403"/>
+<area shape="rect" id="node11" href="$event__logger_8c.html#aeae14f21b4e29006f709a61e7de52d67" title="TLog の wp をチェックし， event を生成する" alt="" coords="968,376,1115,403"/>
+<area shape="rect" id="node12" href="$event__logger_8c.html#a0b42c2f5d1eafdad83481ec6e63365e2" title="イベント (EL_Event) を初期化" alt="" coords="983,208,1099,235"/>
+<area shape="rect" id="node13" href="$event__logger_8c.html#a50ba2fe43a96f7351951a4109227ba6f" title="event_logger の EL_Event.group が有効か？" alt="" coords="961,427,1122,453"/>
+<area shape="rect" id="node14" href="$event__logger_8c.html#a69fb9dbc85ad467d048f1c9f31d2442c" title="イベント (EL_Event) を CLog に記録" alt="" coords="967,259,1116,301"/>
+<area shape="rect" id="node20" href="$event__logger_8c.html#a93cb3659efd373de0856c92b3c08896a" title="イベント (EL_Event) を TLog に記録" alt="" coords="967,478,1116,519"/>
+<area shape="rect" id="node15" href="$event__logger_8c.html#a605a3ff223ddae8830c09ff5aa57cc94" title="該当イベントの CLog を，イベントテーブルの先頭に出す" alt="" coords="1193,259,1352,301"/>
+<area shape="rect" id="node18" href="$obc__time_8c.html#a02512f745375636ab21f468838587942" title="ObcTime の引き算を行う" alt="" coords="1229,208,1316,235"/>
+<area shape="rect" id="node16" href="$event__logger_8c.html#a60dac03ee61b8b3fb3ac6335babb7209" title="イベントテーブル先頭に該当イベントの CLog をつくる" alt="" coords="1412,321,1599,348"/>
+<area shape="rect" id="node17" href="$event__logger_8c.html#a987cce8c848158cc3038bb59dc100de3" title="該当イベントの CLog を検索し取得する" alt="" coords="1441,267,1569,293"/>
+<area shape="rect" id="node19" href="$obc__time_8c.html#a8d70081c0b7615e9381c431ae5f8dca2" title="ObcTime の比較" alt="" coords="1444,208,1567,235"/>
+<area shape="rect" id="node21" href="$event__logger_8c.html#af088469f27d5dfca608a9cacee9fbc17" title="TLog のイベントテーブルの上書きが有効か？" alt="" coords="1195,478,1351,519"/>
+<area shape="rect" id="node24" href="$block__command__executor_8c.html#abefa2f3f0811c707ebb5af66e2d73762" title="BCT の length の getter" alt="" coords="760,493,873,520"/>
+<area shape="rect" id="node26" href="$block__command__table_8c.html#add2db8412ac7b28b2e61d99638daaac5" title="BCT の length の getter" alt="" coords="743,544,890,571"/>
+<area shape="rect" id="node25" href="$block__command__executor_8c.html#ab093b73c94e0d7fe1936d95e66d5e51f" title="BCE_Params の const getter" alt="" coords="949,544,1133,571"/>
 </map>

@@ -88,25 +88,52 @@ $(document).ready(function(){initNavTree('struct_time_manager.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
+<p>master_clock_ で OBC 時刻情報を保持するとともに, unixtime との紐づけや初期化情報の記録を行う  
+ <a href="struct_time_manager.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="time__manager_8h_source.html">time_manager.h</a>&gt;</code></p>
 <div class="dynheader">
 TimeManager 連携図</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="struct_time_manager__coll__graph.svg" width="176" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_time_manager__coll__graph.svg" width="279" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 フィールド</h2></td></tr>
-<tr class="memitem:ab0f9bf674187a04b985a434ecca0f005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_time_manager.html#ab0f9bf674187a04b985a434ecca0f005">initializing_time</a></td></tr>
+<tr class="memitem:aef5e6d285891e945e59e60017ea8cb67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_time_manager.html#aef5e6d285891e945e59e60017ea8cb67">master_clock_</a></td></tr>
+<tr class="separator:aef5e6d285891e945e59e60017ea8cb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b69a45cdf95094c18ccbdccd8c6b2c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_time_manager.html#a6b69a45cdf95094c18ccbdccd8c6b2c0">unixtime_info_</a></td></tr>
+<tr class="separator:a6b69a45cdf95094c18ccbdccd8c6b2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0eb3291742c02fceb751f1b068dfa01"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_time_manager.html#ac0eb3291742c02fceb751f1b068dfa01">utl_unixtime_epoch_</a></td></tr>
+<tr class="separator:ac0eb3291742c02fceb751f1b068dfa01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25305511cb8450516853ef1dc6cf8cc6"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:ab0f9bf674187a04b985a434ecca0f005"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_obc_time.html">ObcTime</a>&#160;&#160;&#160;<a class="el" href="struct_time_manager.html#ab0f9bf674187a04b985a434ecca0f005">initializing_time</a></td></tr>
 <tr class="separator:ab0f9bf674187a04b985a434ecca0f005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29daedb391183cb09c75bd238bfda2a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_time_manager.html#a29daedb391183cb09c75bd238bfda2a0">initializing_flag</a></td></tr>
+<tr class="memitem:a29daedb391183cb09c75bd238bfda2a0"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;&#160;&#160;<a class="el" href="struct_time_manager.html#a29daedb391183cb09c75bd238bfda2a0">initializing_flag</a></td></tr>
 <tr class="separator:a29daedb391183cb09c75bd238bfda2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25305511cb8450516853ef1dc6cf8cc6"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_time_manager.html#a25305511cb8450516853ef1dc6cf8cc6">init_info_</a></td></tr>
+<tr class="separator:a25305511cb8450516853ef1dc6cf8cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+<div class="textblock"><p>master_clock_ で OBC 時刻情報を保持するとともに, unixtime との紐づけや初期化情報の記録を行う </p>
+
+<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00019">19</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
+<a id="a25305511cb8450516853ef1dc6cf8cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25305511cb8450516853ef1dc6cf8cc6">&#9670;&nbsp;</a></span>init_info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  init_info_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a29daedb391183cb09c75bd238bfda2a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29daedb391183cb09c75bd238bfda2a0">&#9670;&nbsp;</a></span>initializing_flag</h2>
 
@@ -119,7 +146,7 @@ TimeManager 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00010">10</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00027">27</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -135,7 +162,55 @@ TimeManager 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aef5e6d285891e945e59e60017ea8cb67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5e6d285891e945e59e60017ea8cb67">&#9670;&nbsp;</a></span>master_clock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_obc_time.html">ObcTime</a> master_clock_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6b69a45cdf95094c18ccbdccd8c6b2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b69a45cdf95094c18ccbdccd8c6b2c0">&#9670;&nbsp;</a></span>unixtime_info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_o_b_c_t___unixtime_info.html">OBCT_UnixtimeInfo</a> unixtime_info_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac0eb3291742c02fceb751f1b068dfa01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0eb3291742c02fceb751f1b068dfa01">&#9670;&nbsp;</a></span>utl_unixtime_epoch_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double utl_unixtime_epoch_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="time__manager_8h_source.html">time_manager.h</a> の <a class="el" href="time__manager_8h_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>
