@@ -68,6 +68,18 @@ jobs:
           )
           echo "$JSON" | jq | tee ./status_commit.json
 
+      - name: check diff
+        id: diff
+        working-directory: ./docs/c2a-core
+        run: |
+          if ! git diff --exit-code --cached; then
+            echo "diff"
+            echo "::set-output name=update::true"
+          else
+            echo "There is no update"
+            echo "::set-output name=update::false"
+          fi
+
       - name: add update date info for status badge
         working-directory: ./docs/c2a-core
         run: |
@@ -91,16 +103,12 @@ jobs:
           EOS
 
       - name: deploy
+        if: steps.diff.outputs.update == 'true'
         run: |
           git branch -a
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          if ! git diff --exit-code --cached
-          then \
-            git commit -am "update doxygen: C2A Core"; \
-            git push origin; \
-            echo "New reference is deployed!"; \
-          else \
-            echo "There is no update"; \
-          fi
+          git commit -am "update doxygen: C2A Core"
+          git push origin
+          echo "New reference is deployed!"
