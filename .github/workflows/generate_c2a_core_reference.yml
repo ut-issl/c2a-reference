@@ -68,6 +68,25 @@ jobs:
           )
           echo "$JSON" | jq | tee ./status_commit.json
 
+      - name: add github link
+        working-directory: ./docs/c2a-core
+        run: |
+          cat > redirect.html << EOS
+          <meta http-equiv="refresh" content="1;URL=https://github.com/ut-issl/c2a-core/tree/${{ steps.c2a_commit.outputs.hash }}">
+          EOS
+
+      - name: check diff
+        id: diff
+        working-directory: ./docs/c2a-core
+        run: |
+          if ! git diff --exit-code --cached; then
+            echo "diff"
+            echo "::set-output name=update::true"
+          else
+            echo "There is no update"
+            echo "::set-output name=update::false"
+          fi
+
       - name: add update date info for status badge
         working-directory: ./docs/c2a-core
         run: |
@@ -83,24 +102,13 @@ jobs:
           )
           echo "$JSON" | jq | tee ./status_updated.json
 
-      - name: add github link
-        working-directory: ./docs/c2a-core
-        run: |
-          cat > redirect.html << EOS
-          <meta http-equiv="refresh" content="1;URL=https://github.com/ut-issl/c2a-core/tree/${{ steps.c2a_commit.outputs.hash }}">
-          EOS
-
       - name: deploy
+        if: steps.diff.outputs.update == 'true'
         run: |
           git branch -a
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          if ! git diff --exit-code --cached
-          then \
-            git commit -am "update doxygen: C2A Core"; \
-            git push origin; \
-            echo "New reference is deployed!"; \
-          else \
-            echo "There is no update"; \
-          fi
+          git commit -am "update doxygen: C2A Core"
+          git push origin
+          echo "New reference is deployed!"
