@@ -6,8 +6,8 @@ var struct_b_c_e___params =
     [ "is_active", "struct_b_c_e___params.html#a352d4a99614c951ec53b2042c90414a7", null ],
     [ "last_timeover_cmd_pos", "struct_b_c_e___params.html#adf402ea3e6d88d788f64fb8f6b2f3508", null ],
     [ "next_cmd", "struct_b_c_e___params.html#ab117e8681e7426cdc4899cbfd0862f33", null ],
-    [ "rotate", "struct_b_c_e___params.html#a91ce8ae86e68fc1a3a3cb356f0dcd077", null ],
-    [ "timelimit_combine", "struct_b_c_e___params.html#ab753b72b6e377336653b9f7804048cd3", null ],
+    [ "rotate", "struct_b_c_e___params.html#ab4ed30f3f0b11b3bf52d9e550f511dcf", null ],
+    [ "timelimit_combine", "struct_b_c_e___params.html#a5125cec704c8caae4311157fe2b7c70a", null ],
     [ "timeover_num", "struct_b_c_e___params.html#af3f1cb8a99991da3ca218776a5fdf264", null ],
     [ "worst_cmd_pos", "struct_b_c_e___params.html#a4182ea9197531ce60cd0fba10ea1f6e8", null ]
 ];

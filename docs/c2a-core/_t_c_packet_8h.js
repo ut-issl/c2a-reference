@@ -30,8 +30,9 @@ var _t_c_packet_8h =
     [ "TCP_CMD_EXEC_TYPE", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4", [
       [ "TCP_CMD_EXEC_TYPE_GS", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4aaaf97ab21c324bc6555cf223ebbb5f85", null ],
       [ "TCP_CMD_EXEC_TYPE_TL", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4a4d5c7352906f2baf93a7c0add1aa614e", null ],
-      [ "TCP_CMD_EXEC_TYPE_MC", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4a9a34956a3b14bd37ffab482f5298c12b", null ],
+      [ "TCP_CMD_EXEC_TYPE_BC", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4a5706c401a268034c639b4a24f6a21d11", null ],
       [ "TCP_CMD_EXEC_TYPE_RT", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4a17860324709c40a363d5758e8b9b3bc2", null ],
+      [ "TCP_CMD_EXEC_TYPE_UTL", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4a29e3085a14a45eb372dda3b0a8adeba6", null ],
       [ "TCP_CMD_EXEC_TYPE_UNKNOWN", "_t_c_packet_8h.html#a35b929672dee6e733e78f7dd347f39d4a1ec9ada822a814d18fdb102dfdc58a2b", null ]
     ] ],
     [ "TCP_CMD_FMT_ID", "_t_c_packet_8h.html#a9ce6a7235d580eeae3cd687b030970f5", [

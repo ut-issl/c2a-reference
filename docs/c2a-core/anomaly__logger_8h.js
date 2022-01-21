@@ -6,9 +6,9 @@ var anomaly__logger_8h =
     [ "AL_RECORD_MAX", "anomaly__logger_8h.html#a2e53a3176e38caebfa96665cfd8d07ba", null ],
     [ "AL_TLM_PAGE_MAX", "anomaly__logger_8h.html#ab05216c531e329592255e5b65eb85bb0", null ],
     [ "AL_TLM_PAGE_SIZE", "anomaly__logger_8h.html#ad54cb5503c89a84e95371d2a61562b5f", null ],
-    [ "AL_ADD_SUCCESS", "anomaly__logger_8h.html#a61dadd085c1777f559549e05962b2c9eae05b56e3b42bef6e5d0d812357c201f6", null ],
-    [ "AL_ADD_ERR_INVALID", "anomaly__logger_8h.html#a61dadd085c1777f559549e05962b2c9eaf1e730e9395ed74f001620a0453ff9ab", null ],
-    [ "AL_ADD_DISABLE_LOGGING", "anomaly__logger_8h.html#a61dadd085c1777f559549e05962b2c9ea00fab37bd3c0f2769bb697160dec1774", null ],
+    [ "AL_ADD_SUCCESS", "anomaly__logger_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ae05b56e3b42bef6e5d0d812357c201f6", null ],
+    [ "AL_ADD_ERR_INVALID", "anomaly__logger_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af1e730e9395ed74f001620a0453ff9ab", null ],
+    [ "AL_ADD_DISABLE_LOGGING", "anomaly__logger_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a00fab37bd3c0f2769bb697160dec1774", null ],
     [ "AL_ACK", "anomaly__logger_8h.html#ac6859fb14b5e3c42b03f890c9e0e10f3", [
       [ "AL_SUCCESS", "anomaly__logger_8h.html#ac6859fb14b5e3c42b03f890c9e0e10f3a4ad3aa1f44ade2013e5be748884eadf7", null ],
       [ "AL_NEARLY_FULL", "anomaly__logger_8h.html#ac6859fb14b5e3c42b03f890c9e0e10f3a4e6a09938c09449ef20ed6d45726797e", null ],

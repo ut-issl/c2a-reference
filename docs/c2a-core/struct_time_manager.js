@@ -1,6 +1,6 @@
 var struct_time_manager =
 [
-    [ "init_info_", "struct_time_manager.html#a25305511cb8450516853ef1dc6cf8cc6", null ],
+    [ "init_info_", "struct_time_manager.html#af08a08c1f2b5780e900d700728515cf7", null ],
     [ "initializing_flag", "struct_time_manager.html#a29daedb391183cb09c75bd238bfda2a0", null ],
     [ "initializing_time", "struct_time_manager.html#ab0f9bf674187a04b985a434ecca0f005", null ],
     [ "master_clock_", "struct_time_manager.html#aef5e6d285891e945e59e60017ea8cb67", null ],

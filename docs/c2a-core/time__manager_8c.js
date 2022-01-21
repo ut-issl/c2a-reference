@@ -2,6 +2,7 @@ var time__manager_8c =
 [
     [ "Cmd_TMGR_SET_TIME", "time__manager_8c.html#af5a8a86f0808ea2480c42500ca5b9f1f", null ],
     [ "Cmd_TMGR_SET_UNIXTIME", "time__manager_8c.html#a9212164b52ccd128414e7be12e0b73a6", null ],
+    [ "Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH", "time__manager_8c.html#a46f9950ae413df2f0c2e74bee0228446", null ],
     [ "TMGR_clear", "time__manager_8c.html#a86a4083b25d115816f123201b6ee13f4", null ],
     [ "TMGR_clear_master_mode_cycle", "time__manager_8c.html#abd264fef4aa6f3428e3c0bb5030c8af6", null ],
     [ "TMGR_count_up_master_clock", "time__manager_8c.html#a4f5ef05a542a4acfe7d8ccee814a3123", null ],
@@ -20,6 +21,7 @@ var time__manager_8c =
     [ "TMGR_get_utl_unixtime_from_unixtime", "time__manager_8c.html#a890daa72505d3c39867a95cbc46f3ec2", null ],
     [ "TMGR_init", "time__manager_8c.html#a418722e38c58b8ba7fb2e62b1b6f293b", null ],
     [ "TMGR_set_master_total_cycle_", "time__manager_8c.html#a8207f6589edec2bc1e271eaf79731beb", null ],
+    [ "TMGR_set_utl_unixtime_epoch_", "time__manager_8c.html#a44c4be95c8692e6e64f8ec10d1a389d6", null ],
     [ "TMGR_update_unixtime_info", "time__manager_8c.html#a8a8d6fa6635e6a1e11a6a8e6d07b86c1", null ],
     [ "time_manager", "time__manager_8c.html#a1c8cc3fb35232cc7bf987f0df1758bf5", null ],
     [ "time_manager_", "time__manager_8c.html#a2b89f2c1d796708d77fdc271ceea489e", null ]

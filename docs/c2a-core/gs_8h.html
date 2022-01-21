@@ -92,12 +92,12 @@ $(document).ready(function(){initNavTree('gs_8h.html',''); initResizable(); });
 
 <p>Ground Station との通信用の Driver  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="packet__handler_8h_source.html">src_core/CmdTlm/packet_handler.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="packet__handler_8h_source.html">src_core/TlmCmd/packet_handler.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="driver__super_8h_source.html">src_core/Drivers/Super/driver_super.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="uart_8h_source.html">src_core/IfWrapper/uart.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="ccsds_8h_source.html">src_core/IfWrapper/ccsds.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="ccsds__user_8h_source.html">../../IfWrapper/ccsds_user.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="vcdu_8h_source.html">../../CmdTlm/Ccsds/vcdu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vcdu_8h_source.html">../../TlmCmd/Ccsds/vcdu.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="gs__validate_8h_source.html">gs_validate.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 gs.h の依存先関係図:</div>
@@ -247,7 +247,7 @@ uint8_t を想定 </dd></dl>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs_8h_a3cda832b6c75f514dfb566fa49b59127_cgraph.svg" width="1640" height="1272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs_8h_a3cda832b6c75f514dfb566fa49b59127_cgraph.svg" width="1659" height="1258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -284,7 +284,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>int: 0 </dd></dl>
 
-<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00150">150</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00153">153</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -339,7 +339,7 @@ TLM 送信, 形式は <a class="el" href="struct_v_c_d_u.html">VCDU</a> </dd></d
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_CMD_ERR_CODE: 送信結果 </dd></dl>
 
-<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00230">230</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00233">233</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

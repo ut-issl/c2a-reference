@@ -90,17 +90,19 @@ $(document).ready(function(){initNavTree('build__settings_8h_source.html',''); i
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sils__define_8h.html">sils_define.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef SILS_FW</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// #define IS_LITTLE_ENDIAN // マイコン環境により変更する</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// #define BUILD_SETTINGS_FAST_BUILD    //!&lt; 高速ビルドオプション（検証時は必ずコメントアウトすること）</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="build__settings_8h.html#a238561977823b1ab093a0c6a7065fbb3">   11</a></span>&#160;<span class="preprocessor">#define BUILD_SETTINGS_AUTO_FPGA_RESET</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifdef SILS_FW</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define IS_LITTLE_ENDIAN // SILS環境により変更する</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// #define IS_LITTLE_ENDIAN // マイコン環境により変更する</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// #define BUILD_SETTINGS_FAST_BUILD    //!&lt; 高速ビルドオプション（検証時は必ずコメントアウトすること）</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="build__settings_8h.html#a238561977823b1ab093a0c6a7065fbb3">   13</a></span>&#160;<span class="preprocessor">#define BUILD_SETTINGS_AUTO_FPGA_RESET</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="asils__define_8h_html"><div class="ttname"><a href="sils__define_8h.html">sils_define.h</a></div></div>
+<div class="ttc" id="asils__define_8h_html"><div class="ttname"><a href="sils__define_8h.html">sils_define.h</a></div><div class="ttdoc">Switch the build settings between your real OBC and SILS</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

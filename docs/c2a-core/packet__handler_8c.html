@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C2A_Core: src/src_core/CmdTlm/packet_handler.c ファイル</title>
+<title>C2A_Core: src/src_core/TlmCmd/packet_handler.c ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('packet__handler_8c.html',''); initResi
 <code>#include &quot;<a class="el" href="time__manager_8h_source.html">../System/TimeManager/time_manager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="command__analyze_8h_source.html">command_analyze.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="block__command__table_8h_source.html">block_command_table.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="user__packet__handler_8h_source.html">src_user/CmdTlm/user_packet_handler.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="user__packet__handler_8h_source.html">src_user/TlmCmd/user_packet_handler.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 packet_handler.c の依存先関係図:</div>
 <div class="dyncontent">
@@ -116,8 +116,11 @@ packet_handler.c の依存先関係図:</div>
 <tr class="separator:a757edc8d68592b0166fefdde7d33a425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ed969e5d0d6593b3b6361dc6ceab313"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8c.html#a8ed969e5d0d6593b3b6361dc6ceab313">PH_add_rt_cmd_</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
 <tr class="separator:a8ed969e5d0d6593b3b6361dc6ceab313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b203a49e54c69b81fdc2d4f020e7f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8c.html#a68b203a49e54c69b81fdc2d4f020e7f1">PH_add_tl_cmd_</a> (int line_no, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet, size_t now)</td></tr>
-<tr class="separator:a68b203a49e54c69b81fdc2d4f020e7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7b22f7743795e06ac38ac7fd63bf8b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8c.html#a9d7b22f7743795e06ac38ac7fd63bf8b">PH_add_tl_cmd_</a> (int line_no, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet, <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> now)</td></tr>
+<tr class="separator:a9d7b22f7743795e06ac38ac7fd63bf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12eaab7d7bfa663c36a90d72a56de612"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8c.html#a12eaab7d7bfa663c36a90d72a56de612">PH_add_utl_cmd_</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
+<tr class="memdesc:a12eaab7d7bfa663c36a90d72a56de612"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTL_cmd を TL_cmd に変換して tl_cmd_list に追加する  <a href="packet__handler_8c.html#a12eaab7d7bfa663c36a90d72a56de612">[詳解]</a><br /></td></tr>
+<tr class="separator:a12eaab7d7bfa663c36a90d72a56de612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9514f9ce702ad1cf1355680a942d30e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8c.html#a9514f9ce702ad1cf1355680a942d30e1">PH_add_ms_tlm_</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
 <tr class="separator:a9514f9ce702ad1cf1355680a942d30e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9253116e1b903a3eae3a9dc78da3e27b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8c.html#a9253116e1b903a3eae3a9dc78da3e27b">PH_add_st_tlm_</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
@@ -187,7 +190,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00178">178</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00187">187</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -227,7 +230,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00221">221</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00247">247</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -267,7 +270,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00239">239</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00265">265</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -307,7 +310,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00187">187</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00196">196</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -347,7 +350,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00230">230</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00256">256</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -363,8 +366,8 @@ packet_handler.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a68b203a49e54c69b81fdc2d4f020e7f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68b203a49e54c69b81fdc2d4f020e7f1">&#9670;&nbsp;</a></span>PH_add_tl_cmd_()</h2>
+<a id="a9d7b22f7743795e06ac38ac7fd63bf8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7b22f7743795e06ac38ac7fd63bf8b">&#9670;&nbsp;</a></span>PH_add_tl_cmd_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,7 +390,7 @@ packet_handler.c の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td>
           <td class="paramname"><em>now</em>&#160;</td>
         </tr>
         <tr>
@@ -403,17 +406,67 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00196">196</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00205">205</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a68b203a49e54c69b81fdc2d4f020e7f1_cgraph.svg" width="1236" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a9d7b22f7743795e06ac38ac7fd63bf8b_cgraph.svg" width="1236" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a68b203a49e54c69b81fdc2d4f020e7f1_icgraph.svg" width="2879" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a9d7b22f7743795e06ac38ac7fd63bf8b_icgraph.svg" width="3064" height="539"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a12eaab7d7bfa663c36a90d72a56de612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12eaab7d7bfa663c36a90d72a56de612">&#9670;&nbsp;</a></span>PH_add_utl_cmd_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> PH_add_utl_cmd_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UTL_cmd を TL_cmd に変換して tl_cmd_list に追加する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>TODO：const cast でもいいか検討する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PH_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00230">230</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a12eaab7d7bfa663c36a90d72a56de612_cgraph.svg" width="1523" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a12eaab7d7bfa663c36a90d72a56de612_icgraph.svg" width="2887" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -443,7 +496,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00114">114</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00123">123</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -483,11 +536,11 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00077">77</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00084">84</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_abc3bf50e870a7c0fb81d279aa57f524e_cgraph.svg" width="1638" height="835"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_abc3bf50e870a7c0fb81d279aa57f524e_cgraph.svg" width="1892" height="980"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -515,11 +568,11 @@ packet_handler.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00067">67</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a68fb86af915dd9a65ad58faeda14629b_cgraph.svg" width="1834" height="1051"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8c_a68fb86af915dd9a65ad58faeda14629b_cgraph.svg" width="2070" height="1067"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -555,7 +608,7 @@ packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00138">138</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00147">147</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -587,7 +640,7 @@ packet_handler.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00158">158</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00167">167</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -619,7 +672,7 @@ packet_handler.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00041">41</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00048">48</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -929,7 +982,7 @@ packet_handler.c の依存先関係図:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_caedce1072596b48fa715a3e5eba49b3.html">CmdTlm</a></li><li class="navelem"><a class="el" href="packet__handler_8c.html">packet_handler.c</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_43c499926d30da83a4105ced0951a3ae.html">TlmCmd</a></li><li class="navelem"><a class="el" href="packet__handler_8c.html">packet_handler.c</a></li>
     <li class="footer">構築:
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

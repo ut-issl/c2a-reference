@@ -4,6 +4,7 @@ var command__definitions_8h =
       [ "Cmd_CODE_NOP", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab5239aaa1e0db163ccd59fefb437b157", null ],
       [ "Cmd_CODE_TMGR_SET_TIME", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7f68b27c0b7e114d4e784fdd1e303fbe", null ],
       [ "Cmd_CODE_TMGR_SET_UNIXTIME", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a21142510f1a9fc187f2f84112232876d", null ],
+      [ "Cmd_CODE_TMGR_SET_UTL_UNIXTIME_EPOCH", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a3b06377968db6eda6d12cb7f60b9dc87", null ],
       [ "Cmd_CODE_AM_REGISTER_APP", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a80153135bc78cf637bb7ce482e264c83", null ],
       [ "Cmd_CODE_AM_INITIALIZE_APP", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a56f5e545843587fecfb52e9323cce7e9", null ],
       [ "Cmd_CODE_AM_EXECUTE_APP", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aca29efcdb26b96aa8dcfa4c67d86b4e3", null ],
