@@ -79,6 +79,7 @@ jobs:
         id: diff
         working-directory: ./docs/c2a-core
         run: |
+          git add .
           if ! git diff --exit-code --cached; then
             echo "diff"
             echo "::set-output name=update::true"
@@ -108,7 +109,6 @@ jobs:
           git branch -a
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
           git commit -am "update doxygen: C2A Core"
           git push origin
           echo "New reference is deployed!"
