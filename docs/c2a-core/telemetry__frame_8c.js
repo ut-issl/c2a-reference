@@ -1,7 +1,7 @@
 var telemetry__frame_8c =
 [
-    [ "Cmd_TF_REGISTER_TLM", "telemetry__frame_8c.html#a4eb4dfe99191c7f456bf1d4f0bedcf0d", null ],
-    [ "Cmd_TF_SET_PAGE_FOR_TLM", "telemetry__frame_8c.html#af7c8d58704e6a0f37e0a2b21ddf712f7", null ],
+    [ "Cmd_TF_REGISTER_TLM", "telemetry__frame_8c.html#a688fd7dbde1d14e42692c55927e023b7", null ],
+    [ "Cmd_TF_SET_PAGE_FOR_TLM", "telemetry__frame_8c.html#a22ead614911956dc909621e24d05c580", null ],
     [ "initialize_tlm_table_", "telemetry__frame_8c.html#aa2b0b8f13e2b7f5ea479194835a6e2c6", null ],
     [ "TF_copy_double", "telemetry__frame_8c.html#a4bbcb95854416e3533a99795c21b891b", null ],
     [ "TF_copy_float", "telemetry__frame_8c.html#aace66f9eda65ccc886e71fe82587a3d4", null ],

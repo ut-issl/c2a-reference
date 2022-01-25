@@ -11,7 +11,7 @@ var gs__validate_8h =
       [ "GS_VALIDATE_ERR_TCS_SEQ_FLAG", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebba46d8c243095a76a53285b1a2ea8a5e42", null ],
       [ "GS_VALIDATE_ERR_TCP_VER", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebba0027a88fc2998c794bb37c6da7302017", null ],
       [ "GS_VALIDATE_ERR_TCP_2ND_HDR_FLAG", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebba99212d97f8168160dce398fe1ec55f9d", null ],
-      [ "GS_VALIDATE_ERR_TCP_APID", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebba5c96491bf0c9d4dafb1efa45e02c59de", null ],
+      [ "GS_VALIDATE_ERR_APID", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebbaa471daf851d35607c6160a2267fb97d8", null ],
       [ "GS_VALIDATE_ERR_TCP_TYPE_IS_NOT_CMD", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebbafd601ced1c6525511a059cbeb4491ddd", null ],
       [ "GS_VALIDATE_ERR_TCP_SEQ_IS_NOT_SINGLE", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebba95924a2e3912496454d8dcad28c7ca87", null ],
       [ "GS_VALIDATE_ERR_FECW_MISSMATCH", "gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebbad718e58d708382a814560bb58116f248", null ],

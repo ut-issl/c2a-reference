@@ -96,11 +96,11 @@ $(document).ready(function(){initNavTree('block__command__executor_8c.html','');
 <code>#include &quot;<a class="el" href="packet__handler_8h_source.html">packet_handler.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="endian__memcpy_8h_source.html">../Library/endian_memcpy.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="time__manager_8h_source.html">../System/TimeManager/time_manager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="common__tlm__cmd__packet__util_8h_source.html">common_tlm_cmd_packet_util.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__cmd__packet__util_8h_source.html">common_cmd_packet_util.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 block_command_executor.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c__incl.svg" width="1660" height="827"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c__incl.svg" width="1691" height="1020"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -117,13 +117,13 @@ block_command_executor.c の依存先関係図:</div>
 <tr class="separator:a314a5503ec3307e3e4049d32e54399ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a458f942c6bfdc924ca92dbf06e1eefdc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a458f942c6bfdc924ca92dbf06e1eefdc">BCE_set_bc_exe_params_</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, const <a class="el" href="struct_b_c_e___params.html">BCE_Params</a> *bc_exe_params)</td></tr>
 <tr class="separator:a458f942c6bfdc924ca92dbf06e1eefdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03e45cd5863186a6a2991cc33c4cfa65"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a03e45cd5863186a6a2991cc33c4cfa65">BCT_rotate_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
+<tr class="memitem:a03e45cd5863186a6a2991cc33c4cfa65"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a03e45cd5863186a6a2991cc33c4cfa65">BCT_rotate_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
 <tr class="memdesc:a03e45cd5863186a6a2991cc33c4cfa65"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotator の実行主体  <a href="block__command__executor_8c.html#a03e45cd5863186a6a2991cc33c4cfa65">[詳解]</a><br /></td></tr>
 <tr class="separator:a03e45cd5863186a6a2991cc33c4cfa65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bf1d6176fcbf33490740e749d03e2dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a0bf1d6176fcbf33490740e749d03e2dc">BCT_combine_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
+<tr class="memitem:a0bf1d6176fcbf33490740e749d03e2dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a0bf1d6176fcbf33490740e749d03e2dc">BCT_combine_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
 <tr class="memdesc:a0bf1d6176fcbf33490740e749d03e2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">BC をまとめて一括で実行する  <a href="block__command__executor_8c.html#a0bf1d6176fcbf33490740e749d03e2dc">[詳解]</a><br /></td></tr>
 <tr class="separator:a0bf1d6176fcbf33490740e749d03e2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17393664714f4ec0df2f1d98654a28a3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a17393664714f4ec0df2f1d98654a28a3">BCT_timelimit_combine_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, <a class="el" href="obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773">step_t</a> limit_step)</td></tr>
+<tr class="memitem:a17393664714f4ec0df2f1d98654a28a3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a17393664714f4ec0df2f1d98654a28a3">BCT_timelimit_combine_block_cmd_</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, <a class="el" href="obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773">step_t</a> limit_step)</td></tr>
 <tr class="memdesc:a17393664714f4ec0df2f1d98654a28a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">BC をまとめて一括で実行する  <a href="block__command__executor_8c.html#a17393664714f4ec0df2f1d98654a28a3">[詳解]</a><br /></td></tr>
 <tr class="separator:a17393664714f4ec0df2f1d98654a28a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab093b73c94e0d7fe1936d95e66d5e51f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_b_c_e___params.html">BCE_Params</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ab093b73c94e0d7fe1936d95e66d5e51f">BCE_get_bc_exe_params</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
@@ -135,25 +135,25 @@ block_command_executor.c の依存先関係図:</div>
 <tr class="memitem:a6e05f5a7b995f6a92a38c858792d6cd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a6e05f5a7b995f6a92a38c858792d6cd0">BCE_clear_block</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
 <tr class="memdesc:a6e05f5a7b995f6a92a38c858792d6cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された block の BCE を初期化  <a href="block__command__executor_8c.html#a6e05f5a7b995f6a92a38c858792d6cd0">[詳解]</a><br /></td></tr>
 <tr class="separator:a6e05f5a7b995f6a92a38c858792d6cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab53f17f1da699ef5cb7912239fa280d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ab53f17f1da699ef5cb7912239fa280d6">Cmd_BCT_ACTIVATE_BLOCK</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:ab53f17f1da699ef5cb7912239fa280d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257a892466d734cfa9f1d067d7144c3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a257a892466d734cfa9f1d067d7144c3d">Cmd_BCT_ACTIVATE_BLOCK</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a257a892466d734cfa9f1d067d7144c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa74726eddc14b94b624b69408b116f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#afa74726eddc14b94b624b69408b116f9">BCE_activate_block</a> (void)</td></tr>
 <tr class="memdesc:afa74726eddc14b94b624b69408b116f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">block_command_table-&gt;pos の BC を activate する  <a href="block__command__executor_8c.html#afa74726eddc14b94b624b69408b116f9">[詳解]</a><br /></td></tr>
 <tr class="separator:afa74726eddc14b94b624b69408b116f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ababb16e70e77e1d35425efb92a57cd89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ababb16e70e77e1d35425efb92a57cd89">Cmd_BCT_ACTIVATE_BLOCK_BY_ID</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:ababb16e70e77e1d35425efb92a57cd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90ee823823d5a385f3fd61dbc38212ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a90ee823823d5a385f3fd61dbc38212ef">Cmd_BCT_INACTIVATE_BLOCK_BY_ID</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:a90ee823823d5a385f3fd61dbc38212ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2037ab605f04675b32985763b4a5370d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a2037ab605f04675b32985763b4a5370d">Cmd_BCT_ACTIVATE_BLOCK_BY_ID</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a2037ab605f04675b32985763b4a5370d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccb7e86d121485e33a6990532046c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#acccb7e86d121485e33a6990532046c84">Cmd_BCT_INACTIVATE_BLOCK_BY_ID</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:acccb7e86d121485e33a6990532046c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16684110b57df7d8073c66613d3fba09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a16684110b57df7d8073c66613d3fba09">BCE_activate_block_by_id</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
 <tr class="separator:a16684110b57df7d8073c66613d3fba09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83cce5073fab8837f03f9c8bfdca1fd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a83cce5073fab8837f03f9c8bfdca1fd7">BCE_inactivate_block_by_id</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
 <tr class="separator:a83cce5073fab8837f03f9c8bfdca1fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c356ad53f55bbd4671324a7c52f490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ae7c356ad53f55bbd4671324a7c52f490">Cmd_BCT_ROTATE_BLOCK</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:ae7c356ad53f55bbd4671324a7c52f490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e38e010d6a07a6211667488a4db0cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a59e38e010d6a07a6211667488a4db0cc">Cmd_BCT_COMBINE_BLOCK</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:a59e38e010d6a07a6211667488a4db0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae80b7a834ea8a1a068d43f6eae0aaf0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ae80b7a834ea8a1a068d43f6eae0aaf0e">Cmd_BCT_TIMELIMIT_COMBINE_BLOCK</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:ae80b7a834ea8a1a068d43f6eae0aaf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61d76bb2fb84b4be051b35a019de4d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#af61d76bb2fb84b4be051b35a019de4d1">Cmd_BCT_ROTATE_BLOCK</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:af61d76bb2fb84b4be051b35a019de4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a203645e4d860dc5a4e268d8a97f82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a17a203645e4d860dc5a4e268d8a97f82">Cmd_BCT_COMBINE_BLOCK</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a17a203645e4d860dc5a4e268d8a97f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0abb067aa30c621ddca6f4c09e8493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a5f0abb067aa30c621ddca6f4c09e8493">Cmd_BCT_TIMELIMIT_COMBINE_BLOCK</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a5f0abb067aa30c621ddca6f4c09e8493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a853db84c8dfb9ec02d82ef44fc98ec18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a853db84c8dfb9ec02d82ef44fc98ec18">BCE_reset_rotator_info</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
 <tr class="separator:a853db84c8dfb9ec02d82ef44fc98ec18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b8956e904421adc0bdcf7bc5bb6f77c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a0b8956e904421adc0bdcf7bc5bb6f77c">BCE_reset_combiner_info</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block)</td></tr>
@@ -167,19 +167,19 @@ block_command_executor.c の依存先関係図:</div>
 <tr class="memitem:ad136be52f4cc73127fc12bc04cb93d0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ad136be52f4cc73127fc12bc04cb93d0c">BCE_swap_contents</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_a, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_b)</td></tr>
 <tr class="memdesc:ad136be52f4cc73127fc12bc04cb93d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCE の params の指す中身を入れ替える  <a href="block__command__executor_8c.html#ad136be52f4cc73127fc12bc04cb93d0c">[詳解]</a><br /></td></tr>
 <tr class="separator:ad136be52f4cc73127fc12bc04cb93d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba061c8a3e5472b9dfed060738059153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#aba061c8a3e5472b9dfed060738059153">Cmd_BCT_RESET_ROTATOR_INFO</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:aba061c8a3e5472b9dfed060738059153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19802be32ef92e032d4235e3d3ffb751"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a19802be32ef92e032d4235e3d3ffb751">Cmd_BCT_RESET_COMBINER_INFO</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:a19802be32ef92e032d4235e3d3ffb751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69033c4385076d739a68a12468813fd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a69033c4385076d739a68a12468813fd1">Cmd_BCT_FILL_NOP</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:a69033c4385076d739a68a12468813fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a107c90f91a09c36d013880062bd0631f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a107c90f91a09c36d013880062bd0631f">Cmd_BCT_SET_ROTATE_INTERVAL</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *packet)</td></tr>
-<tr class="separator:a107c90f91a09c36d013880062bd0631f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc7990a34164f764d32038399b43bec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a2bc7990a34164f764d32038399b43bec">Cmd_BCT_RESET_ROTATOR_INFO</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a2bc7990a34164f764d32038399b43bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3fd1df37ce4e0d9d18810e216b82e3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ae3fd1df37ce4e0d9d18810e216b82e3d">Cmd_BCT_RESET_COMBINER_INFO</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:ae3fd1df37ce4e0d9d18810e216b82e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad040fa043c293c99d80d36b9536035"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a4ad040fa043c293c99d80d36b9536035">Cmd_BCT_FILL_NOP</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a4ad040fa043c293c99d80d36b9536035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e3c0ca4befbce9d2748756c03005c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#ae5e3c0ca4befbce9d2748756c03005c8">Cmd_BCT_SET_ROTATE_INTERVAL</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:ae5e3c0ca4befbce9d2748756c03005c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a2071edbb19dbf68ecc8980e8e487e083"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a2071edbb19dbf68ecc8980e8e487e083">packet_</a></td></tr>
-<tr class="separator:a2071edbb19dbf68ecc8980e8e487e083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f27df09933c780b16c63578dcc47ff7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a0f27df09933c780b16c63578dcc47ff7">BCE_packet_</a></td></tr>
+<tr class="separator:a0f27df09933c780b16c63578dcc47ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf2cc500d5469f19071b4d84cccbd820"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_block_command_executor.html">BlockCommandExecutor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#abf2cc500d5469f19071b4d84cccbd820">block_command_executor_</a></td></tr>
 <tr class="separator:abf2cc500d5469f19071b4d84cccbd820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a780595859b0f396fbb2bb91a2c60de07"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_block_command_executor.html">BlockCommandExecutor</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__executor_8c.html#a780595859b0f396fbb2bb91a2c60de07">block_command_executor</a> = &amp;<a class="el" href="block__command__executor_8c.html#abf2cc500d5469f19071b4d84cccbd820">block_command_executor_</a></td></tr>
@@ -788,7 +788,7 @@ block_command_executor.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_combine_block_cmd_ </td>
+          <td class="memname">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_combine_block_cmd_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
           <td class="paramname"><em>block</em></td><td>)</td>
@@ -816,7 +816,7 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a0bf1d6176fcbf33490740e749d03e2dc_cgraph.svg" width="1874" height="714"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a0bf1d6176fcbf33490740e749d03e2dc_cgraph.svg" width="1874" height="640"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -838,7 +838,7 @@ block_command_executor.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_rotate_block_cmd_ </td>
+          <td class="memname">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_rotate_block_cmd_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
           <td class="paramname"><em>block</em></td><td>)</td>
@@ -866,7 +866,7 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a03e45cd5863186a6a2991cc33c4cfa65_cgraph.svg" width="1866" height="840"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a03e45cd5863186a6a2991cc33c4cfa65_cgraph.svg" width="1866" height="790"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -888,7 +888,7 @@ block_command_executor.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_timelimit_combine_block_cmd_ </td>
+          <td class="memname">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_timelimit_combine_block_cmd_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
           <td class="paramname"><em>block</em>, </td>
@@ -927,7 +927,7 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a17393664714f4ec0df2f1d98654a28a3_cgraph.svg" width="1866" height="1035"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a17393664714f4ec0df2f1d98654a28a3_cgraph.svg" width="1866" height="846"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -939,16 +939,16 @@ block_command_executor.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ab53f17f1da699ef5cb7912239fa280d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab53f17f1da699ef5cb7912239fa280d6">&#9670;&nbsp;</a></span>Cmd_BCT_ACTIVATE_BLOCK()</h2>
+<a id="a257a892466d734cfa9f1d067d7144c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257a892466d734cfa9f1d067d7144c3d">&#9670;&nbsp;</a></span>Cmd_BCT_ACTIVATE_BLOCK()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_ACTIVATE_BLOCK </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_ACTIVATE_BLOCK </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -959,28 +959,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ab53f17f1da699ef5cb7912239fa280d6_cgraph.svg" width="664" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a257a892466d734cfa9f1d067d7144c3d_cgraph.svg" width="664" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ab53f17f1da699ef5cb7912239fa280d6_icgraph.svg" width="1164" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a257a892466d734cfa9f1d067d7144c3d_icgraph.svg" width="1164" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ababb16e70e77e1d35425efb92a57cd89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ababb16e70e77e1d35425efb92a57cd89">&#9670;&nbsp;</a></span>Cmd_BCT_ACTIVATE_BLOCK_BY_ID()</h2>
+<a id="a2037ab605f04675b32985763b4a5370d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2037ab605f04675b32985763b4a5370d">&#9670;&nbsp;</a></span>Cmd_BCT_ACTIVATE_BLOCK_BY_ID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_ACTIVATE_BLOCK_BY_ID </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_ACTIVATE_BLOCK_BY_ID </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -991,28 +991,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ababb16e70e77e1d35425efb92a57cd89_cgraph.svg" width="676" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a2037ab605f04675b32985763b4a5370d_cgraph.svg" width="676" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ababb16e70e77e1d35425efb92a57cd89_icgraph.svg" width="1164" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a2037ab605f04675b32985763b4a5370d_icgraph.svg" width="1164" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a59e38e010d6a07a6211667488a4db0cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59e38e010d6a07a6211667488a4db0cc">&#9670;&nbsp;</a></span>Cmd_BCT_COMBINE_BLOCK()</h2>
+<a id="a17a203645e4d860dc5a4e268d8a97f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a203645e4d860dc5a4e268d8a97f82">&#9670;&nbsp;</a></span>Cmd_BCT_COMBINE_BLOCK()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_COMBINE_BLOCK </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_COMBINE_BLOCK </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1023,28 +1023,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a59e38e010d6a07a6211667488a4db0cc_cgraph.svg" width="2152" height="639"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a17a203645e4d860dc5a4e268d8a97f82_cgraph.svg" width="2152" height="474"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a59e38e010d6a07a6211667488a4db0cc_icgraph.svg" width="1164" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a17a203645e4d860dc5a4e268d8a97f82_icgraph.svg" width="1164" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a69033c4385076d739a68a12468813fd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69033c4385076d739a68a12468813fd1">&#9670;&nbsp;</a></span>Cmd_BCT_FILL_NOP()</h2>
+<a id="a4ad040fa043c293c99d80d36b9536035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad040fa043c293c99d80d36b9536035">&#9670;&nbsp;</a></span>Cmd_BCT_FILL_NOP()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_FILL_NOP </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_FILL_NOP </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1055,28 +1055,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a69033c4385076d739a68a12468813fd1_cgraph.svg" width="1826" height="747"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a4ad040fa043c293c99d80d36b9536035_cgraph.svg" width="1826" height="747"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a69033c4385076d739a68a12468813fd1_icgraph.svg" width="1112" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a4ad040fa043c293c99d80d36b9536035_icgraph.svg" width="1112" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a90ee823823d5a385f3fd61dbc38212ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90ee823823d5a385f3fd61dbc38212ef">&#9670;&nbsp;</a></span>Cmd_BCT_INACTIVATE_BLOCK_BY_ID()</h2>
+<a id="acccb7e86d121485e33a6990532046c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccb7e86d121485e33a6990532046c84">&#9670;&nbsp;</a></span>Cmd_BCT_INACTIVATE_BLOCK_BY_ID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_INACTIVATE_BLOCK_BY_ID </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_INACTIVATE_BLOCK_BY_ID </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1087,28 +1087,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a90ee823823d5a385f3fd61dbc38212ef_cgraph.svg" width="639" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_acccb7e86d121485e33a6990532046c84_cgraph.svg" width="639" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a90ee823823d5a385f3fd61dbc38212ef_icgraph.svg" width="1127" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_acccb7e86d121485e33a6990532046c84_icgraph.svg" width="1127" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a19802be32ef92e032d4235e3d3ffb751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19802be32ef92e032d4235e3d3ffb751">&#9670;&nbsp;</a></span>Cmd_BCT_RESET_COMBINER_INFO()</h2>
+<a id="ae3fd1df37ce4e0d9d18810e216b82e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3fd1df37ce4e0d9d18810e216b82e3d">&#9670;&nbsp;</a></span>Cmd_BCT_RESET_COMBINER_INFO()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_RESET_COMBINER_INFO </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_RESET_COMBINER_INFO </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1119,28 +1119,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a19802be32ef92e032d4235e3d3ffb751_cgraph.svg" width="746" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae3fd1df37ce4e0d9d18810e216b82e3d_cgraph.svg" width="746" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a19802be32ef92e032d4235e3d3ffb751_icgraph.svg" width="1210" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae3fd1df37ce4e0d9d18810e216b82e3d_icgraph.svg" width="1210" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="aba061c8a3e5472b9dfed060738059153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba061c8a3e5472b9dfed060738059153">&#9670;&nbsp;</a></span>Cmd_BCT_RESET_ROTATOR_INFO()</h2>
+<a id="a2bc7990a34164f764d32038399b43bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc7990a34164f764d32038399b43bec">&#9670;&nbsp;</a></span>Cmd_BCT_RESET_ROTATOR_INFO()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_RESET_ROTATOR_INFO </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_RESET_ROTATOR_INFO </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1151,28 +1151,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_aba061c8a3e5472b9dfed060738059153_cgraph.svg" width="718" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a2bc7990a34164f764d32038399b43bec_cgraph.svg" width="718" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_aba061c8a3e5472b9dfed060738059153_icgraph.svg" width="1199" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a2bc7990a34164f764d32038399b43bec_icgraph.svg" width="1199" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ae7c356ad53f55bbd4671324a7c52f490"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7c356ad53f55bbd4671324a7c52f490">&#9670;&nbsp;</a></span>Cmd_BCT_ROTATE_BLOCK()</h2>
+<a id="af61d76bb2fb84b4be051b35a019de4d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61d76bb2fb84b4be051b35a019de4d1">&#9670;&nbsp;</a></span>Cmd_BCT_ROTATE_BLOCK()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_ROTATE_BLOCK </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_ROTATE_BLOCK </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1183,28 +1183,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae7c356ad53f55bbd4671324a7c52f490_cgraph.svg" width="2116" height="670"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_af61d76bb2fb84b4be051b35a019de4d1_cgraph.svg" width="2116" height="592"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae7c356ad53f55bbd4671324a7c52f490_icgraph.svg" width="1152" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_af61d76bb2fb84b4be051b35a019de4d1_icgraph.svg" width="1152" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a107c90f91a09c36d013880062bd0631f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a107c90f91a09c36d013880062bd0631f">&#9670;&nbsp;</a></span>Cmd_BCT_SET_ROTATE_INTERVAL()</h2>
+<a id="ae5e3c0ca4befbce9d2748756c03005c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e3c0ca4befbce9d2748756c03005c8">&#9670;&nbsp;</a></span>Cmd_BCT_SET_ROTATE_INTERVAL()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_SET_ROTATE_INTERVAL </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_SET_ROTATE_INTERVAL </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1215,28 +1215,28 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a107c90f91a09c36d013880062bd0631f_cgraph.svg" width="671" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae5e3c0ca4befbce9d2748756c03005c8_cgraph.svg" width="671" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a107c90f91a09c36d013880062bd0631f_icgraph.svg" width="1132" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae5e3c0ca4befbce9d2748756c03005c8_icgraph.svg" width="1132" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ae80b7a834ea8a1a068d43f6eae0aaf0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae80b7a834ea8a1a068d43f6eae0aaf0e">&#9670;&nbsp;</a></span>Cmd_BCT_TIMELIMIT_COMBINE_BLOCK()</h2>
+<a id="a5f0abb067aa30c621ddca6f4c09e8493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0abb067aa30c621ddca6f4c09e8493">&#9670;&nbsp;</a></span>Cmd_BCT_TIMELIMIT_COMBINE_BLOCK()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_TIMELIMIT_COMBINE_BLOCK </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_BCT_TIMELIMIT_COMBINE_BLOCK </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1247,19 +1247,43 @@ block_command_executor.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae80b7a834ea8a1a068d43f6eae0aaf0e_cgraph.svg" width="2151" height="698"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a5f0abb067aa30c621ddca6f4c09e8493_cgraph.svg" width="2151" height="664"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_ae80b7a834ea8a1a068d43f6eae0aaf0e_icgraph.svg" width="1187" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__executor_8c_a5f0abb067aa30c621ddca6f4c09e8493_icgraph.svg" width="1187" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
+<a id="a0f27df09933c780b16c63578dcc47ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f27df09933c780b16c63578dcc47ff7">&#9670;&nbsp;</a></span>BCE_packet_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> BCE_packet_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="block__command__executor_8c_source.html">block_command_executor.c</a> の <a class="el" href="block__command__executor_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a780595859b0f396fbb2bb91a2c60de07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a780595859b0f396fbb2bb91a2c60de07">&#9670;&nbsp;</a></span>block_command_executor</h2>
 
@@ -1297,30 +1321,6 @@ block_command_executor.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="block__command__executor_8c_source.html">block_command_executor.c</a> の <a class="el" href="block__command__executor_8c_source.html#l00021">21</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a2071edbb19dbf68ecc8980e8e487e083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2071edbb19dbf68ecc8980e8e487e083">&#9670;&nbsp;</a></span>packet_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="common__tlm__cmd__packet__define_8h.html#aebe99417daf2ae18bf09afd9a72fcde8">CTCP</a> packet_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="block__command__executor_8c_source.html">block_command_executor.c</a> の <a class="el" href="block__command__executor_8c_source.html#l00019">19</a> 行目に定義があります。</p>
 
 </div>
 </div>

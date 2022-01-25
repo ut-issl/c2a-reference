@@ -1,17 +1,17 @@
 var telemetry__manager_8c =
 [
-    [ "Cmd_TLM_MGR_CLEAR_HK_TLM", "telemetry__manager_8c.html#aadbf984b66811c2f5f3ec88e525b3e37", null ],
-    [ "Cmd_TLM_MGR_CLEAR_SYSTEM_TLM", "telemetry__manager_8c.html#a0acf9585d0fd81a0a99523c2def1db85", null ],
-    [ "Cmd_TLM_MGR_CLEAR_TLM_TL", "telemetry__manager_8c.html#a287498fbf93c470382a4944b0a0a9245", null ],
-    [ "Cmd_TLM_MGR_CLEAR_USER_TLM", "telemetry__manager_8c.html#a6c555aa2de00da40edc0fc99eb05de9a", null ],
-    [ "Cmd_TLM_MGR_INIT", "telemetry__manager_8c.html#afec62df9e704e03a65977223bc8dfea8", null ],
-    [ "Cmd_TLM_MGR_INIT_MASTER_BC", "telemetry__manager_8c.html#a7978f2345a5be74745b820546d1e2fcb", null ],
-    [ "Cmd_TLM_MGR_REGISTER_HIGH_FREQ_TLM", "telemetry__manager_8c.html#a575fa7238aa684bbcd5f52996f0325ca", null ],
-    [ "Cmd_TLM_MGR_REGISTER_HK_TLM", "telemetry__manager_8c.html#a8a0dd1814a1ccfd6ff0d23d450358c4d", null ],
-    [ "Cmd_TLM_MGR_REGISTER_LOW_FREQ_TLM", "telemetry__manager_8c.html#ab6995ee0906c66b1cf84433e460724f0", null ],
-    [ "Cmd_TLM_MGR_REGISTER_SYSTEM_TLM", "telemetry__manager_8c.html#a9f3f27e83fb8639f4d03002ca1ba0c47", null ],
-    [ "Cmd_TLM_MGR_START_TLM", "telemetry__manager_8c.html#af41630c9342747ebc11cc9547e11f213", null ],
-    [ "Cmd_TLM_MGR_STOP_TLM", "telemetry__manager_8c.html#acf3ae92748987f44cc271a5a3a073952", null ],
+    [ "Cmd_TLM_MGR_CLEAR_HK_TLM", "telemetry__manager_8c.html#a2bc92ae52dbb32d319d6b50c0a822038", null ],
+    [ "Cmd_TLM_MGR_CLEAR_SYSTEM_TLM", "telemetry__manager_8c.html#af062111b8e574bbfab158a9a47f8d5e0", null ],
+    [ "Cmd_TLM_MGR_CLEAR_TLM_TL", "telemetry__manager_8c.html#a923d6ea9078726984798c4b0800381fe", null ],
+    [ "Cmd_TLM_MGR_CLEAR_USER_TLM", "telemetry__manager_8c.html#af76453743bae7b361005376190100cbf", null ],
+    [ "Cmd_TLM_MGR_INIT", "telemetry__manager_8c.html#a19d6e76042721fe9e576dbacaf49b365", null ],
+    [ "Cmd_TLM_MGR_INIT_MASTER_BC", "telemetry__manager_8c.html#af33b34d33dbb6ce127f3fc6d240f2a23", null ],
+    [ "Cmd_TLM_MGR_REGISTER_HIGH_FREQ_TLM", "telemetry__manager_8c.html#aa25105738fa6140b99a82d5d28b3b89f", null ],
+    [ "Cmd_TLM_MGR_REGISTER_HK_TLM", "telemetry__manager_8c.html#a47e992abafa10e575d0e5cf22875ed81", null ],
+    [ "Cmd_TLM_MGR_REGISTER_LOW_FREQ_TLM", "telemetry__manager_8c.html#ad8765254cce8d4a2361b16becb1d3d4f", null ],
+    [ "Cmd_TLM_MGR_REGISTER_SYSTEM_TLM", "telemetry__manager_8c.html#a4b2fba4c5b62a78b2e44717fe4296f7e", null ],
+    [ "Cmd_TLM_MGR_START_TLM", "telemetry__manager_8c.html#ad6f65df0da86f70cbd0f5b1e6cb32dbc", null ],
+    [ "Cmd_TLM_MGR_STOP_TLM", "telemetry__manager_8c.html#a0149b05e84bcce79dc6b019d5bb99ce1", null ],
     [ "TLM_MGR_add_bc_info_to_register_info_", "telemetry__manager_8c.html#a42ac1f2b3531856337a1e90c6eb6254e", null ],
     [ "TLM_MGR_calc_register_info_from_bc_info_", "telemetry__manager_8c.html#a8096296bd6334a29aa18c7622eb987cb", null ],
     [ "TLM_MGR_clear_bc_of_register_info_", "telemetry__manager_8c.html#af5ffec9b70960e1c8ffb5bff194ce24c", null ],
@@ -31,5 +31,5 @@ var telemetry__manager_8c =
     [ "TLM_MGR_register_generate_tlm_", "telemetry__manager_8c.html#a2cf8d6a2174e6649a0f079f3a292fcd4", null ],
     [ "telemetry_manager", "telemetry__manager_8c.html#a6745dd68410b8b00b49d2fbb993d488c", null ],
     [ "telemetry_manager_", "telemetry__manager_8c.html#a3d9a8901c7586aa95af9507a31c9c79f", null ],
-    [ "TLM_MGR_packet_", "telemetry__manager_8c.html#a5eebc16b0fc21aed1aad1a12a14afce3", null ]
+    [ "TLM_MGR_packet_", "telemetry__manager_8c.html#a2029833bad2972c03fc690b9bb002c70", null ]
 ];

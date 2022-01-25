@@ -2,9 +2,9 @@ var time__manager_8h =
 [
     [ "TimeManager", "struct_time_manager.html", "struct_time_manager" ],
     [ "TMGR_DEFAULT_UNIXTIME_EPOCH_FOR_UTL", "time__manager_8h.html#a27f6eb422ed3dd2115256aeeefa03f48", null ],
-    [ "Cmd_TMGR_SET_TIME", "time__manager_8h.html#af5a8a86f0808ea2480c42500ca5b9f1f", null ],
-    [ "Cmd_TMGR_SET_UNIXTIME", "time__manager_8h.html#a9212164b52ccd128414e7be12e0b73a6", null ],
-    [ "Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH", "time__manager_8h.html#a46f9950ae413df2f0c2e74bee0228446", null ],
+    [ "Cmd_TMGR_SET_TIME", "time__manager_8h.html#a5d10d4973d5f63aafeb10c9c1f7cacd4", null ],
+    [ "Cmd_TMGR_SET_UNIXTIME", "time__manager_8h.html#a7ff58eee2a83d355ad4960c57d7aef87", null ],
+    [ "Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH", "time__manager_8h.html#ad001a0d012f26258b6fddc63e27f8e31", null ],
     [ "TMGR_clear", "time__manager_8h.html#a86a4083b25d115816f123201b6ee13f4", null ],
     [ "TMGR_clear_master_mode_cycle", "time__manager_8h.html#abd264fef4aa6f3428e3c0bb5030c8af6", null ],
     [ "TMGR_count_up_master_clock", "time__manager_8h.html#a4f5ef05a542a4acfe7d8ccee814a3123", null ],

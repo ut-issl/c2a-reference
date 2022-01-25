@@ -1,7 +1,7 @@
 var realtime__command__dispatcher_8c =
 [
-    [ "Cmd_RTCD_CLEAR_ALL_REALTIME", "realtime__command__dispatcher_8c.html#ad51e587a7c4f8503830954108fd03747", null ],
-    [ "Cmd_RTCD_CLEAR_ERR_LOG", "realtime__command__dispatcher_8c.html#a2399b93eaa96b059d9d32c9dfa144e1f", null ],
+    [ "Cmd_RTCD_CLEAR_ALL_REALTIME", "realtime__command__dispatcher_8c.html#af444a0fb861a35b565df5be1c39d10e6", null ],
+    [ "Cmd_RTCD_CLEAR_ERR_LOG", "realtime__command__dispatcher_8c.html#a5173b1d57a53d066bdea0b7282345b4a", null ],
     [ "RTCD_create_app", "realtime__command__dispatcher_8c.html#a6de82e8f79b0281c403be56abfaec6ba", null ],
     [ "RTCD_dispatch_", "realtime__command__dispatcher_8c.html#aa66b7d158969999a789dc69d2d5b1b7d", null ],
     [ "RTCD_init_", "realtime__command__dispatcher_8c.html#a734bff26d1bcd91008e2f46698aadbea", null ],

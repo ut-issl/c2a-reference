@@ -37,9 +37,9 @@ var utility__counter_8h =
       [ "UTIL_COUNTER_RES31", "utility__counter_8h.html#a7ff33168d2bf6a15bf32a8c80aaa076aa9ab3871d9e997eaca9ef31992bf4622a", null ],
       [ "UTIL_COUNTER_MAX", "utility__counter_8h.html#a7ff33168d2bf6a15bf32a8c80aaa076aa006bc8bcc8d724245e2d286d3e806a50", null ]
     ] ],
-    [ "Cmd_UTIL_COUNTER_INCREMENT", "utility__counter_8h.html#a9c084f1e58ddbc3189f6eb81c7e0fe64", null ],
-    [ "Cmd_UTIL_COUNTER_RESET", "utility__counter_8h.html#a2b8d88fcc9a8d0d090028b8f34e26de9", null ],
-    [ "Cmd_UTIL_COUNTER_SET_PARAM", "utility__counter_8h.html#a1439bee5f97410f14453499b67c5c0c9", null ],
+    [ "Cmd_UTIL_COUNTER_INCREMENT", "utility__counter_8h.html#a88830627d5b1d311ceb07d59cd56658b", null ],
+    [ "Cmd_UTIL_COUNTER_RESET", "utility__counter_8h.html#ac55d3f99f6d0dfebc15e86aeea0d8b87", null ],
+    [ "Cmd_UTIL_COUNTER_SET_PARAM", "utility__counter_8h.html#ad240449dd177097546e0ea710f554281", null ],
     [ "UTIL_COUNTER_create_app", "utility__counter_8h.html#a11fa1f89c97776d92a69b52f201be370", null ],
     [ "utility_counter", "utility__counter_8h.html#a530d61a8b7078095ec390c6038bf9d54", null ]
 ];
