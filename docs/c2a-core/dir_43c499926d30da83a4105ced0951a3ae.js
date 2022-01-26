@@ -20,6 +20,8 @@ var dir_43c499926d30da83a4105ced0951a3ae =
     [ "packet_handler.h", "packet__handler_8h.html", "packet__handler_8h" ],
     [ "packet_list.c", "packet__list_8c.html", "packet__list_8c" ],
     [ "packet_list.h", "packet__list_8h.html", "packet__list_8h" ],
+    [ "packet_list_util.c", "packet__list__util_8c.html", "packet__list__util_8c" ],
+    [ "packet_list_util.h", "packet__list__util_8h.html", "packet__list__util_8h" ],
     [ "telemetry_frame.c", "telemetry__frame_8c.html", "telemetry__frame_8c" ],
     [ "telemetry_frame.h", "telemetry__frame_8h.html", "telemetry__frame_8h" ],
     [ "telemetry_generator.c", "telemetry__generator_8c.html", "telemetry__generator_8c" ],

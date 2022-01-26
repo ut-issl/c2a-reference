@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('struct_packet_list.html',''); initResi
 <div class="dynheader">
 PacketList 連携図</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="struct_packet_list__coll__graph.svg" width="180" height="290"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_packet_list__coll__graph.svg" width="178" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
@@ -105,29 +105,38 @@ PacketList 連携図</div>
 <tr class="memdesc:a2337a1284eab4f3966302fd5a39a3039"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ノード数 (static 確保)  <a href="struct_packet_list.html#a2337a1284eab4f3966302fd5a39a3039">[詳解]</a><br /></td></tr>
 <tr class="separator:a2337a1284eab4f3966302fd5a39a3039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeb3a8abdc6fc1ed20b4eb6f84db5d27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#afeb3a8abdc6fc1ed20b4eb6f84db5d27">executed_nodes_</a></td></tr>
-<tr class="memdesc:afeb3a8abdc6fc1ed20b4eb6f84db5d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行されたノード数  <a href="struct_packet_list.html#afeb3a8abdc6fc1ed20b4eb6f84db5d27">[詳解]</a><br /></td></tr>
+<tr class="memdesc:afeb3a8abdc6fc1ed20b4eb6f84db5d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行（コマンド） or 配送（テレメ）されたノード数 // FIXME: TODO: テレメのときもカウントアップしてるか確認  <a href="struct_packet_list.html#afeb3a8abdc6fc1ed20b4eb6f84db5d27">[詳解]</a><br /></td></tr>
 <tr class="separator:afeb3a8abdc6fc1ed20b4eb6f84db5d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a920ce9d2725314a071bd6908dd0c731e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a920ce9d2725314a071bd6908dd0c731e">active_nodes_</a></td></tr>
 <tr class="memdesc:a920ce9d2725314a071bd6908dd0c731e"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在片方向リストに入っているノード数  <a href="struct_packet_list.html#a920ce9d2725314a071bd6908dd0c731e">[詳解]</a><br /></td></tr>
 <tr class="separator:a920ce9d2725314a071bd6908dd0c731e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e494b1d2ebab9766e395b4315e0b96f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a7e494b1d2ebab9766e395b4315e0b96f">stock_</a></td></tr>
-<tr class="memdesc:a7e494b1d2ebab9766e395b4315e0b96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域全体の先頭  <a href="struct_packet_list.html#a7e494b1d2ebab9766e395b4315e0b96f">[詳解]</a><br /></td></tr>
-<tr class="separator:a7e494b1d2ebab9766e395b4315e0b96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a429052de97089cb9436fbfd693f85d32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a429052de97089cb9436fbfd693f85d32">inactive_list_head_</a></td></tr>
-<tr class="memdesc:a429052de97089cb9436fbfd693f85d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域の内、使っていないものの先頭, stack  <a href="struct_packet_list.html#a429052de97089cb9436fbfd693f85d32">[詳解]</a><br /></td></tr>
+<tr class="memitem:a0c3fa4fd5b7bbf95c8f80c062f5ce3ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a0c3fa4fd5b7bbf95c8f80c062f5ce3ae">packet_size_</a></td></tr>
+<tr class="memdesc:a0c3fa4fd5b7bbf95c8f80c062f5ce3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">PL_Node-&gt;packet の型サイズ  <a href="struct_packet_list.html#a0c3fa4fd5b7bbf95c8f80c062f5ce3ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c3fa4fd5b7bbf95c8f80c062f5ce3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0c0d6ef4e191bbc0b38836347d938c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#ab8c2e97b0ebfb34a61a22902d6157205">PL_PACKET_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a3d0c0d6ef4e191bbc0b38836347d938c">packet_type_</a></td></tr>
+<tr class="memdesc:a3d0c0d6ef4e191bbc0b38836347d938c"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持する packet の型情報．PL_PACKET_TYPE を参照  <a href="struct_packet_list.html#a3d0c0d6ef4e191bbc0b38836347d938c">[詳解]</a><br /></td></tr>
+<tr class="separator:a3d0c0d6ef4e191bbc0b38836347d938c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c543f446f8533158af1675354cc22d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l___node.html">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a57c543f446f8533158af1675354cc22d">pl_node_stock_</a></td></tr>
+<tr class="memdesc:a57c543f446f8533158af1675354cc22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている <a class="el" href="struct_p_l___node.html" title="片方向リストを構成する各 Node">PL_Node</a> 領域（配列）全体の先頭  <a href="struct_packet_list.html#a57c543f446f8533158af1675354cc22d">[詳解]</a><br /></td></tr>
+<tr class="separator:a57c543f446f8533158af1675354cc22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa0c3ad10a87495f37264d42548d3ff"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a6fa0c3ad10a87495f37264d42548d3ff">packet_stock_</a></td></tr>
+<tr class="memdesc:a6fa0c3ad10a87495f37264d42548d3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている packet 領域（配列）全体の先頭  <a href="struct_packet_list.html#a6fa0c3ad10a87495f37264d42548d3ff">[詳解]</a><br /></td></tr>
+<tr class="separator:a6fa0c3ad10a87495f37264d42548d3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429052de97089cb9436fbfd693f85d32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l___node.html">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a429052de97089cb9436fbfd693f85d32">inactive_list_head_</a></td></tr>
+<tr class="memdesc:a429052de97089cb9436fbfd693f85d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域の内，使っていないものの先頭  <a href="struct_packet_list.html#a429052de97089cb9436fbfd693f85d32">[詳解]</a><br /></td></tr>
 <tr class="separator:a429052de97089cb9436fbfd693f85d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c5036b952b8fcb468d161e6392ee872"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a6c5036b952b8fcb468d161e6392ee872">active_list_head_</a></td></tr>
-<tr class="memdesc:a6c5036b952b8fcb468d161e6392ee872"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域の内、使っているものの先頭  <a href="struct_packet_list.html#a6c5036b952b8fcb468d161e6392ee872">[詳解]</a><br /></td></tr>
+<tr class="memitem:a6c5036b952b8fcb468d161e6392ee872"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l___node.html">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a6c5036b952b8fcb468d161e6392ee872">active_list_head_</a></td></tr>
+<tr class="memdesc:a6c5036b952b8fcb468d161e6392ee872"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域の内，使っているものの先頭  <a href="struct_packet_list.html#a6c5036b952b8fcb468d161e6392ee872">[詳解]</a><br /></td></tr>
 <tr class="separator:a6c5036b952b8fcb468d161e6392ee872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a562696d0f5dc6dd6e0b23c8b9ba39fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a562696d0f5dc6dd6e0b23c8b9ba39fbe">active_list_tail_</a></td></tr>
-<tr class="memdesc:a562696d0f5dc6dd6e0b23c8b9ba39fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域の内、使っているものの末端  <a href="struct_packet_list.html#a562696d0f5dc6dd6e0b23c8b9ba39fbe">[詳解]</a><br /></td></tr>
+<tr class="memitem:a562696d0f5dc6dd6e0b23c8b9ba39fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_l___node.html">PL_Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_packet_list.html#a562696d0f5dc6dd6e0b23c8b9ba39fbe">active_list_tail_</a></td></tr>
+<tr class="memdesc:a562696d0f5dc6dd6e0b23c8b9ba39fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">確保されている領域の内，使っているものの末端  <a href="struct_packet_list.html#a562696d0f5dc6dd6e0b23c8b9ba39fbe">[詳解]</a><br /></td></tr>
 <tr class="separator:a562696d0f5dc6dd6e0b23c8b9ba39fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>パケットリスト本体 </p>
-<dl class="section note"><dt>覚え書き</dt><dd>データ構造としては 片方向リスト 初期化では外部で事前に領域だけ確保しておいたPL_Node配列の先頭ポインタをstockに保存して連結リスト化, inactive_list_headにもコピーする. 使うときにはinactive_listからPL_Node一つを取り出して, その領域をactive_listに挿入する. なおメンバーは全て private </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>データ構造としては 片方向リスト 初期化では外部で事前に領域だけ確保しておいた <a class="el" href="struct_p_l___node.html" title="片方向リストを構成する各 Node">PL_Node</a> 配列の先頭ポインタを stock に保存して連結リスト化, inactive_list_head にもコピーする. 使うときには inactive_list から <a class="el" href="struct_p_l___node.html" title="片方向リストを構成する各 Node">PL_Node</a> 一つを取り出して, その領域を active_list に挿入する. なおメンバーは全て private </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00072">72</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
 <a id="a6c5036b952b8fcb468d161e6392ee872"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c5036b952b8fcb468d161e6392ee872">&#9670;&nbsp;</a></span>active_list_head_</h2>
@@ -136,14 +145,14 @@ PacketList 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* active_list_head_</td>
+          <td class="memname"><a class="el" href="struct_p_l___node.html">PL_Node</a>* active_list_head_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>確保されている領域の内、使っているものの先頭 </p>
+<p>確保されている領域の内，使っているものの先頭 </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00083">83</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -154,14 +163,14 @@ PacketList 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* active_list_tail_</td>
+          <td class="memname"><a class="el" href="struct_p_l___node.html">PL_Node</a>* active_list_tail_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>確保されている領域の内、使っているものの末端 </p>
+<p>確保されている領域の内，使っているものの末端 </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00084">84</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -179,7 +188,7 @@ PacketList 連携図</div>
 
 <p>現在片方向リストに入っているノード数 </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00076">76</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -195,9 +204,9 @@ PacketList 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p>実行されたノード数 </p>
+<p>実行（コマンド） or 配送（テレメ）されたノード数 // FIXME: TODO: テレメのときもカウントアップしてるか確認 </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00075">75</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -208,32 +217,86 @@ PacketList 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* inactive_list_head_</td>
+          <td class="memname"><a class="el" href="struct_p_l___node.html">PL_Node</a>* inactive_list_head_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>確保されている領域の内、使っていないものの先頭, stack </p>
+<p>確保されている領域の内，使っていないものの先頭 </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00082">82</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a7e494b1d2ebab9766e395b4315e0b96f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e494b1d2ebab9766e395b4315e0b96f">&#9670;&nbsp;</a></span>stock_</h2>
+<a id="a0c3fa4fd5b7bbf95c8f80c062f5ce3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3fa4fd5b7bbf95c8f80c062f5ce3ae">&#9670;&nbsp;</a></span>packet_size_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="packet__list_8h.html#a57ce3f10f0a537f42d1370c2de23c3e5">PL_Node</a>* stock_</td>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> packet_size_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>確保されている領域全体の先頭 </p>
+<p>PL_Node-&gt;packet の型サイズ </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00077">77</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6fa0c3ad10a87495f37264d42548d3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa0c3ad10a87495f37264d42548d3ff">&#9670;&nbsp;</a></span>packet_stock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* packet_stock_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>確保されている packet 領域（配列）全体の先頭 </p>
+
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00081">81</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3d0c0d6ef4e191bbc0b38836347d938c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0c0d6ef4e191bbc0b38836347d938c">&#9670;&nbsp;</a></span>packet_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__list_8h.html#ab8c2e97b0ebfb34a61a22902d6157205">PL_PACKET_TYPE</a> packet_type_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保持する packet の型情報．PL_PACKET_TYPE を参照 </p>
+
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00078">78</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a57c543f446f8533158af1675354cc22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c543f446f8533158af1675354cc22d">&#9670;&nbsp;</a></span>pl_node_stock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_l___node.html">PL_Node</a>* pl_node_stock_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>確保されている <a class="el" href="struct_p_l___node.html" title="片方向リストを構成する各 Node">PL_Node</a> 領域（配列）全体の先頭 </p>
+
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00080">80</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -251,7 +314,7 @@ PacketList 連携図</div>
 
 <p>全ノード数 (static 確保) </p>
 
-<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8h_source.html">packet_list.h</a> の <a class="el" href="packet__list_8h_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>

@@ -238,7 +238,7 @@ task_dispatcher.h の依存先関係図:</div>
 
 <p>指定したブロックコマンドを、次にタスクリストに展開するものとして登録するコマンド </p>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00186">186</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00187">187</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -270,7 +270,7 @@ task_dispatcher.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00204">204</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00205">205</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -297,16 +297,16 @@ task_dispatcher.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>現在時刻に応じて、TaskList から Cmd を一つ実行する or TaskList を再展開する </p>
-<pre class="fragment">   展開されているタスクリストの実行時刻 (cycle レベル) を比較し, task_list_ に登録されているタスクを順番に実行する.
-   1つタスクを消化すると return する. (while(1) で回っているのですぐ戻ってくる.)
-   実行 cycle が現在だった場合, 各タスクの step によって実行する, しないを switch に合わせて処理する.
-   実際にタスクを処理する場合, CDIS_dispatch_command -&gt; PH_dispatch_command -&gt; cmdExec の順に実行される(真の Executer は cmdExec).
+<pre class="fragment">   展開されているタスクリストの実行時刻 (cycle レベル) を比較し, task_list_ に登録されているタスクを順番に実行する．
+   1つタスクを消化すると return する． (while(1) で回っているのですぐ戻ってくる．)
+   実行 cycle が現在だった場合, 各タスクの step によって実行する, しないを switch に合わせて処理する．
+   実際にタスクを処理する場合, CDIS_dispatch_command -&gt; PH_dispatch_command -&gt; cmdExec の順に実行される(真の Executer は cmdExec)．
 </pre> 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00079">79</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00080">80</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="task__dispatcher_8h_ac880fe6e26ecdf8711d08980cad6787d_cgraph.svg" width="1935" height="1418"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="task__dispatcher_8h_ac880fe6e26ecdf8711d08980cad6787d_cgraph.svg" width="1935" height="1472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -341,7 +341,7 @@ task_dispatcher.h の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="task__dispatcher_8h_ab4cccbf9d36945e27f8023f9d613a667_cgraph.svg" width="1463" height="982"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="task__dispatcher_8h_ab4cccbf9d36945e27f8023f9d613a667_cgraph.svg" width="1426" height="1032"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -371,7 +371,7 @@ task_dispatcher.h の依存先関係図:</div>
 
 <p>タスクリストの展開時サイクル数を現在のサイクル数に強制的に合わせる </p>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00181">181</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00182">182</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -410,9 +410,9 @@ task_dispatcher.h の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>覚え書き</dt><dd>展開自体はTDSP_deploy_block_as_task_list_で行う "BC を TaskList に展開" とは <code>src_user\Settings\Modes\TaskLists\<a class="el" href="_initial_t_l_8c.html">InitialTL.c</a></code> などを参照. </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>展開自体は TDSP_deploy_block_as_task_list_ で行う "BC を TaskList に展開" とは <code>src_user\Settings\Modes\TaskLists\<a class="el" href="_initial_t_l_8c.html">InitialTL.c</a></code> などを参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00048">48</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

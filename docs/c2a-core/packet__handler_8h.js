@@ -37,9 +37,9 @@ var packet__handler_8h =
       [ "PH_TLM_INVALID_DIST_FLAG", "packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758caa910808438c935cd766ea2a272c8a852", null ],
       [ "PH_UNKNOWN", "packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758ca415f91f5c74c671b0e6eba70522fdead", null ]
     ] ],
-    [ "PH_analyze_cmd", "packet__handler_8h.html#adad85a9717ad8b86960c7120596783e6", null ],
+    [ "PH_analyze_cmd_packet", "packet__handler_8h.html#a259f5d964fe8b69ab11a54c0325be9d5", null ],
     [ "PH_analyze_packet", "packet__handler_8h.html#acf757fa72967bf66b39dc5ced7132330", null ],
-    [ "PH_analyze_tlm", "packet__handler_8h.html#aa723ecba78b77490183e69a3651995d8", null ],
+    [ "PH_analyze_tlm_packet", "packet__handler_8h.html#ab5cf7bd4c406c85194969f2284402121", null ],
     [ "PH_dispatch_command", "packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc", null ],
     [ "PH_init", "packet__handler_8h.html#ad3f261544ad4209b9d6c7c997fcf1931", null ],
     [ "PH_gs_cmd_list", "packet__handler_8h.html#af2825084e197973e11a2b205bedd9521", null ],

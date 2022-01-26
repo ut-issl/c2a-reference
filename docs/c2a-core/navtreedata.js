@@ -37,7 +37,7 @@ var NAVTREE =
       [ "大域各種", "globals.html", [
         [ "全て", "globals.html", "globals_dup" ],
         [ "関数", "globals_func.html", "globals_func" ],
-        [ "変数", "globals_vars.html", null ],
+        [ "変数", "globals_vars.html", "globals_vars" ],
         [ "型定義", "globals_type.html", null ],
         [ "列挙型", "globals_enum.html", null ],
         [ "列挙値", "globals_eval.html", "globals_eval" ],
@@ -58,13 +58,13 @@ var NAVTREEINDEX =
 "driver__super_8c.html#af3cb3191ff23514897baa564e95fee12",
 "event__handler_8c.html#aea878950d4dd21be914534ab13f78e9b",
 "event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a653dda7718442dd2ad5cf51a224c5c13",
-"gs__command__dispatcher_8h.html#aca0c50ef882738351bb09e35f3dd7962",
-"obc__time_8c.html#a42bd831d04337c9fc2ff10513e66d699",
-"spi_8h.html#a561ec4bf470ec1240e18355511878bb4a261b5cb27d44e2d4c24e1f7a55654a90",
-"struct_e_h___log.html#af4873e5f4611815889bfdee33b58c5f8",
-"struct_u_t_i_l___c_o_u_n_t_e_r__counter.html#a4a55f26fb624a4ecac465be50728e11a",
-"time__manager_8c.html#a3a3ca9f8e7de61150cc2c555753ae32f",
-"utility__counter_8h.html#a7ff33168d2bf6a15bf32a8c80aaa076aab953804959bef9a6ef7c01413ba74be7"
+"gs_8h.html#ab5a95220602c1a4d6c9fd8feb5e57467af3974cf863ecf2427e068b2cb6636ec5",
+"nop_8c.html#a46773c1cfb40bd0fbb5c4f41a28db289",
+"packet__list__util_8h_source.html",
+"struct_d_s___stream_config.html#a5c96aa29a909ab069dbe8fca13bbea9d",
+"struct_t_l_m___m_g_r___register_info.html#a5bd0f8c00360a40f91d61e40277ed8e3",
+"telemetry__manager_8c.html#ad8765254cce8d4a2361b16becb1d3d4f",
+"utility__command_8h.html#a1bc75089ffd50277ab2e5520e329157c"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

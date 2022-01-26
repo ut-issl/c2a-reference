@@ -71,7 +71,7 @@ var annotated_dup =
     [ "ObcTime", "struct_obc_time.html", "struct_obc_time" ],
     [ "PA_Config", "struct_p_a___config.html", "struct_p_a___config" ],
     [ "PacketList", "struct_packet_list.html", "struct_packet_list" ],
-    [ "PL_NodeTag", "struct_p_l___node_tag.html", "struct_p_l___node_tag" ],
+    [ "PL_Node", "struct_p_l___node.html", "struct_p_l___node" ],
     [ "SCIComPort", "class_s_c_i_com_port.html", "class_s_c_i_com_port" ],
     [ "SCIComPortUart", "class_s_c_i_com_port_uart.html", "class_s_c_i_com_port_uart" ],
     [ "SPI_Config", "struct_s_p_i___config.html", "struct_s_p_i___config" ],
