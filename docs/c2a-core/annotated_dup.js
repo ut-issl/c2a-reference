@@ -67,7 +67,6 @@ var annotated_dup =
     [ "MemoryDump", "struct_memory_dump.html", "struct_memory_dump" ],
     [ "MM_TransitionEdge", "struct_m_m___transition_edge.html", "struct_m_m___transition_edge" ],
     [ "ModeManager", "struct_mode_manager.html", "struct_mode_manager" ],
-    [ "OBCT_UnixtimeInfo", "struct_o_b_c_t___unixtime_info.html", "struct_o_b_c_t___unixtime_info" ],
     [ "ObcTime", "struct_obc_time.html", "struct_obc_time" ],
     [ "PA_Config", "struct_p_a___config.html", "struct_p_a___config" ],
     [ "PacketList", "struct_packet_list.html", "struct_packet_list" ],

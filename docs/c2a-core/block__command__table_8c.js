@@ -31,6 +31,7 @@ var block__command__table_8c =
     [ "BCT_swap_contents", "block__command__table_8c.html#ac8f6b4e37c6106ca8b93abef278d3ef4", null ],
     [ "Cmd_BCT_CLEAR_BLOCK", "block__command__table_8c.html#a455789e67ca933a6e618354bd6fd154f", null ],
     [ "Cmd_BCT_COPY_BCT", "block__command__table_8c.html#a0d6545bed7b70a395966148be2c5f97d", null ],
+    [ "Cmd_BCT_FILL_NOP", "block__command__table_8c.html#a4ad040fa043c293c99d80d36b9536035", null ],
     [ "Cmd_BCT_OVERWRITE_CMD", "block__command__table_8c.html#afb56b53815cce4e3c34d0463073368ec", null ],
     [ "Cmd_BCT_SET_BLOCK_POSITION", "block__command__table_8c.html#a5e60fb8f445e69cb3c153ea89fed6fb6", null ],
     [ "block_command_table", "block__command__table_8c.html#a9505fde3e675731e8d22907a71bb06ca", null ],
