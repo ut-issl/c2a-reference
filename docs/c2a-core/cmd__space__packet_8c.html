@@ -1,0 +1,1937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/TlmCmd/Ccsds/cmd_space_packet.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('cmd__space__packet_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">cmd_space_packet.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>CCSDS で規定される Space Packet の コマンド版の実装  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="cmd__space__packet_8h_source.html">cmd_space_packet.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+cmd_space_packet.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c__incl.svg" width="1868" height="692"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="cmd__space__packet_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aca6303dfca80a72fc89c3f73b0ec3aa3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#aca6303dfca80a72fc89c3f73b0ec3aa3">CSP_CAST_TO_SP</a>(csp)&#160;&#160;&#160;((const <a class="el" href="struct_space_packet.html">SpacePacket</a>*)(csp))</td></tr>
+<tr class="memdesc:aca6303dfca80a72fc89c3f73b0ec3aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPへのキャスト． SPのほうが広いので，これは可能  <a href="cmd__space__packet_8c.html#aca6303dfca80a72fc89c3f73b0ec3aa3">[詳解]</a><br /></td></tr>
+<tr class="separator:aca6303dfca80a72fc89c3f73b0ec3aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf003a718ac1429225aeab0b36fe9bbd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#abf003a718ac1429225aeab0b36fe9bbd">CSP_CAST_TO_NON_CONST_SP</a>(csp)&#160;&#160;&#160;((<a class="el" href="struct_space_packet.html">SpacePacket</a>*)(csp))</td></tr>
+<tr class="memdesc:abf003a718ac1429225aeab0b36fe9bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPへのキャスト． SPのほうが広いので，これは可能  <a href="cmd__space__packet_8c.html#abf003a718ac1429225aeab0b36fe9bbd">[詳解]</a><br /></td></tr>
+<tr class="separator:abf003a718ac1429225aeab0b36fe9bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a0d2d461de4efec9e6ee75367b00c79da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a0d2d461de4efec9e6ee75367b00c79da">CSP_get_ver</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a0d2d461de4efec9e6ee75367b00c79da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version No を取得  <a href="cmd__space__packet_8c.html#a0d2d461de4efec9e6ee75367b00c79da">[詳解]</a><br /></td></tr>
+<tr class="separator:a0d2d461de4efec9e6ee75367b00c79da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25773dc83ed038765c53de8ac56677b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a25773dc83ed038765c53de8ac56677b5">CSP_set_ver</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a> ver)</td></tr>
+<tr class="memdesc:a25773dc83ed038765c53de8ac56677b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version No を設定  <a href="cmd__space__packet_8c.html#a25773dc83ed038765c53de8ac56677b5">[詳解]</a><br /></td></tr>
+<tr class="separator:a25773dc83ed038765c53de8ac56677b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d98754d83e7ffd60017fc2d07ecd934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a9d98754d83e7ffd60017fc2d07ecd934">CSP_get_type</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a9d98754d83e7ffd60017fc2d07ecd934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Type を取得  <a href="cmd__space__packet_8c.html#a9d98754d83e7ffd60017fc2d07ecd934">[詳解]</a><br /></td></tr>
+<tr class="separator:a9d98754d83e7ffd60017fc2d07ecd934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5188604c87906538891ce687cecbb0d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a5188604c87906538891ce687cecbb0d7">CSP_set_type</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a> type)</td></tr>
+<tr class="memdesc:a5188604c87906538891ce687cecbb0d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Type を設定  <a href="cmd__space__packet_8c.html#a5188604c87906538891ce687cecbb0d7">[詳解]</a><br /></td></tr>
+<tr class="separator:a5188604c87906538891ce687cecbb0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0ce8c5312e5b210a6f873c0765df48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#acd0ce8c5312e5b210a6f873c0765df48">CSP_get_2nd_hdr_flag</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:acd0ce8c5312e5b210a6f873c0765df48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Flag を取得  <a href="cmd__space__packet_8c.html#acd0ce8c5312e5b210a6f873c0765df48">[詳解]</a><br /></td></tr>
+<tr class="separator:acd0ce8c5312e5b210a6f873c0765df48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b732036a8d1c3a212769b1c18e280f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a33b732036a8d1c3a212769b1c18e280f">CSP_set_2nd_hdr_flag</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a> flag)</td></tr>
+<tr class="memdesc:a33b732036a8d1c3a212769b1c18e280f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Flag を設定  <a href="cmd__space__packet_8c.html#a33b732036a8d1c3a212769b1c18e280f">[詳解]</a><br /></td></tr>
+<tr class="separator:a33b732036a8d1c3a212769b1c18e280f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66281beb2903f651ac94e9ea379f94ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a66281beb2903f651ac94e9ea379f94ce">CSP_get_apid</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a66281beb2903f651ac94e9ea379f94ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を取得  <a href="cmd__space__packet_8c.html#a66281beb2903f651ac94e9ea379f94ce">[詳解]</a><br /></td></tr>
+<tr class="separator:a66281beb2903f651ac94e9ea379f94ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cd4ddfdcc558b8c205240147b6f4af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#ae4cd4ddfdcc558b8c205240147b6f4af">CSP_set_apid</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid)</td></tr>
+<tr class="memdesc:ae4cd4ddfdcc558b8c205240147b6f4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を設定  <a href="cmd__space__packet_8c.html#ae4cd4ddfdcc558b8c205240147b6f4af">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4cd4ddfdcc558b8c205240147b6f4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbed90bf863924737a0e086cb1c1aae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a1bbed90bf863924737a0e086cb1c1aae">CSP_get_seq_flag</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a1bbed90bf863924737a0e086cb1c1aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Flag を取得  <a href="cmd__space__packet_8c.html#a1bbed90bf863924737a0e086cb1c1aae">[詳解]</a><br /></td></tr>
+<tr class="separator:a1bbed90bf863924737a0e086cb1c1aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0b87dd65e759d3e3832e403ea6ed54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a6b0b87dd65e759d3e3832e403ea6ed54">CSP_set_seq_flag</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> flag)</td></tr>
+<tr class="memdesc:a6b0b87dd65e759d3e3832e403ea6ed54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Flag を設定  <a href="cmd__space__packet_8c.html#a6b0b87dd65e759d3e3832e403ea6ed54">[詳解]</a><br /></td></tr>
+<tr class="separator:a6b0b87dd65e759d3e3832e403ea6ed54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e2509217389789020ffc2752b507e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a90e2509217389789020ffc2752b507e1">CSP_get_seq_count</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a90e2509217389789020ffc2752b507e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Count を取得  <a href="cmd__space__packet_8c.html#a90e2509217389789020ffc2752b507e1">[詳解]</a><br /></td></tr>
+<tr class="separator:a90e2509217389789020ffc2752b507e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ef5d2e5412c86b9782acb544bd5078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#ad7ef5d2e5412c86b9782acb544bd5078">CSP_set_seq_count</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> count)</td></tr>
+<tr class="memdesc:ad7ef5d2e5412c86b9782acb544bd5078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Count を設定  <a href="cmd__space__packet_8c.html#ad7ef5d2e5412c86b9782acb544bd5078">[詳解]</a><br /></td></tr>
+<tr class="separator:ad7ef5d2e5412c86b9782acb544bd5078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88497aa9871f0ffba50a66525ab470b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a88497aa9871f0ffba50a66525ab470b0">CSP_get_packet_data_len</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a88497aa9871f0ffba50a66525ab470b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Data Length を取得  <a href="cmd__space__packet_8c.html#a88497aa9871f0ffba50a66525ab470b0">[詳解]</a><br /></td></tr>
+<tr class="separator:a88497aa9871f0ffba50a66525ab470b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519fddb09974525707a614b62ff92105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a519fddb09974525707a614b62ff92105">CSP_set_packet_data_len</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:a519fddb09974525707a614b62ff92105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Data Length を設定  <a href="cmd__space__packet_8c.html#a519fddb09974525707a614b62ff92105">[詳解]</a><br /></td></tr>
+<tr class="separator:a519fddb09974525707a614b62ff92105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad007ae1696089cf4aab3f15ad0bbc1f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd__space__packet_8h.html#aec9cfca96093fc2786ef4b80e7a69046">CSP_2ND_HDR_VER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#ad007ae1696089cf4aab3f15ad0bbc1f5">CSP_get_2nd_hdr_ver</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:ad007ae1696089cf4aab3f15ad0bbc1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Version No を取得  <a href="cmd__space__packet_8c.html#ad007ae1696089cf4aab3f15ad0bbc1f5">[詳解]</a><br /></td></tr>
+<tr class="separator:ad007ae1696089cf4aab3f15ad0bbc1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e8d588a3737dc6c6d65defd0ef04bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#ac5e8d588a3737dc6c6d65defd0ef04bd">CSP_set_2nd_hdr_ver</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="cmd__space__packet_8h.html#aec9cfca96093fc2786ef4b80e7a69046">CSP_2ND_HDR_VER</a> ver)</td></tr>
+<tr class="memdesc:ac5e8d588a3737dc6c6d65defd0ef04bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Version No を設定  <a href="cmd__space__packet_8c.html#ac5e8d588a3737dc6c6d65defd0ef04bd">[詳解]</a><br /></td></tr>
+<tr class="separator:ac5e8d588a3737dc6c6d65defd0ef04bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1acf116aa799d2c8ce32222244e775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd__space__packet_8h.html#a4a01896f873027e9247540e9fea7d08b">CSP_CMD_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a1e1acf116aa799d2c8ce32222244e775">CSP_get_cmd_type</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a1e1acf116aa799d2c8ce32222244e775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command Type を取得  <a href="cmd__space__packet_8c.html#a1e1acf116aa799d2c8ce32222244e775">[詳解]</a><br /></td></tr>
+<tr class="separator:a1e1acf116aa799d2c8ce32222244e775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5958581af82bafc57755aca719dfb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#aff5958581af82bafc57755aca719dfb0">CSP_set_cmd_type</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="cmd__space__packet_8h.html#a4a01896f873027e9247540e9fea7d08b">CSP_CMD_TYPE</a> cmd_type)</td></tr>
+<tr class="memdesc:aff5958581af82bafc57755aca719dfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command Type を設定  <a href="cmd__space__packet_8c.html#aff5958581af82bafc57755aca719dfb0">[詳解]</a><br /></td></tr>
+<tr class="separator:aff5958581af82bafc57755aca719dfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d89842ddfe7dc2c74ae697d6690c89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a45d89842ddfe7dc2c74ae697d6690c89">CSP_get_cmd_id</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a45d89842ddfe7dc2c74ae697d6690c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command ID を取得  <a href="cmd__space__packet_8c.html#a45d89842ddfe7dc2c74ae697d6690c89">[詳解]</a><br /></td></tr>
+<tr class="separator:a45d89842ddfe7dc2c74ae697d6690c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ab9fe9f6561b18ef7b5a11ea0005b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a80ab9fe9f6561b18ef7b5a11ea0005b4">CSP_set_cmd_id</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> id)</td></tr>
+<tr class="memdesc:a80ab9fe9f6561b18ef7b5a11ea0005b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command ID を設定  <a href="cmd__space__packet_8c.html#a80ab9fe9f6561b18ef7b5a11ea0005b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a80ab9fe9f6561b18ef7b5a11ea0005b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bbd3b94c3c8a9c0e0c26fc96b16b9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10f">CCP_DEST_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#aa6bbd3b94c3c8a9c0e0c26fc96b16b9d">CSP_get_dest_type</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:aa6bbd3b94c3c8a9c0e0c26fc96b16b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination Type を取得  <a href="cmd__space__packet_8c.html#aa6bbd3b94c3c8a9c0e0c26fc96b16b9d">[詳解]</a><br /></td></tr>
+<tr class="separator:aa6bbd3b94c3c8a9c0e0c26fc96b16b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4083ff1a9dbe5894cfacf756d02a50a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a4083ff1a9dbe5894cfacf756d02a50a4">CSP_set_dest_type</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10f">CCP_DEST_TYPE</a> dest_type)</td></tr>
+<tr class="memdesc:a4083ff1a9dbe5894cfacf756d02a50a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination Type を設定  <a href="cmd__space__packet_8c.html#a4083ff1a9dbe5894cfacf756d02a50a4">[詳解]</a><br /></td></tr>
+<tr class="separator:a4083ff1a9dbe5894cfacf756d02a50a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e6dd2c4432ce4d03442e5277766c0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960fa">CCP_EXEC_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#af0e6dd2c4432ce4d03442e5277766c0c">CSP_get_exec_type</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:af0e6dd2c4432ce4d03442e5277766c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution Type を取得  <a href="cmd__space__packet_8c.html#af0e6dd2c4432ce4d03442e5277766c0c">[詳解]</a><br /></td></tr>
+<tr class="separator:af0e6dd2c4432ce4d03442e5277766c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031c095293173f7bc0fa4a97852b7060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a031c095293173f7bc0fa4a97852b7060">CSP_set_exec_type</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960fa">CCP_EXEC_TYPE</a> exec_type)</td></tr>
+<tr class="memdesc:a031c095293173f7bc0fa4a97852b7060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution Type を設定  <a href="cmd__space__packet_8c.html#a031c095293173f7bc0fa4a97852b7060">[詳解]</a><br /></td></tr>
+<tr class="separator:a031c095293173f7bc0fa4a97852b7060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d726fa3f96fbe2be1a779719445b528"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a8d726fa3f96fbe2be1a779719445b528">CSP_get_ti</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a8d726fa3f96fbe2be1a779719445b528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time Indicator (TI) を取得  <a href="cmd__space__packet_8c.html#a8d726fa3f96fbe2be1a779719445b528">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d726fa3f96fbe2be1a779719445b528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7cf4c50d51882d730ad25b754259fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a3b7cf4c50d51882d730ad25b754259fd">CSP_set_ti</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> ti)</td></tr>
+<tr class="memdesc:a3b7cf4c50d51882d730ad25b754259fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time Indicator (TI) を設定  <a href="cmd__space__packet_8c.html#a3b7cf4c50d51882d730ad25b754259fd">[詳解]</a><br /></td></tr>
+<tr class="separator:a3b7cf4c50d51882d730ad25b754259fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee157565d728de693218da48114b5923"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#aee157565d728de693218da48114b5923">CSP_get_packet_len</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:aee157565d728de693218da48114b5923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Length を取得  <a href="cmd__space__packet_8c.html#aee157565d728de693218da48114b5923">[詳解]</a><br /></td></tr>
+<tr class="separator:aee157565d728de693218da48114b5923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2153513c0ca9c5975c81ddb1094242dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a2153513c0ca9c5975c81ddb1094242dd">CSP_set_packet_len</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:a2153513c0ca9c5975c81ddb1094242dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Length を設定  <a href="cmd__space__packet_8c.html#a2153513c0ca9c5975c81ddb1094242dd">[詳解]</a><br /></td></tr>
+<tr class="separator:a2153513c0ca9c5975c81ddb1094242dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6ae24b63276a3107cbd59f153b658e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a2a6ae24b63276a3107cbd59f153b658e">CSP_copy_packet</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *dest, const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *src)</td></tr>
+<tr class="memdesc:a2a6ae24b63276a3107cbd59f153b658e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> をコピー  <a href="cmd__space__packet_8c.html#a2a6ae24b63276a3107cbd59f153b658e">[詳解]</a><br /></td></tr>
+<tr class="separator:a2a6ae24b63276a3107cbd59f153b658e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05169fb3461910d6b5b13a59a0026455"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a05169fb3461910d6b5b13a59a0026455">CSP_get_param_head</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:a05169fb3461910d6b5b13a59a0026455"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドパラメタの先頭ポインタを取得  <a href="cmd__space__packet_8c.html#a05169fb3461910d6b5b13a59a0026455">[詳解]</a><br /></td></tr>
+<tr class="separator:a05169fb3461910d6b5b13a59a0026455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01de2632e93794f7c77749eb788ad74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#ad01de2632e93794f7c77749eb788ad74">CSP_get_param_len</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:ad01de2632e93794f7c77749eb788ad74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Param Length を取得  <a href="cmd__space__packet_8c.html#ad01de2632e93794f7c77749eb788ad74">[詳解]</a><br /></td></tr>
+<tr class="separator:ad01de2632e93794f7c77749eb788ad74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe0c42d5d5b6443c55709890b6ad093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#aebe0c42d5d5b6443c55709890b6ad093">CSP_set_param</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *param, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:aebe0c42d5d5b6443c55709890b6ad093"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドパラメタを設定  <a href="cmd__space__packet_8c.html#aebe0c42d5d5b6443c55709890b6ad093">[詳解]</a><br /></td></tr>
+<tr class="separator:aebe0c42d5d5b6443c55709890b6ad093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f250d0b768ce918101f7959940b9da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#aa4f250d0b768ce918101f7959940b9da">CSP_set_common_hdr</a> (<a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
+<tr class="memdesc:aa4f250d0b768ce918101f7959940b9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">共通部分の Header を構築  <a href="cmd__space__packet_8c.html#aa4f250d0b768ce918101f7959940b9da">[詳解]</a><br /></td></tr>
+<tr class="separator:aa4f250d0b768ce918101f7959940b9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a77cf4e5cb876ed56cad47bca0dee15db"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a77cf4e5cb876ed56cad47bca0dee15db">CSP_pei_2nd_hdr_ver_</a> = { 6, 0xff, 0, 1}</td></tr>
+<tr class="separator:a77cf4e5cb876ed56cad47bca0dee15db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d194d86d99652353ef106cfe9555e2"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a77d194d86d99652353ef106cfe9555e2">CSP_pei_cmd_type_</a> = { 7, 0xff, 0, 1}</td></tr>
+<tr class="separator:a77d194d86d99652353ef106cfe9555e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f964b2af237a9fc67a9636cdd3c8bc"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a38f964b2af237a9fc67a9636cdd3c8bc">CSP_pei_cmd_id_</a> = { 8, 0xff, 0, 2}</td></tr>
+<tr class="separator:a38f964b2af237a9fc67a9636cdd3c8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3052f3196432b85c70f27420a13a9525"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a3052f3196432b85c70f27420a13a9525">CSP_pei_dest_type_</a> = {10, 0xf0, 4, 1}</td></tr>
+<tr class="separator:a3052f3196432b85c70f27420a13a9525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6289a418c08f77a8fdd28774d5762db6"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a6289a418c08f77a8fdd28774d5762db6">CSP_pei_exec_type_</a> = {10, 0x0f, 0, 1}</td></tr>
+<tr class="separator:a6289a418c08f77a8fdd28774d5762db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a159d913ed183e1076932f3d7bba52e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd__space__packet_8c.html#a1a159d913ed183e1076932f3d7bba52e">CSP_pei_ti_</a> = {11, 0xff, 0, 4}</td></tr>
+<tr class="separator:a1a159d913ed183e1076932f3d7bba52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>CCSDS で規定される Space Packet の コマンド版の実装 </p>
+<p>C ではテンプレートが使えないため，別で定義する </p><dl class="section note"><dt>覚え書き</dt><dd>詳細は <a class="el" href="space__packet_8h.html" title="CCSDS で規定される Space Packet の実装">space_packet.h</a> を参照 </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="abf003a718ac1429225aeab0b36fe9bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf003a718ac1429225aeab0b36fe9bbd">&#9670;&nbsp;</a></span>CSP_CAST_TO_NON_CONST_SP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSP_CAST_TO_NON_CONST_SP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">csp</td><td>)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="struct_space_packet.html">SpacePacket</a>*)(csp))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPへのキャスト． SPのほうが広いので，これは可能 </p>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aca6303dfca80a72fc89c3f73b0ec3aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6303dfca80a72fc89c3f73b0ec3aa3">&#9670;&nbsp;</a></span>CSP_CAST_TO_SP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSP_CAST_TO_SP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">csp</td><td>)</td>
+          <td>&#160;&#160;&#160;((const <a class="el" href="struct_space_packet.html">SpacePacket</a>*)(csp))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPへのキャスト． SPのほうが広いので，これは可能 </p>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00012">12</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a2a6ae24b63276a3107cbd59f153b658e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6ae24b63276a3107cbd59f153b658e">&#9670;&nbsp;</a></span>CSP_copy_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_copy_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> をコピー </p>
+<dl class="section note"><dt>覚え書き</dt><dd>高速化のためすすべてではなく必要最低限しかコピーしない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dest</td><td>コピー先 <a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>コピー元 <a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00262">262</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a2a6ae24b63276a3107cbd59f153b658e_cgraph.svg" width="1295" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a2a6ae24b63276a3107cbd59f153b658e_icgraph.svg" width="3015" height="311"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acd0ce8c5312e5b210a6f873c0765df48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0ce8c5312e5b210a6f873c0765df48">&#9670;&nbsp;</a></span>CSP_get_2nd_hdr_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a> CSP_get_2nd_hdr_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Flag を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_2ND_HDR_FLAG </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_acd0ce8c5312e5b210a6f873c0765df48_cgraph.svg" width="938" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_acd0ce8c5312e5b210a6f873c0765df48_icgraph.svg" width="3119" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad007ae1696089cf4aab3f15ad0bbc1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad007ae1696089cf4aab3f15ad0bbc1f5">&#9670;&nbsp;</a></span>CSP_get_2nd_hdr_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cmd__space__packet_8h.html#aec9cfca96093fc2786ef4b80e7a69046">CSP_2ND_HDR_VER</a> CSP_get_2nd_hdr_ver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Version No を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CSP_2ND_HDR_VER </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00116">116</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ad007ae1696089cf4aab3f15ad0bbc1f5_cgraph.svg" width="731" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a66281beb2903f651ac94e9ea379f94ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66281beb2903f651ac94e9ea379f94ce">&#9670;&nbsp;</a></span>CSP_get_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> CSP_get_apid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>APID </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00064">64</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a66281beb2903f651ac94e9ea379f94ce_cgraph.svg" width="828" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a66281beb2903f651ac94e9ea379f94ce_icgraph.svg" width="2560" height="744"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a45d89842ddfe7dc2c74ae697d6690c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d89842ddfe7dc2c74ae697d6690c89">&#9670;&nbsp;</a></span>CSP_get_cmd_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> CSP_get_cmd_id </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Command ID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Command ID </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00156">156</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a45d89842ddfe7dc2c74ae697d6690c89_cgraph.svg" width="698" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a45d89842ddfe7dc2c74ae697d6690c89_icgraph.svg" width="2016" height="790"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1e1acf116aa799d2c8ce32222244e775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1acf116aa799d2c8ce32222244e775">&#9670;&nbsp;</a></span>CSP_get_cmd_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cmd__space__packet_8h.html#a4a01896f873027e9247540e9fea7d08b">CSP_CMD_TYPE</a> CSP_get_cmd_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Command Type を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CSP_CMD_TYPE </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00141">141</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa6bbd3b94c3c8a9c0e0c26fc96b16b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bbd3b94c3c8a9c0e0c26fc96b16b9d">&#9670;&nbsp;</a></span>CSP_get_dest_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10f">CCP_DEST_TYPE</a> CSP_get_dest_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destination Type を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCP_DEST_TYPE </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00172">172</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aa6bbd3b94c3c8a9c0e0c26fc96b16b9d_cgraph.svg" width="715" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aa6bbd3b94c3c8a9c0e0c26fc96b16b9d_icgraph.svg" width="3068" height="311"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af0e6dd2c4432ce4d03442e5277766c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e6dd2c4432ce4d03442e5277766c0c">&#9670;&nbsp;</a></span>CSP_get_exec_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960fa">CCP_EXEC_TYPE</a> CSP_get_exec_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execution Type を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCP_EXEC_TYPE </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00200">200</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_af0e6dd2c4432ce4d03442e5277766c0c_cgraph.svg" width="716" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_af0e6dd2c4432ce4d03442e5277766c0c_icgraph.svg" width="2856" height="311"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a88497aa9871f0ffba50a66525ab470b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88497aa9871f0ffba50a66525ab470b0">&#9670;&nbsp;</a></span>CSP_get_packet_data_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CSP_get_packet_data_len </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Data Length を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Packet Data Length </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00100">100</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a88497aa9871f0ffba50a66525ab470b0_cgraph.svg" width="983" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aee157565d728de693218da48114b5923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee157565d728de693218da48114b5923">&#9670;&nbsp;</a></span>CSP_get_packet_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CSP_get_packet_len </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Length を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Packet Length </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00250">250</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aee157565d728de693218da48114b5923_cgraph.svg" width="1138" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aee157565d728de693218da48114b5923_icgraph.svg" width="1816" height="1915"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a05169fb3461910d6b5b13a59a0026455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05169fb3461910d6b5b13a59a0026455">&#9670;&nbsp;</a></span>CSP_get_param_head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* CSP_get_param_head </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コマンドパラメタの先頭ポインタを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>*param_head </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00268">268</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a05169fb3461910d6b5b13a59a0026455_icgraph.svg" width="684" height="2651"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad01de2632e93794f7c77749eb788ad74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01de2632e93794f7c77749eb788ad74">&#9670;&nbsp;</a></span>CSP_get_param_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CSP_get_param_len </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Param Length を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Param Length </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00274">274</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ad01de2632e93794f7c77749eb788ad74_cgraph.svg" width="1336" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ad01de2632e93794f7c77749eb788ad74_icgraph.svg" width="1938" height="1736"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a90e2509217389789020ffc2752b507e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e2509217389789020ffc2752b507e1">&#9670;&nbsp;</a></span>CSP_get_seq_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CSP_get_seq_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Count を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Sequence Count </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00088">88</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a90e2509217389789020ffc2752b507e1_cgraph.svg" width="903" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1bbed90bf863924737a0e086cb1c1aae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbed90bf863924737a0e086cb1c1aae">&#9670;&nbsp;</a></span>CSP_get_seq_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> CSP_get_seq_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Flag を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_SEQ_FLAG </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a1bbed90bf863924737a0e086cb1c1aae_cgraph.svg" width="879" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a1bbed90bf863924737a0e086cb1c1aae_icgraph.svg" width="3090" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8d726fa3f96fbe2be1a779719445b528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d726fa3f96fbe2be1a779719445b528">&#9670;&nbsp;</a></span>CSP_get_ti()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> CSP_get_ti </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time Indicator (TI) を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TI </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00231">231</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a8d726fa3f96fbe2be1a779719445b528_cgraph.svg" width="659" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a8d726fa3f96fbe2be1a779719445b528_icgraph.svg" width="3383" height="724"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9d98754d83e7ffd60017fc2d07ecd934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d98754d83e7ffd60017fc2d07ecd934">&#9670;&nbsp;</a></span>CSP_get_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a> CSP_get_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Type を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_TYPE </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00040">40</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a9d98754d83e7ffd60017fc2d07ecd934_cgraph.svg" width="830" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a9d98754d83e7ffd60017fc2d07ecd934_icgraph.svg" width="3064" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0d2d461de4efec9e6ee75367b00c79da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2d461de4efec9e6ee75367b00c79da">&#9670;&nbsp;</a></span>CSP_get_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a> CSP_get_ver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version No を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_VER </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a0d2d461de4efec9e6ee75367b00c79da_cgraph.svg" width="814" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a0d2d461de4efec9e6ee75367b00c79da_icgraph.svg" width="3056" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a33b732036a8d1c3a212769b1c18e280f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b732036a8d1c3a212769b1c18e280f">&#9670;&nbsp;</a></span>CSP_set_2nd_hdr_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_2nd_hdr_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Flag を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>SP_2ND_HDR_FLAG </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00058">58</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a33b732036a8d1c3a212769b1c18e280f_cgraph.svg" width="907" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a33b732036a8d1c3a212769b1c18e280f_icgraph.svg" width="2564" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac5e8d588a3737dc6c6d65defd0ef04bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e8d588a3737dc6c6d65defd0ef04bd">&#9670;&nbsp;</a></span>CSP_set_2nd_hdr_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_2nd_hdr_ver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cmd__space__packet_8h.html#aec9cfca96093fc2786ef4b80e7a69046">CSP_2ND_HDR_VER</a>&#160;</td>
+          <td class="paramname"><em>ver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Version No を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>CSP_2ND_HDR_VER </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00134">134</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ac5e8d588a3737dc6c6d65defd0ef04bd_cgraph.svg" width="702" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ac5e8d588a3737dc6c6d65defd0ef04bd_icgraph.svg" width="2562" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae4cd4ddfdcc558b8c205240147b6f4af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cd4ddfdcc558b8c205240147b6f4af">&#9670;&nbsp;</a></span>CSP_set_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_apid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td>
+          <td class="paramname"><em>apid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APID を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">apid</td><td>APID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00070">70</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ae4cd4ddfdcc558b8c205240147b6f4af_cgraph.svg" width="798" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ae4cd4ddfdcc558b8c205240147b6f4af_icgraph.svg" width="2271" height="910"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a80ab9fe9f6561b18ef7b5a11ea0005b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ab9fe9f6561b18ef7b5a11ea0005b4">&#9670;&nbsp;</a></span>CSP_set_cmd_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_cmd_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Command ID を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Command ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00165">165</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a80ab9fe9f6561b18ef7b5a11ea0005b4_cgraph.svg" width="668" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a80ab9fe9f6561b18ef7b5a11ea0005b4_icgraph.svg" width="2242" height="1015"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aff5958581af82bafc57755aca719dfb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5958581af82bafc57755aca719dfb0">&#9670;&nbsp;</a></span>CSP_set_cmd_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_cmd_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cmd__space__packet_8h.html#a4a01896f873027e9247540e9fea7d08b">CSP_CMD_TYPE</a>&#160;</td>
+          <td class="paramname"><em>cmd_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Command Type を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_type</td><td>CSP_CMD_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00149">149</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aff5958581af82bafc57755aca719dfb0_cgraph.svg" width="686" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aff5958581af82bafc57755aca719dfb0_icgraph.svg" width="2546" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa4f250d0b768ce918101f7959940b9da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f250d0b768ce918101f7959940b9da">&#9670;&nbsp;</a></span>CSP_set_common_hdr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_common_hdr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>共通部分の Header を構築 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00293">293</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aa4f250d0b768ce918101f7959940b9da_cgraph.svg" width="1128" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aa4f250d0b768ce918101f7959940b9da_icgraph.svg" width="2352" height="1015"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4083ff1a9dbe5894cfacf756d02a50a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4083ff1a9dbe5894cfacf756d02a50a4">&#9670;&nbsp;</a></span>CSP_set_dest_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_dest_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10f">CCP_DEST_TYPE</a>&#160;</td>
+          <td class="paramname"><em>dest_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destination Type を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dest_type</td><td>CCP_DEST_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00193">193</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a4083ff1a9dbe5894cfacf756d02a50a4_cgraph.svg" width="686" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a4083ff1a9dbe5894cfacf756d02a50a4_icgraph.svg" width="2311" height="1015"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a031c095293173f7bc0fa4a97852b7060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031c095293173f7bc0fa4a97852b7060">&#9670;&nbsp;</a></span>CSP_set_exec_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_exec_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960fa">CCP_EXEC_TYPE</a>&#160;</td>
+          <td class="paramname"><em>exec_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execution Type を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">exec_type</td><td>CCP_EXEC_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00224">224</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a031c095293173f7bc0fa4a97852b7060_cgraph.svg" width="687" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a031c095293173f7bc0fa4a97852b7060_icgraph.svg" width="2007" height="1299"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a519fddb09974525707a614b62ff92105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519fddb09974525707a614b62ff92105">&#9670;&nbsp;</a></span>CSP_set_packet_data_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_packet_data_len </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Data Length を設定 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>Packet Data Length とは PACKET DATA FIELD 長であり，PRIMARY HEADER を含まない， 0 起算の長さ ( <a href="https://public.ccsds.org/Pubs/133x0b2e1.pdf">https://public.ccsds.org/Pubs/133x0b2e1.pdf</a> ) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Packet Data Length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00106">106</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a519fddb09974525707a614b62ff92105_cgraph.svg" width="954" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2153513c0ca9c5975c81ddb1094242dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2153513c0ca9c5975c81ddb1094242dd">&#9670;&nbsp;</a></span>CSP_set_packet_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_packet_len </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Length を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Packet Length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00256">256</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a2153513c0ca9c5975c81ddb1094242dd_cgraph.svg" width="1108" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a2153513c0ca9c5975c81ddb1094242dd_icgraph.svg" width="2464" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aebe0c42d5d5b6443c55709890b6ad093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe0c42d5d5b6443c55709890b6ad093">&#9670;&nbsp;</a></span>CSP_set_param()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_param </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コマンドパラメタを設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>パラメタ配列のポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>パラメタ長 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00280">280</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aebe0c42d5d5b6443c55709890b6ad093_cgraph.svg" width="1279" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_aebe0c42d5d5b6443c55709890b6ad093_icgraph.svg" width="2266" height="1015"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad7ef5d2e5412c86b9782acb544bd5078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ef5d2e5412c86b9782acb544bd5078">&#9670;&nbsp;</a></span>CSP_set_seq_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_seq_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Count を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>Sequence Count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00094">94</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ad7ef5d2e5412c86b9782acb544bd5078_cgraph.svg" width="874" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_ad7ef5d2e5412c86b9782acb544bd5078_icgraph.svg" width="2547" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6b0b87dd65e759d3e3832e403ea6ed54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0b87dd65e759d3e3832e403ea6ed54">&#9670;&nbsp;</a></span>CSP_set_seq_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_seq_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Flag を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>SP_SEQ_FLAG </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a6b0b87dd65e759d3e3832e403ea6ed54_cgraph.svg" width="850" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a6b0b87dd65e759d3e3832e403ea6ed54_icgraph.svg" width="2535" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3b7cf4c50d51882d730ad25b754259fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7cf4c50d51882d730ad25b754259fd">&#9670;&nbsp;</a></span>CSP_set_ti()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_ti </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>ti</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time Indicator (TI) を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ti</td><td>TI </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00240">240</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a3b7cf4c50d51882d730ad25b754259fd_cgraph.svg" width="631" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a3b7cf4c50d51882d730ad25b754259fd_icgraph.svg" width="1894" height="1299"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5188604c87906538891ce687cecbb0d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5188604c87906538891ce687cecbb0d7">&#9670;&nbsp;</a></span>CSP_set_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Type を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>SP_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00046">46</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a5188604c87906538891ce687cecbb0d7_cgraph.svg" width="800" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a5188604c87906538891ce687cecbb0d7_icgraph.svg" width="2511" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a25773dc83ed038765c53de8ac56677b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25773dc83ed038765c53de8ac56677b5">&#9670;&nbsp;</a></span>CSP_set_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSP_set_ver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>csp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a>&#160;</td>
+          <td class="paramname"><em>ver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version No を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">csp</td><td><a class="el" href="struct_cmd_space_packet.html" title="Space Packet (コマンド用)">CmdSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ver</td><td>SP_VER </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a25773dc83ed038765c53de8ac56677b5_cgraph.svg" width="784" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cmd__space__packet_8c_a25773dc83ed038765c53de8ac56677b5_icgraph.svg" width="2503" height="1003"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a77cf4e5cb876ed56cad47bca0dee15db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cf4e5cb876ed56cad47bca0dee15db">&#9670;&nbsp;</a></span>CSP_pei_2nd_hdr_ver_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a> CSP_pei_2nd_hdr_ver_ = { 6, 0xff, 0, 1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a38f964b2af237a9fc67a9636cdd3c8bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f964b2af237a9fc67a9636cdd3c8bc">&#9670;&nbsp;</a></span>CSP_pei_cmd_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a> CSP_pei_cmd_id_ = { 8, 0xff, 0, 2}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a77d194d86d99652353ef106cfe9555e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d194d86d99652353ef106cfe9555e2">&#9670;&nbsp;</a></span>CSP_pei_cmd_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a> CSP_pei_cmd_type_ = { 7, 0xff, 0, 1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00017">17</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3052f3196432b85c70f27420a13a9525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3052f3196432b85c70f27420a13a9525">&#9670;&nbsp;</a></span>CSP_pei_dest_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a> CSP_pei_dest_type_ = {10, 0xf0, 4, 1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6289a418c08f77a8fdd28774d5762db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6289a418c08f77a8fdd28774d5762db6">&#9670;&nbsp;</a></span>CSP_pei_exec_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a> CSP_pei_exec_type_ = {10, 0x0f, 0, 1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1a159d913ed183e1076932f3d7bba52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a159d913ed183e1076932f3d7bba52e">&#9670;&nbsp;</a></span>CSP_pei_ti_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a> CSP_pei_ti_ = {11, 0xff, 0, 4}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="cmd__space__packet_8c_source.html">cmd_space_packet.c</a> の <a class="el" href="cmd__space__packet_8c_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_43c499926d30da83a4105ced0951a3ae.html">TlmCmd</a></li><li class="navelem"><a class="el" href="dir_65c4a3a645d640a6a1bd0ea47afea00a.html">Ccsds</a></li><li class="navelem"><a class="el" href="cmd__space__packet_8c.html">cmd_space_packet.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

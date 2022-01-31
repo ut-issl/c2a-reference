@@ -9,9 +9,6 @@ var memory__dump_8h =
       [ "MEM_NO_DATA", "memory__dump_8h.html#ad5c3514bd9bd3c72f5c5e3fec800afbca01346ccb50690ff23224fd6e01ab075b", null ]
     ] ],
     [ "Cmd_MEM_COPY_REGION_SEQ", "memory__dump_8h.html#a091948b61aeda7665e7289e2e5b898fd", null ],
-    [ "Cmd_MEM_DUMP_REGION_RND", "memory__dump_8h.html#a285fc1361ecbcf40d806d1c5812e5f66", null ],
-    [ "Cmd_MEM_DUMP_REGION_SEQ", "memory__dump_8h.html#ad8f132778fc4676c105deb63cdd77043", null ],
-    [ "Cmd_MEM_DUMP_SINGLE", "memory__dump_8h.html#af3f5f8cd60e558ba0915b24d426c585b", null ],
     [ "Cmd_MEM_LOAD", "memory__dump_8h.html#ae3e3cfa50c20e9f5c19a411bfe31d348", null ],
     [ "Cmd_MEM_SET_DESTINATION", "memory__dump_8h.html#a25bf5ddf1b240f1356d1d505b811170a", null ],
     [ "Cmd_MEM_SET_REGION", "memory__dump_8h.html#a8de01917559c180fe5c18f396133139b", null ],

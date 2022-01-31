@@ -89,18 +89,19 @@ $(document).ready(function(){initNavTree('common__tlm__packet__define_8h_source.
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef COMMON_TLM_PACKET_DEFINE_H_</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define COMMON_TLM_PACKET_DEFINE_H_</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_t_c_packet_8h.html">src_core/TlmCmd/Ccsds/TCPacket.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="space__packet__typedef_8h.html">src_core/TlmCmd/Ccsds/space_packet_typedef.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// CommonTlmPacket として TCP をつかう</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// FIXME: TlmSpacePacket に差し替える</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">   12</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_t_c_p.html">TCP</a> <a class="code" href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">CommonTlmPacket</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// CommonTlmPacket として TlmSpacePacket をつかう</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">   11</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_tlm_space_packet.html">TlmSpacePacket</a> <a class="code" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="common__tlm__packet__define_8h.html#a5b0460a59bf2e29aaf2abcc82b925e92">   13</a></span>&#160;<span class="preprocessor">#define CTP_MAX_LEN (TSP_MAX_LEN)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="acommon__tlm__packet__define_8h_html_a2982fbd53ea916cb712bf182f2a1da13"><div class="ttname"><a href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">CommonTlmPacket</a></div><div class="ttdeci">TCP CommonTlmPacket</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__packet__define_8h_source.html#l00012">common_tlm_packet_define.h:12</a></div></div>
-<div class="ttc" id="a_t_c_packet_8h_html"><div class="ttname"><a href="_t_c_packet_8h.html">TCPacket.h</a></div></div>
-<div class="ttc" id="astruct_t_c_p_html"><div class="ttname"><a href="struct_t_c_p.html">TCP</a></div><div class="ttdoc">TCPacket or Space Packet</div><div class="ttdef"><b>Definition:</b> <a href="_t_c_packet_8h_source.html#l00026">TCPacket.h:26</a></div></div>
+<div class="ttc" id="aspace__packet__typedef_8h_html"><div class="ttname"><a href="space__packet__typedef_8h.html">space_packet_typedef.h</a></div><div class="ttdoc">SpacePacket 類 と CommonTlmCmdPacket 類が相互参照するのを回避するためのヘッダ</div></div>
+<div class="ttc" id="acommon__tlm__packet__define_8h_html_ac007d9dcab1a77b680cad3ddb654dabc"><div class="ttname"><a href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a></div><div class="ttdeci">TlmSpacePacket CommonTlmPacket</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__packet__define_8h_source.html#l00011">common_tlm_packet_define.h:11</a></div></div>
+<div class="ttc" id="astruct_tlm_space_packet_html"><div class="ttname"><a href="struct_tlm_space_packet.html">TlmSpacePacket</a></div><div class="ttdoc">Space Packet (テレメ用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00040">space_packet_typedef.h:40</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

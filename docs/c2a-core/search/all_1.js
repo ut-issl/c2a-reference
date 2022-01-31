@@ -163,5 +163,6 @@ var searchData=
   ['buffer_5fnum_344',['buffer_num',['../struct_c_c_s_d_s___info.html#a5366bcbe8894b6c2aea986fc7c1c6b2a',1,'CCSDS_Info']]],
   ['build_5fsettings_2eh_345',['build_settings.h',['../build__settings_8h.html',1,'']]],
   ['build_5fsettings_5fauto_5ffpga_5freset_346',['BUILD_SETTINGS_AUTO_FPGA_RESET',['../build__settings_8h.html#a238561977823b1ab093a0c6a7065fbb3',1,'build_settings.h']]],
-  ['byte_347',['byte',['../struct_c_a___packed_param_size_info.html#a96f44d20f1dbf1c8785a7bc99a46164c',1,'CA_PackedParamSizeInfo']]]
+  ['byte_347',['byte',['../struct_c_a___packed_param_size_info.html#a96f44d20f1dbf1c8785a7bc99a46164c',1,'CA_PackedParamSizeInfo']]],
+  ['byte_5flen_348',['byte_len',['../struct_s_p___param_extraction_info.html#aeb348276c8e89d56a17f41fa673ccb9c',1,'SP_ParamExtractionInfo']]]
 ];

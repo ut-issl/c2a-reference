@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/TlmCmd/Ccsds/space_packet.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('space__packet_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">space_packet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="space__packet_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifndef SPACE_PACKET_H_</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define SPACE_PACKET_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">src_user/Library/stdint.h</a>&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="space__packet__typedef_8h.html">space_packet_typedef.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;../common_tlm_cmd_packet.h&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="space__packet_8h.html#af43ac6b9bce6425aa344697aaacf7d1c">   43</a></span>&#160;<span class="preprocessor">#define SP_PRM_HDR_LEN   (6)   </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">   51</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3dfadc44d17d0be2b5c126c9306ec5665763">   53</a></span>&#160;  <a class="code" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3dfadc44d17d0be2b5c126c9306ec5665763">SP_VER_1</a> = 0,     </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3dfa5364825e9f4b5f8e0808e237db113327">   54</a></span>&#160;  <a class="code" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3dfa5364825e9f4b5f8e0808e237db113327">SP_VER_UNKNOWN</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;} <a class="code" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">   63</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24a0df27e1465c017e65acd42d6c33dc7b4">   65</a></span>&#160;  <a class="code" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24a0df27e1465c017e65acd42d6c33dc7b4">SP_TYPE_TLM</a> = 0,    </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24ac3080376352164418d777c4d499fb93e">   66</a></span>&#160;  <a class="code" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24ac3080376352164418d777c4d499fb93e">SP_TYPE_CMD</a> = 1     </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} <a class="code" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">   75</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872dead694b8027f5145ff93cb3b087cd65817">   77</a></span>&#160;  <a class="code" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872dead694b8027f5145ff93cb3b087cd65817">SP_2ND_HDR_FLAG_ABSENT</a>  = 0,     </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872dea28af6dad1bd30172852c8a5c991aa509">   78</a></span>&#160;  <a class="code" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872dea28af6dad1bd30172852c8a5c991aa509">SP_2ND_HDR_FLAG_PRESENT</a> = 1      </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <a class="code" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">   86</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34a8c56833fb9d4f6d54a16dd144273265f">   88</a></span>&#160;  <a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34a8c56833fb9d4f6d54a16dd144273265f">SP_SEQ_FLAG_CONT</a>   = 0,   </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ab8d49a339d93392f641f6e241d630239">   89</a></span>&#160;  <a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ab8d49a339d93392f641f6e241d630239">SP_SEQ_FLAG_FIRST</a>  = 1,   </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ac6c582d72f4327e6e817c07259ed04db">   90</a></span>&#160;  <a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ac6c582d72f4327e6e817c07259ed04db">SP_SEQ_FLAG_LAST</a>   = 2,   </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ae48c9db29167ab835bed7ea27dc102eb">   91</a></span>&#160;  <a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ae48c9db29167ab835bed7ea27dc102eb">SP_SEQ_FLAG_SINGLE</a> = 3    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="struct_s_p___param_extraction_info.html">   98</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="struct_s_p___param_extraction_info.html#a0e0dffc35aa86c3f381de2b41070f9ea">  100</a></span>&#160;  <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="struct_s_p___param_extraction_info.html#a0e0dffc35aa86c3f381de2b41070f9ea">pos</a>;       </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="struct_s_p___param_extraction_info.html#a8a74907784be6c7786c2d060c8d7e10b">  101</a></span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  <a class="code" href="struct_s_p___param_extraction_info.html#a8a74907784be6c7786c2d060c8d7e10b">mask</a>;      </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="struct_s_p___param_extraction_info.html#aa9fff43968831437a312428836cab362">  102</a></span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  <a class="code" href="struct_s_p___param_extraction_info.html#aa9fff43968831437a312428836cab362">offset</a>;    </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="struct_s_p___param_extraction_info.html#aeb348276c8e89d56a17f41fa673ccb9c">  103</a></span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  <a class="code" href="struct_s_p___param_extraction_info.html#aeb348276c8e89d56a17f41fa673ccb9c">byte_len</a>;  </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;} <a class="code" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">// ******************************</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">//  Primary Header getter/setter</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">// ******************************</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<a class="code" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a> <a class="code" href="space__packet_8h.html#aee4ffb3ab47e00e0b7c313e7131f9e4d">SP_get_ver</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#a66df39f39c177fae374912fb1eaae377">SP_set_ver</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a> ver);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<a class="code" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a> <a class="code" href="space__packet_8h.html#afe6f1d2cc9ff61e0f01a938d1807071a">SP_get_type</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#ad7ea8fd9875d2c0d682f2deb16a481e1">SP_set_type</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a> type);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<a class="code" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a> <a class="code" href="space__packet_8h.html#a19650fdd9300291e63c6087804f04e5c">SP_get_2nd_hdr_flag</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#aa8abca9ee84afbb20102452e81e48b5b">SP_set_2nd_hdr_flag</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a> flag);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> <a class="code" href="space__packet_8h.html#a9be42b696c56f6a99d7170a69a03650b">SP_get_apid</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#afa5b380432a9ac74e3e8ed05dbcb2d5b">SP_set_apid</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> <a class="code" href="space__packet_8h.html#a5b7f0c8611f16fec8fb14de695db4c7d">SP_get_seq_flag</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#a87c32edde9091b947e50ed99e16e6310">SP_set_seq_flag</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> flag);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="space__packet_8h.html#a1d6ae957a4e36f16d146275a580e510e">SP_get_seq_count</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#a89427fc91a39c1d05b8bc03135d4b9a1">SP_set_seq_count</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> count);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="space__packet_8h.html#ad5dd44fdb4e6c00e7dbb311d3aaee3d3">SP_get_packet_data_len</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#a03e63eb8f8570b389b15eb44c5071af9">SP_set_packet_data_len</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">// ******************</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">//  Utility Function</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">// ******************</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code" href="space__packet_8h.html#a25afed909fb67da49f5ac9921a23744f">SP_get_packet_len</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#addad7908c3c2db6b1ab2546971373bb7">SP_set_packet_len</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp, <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#af2e7ada2c7544c10e11bb9c7473485fa">SP_copy_packet</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* dest, <span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* src);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#a300c7fc3dea91319b0fa2f039f27d5eb">SP_extract_param_from_packet</a>(<span class="keyword">const</span> <a class="code" href="struct_space_packet.html">SpacePacket</a>* sp,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>* pei,</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                                  <span class="keywordtype">void</span>* dst);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keywordtype">void</span> <a class="code" href="space__packet_8h.html#a9d4e5051b01d74f88ee13ce05f61b392">SP_insert_param_to_packet</a>(<a class="code" href="struct_space_packet.html">SpacePacket</a>* sp,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                               <span class="keyword">const</span> <a class="code" href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a>* pei,</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                               <span class="keyword">const</span> <span class="keywordtype">void</span>* src);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aspace__packet_8h_html_a813829df0a8d8f66bfe097e160f77f34ab8d49a339d93392f641f6e241d630239"><div class="ttname"><a href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ab8d49a339d93392f641f6e241d630239">SP_SEQ_FLAG_FIRST</a></div><div class="ttdeci">@ SP_SEQ_FLAG_FIRST</div><div class="ttdoc">01b: First component of higher data structure</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00089">space_packet.h:89</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="astruct_s_p___param_extraction_info_html"><div class="ttname"><a href="struct_s_p___param_extraction_info.html">SP_ParamExtractionInfo</a></div><div class="ttdoc">packet からデータを抜き取るときのパラメタ</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00098">space_packet.h:98</a></div></div>
+<div class="ttc" id="astruct_s_p___param_extraction_info_html_aeb348276c8e89d56a17f41fa673ccb9c"><div class="ttname"><a href="struct_s_p___param_extraction_info.html#aeb348276c8e89d56a17f41fa673ccb9c">SP_ParamExtractionInfo::byte_len</a></div><div class="ttdeci">uint8_t byte_len</div><div class="ttdoc">パケット octet 列の何 byte にわたるか．最大 8 (64bit)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00103">space_packet.h:103</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a19650fdd9300291e63c6087804f04e5c"><div class="ttname"><a href="space__packet_8h.html#a19650fdd9300291e63c6087804f04e5c">SP_get_2nd_hdr_flag</a></div><div class="ttdeci">SP_2ND_HDR_FLAG SP_get_2nd_hdr_flag(const SpacePacket *sp)</div><div class="ttdoc">Secondary Header Flag を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00066">space_packet.c:66</a></div></div>
+<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00019">stdint.h:19</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a62b8d1e5e63f8721cea7139100b872de"><div class="ttname"><a href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a></div><div class="ttdeci">SP_2ND_HDR_FLAG</div><div class="ttdoc">Space Packet Secandary Header Flag</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00075">space_packet.h:75</a></div></div>
+<div class="ttc" id="astruct_space_packet_html"><div class="ttname"><a href="struct_space_packet.html">SpacePacket</a></div><div class="ttdoc">Space Packet</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00029">space_packet_typedef.h:29</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a813829df0a8d8f66bfe097e160f77f34ae48c9db29167ab835bed7ea27dc102eb"><div class="ttname"><a href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ae48c9db29167ab835bed7ea27dc102eb">SP_SEQ_FLAG_SINGLE</a></div><div class="ttdeci">@ SP_SEQ_FLAG_SINGLE</div><div class="ttdoc">11b: Standalone packet</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00091">space_packet.h:91</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a813829df0a8d8f66bfe097e160f77f34a8c56833fb9d4f6d54a16dd144273265f"><div class="ttname"><a href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34a8c56833fb9d4f6d54a16dd144273265f">SP_SEQ_FLAG_CONT</a></div><div class="ttdeci">@ SP_SEQ_FLAG_CONT</div><div class="ttdoc">00b: Continuation component of higher data structure</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00088">space_packet.h:88</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_afa5b380432a9ac74e3e8ed05dbcb2d5b"><div class="ttname"><a href="space__packet_8h.html#afa5b380432a9ac74e3e8ed05dbcb2d5b">SP_set_apid</a></div><div class="ttdeci">void SP_set_apid(SpacePacket *sp, APID apid)</div><div class="ttdoc">APID を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00106">space_packet.c:106</a></div></div>
+<div class="ttc" id="aspace__packet__typedef_8h_html"><div class="ttname"><a href="space__packet__typedef_8h.html">space_packet_typedef.h</a></div><div class="ttdoc">SpacePacket 類 と CommonTlmCmdPacket 類が相互参照するのを回避するためのヘッダ</div></div>
+<div class="ttc" id="aspace__packet_8h_html_a813829df0a8d8f66bfe097e160f77f34"><div class="ttname"><a href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a></div><div class="ttdeci">SP_SEQ_FLAG</div><div class="ttdoc">Space Packet Sequence Flag</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00086">space_packet.h:86</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a813829df0a8d8f66bfe097e160f77f34ac6c582d72f4327e6e817c07259ed04db"><div class="ttname"><a href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34ac6c582d72f4327e6e817c07259ed04db">SP_SEQ_FLAG_LAST</a></div><div class="ttdeci">@ SP_SEQ_FLAG_LAST</div><div class="ttdoc">10b: Last component of higher data structure</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00090">space_packet.h:90</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a89427fc91a39c1d05b8bc03135d4b9a1"><div class="ttname"><a href="space__packet_8h.html#a89427fc91a39c1d05b8bc03135d4b9a1">SP_set_seq_count</a></div><div class="ttdeci">void SP_set_seq_count(SpacePacket *sp, uint16_t count)</div><div class="ttdoc">Sequence Count を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00138">space_packet.c:138</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_ad7ea8fd9875d2c0d682f2deb16a481e1"><div class="ttname"><a href="space__packet_8h.html#ad7ea8fd9875d2c0d682f2deb16a481e1">SP_set_type</a></div><div class="ttdeci">void SP_set_type(SpacePacket *sp, SP_TYPE type)</div><div class="ttdoc">Packet Type を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00059">space_packet.c:59</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a25afed909fb67da49f5ac9921a23744f"><div class="ttname"><a href="space__packet_8h.html#a25afed909fb67da49f5ac9921a23744f">SP_get_packet_len</a></div><div class="ttdeci">uint16_t SP_get_packet_len(const SpacePacket *sp)</div><div class="ttdoc">Packet Length を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00168">space_packet.c:168</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a5b7f0c8611f16fec8fb14de695db4c7d"><div class="ttname"><a href="space__packet_8h.html#a5b7f0c8611f16fec8fb14de695db4c7d">SP_get_seq_flag</a></div><div class="ttdeci">SP_SEQ_FLAG SP_get_seq_flag(const SpacePacket *sp)</div><div class="ttdoc">Sequence Flag を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00113">space_packet.c:113</a></div></div>
+<div class="ttc" id="astruct_s_p___param_extraction_info_html_aa9fff43968831437a312428836cab362"><div class="ttname"><a href="struct_s_p___param_extraction_info.html#aa9fff43968831437a312428836cab362">SP_ParamExtractionInfo::offset</a></div><div class="ttdeci">uint8_t offset</div><div class="ttdoc">bit offset （bit が左シフトされて格納されている場合）</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00102">space_packet.h:102</a></div></div>
+<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_aa8abca9ee84afbb20102452e81e48b5b"><div class="ttname"><a href="space__packet_8h.html#aa8abca9ee84afbb20102452e81e48b5b">SP_set_2nd_hdr_flag</a></div><div class="ttdeci">void SP_set_2nd_hdr_flag(SpacePacket *sp, SP_2ND_HDR_FLAG flag)</div><div class="ttdoc">Secondary Header Flag を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00075">space_packet.c:75</a></div></div>
+<div class="ttc" id="astruct_s_p___param_extraction_info_html_a8a74907784be6c7786c2d060c8d7e10b"><div class="ttname"><a href="struct_s_p___param_extraction_info.html#a8a74907784be6c7786c2d060c8d7e10b">SP_ParamExtractionInfo::mask</a></div><div class="ttdeci">uint8_t mask</div><div class="ttdoc">1 byte 目にあてるマスク</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00101">space_packet.h:101</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_ad5dd44fdb4e6c00e7dbb311d3aaee3d3"><div class="ttname"><a href="space__packet_8h.html#ad5dd44fdb4e6c00e7dbb311d3aaee3d3">SP_get_packet_data_len</a></div><div class="ttdeci">uint16_t SP_get_packet_data_len(const SpacePacket *sp)</div><div class="ttdoc">Packet Data Length を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00144">space_packet.c:144</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a4896b87ed0baeecdeff61b1c534aec24"><div class="ttname"><a href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a></div><div class="ttdeci">SP_TYPE</div><div class="ttdoc">Space Packet Type</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00063">space_packet.h:63</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a1d6ae957a4e36f16d146275a580e510e"><div class="ttname"><a href="space__packet_8h.html#a1d6ae957a4e36f16d146275a580e510e">SP_get_seq_count</a></div><div class="ttdeci">uint16_t SP_get_seq_count(const SpacePacket *sp)</div><div class="ttdoc">Sequence Count を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00129">space_packet.c:129</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_aee4ffb3ab47e00e0b7c313e7131f9e4d"><div class="ttname"><a href="space__packet_8h.html#aee4ffb3ab47e00e0b7c313e7131f9e4d">SP_get_ver</a></div><div class="ttdeci">SP_VER SP_get_ver(const SpacePacket *sp)</div><div class="ttdoc">Version No を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00025">space_packet.c:25</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_af2e7ada2c7544c10e11bb9c7473485fa"><div class="ttname"><a href="space__packet_8h.html#af2e7ada2c7544c10e11bb9c7473485fa">SP_copy_packet</a></div><div class="ttdeci">void SP_copy_packet(SpacePacket *dest, const SpacePacket *src)</div><div class="ttdoc">SpacePacket をコピー</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00181">space_packet.c:181</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a87c32edde9091b947e50ed99e16e6310"><div class="ttname"><a href="space__packet_8h.html#a87c32edde9091b947e50ed99e16e6310">SP_set_seq_flag</a></div><div class="ttdeci">void SP_set_seq_flag(SpacePacket *sp, SP_SEQ_FLAG flag)</div><div class="ttdoc">Sequence Flag を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00122">space_packet.c:122</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a300c7fc3dea91319b0fa2f039f27d5eb"><div class="ttname"><a href="space__packet_8h.html#a300c7fc3dea91319b0fa2f039f27d5eb">SP_extract_param_from_packet</a></div><div class="ttdeci">void SP_extract_param_from_packet(const SpacePacket *sp, const SP_ParamExtractionInfo *pei, void *dst)</div><div class="ttdoc">packet に格納された param を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00187">space_packet.c:187</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_acd8845142724bb0fd95fd3e89960a3dfadc44d17d0be2b5c126c9306ec5665763"><div class="ttname"><a href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3dfadc44d17d0be2b5c126c9306ec5665763">SP_VER_1</a></div><div class="ttdeci">@ SP_VER_1</div><div class="ttdoc">000b: Version-1</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00053">space_packet.h:53</a></div></div>
+<div class="ttc" id="astruct_s_p___param_extraction_info_html_a0e0dffc35aa86c3f381de2b41070f9ea"><div class="ttname"><a href="struct_s_p___param_extraction_info.html#a0e0dffc35aa86c3f381de2b41070f9ea">SP_ParamExtractionInfo::pos</a></div><div class="ttdeci">uint16_t pos</div><div class="ttdoc">位置</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00100">space_packet.h:100</a></div></div>
+<div class="ttc" id="aapid__define_8h_html_ae86084e0da0f3d82d3572285760217ac"><div class="ttname"><a href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a></div><div class="ttdeci">APID</div><div class="ttdoc">Application Process ID</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8h_source.html#l00014">apid_define.h:14</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a62b8d1e5e63f8721cea7139100b872dead694b8027f5145ff93cb3b087cd65817"><div class="ttname"><a href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872dead694b8027f5145ff93cb3b087cd65817">SP_2ND_HDR_FLAG_ABSENT</a></div><div class="ttdeci">@ SP_2ND_HDR_FLAG_ABSENT</div><div class="ttdoc">0b: Secondary Header Absent</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00077">space_packet.h:77</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a4896b87ed0baeecdeff61b1c534aec24ac3080376352164418d777c4d499fb93e"><div class="ttname"><a href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24ac3080376352164418d777c4d499fb93e">SP_TYPE_CMD</a></div><div class="ttdeci">@ SP_TYPE_CMD</div><div class="ttdoc">1b: COMMAND</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00066">space_packet.h:66</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a03e63eb8f8570b389b15eb44c5071af9"><div class="ttname"><a href="space__packet_8h.html#a03e63eb8f8570b389b15eb44c5071af9">SP_set_packet_data_len</a></div><div class="ttdeci">void SP_set_packet_data_len(SpacePacket *sp, uint16_t len)</div><div class="ttdoc">Packet Data Length を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00154">space_packet.c:154</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a66df39f39c177fae374912fb1eaae377"><div class="ttname"><a href="space__packet_8h.html#a66df39f39c177fae374912fb1eaae377">SP_set_ver</a></div><div class="ttdeci">void SP_set_ver(SpacePacket *sp, SP_VER ver)</div><div class="ttdoc">Version No を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00043">space_packet.c:43</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a9be42b696c56f6a99d7170a69a03650b"><div class="ttname"><a href="space__packet_8h.html#a9be42b696c56f6a99d7170a69a03650b">SP_get_apid</a></div><div class="ttdeci">APID SP_get_apid(const SpacePacket *sp)</div><div class="ttdoc">APID を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00082">space_packet.c:82</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_acd8845142724bb0fd95fd3e89960a3dfa5364825e9f4b5f8e0808e237db113327"><div class="ttname"><a href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3dfa5364825e9f4b5f8e0808e237db113327">SP_VER_UNKNOWN</a></div><div class="ttdeci">@ SP_VER_UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00054">space_packet.h:54</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_acd8845142724bb0fd95fd3e89960a3df"><div class="ttname"><a href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a></div><div class="ttdeci">SP_VER</div><div class="ttdoc">Space Packet Version Number</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00051">space_packet.h:51</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a62b8d1e5e63f8721cea7139100b872dea28af6dad1bd30172852c8a5c991aa509"><div class="ttname"><a href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872dea28af6dad1bd30172852c8a5c991aa509">SP_2ND_HDR_FLAG_PRESENT</a></div><div class="ttdeci">@ SP_2ND_HDR_FLAG_PRESENT</div><div class="ttdoc">1b: Secondary Header Present</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00078">space_packet.h:78</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_addad7908c3c2db6b1ab2546971373bb7"><div class="ttname"><a href="space__packet_8h.html#addad7908c3c2db6b1ab2546971373bb7">SP_set_packet_len</a></div><div class="ttdeci">void SP_set_packet_len(SpacePacket *sp, uint16_t len)</div><div class="ttdoc">Packet Length を設定</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00174">space_packet.c:174</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a9d4e5051b01d74f88ee13ce05f61b392"><div class="ttname"><a href="space__packet_8h.html#a9d4e5051b01d74f88ee13ce05f61b392">SP_insert_param_to_packet</a></div><div class="ttdeci">void SP_insert_param_to_packet(SpacePacket *sp, const SP_ParamExtractionInfo *pei, const void *src)</div><div class="ttdoc">packet に param を格納</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00223">space_packet.c:223</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_a4896b87ed0baeecdeff61b1c534aec24a0df27e1465c017e65acd42d6c33dc7b4"><div class="ttname"><a href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24a0df27e1465c017e65acd42d6c33dc7b4">SP_TYPE_TLM</a></div><div class="ttdeci">@ SP_TYPE_TLM</div><div class="ttdoc">0b: TELEMETRY</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8h_source.html#l00065">space_packet.h:65</a></div></div>
+<div class="ttc" id="aspace__packet_8h_html_afe6f1d2cc9ff61e0f01a938d1807071a"><div class="ttname"><a href="space__packet_8h.html#afe6f1d2cc9ff61e0f01a938d1807071a">SP_get_type</a></div><div class="ttdeci">SP_TYPE SP_get_type(const SpacePacket *sp)</div><div class="ttdoc">Packet Type を取得</div><div class="ttdef"><b>Definition:</b> <a href="space__packet_8c_source.html#l00050">space_packet.c:50</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_43c499926d30da83a4105ced0951a3ae.html">TlmCmd</a></li><li class="navelem"><a class="el" href="dir_65c4a3a645d640a6a1bd0ea47afea00a.html">Ccsds</a></li><li class="navelem"><a class="el" href="space__packet_8h.html">space_packet.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

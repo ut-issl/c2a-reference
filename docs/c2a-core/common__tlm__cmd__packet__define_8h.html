@@ -91,18 +91,17 @@ $(document).ready(function(){initNavTree('common__tlm__cmd__packet__define_8h.ht
 
 <p>CTCP 型の定義  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="_t_c_packet_8h_source.html">src_core/TlmCmd/Ccsds/TCPacket.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="apid__define_8h_source.html">./Ccsds/apid_define.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="space__packet__typedef_8h_source.html">src_core/TlmCmd/Ccsds/space_packet_typedef.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 common_tlm_cmd_packet_define.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__define_8h__incl.svg" width="720" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__define_8h__incl.svg" width="224" height="260"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__define_8h__dep__incl.svg" width="5891" height="751"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__define_8h__dep__incl.svg" width="5635" height="751"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -110,15 +109,13 @@ common_tlm_cmd_packet_define.h の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a1d452a28150006df7656763823713d8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>&#160;&#160;&#160;(<a class="el" href="tcpacket__params_8h.html#a45753fec0e14d3971f481c27ca96fbb9">TCP_MAX_LEN</a>)</td></tr>
+<tr class="memitem:a1d452a28150006df7656763823713d8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>&#160;&#160;&#160;(<a class="el" href="space__packet__typedef_8h.html#aad2a49400aa90edc35c6d26337abb7f0">SP_MAX_LEN</a>)</td></tr>
 <tr class="separator:a1d452a28150006df7656763823713d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aba6e056667e4b41138118f7d1b41cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__define_8h.html#a8aba6e056667e4b41138118f7d1b41cc">CTCP_MY_DST_ID</a>&#160;&#160;&#160;(<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acac905fc26fead98cfebb79b1c0309fa8c">APID_MOBC_CMD</a>)</td></tr>
-<tr class="separator:a8aba6e056667e4b41138118f7d1b41cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 型定義</h2></td></tr>
-<tr class="memitem:af8e966c89a0b8522f51acf4dd224a068"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="struct_t_c_p.html">TCP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a></td></tr>
-<tr class="separator:af8e966c89a0b8522f51acf4dd224a068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e667a6ed26472e50c02d4d0006873dc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="struct_space_packet.html">SpacePacket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a></td></tr>
+<tr class="separator:a4e667a6ed26472e50c02d4d0006873dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>CTCP 型の定義 </p>
@@ -132,45 +129,29 @@ common_tlm_cmd_packet_define.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CTCP_MAX_LEN&#160;&#160;&#160;(<a class="el" href="tcpacket__params_8h.html#a45753fec0e14d3971f481c27ca96fbb9">TCP_MAX_LEN</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet__define_8h_source.html">common_tlm_cmd_packet_define.h</a> の <a class="el" href="common__tlm__cmd__packet__define_8h_source.html#l00016">16</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8aba6e056667e4b41138118f7d1b41cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aba6e056667e4b41138118f7d1b41cc">&#9670;&nbsp;</a></span>CTCP_MY_DST_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CTCP_MY_DST_ID&#160;&#160;&#160;(<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acac905fc26fead98cfebb79b1c0309fa8c">APID_MOBC_CMD</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet__define_8h_source.html">common_tlm_cmd_packet_define.h</a> の <a class="el" href="common__tlm__cmd__packet__define_8h_source.html#l00020">20</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">型定義詳解</h2>
-<a id="af8e966c89a0b8522f51acf4dd224a068"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8e966c89a0b8522f51acf4dd224a068">&#9670;&nbsp;</a></span>CommonTlmCmdPacket</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="struct_t_c_p.html">TCP</a> <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a></td>
+          <td class="memname">#define CTCP_MAX_LEN&#160;&#160;&#160;(<a class="el" href="space__packet__typedef_8h.html#aad2a49400aa90edc35c6d26337abb7f0">SP_MAX_LEN</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="common__tlm__cmd__packet__define_8h_source.html">common_tlm_cmd_packet_define.h</a> の <a class="el" href="common__tlm__cmd__packet__define_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="a4e667a6ed26472e50c02d4d0006873dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e667a6ed26472e50c02d4d0006873dc">&#9670;&nbsp;</a></span>CommonTlmCmdPacket</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="struct_space_packet.html">SpacePacket</a> <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet__define_8h_source.html">common_tlm_cmd_packet_define.h</a> の <a class="el" href="common__tlm__cmd__packet__define_8h_source.html#l00011">11</a> 行目に定義があります。</p>
 
 </div>
 </div>

@@ -20,6 +20,7 @@ var common__cmd__packet_8h =
       [ "CCP_EXEC_TYPE_TL2", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faaf2cbfc2cfd5677442124e5f3735e765f", null ],
       [ "CCP_EXEC_TYPE_UNKNOWN", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faa197995be96c750e6111f86078c978ace", null ]
     ] ],
+    [ "CCP_copy_packet", "common__cmd__packet_8h.html#aff399e79c4a5c9d75552b295de0d3365", null ],
     [ "CCP_get_apid", "common__cmd__packet_8h.html#aa24f85ec65651169c91ab2ad0fad832f", null ],
     [ "CCP_get_dest_type", "common__cmd__packet_8h.html#a120a6ef1fee069ab4c4013da8539e0eb", null ],
     [ "CCP_get_exec_type", "common__cmd__packet_8h.html#a63dd7518abfbd0e6cedf6af2f376d854", null ],

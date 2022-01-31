@@ -91,10 +91,12 @@ $(document).ready(function(){initNavTree('common__tlm__cmd__packet_8c.html','');
 <p>CTCP 関連基本関数の定義  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="common__tlm__cmd__packet_8h_source.html">src_core/TlmCmd/common_tlm_cmd_packet.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="space__packet_8h_source.html">src_core/TlmCmd/Ccsds/space_packet.h</a>&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 common_tlm_cmd_packet.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c__incl.svg" width="1287" height="603"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c__incl.svg" width="1552" height="618"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -102,28 +104,34 @@ common_tlm_cmd_packet.c の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a607aefb8beac36566a817d191bb77fae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a607aefb8beac36566a817d191bb77fae">CTCP_is_valid_packet</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *packet)</td></tr>
+<tr class="memitem:a607aefb8beac36566a817d191bb77fae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a607aefb8beac36566a817d191bb77fae">CTCP_is_valid_packet</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *packet)</td></tr>
 <tr class="memdesc:a607aefb8beac36566a817d191bb77fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">有効なパケットかチェックする  <a href="common__tlm__cmd__packet_8c.html#a607aefb8beac36566a817d191bb77fae">[詳解]</a><br /></td></tr>
 <tr class="separator:a607aefb8beac36566a817d191bb77fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d9338ea5a11fafb41cf5ad00ee16c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a01c31a85c1a0eeb8f6030256238b543c">CTCP_PACKET_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a86d9338ea5a11fafb41cf5ad00ee16c3">CTCP_get_packet_type</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *packet)</td></tr>
+<tr class="memitem:a86d9338ea5a11fafb41cf5ad00ee16c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__cmd__packet_8h.html#a01c31a85c1a0eeb8f6030256238b543c">CTCP_PACKET_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a86d9338ea5a11fafb41cf5ad00ee16c3">CTCP_get_packet_type</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *packet)</td></tr>
 <tr class="memdesc:a86d9338ea5a11fafb41cf5ad00ee16c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">tlm か cmd かを判断  <a href="common__tlm__cmd__packet_8c.html#a86d9338ea5a11fafb41cf5ad00ee16c3">[詳解]</a><br /></td></tr>
 <tr class="separator:a86d9338ea5a11fafb41cf5ad00ee16c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a965276551fd46af0428959d7ad7f5c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a965276551fd46af0428959d7ad7f5c09">CTCP_copy_packet</a> (<a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *dest, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *src)</td></tr>
-<tr class="memdesc:a965276551fd46af0428959d7ad7f5c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">CommonTlmCmdPacket をコピー  <a href="common__tlm__cmd__packet_8c.html#a965276551fd46af0428959d7ad7f5c09">[詳解]</a><br /></td></tr>
-<tr class="separator:a965276551fd46af0428959d7ad7f5c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b5cbc5a345efdd6e9e7d135478b4868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a3b5cbc5a345efdd6e9e7d135478b4868">CTCP_get_packet_len</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *packet)</td></tr>
+<tr class="memitem:a3b5cbc5a345efdd6e9e7d135478b4868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a3b5cbc5a345efdd6e9e7d135478b4868">CTCP_get_packet_len</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *packet)</td></tr>
 <tr class="memdesc:a3b5cbc5a345efdd6e9e7d135478b4868"><td class="mdescLeft">&#160;</td><td class="mdescRight">パケット長を取得  <a href="common__tlm__cmd__packet_8c.html#a3b5cbc5a345efdd6e9e7d135478b4868">[詳解]</a><br /></td></tr>
 <tr class="separator:a3b5cbc5a345efdd6e9e7d135478b4868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c40672d250b1a18b2f130f353659b5a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">CommonTlmPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a1c40672d250b1a18b2f130f353659b5a">CTCP_convert_to_ctp</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *ctcp)</td></tr>
+<tr class="memitem:afad90959c53ac528ef98cd3af76bc2cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#afad90959c53ac528ef98cd3af76bc2cd">CTCP_get_apid</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *packet)</td></tr>
+<tr class="memdesc:afad90959c53ac528ef98cd3af76bc2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を取得  <a href="common__tlm__cmd__packet_8c.html#afad90959c53ac528ef98cd3af76bc2cd">[詳解]</a><br /></td></tr>
+<tr class="separator:afad90959c53ac528ef98cd3af76bc2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca86275d7e62e0580a4e688cddafa4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#aca86275d7e62e0580a4e688cddafa4fd">CTCP_set_apid</a> (<a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *packet, <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid)</td></tr>
+<tr class="memdesc:aca86275d7e62e0580a4e688cddafa4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を設定  <a href="common__tlm__cmd__packet_8c.html#aca86275d7e62e0580a4e688cddafa4fd">[詳解]</a><br /></td></tr>
+<tr class="separator:aca86275d7e62e0580a4e688cddafa4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965276551fd46af0428959d7ad7f5c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a965276551fd46af0428959d7ad7f5c09">CTCP_copy_packet</a> (<a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *dest, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *src)</td></tr>
+<tr class="memdesc:a965276551fd46af0428959d7ad7f5c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">CommonTlmCmdPacket をコピー  <a href="common__tlm__cmd__packet_8c.html#a965276551fd46af0428959d7ad7f5c09">[詳解]</a><br /></td></tr>
+<tr class="separator:a965276551fd46af0428959d7ad7f5c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c40672d250b1a18b2f130f353659b5a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a1c40672d250b1a18b2f130f353659b5a">CTCP_convert_to_ctp</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *ctcp)</td></tr>
 <tr class="memdesc:a1c40672d250b1a18b2f130f353659b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTCP を CTP に変換（キャスト）  <a href="common__tlm__cmd__packet_8c.html#a1c40672d250b1a18b2f130f353659b5a">[詳解]</a><br /></td></tr>
 <tr class="separator:a1c40672d250b1a18b2f130f353659b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce46346fb1a1a4ff18186c5854d22fd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a8ce46346fb1a1a4ff18186c5854d22fd">CTCP_convert_from_ctp</a> (const <a class="el" href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">CommonTlmPacket</a> *ctp)</td></tr>
+<tr class="memitem:a8ce46346fb1a1a4ff18186c5854d22fd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a8ce46346fb1a1a4ff18186c5854d22fd">CTCP_convert_from_ctp</a> (const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *ctp)</td></tr>
 <tr class="memdesc:a8ce46346fb1a1a4ff18186c5854d22fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTP を CTCP に変換（キャスト）  <a href="common__tlm__cmd__packet_8c.html#a8ce46346fb1a1a4ff18186c5854d22fd">[詳解]</a><br /></td></tr>
 <tr class="separator:a8ce46346fb1a1a4ff18186c5854d22fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8da8d74ab0cb68ef9a902267ad27c0a6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a8da8d74ab0cb68ef9a902267ad27c0a6">CTCP_convert_to_ccp</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *ctcp)</td></tr>
+<tr class="memitem:a8da8d74ab0cb68ef9a902267ad27c0a6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#a8da8d74ab0cb68ef9a902267ad27c0a6">CTCP_convert_to_ccp</a> (const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *ctcp)</td></tr>
 <tr class="memdesc:a8da8d74ab0cb68ef9a902267ad27c0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTCP を CCP に変換（キャスト）  <a href="common__tlm__cmd__packet_8c.html#a8da8d74ab0cb68ef9a902267ad27c0a6">[詳解]</a><br /></td></tr>
 <tr class="separator:a8da8d74ab0cb68ef9a902267ad27c0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad97c562faf821493786228448ba144fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#ad97c562faf821493786228448ba144fa">CTCP_convert_from_ccp</a> (const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *ccp)</td></tr>
+<tr class="memitem:ad97c562faf821493786228448ba144fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet_8c.html#ad97c562faf821493786228448ba144fa">CTCP_convert_from_ccp</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *ccp)</td></tr>
 <tr class="memdesc:ad97c562faf821493786228448ba144fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCP を CTCP に変換（キャスト）  <a href="common__tlm__cmd__packet_8c.html#ad97c562faf821493786228448ba144fa">[詳解]</a><br /></td></tr>
 <tr class="separator:ad97c562faf821493786228448ba144fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -144,9 +152,9 @@ CCP: CommonCmdPacket </dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a>* CTCP_convert_from_ccp </td>
+          <td class="memname">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a>* CTCP_convert_from_ccp </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>ccp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -169,7 +177,7 @@ CCP: CommonCmdPacket </dd></dl>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00075">75</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -180,9 +188,9 @@ CCP: CommonCmdPacket </dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a>* CTCP_convert_from_ctp </td>
+          <td class="memname">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a>* CTCP_convert_from_ctp </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
           <td class="paramname"><em>ctp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,7 +213,7 @@ CCP: CommonCmdPacket </dd></dl>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00061">61</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00064">64</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -216,9 +224,9 @@ CCP: CommonCmdPacket </dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="common__cmd__packet__define_8h.html#ab702805ad8211e81791712d89f0deafa">CommonCmdPacket</a>* CTCP_convert_to_ccp </td>
+          <td class="memname">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a>* CTCP_convert_to_ccp </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>ctcp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -241,17 +249,17 @@ CCP: CommonCmdPacket </dd></dl>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00066">66</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00069">69</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a8da8d74ab0cb68ef9a902267ad27c0a6_cgraph.svg" width="547" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a8da8d74ab0cb68ef9a902267ad27c0a6_cgraph.svg" width="1096" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a8da8d74ab0cb68ef9a902267ad27c0a6_icgraph.svg" width="2722" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a8da8d74ab0cb68ef9a902267ad27c0a6_icgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -264,9 +272,9 @@ CCP: CommonCmdPacket </dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="common__tlm__packet__define_8h.html#a2982fbd53ea916cb712bf182f2a1da13">CommonTlmPacket</a>* CTCP_convert_to_ctp </td>
+          <td class="memname">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a>* CTCP_convert_to_ctp </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>ctcp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -289,17 +297,17 @@ CCP: CommonCmdPacket </dd></dl>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00055">55</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00058">58</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a1c40672d250b1a18b2f130f353659b5a_cgraph.svg" width="546" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a1c40672d250b1a18b2f130f353659b5a_cgraph.svg" width="1095" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a1c40672d250b1a18b2f130f353659b5a_icgraph.svg" width="2720" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a1c40672d250b1a18b2f130f353659b5a_icgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -314,13 +322,13 @@ CCP: CommonCmdPacket </dd></dl>
         <tr>
           <td class="memname">void CTCP_copy_packet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>dest</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>src</em>&#160;</td>
         </tr>
         <tr>
@@ -332,7 +340,7 @@ CCP: CommonCmdPacket </dd></dl>
 </div><div class="memdoc">
 
 <p>CommonTlmCmdPacket をコピー </p>
-<dl class="section note"><dt>覚え書き</dt><dd>user実装次第だが，高速化のためすすべてではなく必要最低限しかコピーしない場合もある </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>user 実装次第だが，高速化のためすすべてではなく必要最低限しかコピーしない場合もある </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">dest</td><td>コピー先 CTCP </td></tr>
@@ -342,17 +350,46 @@ CCP: CommonCmdPacket </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00035">35</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00052">52</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a965276551fd46af0428959d7ad7f5c09_cgraph.svg" width="535" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a965276551fd46af0428959d7ad7f5c09_cgraph.svg" width="1303" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<a id="afad90959c53ac528ef98cd3af76bc2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad90959c53ac528ef98cd3af76bc2cd">&#9670;&nbsp;</a></span>CTCP_get_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> CTCP_get_apid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>CTCP </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>APID </dd></dl>
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00042">42</a> 行目に定義があります。</p>
 <div class="dynheader">
-被呼び出し関係図:</div>
+呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a965276551fd46af0428959d7ad7f5c09_icgraph.svg" width="3120" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_afad90959c53ac528ef98cd3af76bc2cd_cgraph.svg" width="836" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -367,7 +404,7 @@ CCP: CommonCmdPacket </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CTCP_get_packet_len </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -383,11 +420,11 @@ CCP: CommonCmdPacket </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>packet len </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00049">49</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00037">37</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a3b5cbc5a345efdd6e9e7d135478b4868_cgraph.svg" width="370" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a3b5cbc5a345efdd6e9e7d135478b4868_cgraph.svg" width="1146" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -408,7 +445,7 @@ CCP: CommonCmdPacket </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="common__tlm__cmd__packet_8h.html#a01c31a85c1a0eeb8f6030256238b543c">CTCP_PACKET_TYPE</a> CTCP_get_packet_type </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -424,17 +461,17 @@ CCP: CommonCmdPacket </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>CTCP_PACKET_TYPE </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00022">22</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a86d9338ea5a11fafb41cf5ad00ee16c3_cgraph.svg" width="339" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a86d9338ea5a11fafb41cf5ad00ee16c3_cgraph.svg" width="888" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a86d9338ea5a11fafb41cf5ad00ee16c3_icgraph.svg" width="2939" height="538"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a86d9338ea5a11fafb41cf5ad00ee16c3_icgraph.svg" width="584" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -449,7 +486,7 @@ CCP: CommonCmdPacket </dd></dl>
         <tr>
           <td class="memname">int CTCP_is_valid_packet </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#af8e966c89a0b8522f51acf4dd224a068">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -474,11 +511,57 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00012">12</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00014">14</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a607aefb8beac36566a817d191bb77fae_cgraph.svg" width="580" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_a607aefb8beac36566a817d191bb77fae_cgraph.svg" width="1356" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aca86275d7e62e0580a4e688cddafa4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca86275d7e62e0580a4e688cddafa4fd">&#9670;&nbsp;</a></span>CTCP_set_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTCP_set_apid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td>
+          <td class="paramname"><em>apid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APID を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">packet</td><td>CTCP </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">apid</td><td>APID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet_8c_source.html">common_tlm_cmd_packet.c</a> の <a class="el" href="common__tlm__cmd__packet_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet_8c_aca86275d7e62e0580a4e688cddafa4fd_cgraph.svg" width="806" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

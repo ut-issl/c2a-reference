@@ -86,25 +86,24 @@ $(document).ready(function(){initNavTree('endian__memcpy_8h_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="endian__memcpy_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">memcpyでエンディアンのせいで死ぬことがあるので，</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">OBCではmemcpy，SLIS環境ではendian convが入るようにスイッチさせる．</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">memcpy(&amp;sci_.sib_rev, CCP_get_param_head(packet), 2);</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">↓</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">endina_memcpy(&amp;sci_.sib_rev, CCP_get_param_head(packet), 2);</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef ENDIAN_MEMCPY_INCLUDE_</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define ENDIAN_MEMCPY_INCLUDE_</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">memcpyでエンディアンのせいで死ぬことがあるので，</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">OBCではmemcpy，SLIS環境ではendian convが入るようにスイッチさせる．</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">memcpy(&amp;sci_.sib_rev, CCP_get_param_head(packet), 2);</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">↓</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">endina_memcpy(&amp;sci_.sib_rev, CCP_get_param_head(packet), 2);</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef ENDIAN_MEMCPY_H_</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define ENDIAN_MEMCPY_H_</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">// for size_t</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">// for size_t</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// #pragma inline  endian_memcpy</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="endian__memcpy_8h.html#a153793f6939a1cb0f6bc3968d953f31e">endian_memcpy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> count);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif // ENDIAN_MEMCPY_INCLUDE_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// #pragma inline  endian_memcpy</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="endian__memcpy_8h.html#a153793f6939a1cb0f6bc3968d953f31e">endian_memcpy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> count);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aendian__memcpy_8h_html_a153793f6939a1cb0f6bc3968d953f31e"><div class="ttname"><a href="endian__memcpy_8h.html#a153793f6939a1cb0f6bc3968d953f31e">endian_memcpy</a></div><div class="ttdeci">void * endian_memcpy(void *dest, const void *src, size_t count)</div><div class="ttdef"><b>Definition:</b> <a href="endian__memcpy_8c_source.html#l00025">endian_memcpy.c:25</a></div></div>

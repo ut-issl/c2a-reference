@@ -1,6 +1,5 @@
 var apid__define_8h =
 [
-    [ "TCP_MAX_LEN", "apid__define_8h.html#a45753fec0e14d3971f481c27ca96fbb9", null ],
     [ "APID", "apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac", [
       [ "APID_MOBC_CMD", "apid__define_8h.html#ae86084e0da0f3d82d3572285760217acac905fc26fead98cfebb79b1c0309fa8c", null ],
       [ "APID_AOBC_CMD", "apid__define_8h.html#ae86084e0da0f3d82d3572285760217aca0980e2b5d6c46a614f69c0b2819b13f1", null ],

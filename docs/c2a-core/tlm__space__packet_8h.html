@@ -1,0 +1,1890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/TlmCmd/Ccsds/tlm_space_packet.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('tlm__space__packet_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">tlm_space_packet.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>CCSDS で規定される Space Packet の テレメ版の実装  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="tlm__space__packet__params_8h_source.html">src_user/Settings/TlmCmd/Ccsds/tlm_space_packet_params.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="space__packet__typedef_8h_source.html">space_packet_typedef.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="space__packet_8h_source.html">space_packet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common__tlm__packet_8h_source.html">../common_tlm_packet.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+tlm_space_packet.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h__incl.svg" width="1870" height="618"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h__dep__incl.svg" width="795" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="tlm__space__packet_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a6f480daf9247ea0e80fb083e459adf27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a6f480daf9247ea0e80fb083e459adf27">TSP_SND_HDR_LEN</a>&#160;&#160;&#160;(20)</td></tr>
+<tr class="memdesc:a6f480daf9247ea0e80fb083e459adf27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header 長  <a href="tlm__space__packet_8h.html#a6f480daf9247ea0e80fb083e459adf27">[詳解]</a><br /></td></tr>
+<tr class="separator:a6f480daf9247ea0e80fb083e459adf27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c70bba26693b0ed701b58640d253207"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a9c70bba26693b0ed701b58640d253207">TSP_2ND_HDR_VER_TO_USE</a>&#160;&#160;&#160;(<a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fbacd962e4cf78b1e17352bce0315f2ee94">TSP_2ND_HDR_VER_1</a>)</td></tr>
+<tr class="memdesc:a9c70bba26693b0ed701b58640d253207"><td class="mdescLeft">&#160;</td><td class="mdescRight">使う Sec. HDR Ver  <a href="tlm__space__packet_8h.html#a9c70bba26693b0ed701b58640d253207">[詳解]</a><br /></td></tr>
+<tr class="separator:a9c70bba26693b0ed701b58640d253207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a95af6b0a7646b1d6a37d081b979b19fb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">TSP_2ND_HDR_VER</a> { <a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fba6f1b09a7ad56457b64a9f6c3486b29f0">TSP_2ND_HDR_VER_UNKNOWN</a> = 0, 
+<a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fbacd962e4cf78b1e17352bce0315f2ee94">TSP_2ND_HDR_VER_1</a> = 1
+ }</td></tr>
+<tr class="memdesc:a95af6b0a7646b1d6a37d081b979b19fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Version No  <a href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">[詳解]</a><br /></td></tr>
+<tr class="separator:a95af6b0a7646b1d6a37d081b979b19fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a150461bf66d4cc91669fb40df47c0634"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a150461bf66d4cc91669fb40df47c0634">TSP_get_ver</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a150461bf66d4cc91669fb40df47c0634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version No を取得  <a href="tlm__space__packet_8h.html#a150461bf66d4cc91669fb40df47c0634">[詳解]</a><br /></td></tr>
+<tr class="separator:a150461bf66d4cc91669fb40df47c0634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725157c412be020faec3736821be8b6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a725157c412be020faec3736821be8b6b">TSP_set_ver</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a> ver)</td></tr>
+<tr class="memdesc:a725157c412be020faec3736821be8b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version No を設定  <a href="tlm__space__packet_8h.html#a725157c412be020faec3736821be8b6b">[詳解]</a><br /></td></tr>
+<tr class="separator:a725157c412be020faec3736821be8b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ccc00815531595fbe842a510c18a57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a89ccc00815531595fbe842a510c18a57">TSP_get_type</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a89ccc00815531595fbe842a510c18a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Type を取得  <a href="tlm__space__packet_8h.html#a89ccc00815531595fbe842a510c18a57">[詳解]</a><br /></td></tr>
+<tr class="separator:a89ccc00815531595fbe842a510c18a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b92e3806a30d3049d18eea341ee0c26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a1b92e3806a30d3049d18eea341ee0c26">TSP_set_type</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a> type)</td></tr>
+<tr class="memdesc:a1b92e3806a30d3049d18eea341ee0c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Type を設定  <a href="tlm__space__packet_8h.html#a1b92e3806a30d3049d18eea341ee0c26">[詳解]</a><br /></td></tr>
+<tr class="separator:a1b92e3806a30d3049d18eea341ee0c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57be68e8b60a212c1c5c4cd13596c47c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a57be68e8b60a212c1c5c4cd13596c47c">TSP_get_2nd_hdr_flag</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a57be68e8b60a212c1c5c4cd13596c47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Flag を取得  <a href="tlm__space__packet_8h.html#a57be68e8b60a212c1c5c4cd13596c47c">[詳解]</a><br /></td></tr>
+<tr class="separator:a57be68e8b60a212c1c5c4cd13596c47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086b20222708c5b7a9aaace514d19500"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a086b20222708c5b7a9aaace514d19500">TSP_set_2nd_hdr_flag</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a> flag)</td></tr>
+<tr class="memdesc:a086b20222708c5b7a9aaace514d19500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Flag を設定  <a href="tlm__space__packet_8h.html#a086b20222708c5b7a9aaace514d19500">[詳解]</a><br /></td></tr>
+<tr class="separator:a086b20222708c5b7a9aaace514d19500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085b2d425273eee803f0a9815bf5829d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a085b2d425273eee803f0a9815bf5829d">TSP_get_apid</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a085b2d425273eee803f0a9815bf5829d"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を取得  <a href="tlm__space__packet_8h.html#a085b2d425273eee803f0a9815bf5829d">[詳解]</a><br /></td></tr>
+<tr class="separator:a085b2d425273eee803f0a9815bf5829d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a7575999ff965ea1c95125e6b017fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a79a7575999ff965ea1c95125e6b017fa">TSP_set_apid</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid)</td></tr>
+<tr class="memdesc:a79a7575999ff965ea1c95125e6b017fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を設定  <a href="tlm__space__packet_8h.html#a79a7575999ff965ea1c95125e6b017fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a79a7575999ff965ea1c95125e6b017fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab652cf1b9af02950859f6b00ff75f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a8ab652cf1b9af02950859f6b00ff75f9">TSP_get_seq_flag</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a8ab652cf1b9af02950859f6b00ff75f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Flag を取得  <a href="tlm__space__packet_8h.html#a8ab652cf1b9af02950859f6b00ff75f9">[詳解]</a><br /></td></tr>
+<tr class="separator:a8ab652cf1b9af02950859f6b00ff75f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dde2d41faea54b0997599427b64796a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a2dde2d41faea54b0997599427b64796a">TSP_set_seq_flag</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> flag)</td></tr>
+<tr class="memdesc:a2dde2d41faea54b0997599427b64796a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Flag を設定  <a href="tlm__space__packet_8h.html#a2dde2d41faea54b0997599427b64796a">[詳解]</a><br /></td></tr>
+<tr class="separator:a2dde2d41faea54b0997599427b64796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561204120d57d8cbe9a1a646746b507d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a561204120d57d8cbe9a1a646746b507d">TSP_get_seq_count</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a561204120d57d8cbe9a1a646746b507d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Count を取得  <a href="tlm__space__packet_8h.html#a561204120d57d8cbe9a1a646746b507d">[詳解]</a><br /></td></tr>
+<tr class="separator:a561204120d57d8cbe9a1a646746b507d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfbc7ce2baafa2f87e7bd9f136610eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#adfbc7ce2baafa2f87e7bd9f136610eeb">TSP_set_seq_count</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> count)</td></tr>
+<tr class="memdesc:adfbc7ce2baafa2f87e7bd9f136610eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Count を設定  <a href="tlm__space__packet_8h.html#adfbc7ce2baafa2f87e7bd9f136610eeb">[詳解]</a><br /></td></tr>
+<tr class="separator:adfbc7ce2baafa2f87e7bd9f136610eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918d0be3151b0e50cd88d9384017023c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a918d0be3151b0e50cd88d9384017023c">TSP_get_packet_data_len</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a918d0be3151b0e50cd88d9384017023c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Data Length を取得  <a href="tlm__space__packet_8h.html#a918d0be3151b0e50cd88d9384017023c">[詳解]</a><br /></td></tr>
+<tr class="separator:a918d0be3151b0e50cd88d9384017023c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe20b947c3cad7b965865ef188a5ff1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#abe20b947c3cad7b965865ef188a5ff1f">TSP_set_packet_data_len</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:abe20b947c3cad7b965865ef188a5ff1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Data Length を設定  <a href="tlm__space__packet_8h.html#abe20b947c3cad7b965865ef188a5ff1f">[詳解]</a><br /></td></tr>
+<tr class="separator:abe20b947c3cad7b965865ef188a5ff1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1feb7d85059cd489894070a6ff9e8c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">TSP_2ND_HDR_VER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#ae1feb7d85059cd489894070a6ff9e8c6">TSP_get_2nd_hdr_ver</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:ae1feb7d85059cd489894070a6ff9e8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Version No を取得  <a href="tlm__space__packet_8h.html#ae1feb7d85059cd489894070a6ff9e8c6">[詳解]</a><br /></td></tr>
+<tr class="separator:ae1feb7d85059cd489894070a6ff9e8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7c1e56a52ce7ee11ce6775603acbc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a4c7c1e56a52ce7ee11ce6775603acbc7">TSP_set_2nd_hdr_ver</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">TSP_2ND_HDR_VER</a> ver)</td></tr>
+<tr class="memdesc:a4c7c1e56a52ce7ee11ce6775603acbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Secondary Header Version No を設定  <a href="tlm__space__packet_8h.html#a4c7c1e56a52ce7ee11ce6775603acbc7">[詳解]</a><br /></td></tr>
+<tr class="separator:a4c7c1e56a52ce7ee11ce6775603acbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3be72d817fcca411aabbe0809d8d07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#aca3be72d817fcca411aabbe0809d8d07">TSP_get_board_time</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:aca3be72d817fcca411aabbe0809d8d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Board Time を取得  <a href="tlm__space__packet_8h.html#aca3be72d817fcca411aabbe0809d8d07">[詳解]</a><br /></td></tr>
+<tr class="separator:aca3be72d817fcca411aabbe0809d8d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace24297759446caff5a6ccb251193dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#ace24297759446caff5a6ccb251193dc0">TSP_set_board_time</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> time)</td></tr>
+<tr class="memdesc:ace24297759446caff5a6ccb251193dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Board Time を設定  <a href="tlm__space__packet_8h.html#ace24297759446caff5a6ccb251193dc0">[詳解]</a><br /></td></tr>
+<tr class="separator:ace24297759446caff5a6ccb251193dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac766b2447821fe39c649c3ccde6062"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a5ac766b2447821fe39c649c3ccde6062">TSP_get_global_time</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a5ac766b2447821fe39c649c3ccde6062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global Time を取得  <a href="tlm__space__packet_8h.html#a5ac766b2447821fe39c649c3ccde6062">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ac766b2447821fe39c649c3ccde6062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97232cc3b8df6cb21403d7b0f78af673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a97232cc3b8df6cb21403d7b0f78af673">TSP_set_global_time</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, double time)</td></tr>
+<tr class="memdesc:a97232cc3b8df6cb21403d7b0f78af673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global Time を設定  <a href="tlm__space__packet_8h.html#a97232cc3b8df6cb21403d7b0f78af673">[詳解]</a><br /></td></tr>
+<tr class="separator:a97232cc3b8df6cb21403d7b0f78af673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a8389d717001a72ff581e864cd517e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a38a8389d717001a72ff581e864cd517e">TSP_get_on_board_subnet_time</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a38a8389d717001a72ff581e864cd517e"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-Board Subnetwork Time を取得  <a href="tlm__space__packet_8h.html#a38a8389d717001a72ff581e864cd517e">[詳解]</a><br /></td></tr>
+<tr class="separator:a38a8389d717001a72ff581e864cd517e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab296f31eaf414114853e6221b4fbdda1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#ab296f31eaf414114853e6221b4fbdda1">TSP_set_on_board_subnet_time</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> time)</td></tr>
+<tr class="memdesc:ab296f31eaf414114853e6221b4fbdda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-Board Subnetwork Time を設定  <a href="tlm__space__packet_8h.html#ab296f31eaf414114853e6221b4fbdda1">[詳解]</a><br /></td></tr>
+<tr class="separator:ab296f31eaf414114853e6221b4fbdda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91995cd54b728c3c6c49cd473b880308"><td class="memItemLeft" align="right" valign="top"><a class="el" href="telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20">TLM_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a91995cd54b728c3c6c49cd473b880308">TSP_get_tlm_id</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a91995cd54b728c3c6c49cd473b880308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tlm ID を取得  <a href="tlm__space__packet_8h.html#a91995cd54b728c3c6c49cd473b880308">[詳解]</a><br /></td></tr>
+<tr class="separator:a91995cd54b728c3c6c49cd473b880308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeebf5c4a5df3148b168acde4eaf85ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#afeebf5c4a5df3148b168acde4eaf85ad">TSP_set_tlm_id</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20">TLM_CODE</a> id)</td></tr>
+<tr class="memdesc:afeebf5c4a5df3148b168acde4eaf85ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tlm ID を設定  <a href="tlm__space__packet_8h.html#afeebf5c4a5df3148b168acde4eaf85ad">[詳解]</a><br /></td></tr>
+<tr class="separator:afeebf5c4a5df3148b168acde4eaf85ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad095f65a940aa997407241a851a999ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__packet_8h.html#a7de368cc12ac6186da51a3ada27dbf63">ctp_dest_flags_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#ad095f65a940aa997407241a851a999ab">TSP_get_dest_flgas</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:ad095f65a940aa997407241a851a999ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination Flags を取得  <a href="tlm__space__packet_8h.html#ad095f65a940aa997407241a851a999ab">[詳解]</a><br /></td></tr>
+<tr class="separator:ad095f65a940aa997407241a851a999ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6563299f42351715b05712e6d4011469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a6563299f42351715b05712e6d4011469">TSP_set_dest_flgas</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="common__tlm__packet_8h.html#a7de368cc12ac6186da51a3ada27dbf63">ctp_dest_flags_t</a> flags)</td></tr>
+<tr class="memdesc:a6563299f42351715b05712e6d4011469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination Flags を設定  <a href="tlm__space__packet_8h.html#a6563299f42351715b05712e6d4011469">[詳解]</a><br /></td></tr>
+<tr class="separator:a6563299f42351715b05712e6d4011469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e043563257cf2d73e068acbd5af3ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a31e043563257cf2d73e068acbd5af3ff">TSP_get_dr_partition</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a31e043563257cf2d73e068acbd5af3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">DR Partition を取得  <a href="tlm__space__packet_8h.html#a31e043563257cf2d73e068acbd5af3ff">[詳解]</a><br /></td></tr>
+<tr class="separator:a31e043563257cf2d73e068acbd5af3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0432372ddf2ee25f097ee774953e243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#ae0432372ddf2ee25f097ee774953e243">TSP_set_dr_partition</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ptn)</td></tr>
+<tr class="memdesc:ae0432372ddf2ee25f097ee774953e243"><td class="mdescLeft">&#160;</td><td class="mdescRight">DR Partition を設定  <a href="tlm__space__packet_8h.html#ae0432372ddf2ee25f097ee774953e243">[詳解]</a><br /></td></tr>
+<tr class="separator:ae0432372ddf2ee25f097ee774953e243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51745cb62959205762b4b2430f81804f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a51745cb62959205762b4b2430f81804f">TSP_get_packet_len</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:a51745cb62959205762b4b2430f81804f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Length を取得  <a href="tlm__space__packet_8h.html#a51745cb62959205762b4b2430f81804f">[詳解]</a><br /></td></tr>
+<tr class="separator:a51745cb62959205762b4b2430f81804f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc19b780aaf01a516d07c48c4d52c21b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#adc19b780aaf01a516d07c48c4d52c21b">TSP_set_packet_len</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:adc19b780aaf01a516d07c48c4d52c21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Length を設定  <a href="tlm__space__packet_8h.html#adc19b780aaf01a516d07c48c4d52c21b">[詳解]</a><br /></td></tr>
+<tr class="separator:adc19b780aaf01a516d07c48c4d52c21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8365f22b2e6b02fd8d0cc3542215a54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#aa8365f22b2e6b02fd8d0cc3542215a54">TSP_copy_packet</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *dest, const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *src)</td></tr>
+<tr class="memdesc:aa8365f22b2e6b02fd8d0cc3542215a54"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> をコピー  <a href="tlm__space__packet_8h.html#aa8365f22b2e6b02fd8d0cc3542215a54">[詳解]</a><br /></td></tr>
+<tr class="separator:aa8365f22b2e6b02fd8d0cc3542215a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb16720b1fbf497ca85e3d5ed7216f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#afbb16720b1fbf497ca85e3d5ed7216f5">TSP_get_user_data_head</a> (const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:afbb16720b1fbf497ca85e3d5ed7216f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Data Field の先頭ポインタを取得  <a href="tlm__space__packet_8h.html#afbb16720b1fbf497ca85e3d5ed7216f5">[詳解]</a><br /></td></tr>
+<tr class="separator:afbb16720b1fbf497ca85e3d5ed7216f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c796969de410ea835981dbe8261161b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a4c796969de410ea835981dbe8261161b">TSP_setup_primary_hdr</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> packet_data_len)</td></tr>
+<tr class="memdesc:a4c796969de410ea835981dbe8261161b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primary Header を構築  <a href="tlm__space__packet_8h.html#a4c796969de410ea835981dbe8261161b">[詳解]</a><br /></td></tr>
+<tr class="separator:a4c796969de410ea835981dbe8261161b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba748fe8e777a580261c16ee3ba07e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#abba748fe8e777a580261c16ee3ba07e8">TSP_set_common_hdr</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp)</td></tr>
+<tr class="memdesc:abba748fe8e777a580261c16ee3ba07e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">共通部分の Header を構築  <a href="tlm__space__packet_8h.html#abba748fe8e777a580261c16ee3ba07e8">[詳解]</a><br /></td></tr>
+<tr class="separator:abba748fe8e777a580261c16ee3ba07e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3a85b0640f6dfa288a01adca693958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tlm__space__packet_8h.html#a6a3a85b0640f6dfa288a01adca693958">TSP_setup_fill_packet</a> (<a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *tsp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> fill_size)</td></tr>
+<tr class="memdesc:a6a3a85b0640f6dfa288a01adca693958"><td class="mdescLeft">&#160;</td><td class="mdescRight">パケット全体を 0x00 クリアし， fill_size に等しいサイズのパケットを生成する  <a href="tlm__space__packet_8h.html#a6a3a85b0640f6dfa288a01adca693958">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a3a85b0640f6dfa288a01adca693958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>CCSDS で規定される Space Packet の テレメ版の実装 </p>
+<p>C ではテンプレートが使えないため，別で定義する </p><dl class="section note"><dt>覚え書き</dt><dd>詳細は <a class="el" href="space__packet_8h.html" title="CCSDS で規定される Space Packet の実装">space_packet.h</a> を参照 </dd>
+<dd>
+現在は， Sec. HDR Ver.1 のみ．追加するときに拡張していく </dd>
+<dd>
+packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | Pos | Pos | size | name | | [octet] | [bit] | [bit] | | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | === Primary Header ======================= | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | 0 | 0 | 3 | Version No | | 0 | 3 | 1 | Packet Type | | 0 | 4 | 1 | Sec. HDR Flag | | 0 | 5 | 11 | APID | | 2 | 0 | 2 | Sequence Flags | | 2 | 2 | 14 | Sequence Count | | 4 | 0 | 16 | Packet Data Len | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | === Secondary Header ===================== | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | 6 | 0 | 8 | Sec. HDR Ver | | 7 | 0 | 32 | Board Time | | 11 | 0 | 8 | Tlm ID | | 12 | 0 | 64 | Global Time | | 20 | 0 | 32 | On-Board | | | | | Subnetwork Time | | 24 | 0 | 8 | Dest Flags | | 25 | 0 | 8 | DR Partition | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | === User Data Field ====================== | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | 26 | 0 | * | Tlm Data #0 | | * | 0 | * | Tlm Data #1 | | * | 0 | * | Tlm Data #2 | | * | 0 | * | ... | |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;|</dd></dl>
+<p>以下の 3 つの時刻情報をパケットに仕込む</p><ul>
+<li>Board Time<ul>
+<li>テレメパケットを生成したボードのテレメ生成時間． TI など．型は任意．</li>
+</ul>
+</li>
+<li>Global Time<ul>
+<li>テレメパケットを生成したボードの絶対時刻でのテレメ生成時刻． GPS Time や unixtime など．型は任意．</li>
+<li>0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF の場合， パケット中継中に MOBC で上書きされる</li>
+<li>FIXME: 一旦 double で実装するが，本当は変えたほうが良いかもしれない．．．？</li>
+</ul>
+</li>
+<li>On-Board Subnetwork Time<ul>
+<li>オンボードサブネットワークでのテレメ生成時刻．オンボードサブネットワーク TI など．型は任意．</li>
+<li>0xFFFFFFFF の場合， パケット中継中に MOBC で上書きされる </li>
+</ul>
+</li>
+</ul>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8h_source.html">tlm_space_packet.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a9c70bba26693b0ed701b58640d253207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c70bba26693b0ed701b58640d253207">&#9670;&nbsp;</a></span>TSP_2ND_HDR_VER_TO_USE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TSP_2ND_HDR_VER_TO_USE&#160;&#160;&#160;(<a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fbacd962e4cf78b1e17352bce0315f2ee94">TSP_2ND_HDR_VER_1</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使う Sec. HDR Ver </p>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8h_source.html">tlm_space_packet.h</a> の <a class="el" href="tlm__space__packet_8h_source.html#l00069">69</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6f480daf9247ea0e80fb083e459adf27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f480daf9247ea0e80fb083e459adf27">&#9670;&nbsp;</a></span>TSP_SND_HDR_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TSP_SND_HDR_LEN&#160;&#160;&#160;(20)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header 長 </p>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8h_source.html">tlm_space_packet.h</a> の <a class="el" href="tlm__space__packet_8h_source.html#l00068">68</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a95af6b0a7646b1d6a37d081b979b19fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95af6b0a7646b1d6a37d081b979b19fb">&#9670;&nbsp;</a></span>TSP_2ND_HDR_VER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">TSP_2ND_HDR_VER</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Version No </p>
+<dl class="section note"><dt>覚え書き</dt><dd>8bit </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a95af6b0a7646b1d6a37d081b979b19fba6f1b09a7ad56457b64a9f6c3486b29f0"></a>TSP_2ND_HDR_VER_UNKNOWN&#160;</td><td class="fielddoc"><p>バージョン不定 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a95af6b0a7646b1d6a37d081b979b19fbacd962e4cf78b1e17352bce0315f2ee94"></a>TSP_2ND_HDR_VER_1&#160;</td><td class="fielddoc"><p>Version-1 </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8h_source.html">tlm_space_packet.h</a> の <a class="el" href="tlm__space__packet_8h_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa8365f22b2e6b02fd8d0cc3542215a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8365f22b2e6b02fd8d0cc3542215a54">&#9670;&nbsp;</a></span>TSP_copy_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_copy_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> をコピー </p>
+<dl class="section note"><dt>覚え書き</dt><dd>高速化のためすすべてではなく必要最低限しかコピーしない </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dest</td><td>コピー先 <a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>コピー元 <a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00249">249</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_aa8365f22b2e6b02fd8d0cc3542215a54_cgraph.svg" width="1295" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_aa8365f22b2e6b02fd8d0cc3542215a54_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a57be68e8b60a212c1c5c4cd13596c47c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57be68e8b60a212c1c5c4cd13596c47c">&#9670;&nbsp;</a></span>TSP_get_2nd_hdr_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a> TSP_get_2nd_hdr_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Flag を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_2ND_HDR_FLAG </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00053">53</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a57be68e8b60a212c1c5c4cd13596c47c_cgraph.svg" width="936" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae1feb7d85059cd489894070a6ff9e8c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1feb7d85059cd489894070a6ff9e8c6">&#9670;&nbsp;</a></span>TSP_get_2nd_hdr_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">TSP_2ND_HDR_VER</a> TSP_get_2nd_hdr_ver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Version No を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TSP_2ND_HDR_VER </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00117">117</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ae1feb7d85059cd489894070a6ff9e8c6_cgraph.svg" width="730" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a085b2d425273eee803f0a9815bf5829d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085b2d425273eee803f0a9815bf5829d">&#9670;&nbsp;</a></span>TSP_get_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> TSP_get_apid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>APID </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00065">65</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a085b2d425273eee803f0a9815bf5829d_cgraph.svg" width="827" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aca3be72d817fcca411aabbe0809d8d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3be72d817fcca411aabbe0809d8d07">&#9670;&nbsp;</a></span>TSP_get_board_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> TSP_get_board_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Board Time を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Board Time </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00142">142</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_aca3be72d817fcca411aabbe0809d8d07_cgraph.svg" width="723" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad095f65a940aa997407241a851a999ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad095f65a940aa997407241a851a999ab">&#9670;&nbsp;</a></span>TSP_get_dest_flgas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__packet_8h.html#a7de368cc12ac6186da51a3ada27dbf63">ctp_dest_flags_t</a> TSP_get_dest_flgas </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destination Flags を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Destination Flags </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00203">203</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ad095f65a940aa997407241a851a999ab_cgraph.svg" width="715" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ad095f65a940aa997407241a851a999ab_icgraph.svg" width="1738" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a31e043563257cf2d73e068acbd5af3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e043563257cf2d73e068acbd5af3ff">&#9670;&nbsp;</a></span>TSP_get_dr_partition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TSP_get_dr_partition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DR Partition を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>DR Partition </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00218">218</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a31e043563257cf2d73e068acbd5af3ff_cgraph.svg" width="724" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5ac766b2447821fe39c649c3ccde6062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac766b2447821fe39c649c3ccde6062">&#9670;&nbsp;</a></span>TSP_get_global_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TSP_get_global_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Global Time を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Global Time </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00157">157</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a5ac766b2447821fe39c649c3ccde6062_cgraph.svg" width="727" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a38a8389d717001a72ff581e864cd517e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a8389d717001a72ff581e864cd517e">&#9670;&nbsp;</a></span>TSP_get_on_board_subnet_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> TSP_get_on_board_subnet_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>On-Board Subnetwork Time を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>On-Board Subnetwork Time </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00172">172</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a38a8389d717001a72ff581e864cd517e_cgraph.svg" width="798" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a918d0be3151b0e50cd88d9384017023c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a918d0be3151b0e50cd88d9384017023c">&#9670;&nbsp;</a></span>TSP_get_packet_data_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> TSP_get_packet_data_len </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Data Length を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Packet Data Length </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00101">101</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a918d0be3151b0e50cd88d9384017023c_cgraph.svg" width="982" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a51745cb62959205762b4b2430f81804f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51745cb62959205762b4b2430f81804f">&#9670;&nbsp;</a></span>TSP_get_packet_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> TSP_get_packet_len </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Length を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Packet Length </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00237">237</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a51745cb62959205762b4b2430f81804f_cgraph.svg" width="1136" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a51745cb62959205762b4b2430f81804f_icgraph.svg" width="1688" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a561204120d57d8cbe9a1a646746b507d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a561204120d57d8cbe9a1a646746b507d">&#9670;&nbsp;</a></span>TSP_get_seq_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> TSP_get_seq_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Count を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Sequence Count </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00089">89</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a561204120d57d8cbe9a1a646746b507d_cgraph.svg" width="902" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8ab652cf1b9af02950859f6b00ff75f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab652cf1b9af02950859f6b00ff75f9">&#9670;&nbsp;</a></span>TSP_get_seq_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> TSP_get_seq_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Flag を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_SEQ_FLAG </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00077">77</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a8ab652cf1b9af02950859f6b00ff75f9_cgraph.svg" width="878" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a91995cd54b728c3c6c49cd473b880308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91995cd54b728c3c6c49cd473b880308">&#9670;&nbsp;</a></span>TSP_get_tlm_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20">TLM_CODE</a> TSP_get_tlm_id </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tlm ID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Tlm ID </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00187">187</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a91995cd54b728c3c6c49cd473b880308_cgraph.svg" width="691" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a89ccc00815531595fbe842a510c18a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ccc00815531595fbe842a510c18a57">&#9670;&nbsp;</a></span>TSP_get_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a> TSP_get_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Type を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_TYPE </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00041">41</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a89ccc00815531595fbe842a510c18a57_cgraph.svg" width="830" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afbb16720b1fbf497ca85e3d5ed7216f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb16720b1fbf497ca85e3d5ed7216f5">&#9670;&nbsp;</a></span>TSP_get_user_data_head()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* TSP_get_user_data_head </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>User Data Field の先頭ポインタを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>*user_data_head </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>FIXME: この関数で取得したポインタ経由で tlm のデータをセットする事があるため， const をつけていない 引数の const を外しても良いかも？ </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00255">255</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_afbb16720b1fbf497ca85e3d5ed7216f5_icgraph.svg" width="1587" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a150461bf66d4cc91669fb40df47c0634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150461bf66d4cc91669fb40df47c0634">&#9670;&nbsp;</a></span>TSP_get_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a> TSP_get_ver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version No を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SP_VER </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a150461bf66d4cc91669fb40df47c0634_cgraph.svg" width="814" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a086b20222708c5b7a9aaace514d19500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086b20222708c5b7a9aaace514d19500">&#9670;&nbsp;</a></span>TSP_set_2nd_hdr_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_2nd_hdr_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#a62b8d1e5e63f8721cea7139100b872de">SP_2ND_HDR_FLAG</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Flag を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>SP_2ND_HDR_FLAG </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00059">59</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a086b20222708c5b7a9aaace514d19500_cgraph.svg" width="906" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a086b20222708c5b7a9aaace514d19500_icgraph.svg" width="2346" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4c7c1e56a52ce7ee11ce6775603acbc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7c1e56a52ce7ee11ce6775603acbc7">&#9670;&nbsp;</a></span>TSP_set_2nd_hdr_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_2nd_hdr_ver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="tlm__space__packet_8h.html#a95af6b0a7646b1d6a37d081b979b19fb">TSP_2ND_HDR_VER</a>&#160;</td>
+          <td class="paramname"><em>ver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Secondary Header Version No を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>TSP_2ND_HDR_VER </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00135">135</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a4c7c1e56a52ce7ee11ce6775603acbc7_cgraph.svg" width="700" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a79a7575999ff965ea1c95125e6b017fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a7575999ff965ea1c95125e6b017fa">&#9670;&nbsp;</a></span>TSP_set_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_apid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td>
+          <td class="paramname"><em>apid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>APID を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">apid</td><td>APID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00071">71</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a79a7575999ff965ea1c95125e6b017fa_cgraph.svg" width="796" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a79a7575999ff965ea1c95125e6b017fa_icgraph.svg" width="2078" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ace24297759446caff5a6ccb251193dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace24297759446caff5a6ccb251193dc0">&#9670;&nbsp;</a></span>TSP_set_board_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_board_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Board Time を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>Board Time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00151">151</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ace24297759446caff5a6ccb251193dc0_cgraph.svg" width="695" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ace24297759446caff5a6ccb251193dc0_icgraph.svg" width="1324" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abba748fe8e777a580261c16ee3ba07e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba748fe8e777a580261c16ee3ba07e8">&#9670;&nbsp;</a></span>TSP_set_common_hdr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_common_hdr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>共通部分の Header を構築 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00271">271</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_abba748fe8e777a580261c16ee3ba07e8_cgraph.svg" width="1119" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_abba748fe8e777a580261c16ee3ba07e8_icgraph.svg" width="2135" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6563299f42351715b05712e6d4011469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6563299f42351715b05712e6d4011469">&#9670;&nbsp;</a></span>TSP_set_dest_flgas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_dest_flgas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common__tlm__packet_8h.html#a7de368cc12ac6186da51a3ada27dbf63">ctp_dest_flags_t</a>&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destination Flags を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flgas</td><td>Destination Flags </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00212">212</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a6563299f42351715b05712e6d4011469_cgraph.svg" width="687" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a6563299f42351715b05712e6d4011469_icgraph.svg" width="1316" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae0432372ddf2ee25f097ee774953e243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0432372ddf2ee25f097ee774953e243">&#9670;&nbsp;</a></span>TSP_set_dr_partition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_dr_partition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>ptn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DR Partition を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptn</td><td>DR Partition </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00227">227</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ae0432372ddf2ee25f097ee774953e243_cgraph.svg" width="695" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ae0432372ddf2ee25f097ee774953e243_icgraph.svg" width="1324" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a97232cc3b8df6cb21403d7b0f78af673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97232cc3b8df6cb21403d7b0f78af673">&#9670;&nbsp;</a></span>TSP_set_global_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_global_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Global Time を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>Global Time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00166">166</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a97232cc3b8df6cb21403d7b0f78af673_cgraph.svg" width="698" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a97232cc3b8df6cb21403d7b0f78af673_icgraph.svg" width="1327" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab296f31eaf414114853e6221b4fbdda1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab296f31eaf414114853e6221b4fbdda1">&#9670;&nbsp;</a></span>TSP_set_on_board_subnet_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_on_board_subnet_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>On-Board Subnetwork Time を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>On-Board Subnetwork Time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00181">181</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ab296f31eaf414114853e6221b4fbdda1_cgraph.svg" width="768" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_ab296f31eaf414114853e6221b4fbdda1_icgraph.svg" width="1398" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abe20b947c3cad7b965865ef188a5ff1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe20b947c3cad7b965865ef188a5ff1f">&#9670;&nbsp;</a></span>TSP_set_packet_data_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_packet_data_len </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Data Length を設定 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>Packet Data Length とは PACKET DATA FIELD 長であり，PRIMARY HEADER を含まない， 0 起算の長さ ( <a href="https://public.ccsds.org/Pubs/133x0b2e1.pdf">https://public.ccsds.org/Pubs/133x0b2e1.pdf</a> ) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Packet Data Length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00107">107</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_abe20b947c3cad7b965865ef188a5ff1f_cgraph.svg" width="954" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_abe20b947c3cad7b965865ef188a5ff1f_icgraph.svg" width="2156" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adc19b780aaf01a516d07c48c4d52c21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc19b780aaf01a516d07c48c4d52c21b">&#9670;&nbsp;</a></span>TSP_set_packet_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_packet_len </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Length を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Packet Length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00243">243</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_adc19b780aaf01a516d07c48c4d52c21b_cgraph.svg" width="1108" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adfbc7ce2baafa2f87e7bd9f136610eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbc7ce2baafa2f87e7bd9f136610eeb">&#9670;&nbsp;</a></span>TSP_set_seq_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_seq_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Count を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>Sequence Count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00095">95</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_adfbc7ce2baafa2f87e7bd9f136610eeb_cgraph.svg" width="874" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_adfbc7ce2baafa2f87e7bd9f136610eeb_icgraph.svg" width="1316" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2dde2d41faea54b0997599427b64796a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dde2d41faea54b0997599427b64796a">&#9670;&nbsp;</a></span>TSP_set_seq_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_seq_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sequence Flag を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>SP_SEQ_FLAG </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00083">83</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a2dde2d41faea54b0997599427b64796a_cgraph.svg" width="850" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a2dde2d41faea54b0997599427b64796a_icgraph.svg" width="2318" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afeebf5c4a5df3148b168acde4eaf85ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeebf5c4a5df3148b168acde4eaf85ad">&#9670;&nbsp;</a></span>TSP_set_tlm_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_tlm_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20">TLM_CODE</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tlm ID を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Tlm ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00196">196</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_afeebf5c4a5df3148b168acde4eaf85ad_cgraph.svg" width="662" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_afeebf5c4a5df3148b168acde4eaf85ad_icgraph.svg" width="1291" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1b92e3806a30d3049d18eea341ee0c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b92e3806a30d3049d18eea341ee0c26">&#9670;&nbsp;</a></span>TSP_set_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#a4896b87ed0baeecdeff61b1c534aec24">SP_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packet Type を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>SP_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a1b92e3806a30d3049d18eea341ee0c26_cgraph.svg" width="799" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a1b92e3806a30d3049d18eea341ee0c26_icgraph.svg" width="2292" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a725157c412be020faec3736821be8b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725157c412be020faec3736821be8b6b">&#9670;&nbsp;</a></span>TSP_set_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_set_ver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="space__packet_8h.html#acd8845142724bb0fd95fd3e89960a3df">SP_VER</a>&#160;</td>
+          <td class="paramname"><em>ver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version No を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ver</td><td>SP_VER </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00035">35</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a725157c412be020faec3736821be8b6b_cgraph.svg" width="783" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a725157c412be020faec3736821be8b6b_icgraph.svg" width="2284" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6a3a85b0640f6dfa288a01adca693958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3a85b0640f6dfa288a01adca693958">&#9670;&nbsp;</a></span>TSP_setup_fill_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_setup_fill_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>fill_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>パケット全体を 0x00 クリアし， fill_size に等しいサイズのパケットを生成する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>Primary Header Size より小さなパケットは作れないので，その場合は， SP_PRM_HDR_LEN + 1 の長さのパケットを生成する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fill_size</td><td>packet size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00287">287</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a6a3a85b0640f6dfa288a01adca693958_cgraph.svg" width="1590" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a6a3a85b0640f6dfa288a01adca693958_icgraph.svg" width="1687" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4c796969de410ea835981dbe8261161b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c796969de410ea835981dbe8261161b">&#9670;&nbsp;</a></span>TSP_setup_primary_hdr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TSP_setup_primary_hdr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tlm_space_packet.html">TlmSpacePacket</a> *&#160;</td>
+          <td class="paramname"><em>tsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td>
+          <td class="paramname"><em>apid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>packet_data_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Primary Header を構築 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tsp</td><td><a class="el" href="struct_tlm_space_packet.html" title="Space Packet (テレメ用)">TlmSpacePacket</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">apid</td><td>APID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">packet_data_len</td><td>Packet Data Length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="tlm__space__packet_8c_source.html">tlm_space_packet.c</a> の <a class="el" href="tlm__space__packet_8c_source.html#l00263">263</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a4c796969de410ea835981dbe8261161b_cgraph.svg" width="1379" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tlm__space__packet_8h_a4c796969de410ea835981dbe8261161b_icgraph.svg" width="1922" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_43c499926d30da83a4105ced0951a3ae.html">TlmCmd</a></li><li class="navelem"><a class="el" href="dir_65c4a3a645d640a6a1bd0ea47afea00a.html">Ccsds</a></li><li class="navelem"><a class="el" href="tlm__space__packet_8h.html">tlm_space_packet.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
