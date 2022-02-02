@@ -23,6 +23,8 @@ var telemetry__definitions_8h =
       [ "Tlm_CODE_HK", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a4181a06d84be672cec72909efd7c3d8f", null ],
       [ "Tlm_CODE_GIT_REV", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20afdc23bf9f2bfb97f06a4f8a95454c7ce", null ],
       [ "Tlm_CODE_UART_TEST", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a1a63693ccad523f99fc82bd4a2ea148b", null ],
+      [ "Tlm_CODE_AOBC_AOBC", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20ac1a03e8c282e4356110f5187e9714b3c", null ],
+      [ "Tlm_CODE_AOBC_HK", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a8393224a5d8c51b23fd1ff4843b9ac46", null ],
       [ "TLM_CODE_MAX", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a1031c6eb4704443adab40cc55848f01b", null ]
     ] ]
 ];

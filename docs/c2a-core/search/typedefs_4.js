@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['int16_5ft_4465',['int16_t',['../stdint_8h.html#a269259c924dce846340ddbb810db2e3c',1,'stdint.h']]],
-  ['int32_5ft_4466',['int32_t',['../stdint_8h.html#a2ba621978a511250f7250fb10e05ffbe',1,'stdint.h']]],
-  ['int64_5ft_4467',['int64_t',['../stdint_8h.html#a831d6234342279926bb11bad3a37add9',1,'stdint.h']]],
-  ['int8_5ft_4468',['int8_t',['../stdint_8h.html#aef44329758059c91c76d334e8fc09700',1,'stdint.h']]]
+  ['el_5fclog_5fcounter_5ft_4954',['el_clog_counter_t',['../event__logger_8h.html#ada95c41f981f5b79e04affc15450aa5a',1,'event_logger.h']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['el_5fclog_5fcounter_5ft_4464',['el_clog_counter_t',['../event__logger_8h.html#ada95c41f981f5b79e04affc15450aa5a',1,'event_logger.h']]]
+  ['driversuper_4952',['DriverSuper',['../driver__super_8h.html#a131657e7172e22cc95b5ba92fe2ae7f8',1,'driver_super.h']]],
+  ['ds_5fstreamconfig_4953',['DS_StreamConfig',['../driver__super_8h.html#a528712a3504f7b6030106af80650e693',1,'driver_super.h']]]
 ];

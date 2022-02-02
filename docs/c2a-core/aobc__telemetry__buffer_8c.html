@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/Drivers/Aocs/aobc_telemetry_buffer.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('aobc__telemetry__buffer_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">aobc_telemetry_buffer.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>テレメトリバッファー（テレメ中継）  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="aobc__telemetry__definitions_8h_source.html">./aobc_telemetry_definitions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aobc__telemetry__buffer_8h_source.html">./aobc_telemetry_buffer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aobc_8h_source.html">./aobc.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+aobc_telemetry_buffer.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c__incl.svg" width="1770" height="886"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="aobc__telemetry__buffer_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ac751b45e41e667f0ffd691e77f9bc7a6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc__telemetry__buffer_8c.html#ac751b45e41e667f0ffd691e77f9bc7a6">AOBC_analyze_tlm_aobc_aobc_</a> (const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet, <a class="el" href="aobc__telemetry__definitions_8h.html#a40def56e96d0aaeccceb76264d90182d">AOBC_TLM_CODE</a> tlm_id, <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>)</td></tr>
+<tr class="separator:ac751b45e41e667f0ffd691e77f9bc7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825c5182e0e6427eec0683b74d2145cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc__telemetry__buffer_8c.html#a825c5182e0e6427eec0683b74d2145cf">AOBC_analyze_tlm_aobc_hk_</a> (const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet, <a class="el" href="aobc__telemetry__definitions_8h.html#a40def56e96d0aaeccceb76264d90182d">AOBC_TLM_CODE</a> tlm_id, <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>)</td></tr>
+<tr class="separator:a825c5182e0e6427eec0683b74d2145cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9eae6f537a2561e5e9f5e37bb8d245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc__telemetry__buffer_8c.html#a9e9eae6f537a2561e5e9f5e37bb8d245">AOBC_init_tlm_buffer</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>)</td></tr>
+<tr class="separator:a9e9eae6f537a2561e5e9f5e37bb8d245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b52088d5f385af72dc6663981f31dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc__telemetry__buffer_8c.html#ad9b52088d5f385af72dc6663981f31dc">AOBC_buffer_tlm_packet</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>)</td></tr>
+<tr class="separator:ad9b52088d5f385af72dc6663981f31dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb94ceac3b45a65e951dc3031e66b5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc__telemetry__buffer_8c.html#aedb94ceac3b45a65e951dc3031e66b5c">AOBC_pick_up_tlm_buffer</a> (const <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>, <a class="el" href="aobc__telemetry__definitions_8h.html#a40def56e96d0aaeccceb76264d90182d">AOBC_TLM_CODE</a> tlm_id, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *packet, int max_len)</td></tr>
+<tr class="separator:aedb94ceac3b45a65e951dc3031e66b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a7de5b655adb6003a532289ce7c03e2c5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc__telemetry__buffer_8c.html#a7de5b655adb6003a532289ce7c03e2c5">AOBC_ctp_</a></td></tr>
+<tr class="separator:a7de5b655adb6003a532289ce7c03e2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>テレメトリバッファー（テレメ中継） </p>
+<dl class="section note"><dt>覚え書き</dt><dd>このコードは自動生成されています！ </dd></dl>
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac751b45e41e667f0ffd691e77f9bc7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac751b45e41e667f0ffd691e77f9bc7a6">&#9670;&nbsp;</a></span>AOBC_analyze_tlm_aobc_aobc_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> AOBC_analyze_tlm_aobc_aobc_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="aobc__telemetry__definitions_8h.html#a40def56e96d0aaeccceb76264d90182d">AOBC_TLM_CODE</a>&#160;</td>
+          <td class="paramname"><em>tlm_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *&#160;</td>
+          <td class="paramname"><em>aobc_driver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> の <a class="el" href="aobc__telemetry__buffer_8c_source.html#l00049">49</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_ac751b45e41e667f0ffd691e77f9bc7a6_cgraph.svg" width="1710" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_ac751b45e41e667f0ffd691e77f9bc7a6_icgraph.svg" width="1368" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a825c5182e0e6427eec0683b74d2145cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a825c5182e0e6427eec0683b74d2145cf">&#9670;&nbsp;</a></span>AOBC_analyze_tlm_aobc_hk_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> AOBC_analyze_tlm_aobc_hk_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="aobc__telemetry__definitions_8h.html#a40def56e96d0aaeccceb76264d90182d">AOBC_TLM_CODE</a>&#160;</td>
+          <td class="paramname"><em>tlm_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *&#160;</td>
+          <td class="paramname"><em>aobc_driver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> の <a class="el" href="aobc__telemetry__buffer_8c_source.html#l00204">204</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_a825c5182e0e6427eec0683b74d2145cf_cgraph.svg" width="1740" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_a825c5182e0e6427eec0683b74d2145cf_icgraph.svg" width="1399" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad9b52088d5f385af72dc6663981f31dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b52088d5f385af72dc6663981f31dc">&#9670;&nbsp;</a></span>AOBC_buffer_tlm_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> AOBC_buffer_tlm_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *&#160;</td>
+          <td class="paramname"><em>aobc_driver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> の <a class="el" href="aobc__telemetry__buffer_8c_source.html#l00027">27</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_ad9b52088d5f385af72dc6663981f31dc_cgraph.svg" width="2042" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_ad9b52088d5f385af72dc6663981f31dc_icgraph.svg" width="1136" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9e9eae6f537a2561e5e9f5e37bb8d245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9eae6f537a2561e5e9f5e37bb8d245">&#9670;&nbsp;</a></span>AOBC_init_tlm_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AOBC_init_tlm_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *&#160;</td>
+          <td class="paramname"><em>aobc_driver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> の <a class="el" href="aobc__telemetry__buffer_8c_source.html#l00017">17</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_a9e9eae6f537a2561e5e9f5e37bb8d245_icgraph.svg" width="650" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aedb94ceac3b45a65e951dc3031e66b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb94ceac3b45a65e951dc3031e66b5c">&#9670;&nbsp;</a></span>AOBC_pick_up_tlm_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AOBC_pick_up_tlm_buffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *&#160;</td>
+          <td class="paramname"><em>aobc_driver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="aobc__telemetry__definitions_8h.html#a40def56e96d0aaeccceb76264d90182d">AOBC_TLM_CODE</a>&#160;</td>
+          <td class="paramname"><em>tlm_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> の <a class="el" href="aobc__telemetry__buffer_8c_source.html#l00382">382</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_aedb94ceac3b45a65e951dc3031e66b5c_cgraph.svg" width="1575" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc__telemetry__buffer_8c_aedb94ceac3b45a65e951dc3031e66b5c_icgraph.svg" width="1331" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a7de5b655adb6003a532289ce7c03e2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de5b655adb6003a532289ce7c03e2c5">&#9670;&nbsp;</a></span>AOBC_ctp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> AOBC_ctp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="aobc__telemetry__buffer_8c_source.html">aobc_telemetry_buffer.c</a> の <a class="el" href="aobc__telemetry__buffer_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_857ab89b484a44f88fda86cc6c60dfeb.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_8955ac92a2500fd4c1634799588a2101.html">Aocs</a></li><li class="navelem"><a class="el" href="aobc__telemetry__buffer_8c.html">aobc_telemetry_buffer.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

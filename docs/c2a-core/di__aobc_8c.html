@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/Applications/DriverInstances/di_aobc.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('di__aobc_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">di_aobc.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>AOBC の DI と AOBC の cmd dispatcher  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="di__aobc_8h_source.html">di_aobc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aobc_8h_source.html">../../Drivers/Aocs/aobc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="user__packet__handler_8h_source.html">../../TlmCmd/user_packet_handler.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="print_8h_source.html">src_core/Library/print.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="port__config_8h_source.html">../../Settings/port_config.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+di_aobc.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c__incl.svg" width="2282" height="1064"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="di__aobc_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ac004552dc331c8fea7b0b6f2acd75a15"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#ac004552dc331c8fea7b0b6f2acd75a15">DI_AOBC_init_</a> (void)</td></tr>
+<tr class="separator:ac004552dc331c8fea7b0b6f2acd75a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4">DI_AOBC_update_</a> (void)</td></tr>
+<tr class="separator:a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba679baeac63e052dbbe183daf0431f5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#aba679baeac63e052dbbe183daf0431f5">DI_AOBC_cmd_dispatcher_init_</a> (void)</td></tr>
+<tr class="separator:aba679baeac63e052dbbe183daf0431f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2b0fb03e89d75b82419d4ad53202f8b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#ac2b0fb03e89d75b82419d4ad53202f8b">DI_AOBC_cmd_dispatcher_</a> (void)</td></tr>
+<tr class="separator:ac2b0fb03e89d75b82419d4ad53202f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f30ebb5b71301c1da6d10eac787db4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a78f30ebb5b71301c1da6d10eac787db4">DI_AOBC_update</a> (void)</td></tr>
+<tr class="memdesc:a78f30ebb5b71301c1da6d10eac787db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC update アプリ生成関数  <a href="di__aobc_8c.html#a78f30ebb5b71301c1da6d10eac787db4">[詳解]</a><br /></td></tr>
+<tr class="separator:a78f30ebb5b71301c1da6d10eac787db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b846ecf2fe48c7bff4f2c10f2bc284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a22b846ecf2fe48c7bff4f2c10f2bc284">DI_AOBC_cmd_dispatcher</a> (void)</td></tr>
+<tr class="memdesc:a22b846ecf2fe48c7bff4f2c10f2bc284"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC cmd dispatcher アプリ生成関数  <a href="di__aobc_8c.html#a22b846ecf2fe48c7bff4f2c10f2bc284">[詳解]</a><br /></td></tr>
+<tr class="separator:a22b846ecf2fe48c7bff4f2c10f2bc284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7d4f09f3003e15242d14e6ed393059"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#aff7d4f09f3003e15242d14e6ed393059">DI_AOBC_dispatch_command</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="memdesc:aff7d4f09f3003e15242d14e6ed393059"><td class="mdescLeft">&#160;</td><td class="mdescRight">CommonCmdPacket を AOBC に送信する  <a href="di__aobc_8c.html#aff7d4f09f3003e15242d14e6ed393059">[詳解]</a><br /></td></tr>
+<tr class="separator:aff7d4f09f3003e15242d14e6ed393059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2163fd05770ba0c0308168c8fd4ea1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#ace2163fd05770ba0c0308168c8fd4ea1">Cmd_DI_AOBC_CDIS_CLEAR_ALL_REALTIME</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:ace2163fd05770ba0c0308168c8fd4ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef7c25c4342f2470416c5962b8bf230"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a7ef7c25c4342f2470416c5962b8bf230">Cmd_DI_AOBC_CDIS_CLEAR_ERR_LOG</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a7ef7c25c4342f2470416c5962b8bf230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a7b3e0c8f9eb7443290bbcf53fa2841ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a7b3e0c8f9eb7443290bbcf53fa2841ac">aobc_driver_</a></td></tr>
+<tr class="separator:a7b3e0c8f9eb7443290bbcf53fa2841ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf78def11c9b69c67a7feb596753a323"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a> = &amp;<a class="el" href="di__aobc_8c.html#a7b3e0c8f9eb7443290bbcf53fa2841ac">aobc_driver_</a></td></tr>
+<tr class="memdesc:abf78def11c9b69c67a7feb596753a323"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC driver  <a href="di__aobc_8c.html#abf78def11c9b69c67a7feb596753a323">[詳解]</a><br /></td></tr>
+<tr class="separator:abf78def11c9b69c67a7feb596753a323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391d9ca7d749d303a7a5c77e90c98a1c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a391d9ca7d749d303a7a5c77e90c98a1c">DI_AOBC_cdis_</a></td></tr>
+<tr class="separator:a391d9ca7d749d303a7a5c77e90c98a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e5c1aa6f0f66f303aa8c65e4d8f963"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a78e5c1aa6f0f66f303aa8c65e4d8f963">DI_AOBC_cdis</a> = &amp;<a class="el" href="di__aobc_8c.html#a391d9ca7d749d303a7a5c77e90c98a1c">DI_AOBC_cdis_</a></td></tr>
+<tr class="memdesc:a78e5c1aa6f0f66f303aa8c65e4d8f963"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC cmd dispatcher  <a href="di__aobc_8c.html#a78e5c1aa6f0f66f303aa8c65e4d8f963">[詳解]</a><br /></td></tr>
+<tr class="separator:a78e5c1aa6f0f66f303aa8c65e4d8f963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>AOBC の DI と AOBC の cmd dispatcher </p>
+<dl class="section note"><dt>覚え書き</dt><dd>C2A 間通信のデモ用であり， AOBC も C2A 搭載を仮定する </dd></dl>
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ace2163fd05770ba0c0308168c8fd4ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace2163fd05770ba0c0308168c8fd4ea1">&#9670;&nbsp;</a></span>Cmd_DI_AOBC_CDIS_CLEAR_ALL_REALTIME()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_DI_AOBC_CDIS_CLEAR_ALL_REALTIME </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00102">102</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ace2163fd05770ba0c0308168c8fd4ea1_cgraph.svg" width="604" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7ef7c25c4342f2470416c5962b8bf230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef7c25c4342f2470416c5962b8bf230">&#9670;&nbsp;</a></span>Cmd_DI_AOBC_CDIS_CLEAR_ERR_LOG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_DI_AOBC_CDIS_CLEAR_ERR_LOG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00111">111</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a7ef7c25c4342f2470416c5962b8bf230_cgraph.svg" width="712" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a22b846ecf2fe48c7bff4f2c10f2bc284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22b846ecf2fe48c7bff4f2c10f2bc284">&#9670;&nbsp;</a></span>DI_AOBC_cmd_dispatcher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> DI_AOBC_cmd_dispatcher </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AOBC cmd dispatcher アプリ生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00056">56</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a22b846ecf2fe48c7bff4f2c10f2bc284_cgraph.svg" width="2664" height="1040"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac2b0fb03e89d75b82419d4ad53202f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b0fb03e89d75b82419d4ad53202f8b">&#9670;&nbsp;</a></span>DI_AOBC_cmd_dispatcher_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DI_AOBC_cmd_dispatcher_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00070">70</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ac2b0fb03e89d75b82419d4ad53202f8b_cgraph.svg" width="2426" height="1082"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ac2b0fb03e89d75b82419d4ad53202f8b_icgraph.svg" width="447" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aba679baeac63e052dbbe183daf0431f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba679baeac63e052dbbe183daf0431f5">&#9670;&nbsp;</a></span>DI_AOBC_cmd_dispatcher_init_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DI_AOBC_cmd_dispatcher_init_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00064">64</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_aba679baeac63e052dbbe183daf0431f5_cgraph.svg" width="627" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_aba679baeac63e052dbbe183daf0431f5_icgraph.svg" width="440" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aff7d4f09f3003e15242d14e6ed393059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff7d4f09f3003e15242d14e6ed393059">&#9670;&nbsp;</a></span>DI_AOBC_dispatch_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> DI_AOBC_dispatch_command </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CommonCmdPacket を AOBC に送信する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AOBC が自身のコマンドと解釈できるよう，Execution Type を上書きするため， packet を const cast する．[TODO] const cast やめたい </dd>
+<dd>
+この関数を呼んでも良いのは，user_packet_handler のみ！ </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>CommonCmdPacket packet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">CCP_EXEC_SUCCESS</td><td>無事に転送された </td></tr>
+    <tr><td class="paramname">それ以外</td><td>転送失敗（DS_CMD_ERR_CODE を CCP_EXEC_STS に変換して返す．詳細エラーは <a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> を参照） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00076">76</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_aff7d4f09f3003e15242d14e6ed393059_cgraph.svg" width="1879" height="664"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_aff7d4f09f3003e15242d14e6ed393059_icgraph.svg" width="2988" height="682"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac004552dc331c8fea7b0b6f2acd75a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac004552dc331c8fea7b0b6f2acd75a15">&#9670;&nbsp;</a></span>DI_AOBC_init_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DI_AOBC_init_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00034">34</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ac004552dc331c8fea7b0b6f2acd75a15_cgraph.svg" width="2843" height="784"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ac004552dc331c8fea7b0b6f2acd75a15_icgraph.svg" width="306" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a78f30ebb5b71301c1da6d10eac787db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f30ebb5b71301c1da6d10eac787db4">&#9670;&nbsp;</a></span>DI_AOBC_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> DI_AOBC_update </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AOBC update アプリ生成関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a78f30ebb5b71301c1da6d10eac787db4_cgraph.svg" width="1652" height="1235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4">&#9670;&nbsp;</a></span>DI_AOBC_update_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DI_AOBC_update_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00045">45</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4_cgraph.svg" width="1466" height="503"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4_icgraph.svg" width="330" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="abf78def11c9b69c67a7feb596753a323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf78def11c9b69c67a7feb596753a323">&#9670;&nbsp;</a></span>aobc_driver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a>* const aobc_driver = &amp;<a class="el" href="di__aobc_8c.html#a7b3e0c8f9eb7443290bbcf53fa2841ac">aobc_driver_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AOBC driver </p>
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7b3e0c8f9eb7443290bbcf53fa2841ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3e0c8f9eb7443290bbcf53fa2841ac">&#9670;&nbsp;</a></span>aobc_driver_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> aobc_driver_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a78e5c1aa6f0f66f303aa8c65e4d8f963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e5c1aa6f0f66f303aa8c65e4d8f963">&#9670;&nbsp;</a></span>DI_AOBC_cdis</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a>* const DI_AOBC_cdis = &amp;<a class="el" href="di__aobc_8c.html#a391d9ca7d749d303a7a5c77e90c98a1c">DI_AOBC_cdis_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AOBC cmd dispatcher </p>
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a391d9ca7d749d303a7a5c77e90c98a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a391d9ca7d749d303a7a5c77e90c98a1c">&#9670;&nbsp;</a></span>DI_AOBC_cdis_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> DI_AOBC_cdis_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_4ee6211a2ef4316cc067157a00fb7dc2.html">Applications</a></li><li class="navelem"><a class="el" href="dir_f2730db6979c1b7cd23978bcad1c8681.html">DriverInstances</a></li><li class="navelem"><a class="el" href="di__aobc_8c.html">di_aobc.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
