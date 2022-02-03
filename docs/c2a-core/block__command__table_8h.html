@@ -222,9 +222,9 @@ block_command_table.h の依存先関係図:</div>
 <tr class="memitem:ac8f6b4e37c6106ca8b93abef278d3ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8h.html#ac8f6b4e37c6106ca8b93abef278d3ef4">BCT_swap_contents</a> (const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_a, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_b)</td></tr>
 <tr class="memdesc:ac8f6b4e37c6106ca8b93abef278d3ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCT の block の指す中身を入れ替える  <a href="block__command__table_8h.html#ac8f6b4e37c6106ca8b93abef278d3ef4">[詳解]</a><br /></td></tr>
 <tr class="separator:ac8f6b4e37c6106ca8b93abef278d3ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05cc77d3ebebc7fabf203a7cf44ac52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8h.html#ad05cc77d3ebebc7fabf203a7cf44ac52">BCT_convert_bct_ack_to_ctcp_exec_sts</a> (<a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> ack)</td></tr>
-<tr class="memdesc:ad05cc77d3ebebc7fabf203a7cf44ac52"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum変換用関数  <a href="block__command__table_8h.html#ad05cc77d3ebebc7fabf203a7cf44ac52">[詳解]</a><br /></td></tr>
-<tr class="separator:ad05cc77d3ebebc7fabf203a7cf44ac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0dc1b98758b5e5a012c8ff4fa56726"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8h.html#a0e0dc1b98758b5e5a012c8ff4fa56726">BCT_convert_bct_ack_to_ccp_exec_sts</a> (<a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a> ack)</td></tr>
+<tr class="memdesc:a0e0dc1b98758b5e5a012c8ff4fa56726"><td class="mdescLeft">&#160;</td><td class="mdescRight">返り値用 enum 変換用関数  <a href="block__command__table_8h.html#a0e0dc1b98758b5e5a012c8ff4fa56726">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e0dc1b98758b5e5a012c8ff4fa56726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455789e67ca933a6e618354bd6fd154f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8h.html#a455789e67ca933a6e618354bd6fd154f">Cmd_BCT_CLEAR_BLOCK</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="separator:a455789e67ca933a6e618354bd6fd154f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e60fb8f445e69cb3c153ea89fed6fb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="block__command__table_8h.html#a5e60fb8f445e69cb3c153ea89fed6fb6">Cmd_BCT_SET_BLOCK_POSITION</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
@@ -442,14 +442,14 @@ block_command_table.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ad05cc77d3ebebc7fabf203a7cf44ac52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05cc77d3ebebc7fabf203a7cf44ac52">&#9670;&nbsp;</a></span>BCT_convert_bct_ack_to_ctcp_exec_sts()</h2>
+<a id="a0e0dc1b98758b5e5a012c8ff4fa56726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0dc1b98758b5e5a012c8ff4fa56726">&#9670;&nbsp;</a></span>BCT_convert_bct_ack_to_ccp_exec_sts()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_convert_bct_ack_to_ctcp_exec_sts </td>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> BCT_convert_bct_ack_to_ccp_exec_sts </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="block__command__table_8h.html#af15ea9c320fa11145e642ead99cfd379">BCT_ACK</a>&#160;</td>
           <td class="paramname"><em>ack</em></td><td>)</td>
@@ -458,7 +458,7 @@ block_command_table.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>enum変換用関数 </p>
+<p>返り値用 enum 変換用関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">ack</td><td>BCT_ACK </td></tr>
@@ -471,7 +471,7 @@ block_command_table.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8h_ad05cc77d3ebebc7fabf203a7cf44ac52_icgraph.svg" width="1707" height="606"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8h_a0e0dc1b98758b5e5a012c8ff4fa56726_icgraph.svg" width="1707" height="606"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -595,7 +595,7 @@ block_command_table.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8h_add2db8412ac7b28b2e61d99638daaac5_icgraph.svg" width="1459" height="1336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="block__command__table_8h_add2db8412ac7b28b2e61d99638daaac5_icgraph.svg" width="1459" height="1335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -943,7 +943,7 @@ block_command_table.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>BCT_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00211">211</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00210">210</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

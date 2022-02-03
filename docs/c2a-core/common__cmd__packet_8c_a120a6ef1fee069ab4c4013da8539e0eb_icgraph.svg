@@ -66,7 +66,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc" target="_top" xlink:title="CCP をコマンドとして解釈して実行，ないしは別機器へ配送する">
 <polygon fill="white" stroke="black" points="1020,-375.5 1020,-394.5 1151,-394.5 1151,-375.5 1020,-375.5"/>
 <text text-anchor="middle" x="1085.5" y="-382.5" font-family="Helvetica,sans-Serif" font-size="10.00">PH_dispatch_command</text>
 </a>
@@ -96,9 +96,9 @@
 <!-- Node13 -->
 <g id="node10" class="node">
 <title>Node13</title>
-<g id="a_node10"><a xlink:href="block__command__executor_8c.html#a0bf1d6176fcbf33490740e749d03e2dc" target="_top" xlink:title="BC をまとめて一括で実行する">
+<g id="a_node10"><a xlink:href="block__command__executor_8c.html#ae33c8a6dadb5c8d6052c681bd93eabb4" target="_top" xlink:title="BC をまとめて一括で実行する">
 <polygon fill="white" stroke="black" points="838,-436.5 838,-455.5 984,-455.5 984,-436.5 838,-436.5"/>
-<text text-anchor="middle" x="911" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCT_combine_block_cmd_</text>
+<text text-anchor="middle" x="911" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCE_combine_block_cmd_</text>
 </a>
 </g>
 </g>
@@ -111,9 +111,9 @@
 <!-- Node17 -->
 <g id="node14" class="node">
 <title>Node17</title>
-<g id="a_node14"><a xlink:href="block__command__executor_8c.html#a03e45cd5863186a6a2991cc33c4cfa65" target="_top" xlink:title="rotator の実行主体">
+<g id="a_node14"><a xlink:href="block__command__executor_8c.html#ad3ff86b57b5abbbdb7dd658a04f00f13" target="_top" xlink:title="rotator の実行主体">
 <polygon fill="white" stroke="black" points="844,-312.5 844,-331.5 978,-331.5 978,-312.5 844,-312.5"/>
-<text text-anchor="middle" x="911" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCT_rotate_block_cmd_</text>
+<text text-anchor="middle" x="911" y="-319.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCE_rotate_block_cmd_</text>
 </a>
 </g>
 </g>
@@ -126,9 +126,9 @@
 <!-- Node19 -->
 <g id="node16" class="node">
 <title>Node19</title>
-<g id="a_node16"><a xlink:href="block__command__executor_8c.html#a17393664714f4ec0df2f1d98654a28a3" target="_top" xlink:title="BC をまとめて一括で実行する">
+<g id="a_node16"><a xlink:href="block__command__executor_8c.html#aa35678f3996844ae59428f34e6c8c78f" target="_top" xlink:title="BC をまとめて一括で実行する">
 <polygon fill="white" stroke="black" points="844,-488 844,-518 978,-518 978,-488 844,-488"/>
-<text text-anchor="start" x="852" y="-506" font-family="Helvetica,sans-Serif" font-size="10.00">BCT_timelimit_combine</text>
+<text text-anchor="start" x="852" y="-506" font-family="Helvetica,sans-Serif" font-size="10.00">BCE_timelimit_combine</text>
 <text text-anchor="middle" x="911" y="-495" font-family="Helvetica,sans-Serif" font-size="10.00">_block_cmd_</text>
 </a>
 </g>
@@ -622,7 +622,7 @@
 <!-- Node51 -->
 <g id="node39" class="node">
 <title>Node51</title>
-<g id="a_node39"><a xlink:href="packet__handler_8h.html#a9d16c8b958f0f983cf15674d6c528b02" target="_top" xlink:title=" ">
+<g id="a_node39"><a xlink:href="packet__handler_8h.html#a9d16c8b958f0f983cf15674d6c528b02" target="_top" xlink:title="CCP を解析する">
 <polygon fill="white" stroke="black" points="842.5,-642.5 842.5,-661.5 979.5,-661.5 979.5,-642.5 842.5,-642.5"/>
 <text text-anchor="middle" x="911" y="-649.5" font-family="Helvetica,sans-Serif" font-size="10.00">PH_analyze_cmd_packet</text>
 </a>
@@ -697,7 +697,7 @@
 <!-- Node65 -->
 <g id="node50" class="node">
 <title>Node65</title>
-<g id="a_node50"><a xlink:href="packet__handler_8h.html#acf757fa72967bf66b39dc5ced7132330" target="_top" xlink:title=" ">
+<g id="a_node50"><a xlink:href="packet__handler_8h.html#acf757fa72967bf66b39dc5ced7132330" target="_top" xlink:title="CTCP を解析する">
 <polygon fill="white" stroke="black" points="660.5,-699.5 660.5,-718.5 771.5,-718.5 771.5,-699.5 660.5,-699.5"/>
 <text text-anchor="middle" x="716" y="-706.5" font-family="Helvetica,sans-Serif" font-size="10.00">PH_analyze_packet</text>
 </a>

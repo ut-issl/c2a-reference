@@ -23,7 +23,7 @@ var block__command__table_8h =
     ] ],
     [ "BCT_check_position", "block__command__table_8h.html#ae25a57a4a97b49bf13a4caa0b5e8ff76", null ],
     [ "BCT_clear_block", "block__command__table_8h.html#a1ebc0b01cb3816d89903243ac30b882e", null ],
-    [ "BCT_convert_bct_ack_to_ctcp_exec_sts", "block__command__table_8h.html#ad05cc77d3ebebc7fabf203a7cf44ac52", null ],
+    [ "BCT_convert_bct_ack_to_ccp_exec_sts", "block__command__table_8h.html#a0e0dc1b98758b5e5a012c8ff4fa56726", null ],
     [ "BCT_copy_bct", "block__command__table_8h.html#a08026371114c87034cf4f4b877401093", null ],
     [ "BCT_get_bc_cmd_data", "block__command__table_8h.html#a8309b21152d399c390600563bf817f17", null ],
     [ "BCT_get_bc_length", "block__command__table_8h.html#add2db8412ac7b28b2e61d99638daaac5", null ],

@@ -213,9 +213,9 @@ packet_list.h の依存先関係図:</div>
 <tr class="memitem:aa1c786e55eef7a21cb425de7fd84db00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#aa1c786e55eef7a21cb425de7fd84db00">PL_deploy_block_cmd</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pl, const <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block, <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> start_at)</td></tr>
 <tr class="memdesc:aa1c786e55eef7a21cb425de7fd84db00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> 上に BC を展開する  <a href="packet__list_8h.html#aa1c786e55eef7a21cb425de7fd84db00">[詳解]</a><br /></td></tr>
 <tr class="separator:aa1c786e55eef7a21cb425de7fd84db00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b32a0b1d3f8d0feffbd6dfba24efd25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a4b32a0b1d3f8d0feffbd6dfba24efd25">PL_check_tl_cmd</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pl, <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> time)</td></tr>
-<tr class="memdesc:a4b32a0b1d3f8d0feffbd6dfba24efd25"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の先頭と time を比較  <a href="packet__list_8h.html#a4b32a0b1d3f8d0feffbd6dfba24efd25">[詳解]</a><br /></td></tr>
-<tr class="separator:a4b32a0b1d3f8d0feffbd6dfba24efd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402ee5fb33a96045ba9d8c8f77703f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a402ee5fb33a96045ba9d8c8f77703f44">PL_check_tl_cmd</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl, <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> time)</td></tr>
+<tr class="memdesc:a402ee5fb33a96045ba9d8c8f77703f44"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の先頭と time を比較  <a href="packet__list_8h.html#a402ee5fb33a96045ba9d8c8f77703f44">[詳解]</a><br /></td></tr>
+<tr class="separator:a402ee5fb33a96045ba9d8c8f77703f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>CTCP, CTP, CCP のリストとしてのデータ構造を定義. 片方向リストとして実装されている </p>
@@ -316,8 +316,8 @@ packet_list.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a4b32a0b1d3f8d0feffbd6dfba24efd25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b32a0b1d3f8d0feffbd6dfba24efd25">&#9670;&nbsp;</a></span>PL_check_tl_cmd()</h2>
+<a id="a402ee5fb33a96045ba9d8c8f77703f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402ee5fb33a96045ba9d8c8f77703f44">&#9670;&nbsp;</a></span>PL_check_tl_cmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +325,7 @@ packet_list.h の依存先関係図:</div>
         <tr>
           <td class="memname"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a> PL_check_tl_cmd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
           <td class="paramname"><em>pl</em>, </td>
         </tr>
         <tr>
@@ -361,17 +361,17 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00388">388</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00389">389</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8h_a4b32a0b1d3f8d0feffbd6dfba24efd25_cgraph.svg" width="992" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8h_a402ee5fb33a96045ba9d8c8f77703f44_cgraph.svg" width="992" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8h_a4b32a0b1d3f8d0feffbd6dfba24efd25_icgraph.svg" width="1544" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8h_a402ee5fb33a96045ba9d8c8f77703f44_icgraph.svg" width="1544" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -396,20 +396,14 @@ packet_list.h の依存先関係図:</div>
 <p><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> をクリア </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pl</td><td>クリアする <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pl</td><td>クリアする <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="retval"><dt>戻り値</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">PL_SUCCESS</td><td>成功 </td></tr>
-    <tr><td class="paramname">PL_PACKET_TYPE_ERR</td><td>型関連エラー </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>全 active Node を削除して 全て inactive の stock にする </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00067">67</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00068">68</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -444,7 +438,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>有効な（実行待ち） Node 数 </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00102">102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00103">103</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -479,7 +473,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>実行された Node 数 </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00095">95</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00096">96</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -514,7 +508,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>使用されていない Node 数 </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00109">109</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00110">110</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -560,7 +554,7 @@ packet_list.h の依存先関係図:</div>
 <dl class="section note"><dt>覚え書き</dt><dd>TimeLine だけでなく TaskList もこれを使い，その場合， start_at は step_t になることに注意 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pl</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pl</td><td>BC を展開する <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">block</td><td>展開する BC の ID </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">start_at</td><td>開始基準時刻 </td></tr>
   </table>
@@ -577,7 +571,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00331">331</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00332">332</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -624,7 +618,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00227">227</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00228">228</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -690,7 +684,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00239">239</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00240">240</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -731,7 +725,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>active な先頭 Node </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00141">141</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00142">142</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -772,7 +766,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00153">153</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00154">154</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -807,7 +801,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>packet の型サイズ </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00122">122</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00123">123</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -836,7 +830,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>active な末端 Node </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00147">147</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00148">148</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -871,7 +865,7 @@ packet_list.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>全 Node 数 </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00115">115</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00116">116</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -933,7 +927,7 @@ packet_list.h の依存先関係図:</div>
     <tr><td class="paramdir">[in]</td><td class="paramname">node_num</td><td><a class="el" href="struct_p_l___node.html" title="片方向リストを構成する各 Node">PL_Node</a> の数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">packet_type</td><td>保持する packet の型情報．PL_PACKET_TYPE を参照 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">packet_size</td><td>使用する packet の型サイズ </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pl</td><td>初期化する <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pl</td><td>初期化する <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -945,7 +939,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00033">33</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1011,7 +1005,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00205">205</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00206">206</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1063,7 +1057,7 @@ packet_list.h の依存先関係図:</div>
 <dl class="section note"><dt>覚え書き</dt><dd>TimeLine だけでなく TaskList もこれを使い，その場合， now は step_t になることに注意 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pl</td><td><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pl</td><td>CCP を挿入する <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">packet</td><td>挿入する CCP </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">now</td><td>基準時刻 (TimeLine なら現在時刻， TaskList なら現在 step) </td></tr>
   </table>
@@ -1081,7 +1075,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00270">270</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00271">271</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1128,7 +1122,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00129">129</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00130">130</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1169,7 +1163,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00135">135</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00136">136</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1221,7 +1215,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00180">180</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00181">181</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1279,7 +1273,7 @@ packet_list.h の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00159">159</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__list_8c_source.html">packet_list.c</a> の <a class="el" href="packet__list_8c_source.html#l00160">160</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
