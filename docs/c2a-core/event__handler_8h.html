@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('event__handler_8h.html',''); initResiz
 </div><div class="textblock"><div class="dynheader">
 event_handler.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h__incl.svg" width="1872" height="647"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h__incl.svg" width="1515" height="543"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -136,6 +136,12 @@ event_handler.h の依存先関係図:</div>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___el_event_counter.html">EH_ElEventCounter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EL イベントカウンタ． EL のイベント記録情報と照らし合わせて，対応すべきイベントを探索するために使う  <a href="struct_e_h___el_event_counter.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___exec_settings.html">EH_ExecSettings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH 実行時設定  <a href="struct_e_h___exec_settings.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___exec_info.html">EH_ExecInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH 実行時情報  <a href="struct_e_h___exec_info.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_h___register_from_cmd.html">EH_RegisterFromCmd</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド経由で <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> を登録するときに使う内部状態変数  <a href="struct_e_h___register_from_cmd.html#details">[詳解]</a><br /></td></tr>
@@ -174,6 +180,9 @@ event_handler.h の依存先関係図:</div>
 <tr class="separator:af3a6caf6a080f64025ec5fd494d22b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acef2d5f01db3bb9148c4f7aab98f4ef3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#acef2d5f01db3bb9148c4f7aab98f4ef3">EH_MAX_CHECK_EVENT_NUM_DEFAULT</a>&#160;&#160;&#160;(64)</td></tr>
 <tr class="separator:acef2d5f01db3bb9148c4f7aab98f4ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe21ec7b0208934823da3569d9235e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a9fe21ec7b0208934823da3569d9235e6">EH_MAX_MULTI_LEVEL_NUM_DEFAULT</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:a9fe21ec7b0208934823da3569d9235e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">多段の EH 対応の設定可能な最大段数（初期値）  <a href="event__handler_8h.html#a9fe21ec7b0208934823da3569d9235e6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9fe21ec7b0208934823da3569d9235e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
@@ -193,7 +202,8 @@ event_handler.h の依存先関係図:</div>
 <a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfad462444448454bd73e962f14d128d352">EH_REGISTER_ACK_ILLEGAL_BCT_ID</a>, 
 <a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfaea5373540db9a839d723d94135b6ad74">EH_REGISTER_ACK_ILLEGAL_ACTIVE_FLAG</a>, 
 <br />
-&#160;&#160;<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa7891a1162e6c126ba91b24112f290af0">EH_REGISTER_ACK_UNKNOWN_ERR</a>
+&#160;&#160;<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa155b82387cdca403c81c0b378b30b1f0">EH_REGISTER_ACK_ILLEGAL_MULTI_LEVEL</a>, 
+<a class="el" href="event__handler_8h.html#a85d43255132f8154481c589c260586bfa7891a1162e6c126ba91b24112f290af0">EH_REGISTER_ACK_UNKNOWN_ERR</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a85d43255132f8154481c589c260586bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">EH_register_rule の返り値  <a href="event__handler_8h.html#a85d43255132f8154481c589c260586bf">[詳解]</a><br /></td></tr>
@@ -284,6 +294,8 @@ event_handler.h の依存先関係図:</div>
 <tr class="separator:ad022db9bb898bd4b8b92df519cf2f72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29570665c21b2233eed461c475928fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a29570665c21b2233eed461c475928fab">Cmd_EH_SET_MAX_CHECK_EVENT_NUM</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="separator:a29570665c21b2233eed461c475928fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6b378704068eb31282444215793c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#afd6b378704068eb31282444215793c4d">Cmd_EH_SET_MAX_MULTI_LEVEL_NUM</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:afd6b378704068eb31282444215793c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0859282bda34f3d0fea080a051365bb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#a0859282bda34f3d0fea080a051365bb9">Cmd_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="separator:a0859282bda34f3d0fea080a051365bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae29fc2e9034674a21578e7488c58af1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__handler_8h.html#ae29fc2e9034674a21578e7488c58af1c">Cmd_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
@@ -303,10 +315,39 @@ event_handler.h の依存先関係図:</div>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>イベント発火型処理を行う </p>
-<dl class="section note"><dt>覚え書き</dt><dd>event_logger の情報を元に BC を展開する ( Event 発火に応じて対応を行う ) </dd>
+<dl class="section note"><dt>覚え書き</dt><dd>event_logger の情報を元に指定した BC (対応 BC) を展開する (Event 発火に応じて対応を行う) </dd>
 <dd>
-多段の EH 対応の組み方 多段の EH を組む場合， EH_RuleSettings.event.group は EL_CORE_GROUP_EH_MATCH_RULE を指定する． そうすると，上位のルールがマッチした場合，該当するルール対応は実行されなくなる 例えば， UART 不通を考える 設定として<ul>
-<li>UART不通が発生したら EL_UART を発行する</li>
+EH のベストプラクティス<ul>
+<li>いろんな箇所で FDIR を組むと，何が発動しているかわかりにくかったり，ログが散逸するので， できる限りすべての対応を EH で行うと良い<ul>
+<li>EH で対応を行う，ということは，以下のログが必ず取れている，ということになる<ul>
+<li>EH 対応をトリガするための Event 発行ログ</li>
+<li>EH にマッチしたという Event ログ</li>
+<li>EH 対応したという EH 対応ログと対応結果</li>
+</ul>
+</li>
+<li>ただし， EH 対応を行うためには， Block Cmd を消費するため，メモリ制約の厳しい OBC の場合は，難しい可能性もある<ul>
+<li>その場合は， EH_RESPONSE_CONDITION_SINGLE のもの（つまり，ステートレスな対応）を優先して， App 内部でハードコードすることを推奨する</li>
+<li>EH_RESPONSE_CONDITION_SINGLE でないものは，カウンタを実装しなくてはいけないため， EH で処理するほうが望ましい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>activate と inactivate<ul>
+<li>その EH Rule を 使う前に， activate することをおすすめする</li>
+<li>activate 時に，内部のカウンタ (<a class="el" href="struct_e_h___rule.html#aeb824be75611cc83b9b6e8d18b66bfc1" title="EH 対応までのカウンタ">EH_Rule.counter</a>) がリセットされるため， EH_RESPONSE_CONDITION_CONTINUOUS, EH_RESPONSE_CONDITION_CUMULATIVE において適切な状態からスタートできる</li>
+<li>モード線維持の SL や，コンポーネントを ON する BC などで activate cmd を仕込ませておくと良い</li>
+</ul>
+</li>
+<li>対応 BC 展開後の activate について<ul>
+<li>EH Rule がマッチし，対応 BC が展開された時，その EH_RULE_ID は自動的に inactivate される</li>
+<li>そのため，常に対応し続けたいような Rule については，その対応 BC のどこか（基本的には不感時間などを考慮して末尾など）で activate する cmd を仕込ませておくと良い </li>
+</ul>
+</li>
+</ul>
+</dd>
+<dd>
+多段の EH 対応の組み方 多段の EH を組む場合， EH_RuleSettings.event.group: EL_CORE_GROUP_EH_MATCH_RULE EH_RuleSettings.event.local: 下位の EH_RULE_ID EH_RuleSettings.event.err_level: EL_ERROR_LEVEL_EH を指定する． そうすると，上位のルールがマッチした場合，該当するルール対応は実行されなくなる 例えば， UART 不通を考える 設定として<ul>
+<li>UART 不通が発生したら EL_UART Event を発行する (Event Logger)</li>
 <li>EL_UART が 5 回発生したら UART ドライバリセットを行う EH_Rule1 を設定する</li>
 <li>EH_Rule1 の対応 BC で EH_Rule1 を再度有効化するようにする</li>
 <li>EH_Rule1 のマッチ (group: EL_CORE_GROUP_EH_MATCH_RULE, local: EH_Rule1 の EH_RULE_ID) が 3 回発生したら UART 回路リセットを行う EH_Rule2 を設定する とした場合，</li>
@@ -326,6 +367,18 @@ event_handler.h の依存先関係図:</div>
 <li>EL_UART が 5 回発生したら， EH_Rule1 は発火せずに， EH_Rule2 が発火 となるので，実質的に， EH_Rule2 で EH_Rule1 をオーバーライドすることができる． このように，下位のルールを，上位の発火条件を変えることで，柔軟にオーバーライドできる． </li>
 </ul>
 </dd>
+<dd>
+上記の多段の EH 対応の場合に発行される EH Event は，次のようになる． group / local / err_level / note の順に記す．また，時系列降順でしるす（上が新しい）<ol type="1">
+<li>EL_UART が 5 回発生したら， EH_Rule1 が発火 EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule1 / EH / err_level</li>
+<li>EL_UART が 10 回発生したら， EH_Rule1 が発火 EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule1 / EH / err_level</li>
+<li>EL_UART が 15 回発生したら， EH_Rule1 は発火せずに， EH_Rule2 が発火 EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE / EH_Rule1 / EH / 1 EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule2 / EH / err_level EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule1 / EH / err_level</li>
+<li>EL_UART が 20 回発生したら， EH_Rule1 が発火 EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule1 / EH / err_level</li>
+<li>EL_UART が 25 回発生したら， EH_Rule1 が発火 EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule1 / EH / err_level</li>
+<li>EL_UART が 30 回発生したら， EH_Rule1 は発火せずに， EH_Rule2 も発火せずに， EH_Rule3 が発火 EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE / EH_Rule1 / EH / 1 EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE / EH_Rule2 / EH / 1 EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule3 / EH / err_level EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule2 / EH / err_level EL_CORE_GROUP_EH_MATCH_RULE / EH_Rule1 / EH / err_level </li>
+</ol>
+</dd>
+<dd>
+多段の EH 対応のため， EL_ERROR_LEVEL_EH の Event をルールに設定することは， 多段対応時 (つまり group == EL_CORE_GROUP_EH_MATCH_RULE) を除いてできない </dd>
 <dd>
 EH での Event 発行は以下<ul>
 <li>EL_CORE_GROUP_EVENT_HANDLER<ul>
@@ -362,7 +415,7 @@ EH での Event 発行は以下<ul>
 
 <p>最大何個の EH 対応ログを保持できるか </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00071">71</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00114">114</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -380,7 +433,7 @@ EH での Event 発行は以下<ul>
 
 <p>EH対応のログテーブルのページ数（ページネーション用） </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00070">70</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00113">113</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -398,7 +451,7 @@ EH での Event 発行は以下<ul>
 
 <p>EH対応のログテーブルの1テレメトリパケット(=1ページ)に格納されるログ数（ページネーション用） </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00112">112</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -415,7 +468,25 @@ EH での Event 発行は以下<ul>
 </div><div class="memdoc">
 <p>一度の実行でチェックする event_logger の event log の最大値（初期値） TL内での実行時間を調整するために設定する． </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00076">76</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00119">119</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9fe21ec7b0208934823da3569d9235e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe21ec7b0208934823da3569d9235e6">&#9670;&nbsp;</a></span>EH_MAX_MULTI_LEVEL_NUM_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EH_MAX_MULTI_LEVEL_NUM_DEFAULT&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>多段の EH 対応の設定可能な最大段数（初期値） </p>
+
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00121">121</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -433,7 +504,7 @@ EH での Event 発行は以下<ul>
 
 <p>一度の実行で対応する最大数（初期値） </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00075">75</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00118">118</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -451,7 +522,7 @@ EH での Event 発行は以下<ul>
 
 <p><a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> の ID が重複した <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> を最大何個まで重複させてよいか </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00074">74</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00117">117</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -468,7 +539,7 @@ EH での Event 発行は以下<ul>
 </div><div class="memdoc">
 <p>最大何個のルール ( <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> - <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> 対応) を保持できるか 基本的に， EH_RULE_ID として使うので，キャストする enum上で定義しないのは， <a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> の最大値を，初期に定義する数よりも多くしたいため また，この値は， Rule 未定義値（ないしは初期値）としても使う </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00063">63</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00106">106</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -486,7 +557,7 @@ EH での Event 発行は以下<ul>
 
 <p>event_handler のルールテーブルのページ数（ページネーション用） </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00062">62</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00105">105</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -504,7 +575,7 @@ EH での Event 発行は以下<ul>
 
 <p>event_handler のルールテーブルの1テレメトリパケット(=1ページ)に格納されるルール数（ページネーション用） </p>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00061">61</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00104">104</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -534,7 +605,7 @@ uint8_t を想定 </dd></dl>
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00118">118</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00164">164</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -577,11 +648,13 @@ uint8_t を想定 </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfaea5373540db9a839d723d94135b6ad74"></a>EH_REGISTER_ACK_ILLEGAL_ACTIVE_FLAG&#160;</td><td class="fielddoc"><p>不正な is_active </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa155b82387cdca403c81c0b378b30b1f0"></a>EH_REGISTER_ACK_ILLEGAL_MULTI_LEVEL&#160;</td><td class="fielddoc"><p>多段 EH 対応での不正な設定 </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a85d43255132f8154481c589c260586bfa7891a1162e6c126ba91b24112f290af0"></a>EH_REGISTER_ACK_UNKNOWN_ERR&#160;</td><td class="fielddoc"><p>不明なエラー </p>
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00095">95</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00140">140</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -609,7 +682,7 @@ uint8_t を想定 </dd></dl>
 <tr><td class="fieldname"><a id="adb22131c0151f084b29a29e479743e58a212b12549c2b78b6e6e1ee12273f1b9c"></a>EH_RESPONSE_CONDITION_TYPE_MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00130">130</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8h_source.html">event_handler.h</a> の <a class="el" href="event__handler_8h_source.html#l00176">176</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -630,7 +703,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01287">1287</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01344">1344</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -662,7 +735,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01325">1325</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01382">1382</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -694,7 +767,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01194">1194</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01250">1250</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -726,7 +799,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01413">1413</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01470">1470</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -758,7 +831,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01383">1383</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01440">1440</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -790,7 +863,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01402">1402</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01459">1459</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -822,7 +895,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01268">1268</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01325">1325</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -854,7 +927,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01306">1306</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01363">1363</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -886,7 +959,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01344">1344</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01401">1401</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -918,7 +991,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01186">1186</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01242">1242</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -950,11 +1023,11 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01202">1202</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01258">1258</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_abef566f02c069b4b1ed8cdb7630d2b43_cgraph.svg" width="1216" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_abef566f02c069b4b1ed8cdb7630d2b43_cgraph.svg" width="1216" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -984,7 +1057,7 @@ uint8_t を想定 </dd></dl>
 
 <p>新しい <a class="el" href="struct_e_l___event.html" title="イベント">EL_Event</a> 発生を検出するためのカウンタを強制的に EL のカウンタに合わせる </p>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01474">1474</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01538">1538</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1016,11 +1089,11 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01238">1238</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01294">1294</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ae75a778dbd1a8e9336b0f8330a72627c_cgraph.svg" width="779" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_ae75a778dbd1a8e9336b0f8330a72627c_cgraph.svg" width="779" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -1048,11 +1121,37 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01428">1428</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01485">1485</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a29570665c21b2233eed461c475928fab_icgraph.svg" width="1156" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afd6b378704068eb31282444215793c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6b378704068eb31282444215793c4d">&#9670;&nbsp;</a></span>Cmd_EH_SET_MAX_MULTI_LEVEL_NUM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_EH_SET_MAX_MULTI_LEVEL_NUM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01492">1492</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_afd6b378704068eb31282444215793c4d_icgraph.svg" width="1151" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1074,7 +1173,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01421">1421</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01478">1478</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1100,7 +1199,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01453">1453</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01517">1517</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1126,7 +1225,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01444">1444</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01508">1508</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1152,7 +1251,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01435">1435</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01499">1499</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1178,7 +1277,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01225">1225</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01281">1281</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1204,7 +1303,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01210">1210</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01266">1266</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1230,7 +1329,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01363">1363</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01420">1420</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1262,7 +1361,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01461">1461</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01525">1525</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1306,7 +1405,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01032">1032</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01088">1088</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1350,7 +1449,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01054">1054</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01110">1110</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1392,7 +1491,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01108">1108</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01164">1164</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1454,7 +1553,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01114">1114</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01170">1170</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1497,7 +1596,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00305">305</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00308">308</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1539,7 +1638,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_e_h___log.html" title="EH 対応のログ">EH_Log</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01168">1168</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01224">1224</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1575,7 +1674,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01044">1044</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01100">1100</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1619,7 +1718,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01076">1076</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01132">1132</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1660,7 +1759,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00257">257</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00258">258</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1702,7 +1801,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01157">1157</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01213">1213</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1749,11 +1848,11 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_REGISTER_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00972">972</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00988">988</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a081e868576a32e8518a0d73a17c30010_cgraph.svg" width="542" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__handler_8h_a081e868576a32e8518a0d73a17c30010_cgraph.svg" width="542" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -1802,7 +1901,7 @@ uint8_t を想定 </dd></dl>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>EH_CHECK_RULE_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01098">1098</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l01154">1154</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1831,7 +1930,7 @@ uint8_t を想定 </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00254">254</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__handler_8c_source.html">event_handler.c</a> の <a class="el" href="event__handler_8c_source.html#l00255">255</a> 行目に定義があります。</p>
 
 </div>
 </div>

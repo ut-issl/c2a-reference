@@ -194,7 +194,7 @@ DS_StreamConfig 連携図</div>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>DriverSuperStreamの設定 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00248">248</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00232">232</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
 <a id="ab74d224e45b3d70c6f787a5b6e740bd6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab74d224e45b3d70c6f787a5b6e740bd6">&#9670;&nbsp;</a></span>carry_over_buffer_next_pos_</h2>
@@ -210,7 +210,7 @@ DS_StreamConfig 連携図</div>
 
 <p>次回探索を始めるバッファ位置（0 起算） </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00342">342</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00326">326</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ DS_StreamConfig 連携図</div>
 
 <p>繰越する受信データのサイズ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00341">341</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00325">325</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>受信データの解析関数 p_driver は継承先機器のドライバ構造体など 返り値は DS_ERR_CODE </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00324">324</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00308">308</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ DS_StreamConfig 連携図</div>
 
 <p>通常コマンド送信回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00271">271</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00255">255</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -281,7 +281,7 @@ DS_StreamConfig 連携図</div>
 
 <p>通常コマンド最終送信時刻 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00277">277</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00261">261</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ DS_StreamConfig 連携図</div>
 
 <p>有効か？ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00255">255</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00239">239</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -317,7 +317,7 @@ DS_StreamConfig 連携図</div>
 
 <p>繰越する受信データがあるか？ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00340">340</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00324">324</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -334,10 +334,10 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>厳格なフレーム探索が有効か？ ノイズ発生時や複数stream使用時にフレーム受信漏れを完全になくすモード</p><ul>
 <li>OFFの場合（通常はこちら） ヘッダを見つけて，フレーム候補を見つけた後，次のフレームはフレーム候補から探索する</li>
-<li>ONの場合 ヘッダを見つけて，フレーム候補を見つけた後，次のフレームは，見つけたヘッダ先頭の次バイトから探索する 実行時間は長くなる 複数streamやノイズが入ってしまった場合など，本来ヘッダでない部分をヘッダとして認識してしまう場合に有効化すると， 論理的なフレーム受信漏れの確率を限りなく０に近づけることができる． ヘッダがあるフレームの場合のみ，有効にできる </li>
+<li>ONの場合 ヘッダを見つけて，フレーム候補を見つけた後，次のフレームは，見つけたヘッダ先頭の次バイトから探索する 実行時間は長くなる 複数streamやノイズが入ってしまった場合など，本来ヘッダでない部分をヘッダとして認識してしまう場合に有効化すると， 論理的なフレーム受信漏れの確率を限りなく 0 に近づけることができる． ヘッダがあるフレームの場合のみ，有効にできる </li>
 </ul>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00257">257</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00241">241</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -355,7 +355,7 @@ DS_StreamConfig 連携図</div>
 
 <p>受信前に設定値の Validation が必要か？ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00332">332</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00316">316</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -373,7 +373,7 @@ DS_StreamConfig 連携図</div>
 
 <p>送信前に設定値の Validation が必要か？ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00331">331</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00315">315</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -391,7 +391,7 @@ DS_StreamConfig 連携図</div>
 
 <p>フレーム受信状況 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00269">269</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00253">253</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ DS_StreamConfig 連携図</div>
 
 <p>テレメ要求コマンド送信回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00272">272</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00256">256</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>最後にテレメを受信してからのテレメ要求コマンド送信回数 これが 0 でない場合，テレメが最新ではない可能性がある </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00273">273</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00257">257</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -444,7 +444,7 @@ DS_StreamConfig 連携図</div>
 
 <p>テレメ要求コマンド最終送信時刻 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00278">278</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00262">262</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -462,7 +462,7 @@ DS_StreamConfig 連携図</div>
 
 <p>data_analyzer_ の返り値 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00328">328</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00312">312</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>フレーム確定したときに，その後に続いていた受信データを繰越すための保存用バッファ 次の受信時にまとめて処理させる </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00343">343</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00327">327</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -497,7 +497,7 @@ DS_StreamConfig 連携図</div>
 
 <p>受信データのフッタ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00296">296</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00280">280</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -514,7 +514,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>受信データのフッタサイズ ヘッダがない場合は0に設定 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00297">297</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00281">281</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -531,7 +531,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>データ受信フレームバッファ DS_RX_FRAME_SIZE_MAX を超えるような巨大なフレーム（ビッグデータ）には未対応（将来実装予定） 対応させる場合，この配列変数を外部の大きな配列のポインタに上書きする必要がある． </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00285">285</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00269">269</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -549,7 +549,7 @@ DS_StreamConfig 連携図</div>
 
 <p>フレーム受信確定回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00275">275</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00259">259</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -567,7 +567,7 @@ DS_StreamConfig 連携図</div>
 
 <p>フレーム確定時刻 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00279">279</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00263">263</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -584,7 +584,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>受信バッファ解析時に，フレーム候補としたフレームの先頭位置（0 起算） DS_analyze_rx_buffer_fixed_, DS_analyze_rx_buffer_variable_ から呼ばれる関数で， フレーム候補がロジカルなエラー（フッタの不一致やフレーム長の不整合）等が起きた時に， 再度フレームを探索できるようにするために使う </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00335">335</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00319">319</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -602,7 +602,7 @@ DS_StreamConfig 連携図</div>
 
 <p>受信データフレームの受信済みByte．rx_frame_ に対する操作ポインタになる </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00334">334</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00318">318</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -619,7 +619,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>受信データ（テレメトリ）フレームサイズ 受信データがない場合は0に設定 受信データが可変の場合は負数に設定 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00299">299</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00283">283</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -636,7 +636,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>フレームサイズデータのオフセット値 受信データが可変長の場合のみ使用される フレームサイズデータによる可変長データの解析は「フレームの全サイズ」により行われるが， 機器の中にはヘッダとフッタの分は除いたデータ数としてサイズが表現される場合がある その場合のサイズ調整のために使う フレームサイズデータが「フレームの全サイズ」を示している場合には0に設定する </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00314">314</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00298">298</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -653,7 +653,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>受信データ内のフレームサイズデータの存在する場所（先頭から数えて何 byte 目に位置するか．0 起算） 受信データが可変長の場合のみ使用される． フレームサイズデータがない場合には負に設定する． 可変長でかつフレームサイズデータのないフレームは，フッタが設定されている場合は有効である． ただし，フッタの探索が必要なため，実行時間は若干遅くなる． もちろん，ヘッダがあることを推奨する．ヘッダがない場合は，受信したデータの冒頭からフレームとみなす． 受信されるフレーム長が受信前に判明している場合は， ヘッダがない場合のときと同様に，受信前（例えば DS_send_req_tlm_cmd 呼び出し前） に rx_frame_size_ を設定することで，固定長のように扱うことで対応することを推奨する． </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00302">302</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00286">286</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -670,7 +670,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>フレームサイズデータの型サイズ [Byte] 受信データが可変長の場合のみ使用される． 例えば uint8 なら 1， uint32 なら 4 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00311">311</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00295">295</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -688,7 +688,7 @@ DS_StreamConfig 連携図</div>
 
 <p>受信データのヘッダ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00289">289</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00273">273</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -705,7 +705,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>受信データのヘッダサイズ ヘッダがない場合は0に設定 この場合，基本的には固定長（ rx_frame_size が正）を使う． ヘッダがなく，可変長の場合は，受信前（例えば DS_send_req_tlm_cmd 呼び出し前） に rx_frame_size_ を設定することで固定長のように扱うことで対応する． また，初期化時の Validation を通すためにも，初期値は適切な正数にしておくこと </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00290">290</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00274">274</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -723,7 +723,7 @@ DS_StreamConfig 連携図</div>
 
 <p>フレーム送信状況 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00268">268</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00252">252</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -741,7 +741,7 @@ DS_StreamConfig 連携図</div>
 
 <p>テレメ途絶判定をするか？ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00321">321</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00305">305</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -759,7 +759,7 @@ DS_StreamConfig 連携図</div>
 
 <p>テレメ途絶判定の閾値 [ms] </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00322">322</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00306">306</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -777,7 +777,7 @@ DS_StreamConfig 連携図</div>
 
 <p>コマンドフレーム </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00281">281</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00265">265</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -794,7 +794,7 @@ DS_StreamConfig 連携図</div>
 </div><div class="memdoc">
 <p>コマンドフレームサイズ 送信データがない場合は 0 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00282">282</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00266">266</a> 行目に定義があります。</p>
 
 </div>
 </div>

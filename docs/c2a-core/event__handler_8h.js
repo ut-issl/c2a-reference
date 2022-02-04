@@ -7,6 +7,8 @@ var event__handler_8h =
     [ "EH_Log", "struct_e_h___log.html", "struct_e_h___log" ],
     [ "EH_LogTable", "struct_e_h___log_table.html", "struct_e_h___log_table" ],
     [ "EH_ElEventCounter", "struct_e_h___el_event_counter.html", "struct_e_h___el_event_counter" ],
+    [ "EH_ExecSettings", "struct_e_h___exec_settings.html", "struct_e_h___exec_settings" ],
+    [ "EH_ExecInfo", "struct_e_h___exec_info.html", "struct_e_h___exec_info" ],
     [ "EH_RegisterFromCmd", "struct_e_h___register_from_cmd.html", "struct_e_h___register_from_cmd" ],
     [ "EH_TlmInfo", "struct_e_h___tlm_info.html", "struct_e_h___tlm_info" ],
     [ "EventHandler", "struct_event_handler.html", "struct_event_handler" ],
@@ -14,6 +16,7 @@ var event__handler_8h =
     [ "EH_LOG_TLM_PAGE_MAX", "event__handler_8h.html#abc883d6e8e766c0e897a9ea02a8f91c1", null ],
     [ "EH_LOG_TLM_PAGE_SIZE", "event__handler_8h.html#a7e460f40efedae25b3700999ac394a43", null ],
     [ "EH_MAX_CHECK_EVENT_NUM_DEFAULT", "event__handler_8h.html#acef2d5f01db3bb9148c4f7aab98f4ef3", null ],
+    [ "EH_MAX_MULTI_LEVEL_NUM_DEFAULT", "event__handler_8h.html#a9fe21ec7b0208934823da3569d9235e6", null ],
     [ "EH_MAX_RESPONSE_NUM_DEFAULT", "event__handler_8h.html#af3a6caf6a080f64025ec5fd494d22b76", null ],
     [ "EH_MAX_RULE_NUM_OF_EL_ID_DUPLICATES", "event__handler_8h.html#a38c94c7d260553f0cc2c21e187557959", null ],
     [ "EH_RULE_MAX", "event__handler_8h.html#ad3b083bc8a1c8e59754fcc00e3efe727", null ],
@@ -37,6 +40,7 @@ var event__handler_8h =
       [ "EH_REGISTER_ACK_ILLEGAL_COUNT_THRESHOLD", "event__handler_8h.html#a85d43255132f8154481c589c260586bfae90dcdda5a1ea7aa75a6eb289df7b5ad", null ],
       [ "EH_REGISTER_ACK_ILLEGAL_BCT_ID", "event__handler_8h.html#a85d43255132f8154481c589c260586bfad462444448454bd73e962f14d128d352", null ],
       [ "EH_REGISTER_ACK_ILLEGAL_ACTIVE_FLAG", "event__handler_8h.html#a85d43255132f8154481c589c260586bfaea5373540db9a839d723d94135b6ad74", null ],
+      [ "EH_REGISTER_ACK_ILLEGAL_MULTI_LEVEL", "event__handler_8h.html#a85d43255132f8154481c589c260586bfa155b82387cdca403c81c0b378b30b1f0", null ],
       [ "EH_REGISTER_ACK_UNKNOWN_ERR", "event__handler_8h.html#a85d43255132f8154481c589c260586bfa7891a1162e6c126ba91b24112f290af0", null ]
     ] ],
     [ "EH_RESPONSE_CONDITION_TYPE", "event__handler_8h.html#adb22131c0151f084b29a29e479743e58", [
@@ -59,6 +63,7 @@ var event__handler_8h =
     [ "Cmd_EH_MATCH_EVENT_COUNTER_TO_EL", "event__handler_8h.html#a8582cf1dac7ac1a222fd06b9bf6e7049", null ],
     [ "Cmd_EH_REGISTER_RULE", "event__handler_8h.html#ae75a778dbd1a8e9336b0f8330a72627c", null ],
     [ "Cmd_EH_SET_MAX_CHECK_EVENT_NUM", "event__handler_8h.html#a29570665c21b2233eed461c475928fab", null ],
+    [ "Cmd_EH_SET_MAX_MULTI_LEVEL_NUM", "event__handler_8h.html#afd6b378704068eb31282444215793c4d", null ],
     [ "Cmd_EH_SET_MAX_RESPONSE_NUM", "event__handler_8h.html#ad022db9bb898bd4b8b92df519cf2f72d", null ],
     [ "Cmd_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM", "event__handler_8h.html#a1ba3d0fe5810a25729ed92eed4b2037d", null ],
     [ "Cmd_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM", "event__handler_8h.html#ae29fc2e9034674a21578e7488c58af1c", null ],

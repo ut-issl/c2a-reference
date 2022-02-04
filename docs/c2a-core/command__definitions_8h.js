@@ -98,6 +98,7 @@ var command__definitions_8h =
       [ "Cmd_CODE_EH_CLEAR_LOG", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa1c642d27f886dfd25fab9a57110a48c", null ],
       [ "Cmd_CODE_EH_SET_MAX_RESPONSE_NUM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abd59c6e71c62da29005ddd1b30742c3d", null ],
       [ "Cmd_CODE_EH_SET_MAX_CHECK_EVENT_NUM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a22c7f1013cb36bb1eb2e64cb415290e0", null ],
+      [ "Cmd_CODE_EH_SET_MAX_MULTI_LEVEL_NUM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a30e00205bc5ebec62b820a41addda522", null ],
       [ "Cmd_CODE_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aaabc0ec29186ef79ed335f030bcef2c8", null ],
       [ "Cmd_CODE_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac2123c60aedc43425b968a68489764c1", null ],
       [ "Cmd_CODE_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1d615bc0bb7070383da6023af7b13eed", null ],
