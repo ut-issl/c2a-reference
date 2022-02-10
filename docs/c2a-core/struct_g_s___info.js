@@ -4,6 +4,7 @@ var struct_g_s___info =
     [ "bc_rec_status", "struct_g_s___info.html#aa41bbbbb5bd28410f84e5188d36f7dc7", null ],
     [ "bd_rec_status", "struct_g_s___info.html#aaf580738df69224d6b21fd4c32f0399d", null ],
     [ "cmd_ack", "struct_g_s___info.html#aa3adfb37079715aaa166b2db8c19915b", null ],
+    [ "last_dest_type", "struct_g_s___info.html#a66548199c39477bdbef152c9b4743230", null ],
     [ "last_rec_tcf_type", "struct_g_s___info.html#a3531094656f077b4ea20ed73d734c938", null ],
     [ "last_rec_time", "struct_g_s___info.html#a1413cb65158902fecd51e64ecf6a6ddb", null ],
     [ "rec_status", "struct_g_s___info.html#afacffaa74d9cf687dab2f18dceaa7e0a", null ],

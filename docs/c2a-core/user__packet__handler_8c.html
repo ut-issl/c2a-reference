@@ -120,13 +120,13 @@ user_packet_handler.c の依存先関係図:</div>
 <tr class="memitem:a4b0723acb8a522d6f5a481a679f9be10"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a4b0723acb8a522d6f5a481a679f9be10">PH_add_tobc_cmd_</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="separator:a4b0723acb8a522d6f5a481a679f9be10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc2a18728b408dce5756d4910d4cf67f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#afc2a18728b408dce5756d4910d4cf67f">PH_user_init</a> (void)</td></tr>
-<tr class="memdesc:afc2a18728b408dce5756d4910d4cf67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHのユーザー固有部初期化処理  <a href="user__packet__handler_8c.html#afc2a18728b408dce5756d4910d4cf67f">[詳解]</a><br /></td></tr>
+<tr class="memdesc:afc2a18728b408dce5756d4910d4cf67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PH のユーザー固有部初期化処理  <a href="user__packet__handler_8c.html#afc2a18728b408dce5756d4910d4cf67f">[詳解]</a><br /></td></tr>
 <tr class="separator:afc2a18728b408dce5756d4910d4cf67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ceb9e37114f6c81c6872ec90dd2a39d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a6ceb9e37114f6c81c6872ec90dd2a39d">PH_user_analyze_cmd</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="memdesc:a6ceb9e37114f6c81c6872ec90dd2a39d"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHのanalyze_cmd_のユーザー処理関数  <a href="user__packet__handler_8c.html#a6ceb9e37114f6c81c6872ec90dd2a39d">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a6ceb9e37114f6c81c6872ec90dd2a39d"><td class="mdescLeft">&#160;</td><td class="mdescRight">PH の analyze_cmd_ のユーザー処理関数  <a href="user__packet__handler_8c.html#a6ceb9e37114f6c81c6872ec90dd2a39d">[詳解]</a><br /></td></tr>
 <tr class="separator:a6ceb9e37114f6c81c6872ec90dd2a39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c3c644313071db44127bc7a90be4569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a2c3c644313071db44127bc7a90be4569">PH_user_cmd_router</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="memdesc:a2c3c644313071db44127bc7a90be4569"><td class="mdescLeft">&#160;</td><td class="mdescRight">PHのcmd_router_のユーザー処理関数  <a href="user__packet__handler_8c.html#a2c3c644313071db44127bc7a90be4569">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a2c3c644313071db44127bc7a90be4569"><td class="mdescLeft">&#160;</td><td class="mdescRight">PH の cmd_router_ のユーザー処理関数  <a href="user__packet__handler_8c.html#a2c3c644313071db44127bc7a90be4569">[詳解]</a><br /></td></tr>
 <tr class="separator:a2c3c644313071db44127bc7a90be4569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -282,11 +282,11 @@ user_packet_handler.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>PHのanalyze_cmd_のユーザー処理関数 </p>
-<pre class="fragment">    Coreの処理より優先される
-    C2Aを搭載したコンポのキュー（GSC，RTC，TLC，BC）に即座に直接追加される．
-    正確には，add_rt_cmd_の送信先版を作り，そこにキューイングされ，DI (dispatcher) によって回収される．
-    つまり，本OBCにとってはRTCだが，転送対象OBCにとっては各種Cmd扱いなCmdを転送する処理
+<p>PH の analyze_cmd_ のユーザー処理関数 </p>
+<pre class="fragment">    Core の処理より優先される
+    C2A を搭載したコンポのキュー（GSC，RTC，TLC，BC）に即座に直接追加される．
+    正確には， add_rt_cmd_ の送信先版を作り，そこにキューイングされ，DI (dispatcher) によって回収される．
+    つまり，本 OBC にとっては RTC だが，転送対象 OBC にとっては各種 Cmd 扱いな Cmd を転送する処理
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">packet</td><td>CCP </td></tr>
@@ -296,8 +296,8 @@ user_packet_handler.c の依存先関係図:</div>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
     <tr><td class="paramname">PH_FORWARDED</td><td>無事に転送するキューに追加された </td></tr>
-    <tr><td class="paramname">PH_PL_LIST_FULL</td><td>PL LIST FULL </td></tr>
-    <tr><td class="paramname">PH_FORWARDED以外（PH_UNKNOWNを想定）</td><td>ユーザー処理に引っかからなかった場合．Core側の処理に回される </td></tr>
+    <tr><td class="paramname">PH_ACK_PL_LIST_FULL</td><td>PL LIST FULL </td></tr>
+    <tr><td class="paramname">PH_ACK_SUCCESS</td><td>以外（PH_ACK_UNKNOWN を想定）: ユーザー処理に引っかからなかった場合．Core 側の処理に回される </td></tr>
   </table>
   </dd>
 </dl>
@@ -334,10 +334,10 @@ user_packet_handler.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>PHのcmd_router_のユーザー処理関数 </p>
-<pre class="fragment">    C2Aを搭載したコンポにCmdが転送される．
-    つまり，転送対象OBCにとってはRTC扱いになる
-    ここからDriverを叩いて送信まで行うことになる（実行時間はcmdExecと同じだけ許容されているのでOK）
+<p>PH の cmd_router_ のユーザー処理関数 </p>
+<pre class="fragment">    C2A を搭載したコンポに Cmd が転送される．
+    つまり，転送対象 OBC にとっては RTC 扱いになる
+    ここから Driver を叩いて送信まで行うことになる（実行時間は cmdExec と同じだけ許容されているので OK）
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">packet</td><td>CCP </td></tr>
@@ -347,7 +347,7 @@ user_packet_handler.c の依存先関係図:</div>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
     <tr><td class="paramname">CCP_EXEC_SUCCESS</td><td>など: 無事に転送された．転送先の結果を返す </td></tr>
-    <tr><td class="paramname">CCP_EXEC_ROUTING_FAILED</td><td>転送失敗（詳細エラーはDriverSuperを参照） </td></tr>
+    <tr><td class="paramname">CCP_EXEC_ROUTING_FAILED</td><td>転送失敗（詳細エラーは <a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> を参照） </td></tr>
   </table>
   </dd>
 </dl>
@@ -384,8 +384,8 @@ user_packet_handler.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>PHのユーザー固有部初期化処理 </p>
-<pre class="fragment">    PacketListの初期化を行う
+<p>PH のユーザー固有部初期化処理 </p>
+<pre class="fragment">    PacketList の初期化を行う
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td></td></tr>
