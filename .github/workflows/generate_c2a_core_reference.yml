@@ -109,6 +109,7 @@ jobs:
           git branch -a
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -am "update doxygen: C2A Core"
+          git add .
+          git commit -m "update doxygen: C2A Core"
           git push origin
           echo "New reference is deployed!"
