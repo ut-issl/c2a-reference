@@ -45,6 +45,7 @@ jobs:
         run: |
           rm -rf ./c2a-core
           mkdir ./c2a-core
+          git restore ./c2a-core/status_updated.json
 
       - name: build
         working-directory: ./temp/c2a-core/Examples/minimum_user_for_s2e
