@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"struct_s_p_i___config.html#af382a592f64507437e0716bd859c41ae":[0,0,83,1],
+"struct_s_p_w_i_r_e___config.html":[0,0,84],
 "struct_s_p_w_i_r_e___config.html#a3ae008578831aac74465a659c2297d37":[0,0,84,0],
 "struct_s_p_w_i_r_e___config.html#a5c6797ebce33efb74c3e7ebbea1fc610":[0,0,84,2],
 "struct_s_p_w_i_r_e___config.html#ae9496f9d9ae131271638e6701b71e91b":[0,0,84,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "telemetry__generator_8h.html":[1,0,0,0,5,25],
 "telemetry__generator_8h.html#a49a2e0186e9cd2d40d667048b871911f":[1,0,0,0,5,25,0],
 "telemetry__generator_8h_source.html":[1,0,0,0,5,25],
-"telemetry__manager_8c.html":[1,0,0,0,0,14],
-"telemetry__manager_8c.html#a0149b05e84bcce79dc6b019d5bb99ce1":[1,0,0,0,0,14,11],
-"telemetry__manager_8c.html#a0b48756e83b551349cf04c30585b1cbf":[1,0,0,0,0,14,16]
+"telemetry__manager_8c.html":[1,0,0,0,0,14]
 };

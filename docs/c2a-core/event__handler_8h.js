@@ -77,6 +77,7 @@ var event__handler_8h =
     [ "EH_clear_rule_counter", "event__handler_8h.html#a7ef25ddb66d3268593fe7b80e71e59ed", null ],
     [ "EH_clear_rule_counter_by_event", "event__handler_8h.html#a4f18856b3535342c3b93b478d78ad832", null ],
     [ "EH_execute", "event__handler_8h.html#a76ddd224739890733cbd318e2d5c015b", null ],
+    [ "EH_get_rule_is_active", "event__handler_8h.html#a8cf13743a5a71812d047cdb547b78b4c", null ],
     [ "EH_get_the_nth_log_from_the_latest", "event__handler_8h.html#a29ed902053a6e846de7d4fd0e919369c", null ],
     [ "EH_inactivate_rule", "event__handler_8h.html#addeafcef3304c68bbb5d46ba92992307", null ],
     [ "EH_inactivate_rule_for_multi_level", "event__handler_8h.html#af099854359b045025e9887956c19769f", null ],
