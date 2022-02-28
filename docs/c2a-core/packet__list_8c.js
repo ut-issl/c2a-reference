@@ -13,6 +13,7 @@ var packet__list_8c =
     [ "PL_get_head", "packet__list_8c.html#a2b6b5b3ed753070e0ef0b14556311263", null ],
     [ "PL_get_next", "packet__list_8c.html#a5f57e8f9c5e997c46938d70a2fb1b39b", null ],
     [ "PL_get_packet_size", "packet__list_8c.html#a545eaf48e9ef5ade04668d4b3f7eadbe", null ],
+    [ "PL_get_packet_type", "packet__list_8c.html#a851b28b14c9bdadc9dc9e9b4bc8e5681", null ],
     [ "PL_get_tail", "packet__list_8c.html#a7b5027b1d6d804ce0c4b650ef214df53", null ],
     [ "PL_get_total_node_num", "packet__list_8c.html#a4f366746f6a795cacc1d0459827456d4", null ],
     [ "PL_initialize", "packet__list_8c.html#ac14f05103e3a110380db3720e971c1dc", null ],

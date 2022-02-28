@@ -1,5 +1,12 @@
 var NAVTREEINDEX14 =
 {
+"struct_s_p_i___config.html":[0,0,83],
+"struct_s_p_i___config.html#a2574039392c627ce4ce6dd9a8f2f3e8e":[0,0,83,5],
+"struct_s_p_i___config.html#a578b27e8f823706f9871188829426a90":[0,0,83,6],
+"struct_s_p_i___config.html#a5cb22c5a78ab07810c47792053f7bad9":[0,0,83,3],
+"struct_s_p_i___config.html#a9ce595b3296a1dd2cfd6e8bf3f9360d1":[0,0,83,4],
+"struct_s_p_i___config.html#aa64f4aec72da878914de77663cb76bb2":[0,0,83,0],
+"struct_s_p_i___config.html#aa9dcc1909bc711495d373c8c291f8084":[0,0,83,2],
 "struct_s_p_i___config.html#af382a592f64507437e0716bd859c41ae":[0,0,83,1],
 "struct_s_p_w_i_r_e___config.html":[0,0,84],
 "struct_s_p_w_i_r_e___config.html#a3ae008578831aac74465a659c2297d37":[0,0,84,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX14 =
 "telemetry__frame__params_8h.html#a811b7327fbc540efe5a83fc418caeb1a":[1,0,0,1,4,5,7,0],
 "telemetry__frame__params_8h.html#a8245d207c475c221a0091a8ec9d37c5b":[1,0,0,1,4,5,7,2],
 "telemetry__frame__params_8h_source.html":[1,0,0,1,4,5,7],
-"telemetry__generator_8c.html":[1,0,0,0,5,24],
-"telemetry__generator_8c.html#a3333d79507f2a1f9ee65fc1d4f1ff515":[1,0,0,0,5,24,1],
-"telemetry__generator_8c.html#a49a2e0186e9cd2d40d667048b871911f":[1,0,0,0,5,24,0],
-"telemetry__generator_8c_source.html":[1,0,0,0,5,24],
-"telemetry__generator_8h.html":[1,0,0,0,5,25],
-"telemetry__generator_8h.html#a49a2e0186e9cd2d40d667048b871911f":[1,0,0,0,5,25,0],
-"telemetry__generator_8h_source.html":[1,0,0,0,5,25],
-"telemetry__manager_8c.html":[1,0,0,0,0,14]
+"telemetry__generator_8c.html":[1,0,0,0,5,24]
 };

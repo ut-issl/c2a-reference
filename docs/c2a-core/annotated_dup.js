@@ -30,7 +30,7 @@ var annotated_dup =
     [ "CA_PackedParamSizeInfo", "struct_c_a___packed_param_size_info.html", "struct_c_a___packed_param_size_info" ],
     [ "CCSDS_Config", "struct_c_c_s_d_s___config.html", "struct_c_c_s_d_s___config" ],
     [ "CCSDS_Info", "struct_c_c_s_d_s___info.html", "struct_c_c_s_d_s___info" ],
-    [ "CDIS_EXEC_INFO", "struct_c_d_i_s___e_x_e_c___i_n_f_o.html", "struct_c_d_i_s___e_x_e_c___i_n_f_o" ],
+    [ "CDIS_ExecInfo", "struct_c_d_i_s___exec_info.html", "struct_c_d_i_s___exec_info" ],
     [ "CmdSpacePacket", "struct_cmd_space_packet.html", "struct_cmd_space_packet" ],
     [ "CommandAnalyze", "struct_command_analyze.html", "struct_command_analyze" ],
     [ "CommandDispatcher", "struct_command_dispatcher.html", "struct_command_dispatcher" ],

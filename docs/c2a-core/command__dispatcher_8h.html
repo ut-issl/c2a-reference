@@ -88,6 +88,9 @@ $(document).ready(function(){initNavTree('command__dispatcher_8h.html',''); init
 <div class="title">command_dispatcher.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>各種コマンドの実行管理  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="obc__time_8h_source.html">../System/TimeManager/obc_time.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="common__cmd__packet_8h_source.html">common_cmd_packet.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="packet__list_8h_source.html">packet_list.h</a>&quot;</code><br />
@@ -109,23 +112,33 @@ command_dispatcher.h の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_d_i_s___e_x_e_c___i_n_f_o.html">CDIS_EXEC_INFO</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_d_i_s___exec_info.html">CDIS_ExecInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンド実行情報  <a href="struct_c_d_i_s___exec_info.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_command_dispatcher.html" title="CommandDispatcher の Info 構造体">CommandDispatcher</a> の Info 構造体  <a href="struct_command_dispatcher.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aea1a9d0324c0ffddf955f794b7e74599"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__dispatcher_8h.html#aea1a9d0324c0ffddf955f794b7e74599">CDIS_init</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pli)</td></tr>
-<tr class="separator:aea1a9d0324c0ffddf955f794b7e74599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65fc5bdc13b85016bdfe85d8191b7681"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__dispatcher_8h.html#a65fc5bdc13b85016bdfe85d8191b7681">CDIS_init</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memdesc:a65fc5bdc13b85016bdfe85d8191b7681"><td class="mdescLeft">&#160;</td><td class="mdescRight">CDIS の初期化と取得  <a href="command__dispatcher_8h.html#a65fc5bdc13b85016bdfe85d8191b7681">[詳解]</a><br /></td></tr>
+<tr class="separator:a65fc5bdc13b85016bdfe85d8191b7681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90617acff33923f51c212b8e3034712c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__dispatcher_8h.html#a90617acff33923f51c212b8e3034712c">CDIS_dispatch_command</a> (<a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> *cdis)</td></tr>
+<tr class="memdesc:a90617acff33923f51c212b8e3034712c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CDIS に登録されているコマンドキューからコマンドを実行  <a href="command__dispatcher_8h.html#a90617acff33923f51c212b8e3034712c">[詳解]</a><br /></td></tr>
 <tr class="separator:a90617acff33923f51c212b8e3034712c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4692fc26de6c638d9f984cae66e8dbcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__dispatcher_8h.html#a4692fc26de6c638d9f984cae66e8dbcd">CDIS_clear_command_list</a> (<a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> *cdis)</td></tr>
+<tr class="memdesc:a4692fc26de6c638d9f984cae66e8dbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CDIS に登録されているコマンドキューからコマンドを削除  <a href="command__dispatcher_8h.html#a4692fc26de6c638d9f984cae66e8dbcd">[詳解]</a><br /></td></tr>
 <tr class="separator:a4692fc26de6c638d9f984cae66e8dbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75776a41a72200cf19c52b3489dd639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command__dispatcher_8h.html#ae75776a41a72200cf19c52b3489dd639">CDIS_clear_error_status</a> (<a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> *cdis)</td></tr>
+<tr class="memdesc:ae75776a41a72200cf19c52b3489dd639"><td class="mdescLeft">&#160;</td><td class="mdescRight">CDIS に登録されているコマンドキューのコマンド実行エラー情報を削除  <a href="command__dispatcher_8h.html#ae75776a41a72200cf19c52b3489dd639">[詳解]</a><br /></td></tr>
 <tr class="separator:ae75776a41a72200cf19c52b3489dd639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>各種コマンドの実行管理 </p>
+
+<p class="definition"> <a class="el" href="command__dispatcher_8h_source.html">command_dispatcher.h</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
 <a id="a4692fc26de6c638d9f984cae66e8dbcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4692fc26de6c638d9f984cae66e8dbcd">&#9670;&nbsp;</a></span>CDIS_clear_command_list()</h2>
 
@@ -142,7 +155,16 @@ command_dispatcher.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00109">109</a> 行目に定義があります。</p>
+<p>CDIS に登録されているコマンドキューからコマンドを削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cdis</td><td>参照する CDIS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00146">146</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -174,11 +196,20 @@ command_dispatcher.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00115">115</a> 行目に定義があります。</p>
+<p>CDIS に登録されているコマンドキューのコマンド実行エラー情報を削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cdis</td><td>参照する CDIS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00154">154</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="command__dispatcher_8h_ae75776a41a72200cf19c52b3489dd639_cgraph.svg" width="460" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="command__dispatcher_8h_ae75776a41a72200cf19c52b3489dd639_cgraph.svg" width="550" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -206,7 +237,16 @@ command_dispatcher.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00046">46</a> 行目に定義があります。</p>
+<p>CDIS に登録されているコマンドキューからコマンドを実行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cdis</td><td>参照する CDIS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00087">87</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -222,8 +262,8 @@ command_dispatcher.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="aea1a9d0324c0ffddf955f794b7e74599"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea1a9d0324c0ffddf955f794b7e74599">&#9670;&nbsp;</a></span>CDIS_init()</h2>
+<a id="a65fc5bdc13b85016bdfe85d8191b7681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65fc5bdc13b85016bdfe85d8191b7681">&#9670;&nbsp;</a></span>CDIS_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,23 +272,33 @@ command_dispatcher.h の依存先関係図:</div>
           <td class="memname"><a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> CDIS_init </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
-          <td class="paramname"><em>pli</em></td><td>)</td>
+          <td class="paramname"><em>pl</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00010">10</a> 行目に定義があります。</p>
+<p>CDIS の初期化と取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>各種 <a class="el" href="struct_command_dispatcher.html" title="CommandDispatcher の Info 構造体">CommandDispatcher</a> App (Realtime Command Dispatcher とか) でこれを呼び，使う </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pl</td><td>この CDIS と紐付けるコマンドキューの <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>初期化された <a class="el" href="struct_command_dispatcher.html" title="CommandDispatcher の Info 構造体">CommandDispatcher</a> </dd></dl>
+
+<p class="definition"> <a class="el" href="command__dispatcher_8c_source.html">command_dispatcher.c</a> の <a class="el" href="command__dispatcher_8c_source.html#l00036">36</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="command__dispatcher_8h_aea1a9d0324c0ffddf955f794b7e74599_cgraph.svg" width="388" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="command__dispatcher_8h_a65fc5bdc13b85016bdfe85d8191b7681_cgraph.svg" width="1167" height="327"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="command__dispatcher_8h_aea1a9d0324c0ffddf955f794b7e74599_icgraph.svg" width="1395" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="command__dispatcher_8h_a65fc5bdc13b85016bdfe85d8191b7681_icgraph.svg" width="1395" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

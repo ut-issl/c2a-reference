@@ -34,6 +34,7 @@ var packet__list_8h =
     [ "PL_get_head", "packet__list_8h.html#a8940e0130b272005921972f331cc6cc1", null ],
     [ "PL_get_next", "packet__list_8h.html#a5f57e8f9c5e997c46938d70a2fb1b39b", null ],
     [ "PL_get_packet_size", "packet__list_8h.html#a545eaf48e9ef5ade04668d4b3f7eadbe", null ],
+    [ "PL_get_packet_type", "packet__list_8h.html#a851b28b14c9bdadc9dc9e9b4bc8e5681", null ],
     [ "PL_get_tail", "packet__list_8h.html#a2e8740e7602d37d97f4aea46152cf50e", null ],
     [ "PL_get_total_node_num", "packet__list_8h.html#a4f366746f6a795cacc1d0459827456d4", null ],
     [ "PL_initialize", "packet__list_8h.html#ac14f05103e3a110380db3720e971c1dc", null ],
