@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/TlmCmd/NormalBlockCommandDefinition/nbc_test_bcl.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('nbc__test__bcl_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">nbc_test_bcl.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="nbc__test__bcl_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nbc__header_8h.html">nbc_header.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__loader_8h.html">src_core/TlmCmd/block_command_loader.h</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../command_definitions.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../block_command_definitions.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="nbc__test__bcl_8c.html#aacbd7fc1d4d5ab306e6dc7c0f3e22ece">   13</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="nbc__test__bcl_8c.html#aacbd7fc1d4d5ab306e6dc7c0f3e22ece">BCL_load_test_bcl</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="block__command__loader_8c.html#aa9e8bc0a1b0bb6c9028156288afcbebc">BCL_tool_prepare_param_uint8</a>(1);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="block__command__loader_8c.html#aa9e8bc0a1b0bb6c9028156288afcbebc">BCL_tool_prepare_param_uint8</a>(22);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="block__command__loader_8c.html#a4dabefbcf147b5f3e143df763c7f92a9">BCL_tool_prepare_param_uint16</a>(333);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="block__command__loader_8c.html#adc8e2381948a082e62d72d9971fc203f">BCL_tool_register_cmd</a>(1, <a class="code" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7eb4f7297603540c13bba3ab2c3baa3">Cmd_CODE_MM_SET_TRANSITION_TABLE</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="block__command__loader_8c.html#aa9e8bc0a1b0bb6c9028156288afcbebc">BCL_tool_prepare_param_uint8</a>(44);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="block__command__loader_8c.html#a300daae3b3ad2b7c6b091d8ec34dc906">BCL_tool_prepare_param_uint32</a>(555555);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="block__command__loader_8c.html#adc8e2381948a082e62d72d9971fc203f">BCL_tool_register_cmd</a>(2, <a class="code" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7e668b14091c0c94dd70a16cb4b2b929">Cmd_CODE_TLCD_CLEAR_TIMELINE_AT</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="block__command__loader_8c.html#af816089e95cd4e3a51d087d36b1de211">BCL_tool_prepare_param_double</a>(12345.6789);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="block__command__loader_8c.html#adc8e2381948a082e62d72d9971fc203f">BCL_tool_register_cmd</a>(3, <a class="code" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a3b06377968db6eda6d12cb7f60b9dc87">Cmd_CODE_TMGR_SET_UTL_UNIXTIME_EPOCH</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="block__command__loader_8c.html#af816089e95cd4e3a51d087d36b1de211">BCL_tool_prepare_param_double</a>(-12345.6789);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="block__command__loader_8c.html#adc8e2381948a082e62d72d9971fc203f">BCL_tool_register_cmd</a>(4, <a class="code" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a3b06377968db6eda6d12cb7f60b9dc87">Cmd_CODE_TMGR_SET_UTL_UNIXTIME_EPOCH</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma section</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anbc__header_8h_html"><div class="ttname"><a href="nbc__header_8h.html">nbc_header.h</a></div></div>
+<div class="ttc" id="ablock__command__loader_8c_html_a300daae3b3ad2b7c6b091d8ec34dc906"><div class="ttname"><a href="block__command__loader_8c.html#a300daae3b3ad2b7c6b091d8ec34dc906">BCL_tool_prepare_param_uint32</a></div><div class="ttdeci">void BCL_tool_prepare_param_uint32(uint32_t val)</div><div class="ttdoc">コマンド登録前にコマンドの引数としてuint32のパラメータを追加する</div><div class="ttdef"><b>Definition:</b> <a href="block__command__loader_8c_source.html#l00174">block_command_loader.c:174</a></div></div>
+<div class="ttc" id="ablock__command__loader_8c_html_af816089e95cd4e3a51d087d36b1de211"><div class="ttname"><a href="block__command__loader_8c.html#af816089e95cd4e3a51d087d36b1de211">BCL_tool_prepare_param_double</a></div><div class="ttdeci">void BCL_tool_prepare_param_double(double val)</div><div class="ttdoc">コマンド登録前にコマンドの引数としてdoubleのパラメータを追加する</div><div class="ttdef"><b>Definition:</b> <a href="block__command__loader_8c_source.html#l00204">block_command_loader.c:204</a></div></div>
+<div class="ttc" id="acommand__definitions_8h_html_a6639ec25e74f304060e83582ee67ccc3af7eb4f7297603540c13bba3ab2c3baa3"><div class="ttname"><a href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7eb4f7297603540c13bba3ab2c3baa3">Cmd_CODE_MM_SET_TRANSITION_TABLE</a></div><div class="ttdeci">@ Cmd_CODE_MM_SET_TRANSITION_TABLE</div><div class="ttdef"><b>Definition:</b> <a href="command__definitions_8h_source.html#l00024">command_definitions.h:24</a></div></div>
+<div class="ttc" id="acommand__definitions_8h_html_a6639ec25e74f304060e83582ee67ccc3a7e668b14091c0c94dd70a16cb4b2b929"><div class="ttname"><a href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7e668b14091c0c94dd70a16cb4b2b929">Cmd_CODE_TLCD_CLEAR_TIMELINE_AT</a></div><div class="ttdeci">@ Cmd_CODE_TLCD_CLEAR_TIMELINE_AT</div><div class="ttdef"><b>Definition:</b> <a href="command__definitions_8h_source.html#l00030">command_definitions.h:30</a></div></div>
+<div class="ttc" id="ablock__command__loader_8c_html_aa9e8bc0a1b0bb6c9028156288afcbebc"><div class="ttname"><a href="block__command__loader_8c.html#aa9e8bc0a1b0bb6c9028156288afcbebc">BCL_tool_prepare_param_uint8</a></div><div class="ttdeci">void BCL_tool_prepare_param_uint8(uint8_t val)</div><div class="ttdoc">コマンド登録前にコマンドの引数としてuint8のパラメータを追加する</div><div class="ttdef"><b>Definition:</b> <a href="block__command__loader_8c_source.html#l00150">block_command_loader.c:150</a></div></div>
+<div class="ttc" id="anbc__test__bcl_8c_html_aacbd7fc1d4d5ab306e6dc7c0f3e22ece"><div class="ttname"><a href="nbc__test__bcl_8c.html#aacbd7fc1d4d5ab306e6dc7c0f3e22ece">BCL_load_test_bcl</a></div><div class="ttdeci">void BCL_load_test_bcl(void)</div><div class="ttdef"><b>Definition:</b> <a href="nbc__test__bcl_8c_source.html#l00013">nbc_test_bcl.c:13</a></div></div>
+<div class="ttc" id="acommand__definitions_8h_html_a6639ec25e74f304060e83582ee67ccc3a3b06377968db6eda6d12cb7f60b9dc87"><div class="ttname"><a href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a3b06377968db6eda6d12cb7f60b9dc87">Cmd_CODE_TMGR_SET_UTL_UNIXTIME_EPOCH</a></div><div class="ttdeci">@ Cmd_CODE_TMGR_SET_UTL_UNIXTIME_EPOCH</div><div class="ttdef"><b>Definition:</b> <a href="command__definitions_8h_source.html#l00014">command_definitions.h:14</a></div></div>
+<div class="ttc" id="ablock__command__loader_8c_html_a4dabefbcf147b5f3e143df763c7f92a9"><div class="ttname"><a href="block__command__loader_8c.html#a4dabefbcf147b5f3e143df763c7f92a9">BCL_tool_prepare_param_uint16</a></div><div class="ttdeci">void BCL_tool_prepare_param_uint16(uint16_t val)</div><div class="ttdoc">コマンド登録前にコマンドの引数としてuint16のパラメータを追加する</div><div class="ttdef"><b>Definition:</b> <a href="block__command__loader_8c_source.html#l00162">block_command_loader.c:162</a></div></div>
+<div class="ttc" id="ablock__command__loader_8c_html_adc8e2381948a082e62d72d9971fc203f"><div class="ttname"><a href="block__command__loader_8c.html#adc8e2381948a082e62d72d9971fc203f">BCL_tool_register_cmd</a></div><div class="ttdeci">void BCL_tool_register_cmd(cycle_t ti, CMD_CODE cmd_id)</div><div class="ttdoc">ブロックコマンドの最後にコマンドを追加する</div><div class="ttdef"><b>Definition:</b> <a href="block__command__loader_8c_source.html#l00069">block_command_loader.c:69</a></div></div>
+<div class="ttc" id="ablock__command__loader_8h_html"><div class="ttname"><a href="block__command__loader_8h.html">block_command_loader.h</a></div><div class="ttdoc">ブロックコマンド登録関連のユーティリティ</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_8db6de9170c801ae5a17095202f7349c.html">TlmCmd</a></li><li class="navelem"><a class="el" href="dir_e3be078f6841cbb031deba7e61c0defc.html">NormalBlockCommandDefinition</a></li><li class="navelem"><a class="el" href="nbc__test__bcl_8c.html">nbc_test_bcl.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -21,6 +21,8 @@ var app__registry_8h =
       [ "AR_APP_DBG_FLUSH_SCREEN", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a4dbe477cc70a46787239740706236f31", null ],
       [ "AR_APP_DBG_PRINT_TIMESTAMP", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a0b9d50a967c7df55a1530801d2580c49", null ],
       [ "AR_APP_DBG_PRINT_CMD_STATUS", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8ac826a81ed325002a60ccb4b30b7afac3", null ],
+      [ "AR_APP_DBG_PRINT_EVENT_LOGGER0", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8aa0639bfe6d9d4a60118122e013b5e213", null ],
+      [ "AR_APP_DBG_PRINT_EVENT_LOGGER1", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a78921edcaddbe0095e074642d16ebd9f", null ],
       [ "AR_APP_DBG_PRINT_GIT_REV", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a3dbc6cd99a1d0c609bd7329ca2ed966d", null ]
     ] ],
     [ "AR_load_initial_settings", "app__registry_8h.html#ab944b1d78a41e427bc2ed57f9c4e9534", null ]
