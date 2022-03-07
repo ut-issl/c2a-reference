@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"event__logger_8h.html#ab36cb0758508d4118e5d83d68fb4f213":[1,0,0,0,4,2,3,10],
+"event__logger_8h.html#abdfe04fdaa799e7198b4587de7ecf671":[1,0,0,0,4,2,3,40],
+"event__logger_8h.html#abeec85a9222f596b2ff75f679b3f5442":[1,0,0,0,4,2,3,62],
 "event__logger_8h.html#ac186c8e31cafc6dbb627573470ebe405":[1,0,0,0,4,2,3,43],
 "event__logger_8h.html#ac5e9c3b7d0def1c166f028712b351a0e":[1,0,0,0,4,2,3,63],
 "event__logger_8h.html#acbfe5cde6286f88550a76ebf005dbf12":[1,0,0,0,4,2,3,57],
@@ -153,8 +156,8 @@ var NAVTREEINDEX8 =
 "git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b":[1,0,0,1,3,1,1],
 "git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64":[1,0,0,1,3,1,2],
 "git__revision_8h_source.html":[1,0,0,1,3,1],
-"globals.html":[1,1,0],
 "globals.html":[1,1,0,0],
+"globals.html":[1,1,0],
 "globals_b.html":[1,1,0,1],
 "globals_c.html":[1,1,0,2],
 "globals_d.html":[1,1,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "gs_8c.html#a553d2d0a7400d342a82530f0008095a7":[1,0,0,1,1,1,0,11],
 "gs_8c.html#a71a6268f1b467c60429c671e47e51e1d":[1,0,0,1,1,1,0,5],
 "gs_8c.html#a77d8b5e22b2b2615c9046060e50a3308":[1,0,0,1,1,1,0,8],
-"gs_8c.html#a897a9fee7b4a091be385f6b39892277e":[1,0,0,1,1,1,0,3],
-"gs_8c.html#a90448eade5bdede9b51cd88f67b8de31":[1,0,0,1,1,1,0,4],
-"gs_8c.html#a940de224a6d318a15603b46983cf69ea":[1,0,0,1,1,1,0,9],
-"gs_8c.html#ab1622f3e1df5cae28c4dbbab634746e2":[1,0,0,1,1,1,0,1]
+"gs_8c.html#a897a9fee7b4a091be385f6b39892277e":[1,0,0,1,1,1,0,3]
 };

@@ -89,33 +89,39 @@ $(document).ready(function(){initNavTree('packet__handler__params_8h_source.html
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef PACKET_HANDLER_PARAMS_H_</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define PACKET_HANDLER_PARAMS_H_</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#undef TL_TLM_PAGE_SIZE</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#undef TL_TLM_PAGE_MAX</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// DR の利用の有無で必要な PL が変わるので， include する</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../Applications/data_recorder_define.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#undef PH_GS_CMD_LIST_MAX</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#undef PH_RT_CMD_LIST_MAX</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#undef PH_TL0_CMD_LIST_MAX</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#undef PH_TL1_CMD_LIST_MAX</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#undef PH_TL2_CMD_LIST_MAX</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#undef PH_MS_TLM_LIST_MAX</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#undef PH_ST_TLM_LIST_MAX</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#undef PH_RP_TLM_LIST_MAX</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#abcf6a9ed2afdeb914ba3172f82726bd6">   20</a></span>&#160;<span class="preprocessor">#define TL_TLM_PAGE_SIZE      (32)</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#adb37595b65ee55fd6cf2a92540af768c">   21</a></span>&#160;<span class="preprocessor">#define TL_TLM_PAGE_MAX       (8)</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a2e088a9bdaab5a7b7aa554bce8b1c2e8">   23</a></span>&#160;<span class="preprocessor">#define PH_GS_CMD_LIST_MAX       (8)</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a6fa271c1d8fadf98a390a0bdfff55177">   24</a></span>&#160;<span class="preprocessor">#define PH_RT_CMD_LIST_MAX       (32)</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a8748702094720d63e7a8f2581c8564c8">   25</a></span>&#160;<span class="preprocessor">#define PH_TL0_CMD_LIST_MAX      (TL_TLM_PAGE_SIZE * TL_TLM_PAGE_MAX)   // コメント追加（2019/08/19）</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                                        <span class="comment">// これが最長じゃないといけない</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                                                        <span class="comment">// TLCD_tl_list_for_tlmの長さがこれなので！！</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a4c59733775b0826a0897d1100591c31f">   28</a></span>&#160;<span class="preprocessor">#define PH_TL1_CMD_LIST_MAX      (TL_TLM_PAGE_SIZE * 4)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a39854143bf64127ff8558b8351c9a7ec">   29</a></span>&#160;<span class="preprocessor">#define PH_TL2_CMD_LIST_MAX      (TL_TLM_PAGE_SIZE * 4)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#ae660fbf8560d1889dba8bb2d3b1c6af4">   30</a></span>&#160;<span class="preprocessor">#define PH_MS_TLM_LIST_MAX       (16)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#ae132ad78a3b076d67784a327a35a6e13">   31</a></span>&#160;<span class="preprocessor">#define PH_ST_TLM_LIST_MAX       (16)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a0fd8fdd3bdde83841cc51d36f0a52276">   32</a></span>&#160;<span class="preprocessor">#define PH_RP_TLM_LIST_MAX       (16)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#undef TL_TLM_PAGE_SIZE</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#undef TL_TLM_PAGE_MAX</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#undef PH_GS_CMD_LIST_MAX</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#undef PH_RT_CMD_LIST_MAX</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#undef PH_TL0_CMD_LIST_MAX</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#undef PH_TL1_CMD_LIST_MAX</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#undef PH_TL2_CMD_LIST_MAX</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#undef PH_MS_TLM_LIST_MAX</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#undef PH_ST_TLM_LIST_MAX</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#undef PH_RP_TLM_LIST_MAX</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#abcf6a9ed2afdeb914ba3172f82726bd6">   24</a></span>&#160;<span class="preprocessor">#define TL_TLM_PAGE_SIZE      (32)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#adb37595b65ee55fd6cf2a92540af768c">   25</a></span>&#160;<span class="preprocessor">#define TL_TLM_PAGE_MAX       (8)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a2e088a9bdaab5a7b7aa554bce8b1c2e8">   27</a></span>&#160;<span class="preprocessor">#define PH_GS_CMD_LIST_MAX       (8)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a6fa271c1d8fadf98a390a0bdfff55177">   28</a></span>&#160;<span class="preprocessor">#define PH_RT_CMD_LIST_MAX       (32)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a8748702094720d63e7a8f2581c8564c8">   29</a></span>&#160;<span class="preprocessor">#define PH_TL0_CMD_LIST_MAX      (TL_TLM_PAGE_SIZE * TL_TLM_PAGE_MAX)   // コメント追加（2019/08/19）</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                                        <span class="comment">// これが最長じゃないといけない</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                                        <span class="comment">// TLCD_tl_list_for_tlmの長さがこれなので！！</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a4c59733775b0826a0897d1100591c31f">   32</a></span>&#160;<span class="preprocessor">#define PH_TL1_CMD_LIST_MAX      (TL_TLM_PAGE_SIZE * 4)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a39854143bf64127ff8558b8351c9a7ec">   33</a></span>&#160;<span class="preprocessor">#define PH_TL2_CMD_LIST_MAX      (TL_TLM_PAGE_SIZE * 4)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#ae660fbf8560d1889dba8bb2d3b1c6af4">   34</a></span>&#160;<span class="preprocessor">#define PH_MS_TLM_LIST_MAX       (16)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef DR_ENABLE</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#ae132ad78a3b076d67784a327a35a6e13">   36</a></span>&#160;<span class="preprocessor">#define PH_ST_TLM_LIST_MAX       (16)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="packet__handler__params_8h.html#a0fd8fdd3bdde83841cc51d36f0a52276">   37</a></span>&#160;<span class="preprocessor">#define PH_RP_TLM_LIST_MAX       (16)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
