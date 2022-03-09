@@ -1,15 +1,6 @@
 var annotated_dup =
 [
     [ "AA_Config", "struct_a_a___config.html", "struct_a_a___config" ],
-    [ "AH_AnomalyRespond", "struct_a_h___anomaly_respond.html", "struct_a_h___anomaly_respond" ],
-    [ "AH_AnomalyRespondLog", "struct_a_h___anomaly_respond_log.html", "struct_a_h___anomaly_respond_log" ],
-    [ "AH_Element", "struct_a_h___element.html", "struct_a_h___element" ],
-    [ "AH_Pointer", "struct_a_h___pointer.html", "struct_a_h___pointer" ],
-    [ "AH_Rule", "struct_a_h___rule.html", "struct_a_h___rule" ],
-    [ "AL_AnomalyCode", "struct_a_l___anomaly_code.html", "struct_a_l___anomaly_code" ],
-    [ "AL_AnomalyRecord", "struct_a_l___anomaly_record.html", "struct_a_l___anomaly_record" ],
-    [ "AnomalyHandler", "struct_anomaly_handler.html", "struct_anomaly_handler" ],
-    [ "AnomalyLogger", "struct_anomaly_logger.html", "struct_anomaly_logger" ],
     [ "AOBC_Driver", "struct_a_o_b_c___driver.html", "struct_a_o_b_c___driver" ],
     [ "AOBC_Info", "struct_a_o_b_c___info.html", "struct_a_o_b_c___info" ],
     [ "AOBC_TlmBuffer", "struct_a_o_b_c___tlm_buffer.html", "struct_a_o_b_c___tlm_buffer" ],
@@ -99,9 +90,7 @@ var annotated_dup =
     [ "UART_Config", "struct_u_a_r_t___config.html", "struct_u_a_r_t___config" ],
     [ "UART_TEST_Driver", "struct_u_a_r_t___t_e_s_t___driver.html", "struct_u_a_r_t___t_e_s_t___driver" ],
     [ "UART_TEST_Info", "struct_u_a_r_t___t_e_s_t___info.html", "struct_u_a_r_t___t_e_s_t___info" ],
-    [ "UTIL_COUNTER_counter", "struct_u_t_i_l___c_o_u_n_t_e_r__counter.html", "struct_u_t_i_l___c_o_u_n_t_e_r__counter" ],
     [ "UtilityCommand", "struct_utility_command.html", "struct_utility_command" ],
-    [ "UtilityCounter", "struct_utility_counter.html", "struct_utility_counter" ],
     [ "VCDU", "struct_v_c_d_u.html", "struct_v_c_d_u" ],
     [ "WDT_Config", "struct_w_d_t___config.html", "struct_w_d_t___config" ]
 ];

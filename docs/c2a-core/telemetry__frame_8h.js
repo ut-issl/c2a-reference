@@ -12,6 +12,7 @@ var telemetry__frame_8h =
       [ "TF_NULL_PACKET", "telemetry__frame_8h.html#a73fa5951fd0831ecf8bfecbd6f29b6d7a83fa7b1e722b9a2af424fa750211b96b", null ],
       [ "TF_UNKNOWN", "telemetry__frame_8h.html#a73fa5951fd0831ecf8bfecbd6f29b6d7abb784ba060476ee5fe2ca7a46cd2f8d3", null ]
     ] ],
+    [ "Cmd_TF_INIT", "telemetry__frame_8h.html#a973c2d15770fc32fed2f9053c1b82c9f", null ],
     [ "Cmd_TF_REGISTER_TLM", "telemetry__frame_8h.html#a688fd7dbde1d14e42692c55927e023b7", null ],
     [ "Cmd_TF_SET_PAGE_FOR_TLM", "telemetry__frame_8h.html#a22ead614911956dc909621e24d05c580", null ],
     [ "TF_copy_double", "telemetry__frame_8h.html#a4bbcb95854416e3533a99795c21b891b", null ],

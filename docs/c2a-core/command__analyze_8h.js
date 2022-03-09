@@ -27,6 +27,7 @@ var command__analyze_8h =
     [ "CA_has_raw_param", "command__analyze_8h.html#a8b245c2a85084ae21588acd4deb3b3d6", null ],
     [ "CA_initialize", "command__analyze_8h.html#ae6d1f376bf4e1c9c4b63bc3f04924c8a", null ],
     [ "CA_load_cmd_table", "command__analyze_8h.html#aa375895192b16d8e7f0ff4545b54e6c4", null ],
+    [ "Cmd_CA_INIT", "command__analyze_8h.html#aee45638c6cff2c25a997905b209079d0", null ],
     [ "Cmd_CA_REGISTER_CMD", "command__analyze_8h.html#a0fa0130cb6cf7f1bca7c4dc371aaf5c0", null ],
     [ "Cmd_CA_SET_PAGE_FOR_TLM", "command__analyze_8h.html#a88a970a521b99bc2d4bf8ed1e54ee8e2", null ],
     [ "command_analyze", "command__analyze_8h.html#a8df03712e5fc0231be29d1e1ba7d57c0", null ]
