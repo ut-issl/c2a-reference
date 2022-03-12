@@ -6,5 +6,5 @@ var aobc__telemetry__buffer_8h =
     [ "AOBC_Driver", "aobc__telemetry__buffer_8h.html#a6b04885663931c682c74d6fe6d1b17ee", null ],
     [ "AOBC_buffer_tlm_packet", "aobc__telemetry__buffer_8h.html#ad9b52088d5f385af72dc6663981f31dc", null ],
     [ "AOBC_init_tlm_buffer", "aobc__telemetry__buffer_8h.html#a9e9eae6f537a2561e5e9f5e37bb8d245", null ],
-    [ "AOBC_pick_up_tlm_buffer", "aobc__telemetry__buffer_8h.html#aedb94ceac3b45a65e951dc3031e66b5c", null ]
+    [ "AOBC_pick_up_tlm_buffer", "aobc__telemetry__buffer_8h.html#a37b81adac738069788e1ede005ee5eb5", null ]
 ];
