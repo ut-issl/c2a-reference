@@ -135,7 +135,6 @@ var command__definitions_8h =
       [ "Cmd_CODE_DI_GS_SET_RP_FLUSH_INTERVAL", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae744bf0a340682e0658d8da0d973c63f", null ],
       [ "Cmd_CODE_DI_GS_SET_FARM_PW", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a98e11d95d998fd75c13a7ae4111de218", null ],
       [ "Cmd_CODE_DI_GS_SET_INFO", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a8775f4a692befe8fa1c6c5c08b793044", null ],
-      [ "Cmd_CODE_DI_GS_CCSDS_READ_SEQUENCE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a864c92c13ae255c59e6429d98edd27da", null ],
       [ "Cmd_CODE_DI_GS_CCSDS_GET_BUFFER", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a02b96bc16bddb6280bdc04e5057510b1", null ],
       [ "Cmd_CODE_DI_GS_CCSDS_SET_RATE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad38e7ea8e0b560f9d67bf30f9d4b68d0", null ],
       [ "Cmd_CODE_WDT_INIT", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4ca18b52854ee6465a182c4cb19c85ef", null ],

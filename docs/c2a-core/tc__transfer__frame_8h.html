@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_user/TlmCmd/Ccsds/tc_transfer_frame.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('tc__transfer__frame_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">tc_transfer_frame.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>CCSDS で規定される TC Transfer Frame の実装  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="stdint_8h_source.html">../../Library/stdint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tc__segment_8h_source.html">tc_segment.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+tc_transfer_frame.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h__incl.svg" width="1830" height="782"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h__dep__incl.svg" width="775" height="603"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="tc__transfer__frame_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TC Transfer Frame のパケット構造体  <a href="struct_tc_transfer_frame.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a1b67e3807ec6b2904a0cfc9f4b39a16a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a1b67e3807ec6b2904a0cfc9f4b39a16a">TCTF_MAX_LEN</a>&#160;&#160;&#160;(1024)</td></tr>
+<tr class="separator:a1b67e3807ec6b2904a0cfc9f4b39a16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b3dc2d9e7d87657e1fea00aad7875a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a41b3dc2d9e7d87657e1fea00aad7875a">TCTF_HEADER_SIZE</a>&#160;&#160;&#160;(5)</td></tr>
+<tr class="separator:a41b3dc2d9e7d87657e1fea00aad7875a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be68ebd48b4164d28e07992dc680ce0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a0be68ebd48b4164d28e07992dc680ce0">TCTF_FECF_SIZE</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:a0be68ebd48b4164d28e07992dc680ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c69724d298216e48da805b2171704d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#ab9c69724d298216e48da805b2171704d">TCTF_BC_CMD_CODE_UNLOCK</a>&#160;&#160;&#160;(0x00)</td></tr>
+<tr class="separator:ab9c69724d298216e48da805b2171704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636d11c088e459724e7e0ec60e1cc291"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a636d11c088e459724e7e0ec60e1cc291">TCTF_BC_CMD_CODE_SET_VR_1ST_BYTE</a>&#160;&#160;&#160;(0x82)</td></tr>
+<tr class="separator:a636d11c088e459724e7e0ec60e1cc291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1811f4885974de32cbad4ed2f24328c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a1811f4885974de32cbad4ed2f24328c6">TCTF_BC_CMD_CODE_SET_VR_2ND_BYTE</a>&#160;&#160;&#160;(0x00)</td></tr>
+<tr class="separator:a1811f4885974de32cbad4ed2f24328c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a38187f5d88c7abfbe1a7fcd5c7cfb521"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521">TCTF_VER</a> { <a class="el" href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521ad9c001afaae1ef7d1bc94243659ac0ab">TCTF_VER_1</a> = 0, 
+<a class="el" href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521a662ab5e608674951850a06dc867c0eb3">TCTF_VER_UNKNOWN</a>
+ }</td></tr>
+<tr class="memdesc:a38187f5d88c7abfbe1a7fcd5c7cfb521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version  <a href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521">[詳解]</a><br /></td></tr>
+<tr class="separator:a38187f5d88c7abfbe1a7fcd5c7cfb521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2a1ee8653a4c50ca3e5b5923267845"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845">TCTF_TYPE</a> { <a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845a1ecdd0403a6448c928b1e4b21e7aa1af">TCTF_TYPE_AD</a> = 0, 
+<a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845a1074a174d52732748bdbda1d23e66e38">TCTF_TYPE_BD</a> = 2, 
+<a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845ad9b1954fc2430f8b23cfccc61043a23a">TCTF_TYPE_BC</a> = 3, 
+<a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845a9d85e2ef373e4fc668b77db75db0de1c">TCTF_TYPE_UNKNOWN</a>
+ }</td></tr>
+<tr class="memdesc:a8b2a1ee8653a4c50ca3e5b5923267845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type  <a href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845">[詳解]</a><br /></td></tr>
+<tr class="separator:a8b2a1ee8653a4c50ca3e5b5923267845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a531ca52e7ae1442f4529e7babdcb8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8">TCTF_SCID</a> { <a class="el" href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8ab68665787ffb9251ec056dedf187b6d6">TCTF_SCID_SAMPLE_SATELLITE</a> = 0x35C, 
+<a class="el" href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8a5093a543e38c533ac7598253cf9e3633">TCTF_SCID_UNKNOWN</a>
+ }</td></tr>
+<tr class="memdesc:a56a531ca52e7ae1442f4529e7babdcb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spacecraft ID  <a href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8">[詳解]</a><br /></td></tr>
+<tr class="separator:a56a531ca52e7ae1442f4529e7babdcb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9601a0914f37ba4f269fd7d562c403a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403a">TCTF_VCID</a> { <a class="el" href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403aa5b78e2f2d7686eb64fcc1ab83382d76d">TCTF_VCID_REALTIME</a> = 0, 
+<a class="el" href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403aa2526eba6b20c191e560d6a19435145b4">TCTF_VCID_UNKNOWN</a>
+ }</td></tr>
+<tr class="memdesc:ab9601a0914f37ba4f269fd7d562c403a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Channel ID  <a href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403a">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9601a0914f37ba4f269fd7d562c403a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a8bd635fbd6805a4c71f2744fa5496074"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521">TCTF_VER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a8bd635fbd6805a4c71f2744fa5496074">TCTF_get_ver</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a8bd635fbd6805a4c71f2744fa5496074"><td class="mdescLeft">&#160;</td><td class="mdescRight">version を取得  <a href="tc__transfer__frame_8h.html#a8bd635fbd6805a4c71f2744fa5496074">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bd635fbd6805a4c71f2744fa5496074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7505f574485627bc3e7b776baa1a918f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845">TCTF_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a7505f574485627bc3e7b776baa1a918f">TCTF_get_type</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a7505f574485627bc3e7b776baa1a918f"><td class="mdescLeft">&#160;</td><td class="mdescRight">command type を取得  <a href="tc__transfer__frame_8h.html#a7505f574485627bc3e7b776baa1a918f">[詳解]</a><br /></td></tr>
+<tr class="separator:a7505f574485627bc3e7b776baa1a918f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794a380208d7f4c8c52ae49df9f18b6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8">TCTF_SCID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a794a380208d7f4c8c52ae49df9f18b6e">TCTF_get_scid</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a794a380208d7f4c8c52ae49df9f18b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SCID を取得  <a href="tc__transfer__frame_8h.html#a794a380208d7f4c8c52ae49df9f18b6e">[詳解]</a><br /></td></tr>
+<tr class="separator:a794a380208d7f4c8c52ae49df9f18b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a44713977e252c2ab199293d9a7e7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403a">TCTF_VCID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#af3a44713977e252c2ab199293d9a7e7b">TCTF_get_vcid</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:af3a44713977e252c2ab199293d9a7e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">VCID を取得  <a href="tc__transfer__frame_8h.html#af3a44713977e252c2ab199293d9a7e7b">[詳解]</a><br /></td></tr>
+<tr class="separator:af3a44713977e252c2ab199293d9a7e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f301361103fd9a05a2b1919e1a3b952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a6f301361103fd9a05a2b1919e1a3b952">TCTF_get_frame_len</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a6f301361103fd9a05a2b1919e1a3b952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame Length を取得  <a href="tc__transfer__frame_8h.html#a6f301361103fd9a05a2b1919e1a3b952">[詳解]</a><br /></td></tr>
+<tr class="separator:a6f301361103fd9a05a2b1919e1a3b952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb48f83cf29814489c8047ad6fa6e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#adeb48f83cf29814489c8047ad6fa6e8e">TCTF_get_frame_seq_num</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:adeb48f83cf29814489c8047ad6fa6e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame Sequence Number を取得  <a href="tc__transfer__frame_8h.html#adeb48f83cf29814489c8047ad6fa6e8e">[詳解]</a><br /></td></tr>
+<tr class="separator:adeb48f83cf29814489c8047ad6fa6e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67309297ff0ca601db19446325d7aa6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a67309297ff0ca601db19446325d7aa6d">TCTF_get_fecw</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a67309297ff0ca601db19446325d7aa6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">FECW を取得  <a href="tc__transfer__frame_8h.html#a67309297ff0ca601db19446325d7aa6d">[詳解]</a><br /></td></tr>
+<tr class="separator:a67309297ff0ca601db19446325d7aa6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360f846ddfdb9113f1ac3dfb8b06face"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_tc_segment.html">TcSegment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a360f846ddfdb9113f1ac3dfb8b06face">TCTF_get_tc_segment</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a360f846ddfdb9113f1ac3dfb8b06face"><td class="mdescLeft">&#160;</td><td class="mdescRight">TC Segment を取得  <a href="tc__transfer__frame_8h.html#a360f846ddfdb9113f1ac3dfb8b06face">[詳解]</a><br /></td></tr>
+<tr class="separator:a360f846ddfdb9113f1ac3dfb8b06face"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e82d8f021fa29891d0f6e98d9b0e2e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a6e82d8f021fa29891d0f6e98d9b0e2e8">TCTF_check_fecw</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:a6e82d8f021fa29891d0f6e98d9b0e2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCTF FECW のチェック  <a href="tc__transfer__frame_8h.html#a6e82d8f021fa29891d0f6e98d9b0e2e8">[詳解]</a><br /></td></tr>
+<tr class="separator:a6e82d8f021fa29891d0f6e98d9b0e2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527090ddd576350f899e69255ea5bbd5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tc__transfer__frame_8h.html#a527090ddd576350f899e69255ea5bbd5">TCTF_convert_from_bytes_to_tctf</a> (const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *byte)</td></tr>
+<tr class="memdesc:a527090ddd576350f899e69255ea5bbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信 byte 列を TcTransferFrame* に変換  <a href="tc__transfer__frame_8h.html#a527090ddd576350f899e69255ea5bbd5">[詳解]</a><br /></td></tr>
+<tr class="separator:a527090ddd576350f899e69255ea5bbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>CCSDS で規定される TC Transfer Frame の実装 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>packet 構造 |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | Pos | Pos | Size | Name | | [octet] | [bit] | [bit] | | |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | === Primary Header ================================| |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | 0 | 0 | 2 | Version | | 0 | 2 | 2 | Type | | 0 | 4 | 2 | N/A | | 0 | 6 | 10 | Spacecraft ID | | 2 | 0 | 6 | Virtual Channel ID | | 2 | 6 | 10 | Frame Length | | 4 | 0 | 8 | Frame Sequence Number | |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | === User Data Field ===============================| |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | 5 | 0 | * | TC Segment | |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | === Frame Error Control Field =====================| |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| | * | 0 | 16 | Frame Error Control Word | |------&mdash;+----&mdash;+----&mdash;+-----------------------&mdash;| </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a636d11c088e459724e7e0ec60e1cc291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636d11c088e459724e7e0ec60e1cc291">&#9670;&nbsp;</a></span>TCTF_BC_CMD_CODE_SET_VR_1ST_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCTF_BC_CMD_CODE_SET_VR_1ST_BYTE&#160;&#160;&#160;(0x82)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1811f4885974de32cbad4ed2f24328c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1811f4885974de32cbad4ed2f24328c6">&#9670;&nbsp;</a></span>TCTF_BC_CMD_CODE_SET_VR_2ND_BYTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCTF_BC_CMD_CODE_SET_VR_2ND_BYTE&#160;&#160;&#160;(0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab9c69724d298216e48da805b2171704d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c69724d298216e48da805b2171704d">&#9670;&nbsp;</a></span>TCTF_BC_CMD_CODE_UNLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCTF_BC_CMD_CODE_UNLOCK&#160;&#160;&#160;(0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0be68ebd48b4164d28e07992dc680ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be68ebd48b4164d28e07992dc680ce0">&#9670;&nbsp;</a></span>TCTF_FECF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCTF_FECF_SIZE&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a41b3dc2d9e7d87657e1fea00aad7875a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b3dc2d9e7d87657e1fea00aad7875a">&#9670;&nbsp;</a></span>TCTF_HEADER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCTF_HEADER_SIZE&#160;&#160;&#160;(5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1b67e3807ec6b2904a0cfc9f4b39a16a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b67e3807ec6b2904a0cfc9f4b39a16a">&#9670;&nbsp;</a></span>TCTF_MAX_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TCTF_MAX_LEN&#160;&#160;&#160;(1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a56a531ca52e7ae1442f4529e7babdcb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a531ca52e7ae1442f4529e7babdcb8">&#9670;&nbsp;</a></span>TCTF_SCID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8">TCTF_SCID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spacecraft ID </p>
+<dl class="section note"><dt>覚え書き</dt><dd>10 bit </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a56a531ca52e7ae1442f4529e7babdcb8ab68665787ffb9251ec056dedf187b6d6"></a>TCTF_SCID_SAMPLE_SATELLITE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a56a531ca52e7ae1442f4529e7babdcb8a5093a543e38c533ac7598253cf9e3633"></a>TCTF_SCID_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00086">86</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8b2a1ee8653a4c50ca3e5b5923267845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2a1ee8653a4c50ca3e5b5923267845">&#9670;&nbsp;</a></span>TCTF_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845">TCTF_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type </p>
+<dl class="section note"><dt>覚え書き</dt><dd>2 bit </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8b2a1ee8653a4c50ca3e5b5923267845a1ecdd0403a6448c928b1e4b21e7aa1af"></a>TCTF_TYPE_AD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b2a1ee8653a4c50ca3e5b5923267845a1074a174d52732748bdbda1d23e66e38"></a>TCTF_TYPE_BD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b2a1ee8653a4c50ca3e5b5923267845ad9b1954fc2430f8b23cfccc61043a23a"></a>TCTF_TYPE_BC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b2a1ee8653a4c50ca3e5b5923267845a9d85e2ef373e4fc668b77db75db0de1c"></a>TCTF_TYPE_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab9601a0914f37ba4f269fd7d562c403a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9601a0914f37ba4f269fd7d562c403a">&#9670;&nbsp;</a></span>TCTF_VCID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403a">TCTF_VCID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Virtual Channel ID </p>
+<dl class="section note"><dt>覚え書き</dt><dd>6 bit </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ab9601a0914f37ba4f269fd7d562c403aa5b78e2f2d7686eb64fcc1ab83382d76d"></a>TCTF_VCID_REALTIME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9601a0914f37ba4f269fd7d562c403aa2526eba6b20c191e560d6a19435145b4"></a>TCTF_VCID_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00097">97</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a38187f5d88c7abfbe1a7fcd5c7cfb521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38187f5d88c7abfbe1a7fcd5c7cfb521">&#9670;&nbsp;</a></span>TCTF_VER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521">TCTF_VER</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version </p>
+<dl class="section note"><dt>覚え書き</dt><dd>2 bit </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a38187f5d88c7abfbe1a7fcd5c7cfb521ad9c001afaae1ef7d1bc94243659ac0ab"></a>TCTF_VER_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a38187f5d88c7abfbe1a7fcd5c7cfb521a662ab5e608674951850a06dc867c0eb3"></a>TCTF_VER_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8h_source.html">tc_transfer_frame.h</a> の <a class="el" href="tc__transfer__frame_8h_source.html#l00062">62</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a6e82d8f021fa29891d0f6e98d9b0e2e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e82d8f021fa29891d0f6e98d9b0e2e8">&#9670;&nbsp;</a></span>TCTF_check_fecw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TCTF_check_fecw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TCTF FECW のチェック </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>bool: 1: ok, 0: error </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>ここでは標準として CRC-16-CCITT を採用している </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00119">119</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a6e82d8f021fa29891d0f6e98d9b0e2e8_cgraph.svg" width="351" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a6e82d8f021fa29891d0f6e98d9b0e2e8_icgraph.svg" width="2416" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a527090ddd576350f899e69255ea5bbd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527090ddd576350f899e69255ea5bbd5">&#9670;&nbsp;</a></span>TCTF_convert_from_bytes_to_tctf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a>* TCTF_convert_from_bytes_to_tctf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>byte</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>受信 byte 列を TcTransferFrame* に変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>受信 byte 列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TcTransferFrame* </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00127">127</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a527090ddd576350f899e69255ea5bbd5_icgraph.svg" width="2292" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a67309297ff0ca601db19446325d7aa6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67309297ff0ca601db19446325d7aa6d">&#9670;&nbsp;</a></span>TCTF_get_fecw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> TCTF_get_fecw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FECW を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>FECW </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>エンディアンは既に考慮されている (ccsds は big endian) </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00108">108</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a67309297ff0ca601db19446325d7aa6d_cgraph.svg" width="334" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6f301361103fd9a05a2b1919e1a3b952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f301361103fd9a05a2b1919e1a3b952">&#9670;&nbsp;</a></span>TCTF_get_frame_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> TCTF_get_frame_len </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Frame Length を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Frame Length </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00084">84</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a6f301361103fd9a05a2b1919e1a3b952_icgraph.svg" width="2631" height="160"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adeb48f83cf29814489c8047ad6fa6e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb48f83cf29814489c8047ad6fa6e8e">&#9670;&nbsp;</a></span>TCTF_get_frame_seq_num()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> TCTF_get_frame_seq_num </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Frame Sequence Number を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Frame Sequence Number </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00098">98</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_adeb48f83cf29814489c8047ad6fa6e8e_icgraph.svg" width="2672" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a794a380208d7f4c8c52ae49df9f18b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a794a380208d7f4c8c52ae49df9f18b6e">&#9670;&nbsp;</a></span>TCTF_get_scid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tc__transfer__frame_8h.html#a56a531ca52e7ae1442f4529e7babdcb8">TCTF_SCID</a> TCTF_get_scid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SCID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TCTF_SCID </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a794a380208d7f4c8c52ae49df9f18b6e_icgraph.svg" width="2615" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a360f846ddfdb9113f1ac3dfb8b06face"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360f846ddfdb9113f1ac3dfb8b06face">&#9670;&nbsp;</a></span>TCTF_get_tc_segment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_tc_segment.html">TcSegment</a>* TCTF_get_tc_segment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TC Segment を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TC Segment </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00103">103</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a360f846ddfdb9113f1ac3dfb8b06face_icgraph.svg" width="2643" height="186"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7505f574485627bc3e7b776baa1a918f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7505f574485627bc3e7b776baa1a918f">&#9670;&nbsp;</a></span>TCTF_get_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845">TCTF_TYPE</a> TCTF_get_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>command type を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TCTF_TYPE </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a7505f574485627bc3e7b776baa1a918f_icgraph.svg" width="2398" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af3a44713977e252c2ab199293d9a7e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a44713977e252c2ab199293d9a7e7b">&#9670;&nbsp;</a></span>TCTF_get_vcid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403a">TCTF_VCID</a> TCTF_get_vcid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>VCID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TCTF_VCID </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00067">67</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_af3a44713977e252c2ab199293d9a7e7b_icgraph.svg" width="2616" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8bd635fbd6805a4c71f2744fa5496074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd635fbd6805a4c71f2744fa5496074">&#9670;&nbsp;</a></span>TCTF_get_ver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="tc__transfer__frame_8h.html#a38187f5d88c7abfbe1a7fcd5c7cfb521">TCTF_VER</a> TCTF_get_ver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>version を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td><a class="el" href="struct_tc_transfer_frame.html" title="TC Transfer Frame のパケット構造体">TcTransferFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TCTF_VER </dd></dl>
+
+<p class="definition"> <a class="el" href="tc__transfer__frame_8c_source.html">tc_transfer_frame.c</a> の <a class="el" href="tc__transfer__frame_8c_source.html#l00011">11</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="tc__transfer__frame_8h_a8bd635fbd6805a4c71f2744fa5496074_icgraph.svg" width="2611" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_8db6de9170c801ae5a17095202f7349c.html">TlmCmd</a></li><li class="navelem"><a class="el" href="dir_75ec363d67d4f42d3d29b740cc6d4c58.html">Ccsds</a></li><li class="navelem"><a class="el" href="tc__transfer__frame_8h.html">tc_transfer_frame.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

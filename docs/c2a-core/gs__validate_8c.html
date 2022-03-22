@@ -93,10 +93,12 @@ $(document).ready(function(){initNavTree('gs__validate_8c.html',''); initResizab
 <p>受信した TC Frame の検証を行う  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="gs__validate_8h_source.html">gs_validate.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tc__segment_8h_source.html">../../TlmCmd/Ccsds/tc_segment.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="space__packet__typedef_8h_source.html">src_core/TlmCmd/Ccsds/space_packet_typedef.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 gs_validate.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c__incl.svg" width="1931" height="946"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c__incl.svg" width="1986" height="946"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -104,38 +106,38 @@ gs_validate.c の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
+<tr class="memitem:a92af151de3a782f3e39714fc4f24e090"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a92af151de3a782f3e39714fc4f24e090">GS_RECEIVE_WINDOW</a>&#160;&#160;&#160;(256)</td></tr>
+<tr class="separator:a92af151de3a782f3e39714fc4f24e090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f18e2fac98e91deda8cb68cadee421c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a0f18e2fac98e91deda8cb68cadee421c">GS_POSITIVE_WINDOW_WIDTH_DEFAULT</a>&#160;&#160;&#160;(64)</td></tr>
 <tr class="separator:a0f18e2fac98e91deda8cb68cadee421c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a74139046c9d543e8106484acdeecb8d3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a74139046c9d543e8106484acdeecb8d3">GS_check_tcf_header_</a> (const <a class="el" href="struct_t_c_f.html">TCF</a> *tc_frame)</td></tr>
-<tr class="separator:a74139046c9d543e8106484acdeecb8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d851e14b61c170707282426f1a3d822"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a2d851e14b61c170707282426f1a3d822">GS_check_tcf_contents_</a> (const <a class="el" href="struct_t_c_f.html">TCF</a> *tc_frame)</td></tr>
-<tr class="separator:a2d851e14b61c170707282426f1a3d822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac435cd754c383f0e0cd71d456ee1f597"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#ac435cd754c383f0e0cd71d456ee1f597">GS_check_tcs_headers_</a> (const <a class="el" href="struct_t_c_s.html">TCS</a> *tc_segment)</td></tr>
-<tr class="separator:ac435cd754c383f0e0cd71d456ee1f597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0738b4fc00567db184d308a35da445fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a0738b4fc00567db184d308a35da445fb">GS_check_tctf_header_</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="separator:a0738b4fc00567db184d308a35da445fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db373d9953513322f50fa091a63dca2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a6db373d9953513322f50fa091a63dca2">GS_check_tc_segment_</a> (const <a class="el" href="struct_tc_segment.html">TcSegment</a> *tc_segment)</td></tr>
+<tr class="separator:a6db373d9953513322f50fa091a63dca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add974fc016a636a5b884ba66c483aa4c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#add974fc016a636a5b884ba66c483aa4c">GS_check_tcs_headers_</a> (const <a class="el" href="struct_tc_segment.html">TcSegment</a> *tc_segment)</td></tr>
+<tr class="separator:add974fc016a636a5b884ba66c483aa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab272dff7881efe1314d2e858115eaac7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#ab272dff7881efe1314d2e858115eaac7">GS_check_cmd_space_packet_headers_</a> (const <a class="el" href="struct_cmd_space_packet.html">CmdSpacePacket</a> *csp)</td></tr>
 <tr class="separator:ab272dff7881efe1314d2e858115eaac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5660d6b01f6459cbe6c2e284f1b45891"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a5660d6b01f6459cbe6c2e284f1b45891">GS_check_fecw_</a> (const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *data, size_t len)</td></tr>
-<tr class="separator:a5660d6b01f6459cbe6c2e284f1b45891"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf57603b3217830c620f10440ff700df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#aaf57603b3217830c620f10440ff700df">GS_check_ad_cmd_</a> (const <a class="el" href="struct_t_c_f.html">TCF</a> *tc_frame)</td></tr>
-<tr class="separator:aaf57603b3217830c620f10440ff700df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84b7f68b65ac893636653398012a7866"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a84b7f68b65ac893636653398012a7866">GS_check_bc_cmd_</a> (const <a class="el" href="struct_t_c_f.html">TCF</a> *tc_frame)</td></tr>
-<tr class="separator:a84b7f68b65ac893636653398012a7866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade886529947636f12095d299135cbfde"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#ade886529947636f12095d299135cbfde">GS_check_bd_cmd_</a> (const <a class="el" href="struct_t_c_f.html">TCF</a> *tc_frame)</td></tr>
-<tr class="separator:ade886529947636f12095d299135cbfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f54d41f51742962777dcc779abbdfb5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a3f54d41f51742962777dcc779abbdfb5">GS_check_ad_cmd_</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="separator:a3f54d41f51742962777dcc779abbdfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5e289c0b903a34c000228ac8967281"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#afa5e289c0b903a34c000228ac8967281">GS_check_bd_cmd_</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="separator:afa5e289c0b903a34c000228ac8967281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eed6d2cae0aaae7925dd8194ce0e5d9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a3eed6d2cae0aaae7925dd8194ce0e5d9">GS_check_bc_cmd_</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="separator:a3eed6d2cae0aaae7925dd8194ce0e5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d00a5c9554a05b6b042017982b3224f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a6d00a5c9554a05b6b042017982b3224f">GS_validate_init</a> (void)</td></tr>
 <tr class="memdesc:a6d00a5c9554a05b6b042017982b3224f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_g_s___valiate_info.html">GS_ValiateInfo</a> の初期化  <a href="gs__validate_8c.html#a6d00a5c9554a05b6b042017982b3224f">[詳解]</a><br /></td></tr>
 <tr class="separator:a6d00a5c9554a05b6b042017982b3224f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e8584656da1d94102639deb6702179e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#a9e8584656da1d94102639deb6702179e">GS_validate_tc_frame</a> (const <a class="el" href="struct_t_c_f.html">TCF</a> *tc_frame)</td></tr>
-<tr class="memdesc:a9e8584656da1d94102639deb6702179e"><td class="mdescLeft">&#160;</td><td class="mdescRight">tc_frame の検証  <a href="gs__validate_8c.html#a9e8584656da1d94102639deb6702179e">[詳解]</a><br /></td></tr>
-<tr class="separator:a9e8584656da1d94102639deb6702179e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90018ba12acc225fde998d339d09ea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#ae90018ba12acc225fde998d339d09ea2">GS_validate_tctf</a> (const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *tctf)</td></tr>
+<tr class="memdesc:ae90018ba12acc225fde998d339d09ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">tctf の検証  <a href="gs__validate_8c.html#ae90018ba12acc225fde998d339d09ea2">[詳解]</a><br /></td></tr>
+<tr class="separator:ae90018ba12acc225fde998d339d09ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec2169ce0769d9e4acafbbf56b6f6a85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#aec2169ce0769d9e4acafbbf56b6f6a85">GS_form_clcw</a> (void)</td></tr>
-<tr class="memdesc:aec2169ce0769d9e4acafbbf56b6f6a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">テレメ用の clcw の作成  <a href="gs__validate_8c.html#aec2169ce0769d9e4acafbbf56b6f6a85">[詳解]</a><br /></td></tr>
+<tr class="memdesc:aec2169ce0769d9e4acafbbf56b6f6a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">テレメ用の CLCW の作成  <a href="gs__validate_8c.html#aec2169ce0769d9e4acafbbf56b6f6a85">[詳解]</a><br /></td></tr>
 <tr class="separator:aec2169ce0769d9e4acafbbf56b6f6a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbabdee350236684685903ed7572c20f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs__validate_8c.html#abbabdee350236684685903ed7572c20f">GS_set_farm_pw</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> positive_window_width)</td></tr>
-<tr class="memdesc:abbabdee350236684685903ed7572c20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">positive_window_width の設定  <a href="gs__validate_8c.html#abbabdee350236684685903ed7572c20f">[詳解]</a><br /></td></tr>
+<tr class="memdesc:abbabdee350236684685903ed7572c20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positive Window Width の設定  <a href="gs__validate_8c.html#abbabdee350236684685903ed7572c20f">[詳解]</a><br /></td></tr>
 <tr class="separator:abbabdee350236684685903ed7572c20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -162,13 +164,29 @@ gs_validate.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00009">9</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00012">12</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a92af151de3a782f3e39714fc4f24e090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92af151de3a782f3e39714fc4f24e090">&#9670;&nbsp;</a></span>GS_RECEIVE_WINDOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GS_RECEIVE_WINDOW&#160;&#160;&#160;(256)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00011">11</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="aaf57603b3217830c620f10440ff700df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf57603b3217830c620f10440ff700df">&#9670;&nbsp;</a></span>GS_check_ad_cmd_()</h2>
+<a id="a3f54d41f51742962777dcc779abbdfb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f54d41f51742962777dcc779abbdfb5">&#9670;&nbsp;</a></span>GS_check_ad_cmd_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,8 +197,8 @@ gs_validate.c の依存先関係図:</div>
         <tr>
           <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_ad_cmd_ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_f.html">TCF</a> *&#160;</td>
-          <td class="paramname"><em>tc_frame</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -190,25 +208,26 @@ gs_validate.c の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>AD コマンド: COP-1 制御を使用し伝送順番のチェックを行う </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00179">179</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00158">158</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_aaf57603b3217830c620f10440ff700df_cgraph.svg" width="1596" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a3f54d41f51742962777dcc779abbdfb5_cgraph.svg" width="1618" height="368"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_aaf57603b3217830c620f10440ff700df_icgraph.svg" width="2466" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a3f54d41f51742962777dcc779abbdfb5_icgraph.svg" width="2430" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a84b7f68b65ac893636653398012a7866"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84b7f68b65ac893636653398012a7866">&#9670;&nbsp;</a></span>GS_check_bc_cmd_()</h2>
+<a id="a3eed6d2cae0aaae7925dd8194ce0e5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eed6d2cae0aaae7925dd8194ce0e5d9">&#9670;&nbsp;</a></span>GS_check_bc_cmd_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,8 +238,8 @@ gs_validate.c の依存先関係図:</div>
         <tr>
           <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_bc_cmd_ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_f.html">TCF</a> *&#160;</td>
-          <td class="paramname"><em>tc_frame</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -230,19 +249,26 @@ gs_validate.c の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>BC コマンド: COP-1 制御の制御コマンド, AD, BD と性質が異なる </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00227">227</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00213">213</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a3eed6d2cae0aaae7925dd8194ce0e5d9_cgraph.svg" width="374" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a84b7f68b65ac893636653398012a7866_icgraph.svg" width="2464" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a3eed6d2cae0aaae7925dd8194ce0e5d9_icgraph.svg" width="2428" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ade886529947636f12095d299135cbfde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade886529947636f12095d299135cbfde">&#9670;&nbsp;</a></span>GS_check_bd_cmd_()</h2>
+<a id="afa5e289c0b903a34c000228ac8967281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa5e289c0b903a34c000228ac8967281">&#9670;&nbsp;</a></span>GS_check_bd_cmd_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,8 +279,8 @@ gs_validate.c の依存先関係図:</div>
         <tr>
           <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_bd_cmd_ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_f.html">TCF</a> *&#160;</td>
-          <td class="paramname"><em>tc_frame</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -264,18 +290,19 @@ gs_validate.c の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>BD コマンド: COP-1 制御を使用しないため伝送順番のチェックは行わない </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00266">266</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00199">199</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ade886529947636f12095d299135cbfde_cgraph.svg" width="1588" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_afa5e289c0b903a34c000228ac8967281_cgraph.svg" width="1598" height="334"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ade886529947636f12095d299135cbfde_icgraph.svg" width="2466" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_afa5e289c0b903a34c000228ac8967281_icgraph.svg" width="2430" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -305,7 +332,7 @@ gs_validate.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00106">106</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00124">124</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -315,58 +342,14 @@ gs_validate.c の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ab272dff7881efe1314d2e858115eaac7_icgraph.svg" width="2906" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ab272dff7881efe1314d2e858115eaac7_icgraph.svg" width="2866" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a5660d6b01f6459cbe6c2e284f1b45891"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5660d6b01f6459cbe6c2e284f1b45891">&#9670;&nbsp;</a></span>GS_check_fecw_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_fecw_ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00140">140</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a5660d6b01f6459cbe6c2e284f1b45891_icgraph.svg" width="2446" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a2d851e14b61c170707282426f1a3d822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d851e14b61c170707282426f1a3d822">&#9670;&nbsp;</a></span>GS_check_tcf_contents_()</h2>
+<a id="a6db373d9953513322f50fa091a63dca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db373d9953513322f50fa091a63dca2">&#9670;&nbsp;</a></span>GS_check_tc_segment_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,89 +358,9 @@ gs_validate.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_tcf_contents_ </td>
+          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_tc_segment_ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_f.html">TCF</a> *&#160;</td>
-          <td class="paramname"><em>tc_frame</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00076">76</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a2d851e14b61c170707282426f1a3d822_cgraph.svg" width="1390" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a2d851e14b61c170707282426f1a3d822_icgraph.svg" width="2692" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a74139046c9d543e8106484acdeecb8d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74139046c9d543e8106484acdeecb8d3">&#9670;&nbsp;</a></span>GS_check_tcf_header_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_tcf_header_ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_f.html">TCF</a> *&#160;</td>
-          <td class="paramname"><em>tc_frame</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00067">67</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a74139046c9d543e8106484acdeecb8d3_cgraph.svg" width="335" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a74139046c9d543e8106484acdeecb8d3_icgraph.svg" width="2483" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="ac435cd754c383f0e0cd71d456ee1f597"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac435cd754c383f0e0cd71d456ee1f597">&#9670;&nbsp;</a></span>GS_check_tcs_headers_()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_tcs_headers_ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_s.html">TCS</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_segment.html">TcSegment</a> *&#160;</td>
           <td class="paramname"><em>tc_segment</em></td><td>)</td>
           <td></td>
         </tr>
@@ -469,17 +372,97 @@ gs_validate.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00091">91</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00093">93</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ac435cd754c383f0e0cd71d456ee1f597_cgraph.svg" width="371" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a6db373d9953513322f50fa091a63dca2_cgraph.svg" width="1399" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ac435cd754c383f0e0cd71d456ee1f597_icgraph.svg" width="2918" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a6db373d9953513322f50fa091a63dca2_icgraph.svg" width="2652" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="add974fc016a636a5b884ba66c483aa4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add974fc016a636a5b884ba66c483aa4c">&#9670;&nbsp;</a></span>GS_check_tcs_headers_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_tcs_headers_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_segment.html">TcSegment</a> *&#160;</td>
+          <td class="paramname"><em>tc_segment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00109">109</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_add974fc016a636a5b884ba66c483aa4c_cgraph.svg" width="371" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_add974fc016a636a5b884ba66c483aa4c_icgraph.svg" width="2878" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0738b4fc00567db184d308a35da445fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0738b4fc00567db184d308a35da445fb">&#9670;&nbsp;</a></span>GS_check_tctf_header_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_check_tctf_header_ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00084">84</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a0738b4fc00567db184d308a35da445fb_cgraph.svg" width="348" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a0738b4fc00567db184d308a35da445fb_icgraph.svg" width="2452" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -501,10 +484,10 @@ gs_validate.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>テレメ用の clcw の作成 </p>
-<dl class="section return"><dt>戻り値</dt><dd>clcw </dd></dl>
+<p>テレメ用の CLCW の作成 </p>
+<dl class="section return"><dt>戻り値</dt><dd>CLCW </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00277">277</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00250">250</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -530,16 +513,16 @@ gs_validate.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>positive_window_width の設定 </p>
+<p>Positive Window Width の設定 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">positive_window_width</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">positive_window_width</td><td>Positive Window Width </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>GS_VALIDATE_ERR </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00342">342</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00288">288</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -566,8 +549,9 @@ gs_validate.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p><a class="el" href="struct_g_s___valiate_info.html">GS_ValiateInfo</a> の初期化 </p>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00025">25</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00042">42</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -577,42 +561,42 @@ gs_validate.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a9e8584656da1d94102639deb6702179e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e8584656da1d94102639deb6702179e">&#9670;&nbsp;</a></span>GS_validate_tc_frame()</h2>
+<a id="ae90018ba12acc225fde998d339d09ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90018ba12acc225fde998d339d09ea2">&#9670;&nbsp;</a></span>GS_validate_tctf()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_validate_tc_frame </td>
+          <td class="memname"><a class="el" href="gs__validate_8h.html#a26bcfca05af031515473ddb66ba92ebb">GS_VALIDATE_ERR</a> GS_validate_tctf </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_t_c_f.html">TCF</a> *&#160;</td>
-          <td class="paramname"><em>tc_frame</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_tc_transfer_frame.html">TcTransferFrame</a> *&#160;</td>
+          <td class="paramname"><em>tctf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>tc_frame の検証 </p>
+<p>tctf の検証 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">tc_frame</td><td>検証する tc frame </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tctf</td><td>検証する TC Transfer Frame </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>GS_VALIDATE_ERR </dd></dl>
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00034">34</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00051">51</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a9e8584656da1d94102639deb6702179e_cgraph.svg" width="1827" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ae90018ba12acc225fde998d339d09ea2_cgraph.svg" width="1818" height="548"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_a9e8584656da1d94102639deb6702179e_icgraph.svg" width="2267" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs__validate_8c_ae90018ba12acc225fde998d339d09ea2_icgraph.svg" width="2231" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -631,7 +615,7 @@ gs_validate.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00023">23</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00040">40</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -655,7 +639,7 @@ gs_validate.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00022">22</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs__validate_8c_source.html">gs_validate.c</a> の <a class="el" href="gs__validate_8c_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>

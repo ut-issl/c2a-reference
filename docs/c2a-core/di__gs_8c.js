@@ -1,7 +1,6 @@
 var di__gs_8c =
 [
     [ "Cmd_DI_GS_CCSDS_GET_BUFFER", "di__gs_8c.html#a9be230bb98b592f721cabdfbc0718fd3", null ],
-    [ "Cmd_DI_GS_CCSDS_READ_SEQUENCE", "di__gs_8c.html#a7112afd80cd01af777493f95fea2400e", null ],
     [ "Cmd_DI_GS_CCSDS_SET_RATE", "di__gs_8c.html#a591c0f49459cb0f48a6975bc3227cd2a", null ],
     [ "Cmd_DI_GS_CCSDS_TX_START", "di__gs_8c.html#a917aed11c26ab7c4b808fa7d4eeef5d5", null ],
     [ "Cmd_DI_GS_CCSDS_TX_STOP", "di__gs_8c.html#a6b4da1480fbc7b7d36b68ac98bebd6a5", null ],

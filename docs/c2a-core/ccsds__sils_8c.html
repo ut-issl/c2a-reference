@@ -112,7 +112,6 @@ ccsds_sils.c の依存先関係図:</div>
 <tr class="memdesc:ad48a0947151ed3b335b0d717fc97d464"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS reopen  <a href="ccsds__sils_8c.html#ad48a0947151ed3b335b0d717fc97d464">[詳解]</a><br /></td></tr>
 <tr class="separator:ad48a0947151ed3b335b0d717fc97d464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d0d3a68d1e803d5bb1c812f46f602f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ccsds__user_8h.html#af6caa4a05a4b3fa2fa092f2b9ad22b03">CCSDS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8c.html#ad1d0d3a68d1e803d5bb1c812f46f602f">CCSDS_read_sequence</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> select, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> *uip_stat)</td></tr>
-<tr class="memdesc:ad1d0d3a68d1e803d5bb1c812f46f602f"><td class="mdescLeft">&#160;</td><td class="mdescRight">FPGA が保持する CCSDS sequence counter を読む API を呼び出す  <a href="ccsds__sils_8c.html#ad1d0d3a68d1e803d5bb1c812f46f602f">[詳解]</a><br /></td></tr>
 <tr class="separator:ad1d0d3a68d1e803d5bb1c812f46f602f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab593331e1e83b667b22146dd79146727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ccsds__sils_8c.html#ab593331e1e83b667b22146dd79146727">CCSDS_get_buffer_num</a> (void)</td></tr>
 <tr class="memdesc:ab593331e1e83b667b22146dd79146727"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCSDS TX の残り buffer をカウントするAPI を呼びだす  <a href="ccsds__sils_8c.html#ab593331e1e83b667b22146dd79146727">[詳解]</a><br /></td></tr>
@@ -207,23 +206,7 @@ ccsds_sils.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>FPGA が保持する CCSDS sequence counter を読む API を呼び出す </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">select</td><td>レジスタ読み出しを選択 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">uip_stat</td><td>状態 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>CCSDS_ERR_CODE </dd></dl>
-
 <p class="definition"> <a class="el" href="ccsds__sils_8c_source.html">ccsds_sils.c</a> の <a class="el" href="ccsds__sils_8c_source.html#l00034">34</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ccsds__sils_8c_ad1d0d3a68d1e803d5bb1c812f46f602f_icgraph.svg" width="1515" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
 
 </div>
 </div>
