@@ -88,6 +88,8 @@ var command__definitions_8h =
       [ "Cmd_CODE_EH_SET_REGISTER_RULE_CONDITION_PARAM", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7934660fbf201fa6f4e47197ae2ed60", null ],
       [ "Cmd_CODE_EH_REGISTER_RULE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae3feee3338af2a3f227795781871bd6d", null ],
       [ "Cmd_CODE_EH_DELETE_RULE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a478ae988e270827dabf4b7ab79530610", null ],
+      [ "Cmd_CODE_EH_INIT_RULE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aef77f5e2e1d54e0db2273117028578ce", null ],
+      [ "Cmd_CODE_EH_INIT_RULE_FOR_MULTI_LEVEL", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a33516e7813746865e0b08595da241eb8", null ],
       [ "Cmd_CODE_EH_ACTIVATE_RULE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5076a6c6eb2d230505f338d511e378eb", null ],
       [ "Cmd_CODE_EH_INACTIVATE_RULE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7f40d87674b361b8f826a7bce1bde5c", null ],
       [ "Cmd_CODE_EH_ACTIVATE_RULE_FOR_MULTI_LEVEL", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa060e53367c118b2827bdcf404d755eb", null ],

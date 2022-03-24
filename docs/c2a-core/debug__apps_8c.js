@@ -4,6 +4,8 @@ var debug__apps_8c =
     [ "APP_DBG_flush_screen_", "debug__apps_8c.html#a17baafdaa5ac23a02932d87a2cf22cf5", null ],
     [ "APP_DBG_print_cmd_status", "debug__apps_8c.html#a67dbccb31d8e1a91fa6bd81f2e2d89e6", null ],
     [ "APP_DBG_print_cmd_status_", "debug__apps_8c.html#afe3184e9f0118e022152cf5a1bce5736", null ],
+    [ "APP_DBG_print_event_handler", "debug__apps_8c.html#a7fb222c214799ee0b4e3cb3368fc2307", null ],
+    [ "APP_DBG_print_event_handler_", "debug__apps_8c.html#a879079b9fedd6d89675579a9f7a6cd04", null ],
     [ "APP_DBG_print_event_logger0", "debug__apps_8c.html#ad09c8052a4efb430212993ad08e01536", null ],
     [ "APP_DBG_print_event_logger0_", "debug__apps_8c.html#a2ab584e120f8108462b67f2aea7fabc4", null ],
     [ "APP_DBG_print_event_logger1", "debug__apps_8c.html#ad47bfa44dd49b13a439b41bee94ffb07", null ],

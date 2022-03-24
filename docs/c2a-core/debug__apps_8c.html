@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('debug__apps_8c.html',''); initResizabl
 <code>#include &lt;<a class="el" href="task__dispatcher_8h_source.html">src_core/System/TaskManager/task_dispatcher.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="anomaly__logger_8h_source.html">src_core/System/AnomalyLogger/anomaly_logger.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="event__logger_8h_source.html">src_core/System/EventManager/event_logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="event__handler_8h_source.html">src_core/System/EventManager/event_handler.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="packet__handler_8h_source.html">src_core/TlmCmd/packet_handler.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="telemetry__definitions_8h_source.html">../../TlmCmd/telemetry_definitions.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="block__command__table_8h_source.html">src_core/TlmCmd/block_command_table.h</a>&gt;</code><br />
@@ -109,7 +110,7 @@ $(document).ready(function(){initNavTree('debug__apps_8c.html',''); initResizabl
 </div><div class="textblock"><div class="dynheader">
 debug_apps.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c__incl.svg" width="3212" height="1035"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c__incl.svg" width="3695" height="1050"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -127,6 +128,8 @@ debug_apps.c の依存先関係図:</div>
 <tr class="separator:a2ab584e120f8108462b67f2aea7fabc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9d5c4252f4a98da9d0d987ee43a34a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#ae9d5c4252f4a98da9d0d987ee43a34a1">APP_DBG_print_event_logger1_</a> (void)</td></tr>
 <tr class="separator:ae9d5c4252f4a98da9d0d987ee43a34a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879079b9fedd6d89675579a9f7a6cd04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#a879079b9fedd6d89675579a9f7a6cd04">APP_DBG_print_event_handler_</a> (void)</td></tr>
+<tr class="separator:a879079b9fedd6d89675579a9f7a6cd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81b36bc119bdcbf565e301f61634c8e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#a81b36bc119bdcbf565e301f61634c8e0">APP_DBG_print_git_rev_</a> (void)</td></tr>
 <tr class="separator:a81b36bc119bdcbf565e301f61634c8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a448f4269bd049fc9e6e7ec800427a7ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#a448f4269bd049fc9e6e7ec800427a7ae">APP_DBG_flush_screen</a> (void)</td></tr>
@@ -139,6 +142,8 @@ debug_apps.c の依存先関係図:</div>
 <tr class="separator:ad09c8052a4efb430212993ad08e01536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad47bfa44dd49b13a439b41bee94ffb07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#ad47bfa44dd49b13a439b41bee94ffb07">APP_DBG_print_event_logger1</a> (void)</td></tr>
 <tr class="separator:ad47bfa44dd49b13a439b41bee94ffb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb222c214799ee0b4e3cb3368fc2307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#a7fb222c214799ee0b4e3cb3368fc2307">APP_DBG_print_event_handler</a> (void)</td></tr>
+<tr class="separator:a7fb222c214799ee0b4e3cb3368fc2307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f97b9428a5b3c4fdc8ec2257f2485d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug__apps_8c.html#a1f97b9428a5b3c4fdc8ec2257f2485d6">APP_DBG_print_git_rev</a> (void)</td></tr>
 <tr class="separator:a1f97b9428a5b3c4fdc8ec2257f2485d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -159,7 +164,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00034">34</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -191,7 +196,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00062">62</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00069">69</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -223,7 +228,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00042">42</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00044">44</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -255,7 +260,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00089">89</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -266,6 +271,70 @@ debug_apps.c の依存先関係図:</div>
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c_afe3184e9f0118e022152cf5a1bce5736_icgraph.svg" width="1296" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7fb222c214799ee0b4e3cb3368fc2307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb222c214799ee0b4e3cb3368fc2307">&#9670;&nbsp;</a></span>APP_DBG_print_event_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> APP_DBG_print_event_handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00059">59</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c_a7fb222c214799ee0b4e3cb3368fc2307_cgraph.svg" width="691" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c_a7fb222c214799ee0b4e3cb3368fc2307_icgraph.svg" width="1000" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a879079b9fedd6d89675579a9f7a6cd04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879079b9fedd6d89675579a9f7a6cd04">&#9670;&nbsp;</a></span>APP_DBG_print_event_handler_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APP_DBG_print_event_handler_ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00149">149</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c_a879079b9fedd6d89675579a9f7a6cd04_cgraph.svg" width="479" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug__apps_8c_a879079b9fedd6d89675579a9f7a6cd04_icgraph.svg" width="1212" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -287,7 +356,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00049">49</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -319,7 +388,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00091">91</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00098">98</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -351,7 +420,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00054">54</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -383,7 +452,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00118">118</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00125">125</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -415,7 +484,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00057">57</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00064">64</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -447,7 +516,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00142">142</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00162">162</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -479,7 +548,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00039">39</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -511,7 +580,7 @@ debug_apps.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="debug__apps_8c_source.html">debug_apps.c</a> の <a class="el" href="debug__apps_8c_source.html#l00079">79</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
