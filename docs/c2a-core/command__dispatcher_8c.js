@@ -1,9 +1,9 @@
 var command__dispatcher_8c =
 [
-    [ "CIDS_EL_LOCAL_ID", "command__dispatcher_8c.html#a2fe846de7fe86a086f853b96ae5a2200", [
-      [ "CIDS_EL_LOCAL_ID_NULL_PARAM", "command__dispatcher_8c.html#a2fe846de7fe86a086f853b96ae5a2200a40a9c5faa9c62423c785bd1eece06f21", null ],
-      [ "CIDS_EL_LOCAL_ID_INVALID_PL", "command__dispatcher_8c.html#a2fe846de7fe86a086f853b96ae5a2200a9d049848651a85b7550c66d77b55b76c", null ],
-      [ "CIDS_EL_LOCAL_ID_UNKNOWN", "command__dispatcher_8c.html#a2fe846de7fe86a086f853b96ae5a2200a8cee4feea3bc5900ac561f2acafcccfd", null ]
+    [ "CDIS_EL_LOCAL_ID", "command__dispatcher_8c.html#a610497c613a910a395d609f1c3eee9d6", [
+      [ "CDIS_EL_LOCAL_ID_NULL_PARAM", "command__dispatcher_8c.html#a610497c613a910a395d609f1c3eee9d6ad05464f373542d5472781bff0733e25b", null ],
+      [ "CDIS_EL_LOCAL_ID_INVALID_PL", "command__dispatcher_8c.html#a610497c613a910a395d609f1c3eee9d6afbd5a6d3c43c8b53a275246758d92d20", null ],
+      [ "CDIS_EL_LOCAL_ID_UNKNOWN", "command__dispatcher_8c.html#a610497c613a910a395d609f1c3eee9d6adc6d7682f600e5a8179d166b6b5d8f12", null ]
     ] ],
     [ "CDIS_clear_command_list", "command__dispatcher_8c.html#a4692fc26de6c638d9f984cae66e8dbcd", null ],
     [ "CDIS_clear_error_status", "command__dispatcher_8c.html#ae75776a41a72200cf19c52b3489dd639", null ],

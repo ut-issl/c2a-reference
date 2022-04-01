@@ -235,10 +235,12 @@ event_logger.h の依存先関係図:</div>
 <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a2e8132e7a397fc01908de8be8058ea2e">EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE</a>, 
 <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a3a131063ef30aab8c655a12228edfd4a">EL_CORE_GROUP_COMMAND_ANALYZE</a>, 
 <br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af05190a45efa6a4f89edf0e4e63aab30">EL_CORE_GROUP_COMMAND_DISPATCHER</a>, 
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a328dc2ccd0e4a3d9771887d1bc7a610d">EL_CORE_GROUP_CDIS_INTERNAL_ERR</a>, 
+<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a6843ae3fdbbb92d93149d74c8f3cefad">EL_CORE_GROUP_CDIS_EXEC_ERR</a>, 
 <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872">EL_CORE_GROUP_EL_DROP_CLOG1</a>, 
 <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe">EL_CORE_GROUP_EL_DROP_CLOG2</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6">EL_CORE_GROUP_MAX</a>
+<br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6">EL_CORE_GROUP_MAX</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a66edf6d5dc4a12fbd8565ed752559c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の Event Group の C2A core 使用分  <a href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33">[詳解]</a><br /></td></tr>
@@ -888,7 +890,7 @@ CLog (<a class="el" href="struct_e_l___cumulative_log.html" title="累積ログ 
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00279">279</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00280">280</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -924,7 +926,8 @@ CLog (<a class="el" href="struct_e_l___cumulative_log.html" title="累積ログ 
 <tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a2e8132e7a397fc01908de8be8058ea2e"></a>EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE&#160;</td><td class="fielddoc"><p><a class="el" href="struct_e_h___rule.html" title="EL_Event に対して対応する EH_Rule">EH_Rule</a> でマッチしたが，そのルールで対応せずに，上位のルールで対応させた（詳細は <a class="el" href="event__handler_8h.html" title="イベント発火型処理を行う">event_handler.h</a> 参照） </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a3a131063ef30aab8c655a12228edfd4a"></a>EL_CORE_GROUP_COMMAND_ANALYZE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33af05190a45efa6a4f89edf0e4e63aab30"></a>EL_CORE_GROUP_COMMAND_DISPATCHER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a328dc2ccd0e4a3d9771887d1bc7a610d"></a>EL_CORE_GROUP_CDIS_INTERNAL_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a6843ae3fdbbb92d93149d74c8f3cefad"></a>EL_CORE_GROUP_CDIS_EXEC_ERR&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872"></a>EL_CORE_GROUP_EL_DROP_CLOG1&#160;</td><td class="fielddoc"><p>EL CLogs で古いエラーを上書きするとき (group, err_level を保存) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe"></a>EL_CORE_GROUP_EL_DROP_CLOG2&#160;</td><td class="fielddoc"><p>EL CLogs で古いエラーを上書きするとき (local, count を保存) </p>
@@ -962,7 +965,7 @@ C2A Core では HIGH, LOW しか使わないため， MIDDLE はユーザー定�
 <tr><td class="fieldname"><a id="ae574b6e1365b0b0c0af97f6f8abd7af0a00ec2f0b002fdb180a9d565dca3314c0"></a>EL_ERROR_LEVEL_MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00258">258</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00259">259</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -998,7 +1001,7 @@ C2A Core では HIGH, LOW しか使わないため， MIDDLE はユーザー定�
 <tr><td class="fieldname"><a id="ae9ce022007a3fee570838f8d0af4c00aaf49d1ef7e4e961b2398337cc38dc0aaf"></a>EL_EVENT_LOCAL_MAX&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00234">234</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00235">235</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2012,7 +2015,7 @@ err_level が不正な場合は， EL_ERROR_LEVEL_HIGH のものを返す </dd>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a50ba2fe43a96f7351951a4109227ba6f_icgraph.svg" width="2035" height="1792"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a50ba2fe43a96f7351951a4109227ba6f_icgraph.svg" width="2067" height="1739"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -2053,7 +2056,7 @@ err_level が不正な場合は， EL_ERROR_LEVEL_HIGH のものを返す </dd>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_af088469f27d5dfca608a9cacee9fbc17_icgraph.svg" width="2227" height="1588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_af088469f27d5dfca608a9cacee9fbc17_icgraph.svg" width="2222" height="1720"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -2120,7 +2123,7 @@ err_level が不正な場合は， EL_ERROR_LEVEL_HIGH のものを返す </dd>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a25a74a48375dfc1f3f80be68e0ac00ea_icgraph.svg" width="1584" height="1707"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h_a25a74a48375dfc1f3f80be68e0ac00ea_icgraph.svg" width="1654" height="1720"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
