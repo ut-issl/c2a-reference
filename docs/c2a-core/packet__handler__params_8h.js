@@ -8,6 +8,7 @@ var packet__handler__params_8h =
     [ "PH_TL0_CMD_LIST_MAX", "packet__handler__params_8h.html#a8748702094720d63e7a8f2581c8564c8", null ],
     [ "PH_TL1_CMD_LIST_MAX", "packet__handler__params_8h.html#a4c59733775b0826a0897d1100591c31f", null ],
     [ "PH_TL2_CMD_LIST_MAX", "packet__handler__params_8h.html#a39854143bf64127ff8558b8351c9a7ec", null ],
+    [ "PH_TL_MIS_CMD_LIST_MAX", "packet__handler__params_8h.html#a54f322b483aae4cfd1f7ee1b829eb0ed", null ],
     [ "TL_TLM_PAGE_MAX", "packet__handler__params_8h.html#adb37595b65ee55fd6cf2a92540af768c", null ],
     [ "TL_TLM_PAGE_SIZE", "packet__handler__params_8h.html#abcf6a9ed2afdeb914ba3172f82726bd6", null ]
 ];
