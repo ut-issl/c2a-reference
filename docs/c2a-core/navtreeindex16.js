@@ -1,11 +1,5 @@
 var NAVTREEINDEX16 =
 {
-"uart__sils__sci__if_8hpp.html#acc42290823d99aa623d7dadccba7efa4":[1,0,0,1,2,0,5,2],
-"uart__sils__sci__if_8hpp_source.html":[1,0,0,1,2,0,5],
-"user__packet__handler_8c.html":[1,0,0,1,5,15],
-"user__packet__handler_8c.html#a12b98333253c171ffd98aa58f1b522d2":[1,0,0,1,5,15,11],
-"user__packet__handler_8c.html#a2c3c644313071db44127bc7a90be4569":[1,0,0,1,5,15,5],
-"user__packet__handler_8c.html#a311f412a8baddf012c1c91324ca32a76":[1,0,0,1,5,15,2],
 "user__packet__handler_8c.html#a4b0723acb8a522d6f5a481a679f9be10":[1,0,0,1,5,15,3],
 "user__packet__handler_8c.html#a6ceb9e37114f6c81c6872ec90dd2a39d":[1,0,0,1,5,15,4],
 "user__packet__handler_8c.html#a7a13227b9ab4d47cbfbe4588d025314d":[1,0,0,1,5,15,10],

@@ -83,6 +83,7 @@ var annotated_dup =
     [ "TelemetryFrame", "struct_telemetry_frame.html", "struct_telemetry_frame" ],
     [ "TelemetryManager", "struct_telemetry_manager.html", "struct_telemetry_manager" ],
     [ "TF_TlmInfo", "struct_t_f___tlm_info.html", "struct_t_f___tlm_info" ],
+    [ "TimelineCommandDispatcher", "struct_timeline_command_dispatcher.html", "struct_timeline_command_dispatcher" ],
     [ "TimeManager", "struct_time_manager.html", "struct_time_manager" ],
     [ "TLM_MGR_BcInfo", "struct_t_l_m___m_g_r___bc_info.html", "struct_t_l_m___m_g_r___bc_info" ],
     [ "TLM_MGR_RegisterInfo", "struct_t_l_m___m_g_r___register_info.html", "struct_t_l_m___m_g_r___register_info" ],

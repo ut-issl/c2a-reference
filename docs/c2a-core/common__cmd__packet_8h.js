@@ -12,12 +12,12 @@ var common__cmd__packet_8h =
     ] ],
     [ "CCP_EXEC_TYPE", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960fa", [
       [ "CCP_EXEC_TYPE_GS", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faa4a90080f39c454b5b65a9ab49525d802", null ],
-      [ "CCP_EXEC_TYPE_TL0", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faad3dc234ca684d5203e7bad8a31655c3f", null ],
+      [ "CCP_EXEC_TYPE_TL_FROM_GS", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faacfb41f1c85394eccb468badb60928891", null ],
       [ "CCP_EXEC_TYPE_BC", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faa8951a6754df25abcdbac9ab39934f954", null ],
       [ "CCP_EXEC_TYPE_RT", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faa4c94aba75e8771da618520ace3070de9", null ],
       [ "CCP_EXEC_TYPE_UTL", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faab1841c4079e04b30604eb9ab482b342a", null ],
-      [ "CCP_EXEC_TYPE_TL1", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faacfcf07767546d7e7f79ffd774206412b", null ],
-      [ "CCP_EXEC_TYPE_TL2", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faaf2cbfc2cfd5677442124e5f3735e765f", null ],
+      [ "CCP_EXEC_TYPE_TL_DEPLOY_BC", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faa1b57965ecb2299fac22e1c99beef2767", null ],
+      [ "CCP_EXEC_TYPE_TL_DEPLOY_TLM", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faaab42d8ac37fbc87c55cf6638b9726214", null ],
       [ "CCP_EXEC_TYPE_UNKNOWN", "common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960faa197995be96c750e6111f86078c978ace", null ]
     ] ],
     [ "CCP_copy_packet", "common__cmd__packet_8h.html#aff399e79c4a5c9d75552b295de0d3365", null ],
