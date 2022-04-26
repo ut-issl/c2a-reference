@@ -142,6 +142,18 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <tr class="memitem:ae0f356389f15546c7e067db35bde985d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__cmd__packet__util_8h.html#ae0f356389f15546c7e067db35bde985d">CCP_convert_rtc_to_tlc</a> (<a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet, <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> ti)</td></tr>
 <tr class="memdesc:ae0f356389f15546c7e067db35bde985d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realtime Command から Timeline Command へ変換  <a href="common__cmd__packet__util_8h.html#ae0f356389f15546c7e067db35bde985d">[詳解]</a><br /></td></tr>
 <tr class="separator:ae0f356389f15546c7e067db35bde985d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e00b45a361e11d341d84303fe8959b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__cmd__packet__util_8h.html#ac2e00b45a361e11d341d84303fe8959b">CCP_register_app_cmd</a> (<a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> ti, <a class="el" href="app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8">AR_APP_ID</a> id)</td></tr>
+<tr class="memdesc:ac2e00b45a361e11d341d84303fe8959b"><td class="mdescLeft">&#160;</td><td class="mdescRight">App 実行コマンドを登録  <a href="common__cmd__packet__util_8h.html#ac2e00b45a361e11d341d84303fe8959b">[詳解]</a><br /></td></tr>
+<tr class="separator:ac2e00b45a361e11d341d84303fe8959b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfb69bc9ff98498734df05026c5a3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__cmd__packet__util_8h.html#aedfb69bc9ff98498734df05026c5a3f2">CCP_register_rtc</a> (<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_id, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *param, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:aedfb69bc9ff98498734df05026c5a3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realtime command を登録  <a href="common__cmd__packet__util_8h.html#aedfb69bc9ff98498734df05026c5a3f2">[詳解]</a><br /></td></tr>
+<tr class="separator:aedfb69bc9ff98498734df05026c5a3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93acfbff973e5093fec4a311daa614e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__cmd__packet__util_8h.html#a93acfbff973e5093fec4a311daa614e5">CCP_register_tlc</a> (<a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> ti, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a> cmd_id, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *param, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memdesc:a93acfbff973e5093fec4a311daa614e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timeline command を登録  <a href="common__cmd__packet__util_8h.html#a93acfbff973e5093fec4a311daa614e5">[詳解]</a><br /></td></tr>
+<tr class="separator:a93acfbff973e5093fec4a311daa614e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c819d9020aa779698459aa71f42e64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__cmd__packet__util_8h.html#a85c819d9020aa779698459aa71f42e64">CCP_register_block_deploy_cmd</a> (<a class="el" href="timeline__command__dispatcher_8h.html#a3174230952ef363c9ff4c87829abccea">TLCD_ID</a> tl_no, <a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block_no)</td></tr>
+<tr class="memdesc:a85c819d9020aa779698459aa71f42e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">BC展開 command を登録  <a href="common__cmd__packet__util_8h.html#a85c819d9020aa779698459aa71f42e64">[詳解]</a><br /></td></tr>
+<tr class="separator:a85c819d9020aa779698459aa71f42e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c58d5f29f661249b4eadeb1a3606fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__cmd__packet__util_8h.html#ab2c58d5f29f661249b4eadeb1a3606fd">CCP_get_1byte_param_from_packet</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> n)</td></tr>
 <tr class="memdesc:ab2c58d5f29f661249b4eadeb1a3606fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCP packet から，サイズが 1 byte のコマンド引数を取得する  <a href="common__cmd__packet__util_8h.html#ab2c58d5f29f661249b4eadeb1a3606fd">[詳解]</a><br /></td></tr>
 <tr class="separator:ab2c58d5f29f661249b4eadeb1a3606fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,7 +232,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <dl class="section return"><dt>戻り値</dt><dd>パラメタ（型は意味をもってない） </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>使用例 uint32_t param0 = <a class="el" href="common__cmd__packet__util_8h.html#aac7804305be7dbd4853665f32f823f20" title="CCP packet から，n番目のコマンド引数を取得する">CCP_get_param_from_packet(packet, 0, uint32_t)</a>; HOGE_ENUM param1 = (HOGE_ENUM)<a class="el" href="common__cmd__packet__util_8h.html#aac7804305be7dbd4853665f32f823f20" title="CCP packet から，n番目のコマンド引数を取得する">CCP_get_param_from_packet(packet, 1, uint8_t)</a>; </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8h_source.html">common_cmd_packet_util.h</a> の <a class="el" href="common__cmd__packet__util_8h_source.html#l00137">137</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8h_source.html">common_cmd_packet_util.h</a> の <a class="el" href="common__cmd__packet__util_8h_source.html#l00177">177</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -287,7 +299,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00114">114</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00152">152</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -297,7 +309,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_ae0f356389f15546c7e067db35bde985d_icgraph.svg" width="3094" height="1143"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_ae0f356389f15546c7e067db35bde985d_icgraph.svg" width="2596" height="1154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -336,6 +348,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>App 実行コマンドを生成 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>TL登録まで行う場合は <code>CCP_register_app_cmd</code> を使用 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">packet</td><td>CCP </td></tr>
@@ -346,7 +359,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00035">35</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00037">37</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -356,7 +369,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_a7e4a83a103dfa316c08b1570d93df0d1_icgraph.svg" width="1747" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_a7e4a83a103dfa316c08b1570d93df0d1_icgraph.svg" width="1775" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -395,7 +408,9 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>BC展開 command を生成 </p>
-<dl class="section note"><dt>覚え書き</dt><dd>引数が不正なとき， packet は NOP RTC を返す </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>引数が不正なとき， packet は NOP RTC を返す </dd>
+<dd>
+RTC のキューに登録までする場合は <code>CCP_register_block_deploy_cmd</code> を使用 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">packet</td><td>CCP </td></tr>
@@ -406,7 +421,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>CCP_UTIL_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00097">97</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00099">99</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -416,7 +431,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_ac4a5c5fca95eda07227b4da1883612fc_icgraph.svg" width="2464" height="223"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_ac4a5c5fca95eda07227b4da1883612fc_icgraph.svg" width="2464" height="210"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -461,7 +476,9 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>Realtime command を生成 </p>
-<dl class="section note"><dt>覚え書き</dt><dd>引数が不正なとき， packet は NOP RTC を返す </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>引数が不正なとき， packet は NOP RTC を返す </dd>
+<dd>
+RTC のキューに登録までする場合は <code>CCP_register_rtc</code> を使用 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">packet</td><td>CCP </td></tr>
@@ -473,7 +490,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>CCP_UTIL_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00049">49</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -483,7 +500,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_af9f77cfe0b19d8078e79f1c32d9b2843_icgraph.svg" width="2072" height="1254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_af9f77cfe0b19d8078e79f1c32d9b2843_icgraph.svg" width="1951" height="1442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -534,7 +551,9 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>Timeline command を生成 </p>
-<dl class="section note"><dt>覚え書き</dt><dd>引数が不正なとき， packet は NOP TLC を返す </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>引数が不正なとき， packet は NOP TLC を返す </dd>
+<dd>
+TL に登録までする場合は <code>CCP_register_tlc</code> を使用 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">packet</td><td>CCP </td></tr>
@@ -547,7 +566,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>CCP_UTIL_ACK </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00071">71</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00073">73</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -557,7 +576,7 @@ common_cmd_packet_util.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_a3695599b4d05dbb0b510c73dab7cd233_icgraph.svg" width="2978" height="1143"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_a3695599b4d05dbb0b510c73dab7cd233_icgraph.svg" width="2627" height="1154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -602,7 +621,7 @@ CCP_get_param_from_packet マクロ で使うことを想定し，ユーザー�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>パラメタを保持したポインタ（型は意味をもってない） </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00120">120</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00158">158</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -651,7 +670,7 @@ CCP_get_param_from_packet マクロ で使うことを想定し，ユーザー�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>パラメタを保持したポインタ（型は意味をもってない） </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00139">139</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00177">177</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -700,7 +719,7 @@ CCP_get_param_from_packet マクロ で使うことを想定し，ユーザー�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>パラメタを保持したポインタ（型は意味をもってない） </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00158">158</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00196">196</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -749,7 +768,7 @@ CCP_get_param_from_packet マクロ で使うことを想定し，ユーザー�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>パラメタを保持したポインタ（型は意味をもってない） </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00177">177</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00215">215</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -803,7 +822,7 @@ CCP_get_param_from_packet マクロ で使うことを想定し，ユーザー�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>コピーした長さ </dd></dl>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00196">196</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00234">234</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -819,12 +838,218 @@ CCP_get_param_from_packet マクロ で使うことを想定し，ユーザー�
 
 </div>
 </div>
+<a id="ac2e00b45a361e11d341d84303fe8959b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e00b45a361e11d341d84303fe8959b">&#9670;&nbsp;</a></span>CCP_register_app_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> CCP_register_app_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td>
+          <td class="paramname"><em>ti</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8">AR_APP_ID</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>App 実行コマンドを登録 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ti</td><td>TI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>AR_APP_ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>PH_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00116">116</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_ac2e00b45a361e11d341d84303fe8959b_cgraph.svg" width="1570" height="1330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a85c819d9020aa779698459aa71f42e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c819d9020aa779698459aa71f42e64">&#9670;&nbsp;</a></span>CCP_register_block_deploy_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> CCP_register_block_deploy_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="timeline__command__dispatcher_8h.html#a3174230952ef363c9ff4c87829abccea">TLCD_ID</a>&#160;</td>
+          <td class="paramname"><em>tl_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a>&#160;</td>
+          <td class="paramname"><em>block_no</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BC展開 command を登録 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>RTC に登録される </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tl_no</td><td>Timeline no </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">block_no</td><td>BC ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCP_UTIL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00142">142</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_a85c819d9020aa779698459aa71f42e64_cgraph.svg" width="1503" height="1352"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aedfb69bc9ff98498734df05026c5a3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfb69bc9ff98498734df05026c5a3f2">&#9670;&nbsp;</a></span>CCP_register_rtc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> CCP_register_rtc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realtime command を登録 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_id</td><td>CMD_CODE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>パラメタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>パラメタ長 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCP_UTIL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00122">122</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_aedfb69bc9ff98498734df05026c5a3f2_cgraph.svg" width="1552" height="1108"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a93acfbff973e5093fec4a311daa614e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93acfbff973e5093fec4a311daa614e5">&#9670;&nbsp;</a></span>CCP_register_tlc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a> CCP_register_tlc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td>
+          <td class="paramname"><em>ti</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3">CMD_CODE</a>&#160;</td>
+          <td class="paramname"><em>cmd_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timeline command を登録 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ti</td><td>TI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_id</td><td>CMD_CODE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>パラメタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>パラメタ長 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>CCP_UTIL_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="common__cmd__packet__util_8c_source.html">common_cmd_packet_util.c</a> の <a class="el" href="common__cmd__packet__util_8c_source.html#l00132">132</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__cmd__packet__util_8h_a93acfbff973e5093fec4a311daa614e5_cgraph.svg" width="1724" height="1134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="acommon__cmd__packet__util_8h_html_a0102106bb6193bc9bf732940f1fc74c7"><div class="ttname"><a href="common__cmd__packet__util_8h.html#a0102106bb6193bc9bf732940f1fc74c7">CCP_get_8byte_param_from_packet</a></div><div class="ttdeci">uint64_t * CCP_get_8byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 8 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00177">common_cmd_packet_util.c:177</a></div></div>
-<div class="ttc" id="acommon__cmd__packet__util_8h_html_a80d5fb3327331e59e88fcf27b0c1280e"><div class="ttname"><a href="common__cmd__packet__util_8h.html#a80d5fb3327331e59e88fcf27b0c1280e">CCP_get_4byte_param_from_packet</a></div><div class="ttdeci">uint32_t * CCP_get_4byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 4 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00158">common_cmd_packet_util.c:158</a></div></div>
-<div class="ttc" id="acommon__cmd__packet__util_8h_html_a631b01a16b948f0dad619c2f86eea9c8"><div class="ttname"><a href="common__cmd__packet__util_8h.html#a631b01a16b948f0dad619c2f86eea9c8">CCP_get_2byte_param_from_packet</a></div><div class="ttdeci">uint16_t * CCP_get_2byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 2 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00139">common_cmd_packet_util.c:139</a></div></div>
-<div class="ttc" id="acommon__cmd__packet__util_8h_html_ab2c58d5f29f661249b4eadeb1a3606fd"><div class="ttname"><a href="common__cmd__packet__util_8h.html#ab2c58d5f29f661249b4eadeb1a3606fd">CCP_get_1byte_param_from_packet</a></div><div class="ttdeci">uint8_t * CCP_get_1byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 1 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00120">common_cmd_packet_util.c:120</a></div></div>
+<div class="ttc" id="acommon__cmd__packet__util_8h_html_a0102106bb6193bc9bf732940f1fc74c7"><div class="ttname"><a href="common__cmd__packet__util_8h.html#a0102106bb6193bc9bf732940f1fc74c7">CCP_get_8byte_param_from_packet</a></div><div class="ttdeci">uint64_t * CCP_get_8byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 8 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00215">common_cmd_packet_util.c:215</a></div></div>
+<div class="ttc" id="acommon__cmd__packet__util_8h_html_a80d5fb3327331e59e88fcf27b0c1280e"><div class="ttname"><a href="common__cmd__packet__util_8h.html#a80d5fb3327331e59e88fcf27b0c1280e">CCP_get_4byte_param_from_packet</a></div><div class="ttdeci">uint32_t * CCP_get_4byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 4 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00196">common_cmd_packet_util.c:196</a></div></div>
+<div class="ttc" id="acommon__cmd__packet__util_8h_html_a631b01a16b948f0dad619c2f86eea9c8"><div class="ttname"><a href="common__cmd__packet__util_8h.html#a631b01a16b948f0dad619c2f86eea9c8">CCP_get_2byte_param_from_packet</a></div><div class="ttdeci">uint16_t * CCP_get_2byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 2 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00177">common_cmd_packet_util.c:177</a></div></div>
+<div class="ttc" id="acommon__cmd__packet__util_8h_html_ab2c58d5f29f661249b4eadeb1a3606fd"><div class="ttname"><a href="common__cmd__packet__util_8h.html#ab2c58d5f29f661249b4eadeb1a3606fd">CCP_get_1byte_param_from_packet</a></div><div class="ttdeci">uint8_t * CCP_get_1byte_param_from_packet(const CommonCmdPacket *packet, uint8_t n)</div><div class="ttdoc">CCP packet から，サイズが 1 byte のコマンド引数を取得する</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00158">common_cmd_packet_util.c:158</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

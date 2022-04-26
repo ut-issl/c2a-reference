@@ -1,5 +1,14 @@
 var NAVTREEINDEX13 =
 {
+"struct_g_s___info.html#af3f7177ea43535bcfd24e5f052428c67":[0,0,57,12],
+"struct_g_s___info.html#afacffaa74d9cf687dab2f18dceaa7e0a":[0,0,57,7],
+"struct_g_s___valiate_info.html":[0,0,58],
+"struct_g_s___valiate_info.html#a00d0d38d23947cd88bc4e6161eafe375":[0,0,58,2],
+"struct_g_s___valiate_info.html#a120d2e3085be3de199242773bbe0a924":[0,0,58,4],
+"struct_g_s___valiate_info.html#a4274fad7b96a182e693c8f1bc90166df":[0,0,58,3],
+"struct_g_s___valiate_info.html#aa70678d0a7e116e8f3cb86ec2df4466c":[0,0,58,1],
+"struct_g_s___valiate_info.html#adabcd2e65ba5bde1163ab7ba601f57db":[0,0,58,0],
+"struct_g_s___validate_info.html":[0,0,59],
 "struct_i2_c___config.html":[0,0,60],
 "struct_i2_c___config.html#a32f3251e41b58001b8b6a97df656caf0":[0,0,60,1],
 "struct_i2_c___config.html#a6715e0377aed5d4badde6bf294d63920":[0,0,60,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX13 =
 "tc__transfer__frame_8h.html#a6e82d8f021fa29891d0f6e98d9b0e2e8":[1,0,0,1,5,0,5,11],
 "tc__transfer__frame_8h.html#a6f301361103fd9a05a2b1919e1a3b952":[1,0,0,1,5,0,5,14],
 "tc__transfer__frame_8h.html#a7505f574485627bc3e7b776baa1a918f":[1,0,0,1,5,0,5,18],
-"tc__transfer__frame_8h.html#a794a380208d7f4c8c52ae49df9f18b6e":[1,0,0,1,5,0,5,16],
-"tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845":[1,0,0,1,5,0,5,8],
-"tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845a1074a174d52732748bdbda1d23e66e38":[1,0,0,1,5,0,5,8,1],
-"tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845a1ecdd0403a6448c928b1e4b21e7aa1af":[1,0,0,1,5,0,5,8,0],
-"tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845a9d85e2ef373e4fc668b77db75db0de1c":[1,0,0,1,5,0,5,8,3],
-"tc__transfer__frame_8h.html#a8b2a1ee8653a4c50ca3e5b5923267845ad9b1954fc2430f8b23cfccc61043a23a":[1,0,0,1,5,0,5,8,2],
-"tc__transfer__frame_8h.html#a8bd635fbd6805a4c71f2744fa5496074":[1,0,0,1,5,0,5,20],
-"tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403a":[1,0,0,1,5,0,5,9],
-"tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403aa2526eba6b20c191e560d6a19435145b4":[1,0,0,1,5,0,5,9,1],
-"tc__transfer__frame_8h.html#ab9601a0914f37ba4f269fd7d562c403aa5b78e2f2d7686eb64fcc1ab83382d76d":[1,0,0,1,5,0,5,9,0]
+"tc__transfer__frame_8h.html#a794a380208d7f4c8c52ae49df9f18b6e":[1,0,0,1,5,0,5,16]
 };
