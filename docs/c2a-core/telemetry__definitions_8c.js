@@ -2,6 +2,8 @@ var telemetry__definitions_8c =
 [
     [ "TF_load_tlm_table", "telemetry__definitions_8c.html#a91def2fbe43510d233815f51bfa65268", null ],
     [ "Tlm_AM_", "telemetry__definitions_8c.html#a3e753e8ff5f99ad901f220cec4ceb432", null ],
+    [ "Tlm_AOBC_AOBC_", "telemetry__definitions_8c.html#a84f310ab422df1969e02ebd4c195fcab", null ],
+    [ "Tlm_AOBC_HK_", "telemetry__definitions_8c.html#afd76f547a6dc89a65b11b5aaff7cb47c", null ],
     [ "Tlm_APP_TIME_", "telemetry__definitions_8c.html#a8f40022ca3187a40fcde3bee9bca9f94", null ],
     [ "Tlm_BL_", "telemetry__definitions_8c.html#abae3bcd2497941bc76efcea7822623c0", null ],
     [ "Tlm_CA_", "telemetry__definitions_8c.html#a9fe1910e686cb76e200c3c9241df388f", null ],
