@@ -1,6 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"struct_b_c_t___func.html#a6db2bbcea2d498afb4f535d87eff6b71":[0,0,11,2],
 "struct_b_c_t___func.html#a8d8fad93d16268410e152be0a2b463ea":[0,0,11,3],
 "struct_b_c_t___func.html#ad9abde37fb6464551a4812330e0cde67":[0,0,11,1],
 "struct_b_c_t___pos.html":[0,0,12],
@@ -249,5 +248,6 @@ var NAVTREEINDEX12 =
 "struct_g_s___info.html#ab7c5097dd4b1f2d8b43ee9e6d1849107":[0,0,57,8],
 "struct_g_s___info.html#ac9a212d06b4e03b3f0840b6bf2f6c2c7":[0,0,57,10],
 "struct_g_s___info.html#ad9b7ceb2981550b7ef63427edb2645a9":[0,0,57,2],
-"struct_g_s___info.html#af10567a2865f18084c6b1c257721a04a":[0,0,57,11]
+"struct_g_s___info.html#af10567a2865f18084c6b1c257721a04a":[0,0,57,11],
+"struct_g_s___info.html#af3f7177ea43535bcfd24e5f052428c67":[0,0,57,12]
 };
