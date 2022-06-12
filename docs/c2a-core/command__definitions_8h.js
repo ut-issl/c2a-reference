@@ -136,6 +136,7 @@ var command__definitions_8h =
       [ "Cmd_CODE_DCU_ABORT_CMD", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aff6570679dd9c98b6d6d2937b4371f48", null ],
       [ "Cmd_CODE_DCU_DOWN_ABORT_FLAG", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a48b3fae2c069a47ffd67de5d3f2b6868", null ],
       [ "Cmd_CODE_DCU_CLEAR_LOG", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a967e8aba5ae58158ccbe3ea032ac1c89", null ],
+      [ "Cmd_CODE_TEST_CCP_REGISTER_TLC_ASAP", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3add96475c4fcf930f8517f0e21de8cbcc", null ],
       [ "Cmd_CODE_DI_GS_CCSDS_TX_START", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1739045788314996753503d23e2cc0a3", null ],
       [ "Cmd_CODE_DI_GS_CCSDS_TX_STOP", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad50d21deb81103bcf313a2e28564359a", null ],
       [ "Cmd_CODE_DI_GS_DRIVER_RESET", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a44bb5e860a1a8e11825a8dc3d26f28f8", null ],
