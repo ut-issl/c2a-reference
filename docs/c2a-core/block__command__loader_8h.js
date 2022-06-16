@@ -13,6 +13,7 @@ var block__command__loader_8h =
     [ "BCL_tool_prepare_param_uint8", "block__command__loader_8h.html#aa9e8bc0a1b0bb6c9028156288afcbebc", null ],
     [ "BCL_tool_register_app", "block__command__loader_8h.html#a79f8c8fdf61bea28c3e44ddfe447c46d", null ],
     [ "BCL_tool_register_cmd", "block__command__loader_8h.html#adc8e2381948a082e62d72d9971fc203f", null ],
+    [ "BCL_tool_register_cmd_to_other_obc", "block__command__loader_8h.html#a30907a8161e23fe4d6105ccb21666dcb", null ],
     [ "BCL_tool_register_combine", "block__command__loader_8h.html#a99596019ff3a563f43ebae43ce86a03a", null ],
     [ "BCL_tool_register_deploy", "block__command__loader_8h.html#a3dab8c3e3aac3833b245e3ba7c597b81", null ],
     [ "BCL_tool_register_limit_combine", "block__command__loader_8h.html#a5b59475bbbf303eaca56af95565e6f69", null ],
