@@ -23,9 +23,9 @@ jobs:
           mkdir temp && cd $_
           git clone --depth 1 https://github.com/ut-issl/c2a-core.git ./clone/c2a-core
           cp -r ./clone/c2a-core/ ./c2a-core/
-          cp -r ./clone/c2a-core/ ./c2a-core/Examples/minimum_user_for_s2e/src/src_core/
-          rm -rf ./c2a-core/Examples/minimum_user_for_s2e/src/s2e_mockup
-          cd ./c2a-core/Examples/minimum_user_for_s2e/src/src_core/
+          cp -r ./clone/c2a-core/ ./c2a-core/Examples/minimum_user/src/src_core/
+          rm -rf ./c2a-core/Examples/minimum_user/src/s2e_mockup
+          cd ./c2a-core/Examples/minimum_user/src/src_core/
           rm -rf ./Examples
           rm -rf ./Docs
 
@@ -48,7 +48,7 @@ jobs:
           git restore ./c2a-core/status_updated.json
 
       - name: build
-        working-directory: ./temp/c2a-core/Examples/minimum_user_for_s2e
+        working-directory: ./temp/c2a-core/Examples/minimum_user
         run: doxygen
 
       - name: move files
