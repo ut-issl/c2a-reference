@@ -1,18 +1,18 @@
 <map id="CCP_get_packet_len" name="CCP_get_packet_len">
-<area shape="rect" id="node1" title="パケット長を取得" alt="" coords="1713,853,1867,880"/>
-<area shape="rect" id="node2" href="$aobc_8h.html#a21bc4dfcbc36f4c3db4c9f59cd020414" title="AOB Cへのコマンド送信" alt="" coords="1522,828,1654,855"/>
+<area shape="rect" id="node1" title="パケット長を取得" alt="" coords="1713,855,1867,881"/>
+<area shape="rect" id="node2" href="$aobc_8h.html#a21bc4dfcbc36f4c3db4c9f59cd020414" title="AOB Cへのコマンド送信" alt="" coords="1522,829,1654,856"/>
 <area shape="rect" id="node14" href="$block__command__table_8c.html#aa8c676311a614f56a48444ffb17f7e87" title="pos の指す場所に packet の内容を保存 (TCP_PRM_HDR_LEN の長さも考慮)" alt="" coords="1524,369,1652,396"/>
-<area shape="rect" id="node49" href="$common__cmd__packet_8c.html#add63f4e739670d463f6ace1f55fa3d48" title="有効なパケットかチェックする" alt="" coords="1511,879,1665,905"/>
-<area shape="rect" id="node50" href="$driver__super__issl__format_8h.html#a5076f38576e3c77d7333169b524e3cd1" title="CommonCmdPacket を受信データからコピーして取得する" alt="" coords="1276,929,1435,956"/>
-<area shape="rect" id="node3" href="$di__aobc_8h.html#aff7d4f09f3003e15242d14e6ed393059" title="CommonCmdPacket を AOBC に送信する" alt="" coords="1248,828,1463,855"/>
-<area shape="rect" id="node4" href="$user__packet__handler_8h.html#a2c3c644313071db44127bc7a90be4569" title="PH の cmd_router_ のユーザー処理関数" alt="" coords="1043,828,1199,855"/>
-<area shape="rect" id="node5" href="$packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc" title="CCP をコマンドとして解釈して実行，ないしは別機器へ配送する" alt="" coords="807,921,981,948"/>
+<area shape="rect" id="node49" href="$common__cmd__packet_8c.html#add63f4e739670d463f6ace1f55fa3d48" title="有効なパケットかチェックする" alt="" coords="1511,880,1665,907"/>
+<area shape="rect" id="node50" href="$driver__super__issl__format_8h.html#a5076f38576e3c77d7333169b524e3cd1" title="CommonCmdPacket を受信データからコピーして取得する" alt="" coords="1276,931,1435,957"/>
+<area shape="rect" id="node3" href="$di__aobc_8h.html#aff7d4f09f3003e15242d14e6ed393059" title="CommonCmdPacket を AOBC に送信する" alt="" coords="1248,829,1463,856"/>
+<area shape="rect" id="node4" href="$user__packet__handler_8h.html#a2c3c644313071db44127bc7a90be4569" title="PH の cmd_router_ のユーザー処理関数" alt="" coords="1043,829,1199,856"/>
+<area shape="rect" id="node5" href="$packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc" title="CCP をコマンドとして解釈して実行，ないしは別機器へ配送する" alt="" coords="807,924,981,951"/>
 <area shape="rect" id="node6" href="$block__command__executor_8c.html#ae33c8a6dadb5c8d6052c681bd93eabb4" title="BC をまとめて一括で実行する" alt="" coords="527,833,721,860"/>
-<area shape="rect" id="node9" href="$block__command__executor_8c.html#ad3ff86b57b5abbbdb7dd658a04f00f13" title="rotator の実行主体" alt="" coords="535,1103,713,1129"/>
+<area shape="rect" id="node9" href="$block__command__executor_8c.html#ad3ff86b57b5abbbdb7dd658a04f00f13" title="rotator の実行主体" alt="" coords="535,1117,713,1144"/>
 <area shape="rect" id="node10" href="$block__command__executor_8c.html#aa35678f3996844ae59428f34e6c8c78f" title="BC をまとめて一括で実行する" alt="" coords="535,885,713,926"/>
-<area shape="rect" id="node11" href="$command__dispatcher_8h.html#a90617acff33923f51c212b8e3034712c" title="CDIS に登録されているコマンドキューからコマンドを実行" alt="" coords="531,951,717,977"/>
-<area shape="rect" id="node12" href="$event__handler_8c.html#a8d7de705ac2b09f9f25644f0c9f55952" title="EH 対応を実施" alt="" coords="571,1001,677,1028"/>
-<area shape="rect" id="node13" href="$mode__manager_8c.html#a4a483437e28116e6067d488392922a8f" title="(モード遷移に対応する)ブロックコマンドのタイムラインへの展開を行う" alt="" coords="533,1052,715,1079"/>
+<area shape="rect" id="node11" href="$common__cmd__packet__util_8h.html#ad54dccaa6f4da58c94a03a95318f7d95" title="BC展開 command を生成し，即時実行する" alt="" coords="526,950,722,991"/>
+<area shape="rect" id="node12" href="$common__cmd__packet__util_8h.html#a572a39fabb60337856dcd71bb7a471e3" title="Realtime command を生成し，即時実行する" alt="" coords="535,1016,713,1043"/>
+<area shape="rect" id="node13" href="$command__dispatcher_8h.html#a90617acff33923f51c212b8e3034712c" title="CDIS に登録されているコマンドキューからコマンドを実行" alt="" coords="531,1067,717,1093"/>
 <area shape="rect" id="node7" href="$block__command__executor_8h.html#a8fc9800360fc4f594c23209a9fa5a516" title=" " alt="" coords="226,812,431,839"/>
 <area shape="rect" id="node8" href="$command__definitions_8c.html#aa375895192b16d8e7f0ff4545b54e6c4" title="Cmd Tableのロード" alt="" coords="5,369,156,396"/>
 <area shape="rect" id="node15" href="$block__command__table_8h.html#a164ccb35114540791acacd185a326d1b" title="既に登録されている BC の Cmd の中身を外部から上書きする" alt="" coords="818,185,970,212"/>

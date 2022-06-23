@@ -2,6 +2,8 @@ var common__cmd__packet__util_8c =
 [
     [ "CCP_calc_param_offset_", "common__cmd__packet__util_8c.html#a02ff66149d13dad64734193314ed906a", null ],
     [ "CCP_convert_rtc_to_tlc", "common__cmd__packet__util_8c.html#ae0f356389f15546c7e067db35bde985d", null ],
+    [ "CCP_form_and_exec_block_deploy_cmd", "common__cmd__packet__util_8c.html#ad54dccaa6f4da58c94a03a95318f7d95", null ],
+    [ "CCP_form_and_exec_rtc", "common__cmd__packet__util_8c.html#a572a39fabb60337856dcd71bb7a471e3", null ],
     [ "CCP_form_app_cmd", "common__cmd__packet__util_8c.html#a7e4a83a103dfa316c08b1570d93df0d1", null ],
     [ "CCP_form_block_deploy_cmd", "common__cmd__packet__util_8c.html#ac4a5c5fca95eda07227b4da1883612fc", null ],
     [ "CCP_form_nop_rtc_", "common__cmd__packet__util_8c.html#a01b352632ca605771f0cfd66a2a149ba", null ],

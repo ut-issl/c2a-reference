@@ -82,7 +82,8 @@ $(document).ready(function(){initNavTree('apid__define_8h.html',''); initResizab
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">列挙型</a>  </div>
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
   <div class="headertitle">
 <div class="title">apid_define.h ファイル</div>  </div>
 </div><!--header-->
@@ -90,10 +91,17 @@ $(document).ready(function(){initNavTree('apid__define_8h.html',''); initResizab
 
 <p>CCSDS の APID を定義する  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;<a class="el" href="stdint_8h_source.html">../../../Library/stdint.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+apid_define.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="apid__define_8h__incl.svg" width="226" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="apid__define_8h__dep__incl.svg" width="3780" height="811"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="apid__define_8h__dep__incl.svg" width="4468" height="944"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -107,14 +115,26 @@ $(document).ready(function(){initNavTree('apid__define_8h.html',''); initResizab
 <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acae4a71e721c1d60307983dce13f7e2196">APID_TOBC_CMD</a> = 0x212, 
 <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217aca314dfa6f1e9e5492d91d0cb9e13369c1">APID_TCAL_TLM</a> = 0x410, 
 <br />
-&#160;&#160;<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217aca0f3e03486a223687a4ee7ca7daea58d1">APID_MIS_TLM</a> = 0x510, 
+&#160;&#160;<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217aca917d7d4969409fc58784ef2e9cb9f1cd">APID_MOBC_TLM</a> = 0x510, 
+<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaec358d03dbbe4cbd94a94a34f2abcde4">APID_AOBC_TLM</a> = 0x511, 
+<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaa936b30583731201b4ff0d56e9ed913a">APID_TOBC_TLM</a> = 0x512, 
 <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217aca5a47226b5bf3c8aca72493e77703c1e2">APID_DUMP_TLM</a> = 0x710, 
-<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaf33adcb0fbd9028efde991f15f6dcdd9">APID_FILL_PKT</a> = 0x7ff, 
+<br />
+&#160;&#160;<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaf33adcb0fbd9028efde991f15f6dcdd9">APID_FILL_PKT</a> = 0x7ff, 
 <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acadd61e69fa39e585044733eb264c9f48e">APID_UNKNOWN</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ae86084e0da0f3d82d3572285760217ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application Process ID  <a href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">[詳解]</a><br /></td></tr>
 <tr class="separator:ae86084e0da0f3d82d3572285760217ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aa1f9bb843cdcbfc94507bd35d70138e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apid__define_8h.html#aa1f9bb843cdcbfc94507bd35d70138e6">APID_get_apid_from_uint16</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> apid)</td></tr>
+<tr class="memdesc:aa1f9bb843cdcbfc94507bd35d70138e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">バイト列から APID を取得  <a href="apid__define_8h.html#aa1f9bb843cdcbfc94507bd35d70138e6">[詳解]</a><br /></td></tr>
+<tr class="separator:aa1f9bb843cdcbfc94507bd35d70138e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd093b65066361f2713f85254eb52c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apid__define_8h.html#a4bd093b65066361f2713f85254eb52c3">APID_is_other_obc_tlm_apid</a> (<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid)</td></tr>
+<tr class="memdesc:a4bd093b65066361f2713f85254eb52c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力した APID が他の OBC で生成された TLM の APID かどうか  <a href="apid__define_8h.html#a4bd093b65066361f2713f85254eb52c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a4bd093b65066361f2713f85254eb52c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>CCSDS の APID を定義する </p>
@@ -137,24 +157,107 @@ $(document).ready(function(){initNavTree('apid__define_8h.html',''); initResizab
 <p>Application Process ID </p>
 <dl class="section note"><dt>覚え書き</dt><dd>11bit </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acac905fc26fead98cfebb79b1c0309fa8c"></a>APID_MOBC_CMD&#160;</td><td class="fielddoc"><p>01000010000b: </p>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acac905fc26fead98cfebb79b1c0309fa8c"></a>APID_MOBC_CMD&#160;</td><td class="fielddoc"><p>01000010000b: APID for MOBC 宛の CMD </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca0980e2b5d6c46a614f69c0b2819b13f1"></a>APID_AOBC_CMD&#160;</td><td class="fielddoc"><p>01000010001b: </p>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca0980e2b5d6c46a614f69c0b2819b13f1"></a>APID_AOBC_CMD&#160;</td><td class="fielddoc"><p>01000010001b: APID for AOBC 宛の CMD </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acae4a71e721c1d60307983dce13f7e2196"></a>APID_TOBC_CMD&#160;</td><td class="fielddoc"><p>01000010010b: </p>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acae4a71e721c1d60307983dce13f7e2196"></a>APID_TOBC_CMD&#160;</td><td class="fielddoc"><p>01000010010b: APID for TOBC 宛の CMD </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca314dfa6f1e9e5492d91d0cb9e13369c1"></a>APID_TCAL_TLM&#160;</td><td class="fielddoc"><p>10000010000b: APID for TIME CARIBLATION TLM </p>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca314dfa6f1e9e5492d91d0cb9e13369c1"></a>APID_TCAL_TLM&#160;</td><td class="fielddoc"><p>10000010000b: APID for TIME CARIBLATION TLM (FIXME: 現在まともに使ってない) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca0f3e03486a223687a4ee7ca7daea58d1"></a>APID_MIS_TLM&#160;</td><td class="fielddoc"><p>10100010000b: APID for MIS TLM </p>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca917d7d4969409fc58784ef2e9cb9f1cd"></a>APID_MOBC_TLM&#160;</td><td class="fielddoc"><p>10100010000b: APID for MOBC で生成される TLM </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca5a47226b5bf3c8aca72493e77703c1e2"></a>APID_DUMP_TLM&#160;</td><td class="fielddoc"><p>11100010000b: APID for DUMP TLM </p>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acaec358d03dbbe4cbd94a94a34f2abcde4"></a>APID_AOBC_TLM&#160;</td><td class="fielddoc"><p>10100010001b: APID for AOBC で生成される TLM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acaa936b30583731201b4ff0d56e9ed913a"></a>APID_TOBC_TLM&#160;</td><td class="fielddoc"><p>10100010002b: APID for TOBC で生成される TLM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217aca5a47226b5bf3c8aca72493e77703c1e2"></a>APID_DUMP_TLM&#160;</td><td class="fielddoc"><p>11100010000b: APID for DUMP TLM (FIXME: 現在まともに使ってない) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acaf33adcb0fbd9028efde991f15f6dcdd9"></a>APID_FILL_PKT&#160;</td><td class="fielddoc"><p>11111111111b: APID for FILL PACKET </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae86084e0da0f3d82d3572285760217acadd61e69fa39e585044733eb264c9f48e"></a>APID_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="apid__define_8h_source.html">apid_define.h</a> の <a class="el" href="apid__define_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="apid__define_8h_source.html">apid_define.h</a> の <a class="el" href="apid__define_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa1f9bb843cdcbfc94507bd35d70138e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f9bb843cdcbfc94507bd35d70138e6">&#9670;&nbsp;</a></span>APID_get_apid_from_uint16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> APID_get_apid_from_uint16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>apid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バイト列から APID を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">apid</td><td>APID 候補の uint16_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>不正な入力のときは APID_UNKNOWN を返す </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>APID </dd></dl>
+
+<p class="definition"> <a class="el" href="apid__define_8c_source.html">apid_define.c</a> の <a class="el" href="apid__define_8c_source.html#l00009">9</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="apid__define_8h_aa1f9bb843cdcbfc94507bd35d70138e6_icgraph.svg" width="2676" height="686"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4bd093b65066361f2713f85254eb52c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd093b65066361f2713f85254eb52c3">&#9670;&nbsp;</a></span>APID_is_other_obc_tlm_apid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int APID_is_other_obc_tlm_apid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td>
+          <td class="paramname"><em>apid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力した APID が他の OBC で生成された TLM の APID かどうか </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">apid</td><td>APID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>不正な APID は 0 を返す </dd></dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>他 OBC で生成された TLM の APID </td></tr>
+    <tr><td class="paramname">0</td><td>それ以外の APID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="apid__define_8c_source.html">apid_define.c</a> の <a class="el" href="apid__define_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="apid__define_8h_a4bd093b65066361f2713f85254eb52c3_icgraph.svg" width="1274" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
