@@ -20,5 +20,6 @@ var common__tlm__packet_8h =
     [ "CTP_is_valid_packet", "common__tlm__packet_8h.html#a285c1dc53d72a80747d8827c38d7aea4", null ],
     [ "CTP_set_apid", "common__tlm__packet_8h.html#a52c7ef7c91bb3b6047d22ec569656899", null ],
     [ "CTP_set_dest_flags", "common__tlm__packet_8h.html#afddacefa253df08076d9a55613ccd2ab", null ],
+    [ "CTP_set_global_time", "common__tlm__packet_8h.html#a538e4de2c8a399d3658f88be6518b85d", null ],
     [ "CTP_set_id", "common__tlm__packet_8h.html#af7d8e3c1b4059f970d94aceeff4db8c7", null ]
 ];

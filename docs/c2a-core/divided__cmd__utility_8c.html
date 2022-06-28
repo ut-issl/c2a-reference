@@ -919,7 +919,7 @@ abort からの復帰は，初期化される（途中からの再開は不可�
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cmd_code</td><td>探すコマンド </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">exec_log</td><td>取得したログ．constポインタで，参照先を書き換えるため，NULLポインタを渡すのもOK </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">exec_log</td><td>取得したログ．constポインタで，参照先を書き換えるため，NULLポインタを渡すのもOK // FIXME: これバグってない？（ダブルポインタにすべき？） </td></tr>
   </table>
   </dd>
 </dl>
