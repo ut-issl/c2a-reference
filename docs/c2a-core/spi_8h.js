@@ -1,6 +1,10 @@
 var spi_8h =
 [
     [ "SPI_Config", "struct_s_p_i___config.html", "struct_s_p_i___config" ],
+    [ "SPI_CS_STATE_AFTER_TX", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd", [
+      [ "SPI_CS_STATE_AFTER_TX_LOW", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda29c7d16542514dfe8d08a56c9aa241d7", null ],
+      [ "SPI_CS_STATE_AFTER_TX_HIGH", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda635838ff704e347cb898e40c385be0ee", null ]
+    ] ],
     [ "SPI_ERR_CODE", "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4", [
       [ "SPI_ERR_UNKNOWN", "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a4a19cdce312e200f3119b4f829f22acb", null ],
       [ "SPI_ERR_RX_BUFFER_SMALL", "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a1c265056d0487edf73f249294e9da75a", null ],
@@ -19,14 +23,10 @@ var spi_8h =
       [ "SPI_MODE_2", "spi_8h.html#ae506139af46f1328f631ddacd54af96da4d350945d895a4acdc45ae96b0b82fc3", null ],
       [ "SPI_MODE_3", "spi_8h.html#ae506139af46f1328f631ddacd54af96daf06ec36087996d6f328df39866ff5de6", null ]
     ] ],
-    [ "SPI_TX_CS_STATE", "spi_8h.html#a561ec4bf470ec1240e18355511878bb4", [
-      [ "SPI_TX_CS_STATE_LOW", "spi_8h.html#a561ec4bf470ec1240e18355511878bb4a378c57adcac1da7a468b9a6bf5b5a1a6", null ],
-      [ "SPI_TX_CS_STATE_HIGH", "spi_8h.html#a561ec4bf470ec1240e18355511878bb4a261b5cb27d44e2d4c24e1f7a55654a90", null ]
-    ] ],
     [ "SPI_init", "spi_8h.html#aa6d9d6a915c0397663329902bf3d3eab", null ],
     [ "SPI_reopen", "spi_8h.html#a71fd23d892018160d87da023a34b2946", null ],
     [ "SPI_rx", "spi_8h.html#abff2326994bd0c7218ac0e0a001524ab", null ],
+    [ "SPI_set_cs_state_after_tx", "spi_8h.html#a2852013b46ba10d8843e7423ac2d461a", null ],
     [ "SPI_set_rx_length", "spi_8h.html#a6395306623693930e5bf04a9344e60ea", null ],
-    [ "SPI_set_tx_cs_state", "spi_8h.html#ae42b98a3130184fdfa483edaa77e69b8", null ],
     [ "SPI_tx", "spi_8h.html#a1b61d578fda1157c7cfa53ce638847d3", null ]
 ];

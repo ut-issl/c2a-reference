@@ -117,10 +117,10 @@ spi.h の依存先関係図:</div>
  }</td></tr>
 <tr class="memdesc:ae506139af46f1328f631ddacd54af96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI動作モードの設定  <a href="spi_8h.html#ae506139af46f1328f631ddacd54af96d">[詳解]</a><br /></td></tr>
 <tr class="separator:ae506139af46f1328f631ddacd54af96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a561ec4bf470ec1240e18355511878bb4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4">SPI_TX_CS_STATE</a> { <a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4a378c57adcac1da7a468b9a6bf5b5a1a6">SPI_TX_CS_STATE_LOW</a> = 0, 
-<a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4a261b5cb27d44e2d4c24e1f7a55654a90">SPI_TX_CS_STATE_HIGH</a> = 1
+<tr class="memitem:a4cc0618574dd43ba6afda790cef52bfd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd">SPI_CS_STATE_AFTER_TX</a> { <a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda29c7d16542514dfe8d08a56c9aa241d7">SPI_CS_STATE_AFTER_TX_LOW</a> = 0, 
+<a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda635838ff704e347cb898e40c385be0ee">SPI_CS_STATE_AFTER_TX_HIGH</a> = 1
  }</td></tr>
-<tr class="separator:a561ec4bf470ec1240e18355511878bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a4cc0618574dd43ba6afda790cef52bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab195a56405a0a879b91ade9b23439ff4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi_8h.html#ab195a56405a0a879b91ade9b23439ff4">SPI_ERR_CODE</a> { <br />
 &#160;&#160;<a class="el" href="spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a4a19cdce312e200f3119b4f829f22acb">SPI_ERR_UNKNOWN</a> = -20, 
 <a class="el" href="spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a1c265056d0487edf73f249294e9da75a">SPI_ERR_RX_BUFFER_SMALL</a> = -14, 
@@ -156,9 +156,9 @@ spi.h の依存先関係図:</div>
 <tr class="memitem:a6395306623693930e5bf04a9344e60ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi_8h.html#a6395306623693930e5bf04a9344e60ea">SPI_set_rx_length</a> (void *my_spi_v, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_length)</td></tr>
 <tr class="memdesc:a6395306623693930e5bf04a9344e60ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">rx_lengthを設定する  <a href="spi_8h.html#a6395306623693930e5bf04a9344e60ea">[詳解]</a><br /></td></tr>
 <tr class="separator:a6395306623693930e5bf04a9344e60ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae42b98a3130184fdfa483edaa77e69b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi_8h.html#ae42b98a3130184fdfa483edaa77e69b8">SPI_set_tx_cs_state</a> (void *my_spi_v, const <a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4">SPI_TX_CS_STATE</a> tx_cs_state)</td></tr>
-<tr class="memdesc:ae42b98a3130184fdfa483edaa77e69b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">cs_up_after_txを設定する  <a href="spi_8h.html#ae42b98a3130184fdfa483edaa77e69b8">[詳解]</a><br /></td></tr>
-<tr class="separator:ae42b98a3130184fdfa483edaa77e69b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2852013b46ba10d8843e7423ac2d461a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi_8h.html#a2852013b46ba10d8843e7423ac2d461a">SPI_set_cs_state_after_tx</a> (void *my_spi_v, const <a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd">SPI_CS_STATE_AFTER_TX</a> cs_state_after_tx)</td></tr>
+<tr class="memdesc:a2852013b46ba10d8843e7423ac2d461a"><td class="mdescLeft">&#160;</td><td class="mdescRight">cs_state_after_txを設定する  <a href="spi_8h.html#a2852013b46ba10d8843e7423ac2d461a">[詳解]</a><br /></td></tr>
+<tr class="separator:a2852013b46ba10d8843e7423ac2d461a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>SPI通信(Master側)のラッパークラスです。 </p>
@@ -166,6 +166,28 @@ spi.h の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> に定義があります。</p>
 </div><h2 class="groupheader">列挙型詳解</h2>
+<a id="a4cc0618574dd43ba6afda790cef52bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc0618574dd43ba6afda790cef52bfd">&#9670;&nbsp;</a></span>SPI_CS_STATE_AFTER_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd">SPI_CS_STATE_AFTER_TX</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4cc0618574dd43ba6afda790cef52bfda29c7d16542514dfe8d08a56c9aa241d7"></a>SPI_CS_STATE_AFTER_TX_LOW&#160;</td><td class="fielddoc"><p>送信後にCSをLowのままにし、そのまま受信動作などを行う </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4cc0618574dd43ba6afda790cef52bfda635838ff704e347cb898e40c385be0ee"></a>SPI_CS_STATE_AFTER_TX_HIGH&#160;</td><td class="fielddoc"><p>送信後にCSをHighにする </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="ab195a56405a0a879b91ade9b23439ff4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab195a56405a0a879b91ade9b23439ff4">&#9670;&nbsp;</a></span>SPI_ERR_CODE</h2>
 
@@ -233,28 +255,6 @@ spi.h の依存先関係図:</div>
 </table>
 
 <p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00020">20</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a561ec4bf470ec1240e18355511878bb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561ec4bf470ec1240e18355511878bb4">&#9670;&nbsp;</a></span>SPI_TX_CS_STATE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4">SPI_TX_CS_STATE</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a561ec4bf470ec1240e18355511878bb4a378c57adcac1da7a468b9a6bf5b5a1a6"></a>SPI_TX_CS_STATE_LOW&#160;</td><td class="fielddoc"><p>送信後にCSをLowのままにし、そのまま受信動作などを行う </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a561ec4bf470ec1240e18355511878bb4a261b5cb27d44e2d4c24e1f7a55654a90"></a>SPI_TX_CS_STATE_HIGH&#160;</td><td class="fielddoc"><p>送信後にCSをHighにする </p>
-</td></tr>
-</table>
-
-<p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00033">33</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -378,6 +378,44 @@ spi.h の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a2852013b46ba10d8843e7423ac2d461a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2852013b46ba10d8843e7423ac2d461a">&#9670;&nbsp;</a></span>SPI_set_cs_state_after_tx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPI_set_cs_state_after_tx </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_spi_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd">SPI_CS_STATE_AFTER_TX</a>&#160;</td>
+          <td class="paramname"><em>cs_state_after_tx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cs_state_after_txを設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">my_spi_v</td><td>: 対象とするSPI_Config構造体へのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cs_state_after_tx</td><td>: 設定するcs_state_after_tx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
+
+</div>
+</div>
 <a id="a6395306623693930e5bf04a9344e60ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6395306623693930e5bf04a9344e60ea">&#9670;&nbsp;</a></span>SPI_set_rx_length()</h2>
 
@@ -409,44 +447,6 @@ spi.h の依存先関係図:</div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">my_spi_v</td><td>: 対象とするSPI_Config構造体へのポインタ </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">rx_length</td><td>: 設定する受信データ長 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
-
-</div>
-</div>
-<a id="ae42b98a3130184fdfa483edaa77e69b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae42b98a3130184fdfa483edaa77e69b8">&#9670;&nbsp;</a></span>SPI_set_tx_cs_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SPI_set_tx_cs_state </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>my_spi_v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4">SPI_TX_CS_STATE</a>&#160;</td>
-          <td class="paramname"><em>tx_cs_state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>cs_up_after_txを設定する </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">my_spi_v</td><td>: 対象とするSPI_Config構造体へのポインタ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tx_cs_state</td><td>: 設定するtx_cs_state </td></tr>
   </table>
   </dd>
 </dl>

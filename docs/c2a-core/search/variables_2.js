@@ -37,13 +37,14 @@ var searchData=
   ['crc_5f16_5fccitt_5fleft_5ftable_5f_4349',['crc_16_ccitt_left_table_',['../crc_8c.html#aa9943b1ed86b1fd7b95fc75b5e0a261b',1,'crc.c']]],
   ['crc_5f16_5fccitt_5fright_5ftable_5f_4350',['crc_16_ccitt_right_table_',['../crc_8c.html#a36a12fe219ee2b8a1fcc60392355ce06',1,'crc.c']]],
   ['crc_5f16_5fibm_5fright_5ftable_5f_4351',['crc_16_ibm_right_table_',['../crc_8c.html#a73125d7c1c4db76add1a87dffc438e9a',1,'crc.c']]],
-  ['csp_5fpei_5f2nd_5fhdr_5fver_5f_4352',['CSP_pei_2nd_hdr_ver_',['../cmd__space__packet_8c.html#a77cf4e5cb876ed56cad47bca0dee15db',1,'cmd_space_packet.c']]],
-  ['csp_5fpei_5fcmd_5fid_5f_4353',['CSP_pei_cmd_id_',['../cmd__space__packet_8c.html#a38f964b2af237a9fc67a9636cdd3c8bc',1,'cmd_space_packet.c']]],
-  ['csp_5fpei_5fcmd_5ftype_5f_4354',['CSP_pei_cmd_type_',['../cmd__space__packet_8c.html#a77d194d86d99652353ef106cfe9555e2',1,'cmd_space_packet.c']]],
-  ['csp_5fpei_5fdest_5ftype_5f_4355',['CSP_pei_dest_type_',['../cmd__space__packet_8c.html#a3052f3196432b85c70f27420a13a9525',1,'cmd_space_packet.c']]],
-  ['csp_5fpei_5fexec_5ftype_5f_4356',['CSP_pei_exec_type_',['../cmd__space__packet_8c.html#a6289a418c08f77a8fdd28774d5762db6',1,'cmd_space_packet.c']]],
-  ['csp_5fpei_5fti_5f_4357',['CSP_pei_ti_',['../cmd__space__packet_8c.html#a1a159d913ed183e1076932f3d7bba52e',1,'cmd_space_packet.c']]],
-  ['current_5fid_4358',['current_id',['../struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599',1,'ModeManager']]],
-  ['current_5fmulti_5flevel_4359',['current_multi_level',['../struct_e_h___exec_info.html#a8d5de8254457f2ed89e4e8ba171a5b3d',1,'EH_ExecInfo']]],
-  ['cycle_5fcorrection_4360',['cycle_correction',['../struct_time_manager.html#aef3d1888e3f3dcd5ee5fca4a7951a9c0',1,'TimeManager']]]
+  ['cs_5fstate_5fafter_5ftx_4352',['cs_state_after_tx',['../struct_s_p_i___config.html#a41c93e1f065155917557e4ee07352168',1,'SPI_Config']]],
+  ['csp_5fpei_5f2nd_5fhdr_5fver_5f_4353',['CSP_pei_2nd_hdr_ver_',['../cmd__space__packet_8c.html#a77cf4e5cb876ed56cad47bca0dee15db',1,'cmd_space_packet.c']]],
+  ['csp_5fpei_5fcmd_5fid_5f_4354',['CSP_pei_cmd_id_',['../cmd__space__packet_8c.html#a38f964b2af237a9fc67a9636cdd3c8bc',1,'cmd_space_packet.c']]],
+  ['csp_5fpei_5fcmd_5ftype_5f_4355',['CSP_pei_cmd_type_',['../cmd__space__packet_8c.html#a77d194d86d99652353ef106cfe9555e2',1,'cmd_space_packet.c']]],
+  ['csp_5fpei_5fdest_5ftype_5f_4356',['CSP_pei_dest_type_',['../cmd__space__packet_8c.html#a3052f3196432b85c70f27420a13a9525',1,'cmd_space_packet.c']]],
+  ['csp_5fpei_5fexec_5ftype_5f_4357',['CSP_pei_exec_type_',['../cmd__space__packet_8c.html#a6289a418c08f77a8fdd28774d5762db6',1,'cmd_space_packet.c']]],
+  ['csp_5fpei_5fti_5f_4358',['CSP_pei_ti_',['../cmd__space__packet_8c.html#a1a159d913ed183e1076932f3d7bba52e',1,'cmd_space_packet.c']]],
+  ['current_5fid_4359',['current_id',['../struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599',1,'ModeManager']]],
+  ['current_5fmulti_5flevel_4360',['current_multi_level',['../struct_e_h___exec_info.html#a8d5de8254457f2ed89e4e8ba171a5b3d',1,'EH_ExecInfo']]],
+  ['cycle_5fcorrection_4361',['cycle_correction',['../struct_time_manager.html#aef3d1888e3f3dcd5ee5fca4a7951a9c0',1,'TimeManager']]]
 ];

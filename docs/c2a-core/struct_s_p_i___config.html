@@ -113,9 +113,9 @@ $(document).ready(function(){initNavTree('struct_s_p_i___config.html',''); initR
 <tr class="memitem:a9ce595b3296a1dd2cfd6e8bf3f9360d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_p_i___config.html#a9ce595b3296a1dd2cfd6e8bf3f9360d1">rx_length</a></td></tr>
 <tr class="memdesc:a9ce595b3296a1dd2cfd6e8bf3f9360d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信するデータ数、受信動作前に設定する  <a href="struct_s_p_i___config.html#a9ce595b3296a1dd2cfd6e8bf3f9360d1">[詳解]</a><br /></td></tr>
 <tr class="separator:a9ce595b3296a1dd2cfd6e8bf3f9360d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2574039392c627ce4ce6dd9a8f2f3e8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4">SPI_TX_CS_STATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_p_i___config.html#a2574039392c627ce4ce6dd9a8f2f3e8e">tx_cs_state</a></td></tr>
-<tr class="memdesc:a2574039392c627ce4ce6dd9a8f2f3e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信動作後にChip SelectをHighにするかどうかのフラグ  <a href="struct_s_p_i___config.html#a2574039392c627ce4ce6dd9a8f2f3e8e">[詳解]</a><br /></td></tr>
-<tr class="separator:a2574039392c627ce4ce6dd9a8f2f3e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c93e1f065155917557e4ee07352168"><td class="memItemLeft" align="right" valign="top"><a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd">SPI_CS_STATE_AFTER_TX</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_p_i___config.html#a41c93e1f065155917557e4ee07352168">cs_state_after_tx</a></td></tr>
+<tr class="memdesc:a41c93e1f065155917557e4ee07352168"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信動作後にChip SelectをHighにするかどうかのフラグ  <a href="struct_s_p_i___config.html#a41c93e1f065155917557e4ee07352168">[詳解]</a><br /></td></tr>
+<tr class="separator:a41c93e1f065155917557e4ee07352168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>SPIポートの初期化、データ送信・受信の際に必要となる設定情報を格納する構造体です。 </p>
@@ -137,6 +137,24 @@ $(document).ready(function(){initNavTree('struct_s_p_i___config.html',''); initR
 <p>継承先の機器がつながっている通信ポート番号 </p>
 
 <p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a41c93e1f065155917557e4ee07352168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c93e1f065155917557e4ee07352168">&#9670;&nbsp;</a></span>cs_state_after_tx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd">SPI_CS_STATE_AFTER_TX</a> cs_state_after_tx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>送信動作後にChip SelectをHighにするかどうかのフラグ </p>
+
+<p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00051">51</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -209,24 +227,6 @@ $(document).ready(function(){initNavTree('struct_s_p_i___config.html',''); initR
 <p>受信するデータ数、受信動作前に設定する </p>
 
 <p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00050">50</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a2574039392c627ce4ce6dd9a8f2f3e8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2574039392c627ce4ce6dd9a8f2f3e8e">&#9670;&nbsp;</a></span>tx_cs_state</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="spi_8h.html#a561ec4bf470ec1240e18355511878bb4">SPI_TX_CS_STATE</a> tx_cs_state</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>送信動作後にChip SelectをHighにするかどうかのフラグ </p>
-
-<p class="definition"> <a class="el" href="spi_8h_source.html">spi.h</a> の <a class="el" href="spi_8h_source.html#l00051">51</a> 行目に定義があります。</p>
 
 </div>
 </div>
