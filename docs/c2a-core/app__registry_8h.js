@@ -5,6 +5,8 @@ var app__registry_8h =
       [ "AR_DI_GS_CMD_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a3421851d8e1a7c731c3300877c7e1ffc", null ],
       [ "AR_DI_GS_MST_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a4c76078c6ef98a3b091209bf53035f28", null ],
       [ "AR_DI_GS_RPT_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a0951ded2926423ddfc28d0b04edbcd7d", null ],
+      [ "AR_DI_AOBC", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a99f74f2fe22b56f20b5c1a92d2e1a082", null ],
+      [ "AR_DI_AOBC_CDIS", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8addb653a00653c5579a4067d8648a9b86", null ],
       [ "AR_DI_UART_TEST", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a64d006ee989a7b56103d9b0bd670344f", null ],
       [ "AR_GSC_DISPATCHER", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a9d11d6655ecba609ec36c9007503f909", null ],
       [ "AR_RTC_DISPATCHER", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a3ac55002efc2aa4a16dabb71a5c73147", null ],

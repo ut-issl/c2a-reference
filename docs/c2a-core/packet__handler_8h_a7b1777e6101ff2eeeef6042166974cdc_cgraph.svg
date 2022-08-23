@@ -454,16 +454,16 @@
 <g id="node23" class="node">
 <title>Node24</title>
 <g id="a_node23"><a xlink:href="time__manager_8c.html#a9d04b4d9b622cbe5a90cf65e58b828bc" target="_top" xlink:title="現在の master_clock_ を取得する">
-<polygon fill="white" stroke="red" points="892,-327.5 892,-346.5 1029,-346.5 1029,-327.5 892,-327.5"/>
-<text text-anchor="middle" x="960.5" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00">TMGR_get_master_clock</text>
+<polygon fill="white" stroke="red" points="892,-365.5 892,-384.5 1029,-384.5 1029,-365.5 892,-365.5"/>
+<text text-anchor="middle" x="960.5" y="-372.5" font-family="Helvetica,sans-Serif" font-size="10.00">TMGR_get_master_clock</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node24 -->
 <g id="edge26" class="edge">
 <title>Node23&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M823.42,-270.57C832.93,-273.24 842.93,-276.41 852,-280 881.77,-291.79 913.97,-309.6 935.29,-322.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="933.62,-325.25 944,-327.37 937.2,-319.24 933.62,-325.25"/>
+<path fill="none" stroke="midnightblue" d="M825.22,-269.38C834.36,-272.06 843.75,-275.54 852,-280 889.72,-300.38 925.32,-336.31 944.6,-357.66"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="942.13,-360.15 951.38,-365.32 947.37,-355.51 942.13,-360.15"/>
 </g>
 <!-- Node28 -->
 <g id="node26" class="node">
@@ -712,60 +712,60 @@
 <!-- Node45 -->
 <g id="node40" class="node">
 <title>Node45</title>
-<g id="a_node40"><a xlink:href="driver__super__issl__format_8c.html#a0a03615b9bc984c8965b662f0ee3d99b" target="_top" xlink:title="CRCの計算">
-<polygon fill="white" stroke="red" points="721,-403.5 721,-422.5 842,-422.5 842,-403.5 721,-403.5"/>
-<text text-anchor="middle" x="781.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">DS_ISSLFMT_calc_crc</text>
+<g id="a_node40"><a xlink:href="driver__super_8c.html#aeba5ba2ebea1719d8bae74c274b0adfa" target="_top" xlink:title="継承先の機器に一般コマンドを発行する">
+<polygon fill="white" stroke="red" points="718,-403.5 718,-422.5 845,-422.5 845,-403.5 718,-403.5"/>
+<text text-anchor="middle" x="781.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">DS_send_general_cmd</text>
 </a>
 </g>
 </g>
 <!-- Node43&#45;&gt;Node45 -->
 <g id="edge48" class="edge">
 <title>Node43&#45;&gt;Node45</title>
-<path fill="none" stroke="midnightblue" d="M645.69,-399.04C665.58,-401.1 688.97,-403.52 710.62,-405.76"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="710.45,-409.27 720.76,-406.81 711.17,-402.3 710.45,-409.27"/>
+<path fill="none" stroke="midnightblue" d="M645.69,-399.04C664.67,-401.01 686.83,-403.3 707.63,-405.46"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="707.41,-408.95 717.72,-406.5 708.13,-401.99 707.41,-408.95"/>
 </g>
-<!-- Node47 -->
+<!-- Node50 -->
 <g id="node41" class="node">
-<title>Node47</title>
-<g id="a_node41"><a xlink:href="driver__super_8c.html#aeba5ba2ebea1719d8bae74c274b0adfa" target="_top" xlink:title="継承先の機器に一般コマンドを発行する">
-<polygon fill="white" stroke="red" points="718,-365.5 718,-384.5 845,-384.5 845,-365.5 718,-365.5"/>
-<text text-anchor="middle" x="781.5" y="-372.5" font-family="Helvetica,sans-Serif" font-size="10.00">DS_send_general_cmd</text>
+<title>Node50</title>
+<g id="a_node41"><a xlink:href="driver__super_8c.html#af380ebeb56493a0680e2e4c50e74b979" target="_top" xlink:title="継承先の機器にテレメ要求コマンドを発行する">
+<polygon fill="white" stroke="red" points="717.5,-365.5 717.5,-384.5 845.5,-384.5 845.5,-365.5 717.5,-365.5"/>
+<text text-anchor="middle" x="781.5" y="-372.5" font-family="Helvetica,sans-Serif" font-size="10.00">DS_send_req_tlm_cmd</text>
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node47 -->
-<g id="edge49" class="edge">
-<title>Node43&#45;&gt;Node47</title>
-<path fill="none" stroke="midnightblue" d="M645.69,-388.96C664.67,-386.99 686.83,-384.7 707.63,-382.54"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="708.13,-386.01 717.72,-381.5 707.41,-379.05 708.13,-386.01"/>
+<!-- Node43&#45;&gt;Node50 -->
+<g id="edge50" class="edge">
+<title>Node43&#45;&gt;Node50</title>
+<path fill="none" stroke="midnightblue" d="M645.69,-388.96C664.58,-387 686.62,-384.72 707.33,-382.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="707.79,-386.05 717.38,-381.54 707.07,-379.08 707.79,-386.05"/>
+</g>
+<!-- Node51 -->
+<g id="node42" class="node">
+<title>Node51</title>
+<g id="a_node42"><a xlink:href="driver__super_8c.html#a9907f5844f74f6b8218993911bdc2735" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="713,-327.5 713,-346.5 850,-346.5 850,-327.5 713,-327.5"/>
+<text text-anchor="middle" x="781.5" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00">DSSC_set_tx_frame_size</text>
+</a>
+</g>
+</g>
+<!-- Node43&#45;&gt;Node51 -->
+<g id="edge52" class="edge">
+<title>Node43&#45;&gt;Node51</title>
+<path fill="none" stroke="midnightblue" d="M624.51,-384.36C647.51,-376.41 681.25,-365.02 711,-356 718.49,-353.73 726.47,-351.43 734.26,-349.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="735.25,-352.62 743.96,-346.58 733.39,-345.87 735.25,-352.62"/>
 </g>
 <!-- Node52 -->
-<g id="node42" class="node">
+<g id="node43" class="node">
 <title>Node52</title>
-<g id="a_node42"><a xlink:href="driver__super_8c.html#af380ebeb56493a0680e2e4c50e74b979" target="_top" xlink:title="継承先の機器にテレメ要求コマンドを発行する">
-<polygon fill="white" stroke="red" points="717.5,-327.5 717.5,-346.5 845.5,-346.5 845.5,-327.5 717.5,-327.5"/>
-<text text-anchor="middle" x="781.5" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00">DS_send_req_tlm_cmd</text>
+<g id="a_node43"><a xlink:href="eb90__frame__for__driver__super_8c.html#a21a8e418aaf9b24d0c2a99c3da11c4c2" target="_top" xlink:title="EB90 Frame の CRC の計算">
+<polygon fill="white" stroke="red" points="719,-289.5 719,-308.5 844,-308.5 844,-289.5 719,-289.5"/>
+<text text-anchor="middle" x="781.5" y="-296.5" font-family="Helvetica,sans-Serif" font-size="10.00">EB90_FRAME_calc_crc</text>
 </a>
 </g>
 </g>
 <!-- Node43&#45;&gt;Node52 -->
-<g id="edge51" class="edge">
-<title>Node43&#45;&gt;Node52</title>
-<path fill="none" stroke="midnightblue" d="M624.51,-384.36C647.51,-376.41 681.25,-365.02 711,-356 718.49,-353.73 726.47,-351.43 734.26,-349.26"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="735.25,-352.62 743.96,-346.58 733.39,-345.87 735.25,-352.62"/>
-</g>
-<!-- Node53 -->
-<g id="node43" class="node">
-<title>Node53</title>
-<g id="a_node43"><a xlink:href="driver__super_8c.html#a9907f5844f74f6b8218993911bdc2735" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="713,-289.5 713,-308.5 850,-308.5 850,-289.5 713,-289.5"/>
-<text text-anchor="middle" x="781.5" y="-296.5" font-family="Helvetica,sans-Serif" font-size="10.00">DSSC_set_tx_frame_size</text>
-</a>
-</g>
-</g>
-<!-- Node43&#45;&gt;Node53 -->
 <g id="edge53" class="edge">
-<title>Node43&#45;&gt;Node53</title>
+<title>Node43&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M608.56,-384.43C628.35,-368.49 670.52,-336.44 711,-318 716.25,-315.61 721.87,-313.46 727.54,-311.55"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="728.61,-314.88 737.1,-308.55 726.51,-308.2 728.61,-314.88"/>
 </g>
@@ -775,17 +775,17 @@
 <path fill="none" stroke="midnightblue" d="M816.21,-574.52C844.42,-582.49 884.86,-593.92 915.6,-602.6"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="915.04,-606.08 925.62,-605.43 916.94,-599.34 915.04,-606.08"/>
 </g>
-<!-- Node47&#45;&gt;Node24 -->
-<g id="edge50" class="edge">
-<title>Node47&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M827.16,-365.41C850.84,-360.33 880.11,-354.04 905.1,-348.68"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="906.11,-352.04 915.16,-346.52 904.64,-345.2 906.11,-352.04"/>
+<!-- Node45&#45;&gt;Node24 -->
+<g id="edge49" class="edge">
+<title>Node45&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M827.16,-403.41C850.84,-398.33 880.11,-392.04 905.1,-386.68"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="906.11,-390.04 915.16,-384.52 904.64,-383.2 906.11,-390.04"/>
 </g>
-<!-- Node52&#45;&gt;Node24 -->
-<g id="edge52" class="edge">
-<title>Node52&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M845.9,-337C857.41,-337 869.53,-337 881.41,-337"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="881.75,-340.5 891.75,-337 881.75,-333.5 881.75,-340.5"/>
+<!-- Node50&#45;&gt;Node24 -->
+<g id="edge51" class="edge">
+<title>Node50&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M845.9,-375C857.41,-375 869.53,-375 881.41,-375"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="881.75,-378.5 891.75,-375 881.75,-371.5 881.75,-378.5"/>
 </g>
 <!-- Node55 -->
 <g id="node45" class="node">

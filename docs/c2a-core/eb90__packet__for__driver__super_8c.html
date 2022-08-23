@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C2A_Core: src/src_core/Drivers/Protocol/eb90_packet_for_driver_super.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C2A_Core
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('eb90__packet__for__driver__super_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">eb90_packet_for_driver_super.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>コンポ間通信などで標準的に使う ネットワーク層 の EB90 Packet  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="eb90__packet__for__driver__super_8h_source.html">eb90_packet_for_driver_super.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eb90__frame__for__driver__super_8h_source.html">eb90_frame_for_driver_super.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="endian__memcpy_8h_source.html">../../Library/endian_memcpy.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+eb90_packet_for_driver_super.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="eb90__packet__for__driver__super_8c__incl.svg" width="1403" height="782"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="eb90__packet__for__driver__super_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a54980fe3d483e945165aa8f1ca26942b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eb90__packet__for__driver__super_8c.html#a54980fe3d483e945165aa8f1ca26942b">EB90_PACKET_get_version_from_dssc</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a54980fe3d483e945165aa8f1ca26942b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version ID の取得  <a href="eb90__packet__for__driver__super_8c.html#a54980fe3d483e945165aa8f1ca26942b">[詳解]</a><br /></td></tr>
+<tr class="separator:a54980fe3d483e945165aa8f1ca26942b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53ef9f6242472e49174163255d3feec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eb90__packet__for__driver__super_8c.html#ac53ef9f6242472e49174163255d3feec">EB90_PACKET_get_count_from_dssc</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:ac53ef9f6242472e49174163255d3feec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tlm / Cmd Count の取得  <a href="eb90__packet__for__driver__super_8c.html#ac53ef9f6242472e49174163255d3feec">[詳解]</a><br /></td></tr>
+<tr class="separator:ac53ef9f6242472e49174163255d3feec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85f35a27ddee605f0699201443135f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eb90__packet__for__driver__super_8c.html#ae85f35a27ddee605f0699201443135f4">EB90_PACKET_get_id_from_dssc</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:ae85f35a27ddee605f0699201443135f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tlm / Cmd ID の取得  <a href="eb90__packet__for__driver__super_8c.html#ae85f35a27ddee605f0699201443135f4">[詳解]</a><br /></td></tr>
+<tr class="separator:ae85f35a27ddee605f0699201443135f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956a902f4d6a814a2f7a24a1f91cdca0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eb90__packet__for__driver__super_8c.html#a956a902f4d6a814a2f7a24a1f91cdca0">EB90_PACKET_get_user_data_head_from_dssc</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a956a902f4d6a814a2f7a24a1f91cdca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信フレームからPacket Field の先頭ポインタを取得する  <a href="eb90__packet__for__driver__super_8c.html#a956a902f4d6a814a2f7a24a1f91cdca0">[詳解]</a><br /></td></tr>
+<tr class="separator:a956a902f4d6a814a2f7a24a1f91cdca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>コンポ間通信などで標準的に使う ネットワーク層 の EB90 Packet </p>
+<dl class="section note"><dt>覚え書き</dt><dd>一般的には，データリンク層は EB90 Frame を使うことを想定 </dd>
+<dd>
+Tlm か Cmd かはコンテキストで読み替える </dd>
+<dd>
+データリンク層は DS_StreamConfig.data_link_layer_ で規定する </dd></dl>
+
+<p class="definition"> <a class="el" href="eb90__packet__for__driver__super_8c_source.html">eb90_packet_for_driver_super.c</a> に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ac53ef9f6242472e49174163255d3feec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac53ef9f6242472e49174163255d3feec">&#9670;&nbsp;</a></span>EB90_PACKET_get_count_from_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> EB90_PACKET_get_count_from_dssc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tlm / Cmd Count の取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Tlm</td><td>/ Cmd Count （バージョン 0x01 では uint8_t だが将来性のために uint32_t で返す） </td></tr>
+    <tr><td class="paramname">0</td><td>(入力が不正な場合) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="eb90__packet__for__driver__super_8c_source.html">eb90_packet_for_driver_super.c</a> の <a class="el" href="eb90__packet__for__driver__super_8c_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="eb90__packet__for__driver__super_8c_ac53ef9f6242472e49174163255d3feec_cgraph.svg" width="870" height="82"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae85f35a27ddee605f0699201443135f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae85f35a27ddee605f0699201443135f4">&#9670;&nbsp;</a></span>EB90_PACKET_get_id_from_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> EB90_PACKET_get_id_from_dssc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tlm / Cmd ID の取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd>
+<dd>
+これは非 C2A 形式で使われる TLM HEADER 仕様である </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Tlm</td><td>/ Cmd ID （バージョン 0x01 では uint16_t だが将来性のために uint32_t で返す） </td></tr>
+    <tr><td class="paramname">0</td><td>(入力が不正な場合) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="eb90__packet__for__driver__super_8c_source.html">eb90_packet_for_driver_super.c</a> の <a class="el" href="eb90__packet__for__driver__super_8c_source.html#l00037">37</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="eb90__packet__for__driver__super_8c_ae85f35a27ddee605f0699201443135f4_cgraph.svg" width="846" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a956a902f4d6a814a2f7a24a1f91cdca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956a902f4d6a814a2f7a24a1f91cdca0">&#9670;&nbsp;</a></span>EB90_PACKET_get_user_data_head_from_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* EB90_PACKET_get_user_data_head_from_dssc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>受信フレームからPacket Field の先頭ポインタを取得する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Packet</td><td>Field の先頭ポインタ </td></tr>
+    <tr><td class="paramname">NULL</td><td>(入力が不正な場合) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="eb90__packet__for__driver__super_8c_source.html">eb90_packet_for_driver_super.c</a> の <a class="el" href="eb90__packet__for__driver__super_8c_source.html#l00054">54</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="eb90__packet__for__driver__super_8c_a956a902f4d6a814a2f7a24a1f91cdca0_cgraph.svg" width="862" height="82"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a54980fe3d483e945165aa8f1ca26942b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54980fe3d483e945165aa8f1ca26942b">&#9670;&nbsp;</a></span>EB90_PACKET_get_version_from_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> EB90_PACKET_get_version_from_dssc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version ID の取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームが確定しているときに呼び出すこと </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Version ID （バージョン 0x01 では uint8_t だが将来性のために uint32_t で返す） </dd></dl>
+
+<p class="definition"> <a class="el" href="eb90__packet__for__driver__super_8c_source.html">eb90_packet_for_driver_super.c</a> の <a class="el" href="eb90__packet__for__driver__super_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="eb90__packet__for__driver__super_8c_a54980fe3d483e945165aa8f1ca26942b_cgraph.svg" width="639" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="eb90__packet__for__driver__super_8c_a54980fe3d483e945165aa8f1ca26942b_icgraph.svg" width="436" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_5aa36b0b2e2a91a5ba31d755d7179f05.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_909de0a4ceb5f0a8f5bd7a4e04987411.html">Protocol</a></li><li class="navelem"><a class="el" href="eb90__packet__for__driver__super_8c.html">eb90_packet_for_driver_super.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

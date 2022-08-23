@@ -96,13 +96,15 @@ $(document).ready(function(){initNavTree('aobc_8c.html',''); initResizable(); })
 <code>#include &quot;<a class="el" href="aobc__command__definitions_8h_source.html">./aobc_command_definitions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="aobc__telemetry__definitions_8h_source.html">./aobc_telemetry_definitions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="aobc__telemetry__buffer_8h_source.html">./aobc_telemetry_buffer.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="common__tlm__cmd__packet_8h_source.html">src_core/TlmCmd/common_tlm_cmd_packet.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="common__cmd__packet_8h_source.html">src_core/TlmCmd/common_cmd_packet.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="endian__memcpy_8h_source.html">src_core/Library/endian_memcpy.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="eb90__frame__for__driver__super_8h_source.html">src_core/Drivers/Protocol/eb90_frame_for_driver_super.h</a>&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 aobc.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c__incl.svg" width="2176" height="871"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c__incl.svg" width="2206" height="886"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -132,12 +134,8 @@ aobc.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a568520f29a830d3c59a8d682bacfa74a"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#a568520f29a830d3c59a8d682bacfa74a">AOBC_stx_</a> [<a class="el" href="driver__super__issl__format_8h.html#a9cd042b44199b07cf96215586c274bae">DS_ISSLFMT_STX_SIZE</a>]</td></tr>
-<tr class="separator:a568520f29a830d3c59a8d682bacfa74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b1a6ccfcf03e4bac9452dfc8cf266e0"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#a5b1a6ccfcf03e4bac9452dfc8cf266e0">AOBC_etx_</a> [<a class="el" href="driver__super__issl__format_8h.html#a08d044461aa95589c7e5efa8115d357f">DS_ISSLFMT_ETX_SIZE</a>]</td></tr>
-<tr class="separator:a5b1a6ccfcf03e4bac9452dfc8cf266e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b2a05d187271fce28339097a2996b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#ad9b2a05d187271fce28339097a2996b7">AOBC_tx_frame_</a> [<a class="el" href="driver__super__issl__format_8h.html#a8853485a2f5327cd323a6c4cefe17d56">DS_ISSLFMT_COMMON_HEADER_SIZE</a>+<a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+<a class="el" href="driver__super__issl__format_8h.html#a247f584adcb2a4a5a17b734a4862b1ec">DS_ISSLFMT_COMMON_FOOTER_SIZE</a>]</td></tr>
-<tr class="separator:ad9b2a05d187271fce28339097a2996b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cc9011df60a29fc505f6b77faa3519"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#a49cc9011df60a29fc505f6b77faa3519">AOBC_tx_frame_</a> [<a class="el" href="eb90__frame__for__driver__super_8h.html#a3100dfef2e877e39325d48f58ee0da5b">EB90_FRAME_HEADER_SIZE</a>+<a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+<a class="el" href="eb90__frame__for__driver__super_8h.html#a814077e0ce7ffa6a9488044cdfb3279b">EB90_FRAME_FOOTER_SIZE</a>]</td></tr>
+<tr class="separator:a49cc9011df60a29fc505f6b77faa3519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>AOBC の Driver </p>
@@ -158,7 +156,7 @@ aobc.c の依存先関係図:</div>
 
 <p>テレコマで使うストリーム </p>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00016">16</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -197,17 +195,17 @@ aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00102">102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00099">99</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_abb166b8bf407374a9f89f7cce4dd9f44_cgraph.svg" width="2276" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_abb166b8bf407374a9f89f7cce4dd9f44_cgraph.svg" width="2299" height="398"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_abb166b8bf407374a9f89f7cce4dd9f44_icgraph.svg" width="906" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_abb166b8bf407374a9f89f7cce4dd9f44_icgraph.svg" width="1628" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -252,17 +250,17 @@ aobc.c の依存先関係図:</div>
 <dd>
 0 以外: 異常終了 </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00027">27</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a85cdd2dd8929990fc71d5f3d1f77f970_cgraph.svg" width="2680" height="784"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a85cdd2dd8929990fc71d5f3d1f77f970_cgraph.svg" width="2703" height="784"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a85cdd2dd8929990fc71d5f3d1f77f970_icgraph.svg" width="440" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a85cdd2dd8929990fc71d5f3d1f77f970_icgraph.svg" width="1163" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -292,17 +290,17 @@ aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00048">48</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_ace8c524e6d1fe0054e4db53f9fbc0a26_cgraph.svg" width="2542" height="767"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_ace8c524e6d1fe0054e4db53f9fbc0a26_cgraph.svg" width="2564" height="731"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_ace8c524e6d1fe0054e4db53f9fbc0a26_icgraph.svg" width="671" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_ace8c524e6d1fe0054e4db53f9fbc0a26_icgraph.svg" width="1394" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -335,7 +333,7 @@ aobc.c の依存先関係図:</div>
 <dd>
 0 以外: 異常終了 </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00079">79</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -345,7 +343,7 @@ aobc.c の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_ac4887fe7b15c36a303b144f4ed7268c6_icgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_ac4887fe7b15c36a303b144f4ed7268c6_icgraph.svg" width="1187" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -388,25 +386,25 @@ aobc.c の依存先関係図:</div>
 <dl class="section return"><dt>戻り値</dt><dd>DS_CMD_ERR_CODE </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>これを受信した AOBC C2A は， packet をそのまま PH_analyze_cmd_packet に流せばよい． </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00139">139</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00137">137</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a21bc4dfcbc36f4c3db4c9f59cd020414_cgraph.svg" width="1590" height="452"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a21bc4dfcbc36f4c3db4c9f59cd020414_cgraph.svg" width="1590" height="455"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a21bc4dfcbc36f4c3db4c9f59cd020414_icgraph.svg" width="3323" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c_a21bc4dfcbc36f4c3db4c9f59cd020414_icgraph.svg" width="3334" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="a5b1a6ccfcf03e4bac9452dfc8cf266e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b1a6ccfcf03e4bac9452dfc8cf266e0">&#9670;&nbsp;</a></span>AOBC_etx_</h2>
+<a id="a49cc9011df60a29fc505f6b77faa3519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cc9011df60a29fc505f6b77faa3519">&#9670;&nbsp;</a></span>AOBC_tx_frame_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,59 +413,7 @@ aobc.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> AOBC_etx_[<a class="el" href="driver__super__issl__format_8h.html#a08d044461aa95589c7e5efa8115d357f">DS_ISSLFMT_ETX_SIZE</a>]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>初期値:</b><div class="fragment"><div class="line">= {<a class="code" href="driver__super__issl__format_8h.html#ae97755a2c547c1c47a704fd892cc0499">DS_ISSLFMT_ETX_1ST_BYTE</a>,</div>
-<div class="line">                                                       <a class="code" href="driver__super__issl__format_8h.html#a7c619d2c1aabd316d2bbb24834d88de0">DS_ISSLFMT_ETX_2ND_BYTE</a>}</div>
-</div><!-- fragment -->
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00017">17</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a568520f29a830d3c59a8d682bacfa74a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a568520f29a830d3c59a8d682bacfa74a">&#9670;&nbsp;</a></span>AOBC_stx_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> AOBC_stx_[<a class="el" href="driver__super__issl__format_8h.html#a9cd042b44199b07cf96215586c274bae">DS_ISSLFMT_STX_SIZE</a>]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>初期値:</b><div class="fragment"><div class="line">= {<a class="code" href="driver__super__issl__format_8h.html#ab3d1828740b9898ab41737f69c063111">DS_ISSLFMT_STX_1ST_BYTE</a>,</div>
-<div class="line">                                                       <a class="code" href="driver__super__issl__format_8h.html#a9896c26a8549256a6123a0399e6c6d51">DS_ISSLFMT_STX_2ND_BYTE</a>}</div>
-</div><!-- fragment -->
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00015">15</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad9b2a05d187271fce28339097a2996b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9b2a05d187271fce28339097a2996b7">&#9670;&nbsp;</a></span>AOBC_tx_frame_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> AOBC_tx_frame_[<a class="el" href="driver__super__issl__format_8h.html#a8853485a2f5327cd323a6c4cefe17d56">DS_ISSLFMT_COMMON_HEADER_SIZE</a>+ <a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+ <a class="el" href="driver__super__issl__format_8h.html#a247f584adcb2a4a5a17b734a4862b1ec">DS_ISSLFMT_COMMON_FOOTER_SIZE</a>]</td>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> AOBC_tx_frame_[<a class="el" href="eb90__frame__for__driver__super_8h.html#a3100dfef2e877e39325d48f58ee0da5b">EB90_FRAME_HEADER_SIZE</a>+ <a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+ <a class="el" href="eb90__frame__for__driver__super_8h.html#a814077e0ce7ffa6a9488044cdfb3279b">EB90_FRAME_FOOTER_SIZE</a>]</td>
         </tr>
       </table>
   </td>
@@ -477,16 +423,12 @@ aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00024">24</a> 行目に定義があります。</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="adriver__super__issl__format_8h_html_a9896c26a8549256a6123a0399e6c6d51"><div class="ttname"><a href="driver__super__issl__format_8h.html#a9896c26a8549256a6123a0399e6c6d51">DS_ISSLFMT_STX_2ND_BYTE</a></div><div class="ttdeci">#define DS_ISSLFMT_STX_2ND_BYTE</div><div class="ttdef"><b>Definition:</b> <a href="driver__super__issl__format_8h_source.html#l00022">driver_super_issl_format.h:22</a></div></div>
-<div class="ttc" id="adriver__super__issl__format_8h_html_ae97755a2c547c1c47a704fd892cc0499"><div class="ttname"><a href="driver__super__issl__format_8h.html#ae97755a2c547c1c47a704fd892cc0499">DS_ISSLFMT_ETX_1ST_BYTE</a></div><div class="ttdeci">#define DS_ISSLFMT_ETX_1ST_BYTE</div><div class="ttdef"><b>Definition:</b> <a href="driver__super__issl__format_8h_source.html#l00024">driver_super_issl_format.h:24</a></div></div>
-<div class="ttc" id="adriver__super__issl__format_8h_html_ab3d1828740b9898ab41737f69c063111"><div class="ttname"><a href="driver__super__issl__format_8h.html#ab3d1828740b9898ab41737f69c063111">DS_ISSLFMT_STX_1ST_BYTE</a></div><div class="ttdeci">#define DS_ISSLFMT_STX_1ST_BYTE</div><div class="ttdef"><b>Definition:</b> <a href="driver__super__issl__format_8h_source.html#l00020">driver_super_issl_format.h:20</a></div></div>
-<div class="ttc" id="adriver__super__issl__format_8h_html_a7c619d2c1aabd316d2bbb24834d88de0"><div class="ttname"><a href="driver__super__issl__format_8h.html#a7c619d2c1aabd316d2bbb24834d88de0">DS_ISSLFMT_ETX_2ND_BYTE</a></div><div class="ttdeci">#define DS_ISSLFMT_ETX_2ND_BYTE</div><div class="ttdef"><b>Definition:</b> <a href="driver__super__issl__format_8h_source.html#l00026">driver_super_issl_format.h:26</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

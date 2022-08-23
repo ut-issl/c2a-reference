@@ -96,13 +96,12 @@ $(document).ready(function(){initNavTree('aobc_8h.html',''); initResizable(); })
 <code>#include &lt;<a class="el" href="driver__super_8h_source.html">src_core/Drivers/Super/driver_super.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="obc__time_8h_source.html">src_core/System/TimeManager/obc_time.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="common__cmd__packet_8h_source.html">src_core/TlmCmd/common_cmd_packet.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="driver__super__issl__format_8h_source.html">src_core/Drivers/Super/driver_super_issl_format.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="aobc__telemetry__data__definitions_8h_source.html">./aobc_telemetry_data_definitions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="aobc__telemetry__buffer_8h_source.html">./aobc_telemetry_buffer.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 aobc.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h__incl.svg" width="2012" height="796"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h__incl.svg" width="1934" height="782"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -126,7 +125,7 @@ aobc.h の依存先関係図:</div>
 <tr class="memitem:a3fdf74bd6aee154b130fb254179088d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4">AOBC_TX_ERR_CODE</a> { <a class="el" href="aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4a0079f507bb7b049cdc80f2e8488c49de">AOBC_TX_ERR_CODE_OK</a> = 0, 
 <a class="el" href="aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4aeb3243603167e006761debe2aa48cd29">AOBC_TX_ERR_CODE_CMD_NOT_FOUND</a>
  }</td></tr>
-<tr class="memdesc:a3fdf74bd6aee154b130fb254179088d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; 自動生成コードである aobc_telemetry_buffer で用いる  <a href="aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a3fdf74bd6aee154b130fb254179088d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC のコマンド送信エラーコード  <a href="aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4">[詳解]</a><br /></td></tr>
 <tr class="separator:a3fdf74bd6aee154b130fb254179088d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54e0e110ffd35160549965a56a53cc9a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8h.html#a54e0e110ffd35160549965a56a53cc9a">AOBC_RX_ERR_CODE</a> { <a class="el" href="aobc_8h.html#a54e0e110ffd35160549965a56a53cc9aa6a073d19942b1603ac6a2bbfdac41977">AOBC_RX_ERR_CODE_OK</a> = 0, 
 <a class="el" href="aobc_8h.html#a54e0e110ffd35160549965a56a53cc9aa1d963c641888473542a21af519cc16b0">AOBC_RX_ERR_CODE_TLM_NOT_FOUND</a>, 
@@ -172,7 +171,7 @@ aobc.h の依存先関係図:</div>
 <tr><td class="fieldname"><a id="a54e0e110ffd35160549965a56a53cc9aa1b58cdd0699ec9e599132c7d5469aecf"></a>AOBC_RX_ERR_CODE_CRC_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="aobc_8h_source.html">aobc.h</a> の <a class="el" href="aobc_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8h_source.html">aobc.h</a> の <a class="el" href="aobc_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -188,14 +187,14 @@ aobc.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; 自動生成コードである aobc_telemetry_buffer で用いる </p>
-<p>AOBC のコマンド送信エラーコード </p><dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
+<p>AOBC のコマンド送信エラーコード </p>
+<dl class="section note"><dt>覚え書き</dt><dd>uint8_t を想定 </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a3fdf74bd6aee154b130fb254179088d4a0079f507bb7b049cdc80f2e8488c49de"></a>AOBC_TX_ERR_CODE_OK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3fdf74bd6aee154b130fb254179088d4aeb3243603167e006761debe2aa48cd29"></a>AOBC_TX_ERR_CODE_CMD_NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="aobc_8h_source.html">aobc.h</a> の <a class="el" href="aobc_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8h_source.html">aobc.h</a> の <a class="el" href="aobc_8h_source.html#l00020">20</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -239,17 +238,17 @@ aobc.h の依存先関係図:</div>
 <dd>
 0 以外: 異常終了 </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00027">27</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a85cdd2dd8929990fc71d5f3d1f77f970_cgraph.svg" width="2680" height="784"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a85cdd2dd8929990fc71d5f3d1f77f970_cgraph.svg" width="2703" height="784"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a85cdd2dd8929990fc71d5f3d1f77f970_icgraph.svg" width="440" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a85cdd2dd8929990fc71d5f3d1f77f970_icgraph.svg" width="1163" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -282,7 +281,7 @@ aobc.h の依存先関係図:</div>
 <dd>
 0 以外: 異常終了 </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00079">79</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -292,7 +291,7 @@ aobc.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_ac4887fe7b15c36a303b144f4ed7268c6_icgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_ac4887fe7b15c36a303b144f4ed7268c6_icgraph.svg" width="1187" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -335,17 +334,17 @@ aobc.h の依存先関係図:</div>
 <dl class="section return"><dt>戻り値</dt><dd>DS_CMD_ERR_CODE </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>これを受信した AOBC C2A は， packet をそのまま PH_analyze_cmd_packet に流せばよい． </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00139">139</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00137">137</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a21bc4dfcbc36f4c3db4c9f59cd020414_cgraph.svg" width="1590" height="452"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a21bc4dfcbc36f4c3db4c9f59cd020414_cgraph.svg" width="1590" height="455"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a21bc4dfcbc36f4c3db4c9f59cd020414_icgraph.svg" width="3323" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a21bc4dfcbc36f4c3db4c9f59cd020414_icgraph.svg" width="3334" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
