@@ -103,45 +103,40 @@ crc.c の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aa7c2e60adbdd2fd9f2cad355b82d0730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#aa7c2e60adbdd2fd9f2cad355b82d0730">crc_16_ibm_right</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, const unsigned char *c, size_t n, int rev_flag)</td></tr>
-<tr class="memdesc:aa7c2e60adbdd2fd9f2cad355b82d0730"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16-IBM  <a href="crc_8c.html#aa7c2e60adbdd2fd9f2cad355b82d0730">[詳解]</a><br /></td></tr>
-<tr class="separator:aa7c2e60adbdd2fd9f2cad355b82d0730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2f8121390ab82feea7f7318b888f209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#ab2f8121390ab82feea7f7318b888f209">crc_16_ccitt_left</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, const unsigned char *c, size_t n, int rev_flag)</td></tr>
-<tr class="memdesc:ab2f8121390ab82feea7f7318b888f209"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16-CCITT  <a href="crc_8c.html#ab2f8121390ab82feea7f7318b888f209">[詳解]</a><br /></td></tr>
-<tr class="separator:ab2f8121390ab82feea7f7318b888f209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f96a52b0a044f9a3d4964dfe72fd771"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a3f96a52b0a044f9a3d4964dfe72fd771">crc_16_ccitt_right</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, const unsigned char *c, size_t n, int rev_flag)</td></tr>
-<tr class="memdesc:a3f96a52b0a044f9a3d4964dfe72fd771"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16-CCITT  <a href="crc_8c.html#a3f96a52b0a044f9a3d4964dfe72fd771">[詳解]</a><br /></td></tr>
-<tr class="separator:a3f96a52b0a044f9a3d4964dfe72fd771"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02ed89eb6995a0e2c80a7206b86bd285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a02ed89eb6995a0e2c80a7206b86bd285">make_crc_8_table</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *table, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> crc_poly, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</td></tr>
-<tr class="memdesc:a02ed89eb6995a0e2c80a7206b86bd285"><td class="mdescLeft">&#160;</td><td class="mdescRight">crc用のテーブル作成  <a href="crc_8c.html#a02ed89eb6995a0e2c80a7206b86bd285">[詳解]</a><br /></td></tr>
-<tr class="separator:a02ed89eb6995a0e2c80a7206b86bd285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb12862b6e4dc8ebb6dcb4e6b8966187"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#acb12862b6e4dc8ebb6dcb4e6b8966187">make_crc_16_table</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *table, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_poly, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</td></tr>
-<tr class="separator:acb12862b6e4dc8ebb6dcb4e6b8966187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dcb03e18ad0fa03466cfc71ef7f545e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a7dcb03e18ad0fa03466cfc71ef7f545e">make_crc_32_table</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> *table, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> crc_poly, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</td></tr>
-<tr class="separator:a7dcb03e18ad0fa03466cfc71ef7f545e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e79f79494f891fce5a855b2c3b233a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a48e79f79494f891fce5a855b2c3b233a">CRC_calc_crc_16_ibm_right</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *c, size_t n, int rev_flag)</td></tr>
+<tr class="memdesc:a48e79f79494f891fce5a855b2c3b233a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16-IBM  <a href="crc_8c.html#a48e79f79494f891fce5a855b2c3b233a">[詳解]</a><br /></td></tr>
+<tr class="separator:a48e79f79494f891fce5a855b2c3b233a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef2892cb722b99ec46e6da2e262846a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a2ef2892cb722b99ec46e6da2e262846a">CRC_calc_crc_16_ccitt_left</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *c, size_t n, int rev_flag)</td></tr>
+<tr class="memdesc:a2ef2892cb722b99ec46e6da2e262846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16-CCITT  <a href="crc_8c.html#a2ef2892cb722b99ec46e6da2e262846a">[詳解]</a><br /></td></tr>
+<tr class="separator:a2ef2892cb722b99ec46e6da2e262846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09016620a3632e3aea4f83aac3b43be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a09016620a3632e3aea4f83aac3b43be0">CRC_make_crc_8_table</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *table, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> crc_poly, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</td></tr>
+<tr class="memdesc:a09016620a3632e3aea4f83aac3b43be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">crc用のテーブル作成  <a href="crc_8c.html#a09016620a3632e3aea4f83aac3b43be0">[詳解]</a><br /></td></tr>
+<tr class="separator:a09016620a3632e3aea4f83aac3b43be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8380c07cdf35f73291796c29fd425627"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a8380c07cdf35f73291796c29fd425627">CRC_make_crc_16_table</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *table, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_poly, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</td></tr>
+<tr class="separator:a8380c07cdf35f73291796c29fd425627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2979358d9946dc77cd307c5e33f5203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#ad2979358d9946dc77cd307c5e33f5203">CRC_make_crc_32_table</a> (<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> *table, <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> crc_poly, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> shift)</td></tr>
+<tr class="separator:ad2979358d9946dc77cd307c5e33f5203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a73125d7c1c4db76add1a87dffc438e9a"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a73125d7c1c4db76add1a87dffc438e9a">crc_16_ibm_right_table_</a> [256]</td></tr>
-<tr class="separator:a73125d7c1c4db76add1a87dffc438e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9943b1ed86b1fd7b95fc75b5e0a261b"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#aa9943b1ed86b1fd7b95fc75b5e0a261b">crc_16_ccitt_left_table_</a> [256]</td></tr>
-<tr class="separator:aa9943b1ed86b1fd7b95fc75b5e0a261b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36a12fe219ee2b8a1fcc60392355ce06"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a36a12fe219ee2b8a1fcc60392355ce06">crc_16_ccitt_right_table_</a> [256]</td></tr>
-<tr class="separator:a36a12fe219ee2b8a1fcc60392355ce06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270cdeea1fb950876ad4900a98a35c59"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a270cdeea1fb950876ad4900a98a35c59">CRC_kCrc16IbmRightTable_</a> [256]</td></tr>
+<tr class="separator:a270cdeea1fb950876ad4900a98a35c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e09ea7a9f09fdd9ebab8c12f61ac3b"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="crc_8c.html#a15e09ea7a9f09fdd9ebab8c12f61ac3b">CRC_kCrc16CcittLeftTable_</a> [256]</td></tr>
+<tr class="separator:a15e09ea7a9f09fdd9ebab8c12f61ac3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>CRC用のライブラリ </p>
 
 <p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="ab2f8121390ab82feea7f7318b888f209"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2f8121390ab82feea7f7318b888f209">&#9670;&nbsp;</a></span>crc_16_ccitt_left()</h2>
+<a id="a2ef2892cb722b99ec46e6da2e262846a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef2892cb722b99ec46e6da2e262846a">&#9670;&nbsp;</a></span>CRC_calc_crc_16_ccitt_left()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_16_ccitt_left </td>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CRC_calc_crc_16_ccitt_left </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
           <td class="paramname"><em>crc</em>, </td>
@@ -149,7 +144,7 @@ crc.c の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
@@ -175,7 +170,7 @@ crc.c の依存先関係図:</div>
 <p>CRC-16-CCITT </p>
 <pre class="fragment">   生成多項式: x^16 + x^12 + x^5 + 1
    ビット送り: 左送り, POLLY: 0x1021
-   読み出し:   1byte(8 bit)
+   読み出し: 1byte (8 bit)
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">crc</td><td>CRC初期値 </td></tr>
@@ -187,24 +182,24 @@ crc.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>uint16_t: 計算結果 </dd></dl>
 
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00126">126</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00128">128</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="crc_8c_ab2f8121390ab82feea7f7318b888f209_icgraph.svg" width="2488" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="crc_8c_a2ef2892cb722b99ec46e6da2e262846a_icgraph.svg" width="2359" height="728"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a3f96a52b0a044f9a3d4964dfe72fd771"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f96a52b0a044f9a3d4964dfe72fd771">&#9670;&nbsp;</a></span>crc_16_ccitt_right()</h2>
+<a id="a48e79f79494f891fce5a855b2c3b233a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e79f79494f891fce5a855b2c3b233a">&#9670;&nbsp;</a></span>CRC_calc_crc_16_ibm_right()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_16_ccitt_right </td>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CRC_calc_crc_16_ibm_right </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
           <td class="paramname"><em>crc</em>, </td>
@@ -212,64 +207,7 @@ crc.c の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned char *&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rev_flag</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CRC-16-CCITT </p>
-<pre class="fragment">   生成多項式: x^16 + x^12 + x^5 + 1
-   ビット送り: 右送り, POLLY: 0x8408
-   読み出し:   1byte(8 bit)
-</pre> <dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">crc</td><td>CRC初期値 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>CRCを計算するbyte列 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>列の長さ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rev_flag</td><td>反転するかどうか </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>uint16_t: 計算結果 </dd></dl>
-
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00139">139</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aa7c2e60adbdd2fd9f2cad355b82d0730"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7c2e60adbdd2fd9f2cad355b82d0730">&#9670;&nbsp;</a></span>crc_16_ibm_right()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_16_ibm_right </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>crc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
@@ -295,7 +233,7 @@ crc.c の依存先関係図:</div>
 <p>CRC-16-IBM </p>
 <pre class="fragment">   生成多項式: x^16 + x^15 + x^2 + 1
    ビット送り: 右送り, POLLY: 0xa001
-   読み出し:   1byte(8 bit)
+   読み出し: 1byte (8 bit)
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">crc</td><td>CRC初期値 </td></tr>
@@ -307,24 +245,18 @@ crc.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>uint16_t: 計算結果 </dd></dl>
 
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00113">113</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="crc_8c_aa7c2e60adbdd2fd9f2cad355b82d0730_icgraph.svg" width="3730" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00115">115</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acb12862b6e4dc8ebb6dcb4e6b8966187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb12862b6e4dc8ebb6dcb4e6b8966187">&#9670;&nbsp;</a></span>make_crc_16_table()</h2>
+<a id="a8380c07cdf35f73291796c29fd425627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8380c07cdf35f73291796c29fd425627">&#9670;&nbsp;</a></span>CRC_make_crc_16_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void make_crc_16_table </td>
+          <td class="memname">void CRC_make_crc_16_table </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *&#160;</td>
           <td class="paramname"><em>table</em>, </td>
@@ -349,18 +281,18 @@ crc.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00176">176</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00180">180</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a7dcb03e18ad0fa03466cfc71ef7f545e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dcb03e18ad0fa03466cfc71ef7f545e">&#9670;&nbsp;</a></span>make_crc_32_table()</h2>
+<a id="ad2979358d9946dc77cd307c5e33f5203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2979358d9946dc77cd307c5e33f5203">&#9670;&nbsp;</a></span>CRC_make_crc_32_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void make_crc_32_table </td>
+          <td class="memname">void CRC_make_crc_32_table </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> *&#160;</td>
           <td class="paramname"><em>table</em>, </td>
@@ -385,18 +317,18 @@ crc.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00201">201</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00205">205</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a02ed89eb6995a0e2c80a7206b86bd285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02ed89eb6995a0e2c80a7206b86bd285">&#9670;&nbsp;</a></span>make_crc_8_table()</h2>
+<a id="a09016620a3632e3aea4f83aac3b43be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09016620a3632e3aea4f83aac3b43be0">&#9670;&nbsp;</a></span>CRC_make_crc_8_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void make_crc_8_table </td>
+          <td class="memname">void CRC_make_crc_8_table </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
           <td class="paramname"><em>table</em>, </td>
@@ -422,8 +354,7 @@ crc.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>crc用のテーブル作成 </p>
-<pre class="fragment">   読み出し:   1byte(8bit)(sizeof(table) = 256)
-   ビット送り: 右送り
+<pre class="fragment">   読み出し: 1byte (8bit) (sizeof(table) = 256)
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">table</td><td>テーブル </td></tr>
@@ -434,13 +365,13 @@ crc.c の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>使わないとは思いますが... </dd></dl>
 
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00152">152</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00156">156</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="aa9943b1ed86b1fd7b95fc75b5e0a261b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9943b1ed86b1fd7b95fc75b5e0a261b">&#9670;&nbsp;</a></span>crc_16_ccitt_left_table_</h2>
+<a id="a15e09ea7a9f09fdd9ebab8c12f61ac3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e09ea7a9f09fdd9ebab8c12f61ac3b">&#9670;&nbsp;</a></span>CRC_kCrc16CcittLeftTable_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,7 +380,7 @@ crc.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_16_ccitt_left_table_[256]</td>
+          <td class="memname">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CRC_kCrc16CcittLeftTable_[256]</td>
         </tr>
       </table>
   </td>
@@ -463,8 +394,8 @@ crc.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a36a12fe219ee2b8a1fcc60392355ce06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36a12fe219ee2b8a1fcc60392355ce06">&#9670;&nbsp;</a></span>crc_16_ccitt_right_table_</h2>
+<a id="a270cdeea1fb950876ad4900a98a35c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270cdeea1fb950876ad4900a98a35c59">&#9670;&nbsp;</a></span>CRC_kCrc16IbmRightTable_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,31 +404,7 @@ crc.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_16_ccitt_right_table_[256]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="crc_8c_source.html">crc.c</a> の <a class="el" href="crc_8c_source.html#l00078">78</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a73125d7c1c4db76add1a87dffc438e9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73125d7c1c4db76add1a87dffc438e9a">&#9670;&nbsp;</a></span>crc_16_ibm_right_table_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> crc_16_ibm_right_table_[256]</td>
+          <td class="memname">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> CRC_kCrc16IbmRightTable_[256]</td>
         </tr>
       </table>
   </td>
