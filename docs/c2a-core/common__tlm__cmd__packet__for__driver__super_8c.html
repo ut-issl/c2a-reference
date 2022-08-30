@@ -113,6 +113,18 @@ common_tlm_cmd_packet_for_driver_super.c の依存先関係図:</div>
 <tr class="memitem:a40adc5e0e6a976c720682df078eb7876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a40adc5e0e6a976c720682df078eb7876">CCP_get_ccp_from_dssc</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *received_packet)</td></tr>
 <tr class="memdesc:a40adc5e0e6a976c720682df078eb7876"><td class="mdescLeft">&#160;</td><td class="mdescRight">CommonCmdPacket を受信データからコピーして取得する  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#a40adc5e0e6a976c720682df078eb7876">[詳解]</a><br /></td></tr>
 <tr class="separator:a40adc5e0e6a976c720682df078eb7876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1621fe9ac5069a84bdc5135c83afcc41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a1621fe9ac5069a84bdc5135c83afcc41">CTCP_init_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *tx_frame_buffer, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> tx_frame_buffer_size, <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*data_analyzer)(<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, void *p_driver))</td></tr>
+<tr class="memdesc:a1621fe9ac5069a84bdc5135c83afcc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A 間通信など， CTCP をコンポ間通信に用いるとき，DS_init で渡す初期化関数内部用の Init Util  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#a1621fe9ac5069a84bdc5135c83afcc41">[詳解]</a><br /></td></tr>
+<tr class="separator:a1621fe9ac5069a84bdc5135c83afcc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc762f650c863090e34ad515967efc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a9dc762f650c863090e34ad515967efc9">CTCP_set_tx_frame_to_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *send_packet)</td></tr>
+<tr class="memdesc:a9dc762f650c863090e34ad515967efc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A 間通信など， CTCP をコンポ間通信に用いるときの tx_frame のセット  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#a9dc762f650c863090e34ad515967efc9">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dc762f650c863090e34ad515967efc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1aabd87ca51290c19715ee53a0c4cd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#ae1aabd87ca51290c19715ee53a0c4cd6">CTP_set_tx_frame_to_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *send_packet)</td></tr>
+<tr class="memdesc:ae1aabd87ca51290c19715ee53a0c4cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A 間通信など， CTP をコンポ間通信に用いるときの tx_frame のセット  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#ae1aabd87ca51290c19715ee53a0c4cd6">[詳解]</a><br /></td></tr>
+<tr class="separator:ae1aabd87ca51290c19715ee53a0c4cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002a6f14e2139a1a3daee52eef6263c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a002a6f14e2139a1a3daee52eef6263c3">CCP_set_tx_frame_to_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *send_packet)</td></tr>
+<tr class="memdesc:a002a6f14e2139a1a3daee52eef6263c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A 間通信など， CCP をコンポ間通信に用いるときの tx_frame のセット  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#a002a6f14e2139a1a3daee52eef6263c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a002a6f14e2139a1a3daee52eef6263c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コンポ間通信などで標準的に使う ネットワーク層 の Common Tlm Cmd Packet (概ね Space Packet) </p>
@@ -177,6 +189,64 @@ packet 構造 などは <a class="el" href="common__tlm__cmd__packet_8h.html" ti
 
 </div>
 </div>
+<a id="a002a6f14e2139a1a3daee52eef6263c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002a6f14e2139a1a3daee52eef6263c3">&#9670;&nbsp;</a></span>CCP_set_tx_frame_to_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> CCP_set_tx_frame_to_dssc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>send_packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A 間通信など， CCP をコンポ間通信に用いるときの tx_frame のセット </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">send_packet</td><td>送信するパケット </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DS_ERR_CODE_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">DS_ERR_CODE_ERR</td><td>DSSC 内部の設定不足などのエラー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html">common_tlm_cmd_packet_for_driver_super.c</a> の <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html#l00135">135</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a002a6f14e2139a1a3daee52eef6263c3_cgraph.svg" width="1764" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a002a6f14e2139a1a3daee52eef6263c3_icgraph.svg" width="3579" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a7dc0512a0d35141d978018d424de1c38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7dc0512a0d35141d978018d424de1c38">&#9670;&nbsp;</a></span>CTCP_get_ctcp_from_dssc()</h2>
 
@@ -225,6 +295,138 @@ packet 構造 などは <a class="el" href="common__tlm__cmd__packet_8h.html" ti
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a7dc0512a0d35141d978018d424de1c38_cgraph.svg" width="1619" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1621fe9ac5069a84bdc5135c83afcc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1621fe9ac5069a84bdc5135c83afcc41">&#9670;&nbsp;</a></span>CTCP_init_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> CTCP_init_dssc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>tx_frame_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td>
+          <td class="paramname"><em>tx_frame_buffer_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*)(<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, void *p_driver)&#160;</td>
+          <td class="paramname"><em>data_analyzer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A 間通信など， CTCP をコンポ間通信に用いるとき，DS_init で渡す初期化関数内部用の Init Util </p>
+<pre class="fragment">    これを呼び出すと，まるっと DSSC の初期設定ができる．
+</pre> <dl class="section note"><dt>覚え書き</dt><dd>DSSC_enable は Driver 側でやること </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_frame_buffer</td><td>コマンドフレーム（送信フレーム）のバッファ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_frame_buffer_size</td><td>バッファサイズ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_analyzer</td><td>DSSC_set_data_analyzer で渡すための data_analyzer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DS_ERR_CODE_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">DS_ERR_CODE_ERR</td><td>フレームバッファのサイズ不足などのエラー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html">common_tlm_cmd_packet_for_driver_super.c</a> の <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html#l00057">57</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a1621fe9ac5069a84bdc5135c83afcc41_cgraph.svg" width="406" height="526"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a1621fe9ac5069a84bdc5135c83afcc41_icgraph.svg" width="1560" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9dc762f650c863090e34ad515967efc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc762f650c863090e34ad515967efc9">&#9670;&nbsp;</a></span>CTCP_set_tx_frame_to_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> CTCP_set_tx_frame_to_dssc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *&#160;</td>
+          <td class="paramname"><em>send_packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A 間通信など， CTCP をコンポ間通信に用いるときの tx_frame のセット </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">send_packet</td><td>送信するパケット </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DS_ERR_CODE_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">DS_ERR_CODE_ERR</td><td>DSSC 内部の設定不足などのエラー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html">common_tlm_cmd_packet_for_driver_super.c</a> の <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html#l00089">89</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a9dc762f650c863090e34ad515967efc9_cgraph.svg" width="1519" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_a9dc762f650c863090e34ad515967efc9_icgraph.svg" width="3831" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -284,6 +486,58 @@ packet 構造 などは <a class="el" href="common__tlm__cmd__packet_8h.html" ti
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_ac33606cb83f003e3c3134702e73bf711_icgraph.svg" width="2083" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae1aabd87ca51290c19715ee53a0c4cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1aabd87ca51290c19715ee53a0c4cd6">&#9670;&nbsp;</a></span>CTP_set_tx_frame_to_dssc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> CTP_set_tx_frame_to_dssc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramname"><em>send_packet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C2A 間通信など， CTP をコンポ間通信に用いるときの tx_frame のセット </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">send_packet</td><td>送信するパケット </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DS_ERR_CODE_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">DS_ERR_CODE_ERR</td><td>DSSC 内部の設定不足などのエラー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html">common_tlm_cmd_packet_for_driver_super.c</a> の <a class="el" href="common__tlm__cmd__packet__for__driver__super_8c_source.html#l00126">126</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c_ae1aabd87ca51290c19715ee53a0c4cd6_cgraph.svg" width="1763" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

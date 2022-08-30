@@ -33,5 +33,6 @@ var struct_d_s___stream_config =
     [ "should_monitor_for_tlm_disruption_", "struct_d_s___stream_config.html#a2c8dc3e6f9272fef577298e205778962", null ],
     [ "time_threshold_for_tlm_disruption_", "struct_d_s___stream_config.html#ae9d29a3ec5276a02fea8c33b62a0f65e", null ],
     [ "tx_frame_", "struct_d_s___stream_config.html#a959f25f6129be08b39ae0a7d6e41ce30", null ],
+    [ "tx_frame_buffer_size_", "struct_d_s___stream_config.html#a4bd73008ff0d9863d312479dcad043eb", null ],
     [ "tx_frame_size_", "struct_d_s___stream_config.html#a97c4871475db02474ed9e15972ece679", null ]
 ];

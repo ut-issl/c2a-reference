@@ -63,6 +63,9 @@ var driver__super_8c =
     [ "DSSC_get_should_monitor_for_tlm_disruption", "driver__super_8c.html#a4f3710a7420c787a611a22095904cb63", null ],
     [ "DSSC_get_time_threshold_for_tlm_disruption", "driver__super_8c.html#a82e069be2847e2915145ada48de94d94", null ],
     [ "DSSC_get_tlm_disruption_status", "driver__super_8c.html#a3c3d7f8cb03c596e81145f3395f68757", null ],
+    [ "DSSC_get_tx_frame", "driver__super_8c.html#a1bbfdc22ae79da382c66ddb95a17bb31", null ],
+    [ "DSSC_get_tx_frame_as_non_const_pointer", "driver__super_8c.html#a09ef149f3d4fc279cd212cdb467882cf", null ],
+    [ "DSSC_get_tx_frame_buffer_size", "driver__super_8c.html#aeb4c3e2dea382e7303c7f927eaae624f", null ],
     [ "DSSC_get_tx_frame_size", "driver__super_8c.html#ae68cf3bbca9e71841b4bc8b224ab10bc", null ],
     [ "DSSC_set_data_analyzer", "driver__super_8c.html#ad65037ea9639ef7c8ade47c1c54bbf2e", null ],
     [ "DSSC_set_rx_footer", "driver__super_8c.html#afd7b10a3cb250e03d1ace11c9f5d8b5b", null ],
@@ -73,5 +76,6 @@ var driver__super_8c =
     [ "DSSC_set_rx_header", "driver__super_8c.html#ac08f8c480a922624b49921ed953f71be", null ],
     [ "DSSC_set_time_threshold_for_tlm_disruption", "driver__super_8c.html#a509e0b3b7ef883f35c3eac38ed397758", null ],
     [ "DSSC_set_tx_frame", "driver__super_8c.html#a42c80644b6772ae2596e20b75804c0c3", null ],
+    [ "DSSC_set_tx_frame_buffer_size", "driver__super_8c.html#a7c9e7079a1b2caf505c2f255749181b8", null ],
     [ "DSSC_set_tx_frame_size", "driver__super_8c.html#a9907f5844f74f6b8218993911bdc2735", null ]
 ];
