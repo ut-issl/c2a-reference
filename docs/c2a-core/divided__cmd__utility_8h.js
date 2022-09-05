@@ -17,9 +17,9 @@ var divided__cmd__utility_8h =
       [ "DCU_STATUS_ABORTED_BY_ERR", "divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700da6593fd56dcbcc1eccd52f577ec71444e", null ],
       [ "DCU_STATUS_ABORTED_BY_CMD", "divided__cmd__utility_8h.html#acb1774785ce24ddc8b5a9123d976700dab674508b997889f7f0dd0d2f52f34b97", null ]
     ] ],
-    [ "Cmd_DCU_ABORT_CMD", "divided__cmd__utility_8h.html#a3b23a82a28c753260cc4115d839a0c6f", null ],
-    [ "Cmd_DCU_CLEAR_LOG", "divided__cmd__utility_8h.html#a72f57002bfc68c92870340557d1db07c", null ],
-    [ "Cmd_DCU_DOWN_ABORT_FLAG", "divided__cmd__utility_8h.html#a63b0a49352a0c1ee7b0fc13058670b15", null ],
+    [ "Cmd_DCU_ABORT_CMD", "divided__cmd__utility_8h.html#a3c12e540ec1d1479cd4521922c5c5457", null ],
+    [ "Cmd_DCU_CLEAR_LOG", "divided__cmd__utility_8h.html#a4c59284331cb302bcdfd47d8270c30e8", null ],
+    [ "Cmd_DCU_DOWN_ABORT_FLAG", "divided__cmd__utility_8h.html#adb6f8362412118427e4b58464550a741", null ],
     [ "DCU_abort_cmd", "divided__cmd__utility_8h.html#a14a7fb7ac0a231142d85734218d1d117", null ],
     [ "DCU_check_in", "divided__cmd__utility_8h.html#aaad403eb696499ec36e837376be62c2a", null ],
     [ "DCU_create_app", "divided__cmd__utility_8h.html#a84cf58a5349ef5691992551cf0882674", null ],

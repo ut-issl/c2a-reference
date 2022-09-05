@@ -89,36 +89,38 @@ $(document).ready(function(){initNavTree('nop_8c_source.html',''); initResizable
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nop_8h.html">nop.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="nop_8h.html#ab02fdb34c152c34d35c242609ad9fdc4">   13</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="nop_8c.html#ab02fdb34c152c34d35c242609ad9fdc4">NOP_create_app</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a0d81b42bb05772083032b2f23bac9202">AI_create_app_info</a>(<span class="stringliteral">&quot;nop&quot;</span>, NULL, <a class="code" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">   18</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a>() {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// no operation</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="nop_8h.html#a46773c1cfb40bd0fbb5c4f41a28db289">   22</a></span>&#160;<a class="code" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> <a class="code" href="nop_8c.html#a46773c1cfb40bd0fbb5c4f41a28db289">Cmd_NOP</a>(<span class="keyword">const</span> <a class="code" href="struct_cmd_space_packet.html">CommonCmdPacket</a>* packet)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  (void)packet;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../TlmCmd/common_cmd_packet_util.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="nop_8h.html#ab02fdb34c152c34d35c242609ad9fdc4">   14</a></span>&#160;<a class="code" href="struct_app_info.html">AppInfo</a> <a class="code" href="nop_8c.html#ab02fdb34c152c34d35c242609ad9fdc4">NOP_create_app</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="app__info_8c.html#a0d81b42bb05772083032b2f23bac9202">AI_create_app_info</a>(<span class="stringliteral">&quot;nop&quot;</span>, NULL, <a class="code" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">   19</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a>() {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">// no operation</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="nop_8h.html#ac7c578ea04d457c3ea94d2f78712f160">   23</a></span>&#160;<a class="code" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> <a class="code" href="nop_8c.html#ac7c578ea04d457c3ea94d2f78712f160">Cmd_NOP</a>(<span class="keyword">const</span> <a class="code" href="struct_cmd_space_packet.html">CommonCmdPacket</a>* packet)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  (void)packet;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="common__cmd__packet__util_8c.html#a9e58970e1fdf3fd593d764f353e28562">CCP_make_cmd_ret_without_err_code</a>(<a class="code" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#pragma section</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anop_8h_html"><div class="ttname"><a href="nop_8h.html">nop.h</a></div><div class="ttdoc">NOP (No Operation) App</div></div>
-<div class="ttc" id="anop_8c_html_ab02fdb34c152c34d35c242609ad9fdc4"><div class="ttname"><a href="nop_8c.html#ab02fdb34c152c34d35c242609ad9fdc4">NOP_create_app</a></div><div class="ttdeci">AppInfo NOP_create_app(void)</div><div class="ttdef"><b>Definition:</b> <a href="nop_8c_source.html#l00013">nop.c:13</a></div></div>
-<div class="ttc" id="acommon__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714b"><div class="ttname"><a href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a></div><div class="ttdeci">CCP_EXEC_STS</div><div class="ttdoc">コマンド実行結果コード</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00039">common_cmd_packet.h:39</a></div></div>
+<div class="ttc" id="anop_8c_html_ab02fdb34c152c34d35c242609ad9fdc4"><div class="ttname"><a href="nop_8c.html#ab02fdb34c152c34d35c242609ad9fdc4">NOP_create_app</a></div><div class="ttdeci">AppInfo NOP_create_app(void)</div><div class="ttdef"><b>Definition:</b> <a href="nop_8c_source.html#l00014">nop.c:14</a></div></div>
 <div class="ttc" id="aapp__info_8c_html_a0d81b42bb05772083032b2f23bac9202"><div class="ttname"><a href="app__info_8c.html#a0d81b42bb05772083032b2f23bac9202">AI_create_app_info</a></div><div class="ttdeci">AppInfo AI_create_app_info(const char *name, void(*initializer)(void), void(*entry_point)(void))</div><div class="ttdoc">AppInfo を作る</div><div class="ttdef"><b>Definition:</b> <a href="app__info_8c_source.html#l00009">app_info.c:9</a></div></div>
-<div class="ttc" id="anop_8c_html_a46773c1cfb40bd0fbb5c4f41a28db289"><div class="ttname"><a href="nop_8c.html#a46773c1cfb40bd0fbb5c4f41a28db289">Cmd_NOP</a></div><div class="ttdeci">CCP_EXEC_STS Cmd_NOP(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="nop_8c_source.html#l00022">nop.c:22</a></div></div>
 <div class="ttc" id="acommon__cmd__packet_8h_html_a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11"><div class="ttname"><a href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11">CCP_EXEC_SUCCESS</a></div><div class="ttdeci">@ CCP_EXEC_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00041">common_cmd_packet.h:41</a></div></div>
 <div class="ttc" id="astruct_cmd_space_packet_html"><div class="ttname"><a href="struct_cmd_space_packet.html">CmdSpacePacket</a></div><div class="ttdoc">Space Packet (コマンド用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00053">space_packet_typedef.h:53</a></div></div>
 <div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00010">app_info.h:10</a></div></div>
-<div class="ttc" id="anop_8c_html_a09cbdd3a2b01bd6d3a5da847b1075783"><div class="ttname"><a href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a></div><div class="ttdeci">static void NOP_nop_(void)</div><div class="ttdef"><b>Definition:</b> <a href="nop_8c_source.html#l00018">nop.c:18</a></div></div>
+<div class="ttc" id="anop_8c_html_a09cbdd3a2b01bd6d3a5da847b1075783"><div class="ttname"><a href="nop_8c.html#a09cbdd3a2b01bd6d3a5da847b1075783">NOP_nop_</a></div><div class="ttdeci">static void NOP_nop_(void)</div><div class="ttdef"><b>Definition:</b> <a href="nop_8c_source.html#l00019">nop.c:19</a></div></div>
+<div class="ttc" id="acommon__cmd__packet__util_8c_html_a9e58970e1fdf3fd593d764f353e28562"><div class="ttname"><a href="common__cmd__packet__util_8c.html#a9e58970e1fdf3fd593d764f353e28562">CCP_make_cmd_ret_without_err_code</a></div><div class="ttdeci">CCP_CmdRet CCP_make_cmd_ret_without_err_code(CCP_EXEC_STS exec_sts)</div><div class="ttdoc">コマンド返り値である CCP_CmdRet を作成（エラーコード不使用版）</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet__util_8c_source.html#l00082">common_cmd_packet_util.c:82</a></div></div>
+<div class="ttc" id="astruct_c_c_p___cmd_ret_html"><div class="ttname"><a href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a></div><div class="ttdoc">コマンド返り値</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00078">common_cmd_packet.h:78</a></div></div>
+<div class="ttc" id="anop_8c_html_ac7c578ea04d457c3ea94d2f78712f160"><div class="ttname"><a href="nop_8c.html#ac7c578ea04d457c3ea94d2f78712f160">Cmd_NOP</a></div><div class="ttdeci">CCP_CmdRet Cmd_NOP(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="nop_8c_source.html#l00023">nop.c:23</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

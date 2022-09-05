@@ -23,6 +23,8 @@ var common__cmd__packet__util_8c =
     [ "CCP_get_raw_param_head", "common__cmd__packet__util_8c.html#acc1e3e1465809b242d0503482f8dcc40", null ],
     [ "CCP_get_raw_param_len", "common__cmd__packet__util_8c.html#afc0bbfba6ff06491ad012b8885b54d79", null ],
     [ "CCP_init_param_for_packet", "common__cmd__packet__util_8c.html#aac5fdc61181221fbc60b95acabaacd60", null ],
+    [ "CCP_make_cmd_ret", "common__cmd__packet__util_8c.html#a86a3aeedaeb2eac94c6c86eb0db7f8fd", null ],
+    [ "CCP_make_cmd_ret_without_err_code", "common__cmd__packet__util_8c.html#a9e58970e1fdf3fd593d764f353e28562", null ],
     [ "CCP_prepare_bct_id_param_for_packet", "common__cmd__packet__util_8c.html#a923eb1f4cbe3d262a238c55d32a4b667", null ],
     [ "CCP_prepare_double_param_for_packet", "common__cmd__packet__util_8c.html#a9f00908812202c3617bb2ac87a8583a1", null ],
     [ "CCP_prepare_float_param_for_packet", "common__cmd__packet__util_8c.html#ab8d1d4b1686147ba55f80825f3e2075a", null ],

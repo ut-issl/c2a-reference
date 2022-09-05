@@ -13,7 +13,7 @@ var task__dispatcher_8h =
       [ "TDSP_EMPTY_BC", "task__dispatcher_8h.html#a02dcbe29403ddb919a5edea19de9add8adc18d4d44c8cc7a7946fe9702c1ce93c", null ],
       [ "TDSP_UNKNOWN", "task__dispatcher_8h.html#a02dcbe29403ddb919a5edea19de9add8a5e98b43a17377043773b9aa7fd0d4008", null ]
     ] ],
-    [ "Cmd_TDSP_SET_TASK_LIST", "task__dispatcher_8h.html#a5d4c712768823f7b1578ac547a2f658c", null ],
+    [ "Cmd_TDSP_SET_TASK_LIST", "task__dispatcher_8h.html#ae00e3edecce1d802862ec6fbcd7bea38", null ],
     [ "print_tdsp_status", "task__dispatcher_8h.html#a5201f94c02a83490f26f6c36291275e9", null ],
     [ "TDSP_execute_pl_as_task_list", "task__dispatcher_8h.html#ac880fe6e26ecdf8711d08980cad6787d", null ],
     [ "TDSP_initialize", "task__dispatcher_8h.html#ab4cccbf9d36945e27f8023f9d613a667", null ],

@@ -1,5 +1,6 @@
 var common__cmd__packet_8h =
 [
+    [ "CCP_CmdRet", "struct_c_c_p___cmd_ret.html", "struct_c_c_p___cmd_ret" ],
     [ "CCP_EXEC_STS", "common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b", [
       [ "CCP_EXEC_SUCCESS", "common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba193109df48e98ea2e51df0f7ac1b7d11", null ],
       [ "CCP_EXEC_ILLEGAL_LENGTH", "common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714ba226fcd829290a469fd5a33a84736224a", null ],

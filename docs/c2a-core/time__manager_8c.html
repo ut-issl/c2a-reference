@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('time__manager_8c.html',''); initResiza
 </div><div class="textblock"><div class="dynheader">
 time_manager.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c__incl.svg" width="2103" height="975"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c__incl.svg" width="1747" height="900"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -116,9 +116,9 @@ time_manager.c の依存先関係図:</div>
 <tr class="memitem:ae586c3af5322ed3d76b01b3eb122988d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="time__manager_8h.html#af70062ef3f9f7cf22179d1c817c4ac36">TMGR_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#ae586c3af5322ed3d76b01b3eb122988d">TMGR_set_cycle_correction_</a> (double cycle_correction)</td></tr>
 <tr class="memdesc:ae586c3af5322ed3d76b01b3eb122988d"><td class="mdescLeft">&#160;</td><td class="mdescRight">time_manager_.unixtime_info_.cycle_correction の setter  <a href="time__manager_8c.html#ae586c3af5322ed3d76b01b3eb122988d">[詳解]</a><br /></td></tr>
 <tr class="separator:ae586c3af5322ed3d76b01b3eb122988d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c41c14da73290c67311576bce5fadd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a0c41c14da73290c67311576bce5fadd5">TMGR_conv_tmgr_ack_to_ccp_exec_sts_</a> (<a class="el" href="time__manager_8h.html#af70062ef3f9f7cf22179d1c817c4ac36">TMGR_ACK</a> ack)</td></tr>
-<tr class="memdesc:a0c41c14da73290c67311576bce5fadd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum 変換用関数  <a href="time__manager_8c.html#a0c41c14da73290c67311576bce5fadd5">[詳解]</a><br /></td></tr>
-<tr class="separator:a0c41c14da73290c67311576bce5fadd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05de41d8ef1216c2dea5f9a6adfe5623"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a05de41d8ef1216c2dea5f9a6adfe5623">TMGR_conv_tmgr_ack_to_ccp_cmd_ret_</a> (<a class="el" href="time__manager_8h.html#af70062ef3f9f7cf22179d1c817c4ac36">TMGR_ACK</a> ack)</td></tr>
+<tr class="memdesc:a05de41d8ef1216c2dea5f9a6adfe5623"><td class="mdescLeft">&#160;</td><td class="mdescRight">enum 変換用関数  <a href="time__manager_8c.html#a05de41d8ef1216c2dea5f9a6adfe5623">[詳解]</a><br /></td></tr>
+<tr class="separator:a05de41d8ef1216c2dea5f9a6adfe5623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a418722e38c58b8ba7fb2e62b1b6f293b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a418722e38c58b8ba7fb2e62b1b6f293b">TMGR_init</a> (void)</td></tr>
 <tr class="memdesc:a418722e38c58b8ba7fb2e62b1b6f293b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_time_manager.html" title="master_clock_ で OBC 時刻情報を保持するとともに, unixtime との紐づけや初期化情報の記録を行う">TimeManager</a> 構造体を初期化する  <a href="time__manager_8c.html#a418722e38c58b8ba7fb2e62b1b6f293b">[詳解]</a><br /></td></tr>
 <tr class="separator:a418722e38c58b8ba7fb2e62b1b6f293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,18 +191,18 @@ time_manager.c の依存先関係図:</div>
 <tr class="memitem:adb6317bb3e7f3896ae0f4bd41f8c531b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#adb6317bb3e7f3896ae0f4bd41f8c531b">TMGR_get_ti_from_utl_unixtime</a> (const <a class="el" href="obc__time_8h.html#ab23c4cc9af553742108d56de692e750f">cycle_t</a> utl_unixtime)</td></tr>
 <tr class="memdesc:adb6317bb3e7f3896ae0f4bd41f8c531b"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数で指定された utl_unixtime に対応する TI を返す  <a href="time__manager_8c.html#adb6317bb3e7f3896ae0f4bd41f8c531b">[詳解]</a><br /></td></tr>
 <tr class="separator:adb6317bb3e7f3896ae0f4bd41f8c531b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d10d4973d5f63aafeb10c9c1f7cacd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a5d10d4973d5f63aafeb10c9c1f7cacd4">Cmd_TMGR_SET_TIME</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="separator:a5d10d4973d5f63aafeb10c9c1f7cacd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a999ffdff419d803245f9a70ff462cab2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a999ffdff419d803245f9a70ff462cab2">Cmd_TMGR_UPDATE_UNIXTIME</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="separator:a999ffdff419d803245f9a70ff462cab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad001a0d012f26258b6fddc63e27f8e31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#ad001a0d012f26258b6fddc63e27f8e31">Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="separator:ad001a0d012f26258b6fddc63e27f8e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad44b61dbfa9b86f89f88d5c4e4a2cc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#aad44b61dbfa9b86f89f88d5c4e4a2cc6">Cmd_TMGR_SET_CYCLE_CORRECTION</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="separator:aad44b61dbfa9b86f89f88d5c4e4a2cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a185448b305e9d57ee1228b80b9b9f53c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a185448b305e9d57ee1228b80b9b9f53c">Cmd_TMGR_RESET_CYCLE_CORRECTION</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="separator:a185448b305e9d57ee1228b80b9b9f53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba9e845e3edd89c6e0219e9a3051d00a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#aba9e845e3edd89c6e0219e9a3051d00a">Cmd_TMGR_CLEAR_UNIXTIME_INFO</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="separator:aba9e845e3edd89c6e0219e9a3051d00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aea131eabdf4a9d056ee152cf2ee6c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a7aea131eabdf4a9d056ee152cf2ee6c2">Cmd_TMGR_SET_TIME</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a7aea131eabdf4a9d056ee152cf2ee6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7ac10f439c3434eaac53f36300ea39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a7a7ac10f439c3434eaac53f36300ea39">Cmd_TMGR_UPDATE_UNIXTIME</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a7a7ac10f439c3434eaac53f36300ea39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db7e3a78afb14c960ad0a46dabe4064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a7db7e3a78afb14c960ad0a46dabe4064">Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a7db7e3a78afb14c960ad0a46dabe4064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a42983bef938d90dae2d5f8ece4f35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a20a42983bef938d90dae2d5f8ece4f35">Cmd_TMGR_SET_CYCLE_CORRECTION</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a20a42983bef938d90dae2d5f8ece4f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac553122a3493ab291b8fa77f23449985"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#ac553122a3493ab291b8fa77f23449985">Cmd_TMGR_RESET_CYCLE_CORRECTION</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:ac553122a3493ab291b8fa77f23449985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6d0fce472c0b492388e9a892909134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time__manager_8c.html#a1c6d0fce472c0b492388e9a892909134">Cmd_TMGR_CLEAR_UNIXTIME_INFO</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="separator:a1c6d0fce472c0b492388e9a892909134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
@@ -216,14 +216,14 @@ time_manager.c の依存先関係図:</div>
 
 <p class="definition"> <a class="el" href="time__manager_8c_source.html">time_manager.c</a> に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="aba9e845e3edd89c6e0219e9a3051d00a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba9e845e3edd89c6e0219e9a3051d00a">&#9670;&nbsp;</a></span>Cmd_TMGR_CLEAR_UNIXTIME_INFO()</h2>
+<a id="a1c6d0fce472c0b492388e9a892909134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6d0fce472c0b492388e9a892909134">&#9670;&nbsp;</a></span>Cmd_TMGR_CLEAR_UNIXTIME_INFO()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TMGR_CLEAR_UNIXTIME_INFO </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_TMGR_CLEAR_UNIXTIME_INFO </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -236,26 +236,26 @@ time_manager.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_aba9e845e3edd89c6e0219e9a3051d00a_cgraph.svg" width="771" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a1c6d0fce472c0b492388e9a892909134_cgraph.svg" width="780" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_aba9e845e3edd89c6e0219e9a3051d00a_icgraph.svg" width="1115" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a1c6d0fce472c0b492388e9a892909134_icgraph.svg" width="1115" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a185448b305e9d57ee1228b80b9b9f53c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a185448b305e9d57ee1228b80b9b9f53c">&#9670;&nbsp;</a></span>Cmd_TMGR_RESET_CYCLE_CORRECTION()</h2>
+<a id="ac553122a3493ab291b8fa77f23449985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac553122a3493ab291b8fa77f23449985">&#9670;&nbsp;</a></span>Cmd_TMGR_RESET_CYCLE_CORRECTION()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TMGR_RESET_CYCLE_CORRECTION </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_TMGR_RESET_CYCLE_CORRECTION </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -268,26 +268,26 @@ time_manager.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a185448b305e9d57ee1228b80b9b9f53c_cgraph.svg" width="460" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_ac553122a3493ab291b8fa77f23449985_cgraph.svg" width="659" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a185448b305e9d57ee1228b80b9b9f53c_icgraph.svg" width="1050" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_ac553122a3493ab291b8fa77f23449985_icgraph.svg" width="1050" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="aad44b61dbfa9b86f89f88d5c4e4a2cc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad44b61dbfa9b86f89f88d5c4e4a2cc6">&#9670;&nbsp;</a></span>Cmd_TMGR_SET_CYCLE_CORRECTION()</h2>
+<a id="a20a42983bef938d90dae2d5f8ece4f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a42983bef938d90dae2d5f8ece4f35">&#9670;&nbsp;</a></span>Cmd_TMGR_SET_CYCLE_CORRECTION()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TMGR_SET_CYCLE_CORRECTION </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_TMGR_SET_CYCLE_CORRECTION </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -300,26 +300,26 @@ time_manager.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_aad44b61dbfa9b86f89f88d5c4e4a2cc6_cgraph.svg" width="443" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a20a42983bef938d90dae2d5f8ece4f35_cgraph.svg" width="642" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_aad44b61dbfa9b86f89f88d5c4e4a2cc6_icgraph.svg" width="1032" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a20a42983bef938d90dae2d5f8ece4f35_icgraph.svg" width="1032" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a5d10d4973d5f63aafeb10c9c1f7cacd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d10d4973d5f63aafeb10c9c1f7cacd4">&#9670;&nbsp;</a></span>Cmd_TMGR_SET_TIME()</h2>
+<a id="a7aea131eabdf4a9d056ee152cf2ee6c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aea131eabdf4a9d056ee152cf2ee6c2">&#9670;&nbsp;</a></span>Cmd_TMGR_SET_TIME()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TMGR_SET_TIME </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_TMGR_SET_TIME </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -332,26 +332,26 @@ time_manager.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a5d10d4973d5f63aafeb10c9c1f7cacd4_cgraph.svg" width="1055" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a7aea131eabdf4a9d056ee152cf2ee6c2_cgraph.svg" width="1055" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a5d10d4973d5f63aafeb10c9c1f7cacd4_icgraph.svg" width="1024" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a7aea131eabdf4a9d056ee152cf2ee6c2_icgraph.svg" width="1024" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ad001a0d012f26258b6fddc63e27f8e31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad001a0d012f26258b6fddc63e27f8e31">&#9670;&nbsp;</a></span>Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH()</h2>
+<a id="a7db7e3a78afb14c960ad0a46dabe4064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db7e3a78afb14c960ad0a46dabe4064">&#9670;&nbsp;</a></span>Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_TMGR_SET_UTL_UNIXTIME_EPOCH </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -364,26 +364,26 @@ time_manager.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_ad001a0d012f26258b6fddc63e27f8e31_cgraph.svg" width="470" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a7db7e3a78afb14c960ad0a46dabe4064_cgraph.svg" width="668" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_ad001a0d012f26258b6fddc63e27f8e31_icgraph.svg" width="1090" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a7db7e3a78afb14c960ad0a46dabe4064_icgraph.svg" width="1090" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a999ffdff419d803245f9a70ff462cab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a999ffdff419d803245f9a70ff462cab2">&#9670;&nbsp;</a></span>Cmd_TMGR_UPDATE_UNIXTIME()</h2>
+<a id="a7a7ac10f439c3434eaac53f36300ea39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7ac10f439c3434eaac53f36300ea39">&#9670;&nbsp;</a></span>Cmd_TMGR_UPDATE_UNIXTIME()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> Cmd_TMGR_UPDATE_UNIXTIME </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_TMGR_UPDATE_UNIXTIME </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -396,13 +396,13 @@ time_manager.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a999ffdff419d803245f9a70ff462cab2_cgraph.svg" width="918" height="140"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a7a7ac10f439c3434eaac53f36300ea39_cgraph.svg" width="946" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a999ffdff419d803245f9a70ff462cab2_icgraph.svg" width="1086" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a7a7ac10f439c3434eaac53f36300ea39_icgraph.svg" width="1086" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -525,8 +525,8 @@ time_manager.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a0c41c14da73290c67311576bce5fadd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c41c14da73290c67311576bce5fadd5">&#9670;&nbsp;</a></span>TMGR_conv_tmgr_ack_to_ccp_exec_sts_()</h2>
+<a id="a05de41d8ef1216c2dea5f9a6adfe5623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05de41d8ef1216c2dea5f9a6adfe5623">&#9670;&nbsp;</a></span>TMGR_conv_tmgr_ack_to_ccp_cmd_ret_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +535,7 @@ time_manager.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> TMGR_conv_tmgr_ack_to_ccp_exec_sts_ </td>
+          <td class="memname">static <a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> TMGR_conv_tmgr_ack_to_ccp_cmd_ret_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="time__manager_8h.html#af70062ef3f9f7cf22179d1c817c4ac36">TMGR_ACK</a>&#160;</td>
           <td class="paramname"><em>ack</em></td><td>)</td>
@@ -556,13 +556,19 @@ time_manager.c の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>CCP_EXEC_STS </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> </dd></dl>
 
 <p class="definition"> <a class="el" href="time__manager_8c_source.html">time_manager.c</a> の <a class="el" href="time__manager_8c_source.html#l00235">235</a> 行目に定義があります。</p>
 <div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a05de41d8ef1216c2dea5f9a6adfe5623_cgraph.svg" width="376" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a0c41c14da73290c67311576bce5fadd5_icgraph.svg" width="1304" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="time__manager_8c_a05de41d8ef1216c2dea5f9a6adfe5623_icgraph.svg" width="1304" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
