@@ -2,8 +2,8 @@ var spi_8h =
 [
     [ "SPI_Config", "struct_s_p_i___config.html", "struct_s_p_i___config" ],
     [ "SPI_CS_STATE_AFTER_TX", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfd", [
-      [ "SPI_CS_STATE_AFTER_TX_LOW", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda29c7d16542514dfe8d08a56c9aa241d7", null ],
-      [ "SPI_CS_STATE_AFTER_TX_HIGH", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda635838ff704e347cb898e40c385be0ee", null ]
+      [ "SPI_CS_STATE_AFTER_TX_HIGH", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda635838ff704e347cb898e40c385be0ee", null ],
+      [ "SPI_CS_STATE_AFTER_TX_LOW", "spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda29c7d16542514dfe8d08a56c9aa241d7", null ]
     ] ],
     [ "SPI_ERR_CODE", "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4", [
       [ "SPI_ERR_UNKNOWN", "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a4a19cdce312e200f3119b4f829f22acb", null ],
