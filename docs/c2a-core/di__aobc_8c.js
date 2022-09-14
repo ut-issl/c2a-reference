@@ -5,7 +5,7 @@ var di__aobc_8c =
     [ "DI_AOBC_cmd_dispatcher", "di__aobc_8c.html#a22b846ecf2fe48c7bff4f2c10f2bc284", null ],
     [ "DI_AOBC_cmd_dispatcher_", "di__aobc_8c.html#ac2b0fb03e89d75b82419d4ad53202f8b", null ],
     [ "DI_AOBC_cmd_dispatcher_init_", "di__aobc_8c.html#aba679baeac63e052dbbe183daf0431f5", null ],
-    [ "DI_AOBC_dispatch_command", "di__aobc_8c.html#aff7d4f09f3003e15242d14e6ed393059", null ],
+    [ "DI_AOBC_dispatch_command", "di__aobc_8c.html#af6a532abc7f23de92464ed5201d374fa", null ],
     [ "DI_AOBC_init_", "di__aobc_8c.html#ac004552dc331c8fea7b0b6f2acd75a15", null ],
     [ "DI_AOBC_update", "di__aobc_8c.html#a78f30ebb5b71301c1da6d10eac787db4", null ],
     [ "DI_AOBC_update_", "di__aobc_8c.html#a0c3b0ef5c9c0ff2ba0e6327dcb36c7e4", null ],

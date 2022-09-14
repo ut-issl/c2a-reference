@@ -106,7 +106,7 @@ packet_handler.h の依存先関係図:</div>
 </div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8h__dep__incl.svg" width="7326" height="514"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8h__dep__incl.svg" width="5890" height="424"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -174,9 +174,9 @@ packet_handler.h の依存先関係図:</div>
 <tr class="memitem:a9d16c8b958f0f983cf15674d6c528b02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__handler_8h.html#a19831ecb22189b43d08ee732b51f758c">PH_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8h.html#a9d16c8b958f0f983cf15674d6c528b02">PH_analyze_cmd_packet</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="memdesc:a9d16c8b958f0f983cf15674d6c528b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCP を解析する  <a href="packet__handler_8h.html#a9d16c8b958f0f983cf15674d6c528b02">[詳解]</a><br /></td></tr>
 <tr class="separator:a9d16c8b958f0f983cf15674d6c528b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b1777e6101ff2eeeef6042166974cdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc">PH_dispatch_command</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="memdesc:a7b1777e6101ff2eeeef6042166974cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCP をコマンドとして解釈して実行，ないしは別機器へ配送する  <a href="packet__handler_8h.html#a7b1777e6101ff2eeeef6042166974cdc">[詳解]</a><br /></td></tr>
-<tr class="separator:a7b1777e6101ff2eeeef6042166974cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0decb14f7fee73ca1ed3e9a10b05087"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8h.html#aa0decb14f7fee73ca1ed3e9a10b05087">PH_dispatch_command</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
+<tr class="memdesc:aa0decb14f7fee73ca1ed3e9a10b05087"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCP をコマンドとして解釈して実行，ないしは別機器へ配送する  <a href="packet__handler_8h.html#aa0decb14f7fee73ca1ed3e9a10b05087">[詳解]</a><br /></td></tr>
+<tr class="separator:aa0decb14f7fee73ca1ed3e9a10b05087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c5e6e09ca20d2ee2186cbd9197cb41"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__handler_8h.html#a05c5e6e09ca20d2ee2186cbd9197cb41">PH_get_packet_list_from_exec_type</a> (<a class="el" href="common__cmd__packet_8h.html#ad6e8ef95ca31fe3bb765c7fe1aa960fa">CCP_EXEC_TYPE</a> type)</td></tr>
 <tr class="memdesc:a05c5e6e09ca20d2ee2186cbd9197cb41"><td class="mdescLeft">&#160;</td><td class="mdescRight">CCP_EXEC_TYPE から <a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> を取得する  <a href="packet__handler_8h.html#a05c5e6e09ca20d2ee2186cbd9197cb41">[詳解]</a><br /></td></tr>
 <tr class="separator:a05c5e6e09ca20d2ee2186cbd9197cb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -542,14 +542,14 @@ Cmd か Tlm かが確定している場合， PH_analyze_tlm_packet, PH_analyze_
 
 </div>
 </div>
-<a id="a7b1777e6101ff2eeeef6042166974cdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b1777e6101ff2eeeef6042166974cdc">&#9670;&nbsp;</a></span>PH_dispatch_command()</h2>
+<a id="aa0decb14f7fee73ca1ed3e9a10b05087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0decb14f7fee73ca1ed3e9a10b05087">&#9670;&nbsp;</a></span>PH_dispatch_command()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__cmd__packet_8h.html#a5819361d7f600a9e471467b328b8714b">CCP_EXEC_STS</a> PH_dispatch_command </td>
+          <td class="memname"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> PH_dispatch_command </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
@@ -565,19 +565,19 @@ Cmd か Tlm かが確定している場合， PH_analyze_tlm_packet, PH_analyze_
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>CCP_EXEC_STS </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> </dd></dl>
 
 <p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00222">222</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8h_a7b1777e6101ff2eeeef6042166974cdc_cgraph.svg" width="2030" height="930"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8h_aa0decb14f7fee73ca1ed3e9a10b05087_cgraph.svg" width="2080" height="931"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8h_a7b1777e6101ff2eeeef6042166974cdc_icgraph.svg" width="2687" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__handler_8h_aa0decb14f7fee73ca1ed3e9a10b05087_icgraph.svg" width="2687" height="711"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -609,7 +609,7 @@ Cmd か Tlm かが確定している場合， PH_analyze_tlm_packet, PH_analyze_
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の const ポインタ </dd></dl>
 
-<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00337">337</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="packet__handler_8c_source.html">packet_handler.c</a> の <a class="el" href="packet__handler_8c_source.html#l00340">340</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">

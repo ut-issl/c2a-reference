@@ -1,23 +1,25 @@
 <map id="GSCD_init_" name="GSCD_init_">
-<area shape="rect" id="node1" title="GSCD App 初期化関数" alt="" coords="5,132,100,159"/>
-<area shape="rect" id="node2" href="$command__dispatcher_8c.html#a65fc5bdc13b85016bdfe85d8191b7681" title="CDIS の初期化と取得" alt="" coords="148,132,229,159"/>
-<area shape="rect" id="node3" href="$command__dispatcher_8c.html#ad69bcfd7e12d6c75b7e5ec0841764c6c" title="CDIS_ExecInfo の初期化" alt="" coords="277,56,445,83"/>
-<area shape="rect" id="node5" href="$event__logger_8c.html#a25a74a48375dfc1f3f80be68e0ac00ea" title="イベント (EL_Event) を記録" alt="" coords="297,107,426,133"/>
-<area shape="rect" id="node20" href="$packet__list_8c.html#a30838b1a60fd841ab737f565a4ad9d69" title="PacketList をクリア" alt="" coords="310,157,413,184"/>
-<area shape="rect" id="node21" href="$packet__list_8c.html#a851b28b14c9bdadc9dc9e9b4bc8e5681" title="PacketList で使用される packet の型情報 PL_PACKET_TYPE を返す" alt="" coords="286,208,437,235"/>
-<area shape="rect" id="node4" href="$obc__time_8c.html#af728cdbeae57ea5bf7f25ba5a3776e60" title="ObcTime をクリアし全てゼロにする" alt="" coords="513,56,610,83"/>
-<area shape="rect" id="node6" href="$event__logger_8c.html#a80a1b60c587d1e3402b02e3bde1db899" title="イベント (EL_Event) を記録" alt="" coords="493,107,629,133"/>
-<area shape="rect" id="node7" href="$event__logger_8c.html#aeae14f21b4e29006f709a61e7de52d67" title="TLog の wp をチェックし， event を生成する" alt="" coords="685,5,831,32"/>
-<area shape="rect" id="node8" href="$event__logger_8c.html#a0b42c2f5d1eafdad83481ec6e63365e2" title="イベント (EL_Event) を初期化" alt="" coords="700,56,816,83"/>
-<area shape="rect" id="node11" href="$event__logger_8c.html#a50ba2fe43a96f7351951a4109227ba6f" title="event_logger の EL_Event.group が有効か？" alt="" coords="677,107,839,133"/>
-<area shape="rect" id="node12" href="$event__logger_8c.html#a69fb9dbc85ad467d048f1c9f31d2442c" title="イベント (EL_Event) を CLog に記録" alt="" coords="683,158,833,199"/>
-<area shape="rect" id="node18" href="$event__logger_8c.html#a93cb3659efd373de0856c92b3c08896a" title="イベント (EL_Event) を TLog に記録" alt="" coords="683,223,833,265"/>
-<area shape="rect" id="node9" href="$time__manager_8c.html#a9d04b4d9b622cbe5a90cf65e58b828bc" title="現在の master_clock_ を取得する" alt="" coords="887,56,1069,83"/>
-<area shape="rect" id="node10" href="$obc__time_8c.html#a70416835a40bdacbb04f6f06b1e6d1e1" title="引数から ObcTime を作成する" alt="" coords="1157,56,1264,83"/>
-<area shape="rect" id="node13" href="$event__logger_8c.html#a605a3ff223ddae8830c09ff5aa57cc94" title="該当イベントの CLog を，イベントテーブルの先頭に出す" alt="" coords="899,158,1057,199"/>
-<area shape="rect" id="node16" href="$obc__time_8c.html#a02512f745375636ab21f468838587942" title="ObcTime の引き算を行う" alt="" coords="935,107,1021,133"/>
-<area shape="rect" id="node14" href="$event__logger_8c.html#a60dac03ee61b8b3fb3ac6335babb7209" title="イベントテーブル先頭に該当イベントの CLog をつくる" alt="" coords="1117,252,1304,279"/>
-<area shape="rect" id="node15" href="$event__logger_8c.html#a987cce8c848158cc3038bb59dc100de3" title="該当イベントの CLog を検索し取得する" alt="" coords="1147,165,1275,192"/>
-<area shape="rect" id="node17" href="$obc__time_8c.html#a8d70081c0b7615e9381c431ae5f8dca2" title="ObcTime の比較" alt="" coords="1149,107,1272,133"/>
-<area shape="rect" id="node19" href="$event__logger_8c.html#af088469f27d5dfca608a9cacee9fbc17" title="TLog のイベントテーブルの上書きが有効か？" alt="" coords="900,223,1056,265"/>
+<area shape="rect" id="node1" title="GSCD App 初期化関数" alt="" coords="5,161,100,188"/>
+<area shape="rect" id="node2" href="$command__dispatcher_8c.html#a65fc5bdc13b85016bdfe85d8191b7681" title="CDIS の初期化と取得" alt="" coords="148,161,229,188"/>
+<area shape="rect" id="node3" href="$command__dispatcher_8c.html#ad69bcfd7e12d6c75b7e5ec0841764c6c" title="CDIS_ExecInfo の初期化" alt="" coords="277,64,445,91"/>
+<area shape="rect" id="node7" href="$event__logger_8c.html#a25a74a48375dfc1f3f80be68e0ac00ea" title="イベント (EL_Event) を記録" alt="" coords="297,136,426,163"/>
+<area shape="rect" id="node22" href="$packet__list_8c.html#a30838b1a60fd841ab737f565a4ad9d69" title="PacketList をクリア" alt="" coords="310,187,413,213"/>
+<area shape="rect" id="node23" href="$packet__list_8c.html#a851b28b14c9bdadc9dc9e9b4bc8e5681" title="PacketList で使用される packet の型情報 PL_PACKET_TYPE を返す" alt="" coords="286,237,437,264"/>
+<area shape="rect" id="node4" href="$common__cmd__packet__util_8c.html#a9e58970e1fdf3fd593d764f353e28562" title="コマンド返り値である CCP_CmdRet を作成（エラーコード不使用版）" alt="" coords="493,57,700,98"/>
+<area shape="rect" id="node6" href="$obc__time_8c.html#af728cdbeae57ea5bf7f25ba5a3776e60" title="ObcTime をクリアし全てゼロにする" alt="" coords="548,5,645,32"/>
+<area shape="rect" id="node5" href="$common__cmd__packet__util_8c.html#a86a3aeedaeb2eac94c6c86eb0db7f8fd" title="コマンド返り値である CCP_CmdRet を作成" alt="" coords="753,28,904,55"/>
+<area shape="rect" id="node8" href="$event__logger_8c.html#a80a1b60c587d1e3402b02e3bde1db899" title="イベント (EL_Event) を記録" alt="" coords="529,159,665,185"/>
+<area shape="rect" id="node9" href="$event__logger_8c.html#aeae14f21b4e29006f709a61e7de52d67" title="TLog の wp をチェックし， event を生成する" alt="" coords="755,129,902,156"/>
+<area shape="rect" id="node10" href="$event__logger_8c.html#a0b42c2f5d1eafdad83481ec6e63365e2" title="イベント (EL_Event) を初期化" alt="" coords="771,297,887,324"/>
+<area shape="rect" id="node13" href="$event__logger_8c.html#a50ba2fe43a96f7351951a4109227ba6f" title="event_logger の EL_Event.group が有効か？" alt="" coords="748,247,909,273"/>
+<area shape="rect" id="node14" href="$event__logger_8c.html#a69fb9dbc85ad467d048f1c9f31d2442c" title="イベント (EL_Event) を CLog に記録" alt="" coords="754,181,903,222"/>
+<area shape="rect" id="node20" href="$event__logger_8c.html#a93cb3659efd373de0856c92b3c08896a" title="イベント (EL_Event) を TLog に記録" alt="" coords="754,349,903,390"/>
+<area shape="rect" id="node11" href="$time__manager_8c.html#a9d04b4d9b622cbe5a90cf65e58b828bc" title="現在の master_clock_ を取得する" alt="" coords="957,291,1140,317"/>
+<area shape="rect" id="node12" href="$obc__time_8c.html#a70416835a40bdacbb04f6f06b1e6d1e1" title="引数から ObcTime を作成する" alt="" coords="1228,277,1335,304"/>
+<area shape="rect" id="node15" href="$event__logger_8c.html#a605a3ff223ddae8830c09ff5aa57cc94" title="該当イベントの CLog を，イベントテーブルの先頭に出す" alt="" coords="969,137,1128,178"/>
+<area shape="rect" id="node18" href="$obc__time_8c.html#a02512f745375636ab21f468838587942" title="ObcTime の引き算を行う" alt="" coords="1005,215,1092,241"/>
+<area shape="rect" id="node16" href="$event__logger_8c.html#a60dac03ee61b8b3fb3ac6335babb7209" title="イベントテーブル先頭に該当イベントの CLog をつくる" alt="" coords="1188,87,1375,113"/>
+<area shape="rect" id="node17" href="$event__logger_8c.html#a987cce8c848158cc3038bb59dc100de3" title="該当イベントの CLog を検索し取得する" alt="" coords="1217,144,1345,171"/>
+<area shape="rect" id="node19" href="$obc__time_8c.html#a8d70081c0b7615e9381c431ae5f8dca2" title="ObcTime の比較" alt="" coords="1220,215,1343,241"/>
+<area shape="rect" id="node21" href="$event__logger_8c.html#af088469f27d5dfca608a9cacee9fbc17" title="TLog のイベントテーブルの上書きが有効か？" alt="" coords="971,349,1127,390"/>
 </map>
