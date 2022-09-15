@@ -5,7 +5,7 @@ var searchData=
   ['aa_5finit_2',['AA_init',['../aa_8h.html#a1c62485a9b9c302375087f91c63c3b91',1,'aa.h']]],
   ['aa_5frx_3',['AA_rx',['../aa_8h.html#ab209e0f953fd116a05f8d9aa5d3c43a0',1,'aa.h']]],
   ['aa_5ftx_4',['AA_tx',['../aa_8h.html#a228e7ae22c0dbf53c946e1a521f8a00f',1,'aa.h']]],
-  ['activated_5fat_5',['activated_at',['../struct_t_d_s_p___info.html#af8d737437400fd3b3d0fce840557e1fa',1,'TDSP_Info']]],
+  ['activated_5fat_5',['activated_at',['../struct_task_dsipatcher.html#af8d737437400fd3b3d0fce840557e1fa',1,'TaskDsipatcher']]],
   ['active_5flist_5fhead_5f_6',['active_list_head_',['../struct_packet_list.html#a6c5036b952b8fcb468d161e6392ee872',1,'PacketList']]],
   ['active_5flist_5ftail_5f_7',['active_list_tail_',['../struct_packet_list.html#a562696d0f5dc6dd6e0b23c8b9ba39fbe',1,'PacketList']]],
   ['active_5fnodes_5f_8',['active_nodes_',['../struct_packet_list.html#a920ce9d2725314a071bd6908dd0c731e',1,'PacketList']]],

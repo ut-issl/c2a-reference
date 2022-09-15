@@ -83,7 +83,6 @@ $(document).ready(function(){initNavTree('task__dispatcher_8h.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">データ構造</a> &#124;
-<a href="#define-members">マクロ定義</a> &#124;
 <a href="#enum-members">列挙型</a> &#124;
 <a href="#func-members">関数</a> &#124;
 <a href="#var-members">変数</a>  </div>
@@ -91,6 +90,9 @@ $(document).ready(function(){initNavTree('task__dispatcher_8h.html',''); initRes
 <div class="title">task_dispatcher.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>task list に設定されたタスクを実行する主体  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="block__command__table_8h_source.html">../../TlmCmd/block_command_table.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="command__dispatcher_8h_source.html">../../TlmCmd/command_dispatcher.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="app__info_8h_source.html">../ApplicationManager/app_info.h</a>&quot;</code><br />
@@ -111,14 +113,9 @@ task_dispatcher.h の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_d_s_p___info.html">TDSP_Info</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TaskDispatcherの状態  <a href="struct_t_d_s_p___info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TaskDispatcherの状態  <a href="struct_task_dsipatcher.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-マクロ定義</h2></td></tr>
-<tr class="memitem:a7a4fb1e7f970277f51bcf1537e72b73f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#a7a4fb1e7f970277f51bcf1537e72b73f">TDSP_TASK_MAX</a>&#160;&#160;&#160;<a class="el" href="block__command__table__params_8h.html#af919c21e041ca993487360bd9a0b255a">BCT_MAX_CMD_NUM</a></td></tr>
-<tr class="separator:a7a4fb1e7f970277f51bcf1537e72b73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
@@ -142,7 +139,7 @@ task_dispatcher.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:ab4cccbf9d36945e27f8023f9d613a667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#ab4cccbf9d36945e27f8023f9d613a667">TDSP_initialize</a> (void)</td></tr>
-<tr class="memdesc:ab4cccbf9d36945e27f8023f9d613a667"><td class="mdescLeft">&#160;</td><td class="mdescRight">タスク管理を行うTDSP_Info構造体(TDSP_Info_)の初期化  <a href="task__dispatcher_8h.html#ab4cccbf9d36945e27f8023f9d613a667">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ab4cccbf9d36945e27f8023f9d613a667"><td class="mdescLeft">&#160;</td><td class="mdescRight">タスク管理を行うTaskDsipatcher構造体(TaskDsipatcher_)の初期化  <a href="task__dispatcher_8h.html#ab4cccbf9d36945e27f8023f9d613a667">[詳解]</a><br /></td></tr>
 <tr class="separator:ab4cccbf9d36945e27f8023f9d613a667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6d233cacf6325f2f6357566f0360119"><td class="memItemLeft" align="right" valign="top"><a class="el" href="task__dispatcher_8h.html#a02dcbe29403ddb919a5edea19de9add8">TDSP_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#ad6d233cacf6325f2f6357566f0360119">TDSP_set_task_list_id</a> (<a class="el" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> id)</td></tr>
 <tr class="memdesc:ad6d233cacf6325f2f6357566f0360119"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した BC を TaskList に展開するものとして登録  <a href="task__dispatcher_8h.html#ad6d233cacf6325f2f6357566f0360119">[詳解]</a><br /></td></tr>
@@ -156,32 +153,18 @@ task_dispatcher.h の依存先関係図:</div>
 <tr class="memitem:ae00e3edecce1d802862ec6fbcd7bea38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#ae00e3edecce1d802862ec6fbcd7bea38">Cmd_TDSP_SET_TASK_LIST</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="memdesc:ae00e3edecce1d802862ec6fbcd7bea38"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したブロックコマンドを、次にタスクリストに展開するものとして登録するコマンド  <a href="task__dispatcher_8h.html#ae00e3edecce1d802862ec6fbcd7bea38">[詳解]</a><br /></td></tr>
 <tr class="separator:ae00e3edecce1d802862ec6fbcd7bea38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5201f94c02a83490f26f6c36291275e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_info.html">AppInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#a5201f94c02a83490f26f6c36291275e9">print_tdsp_status</a> (void)</td></tr>
-<tr class="separator:a5201f94c02a83490f26f6c36291275e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a0da8dc1fd0f4ffa62e360a5557459c58"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_t_d_s_p___info.html">TDSP_Info</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#a0da8dc1fd0f4ffa62e360a5557459c58">TDSP_info</a></td></tr>
-<tr class="separator:a0da8dc1fd0f4ffa62e360a5557459c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad439f9497ca625537d69720c1318e245"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8h.html#ad439f9497ca625537d69720c1318e245">task_dispathcer</a></td></tr>
+<tr class="separator:ad439f9497ca625537d69720c1318e245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a7a4fb1e7f970277f51bcf1537e72b73f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a4fb1e7f970277f51bcf1537e72b73f">&#9670;&nbsp;</a></span>TDSP_TASK_MAX</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>task list に設定されたタスクを実行する主体 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>これは， RT OS のタスク時分割処理に相当する したがって，これによって， 1 cycle を step 刻みで各 task に振り分けて実行していくことになる </dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TDSP_TASK_MAX&#160;&#160;&#160;<a class="el" href="block__command__table__params_8h.html#af919c21e041ca993487360bd9a0b255a">BCT_MAX_CMD_NUM</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="task__dispatcher_8h_source.html">task_dispatcher.h</a> の <a class="el" href="task__dispatcher_8h_source.html#l00008">8</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">列挙型詳解</h2>
+<p class="definition"> <a class="el" href="task__dispatcher_8h_source.html">task_dispatcher.h</a> に定義があります。</p>
+</div><h2 class="groupheader">列挙型詳解</h2>
 <a id="a02dcbe29403ddb919a5edea19de9add8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02dcbe29403ddb919a5edea19de9add8">&#9670;&nbsp;</a></span>TDSP_ACK</h2>
 
@@ -215,7 +198,7 @@ task_dispatcher.h の依存先関係図:</div>
 <tr><td class="fieldname"><a id="a02dcbe29403ddb919a5edea19de9add8a5e98b43a17377043773b9aa7fd0d4008"></a>TDSP_UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8h_source.html">task_dispatcher.h</a> の <a class="el" href="task__dispatcher_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8h_source.html">task_dispatcher.h</a> の <a class="el" href="task__dispatcher_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -238,7 +221,7 @@ task_dispatcher.h の依存先関係図:</div>
 
 <p>指定したブロックコマンドを、次にタスクリストに展開するものとして登録するコマンド </p>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00188">188</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00205">205</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -249,32 +232,6 @@ task_dispatcher.h の依存先関係図:</div>
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="task__dispatcher_8h_ae00e3edecce1d802862ec6fbcd7bea38_icgraph.svg" width="1055" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a5201f94c02a83490f26f6c36291275e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5201f94c02a83490f26f6c36291275e9">&#9670;&nbsp;</a></span>print_tdsp_status()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_app_info.html">AppInfo</a> print_tdsp_status </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00206">206</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="task__dispatcher_8h_a5201f94c02a83490f26f6c36291275e9_cgraph.svg" width="631" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -302,7 +259,7 @@ task_dispatcher.h の依存先関係図:</div>
    実行 cycle が現在だった場合, 各タスクの step によって実行する, しないを switch に合わせて処理する．
    実際にタスクを処理する場合, CDIS_dispatch_command -&gt; PH_dispatch_command -&gt; CA_execute_cmd の順に実行される(真の Executer は CA_execute_cmd)．
 </pre> 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00081">81</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00096">96</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -334,10 +291,10 @@ task_dispatcher.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>タスク管理を行うTDSP_Info構造体(TDSP_Info_)の初期化 </p>
+<p>タスク管理を行うTaskDsipatcher構造体(TaskDsipatcher_)の初期化 </p>
 <dl class="section note"><dt>覚え書き</dt><dd>データ構造は Packet List </dd></dl>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00036">36</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00048">48</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -371,7 +328,7 @@ task_dispatcher.h の依存先関係図:</div>
 
 <p>タスクリストの展開時サイクル数を現在のサイクル数に強制的に合わせる </p>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00183">183</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00199">199</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -412,7 +369,7 @@ task_dispatcher.h の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>展開自体は TDSP_deploy_block_as_task_list_ で行う "BC を TaskList に展開" とは <code>src_user\Settings\Modes\TaskLists\<a class="el" href="tl__initial_8c.html">tl_initial.c</a></code> などを参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00049">49</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00062">62</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -429,19 +386,19 @@ task_dispatcher.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="a0da8dc1fd0f4ffa62e360a5557459c58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da8dc1fd0f4ffa62e360a5557459c58">&#9670;&nbsp;</a></span>TDSP_info</h2>
+<a id="ad439f9497ca625537d69720c1318e245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad439f9497ca625537d69720c1318e245">&#9670;&nbsp;</a></span>task_dispathcer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_t_d_s_p___info.html">TDSP_Info</a>* const TDSP_info</td>
+          <td class="memname">const <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a>* const task_dispathcer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00026">26</a> 行目に定義があります。</p>
 
 </div>
 </div>
