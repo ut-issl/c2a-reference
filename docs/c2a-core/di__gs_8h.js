@@ -3,8 +3,6 @@ var di__gs_8h =
     [ "DI_GS_TlmPacketHandler", "struct_d_i___g_s___tlm_packet_handler.html", "struct_d_i___g_s___tlm_packet_handler" ],
     [ "Cmd_DI_GS_CCSDS_GET_BUFFER", "di__gs_8h.html#a7b418c80ef4f24f63507838c5e65152d", null ],
     [ "Cmd_DI_GS_CCSDS_SET_RATE", "di__gs_8h.html#a6cd1af2755b448c18cacd00352e60b3e", null ],
-    [ "Cmd_DI_GS_CCSDS_TX_START", "di__gs_8h.html#aaa41cb3d9ceb4f4294fcf41414650124", null ],
-    [ "Cmd_DI_GS_CCSDS_TX_STOP", "di__gs_8h.html#a2264e5c205736e6548fb4516e85c0797", null ],
     [ "Cmd_DI_GS_DRIVER_RESET", "di__gs_8h.html#ac1683b9b87dfb6e9e52f648f21b582d3", null ],
     [ "Cmd_DI_GS_SET_FARM_PW", "di__gs_8h.html#a66f6c774a36a4f8464060d722e5655de", null ],
     [ "Cmd_DI_GS_SET_INFO", "di__gs_8h.html#a8f8e65bd7295c9426385d49a3fa2355a", null ],

@@ -5,7 +5,6 @@ var struct_g_s___driver =
     [ "driver_ccsds", "struct_g_s___driver.html#ab448a979ca6d8cab96285a479f213113", null ],
     [ "driver_uart", "struct_g_s___driver.html#a687f7704ca3f692740a6127d57999e9b", null ],
     [ "info", "struct_g_s___driver.html#a6fbaad1c7d3c40e315106a7544beb1c0", null ],
-    [ "is_ccsds_tx_valid", "struct_g_s___driver.html#aabc59170cf29756b5b659e13fde7276b", null ],
     [ "latest_info", "struct_g_s___driver.html#a5706fe9e9e87d914f930c8c510b1a257", null ],
     [ "super", "struct_g_s___driver.html#af7e048c7b32995cc223d9d76fdaae8c7", null ],
     [ "tlm_tx_port_type", "struct_g_s___driver.html#a90d02b41bfbb88f668e8de91f263dbc7", null ],
