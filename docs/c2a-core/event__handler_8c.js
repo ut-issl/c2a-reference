@@ -12,7 +12,7 @@ var event__handler_8c =
       [ "EH_EL_LOCAL_ID_EL_TOTAL_COUNTER_ERR", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913eadff560fea97c1172d856fbf8df651688", null ],
       [ "EH_EL_LOCAL_ID_EL_COUNTER_ERR", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913ea8fe560345ebd2fd0384d5bb0236553ae", null ],
       [ "EH_EL_LOCAL_ID_TOO_MANY_EVENT", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913ea0efbaaabb31a8f13be50a5aeee24293d", null ],
-      [ "EH_EL_LOCAL_ID_FAIL_FORM_CTCP", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913eacc89e501b92f75e4f30c5c8932c82bcc", null ],
+      [ "EH_EL_LOCAL_ID_FAIL_TO_RESPOND", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913ea3a670f8ee4c2c26ef7d9018eafd2b423", null ],
       [ "EH_EL_LOCAL_ID_LOG_TABLE_FULL", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913eaf61657b973b4a9444789bdcfaac4171c", null ],
       [ "EH_EL_LOCAL_ID_SEARCH_ERR", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913eafd0615b4b93131948422e98c106ee108", null ],
       [ "EH_EL_LOCAL_ID_RECURSION_ERR", "event__handler_8c.html#aac1121bead33d1e9b641fd3cad6f913eadc51bf25a4d7ab892d0e660a273e8857", null ],
