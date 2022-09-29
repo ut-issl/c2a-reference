@@ -147,7 +147,7 @@ var searchData=
   ['bcus_5fmram_5fbct_5fblocks_428',['BCUS_MRAM_BCT_BLOCKS',['../block__command__user__settings_8h.html#a988fece792e9618a2307d9ab24367e43',1,'block_command_user_settings.h']]],
   ['bd_5frec_5fstatus_429',['bd_rec_status',['../struct_g_s___info.html#ad9b7ceb2981550b7ef63427edb2645a9',1,'GS_Info']]],
   ['begin_430',['begin',['../struct_memory_dump.html#aa37e526a892ea8175cd0d32e8e1b6f52',1,'MemoryDump']]],
-  ['bit_431',['bit',['../struct_c_a___packed_param_size_info.html#a19419a4e89fe96bf3605cdebe11d7674',1,'CA_PackedParamSizeInfo']]],
+  ['bit_431',['bit',['../struct_c_a___packed_param_size_info.html#a763b502b3d3c433e41f30e7ba5b7e762',1,'CA_PackedParamSizeInfo']]],
   ['bitrate_432',['bitrate',['../struct_c_c_s_d_s___config.html#a32678c62007e0748dae550bd1007a07d',1,'CCSDS_Config']]],
   ['block_433',['block',['../struct_b_c_t___pos.html#ad5ed64dac6fefc8cde8e572fd5e06ab2',1,'BCT_Pos']]],
   ['block_5fcommand_5fdefinitions_2ec_434',['block_command_definitions.c',['../block__command__definitions_8c.html',1,'']]],

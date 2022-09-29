@@ -9,10 +9,10 @@ var struct_g_s___info =
     [ "last_rec_time", "struct_g_s___info.html#a1413cb65158902fecd51e64ecf6a6ddb", null ],
     [ "rec_status", "struct_g_s___info.html#afacffaa74d9cf687dab2f18dceaa7e0a", null ],
     [ "ret_from_if_rx", "struct_g_s___info.html#ab7c5097dd4b1f2d8b43ee9e6d1849107", null ],
-    [ "rx", "struct_g_s___info.html#a30b6119fbf272b0dd5d248db7d789d27", null ],
+    [ "rx", "struct_g_s___info.html#a3f0eace54fc6efeb538cb8ca9ac195e1", null ],
     [ "send_cycle", "struct_g_s___info.html#ac9a212d06b4e03b3f0840b6bf2f6c2c7", null ],
-    [ "tctf", "struct_g_s___info.html#adb5597bb01d5191a354206f2162c6dec", null ],
-    [ "tx", "struct_g_s___info.html#a775d14d910a6dd5e9aa99a6a94600e82", null ],
+    [ "tctf", "struct_g_s___info.html#a3b654b9365c9c0f3310464c01b3cc396", null ],
+    [ "tx", "struct_g_s___info.html#a533227c01467d7ce8998f4cea9392683", null ],
     [ "vcdu_counter", "struct_g_s___info.html#a58453f3d33bf259b4104f8779f98e07a", null ],
     [ "vcid", "struct_g_s___info.html#a0acef6ae3e58e88ba1cde5a751299c79", null ]
 ];

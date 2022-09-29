@@ -46,7 +46,7 @@ var driver__super_8c =
     [ "DSSC_enable_strict_frame_search", "driver__super_8c.html#a093a693ceac26a42fe3157cae06259ac", null ],
     [ "DSSC_get_general_cmd_tx_count", "driver__super_8c.html#a302d7f616a622253e4190a70d35489e7", null ],
     [ "DSSC_get_general_cmd_tx_time", "driver__super_8c.html#adbbf8fa9fd2669c7ef2b34a25964527b", null ],
-    [ "DSSC_get_is_enable", "driver__super_8c.html#a5d77012b9c7fe574718f680b603c98af", null ],
+    [ "DSSC_get_is_enabled", "driver__super_8c.html#aee53a4bd186791020d93045a89eaf32e", null ],
     [ "DSSC_get_is_strict_frame_search", "driver__super_8c.html#a20f6e3e030aa25c35cae879b42b1c334", null ],
     [ "DSSC_get_rec_status", "driver__super_8c.html#a5585e9e6e3293d17098598a4e88b0976", null ],
     [ "DSSC_get_req_tlm_cmd_tx_count", "driver__super_8c.html#a4cb9380be51675ba6a6abe900f48566d", null ],

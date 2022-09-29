@@ -5,5 +5,5 @@ var searchData=
   ['gs_5frx_5fframelength_5ftype_5fsize_5895',['GS_RX_FRAMELENGTH_TYPE_SIZE',['../gs_8c.html#ab1622f3e1df5cae28c4dbbab634746e2',1,'gs.c']]],
   ['gs_5frx_5fheader_5fnum_5896',['GS_RX_HEADER_NUM',['../gs_8c.html#ac29ee9b451a18e018810774134772e70',1,'gs.c']]],
   ['gs_5frx_5fheader_5fsize_5897',['GS_RX_HEADER_SIZE',['../gs_8c.html#a897a9fee7b4a091be385f6b39892277e',1,'gs.c']]],
-  ['gs_5ftx_5fstream_5898',['GS_TX_stream',['../gs_8c.html#a90448eade5bdede9b51cd88f67b8de31',1,'gs.c']]]
+  ['gs_5ftx_5fstream_5898',['GS_TX_STREAM',['../gs_8c.html#ad2e34c0909a660a7b417182b7404a289',1,'gs.c']]]
 ];

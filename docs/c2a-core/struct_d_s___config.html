@@ -101,36 +101,79 @@ DS_Config 連携図</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 フィールド</h2></td></tr>
-<tr class="memitem:a58d900a563f500804b18637e373fb1c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_d_s___rec_status.html">DS_RecStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a58d900a563f500804b18637e373fb1c6">rec_status_</a></td></tr>
-<tr class="memdesc:a58d900a563f500804b18637e373fb1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">IF受信状況  <a href="struct_d_s___config.html#a58d900a563f500804b18637e373fb1c6">[詳解]</a><br /></td></tr>
-<tr class="separator:a58d900a563f500804b18637e373fb1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a70fd58861ceac15a5ec34396a71fb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a7a70fd58861ceac15a5ec34396a71fb2">rx_count_</a></td></tr>
-<tr class="memdesc:a7a70fd58861ceac15a5ec34396a71fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">なにかしらのデータの受信回数  <a href="struct_d_s___config.html#a7a70fd58861ceac15a5ec34396a71fb2">[詳解]</a><br /></td></tr>
-<tr class="separator:a7a70fd58861ceac15a5ec34396a71fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8851441bcec2964fac1fd60221989793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a8851441bcec2964fac1fd60221989793">rx_call_count_</a></td></tr>
-<tr class="memdesc:a8851441bcec2964fac1fd60221989793"><td class="mdescLeft">&#160;</td><td class="mdescRight">DS_receive 呼び出し回数  <a href="struct_d_s___config.html#a8851441bcec2964fac1fd60221989793">[詳解]</a><br /></td></tr>
-<tr class="separator:a8851441bcec2964fac1fd60221989793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24adf564678b3834c4b5532af372f279"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_obc_time.html">ObcTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a24adf564678b3834c4b5532af372f279">rx_time_</a></td></tr>
-<tr class="memdesc:a24adf564678b3834c4b5532af372f279"><td class="mdescLeft">&#160;</td><td class="mdescRight">なにかしらのデータの受信時刻  <a href="struct_d_s___config.html#a24adf564678b3834c4b5532af372f279">[詳解]</a><br /></td></tr>
-<tr class="separator:a24adf564678b3834c4b5532af372f279"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e6315f613f40d1debf8c3814f0a25c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a0e6315f613f40d1debf8c3814f0a25c5">should_monitor_for_rx_disruption_</a></td></tr>
-<tr class="memdesc:a0e6315f613f40d1debf8c3814f0a25c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信途絶判定をするか？  <a href="struct_d_s___config.html#a0e6315f613f40d1debf8c3814f0a25c5">[詳解]</a><br /></td></tr>
+<tr class="memitem:adb861011705236b1db09e104d95862db"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a0e6315f613f40d1debf8c3814f0a25c5"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#a0e6315f613f40d1debf8c3814f0a25c5">should_monitor_for_rx_disruption_</a></td></tr>
 <tr class="separator:a0e6315f613f40d1debf8c3814f0a25c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2688e515642a822ef0ca1de956043198"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a2688e515642a822ef0ca1de956043198">time_threshold_for_rx_disruption_</a></td></tr>
-<tr class="memdesc:a2688e515642a822ef0ca1de956043198"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信途絶判定の閾値 [ms]  <a href="struct_d_s___config.html#a2688e515642a822ef0ca1de956043198">[詳解]</a><br /></td></tr>
+<tr class="memitem:a2688e515642a822ef0ca1de956043198"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#a2688e515642a822ef0ca1de956043198">time_threshold_for_rx_disruption_</a></td></tr>
 <tr class="separator:a2688e515642a822ef0ca1de956043198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb79a99606225117f79d0028cee944b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#afb79a99606225117f79d0028cee944b5">rx_buffer_</a> [<a class="el" href="driver__super__params_8h.html#a29dc76d4a0cae46236bfdef2e452128d">DS_RX_BUFFER_SIZE_MAX</a>]</td></tr>
-<tr class="memdesc:afb79a99606225117f79d0028cee944b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ受信バッファ  <a href="struct_d_s___config.html#afb79a99606225117f79d0028cee944b5">[詳解]</a><br /></td></tr>
+<tr class="memitem:adb861011705236b1db09e104d95862db"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#adb861011705236b1db09e104d95862db">settings</a></td></tr>
+<tr class="memdesc:adb861011705236b1db09e104d95862db"><td class="mdescLeft">&#160;</td><td class="mdescRight">設定値  <a href="struct_d_s___config.html#adb861011705236b1db09e104d95862db">[詳解]</a><br /></td></tr>
+<tr class="separator:adb861011705236b1db09e104d95862db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d3569865b95f77e59558ea7524a59d"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a58d900a563f500804b18637e373fb1c6"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_d_s___rec_status.html">DS_RecStatus</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#a58d900a563f500804b18637e373fb1c6">rec_status_</a></td></tr>
+<tr class="memdesc:a58d900a563f500804b18637e373fb1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">IF受信状況  <a href="struct_d_s___config_1_1_0d3.html#a58d900a563f500804b18637e373fb1c6">[詳解]</a><br /></td></tr>
+<tr class="separator:a58d900a563f500804b18637e373fb1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a70fd58861ceac15a5ec34396a71fb2"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#a7a70fd58861ceac15a5ec34396a71fb2">rx_count_</a></td></tr>
+<tr class="memdesc:a7a70fd58861ceac15a5ec34396a71fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">なにかしらのデータの受信回数  <a href="struct_d_s___config_1_1_0d3.html#a7a70fd58861ceac15a5ec34396a71fb2">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a70fd58861ceac15a5ec34396a71fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8851441bcec2964fac1fd60221989793"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#a8851441bcec2964fac1fd60221989793">rx_call_count_</a></td></tr>
+<tr class="memdesc:a8851441bcec2964fac1fd60221989793"><td class="mdescLeft">&#160;</td><td class="mdescRight">DS_receive 呼び出し回数  <a href="struct_d_s___config_1_1_0d3.html#a8851441bcec2964fac1fd60221989793">[詳解]</a><br /></td></tr>
+<tr class="separator:a8851441bcec2964fac1fd60221989793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24adf564678b3834c4b5532af372f279"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_obc_time.html">ObcTime</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#a24adf564678b3834c4b5532af372f279">rx_time_</a></td></tr>
+<tr class="memdesc:a24adf564678b3834c4b5532af372f279"><td class="mdescLeft">&#160;</td><td class="mdescRight">なにかしらのデータの受信時刻  <a href="struct_d_s___config_1_1_0d3.html#a24adf564678b3834c4b5532af372f279">[詳解]</a><br /></td></tr>
+<tr class="separator:a24adf564678b3834c4b5532af372f279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d3569865b95f77e59558ea7524a59d"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#aa3d3569865b95f77e59558ea7524a59d">info</a></td></tr>
+<tr class="memdesc:aa3d3569865b95f77e59558ea7524a59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">取得値（メトリクス）  <a href="struct_d_s___config.html#aa3d3569865b95f77e59558ea7524a59d">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3d3569865b95f77e59558ea7524a59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252bd0db5fa2bed619bc0a0684088a5c"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:afb79a99606225117f79d0028cee944b5"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#afb79a99606225117f79d0028cee944b5">rx_buffer_</a> [<a class="el" href="driver__super__params_8h.html#a29dc76d4a0cae46236bfdef2e452128d">DS_RX_BUFFER_SIZE_MAX</a>]</td></tr>
+<tr class="memdesc:afb79a99606225117f79d0028cee944b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ受信バッファ  <a href="struct_d_s___config_1_1_0d4.html#afb79a99606225117f79d0028cee944b5">[詳解]</a><br /></td></tr>
 <tr class="separator:afb79a99606225117f79d0028cee944b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab54e18abe98413930f6ad268f4c2fd39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#ab54e18abe98413930f6ad268f4c2fd39">load_init_setting</a> )(<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super)</td></tr>
+<tr class="memitem:ab54e18abe98413930f6ad268f4c2fd39"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#ab54e18abe98413930f6ad268f4c2fd39">load_init_setting</a> )(<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super)</td></tr>
 <tr class="separator:ab54e18abe98413930f6ad268f4c2fd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252bd0db5fa2bed619bc0a0684088a5c"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a252bd0db5fa2bed619bc0a0684088a5c">internal</a></td></tr>
+<tr class="memdesc:a252bd0db5fa2bed619bc0a0684088a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部処理用  <a href="struct_d_s___config.html#a252bd0db5fa2bed619bc0a0684088a5c">[詳解]</a><br /></td></tr>
+<tr class="separator:a252bd0db5fa2bed619bc0a0684088a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> の設定 </p>
 <pre class="fragment">    各IFはこれを継承してつかう．
+    DS_Config のメンバはすべての Driver から非公開とし， getter / setter でアクセスする
 </pre> 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00207">207</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00208">208</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
+<a id="aa3d3569865b95f77e59558ea7524a59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d3569865b95f77e59558ea7524a59d">&#9670;&nbsp;</a></span>info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取得値（メトリクス） </p>
+
+</div>
+</div>
+<a id="a252bd0db5fa2bed619bc0a0684088a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a252bd0db5fa2bed619bc0a0684088a5c">&#9670;&nbsp;</a></span>internal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  internal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内部処理用 </p>
+
+</div>
+</div>
 <a id="ab54e18abe98413930f6ad268f4c2fd39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab54e18abe98413930f6ad268f4c2fd39">&#9670;&nbsp;</a></span>load_init_setting</h2>
 
@@ -144,7 +187,7 @@ DS_Config 連携図</div>
 </div><div class="memdoc">
 <p>DS_init でロードする，ドライバの初期設定の設定関数 DS_reset_config での設定をオーバーロードする 返り値は DS_ERR_CODE </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00223">223</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00230">230</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -162,7 +205,7 @@ DS_Config 連携図</div>
 
 <p>IF受信状況 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00210">210</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00219">219</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -180,7 +223,7 @@ DS_Config 連携図</div>
 
 <p>データ受信バッファ </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00221">221</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00228">228</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -198,7 +241,7 @@ DS_Config 連携図</div>
 
 <p>DS_receive 呼び出し回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00213">213</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00222">222</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -216,7 +259,7 @@ DS_Config 連携図</div>
 
 <p>なにかしらのデータの受信回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00212">212</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00221">221</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -234,7 +277,23 @@ DS_Config 連携図</div>
 
 <p>なにかしらのデータの受信時刻 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00215">215</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00224">224</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adb861011705236b1db09e104d95862db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb861011705236b1db09e104d95862db">&#9670;&nbsp;</a></span>settings</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  settings</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>設定値 </p>
 
 </div>
 </div>
@@ -249,10 +308,9 @@ DS_Config 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>受信途絶判定をするか？ 初期値: 0 </p>
 
-<p>受信途絶判定をするか？ </p>
-
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00217">217</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00212">212</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -267,10 +325,9 @@ DS_Config 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>受信途絶判定の閾値 [ms] 初期値: 60 * 1000 </p>
 
-<p>受信途絶判定の閾値 [ms] </p>
-
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00218">218</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00214">214</a> 行目に定義があります。</p>
 
 </div>
 </div>
