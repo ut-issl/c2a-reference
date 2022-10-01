@@ -1,5 +1,11 @@
 var NAVTREEINDEX14 =
 {
+"struct_s_p_i___config.html#a9ce595b3296a1dd2cfd6e8bf3f9360d1":[0,0,76,5],
+"struct_s_p_i___config.html#aa64f4aec72da878914de77663cb76bb2":[0,0,76,0],
+"struct_s_p_i___config.html#aa9dcc1909bc711495d373c8c291f8084":[0,0,76,3],
+"struct_s_p_i___config.html#af382a592f64507437e0716bd859c41ae":[0,0,76,2],
+"struct_s_p_w_i_r_e___config.html":[0,0,77],
+"struct_s_p_w_i_r_e___config.html#a3ae008578831aac74465a659c2297d37":[0,0,77,0],
 "struct_s_p_w_i_r_e___config.html#a5c6797ebce33efb74c3e7ebbea1fc610":[0,0,77,2],
 "struct_s_p_w_i_r_e___config.html#ae9496f9d9ae131271638e6701b71e91b":[0,0,77,1],
 "struct_space_packet.html":[0,0,75],
@@ -243,11 +249,5 @@ var NAVTREEINDEX14 =
 "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aaa92891393a4524763b01987af87f443":[1,0,0,1,5,13,0,13],
 "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20abb99b455edad9e79eb97ab177b2046e2":[1,0,0,1,5,13,0,17],
 "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20abddc084d1cd7781db5bd93f08038495f":[1,0,0,1,5,13,0,15],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20ac1a03e8c282e4356110f5187e9714b3c":[1,0,0,1,5,13,0,22],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20acffc06174ab15445ec6e1114bae78c69":[1,0,0,1,5,13,0,11],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20ad7b79a58cc4ae01af45a32f5997a98d9":[1,0,0,1,5,13,0,8],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20adc3e554c1eaf73664c3053d6bedfa3b9":[1,0,0,1,5,13,0,3],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aea04f37cff99a09dcb421f08baab6fb3":[1,0,0,1,5,13,0,14],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aebe288f0507761299318389d70870ad0":[1,0,0,1,5,13,0,0],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20af46dc7effdb42d811bdbeba8d02d103f":[1,0,0,1,5,13,0,6]
+"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20ac1a03e8c282e4356110f5187e9714b3c":[1,0,0,1,5,13,0,22]
 };

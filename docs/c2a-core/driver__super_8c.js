@@ -70,6 +70,7 @@ var driver__super_8c =
     [ "DSSC_set_data_analyzer", "driver__super_8c.html#ad65037ea9639ef7c8ade47c1c54bbf2e", null ],
     [ "DSSC_set_rx_footer", "driver__super_8c.html#afd7b10a3cb250e03d1ace11c9f5d8b5b", null ],
     [ "DSSC_set_rx_frame_size", "driver__super_8c.html#a257d3e5ef0b2a07401bc30641d50b69a", null ],
+    [ "DSSC_set_rx_framelength_endian", "driver__super_8c.html#a382b30ba5d404757187172a5f8f76a62", null ],
     [ "DSSC_set_rx_framelength_offset", "driver__super_8c.html#a9869582a20b5ae6e1d3014a3ced86e56", null ],
     [ "DSSC_set_rx_framelength_pos", "driver__super_8c.html#af10516ffc854cff7493ca94b1f980c78", null ],
     [ "DSSC_set_rx_framelength_type_size", "driver__super_8c.html#a2791854c5a460d3970eff9f6c9d5c862", null ],

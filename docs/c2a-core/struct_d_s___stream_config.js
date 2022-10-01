@@ -26,6 +26,7 @@ var struct_d_s___stream_config =
     [ "rx_frame_head_pos_of_frame_candidate_", "struct_d_s___stream_config.html#a48886a25a5e5aa4b58165cbd61eca6ba", null ],
     [ "rx_frame_rec_len_", "struct_d_s___stream_config.html#ac921c9a2900af72cc2acfeb7966bc2e3", null ],
     [ "rx_frame_size_", "struct_d_s___stream_config.html#a40aa4056e27652e4349d06b39538d4df", null ],
+    [ "rx_framelength_endian_", "struct_d_s___stream_config.html#ac14020b657d3ebea2733fe172d26abc5", null ],
     [ "rx_framelength_offset_", "struct_d_s___stream_config.html#a4922751434c4921fae9cd169e3149839", null ],
     [ "rx_framelength_pos_", "struct_d_s___stream_config.html#a31002044fc5cd2187f7acc1918757829", null ],
     [ "rx_framelength_type_size_", "struct_d_s___stream_config.html#a14339f890773e061e1dc3fa862f7209d", null ],
