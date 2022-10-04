@@ -7,6 +7,8 @@ var di__gs_8c =
     [ "Cmd_DI_GS_SET_INFO", "di__gs_8c.html#a8f8e65bd7295c9426385d49a3fa2355a", null ],
     [ "Cmd_DI_GS_SET_MS_FLUSH_INTERVAL", "di__gs_8c.html#ab042fc7ab72ad3ef74171d9305b190c1", null ],
     [ "Cmd_DI_GS_SET_RP_FLUSH_INTERVAL", "di__gs_8c.html#a69687f8448e1c49e22b0990cca1ecbb7", null ],
+    [ "Cmd_DI_GS_UART_TLM_OFF", "di__gs_8c.html#ae8340ccb76c09e3f53fba901e2421451", null ],
+    [ "Cmd_DI_GS_UART_TLM_ON", "di__gs_8c.html#a4cceb9c1cb7136ca18274ddf58199928", null ],
     [ "DI_GS_cmd_packet_handler", "di__gs_8c.html#a9db482e4676bf373c0f84561058f1f91", null ],
     [ "DI_GS_cmd_packet_handler_", "di__gs_8c.html#a8f20dcd562d4598cd177d1435dafeea4", null ],
     [ "DI_GS_cmd_packet_handler_init_", "di__gs_8c.html#aac505df7423e0f4abedbc661040be341", null ],

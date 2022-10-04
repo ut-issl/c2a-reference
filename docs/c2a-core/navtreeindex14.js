@@ -1,5 +1,12 @@
 var NAVTREEINDEX14 =
 {
+"struct_s_p___param_extraction_info.html#a8a74907784be6c7786c2d060c8d7e10b":[0,0,74,1],
+"struct_s_p___param_extraction_info.html#aa9fff43968831437a312428836cab362":[0,0,74,2],
+"struct_s_p___param_extraction_info.html#aeb348276c8e89d56a17f41fa673ccb9c":[0,0,74,0],
+"struct_s_p_i___config.html":[0,0,76],
+"struct_s_p_i___config.html#a41c93e1f065155917557e4ee07352168":[0,0,76,1],
+"struct_s_p_i___config.html#a578b27e8f823706f9871188829426a90":[0,0,76,6],
+"struct_s_p_i___config.html#a5cb22c5a78ab07810c47792053f7bad9":[0,0,76,4],
 "struct_s_p_i___config.html#a9ce595b3296a1dd2cfd6e8bf3f9360d1":[0,0,76,5],
 "struct_s_p_i___config.html#aa64f4aec72da878914de77663cb76bb2":[0,0,76,0],
 "struct_s_p_i___config.html#aa9dcc1909bc711495d373c8c291f8084":[0,0,76,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX14 =
 "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a4181a06d84be672cec72909efd7c3d8f":[1,0,0,1,5,13,0,19],
 "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a4aa127049e13c0a3f5fa55cfcbef3af9":[1,0,0,1,5,13,0,9],
 "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a7ea1f890f78461387783c43eeaf280cb":[1,0,0,1,5,13,0,7],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a8393224a5d8c51b23fd1ff4843b9ac46":[1,0,0,1,5,13,0,23],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a85749ac6caa08fa8dc6186da879e6eb5":[1,0,0,1,5,13,0,12],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a9915c352ab446008598d22b593476e03":[1,0,0,1,5,13,0,2],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aa471f2af5f123f90fa57c12d7d5cba84":[1,0,0,1,5,13,0,5],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aaa92891393a4524763b01987af87f443":[1,0,0,1,5,13,0,13],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20abb99b455edad9e79eb97ab177b2046e2":[1,0,0,1,5,13,0,17],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20abddc084d1cd7781db5bd93f08038495f":[1,0,0,1,5,13,0,15],
-"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20ac1a03e8c282e4356110f5187e9714b3c":[1,0,0,1,5,13,0,22]
+"telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a8393224a5d8c51b23fd1ff4843b9ac46":[1,0,0,1,5,13,0,23]
 };

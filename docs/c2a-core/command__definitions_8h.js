@@ -145,6 +145,8 @@ var command__definitions_8h =
       [ "Cmd_CODE_DI_GS_SET_INFO", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a8775f4a692befe8fa1c6c5c08b793044", null ],
       [ "Cmd_CODE_DI_GS_CCSDS_GET_BUFFER", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a02b96bc16bddb6280bdc04e5057510b1", null ],
       [ "Cmd_CODE_DI_GS_CCSDS_SET_RATE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad38e7ea8e0b560f9d67bf30f9d4b68d0", null ],
+      [ "Cmd_CODE_DI_GS_UART_TLM_ON", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4fefb0941d9adcda64f1722632428219", null ],
+      [ "Cmd_CODE_DI_GS_UART_TLM_OFF", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9a9465433c9c3bef620e2dbfd8491e21", null ],
       [ "Cmd_CODE_WDT_INIT", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4ca18b52854ee6465a182c4cb19c85ef", null ],
       [ "Cmd_CODE_WDT_ENABLE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac315fdf8c79093368094abda82356540", null ],
       [ "Cmd_CODE_WDT_DISABLE", "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a31a36a0a8a6ce9aed089f1cffbab919d", null ],
