@@ -212,7 +212,7 @@ common_cmd_packet_define.h の依存先関係図:</div>
 <p>コマンドの解釈の宛先を規定 </p>
 <dl class="section note"><dt>覚え書き</dt><dd>TO_ME: 自分自身 → 自分自身の TLC や BC として解釈．コマンド実行時に必要に応じて別 OBC へ配送 （この定義は C2A Core で使うため，どんな C2A でも必須） </dd>
 <dd>
-TO_*: 転送先の TL や BC として解釈 （直接指定 OBC へ配送． GS から来たコマンドを自身のキューにいれない） </dd>
+TO_*: 転送先の TL や BC として解釈 （直接指定 OBC へ配送． GS から来たコマンドを自身のキューにいれない） なお，自分自身宛だった場合は，キューに入れる </dd>
 <dd>
 4bit を想定 </dd></dl>
 <table class="fieldtable">
@@ -223,7 +223,7 @@ TO_*: 転送先の TL や BC として解釈 （直接指定 OBC へ配送． GS
 <tr><td class="fieldname"><a id="aad52282b4b07f16ec5d00cde5a4fd10fa89bcc90a3d301d700c683ea82fc4d6d8"></a>CCP_DEST_TYPE_TO_UNKOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="common__cmd__packet__define_8h_source.html">common_cmd_packet_define.h</a> の <a class="el" href="common__cmd__packet__define_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__cmd__packet__define_8h_source.html">common_cmd_packet_define.h</a> の <a class="el" href="common__cmd__packet__define_8h_source.html#l00028">28</a> 行目に定義があります。</p>
 
 </div>
 </div>
