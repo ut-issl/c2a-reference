@@ -126,9 +126,6 @@ DS_Config 連携図</div>
 <tr class="memdesc:aa3d3569865b95f77e59558ea7524a59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">取得値（メトリクス）  <a href="struct_d_s___config.html#aa3d3569865b95f77e59558ea7524a59d">[詳解]</a><br /></td></tr>
 <tr class="separator:aa3d3569865b95f77e59558ea7524a59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a252bd0db5fa2bed619bc0a0684088a5c"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:afb79a99606225117f79d0028cee944b5"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#afb79a99606225117f79d0028cee944b5">rx_buffer_</a> [<a class="el" href="driver__super__params_8h.html#a29dc76d4a0cae46236bfdef2e452128d">DS_RX_BUFFER_SIZE_MAX</a>]</td></tr>
-<tr class="memdesc:afb79a99606225117f79d0028cee944b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ受信バッファ  <a href="struct_d_s___config_1_1_0d4.html#afb79a99606225117f79d0028cee944b5">[詳解]</a><br /></td></tr>
-<tr class="separator:afb79a99606225117f79d0028cee944b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab54e18abe98413930f6ad268f4c2fd39"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*&#160;&#160;&#160;<a class="el" href="struct_d_s___config.html#ab54e18abe98413930f6ad268f4c2fd39">load_init_setting</a> )(<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super)</td></tr>
 <tr class="separator:ab54e18abe98413930f6ad268f4c2fd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a252bd0db5fa2bed619bc0a0684088a5c"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html#a252bd0db5fa2bed619bc0a0684088a5c">internal</a></td></tr>
@@ -140,7 +137,7 @@ DS_Config 連携図</div>
 <pre class="fragment">    各IFはこれを継承してつかう．
     DS_Config のメンバはすべての Driver から非公開とし， getter / setter でアクセスする
 </pre> 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00208">208</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00230">230</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">フィールド詳解</h2>
 <a id="aa3d3569865b95f77e59558ea7524a59d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3d3569865b95f77e59558ea7524a59d">&#9670;&nbsp;</a></span>info</h2>
@@ -187,7 +184,7 @@ DS_Config 連携図</div>
 </div><div class="memdoc">
 <p>DS_init でロードする，ドライバの初期設定の設定関数 DS_reset_config での設定をオーバーロードする 返り値は DS_ERR_CODE </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00230">230</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00252">252</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -205,25 +202,7 @@ DS_Config 連携図</div>
 
 <p>IF受信状況 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00219">219</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="afb79a99606225117f79d0028cee944b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb79a99606225117f79d0028cee944b5">&#9670;&nbsp;</a></span>rx_buffer_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> rx_buffer_[<a class="el" href="driver__super__params_8h.html#a29dc76d4a0cae46236bfdef2e452128d">DS_RX_BUFFER_SIZE_MAX</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>データ受信バッファ </p>
-
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00228">228</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00242">242</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -241,7 +220,7 @@ DS_Config 連携図</div>
 
 <p>DS_receive 呼び出し回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00222">222</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00245">245</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -259,7 +238,7 @@ DS_Config 連携図</div>
 
 <p>なにかしらのデータの受信回数 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00221">221</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00244">244</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -277,7 +256,7 @@ DS_Config 連携図</div>
 
 <p>なにかしらのデータの受信時刻 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00224">224</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00247">247</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -310,7 +289,7 @@ DS_Config 連携図</div>
 </div><div class="memdoc">
 <p>受信途絶判定をするか？ 初期値: 0 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00212">212</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00234">234</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -327,7 +306,7 @@ DS_Config 連携図</div>
 </div><div class="memdoc">
 <p>受信途絶判定の閾値 [ms] 初期値: 60 * 1000 </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00214">214</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00236">236</a> 行目に定義があります。</p>
 
 </div>
 </div>

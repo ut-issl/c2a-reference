@@ -12,5 +12,9 @@ var uart__test_8c =
     [ "UART_TEST_send", "uart__test_8c.html#a2a62d5adc6376f2be5f38edef8aa1165", null ],
     [ "UART_TEST_footer_", "uart__test_8c.html#a4cc976940d06a79e01e497668e23957c", null ],
     [ "UART_TEST_header_", "uart__test_8c.html#a59e3fee2971cb79578610f05a2d68a24", null ],
+    [ "UART_TEST_rx_buffer_0_", "uart__test_8c.html#a9671950103bf1c62aee68b74447ee93f", null ],
+    [ "UART_TEST_rx_buffer_1_", "uart__test_8c.html#ade404d453344a245efe9dfe3f0779856", null ],
+    [ "UART_TEST_rx_buffer_allocation_0_", "uart__test_8c.html#a81a69265e8574eb7f865f4daad175853", null ],
+    [ "UART_TEST_rx_buffer_allocation_1_", "uart__test_8c.html#ab1fe64488e83070eeb5e66c4a16a011b", null ],
     [ "UART_TEST_tx_frame_", "uart__test_8c.html#ae6257aaa1d7acbda3c30b3e2b44758a0", null ]
 ];

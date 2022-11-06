@@ -35,6 +35,7 @@ var annotated_dup =
     [ "DS_Config", "struct_d_s___config.html", "struct_d_s___config" ],
     [ "DS_RecStatus", "struct_d_s___rec_status.html", "struct_d_s___rec_status" ],
     [ "DS_StreamConfig", "struct_d_s___stream_config.html", "struct_d_s___stream_config" ],
+    [ "DS_StreamRecBuffer", "struct_d_s___stream_rec_buffer.html", "struct_d_s___stream_rec_buffer" ],
     [ "DS_StreamRecStatus", "struct_d_s___stream_rec_status.html", "struct_d_s___stream_rec_status" ],
     [ "DS_StreamSendStatus", "struct_d_s___stream_send_status.html", "struct_d_s___stream_send_status" ],
     [ "EH_ElEventCounter", "struct_e_h___el_event_counter.html", "struct_e_h___el_event_counter" ],

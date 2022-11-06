@@ -125,6 +125,9 @@ driver_super.h の依存先関係図:</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___stream_rec_status.html">DS_StreamRecStatus</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム受信状況  <a href="struct_d_s___stream_rec_status.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム受信バッファ  <a href="struct_d_s___stream_rec_buffer.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_s___config.html">DS_Config</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> の設定  <a href="struct_d_s___config.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,12 +142,8 @@ driver_super.h の依存先関係図:</div>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a6de2adaf747f15e857f8270e62ee7a1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a6de2adaf747f15e857f8270e62ee7a1e">DS_STREAM_MAX</a>&#160;&#160;&#160;(3)</td></tr>
 <tr class="separator:a6de2adaf747f15e857f8270e62ee7a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29dc76d4a0cae46236bfdef2e452128d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a29dc76d4a0cae46236bfdef2e452128d">DS_RX_BUFFER_SIZE_MAX</a>&#160;&#160;&#160;(1024)</td></tr>
-<tr class="memdesc:a29dc76d4a0cae46236bfdef2e452128d"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信データバッファの最大長  <a href="driver__super_8h.html#a29dc76d4a0cae46236bfdef2e452128d">[詳解]</a><br /></td></tr>
-<tr class="separator:a29dc76d4a0cae46236bfdef2e452128d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf12a87484f81e9c2978d9e0f2861945"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#aaf12a87484f81e9c2978d9e0f2861945">DS_RX_FRAME_SIZE_MAX</a>&#160;&#160;&#160;(1024)</td></tr>
-<tr class="memdesc:aaf12a87484f81e9c2978d9e0f2861945"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信データフレームの最大長  <a href="driver__super_8h.html#aaf12a87484f81e9c2978d9e0f2861945">[詳解]</a><br /></td></tr>
-<tr class="separator:aaf12a87484f81e9c2978d9e0f2861945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4c42a77e962be67ed2e5cc24a3163c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#afb4c42a77e962be67ed2e5cc24a3163c">DS_IF_RX_BUFFER_SIZE</a>&#160;&#160;&#160;(1024)</td></tr>
+<tr class="separator:afb4c42a77e962be67ed2e5cc24a3163c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 型定義</h2></td></tr>
@@ -320,6 +319,8 @@ driver_super.h の依存先関係図:</div>
 <tr class="separator:a7c9e7079a1b2caf505c2f255749181b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb4c3e2dea382e7303c7f927eaae624f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#aeb4c3e2dea382e7303c7f927eaae624f">DSSC_get_tx_frame_buffer_size</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:aeb4c3e2dea382e7303c7f927eaae624f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7e46893d4f6653fb89c987807ec953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a8e7e46893d4f6653fb89c987807ec953">DSSC_set_rx_buffer</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *rx_buffer)</td></tr>
+<tr class="separator:a8e7e46893d4f6653fb89c987807ec953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08f8c480a922624b49921ed953f71be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#ac08f8c480a922624b49921ed953f71be">DSSC_set_rx_header</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_header, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_header_size)</td></tr>
 <tr class="separator:ac08f8c480a922624b49921ed953f71be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd7b10a3cb250e03d1ace11c9f5d8b5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#afd7b10a3cb250e03d1ace11c9f5d8b5b">DSSC_set_rx_footer</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_footer, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_footer_size)</td></tr>
@@ -370,18 +371,25 @@ driver_super.h の依存先関係図:</div>
 <tr class="separator:a3551be7855d004edfb92ac6a51efb03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95fe4e85c5c2e4eebab7aa701bd924e7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_obc_time.html">ObcTime</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a95fe4e85c5c2e4eebab7aa701bd924e7">DSSC_get_rx_frame_fix_time</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:a95fe4e85c5c2e4eebab7aa701bd924e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#adf1f7d5bc6090bf72962786be28d0b9d">DSSC_get_rx_frame</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
-<tr class="separator:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c3d7f8cb03c596e81145f3395f68757"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a4d856578726e06c124ae25b20f486454">DS_STREAM_TLM_DISRUPTION_STATUS_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a3c3d7f8cb03c596e81145f3395f68757">DSSC_get_tlm_disruption_status</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:a3c3d7f8cb03c596e81145f3395f68757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92f1f512f47189fe8a6dddb660fc97fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a92f1f512f47189fe8a6dddb660fc97fc">DSSC_get_ret_from_data_analyzer</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:a92f1f512f47189fe8a6dddb660fc97fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e6daadcb139357438450d855908b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a13e6daadcb139357438450d855908b30">DS_init_stream_rec_buffer</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> buffer_capacity)</td></tr>
+<tr class="memdesc:a13e6daadcb139357438450d855908b30"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> に確保したメモリを与えて初期化する  <a href="driver__super_8h.html#a13e6daadcb139357438450d855908b30">[詳解]</a><br /></td></tr>
+<tr class="separator:a13e6daadcb139357438450d855908b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab15abb8da4e64f1acbbbb596096311cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#ab15abb8da4e64f1acbbbb596096311cc">DS_conv_driver_err_to_ccp_cmd_ret</a> (<a class="el" href="driver__super_8h.html#a8f1715418b65ccb642fc9ea570aaa76a">DS_DRIVER_ERR_CODE</a> code)</td></tr>
 <tr class="memdesc:ab15abb8da4e64f1acbbbb596096311cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">DS_DRIVER_ERR_CODE から <a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> への変換関数  <a href="driver__super_8h.html#ab15abb8da4e64f1acbbbb596096311cc">[詳解]</a><br /></td></tr>
 <tr class="separator:ab15abb8da4e64f1acbbbb596096311cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bf99f54acb3600a795e46ca963d7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#a84bf99f54acb3600a795e46ca963d7a1">DS_conv_cmd_err_to_ccp_cmd_ret</a> (<a class="el" href="driver__super_8h.html#a81f032590771b0c11b9190ad7004cd6b">DS_CMD_ERR_CODE</a> code)</td></tr>
 <tr class="memdesc:a84bf99f54acb3600a795e46ca963d7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">DS_CMD_ERR_CODE から <a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> への変換関数  <a href="driver__super_8h.html#a84bf99f54acb3600a795e46ca963d7a1">[詳解]</a><br /></td></tr>
 <tr class="separator:a84bf99f54acb3600a795e46ca963d7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#adf1f7d5bc6090bf72962786be28d0b9d">DSSC_get_rx_frame</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:adf1f7d5bc6090bf72962786be28d0b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">確定したフレームを取得  <a href="driver__super_8h.html#adf1f7d5bc6090bf72962786be28d0b9d">[詳解]</a><br /></td></tr>
+<tr class="separator:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb170d65d6ddf17ffd062e9d3cee0ca7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8h.html#afb170d65d6ddf17ffd062e9d3cee0ca7">DSSC_get_fixed_rx_frame_size</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:afb170d65d6ddf17ffd062e9d3cee0ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">確定したフレームのサイズを取得  <a href="driver__super_8h.html#afb170d65d6ddf17ffd062e9d3cee0ca7">[詳解]</a><br /></td></tr>
+<tr class="separator:afb170d65d6ddf17ffd062e9d3cee0ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>各制御センサ・アクチュエータ等とのインターフェースドライバ群のスーパークラス </p>
@@ -389,42 +397,24 @@ driver_super.h の依存先関係図:</div>
     各制御センサ・アクチュエータ等とのインターフェースを実現し，
     初期化，コマンド発行，テレメトリリクエスト，テレメトリ受信，テレメトリ解析などを行う，ドライバ群のスーパークラスです．
     個々の機器のインターフェースドライバに継承させて使用します．
-</pre> 
+</pre> <dl class="section note"><dt>覚え書き</dt><dd>バッファのサイズ設定について FIXME: 直す．DS_IF_RX_BUFFER_SIZE の可変化など メモ IF_RX での最大サイズは規定したとして， DS ごとに小さくすることは可能にする で，小さくしたものよりも rx_buffer がデカくないとだめにする！！！ </dd></dl>
+
 <p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> に定義があります。</p>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a29dc76d4a0cae46236bfdef2e452128d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29dc76d4a0cae46236bfdef2e452128d">&#9670;&nbsp;</a></span>DS_RX_BUFFER_SIZE_MAX</h2>
+<a id="afb4c42a77e962be67ed2e5cc24a3163c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb4c42a77e962be67ed2e5cc24a3163c">&#9670;&nbsp;</a></span>DS_IF_RX_BUFFER_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DS_RX_BUFFER_SIZE_MAX&#160;&#160;&#160;(1024)</td>
+          <td class="memname">#define DS_IF_RX_BUFFER_SIZE&#160;&#160;&#160;(1024)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>IF_RX で受信するときの一次バッファ IF_RX から受信できる最大数を規定する OBC の物理的な信号ラインのバッファサイズ以上とするともっともパフォーマンスが出る </p>
 
-<p>受信データバッファの最大長 </p>
-
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00020">20</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aaf12a87484f81e9c2978d9e0f2861945"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf12a87484f81e9c2978d9e0f2861945">&#9670;&nbsp;</a></span>DS_RX_FRAME_SIZE_MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DS_RX_FRAME_SIZE_MAX&#160;&#160;&#160;(1024)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>受信データフレームの最大長 </p>
-
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00024">24</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -442,7 +432,7 @@ driver_super.h の依存先関係図:</div>
 <p>DS_StreamConfigの最大数 uint8_t を想定 <br  />
  </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00022">22</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -459,7 +449,7 @@ driver_super.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00025">25</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -475,7 +465,7 @@ driver_super.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00031">31</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -512,7 +502,7 @@ CCP_EXEC_STS への変換は DS_conv_cmd_err_to_ccp_cmd_ret を用いる </dd></
 <tr><td class="fieldname"><a id="a81f032590771b0c11b9190ad7004cd6baa8aeec4604c96081282578baac057656"></a>DS_CMD_UNKNOWN_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00085">85</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00090">90</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -556,7 +546,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00046">46</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -582,7 +572,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <tr><td class="fieldname"><a id="aabdd3dd293d1c92926eedb042673c165a757cf24e5dd8eaaeb1e0554ad1a3203a"></a>DS_ERR_CODE_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00101">101</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00106">106</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -613,7 +603,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00060">60</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -644,7 +634,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -669,7 +659,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00112">112</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00117">117</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -707,7 +697,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <tr><td class="fieldname"><a id="a3f1d9e8a08d67a25845b0f48d19ccaa8a0d2ea2811c14e096e9d75bafe4112e03"></a>DS_STREAM_REC_STATUS_OTHER_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00158">158</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00163">163</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -735,7 +725,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <tr><td class="fieldname"><a id="ae0e20317c0a0480f3e294e4383ff644aa6767787e46cfa954d71e1bd53abca55a"></a>DS_STREAM_SEND_STATUS_OTHER_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00133">133</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00138">138</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -757,7 +747,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00181">181</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00186">186</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -807,7 +797,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE: data_analyzer_ の返り値をそのまま返す </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>data_analyzer_ の返り値は， ret_from_data_analyzer_ にも保存される． </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00459">459</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00456">456</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -845,7 +835,19 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00304">304</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00307">307</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_ad21e295eb43520f915b923c0d2eb5c94_cgraph.svg" width="362" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_ad21e295eb43520f915b923c0d2eb5c94_icgraph.svg" width="1946" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -876,7 +878,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01744">1744</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01600">1600</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -919,7 +921,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01724">1724</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01580">1580</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -976,17 +978,76 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00239">239</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00241">241</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_ae53312061d6acbd24edd316d126c7dea_cgraph.svg" width="914" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_ae53312061d6acbd24edd316d126c7dea_cgraph.svg" width="914" height="279"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_ae53312061d6acbd24edd316d126c7dea_icgraph.svg" width="1626" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a13e6daadcb139357438450d855908b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e6daadcb139357438450d855908b30">&#9670;&nbsp;</a></span>DS_init_stream_rec_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS_init_stream_rec_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>buffer_capacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> に確保したメモリを与えて初期化する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">stream_rec_buffer</td><td>初期化する <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>与えるメモリ領域 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_capacity</td><td>与えるメモリサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01569">1569</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_a13e6daadcb139357438450d855908b30_cgraph.svg" width="366" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_a13e6daadcb139357438450d855908b30_icgraph.svg" width="2003" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1027,11 +1088,11 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は rec_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00330">330</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00325">325</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_acadaccbff239185ebda242d39d4942bd_cgraph.svg" width="1078" height="502"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_acadaccbff239185ebda242d39d4942bd_cgraph.svg" width="1238" height="898"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -1069,11 +1130,11 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00258">258</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00260">260</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_a7f4bb1ea81bf8d3a89752a0fc875afce_cgraph.svg" width="731" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_a7f4bb1ea81bf8d3a89752a0fc875afce_cgraph.svg" width="731" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -1132,7 +1193,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は send_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00469">469</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00466">466</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1193,7 +1254,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は send_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00490">490</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00487">487</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1238,7 +1299,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00288">288</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00291">291</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1270,7 +1331,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01434">1434</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01277">1277</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1290,7 +1351,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01429">1429</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01272">1272</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1310,7 +1371,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01453">1453</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01296">1296</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1336,7 +1397,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01463">1463</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01306">1306</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1356,7 +1417,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01458">1458</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01301">1301</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1376,7 +1437,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01473">1473</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01316">1316</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1396,7 +1457,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01468">1468</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01311">1311</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1416,7 +1477,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01424">1424</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01267">1267</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1436,7 +1497,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01439">1439</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01282">1282</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1466,7 +1527,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01444">1444</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01287">1287</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1486,7 +1547,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01493">1493</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01336">1336</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1506,7 +1567,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01634">1634</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01484">1484</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1526,7 +1587,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01509">1509</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01352">1352</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1546,7 +1607,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01486">1486</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01329">1329</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1572,7 +1633,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01628">1628</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01478">1478</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1592,13 +1653,48 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01503">1503</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01346">1346</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_a093a693ceac26a42fe3157cae06259ac_icgraph.svg" width="1996" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<a id="afb170d65d6ddf17ffd062e9d3cee0ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb170d65d6ddf17ffd062e9d3cee0ca7">&#9670;&nbsp;</a></span>DSSC_get_fixed_rx_frame_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DSSC_get_fixed_rx_frame_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>確定したフレームのサイズを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config[in]</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">フレーム確定時</td><td>確定したフレームサイズ </td></tr>
+    <tr><td class="paramname">フレーム未確定時</td><td>0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01629">1629</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1618,7 +1714,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01671">1671</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01521">1521</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1638,7 +1734,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01691">1691</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01541">1541</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1658,7 +1754,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01481">1481</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01324">1324</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1678,7 +1774,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01498">1498</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01341">1341</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1698,7 +1794,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01666">1666</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01516">1516</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1724,7 +1820,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01676">1676</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01526">1526</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1744,7 +1840,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01681">1681</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01531">1531</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1764,7 +1860,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01696">1696</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01546">1546</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1784,7 +1880,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01716">1716</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01561">1561</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1804,7 +1900,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01585">1585</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01435">1435</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1824,7 +1920,27 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01706">1706</a> 行目に定義があります。</p>
+<p>確定したフレームを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config[in]</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">フレーム確定時</td><td>受信フレーム先頭ポインタ </td></tr>
+    <tr><td class="paramname">フレーム未確定時</td><td>rx_buffer_.pos_of_frame_head_candidate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームサイズは DSSC_get_fixed_rx_frame_size で取得可能 </dd>
+<dd>
+rx_buffer_ (<a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a>) には，前回確定したフレームが入っているが，次回の DS_receive 呼び出しで失われる． したがって，次回の DS_receive 呼び出し時までに内容を吸い出しておくこと </dd>
+<dd>
+基本的には， rx_buffer_.pos_of_frame_head_candidate は rx_buffer_.buffer 先頭に頭出しされているはず． したがって，ここで取得したポインタを rx_buffer_.capacity 以上読み込まない場合は，問題ない． </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01622">1622</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1850,7 +1966,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01686">1686</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01536">1536</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1870,7 +1986,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01701">1701</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01551">1551</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1890,7 +2006,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01590">1590</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01440">1440</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1910,7 +2026,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01580">1580</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01430">1430</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1930,7 +2046,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01661">1661</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01511">1511</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1950,7 +2066,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01623">1623</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01473">1473</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1970,7 +2086,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01640">1640</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01490">1490</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1990,7 +2106,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01711">1711</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01556">1556</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2010,7 +2126,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01521">1521</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01364">1364</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2030,7 +2146,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01526">1526</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01369">1369</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2056,7 +2172,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01550">1550</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01393">1393</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2082,7 +2198,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01538">1538</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01381">1381</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2112,11 +2228,47 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01652">1652</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01502">1502</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_ad65037ea9639ef7c8ade47c1c54bbf2e_icgraph.svg" width="2051" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8e7e46893d4f6653fb89c987807ec953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7e46893d4f6653fb89c987807ec953">&#9670;&nbsp;</a></span>DSSC_set_rx_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DSSC_set_rx_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>rx_buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01398">1398</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8h_a8e7e46893d4f6653fb89c987807ec953_icgraph.svg" width="2004" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -2154,7 +2306,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01564">1564</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01414">1414</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2190,7 +2342,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01573">1573</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01423">1423</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2226,7 +2378,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01616">1616</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01466">1466</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2256,7 +2408,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01609">1609</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01459">1459</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2292,7 +2444,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01595">1595</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01445">1445</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2328,7 +2480,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01602">1602</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01452">1452</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2370,7 +2522,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01555">1555</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01405">1405</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2406,7 +2558,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01645">1645</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01495">1495</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2436,7 +2588,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01514">1514</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01357">1357</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2472,7 +2624,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01543">1543</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01386">1386</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2508,7 +2660,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01531">1531</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01374">1374</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">

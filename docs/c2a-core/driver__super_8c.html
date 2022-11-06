@@ -82,7 +82,8 @@ $(document).ready(function(){initNavTree('driver__super_8c.html',''); initResiza
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">関数</a>  </div>
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
   <div class="headertitle">
 <div class="title">driver_super.c ファイル</div>  </div>
 </div><!--header-->
@@ -115,36 +116,36 @@ driver_super.c の依存先関係図:</div>
 <tr class="memitem:a60c364a73c9e59802dd758e8ce57b3ce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a60c364a73c9e59802dd758e8ce57b3ce">DS_rx_</a> (<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super)</td></tr>
 <tr class="memdesc:a60c364a73c9e59802dd758e8ce57b3ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">継承先の機器からの受信データがあるか確認し，受信する  <a href="driver__super_8c.html#a60c364a73c9e59802dd758e8ce57b3ce">[詳解]</a><br /></td></tr>
 <tr class="separator:a60c364a73c9e59802dd758e8ce57b3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a813429b169d4c05cce10cff391dd901c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a813429b169d4c05cce10cff391dd901c">DS_analyze_rx_buffer_</a> (<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> stream, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:a813429b169d4c05cce10cff391dd901c"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信フレーム解析関数  <a href="driver__super_8c.html#a813429b169d4c05cce10cff391dd901c">[詳解]</a><br /></td></tr>
-<tr class="separator:a813429b169d4c05cce10cff391dd901c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1808ed031c65cfd936fa3c2cc9bae66"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#aa1808ed031c65cfd936fa3c2cc9bae66">DS_analyze_rx_buffer_prepare_buffer_</a> (<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> stream, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:aa1808ed031c65cfd936fa3c2cc9bae66"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析用受信バッファの準備  <a href="driver__super_8c.html#aa1808ed031c65cfd936fa3c2cc9bae66">[詳解]</a><br /></td></tr>
-<tr class="separator:aa1808ed031c65cfd936fa3c2cc9bae66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb55026a05103c4bf63d2354134864c7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#adb55026a05103c4bf63d2354134864c7">DS_analyze_rx_buffer_pickup_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:adb55026a05103c4bf63d2354134864c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数  <a href="driver__super_8c.html#adb55026a05103c4bf63d2354134864c7">[詳解]</a><br /></td></tr>
-<tr class="separator:adb55026a05103c4bf63d2354134864c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a315021431cc376fea12509fd0962e0cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a315021431cc376fea12509fd0962e0cc">DS_analyze_rx_buffer_carry_over_buffer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:a315021431cc376fea12509fd0962e0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数後のデータ繰越関数  <a href="driver__super_8c.html#a315021431cc376fea12509fd0962e0cc">[詳解]</a><br /></td></tr>
-<tr class="separator:a315021431cc376fea12509fd0962e0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a307c2f714ae48261cd20926db4add15c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a307c2f714ae48261cd20926db4add15c">DS_analyze_rx_buffer_fixed_pickup_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:a307c2f714ae48261cd20926db4add15c"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定長フレーム解析関数（バイト列処理）  <a href="driver__super_8c.html#a307c2f714ae48261cd20926db4add15c">[詳解]</a><br /></td></tr>
-<tr class="separator:a307c2f714ae48261cd20926db4add15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3822bd6031c1023b5eac98cc3bf8e57"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ae3822bd6031c1023b5eac98cc3bf8e57">DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:ae3822bd6031c1023b5eac98cc3bf8e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">可変フレーム解析関数（バイト列処理）  <a href="driver__super_8c.html#ae3822bd6031c1023b5eac98cc3bf8e57">[詳解]</a><br /></td></tr>
-<tr class="separator:ae3822bd6031c1023b5eac98cc3bf8e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba44a396fa200beaf48099d2f50bfb12"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#aba44a396fa200beaf48099d2f50bfb12">DS_analyze_rx_buffer_variable_pickup_with_footer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:aba44a396fa200beaf48099d2f50bfb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">可変フレーム解析関数（バイト列処理）  <a href="driver__super_8c.html#aba44a396fa200beaf48099d2f50bfb12">[詳解]</a><br /></td></tr>
-<tr class="separator:aba44a396fa200beaf48099d2f50bfb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3cb3191ff23514897baa564e95fee12"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#af3cb3191ff23514897baa564e95fee12">DS_analyze_rx_buffer_finding_header_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
-<tr class="memdesc:af3cb3191ff23514897baa564e95fee12"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数（ヘッダ探索）  <a href="driver__super_8c.html#af3cb3191ff23514897baa564e95fee12">[詳解]</a><br /></td></tr>
-<tr class="separator:af3cb3191ff23514897baa564e95fee12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6d6c60302ac1a8f96666f4fed34f7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a3d6d6c60302ac1a8f96666f4fed34f7d">DS_analyze_rx_buffer_receiving_header_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len)</td></tr>
-<tr class="memdesc:a3d6d6c60302ac1a8f96666f4fed34f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数（ヘッダ受信中）  <a href="driver__super_8c.html#a3d6d6c60302ac1a8f96666f4fed34f7d">[詳解]</a><br /></td></tr>
-<tr class="separator:a3d6d6c60302ac1a8f96666f4fed34f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac03ce9459ce22d22218665a0a14c3b79"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ac03ce9459ce22d22218665a0a14c3b79">DS_analyze_rx_buffer_receiving_footer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> total_processed_data_len, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_frame_size)</td></tr>
-<tr class="memdesc:ac03ce9459ce22d22218665a0a14c3b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数（フッタ受信中）  <a href="driver__super_8c.html#ac03ce9459ce22d22218665a0a14c3b79">[詳解]</a><br /></td></tr>
-<tr class="separator:ac03ce9459ce22d22218665a0a14c3b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e30da312be08ff95f333a9ef45480c3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a1e30da312be08ff95f333a9ef45480c3">DS_analyze_rx_buffer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
+<tr class="memdesc:a1e30da312be08ff95f333a9ef45480c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信フレーム解析関数  <a href="driver__super_8c.html#a1e30da312be08ff95f333a9ef45480c3">[詳解]</a><br /></td></tr>
+<tr class="separator:a1e30da312be08ff95f333a9ef45480c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50511b7e662bc27eeee7abcea1e7ece0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a50511b7e662bc27eeee7abcea1e7ece0">DS_analyze_rx_buffer_prepare_buffer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rec_data_len)</td></tr>
+<tr class="memdesc:a50511b7e662bc27eeee7abcea1e7ece0"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析用受信バッファの準備  <a href="driver__super_8c.html#a50511b7e662bc27eeee7abcea1e7ece0">[詳解]</a><br /></td></tr>
+<tr class="separator:a50511b7e662bc27eeee7abcea1e7ece0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7dca770a69c104b95fc4d08977c2ea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a7d7dca770a69c104b95fc4d08977c2ea">DS_analyze_rx_buffer_pickup_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a7d7dca770a69c104b95fc4d08977c2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数  <a href="driver__super_8c.html#a7d7dca770a69c104b95fc4d08977c2ea">[詳解]</a><br /></td></tr>
+<tr class="separator:a7d7dca770a69c104b95fc4d08977c2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ccc9b6209f157d476c3616d707c9d0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a66ccc9b6209f157d476c3616d707c9d0">DS_analyze_rx_buffer_cueing_buffer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a66ccc9b6209f157d476c3616d707c9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数後の繰越データの頭出し  <a href="driver__super_8c.html#a66ccc9b6209f157d476c3616d707c9d0">[詳解]</a><br /></td></tr>
+<tr class="separator:a66ccc9b6209f157d476c3616d707c9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ce7997fd69effba90dc80686e8a95d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a21ce7997fd69effba90dc80686e8a95d">DS_analyze_rx_buffer_fixed_pickup_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a21ce7997fd69effba90dc80686e8a95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定長フレーム解析関数（バイト列処理）  <a href="driver__super_8c.html#a21ce7997fd69effba90dc80686e8a95d">[詳解]</a><br /></td></tr>
+<tr class="separator:a21ce7997fd69effba90dc80686e8a95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8732c3f1307948f0fd013c6a9bad647"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ac8732c3f1307948f0fd013c6a9bad647">DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:ac8732c3f1307948f0fd013c6a9bad647"><td class="mdescLeft">&#160;</td><td class="mdescRight">可変フレーム解析関数（バイト列処理）  <a href="driver__super_8c.html#ac8732c3f1307948f0fd013c6a9bad647">[詳解]</a><br /></td></tr>
+<tr class="separator:ac8732c3f1307948f0fd013c6a9bad647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aab51b57a6bd545dd1948b8a8779f64"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a6aab51b57a6bd545dd1948b8a8779f64">DS_analyze_rx_buffer_variable_pickup_with_footer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a6aab51b57a6bd545dd1948b8a8779f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">可変フレーム解析関数（バイト列処理）  <a href="driver__super_8c.html#a6aab51b57a6bd545dd1948b8a8779f64">[詳解]</a><br /></td></tr>
+<tr class="separator:a6aab51b57a6bd545dd1948b8a8779f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2bbe1e4e010e3ce6040b771d4883f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a6c2bbe1e4e010e3ce6040b771d4883f1">DS_analyze_rx_buffer_finding_header_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a6c2bbe1e4e010e3ce6040b771d4883f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数（ヘッダ探索）  <a href="driver__super_8c.html#a6c2bbe1e4e010e3ce6040b771d4883f1">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c2bbe1e4e010e3ce6040b771d4883f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34accc97fd7541f8de7798984806f7ad"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a34accc97fd7541f8de7798984806f7ad">DS_analyze_rx_buffer_receiving_header_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:a34accc97fd7541f8de7798984806f7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数（ヘッダ受信中）  <a href="driver__super_8c.html#a34accc97fd7541f8de7798984806f7ad">[詳解]</a><br /></td></tr>
+<tr class="separator:a34accc97fd7541f8de7798984806f7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac932e1e1208ac2860a9e191d4a709508"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ac932e1e1208ac2860a9e191d4a709508">DS_analyze_rx_buffer_receiving_footer_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_frame_size)</td></tr>
+<tr class="memdesc:ac932e1e1208ac2860a9e191d4a709508"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析関数（フッタ受信中）  <a href="driver__super_8c.html#ac932e1e1208ac2860a9e191d4a709508">[詳解]</a><br /></td></tr>
+<tr class="separator:ac932e1e1208ac2860a9e191d4a709508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd6a7ce3042412d75d326aa44a140d7c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#afd6a7ce3042412d75d326aa44a140d7c">DS_analyze_rx_buffer_get_framelength_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="memdesc:afd6a7ce3042412d75d326aa44a140d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム解析中に受信したフレームからフレーム長を取得する関数  <a href="driver__super_8c.html#afd6a7ce3042412d75d326aa44a140d7c">[詳解]</a><br /></td></tr>
 <tr class="separator:afd6a7ce3042412d75d326aa44a140d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +159,24 @@ driver_super.c の依存先関係図:</div>
 <tr class="separator:a8183efca88aff7a47cd50b16e83a66ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17276ca37e76a016ddc12766fda7309f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a17276ca37e76a016ddc12766fda7309f">DS_data_analyzer_dummy_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, void *p_driver)</td></tr>
 <tr class="separator:a17276ca37e76a016ddc12766fda7309f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013428843390d0c844d05cc2b5b9097d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a013428843390d0c844d05cc2b5b9097d">DS_clear_stream_rec_buffer_</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer)</td></tr>
+<tr class="memdesc:a013428843390d0c844d05cc2b5b9097d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> のクリア  <a href="driver__super_8c.html#a013428843390d0c844d05cc2b5b9097d">[詳解]</a><br /></td></tr>
+<tr class="separator:a013428843390d0c844d05cc2b5b9097d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6126e1604f729023eba002def25ee39e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a6126e1604f729023eba002def25ee39e">DS_drop_from_stream_rec_buffer_</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> size)</td></tr>
+<tr class="memdesc:a6126e1604f729023eba002def25ee39e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> の前方要素の削除  <a href="driver__super_8c.html#a6126e1604f729023eba002def25ee39e">[詳解]</a><br /></td></tr>
+<tr class="separator:a6126e1604f729023eba002def25ee39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2906fd581e158598d4e8ae8d190aa4e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a2906fd581e158598d4e8ae8d190aa4e4">DS_push_to_stream_rec_buffer_</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> size)</td></tr>
+<tr class="memdesc:a2906fd581e158598d4e8ae8d190aa4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> の追記（後ろへの）  <a href="driver__super_8c.html#a2906fd581e158598d4e8ae8d190aa4e4">[詳解]</a><br /></td></tr>
+<tr class="separator:a2906fd581e158598d4e8ae8d190aa4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3225db9a854ffccf78baee20af7226d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a3225db9a854ffccf78baee20af7226d3">DS_get_unprocessed_size_from_stream_rec_buffer_</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer)</td></tr>
+<tr class="memdesc:a3225db9a854ffccf78baee20af7226d3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> の未処理バッファサイズの取得  <a href="driver__super_8c.html#a3225db9a854ffccf78baee20af7226d3">[詳解]</a><br /></td></tr>
+<tr class="separator:a3225db9a854ffccf78baee20af7226d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfb2655d813064887f947696ba7a0e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a5dfb2655d813064887f947696ba7a0e9">DS_confirm_stream_rec_buffer_</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> size)</td></tr>
+<tr class="memdesc:a5dfb2655d813064887f947696ba7a0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> で指定サイズだけバッファを確定させる  <a href="driver__super_8c.html#a5dfb2655d813064887f947696ba7a0e9">[詳解]</a><br /></td></tr>
+<tr class="separator:a5dfb2655d813064887f947696ba7a0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f95b0b8937f57efdbb4ee05b31446e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a65f95b0b8937f57efdbb4ee05b31446e">DS_move_forward_frame_head_candidate_of_stream_rec_buffer_</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> size)</td></tr>
+<tr class="memdesc:a65f95b0b8937f57efdbb4ee05b31446e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> で指定サイズだけフレーム開始点を前進させる  <a href="driver__super_8c.html#a65f95b0b8937f57efdbb4ee05b31446e">[詳解]</a><br /></td></tr>
+<tr class="separator:a65f95b0b8937f57efdbb4ee05b31446e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae53312061d6acbd24edd316d126c7dea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ae53312061d6acbd24edd316d126c7dea">DS_init</a> (<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super, void *if_config, <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*load_init_setting)(<a class="el" href="struct_driver_super.html">DriverSuper</a> *p_super))</td></tr>
 <tr class="memdesc:ae53312061d6acbd24edd316d126c7dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">継承先の機器よりDriverSuperを初期化する  <a href="driver__super_8c.html#ae53312061d6acbd24edd316d126c7dea">[詳解]</a><br /></td></tr>
 <tr class="separator:ae53312061d6acbd24edd316d126c7dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,6 +247,8 @@ driver_super.c の依存先関係図:</div>
 <tr class="separator:a7c9e7079a1b2caf505c2f255749181b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb4c3e2dea382e7303c7f927eaae624f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#aeb4c3e2dea382e7303c7f927eaae624f">DSSC_get_tx_frame_buffer_size</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:aeb4c3e2dea382e7303c7f927eaae624f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7e46893d4f6653fb89c987807ec953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a8e7e46893d4f6653fb89c987807ec953">DSSC_set_rx_buffer</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *rx_buffer)</td></tr>
+<tr class="separator:a8e7e46893d4f6653fb89c987807ec953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08f8c480a922624b49921ed953f71be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ac08f8c480a922624b49921ed953f71be">DSSC_set_rx_header</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_header, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_header_size)</td></tr>
 <tr class="separator:ac08f8c480a922624b49921ed953f71be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd7b10a3cb250e03d1ace11c9f5d8b5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#afd7b10a3cb250e03d1ace11c9f5d8b5b">DSSC_set_rx_footer</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *rx_footer, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> rx_footer_size)</td></tr>
@@ -278,18 +299,31 @@ driver_super.c の依存先関係図:</div>
 <tr class="separator:a3551be7855d004edfb92ac6a51efb03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95fe4e85c5c2e4eebab7aa701bd924e7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_obc_time.html">ObcTime</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a95fe4e85c5c2e4eebab7aa701bd924e7">DSSC_get_rx_frame_fix_time</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:a95fe4e85c5c2e4eebab7aa701bd924e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#adf1f7d5bc6090bf72962786be28d0b9d">DSSC_get_rx_frame</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
-<tr class="separator:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c3d7f8cb03c596e81145f3395f68757"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a4d856578726e06c124ae25b20f486454">DS_STREAM_TLM_DISRUPTION_STATUS_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a3c3d7f8cb03c596e81145f3395f68757">DSSC_get_tlm_disruption_status</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:a3c3d7f8cb03c596e81145f3395f68757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92f1f512f47189fe8a6dddb660fc97fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a92f1f512f47189fe8a6dddb660fc97fc">DSSC_get_ret_from_data_analyzer</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
 <tr class="separator:a92f1f512f47189fe8a6dddb660fc97fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e6daadcb139357438450d855908b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a13e6daadcb139357438450d855908b30">DS_init_stream_rec_buffer</a> (<a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *stream_rec_buffer, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer, const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> buffer_capacity)</td></tr>
+<tr class="memdesc:a13e6daadcb139357438450d855908b30"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> に確保したメモリを与えて初期化する  <a href="driver__super_8c.html#a13e6daadcb139357438450d855908b30">[詳解]</a><br /></td></tr>
+<tr class="separator:a13e6daadcb139357438450d855908b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab15abb8da4e64f1acbbbb596096311cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#ab15abb8da4e64f1acbbbb596096311cc">DS_conv_driver_err_to_ccp_cmd_ret</a> (<a class="el" href="driver__super_8h.html#a8f1715418b65ccb642fc9ea570aaa76a">DS_DRIVER_ERR_CODE</a> code)</td></tr>
 <tr class="memdesc:ab15abb8da4e64f1acbbbb596096311cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">DS_DRIVER_ERR_CODE から <a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> への変換関数  <a href="driver__super_8c.html#ab15abb8da4e64f1acbbbb596096311cc">[詳解]</a><br /></td></tr>
 <tr class="separator:ab15abb8da4e64f1acbbbb596096311cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bf99f54acb3600a795e46ca963d7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#a84bf99f54acb3600a795e46ca963d7a1">DS_conv_cmd_err_to_ccp_cmd_ret</a> (<a class="el" href="driver__super_8h.html#a81f032590771b0c11b9190ad7004cd6b">DS_CMD_ERR_CODE</a> code)</td></tr>
 <tr class="memdesc:a84bf99f54acb3600a795e46ca963d7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">DS_CMD_ERR_CODE から <a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> への変換関数  <a href="driver__super_8c.html#a84bf99f54acb3600a795e46ca963d7a1">[詳解]</a><br /></td></tr>
 <tr class="separator:a84bf99f54acb3600a795e46ca963d7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#adf1f7d5bc6090bf72962786be28d0b9d">DSSC_get_rx_frame</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:adf1f7d5bc6090bf72962786be28d0b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">確定したフレームを取得  <a href="driver__super_8c.html#adf1f7d5bc6090bf72962786be28d0b9d">[詳解]</a><br /></td></tr>
+<tr class="separator:adf1f7d5bc6090bf72962786be28d0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb170d65d6ddf17ffd062e9d3cee0ca7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#afb170d65d6ddf17ffd062e9d3cee0ca7">DSSC_get_fixed_rx_frame_size</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config)</td></tr>
+<tr class="memdesc:afb170d65d6ddf17ffd062e9d3cee0ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">確定したフレームのサイズを取得  <a href="driver__super_8c.html#afb170d65d6ddf17ffd062e9d3cee0ca7">[詳解]</a><br /></td></tr>
+<tr class="separator:afb170d65d6ddf17ffd062e9d3cee0ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:aa94347be2507be50559672a290208e11"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__super_8c.html#aa94347be2507be50559672a290208e11">DS_if_rx_buffer_</a> [<a class="el" href="driver__super__params_8h.html#afb4c42a77e962be67ed2e5cc24a3163c">DS_IF_RX_BUFFER_SIZE</a>]</td></tr>
+<tr class="memdesc:aa94347be2507be50559672a290208e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">IF_RX で受信するときの一次バッファ  <a href="driver__super_8c.html#aa94347be2507be50559672a290208e11">[詳解]</a><br /></td></tr>
+<tr class="separator:aa94347be2507be50559672a290208e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>各制御センサ・アクチュエータ等とのインターフェースドライバ群のスーパークラス </p>
@@ -345,7 +379,7 @@ driver_super.c の依存先関係図:</div>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE: data_analyzer_ の返り値をそのまま返す </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>data_analyzer_ の返り値は， ret_from_data_analyzer_ にも保存される． </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00459">459</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00456">456</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -355,8 +389,8 @@ driver_super.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a813429b169d4c05cce10cff391dd901c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a813429b169d4c05cce10cff391dd901c">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_()</h2>
+<a id="a1e30da312be08ff95f333a9ef45480c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e30da312be08ff95f333a9ef45480c3">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,14 +401,8 @@ driver_super.c の依存先関係図:</div>
         <tr>
           <td class="memname">static void DS_analyze_rx_buffer_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_driver_super.html">DriverSuper</a> *&#160;</td>
-          <td class="paramname"><em>p_super</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -398,32 +426,31 @@ driver_super.c の依存先関係図:</div>
 <p>受信フレーム解析関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_super</td><td>DriverSuper構造体へのポインタ </td></tr>
-    <tr><td class="paramname">stream</td><td>どのconfigを使用するか．streamは0-MAXなので，継承先でENUMなど宣言して使いやすくすればいいと思う． </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rec_data_len</td><td>今回新規に受信したデータ長 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void 詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00607">607</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00605">605</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a813429b169d4c05cce10cff391dd901c_cgraph.svg" width="923" height="332"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a1e30da312be08ff95f333a9ef45480c3_cgraph.svg" width="1083" height="891"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a813429b169d4c05cce10cff391dd901c_icgraph.svg" width="1876" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a1e30da312be08ff95f333a9ef45480c3_icgraph.svg" width="1876" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a315021431cc376fea12509fd0962e0cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a315021431cc376fea12509fd0962e0cc">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_carry_over_buffer_()</h2>
+<a id="a66ccc9b6209f157d476c3616d707c9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ccc9b6209f157d476c3616d707c9d0">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_cueing_buffer_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,33 +459,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void DS_analyze_rx_buffer_carry_over_buffer_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_cueing_buffer_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>rec_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -468,31 +473,33 @@ driver_super.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p>フレーム解析関数後のデータ繰越関数 </p>
+<p>フレーム解析関数後の繰越データの頭出し </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
-<dl class="section note"><dt>覚え書き</dt><dd>受信データを次回呼び出しに引き継ぐ（いくつかのパターンあり） フレーム確定した場合（未解析受信データがある可能性がある） 厳格なフレーム探索が無効 --&gt; フレーム確定したデータはOKとし，それ以後の解析できなかった受信データのみを次回に引き継ぐ 厳格なフレーム探索が有効 --&gt; 確定フレームがユーザー側で弾かれる可能性を考慮し，確定フレームの先頭 + 1 バイト目以降を次回に引き継ぐ 次回のヘッダ探索はそこから始まる フレーム確定しなかった場合（未解析受信データはなし） DS_STREAM_REC_STATUS_FINDING_HEADER のとき --&gt; ヘッダがなかったということなので，引き継ぎデータはなし DS_STREAM_REC_STATUS_FINDING_HEADER でないとき --&gt; フレーム候補のフレーム先頭以降を次回に引き継ぐ これにより，フッタ不一致などの不整合が発生した場合にフレーム探索をやり直せる </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00732">732</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00723">723</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a66ccc9b6209f157d476c3616d707c9d0_cgraph.svg" width="388" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a315021431cc376fea12509fd0962e0cc_icgraph.svg" width="2087" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a66ccc9b6209f157d476c3616d707c9d0_icgraph.svg" width="2087" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="af3cb3191ff23514897baa564e95fee12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3cb3191ff23514897baa564e95fee12">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_finding_header_()</h2>
+<a id="a6c2bbe1e4e010e3ce6040b771d4883f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2bbe1e4e010e3ce6040b771d4883f1">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_finding_header_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,33 +508,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_finding_header_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_finding_header_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>rec_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -542,32 +527,29 @@ driver_super.c の依存先関係図:</div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01102">1102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00962">962</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_af3cb3191ff23514897baa564e95fee12_cgraph.svg" width="279" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a6c2bbe1e4e010e3ce6040b771d4883f1_cgraph.svg" width="427" height="264"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_af3cb3191ff23514897baa564e95fee12_icgraph.svg" width="2512" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a6c2bbe1e4e010e3ce6040b771d4883f1_icgraph.svg" width="2512" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a307c2f714ae48261cd20926db4add15c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a307c2f714ae48261cd20926db4add15c">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_fixed_pickup_()</h2>
+<a id="a21ce7997fd69effba90dc80686e8a95d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ce7997fd69effba90dc80686e8a95d">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_fixed_pickup_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,33 +558,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_fixed_pickup_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_fixed_pickup_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>rec_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -613,29 +573,26 @@ driver_super.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>固定長フレーム解析関数（バイト列処理） </p>
-<pre class="fragment">    受信バッファのデータを走査し，必要なデータをフレームとしてpickupする
+<pre class="fragment">    受信バッファのデータを走査し，必要なデータをフレームとして pickup する
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00798">798</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00733">733</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a307c2f714ae48261cd20926db4add15c_cgraph.svg" width="490" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a21ce7997fd69effba90dc80686e8a95d_cgraph.svg" width="638" height="295"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a307c2f714ae48261cd20926db4add15c_icgraph.svg" width="2298" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a21ce7997fd69effba90dc80686e8a95d_icgraph.svg" width="2298" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -675,7 +632,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>フレーム長 </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01238">1238</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01085">1085</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -685,8 +642,8 @@ driver_super.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="adb55026a05103c4bf63d2354134864c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb55026a05103c4bf63d2354134864c7">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_pickup_()</h2>
+<a id="a7d7dca770a69c104b95fc4d08977c2ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d7dca770a69c104b95fc4d08977c2ea">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_pickup_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -695,27 +652,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_pickup_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_pickup_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>rec_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -726,35 +667,33 @@ driver_super.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>フレーム解析関数 </p>
-<pre class="fragment">    解析用受信バッファを走査し，バイト単位でフレーム内データを拾っていく
+<pre class="fragment">    受信バッファを走査し，バイト単位でフレーム内データを確認していく
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00656">656</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00657">657</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_adb55026a05103c4bf63d2354134864c7_cgraph.svg" width="704" height="332"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a7d7dca770a69c104b95fc4d08977c2ea_cgraph.svg" width="852" height="647"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_adb55026a05103c4bf63d2354134864c7_icgraph.svg" width="2087" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a7d7dca770a69c104b95fc4d08977c2ea_icgraph.svg" width="2087" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="aa1808ed031c65cfd936fa3c2cc9bae66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1808ed031c65cfd936fa3c2cc9bae66">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_prepare_buffer_()</h2>
+<a id="a50511b7e662bc27eeee7abcea1e7ece0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50511b7e662bc27eeee7abcea1e7ece0">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_prepare_buffer_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -763,22 +702,10 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_prepare_buffer_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_prepare_buffer_ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_driver_super.html">DriverSuper</a> *&#160;</td>
-          <td class="paramname"><em>p_super</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -803,27 +730,32 @@ driver_super.c の依存先関係図:</div>
 <pre class="fragment">    繰り越されたデータと今回受信したデータの結合を行い，受信データ解析の準備をする
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_super</td><td>DriverSuper構造体へのポインタ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stream</td><td>どのconfigを使用するか．streamは0-MAXなので，継承先でENUMなど宣言して使いやすくすればいいと思う． </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">rx_buffer</td><td>解析用受信バッファ </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rec_data_len</td><td>今回新規に受信したデータ長 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>解析用受信バッファの長さ </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>厳格なフレーム探索が有効かどうかで処理が変わることに注意 </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00625">625</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00617">617</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a50511b7e662bc27eeee7abcea1e7ece0_cgraph.svg" width="400" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_aa1808ed031c65cfd936fa3c2cc9bae66_icgraph.svg" width="2087" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a50511b7e662bc27eeee7abcea1e7ece0_icgraph.svg" width="2087" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ac03ce9459ce22d22218665a0a14c3b79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac03ce9459ce22d22218665a0a14c3b79">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_receiving_footer_()</h2>
+<a id="ac932e1e1208ac2860a9e191d4a709508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac932e1e1208ac2860a9e191d4a709508">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_receiving_footer_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -832,22 +764,10 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_receiving_footer_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_receiving_footer_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
           <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -875,32 +795,30 @@ driver_super.c の依存先関係図:</div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
     <tr><td class="paramname">rx_frame_size</td><td>フレームサイズ（可変長フレームの場合もあるので，引数に取る） </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ（まあ，1なんだけど）．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01182">1182</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01035">1035</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ac03ce9459ce22d22218665a0a14c3b79_cgraph.svg" width="279" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ac932e1e1208ac2860a9e191d4a709508_cgraph.svg" width="398" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ac03ce9459ce22d22218665a0a14c3b79_icgraph.svg" width="2512" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ac932e1e1208ac2860a9e191d4a709508_icgraph.svg" width="2512" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a3d6d6c60302ac1a8f96666f4fed34f7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d6d6c60302ac1a8f96666f4fed34f7d">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_receiving_header_()</h2>
+<a id="a34accc97fd7541f8de7798984806f7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34accc97fd7541f8de7798984806f7ad">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_receiving_header_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -909,27 +827,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_receiving_header_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_receiving_header_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -944,31 +846,29 @@ driver_super.c の依存先関係図:</div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ（まあ，1なんだけど）．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01149">1149</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01005">1005</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a3d6d6c60302ac1a8f96666f4fed34f7d_cgraph.svg" width="279" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a34accc97fd7541f8de7798984806f7ad_cgraph.svg" width="398" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a3d6d6c60302ac1a8f96666f4fed34f7d_icgraph.svg" width="2512" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a34accc97fd7541f8de7798984806f7ad_icgraph.svg" width="2512" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="aba44a396fa200beaf48099d2f50bfb12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba44a396fa200beaf48099d2f50bfb12">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_variable_pickup_with_footer_()</h2>
+<a id="a6aab51b57a6bd545dd1948b8a8779f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aab51b57a6bd545dd1948b8a8779f64">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_variable_pickup_with_footer_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -977,33 +877,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_variable_pickup_with_footer_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_variable_pickup_with_footer_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>rec_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1014,7 +892,7 @@ driver_super.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>可変フレーム解析関数（バイト列処理） </p>
-<pre class="fragment">    受信バッファのデータを走査し，必要なデータをフレームとしてpickupする
+<pre class="fragment">    受信バッファのデータを走査し，必要なデータをフレームとして pickup する
 </pre> <dl class="section note"><dt>覚え書き</dt><dd>DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_ との違いは，テレメ長データがフレームに含まれるか否か </dd>
 <dd>
 フッタが存在していることを前提とする </dd>
@@ -1023,32 +901,29 @@ driver_super.c の依存先関係図:</div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00993">993</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00886">886</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_aba44a396fa200beaf48099d2f50bfb12_cgraph.svg" width="494" height="170"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a6aab51b57a6bd545dd1948b8a8779f64_cgraph.svg" width="642" height="264"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_aba44a396fa200beaf48099d2f50bfb12_icgraph.svg" width="2302" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a6aab51b57a6bd545dd1948b8a8779f64_icgraph.svg" width="2302" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ae3822bd6031c1023b5eac98cc3bf8e57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3822bd6031c1023b5eac98cc3bf8e57">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_()</h2>
+<a id="ac8732c3f1307948f0fd013c6a9bad647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8732c3f1307948f0fd013c6a9bad647">&#9670;&nbsp;</a></span>DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1057,33 +932,11 @@ driver_super.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_ </td>
+          <td class="memname">static void DS_analyze_rx_buffer_variable_pickup_with_rx_frame_size_ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
-          <td class="paramname"><em>p_stream_config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
-          <td class="paramname"><em>rx_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>total_processed_data_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
-          <td class="paramname"><em>rec_data_len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1094,30 +947,27 @@ driver_super.c の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>可変フレーム解析関数（バイト列処理） </p>
-<pre class="fragment">    受信バッファのデータを走査し，必要なデータをフレームとしてpickupする
+<pre class="fragment">    受信バッファのデータを走査し，必要なデータをフレームとして pickup する
 </pre> <dl class="section note"><dt>覚え書き</dt><dd>受信フレームにフレーム長データが存在していることを前提とする </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_stream_config</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
-    <tr><td class="paramname">rx_buffer</td><td>受信データのバッファ（配列） </td></tr>
-    <tr><td class="paramname">total_processed_data_len</td><td>受信データのバッファのうち，すでに処理されたバイト数 </td></tr>
-    <tr><td class="paramname">rec_data_len</td><td>受信データのバッファの長さ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>今回の呼び出しで走査したバイト長さ．その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>void その他の詳細は <a class="el" href="struct_d_s___stream_rec_status.html" title="フレーム受信状況">DS_StreamRecStatus</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00871">871</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00787">787</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ae3822bd6031c1023b5eac98cc3bf8e57_cgraph.svg" width="494" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ac8732c3f1307948f0fd013c6a9bad647_cgraph.svg" width="642" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ae3822bd6031c1023b5eac98cc3bf8e57_icgraph.svg" width="2302" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ac8732c3f1307948f0fd013c6a9bad647_icgraph.svg" width="2302" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1151,7 +1001,101 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00304">304</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00307">307</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ad21e295eb43520f915b923c0d2eb5c94_cgraph.svg" width="362" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ad21e295eb43520f915b923c0d2eb5c94_icgraph.svg" width="1946" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a013428843390d0c844d05cc2b5b9097d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013428843390d0c844d05cc2b5b9097d">&#9670;&nbsp;</a></span>DS_clear_stream_rec_buffer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS_clear_stream_rec_buffer_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> のクリア </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">stream_rec_buffer</td><td>クリアする <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01642">1642</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a013428843390d0c844d05cc2b5b9097d_icgraph.svg" width="2388" height="396"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5dfb2655d813064887f947696ba7a0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfb2655d813064887f947696ba7a0e9">&#9670;&nbsp;</a></span>DS_confirm_stream_rec_buffer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS_confirm_stream_rec_buffer_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> で指定サイズだけバッファを確定させる </p>
+<dl class="section note"><dt>覚え書き</dt><dd>stream_rec_buffer は NULL でないことを仮定する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">stream_rec_buffer</td><td>確定させる <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>確定させるバッファサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01731">1731</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a5dfb2655d813064887f947696ba7a0e9_icgraph.svg" width="2736" height="292"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -1182,7 +1126,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01744">1744</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01600">1600</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1225,7 +1169,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd><a class="el" href="struct_c_c_p___cmd_ret.html" title="コマンド返り値">CCP_CmdRet</a> </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01724">1724</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01580">1580</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1269,11 +1213,94 @@ driver_super.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01415">1415</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01258">1258</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a17276ca37e76a016ddc12766fda7309f_icgraph.svg" width="2239" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6126e1604f729023eba002def25ee39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6126e1604f729023eba002def25ee39e">&#9670;&nbsp;</a></span>DS_drop_from_stream_rec_buffer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS_drop_from_stream_rec_buffer_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> の前方要素の削除 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>stream_rec_buffer は NULL でないことを仮定する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">stream_rec_buffer</td><td>削除する <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>削除するバッファサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01657">1657</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a6126e1604f729023eba002def25ee39e_icgraph.svg" width="2302" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3225db9a854ffccf78baee20af7226d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3225db9a854ffccf78baee20af7226d3">&#9670;&nbsp;</a></span>DS_get_unprocessed_size_from_stream_rec_buffer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DS_get_unprocessed_size_from_stream_rec_buffer_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> の未処理バッファサイズの取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>stream_rec_buffer は NULL でないことを仮定する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stream_rec_buffer</td><td><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>未処理バッファサイズ </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01723">1723</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a3225db9a854ffccf78baee20af7226d3_icgraph.svg" width="2734" height="308"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1326,17 +1353,76 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00239">239</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00241">241</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ae53312061d6acbd24edd316d126c7dea_cgraph.svg" width="914" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ae53312061d6acbd24edd316d126c7dea_cgraph.svg" width="914" height="279"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ae53312061d6acbd24edd316d126c7dea_icgraph.svg" width="1626" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a13e6daadcb139357438450d855908b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e6daadcb139357438450d855908b30">&#9670;&nbsp;</a></span>DS_init_stream_rec_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS_init_stream_rec_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>buffer_capacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> に確保したメモリを与えて初期化する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">stream_rec_buffer</td><td>初期化する <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>与えるメモリ領域 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_capacity</td><td>与えるメモリサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01569">1569</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a13e6daadcb139357438450d855908b30_cgraph.svg" width="366" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a13e6daadcb139357438450d855908b30_icgraph.svg" width="2003" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1366,11 +1452,118 @@ driver_super.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01409">1409</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01252">1252</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a8183efca88aff7a47cd50b16e83a66ca_icgraph.svg" width="1956" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a65f95b0b8937f57efdbb4ee05b31446e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f95b0b8937f57efdbb4ee05b31446e">&#9670;&nbsp;</a></span>DS_move_forward_frame_head_candidate_of_stream_rec_buffer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DS_move_forward_frame_head_candidate_of_stream_rec_buffer_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> で指定サイズだけフレーム開始点を前進させる </p>
+<dl class="section note"><dt>覚え書き</dt><dd>stream_rec_buffer は NULL でないことを仮定する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">stream_rec_buffer</td><td>前進させる <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>前進させるバッファサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01742">1742</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a65f95b0b8937f57efdbb4ee05b31446e_icgraph.svg" width="2766" height="260"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2906fd581e158598d4e8ae8d190aa4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2906fd581e158598d4e8ae8d190aa4e4">&#9670;&nbsp;</a></span>DS_push_to_stream_rec_buffer_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a> DS_push_to_stream_rec_buffer_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>stream_rec_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> の追記（後ろへの） </p>
+<dl class="section note"><dt>覚え書き</dt><dd>stream_rec_buffer は NULL でないことを仮定する </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">stream_rec_buffer</td><td>追記する <a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>追記するバッファ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>追記するバッファサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DS_ERR_CODE_OK</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">DS_ERR_CODE_ERR</td><td>サイズ不足でコピーできず </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01707">1707</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a2906fd581e158598d4e8ae8d190aa4e4_icgraph.svg" width="2314" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1411,11 +1604,11 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は rec_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00330">330</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00325">325</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_acadaccbff239185ebda242d39d4942bd_cgraph.svg" width="1078" height="502"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_acadaccbff239185ebda242d39d4942bd_cgraph.svg" width="1238" height="898"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -1453,11 +1646,11 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00258">258</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00260">260</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a7f4bb1ea81bf8d3a89752a0fc875afce_cgraph.svg" width="731" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a7f4bb1ea81bf8d3a89752a0fc875afce_cgraph.svg" width="731" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -1503,7 +1696,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01281">1281</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01129">1129</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1546,7 +1739,7 @@ driver_super.c の依存先関係図:</div>
 <p>継承先の機器からの受信データがあるか確認し，受信する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_super</td><td>DriverSuper構造体へのポインタ </td></tr>
+    <tr><td class="paramname">p_super</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体へのポインタ </td></tr>
   </table>
   </dd>
 </dl>
@@ -1559,7 +1752,7 @@ driver_super.c の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00562">562</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00559">559</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1613,8 +1806,8 @@ driver_super.c の依存先関係図:</div>
 <pre class="fragment">    DS_send_general_cmd と DS_send_req_tlm_cmdの共通部分
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_super</td><td>DriverSuper構造体へのポインタ </td></tr>
-    <tr><td class="paramname">stream</td><td>どのconfigを使用するか．streamは0-MAXなので，継承先でENUMなど宣言して使いやすくすればいいと思う． </td></tr>
+    <tr><td class="paramname">p_super</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体へのポインタ </td></tr>
+    <tr><td class="paramname">stream</td><td>どの config を使用するか．stream は 0-MAX なので，継承先で ENUM など宣言して使いやすくすればいいと思う． </td></tr>
   </table>
   </dd>
 </dl>
@@ -1627,7 +1820,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は send_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00512">512</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00509">509</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1690,7 +1883,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は send_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00469">469</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00466">466</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1751,7 +1944,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>受信状況やエラー情報は send_status_ に格納されている </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00490">490</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00487">487</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1805,8 +1998,8 @@ driver_super.c の依存先関係図:</div>
 <dl class="section note"><dt>覚え書き</dt><dd>この関数の実行前に，tx_frame_, tx_frame_size_の設定が必要である </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_super</td><td>DriverSuper構造体へのポインタ </td></tr>
-    <tr><td class="paramname">stream</td><td>どのconfigを使用するか．streamは0-MAXなので，継承先でENUMなど宣言して使いやすくすればいいと思う． </td></tr>
+    <tr><td class="paramname">p_super</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体へのポインタ </td></tr>
+    <tr><td class="paramname">stream</td><td>どの config を使用するか．stream は 0-MAX なので，継承先で ENUM など宣言して使いやすくすればいいと思う． </td></tr>
   </table>
   </dd>
 </dl>
@@ -1818,7 +2011,7 @@ driver_super.c の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00541">541</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00538">538</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1863,7 +2056,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00288">288</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00291">291</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1912,7 +2105,7 @@ driver_super.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01347">1347</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01185">1185</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1938,7 +2131,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01434">1434</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01277">1277</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1958,7 +2151,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01429">1429</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01272">1272</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1978,7 +2171,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01453">1453</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01296">1296</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2004,7 +2197,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01463">1463</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01306">1306</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2024,7 +2217,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01458">1458</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01301">1301</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2044,7 +2237,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01473">1473</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01316">1316</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2064,7 +2257,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01468">1468</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01311">1311</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2084,7 +2277,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01424">1424</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01267">1267</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2104,7 +2297,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01439">1439</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01282">1282</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2134,7 +2327,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01444">1444</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01287">1287</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2154,7 +2347,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01493">1493</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01336">1336</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2174,7 +2367,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01634">1634</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01484">1484</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2194,7 +2387,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01509">1509</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01352">1352</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2214,7 +2407,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01486">1486</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01329">1329</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2240,7 +2433,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01628">1628</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01478">1478</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2260,13 +2453,48 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01503">1503</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01346">1346</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a093a693ceac26a42fe3157cae06259ac_icgraph.svg" width="1996" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<a id="afb170d65d6ddf17ffd062e9d3cee0ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb170d65d6ddf17ffd062e9d3cee0ca7">&#9670;&nbsp;</a></span>DSSC_get_fixed_rx_frame_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> DSSC_get_fixed_rx_frame_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>確定したフレームのサイズを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config[in]</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">フレーム確定時</td><td>確定したフレームサイズ </td></tr>
+    <tr><td class="paramname">フレーム未確定時</td><td>0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01629">1629</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2286,7 +2514,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01671">1671</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01521">1521</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2306,7 +2534,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01691">1691</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01541">1541</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2326,7 +2554,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01481">1481</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01324">1324</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2346,7 +2574,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01498">1498</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01341">1341</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2366,7 +2594,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01666">1666</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01516">1516</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2392,7 +2620,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01676">1676</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01526">1526</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2412,7 +2640,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01681">1681</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01531">1531</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2432,7 +2660,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01696">1696</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01546">1546</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2452,7 +2680,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01716">1716</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01561">1561</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2472,7 +2700,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01585">1585</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01435">1435</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2492,7 +2720,27 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01706">1706</a> 行目に定義があります。</p>
+<p>確定したフレームを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stream_config[in]</td><td><a class="el" href="struct_driver_super.html" title="DriverSuperの設定 各IFはこれを継承してつかう．">DriverSuper</a> 構造体の <a class="el" href="struct_d_s___stream_config.html" title="DriverSuperStreamの設定">DS_StreamConfig</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">フレーム確定時</td><td>受信フレーム先頭ポインタ </td></tr>
+    <tr><td class="paramname">フレーム未確定時</td><td>rx_buffer_.pos_of_frame_head_candidate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームサイズは DSSC_get_fixed_rx_frame_size で取得可能 </dd>
+<dd>
+rx_buffer_ (<a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a>) には，前回確定したフレームが入っているが，次回の DS_receive 呼び出しで失われる． したがって，次回の DS_receive 呼び出し時までに内容を吸い出しておくこと </dd>
+<dd>
+基本的には， rx_buffer_.pos_of_frame_head_candidate は rx_buffer_.buffer 先頭に頭出しされているはず． したがって，ここで取得したポインタを rx_buffer_.capacity 以上読み込まない場合は，問題ない． </dd></dl>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01622">1622</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2518,7 +2766,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01686">1686</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01536">1536</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2538,7 +2786,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01701">1701</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01551">1551</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2558,7 +2806,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01590">1590</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01440">1440</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2578,7 +2826,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01580">1580</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01430">1430</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2598,7 +2846,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01661">1661</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01511">1511</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2618,7 +2866,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01623">1623</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01473">1473</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2638,7 +2886,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01640">1640</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01490">1490</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2658,7 +2906,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01711">1711</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01556">1556</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2678,7 +2926,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01521">1521</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01364">1364</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2698,7 +2946,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01526">1526</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01369">1369</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2724,7 +2972,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01550">1550</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01393">1393</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2750,7 +2998,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01538">1538</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01381">1381</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2780,11 +3028,47 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01652">1652</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01502">1502</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_ad65037ea9639ef7c8ade47c1c54bbf2e_icgraph.svg" width="2051" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8e7e46893d4f6653fb89c987807ec953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7e46893d4f6653fb89c987807ec953">&#9670;&nbsp;</a></span>DSSC_set_rx_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DSSC_set_rx_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *&#160;</td>
+          <td class="paramname"><em>p_stream_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>rx_buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01398">1398</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a8e7e46893d4f6653fb89c987807ec953_icgraph.svg" width="2004" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -2822,7 +3106,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01564">1564</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01414">1414</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2858,7 +3142,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01573">1573</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01423">1423</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2894,7 +3178,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01616">1616</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01466">1466</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2924,7 +3208,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01609">1609</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01459">1459</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2960,7 +3244,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01595">1595</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01445">1445</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2996,7 +3280,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01602">1602</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01452">1452</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3038,7 +3322,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01555">1555</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01405">1405</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3074,7 +3358,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01645">1645</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01495">1495</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -3104,7 +3388,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01514">1514</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01357">1357</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3140,7 +3424,7 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01543">1543</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01386">1386</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3176,13 +3460,40 @@ driver_super.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01531">1531</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l01374">1374</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="driver__super_8c_a9907f5844f74f6b8218993911bdc2735_icgraph.svg" width="3076" height="738"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="aa94347be2507be50559672a290208e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa94347be2507be50559672a290208e11">&#9670;&nbsp;</a></span>DS_if_rx_buffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> DS_if_rx_buffer_[<a class="el" href="driver__super__params_8h.html#afb4c42a77e962be67ed2e5cc24a3163c">DS_IF_RX_BUFFER_SIZE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IF_RX で受信するときの一次バッファ </p>
+
+<p class="definition"> <a class="el" href="driver__super_8c_source.html">driver_super.c</a> の <a class="el" href="driver__super_8c_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>

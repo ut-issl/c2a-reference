@@ -6,5 +6,7 @@ var aobc_8c =
     [ "AOBC_load_driver_super_init_settings_", "aobc_8c.html#ace8c524e6d1fe0054e4db53f9fbc0a26", null ],
     [ "AOBC_rec", "aobc_8c.html#a96bd416cc06f354cc0886712d02687be", null ],
     [ "AOBC_send_cmd", "aobc_8c.html#a21bc4dfcbc36f4c3db4c9f59cd020414", null ],
+    [ "AOBC_rx_buffer_", "aobc_8c.html#af6e38f2653ac56d9c5c8a1bfd4f66b43", null ],
+    [ "AOBC_rx_buffer_allocation_", "aobc_8c.html#afa5ef5853ce2ca9dc7b1481b1e9ffb90", null ],
     [ "AOBC_tx_frame_", "aobc_8c.html#a49cc9011df60a29fc505f6b77faa3519", null ]
 ];

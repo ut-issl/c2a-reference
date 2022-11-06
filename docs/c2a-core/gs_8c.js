@@ -11,6 +11,8 @@ var gs_8c =
     [ "GS_load_uart_driver_super_init_settings_", "gs_8c.html#a940de224a6d318a15603b46983cf69ea", null ],
     [ "GS_rec_tctf", "gs_8c.html#a56f8d1a93700e975b1233b271d82b618", null ],
     [ "GS_send_vcdu", "gs_8c.html#a553d2d0a7400d342a82530f0008095a7", null ],
+    [ "GS_rx_buffer_", "gs_8c.html#ad06aad723aa119c731f04dfced9413fd", null ],
+    [ "GS_rx_buffer_allocation_", "gs_8c.html#a693dee4a79812875b8dc00b3552f458a", null ],
     [ "GS_rx_header_", "gs_8c.html#ab4051280d3929f98618f72eae324005e", null ],
     [ "GS_tx_frame_", "gs_8c.html#afbb676c12f6a55f5891093610364c467", null ]
 ];
