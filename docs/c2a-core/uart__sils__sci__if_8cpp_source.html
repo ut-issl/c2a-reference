@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_user/IfWrapper/Sils/uart_sils_sci_if.cpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -86,25 +86,24 @@ $(document).ready(function(){initNavTree('uart__sils__sci__if_8cpp_source.html',
 </div><!--header-->
 <div class="contents">
 <a href="uart__sils__sci__if_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="uart__sils__sci__if_8hpp.html">uart_sils_sci_if.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// 最初だけ初期化して、プログラム終了時にポートを閉じるようにしたい</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8cpp.html#abfa1d3b7852658b98fc0f5dd2f45a58a">   13</a></span>&#160;<span class="keyword">static</span> <a class="code" href="class_s_c_i_com_port_uart.html">SCIComPortUart</a> <a class="code" href="uart__sils__sci__if_8cpp.html#abfa1d3b7852658b98fc0f5dd2f45a58a">sci_com_uart_</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8hpp.html#a75bbe4899db0964209f056e6c3e6c4e0">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="uart__sils__sci__if_8cpp.html#a26bf5d42727c6500fc68acf56946ce31">SILS_SCI_UART_IF_init</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8cpp.html#a26bf5d42727c6500fc68acf56946ce31">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="uart__sils__sci__if_8cpp.html#a26bf5d42727c6500fc68acf56946ce31">SILS_SCI_UART_IF_init</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8hpp.html#a5411cf2dc79ba205191a074971dca066">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="uart__sils__sci__if_8cpp.html#a5411cf2dc79ba205191a074971dca066">SILS_SCI_UART_IF_TX</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data_v, <span class="keywordtype">int</span> count)</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8cpp.html#a5411cf2dc79ba205191a074971dca066">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="uart__sils__sci__if_8cpp.html#a5411cf2dc79ba205191a074971dca066">SILS_SCI_UART_IF_TX</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data_v, <span class="keywordtype">int</span> count)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="uart__sils__sci__if_8cpp.html#abfa1d3b7852658b98fc0f5dd2f45a58a">sci_com_uart_</a>.<a class="code" href="class_s_c_i_com_port_uart.html#a6f38e6a7adb11888145e0e33b779a1ed">Send</a>(data_v, 0, count);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8hpp.html#acc42290823d99aa623d7dadccba7efa4">   26</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="uart__sils__sci__if_8cpp.html#acc42290823d99aa623d7dadccba7efa4">SILS_SCI_UART_IF_RX</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data_v, <span class="keywordtype">int</span> count)</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="uart__sils__sci__if_8cpp.html#acc42290823d99aa623d7dadccba7efa4">   26</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="uart__sils__sci__if_8cpp.html#acc42290823d99aa623d7dadccba7efa4">SILS_SCI_UART_IF_RX</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data_v, <span class="keywordtype">int</span> count)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="uart__sils__sci__if_8cpp.html#abfa1d3b7852658b98fc0f5dd2f45a58a">sci_com_uart_</a>.<a class="code" href="class_s_c_i_com_port_uart.html#ae448fc44eb27ffac92bed251fd5591a8">Receive</a>(data_v, 0, count);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
@@ -196,28 +195,26 @@ $(document).ready(function(){initNavTree('uart__sils__sci__if_8cpp_source.html',
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html"><div class="ttname"><a href="class_s_c_i_com_port_uart.html">SCIComPortUart</a></div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00012">uart_sils_sci_if.hpp:13</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_a3ee5c1079552b6b3b4b01ea4353443b6"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#a3ee5c1079552b6b3b4b01ea4353443b6">SCIComPortUart::config_</a></div><div class="ttdeci">DCB config_</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00023">uart_sils_sci_if.hpp:23</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_a6f38e6a7adb11888145e0e33b779a1ed"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#a6f38e6a7adb11888145e0e33b779a1ed">SCIComPortUart::Send</a></div><div class="ttdeci">int Send(unsigned char *buffer, size_t length, size_t offset)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00066">uart_sils_sci_if.cpp:66</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ab21021890a03c46bd23706095a5de2e8"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ab21021890a03c46bd23706095a5de2e8">SCIComPortUart::~SCIComPortUart</a></div><div class="ttdeci">~SCIComPortUart(void)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00058">uart_sils_sci_if.cpp:58</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ab67ea2292c1c6c3f65d570cf5b357918"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ab67ea2292c1c6c3f65d570cf5b357918">SCIComPortUart::SCIComPortUart</a></div><div class="ttdeci">SCIComPortUart(void)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00032">uart_sils_sci_if.cpp:32</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ab975654ff10bd0b48f44588bb1a6b14e"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ab975654ff10bd0b48f44588bb1a6b14e">SCIComPortUart::myHComPort_</a></div><div class="ttdeci">HANDLE myHComPort_</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00022">uart_sils_sci_if.hpp:22</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ae448fc44eb27ffac92bed251fd5591a8"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ae448fc44eb27ffac92bed251fd5591a8">SCIComPortUart::Receive</a></div><div class="ttdeci">int Receive(unsigned char *buffer, size_t length, size_t offset)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00083">uart_sils_sci_if.cpp:83</a></div></div>
+<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ae9cf8346633a82327d6f7c68244da99b"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ae9cf8346633a82327d6f7c68244da99b">SCIComPortUart::init_success</a></div><div class="ttdeci">bool init_success</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00024">uart_sils_sci_if.hpp:24</a></div></div>
+<div class="ttc" id="auart__sils__sci__if_8cpp_html_a26bf5d42727c6500fc68acf56946ce31"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#a26bf5d42727c6500fc68acf56946ce31">SILS_SCI_UART_IF_init</a></div><div class="ttdeci">int SILS_SCI_UART_IF_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00015">uart_sils_sci_if.cpp:15</a></div></div>
+<div class="ttc" id="auart__sils__sci__if_8cpp_html_a5411cf2dc79ba205191a074971dca066"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#a5411cf2dc79ba205191a074971dca066">SILS_SCI_UART_IF_TX</a></div><div class="ttdeci">int SILS_SCI_UART_IF_TX(unsigned char *data_v, int count)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00020">uart_sils_sci_if.cpp:20</a></div></div>
+<div class="ttc" id="auart__sils__sci__if_8cpp_html_abfa1d3b7852658b98fc0f5dd2f45a58a"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#abfa1d3b7852658b98fc0f5dd2f45a58a">sci_com_uart_</a></div><div class="ttdeci">static SCIComPortUart sci_com_uart_</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00013">uart_sils_sci_if.cpp:13</a></div></div>
+<div class="ttc" id="auart__sils__sci__if_8cpp_html_acc42290823d99aa623d7dadccba7efa4"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#acc42290823d99aa623d7dadccba7efa4">SILS_SCI_UART_IF_RX</a></div><div class="ttdeci">int SILS_SCI_UART_IF_RX(unsigned char *data_v, int count)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00026">uart_sils_sci_if.cpp:26</a></div></div>
+<div class="ttc" id="auart__sils__sci__if_8hpp_html"><div class="ttname"><a href="uart__sils__sci__if_8hpp.html">uart_sils_sci_if.hpp</a></div><div class="ttdoc">uart_sils_sci_if</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="auart__sils__sci__if_8cpp_html_acc42290823d99aa623d7dadccba7efa4"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#acc42290823d99aa623d7dadccba7efa4">SILS_SCI_UART_IF_RX</a></div><div class="ttdeci">int SILS_SCI_UART_IF_RX(unsigned char *data_v, int count)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00026">uart_sils_sci_if.cpp:26</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_a6f38e6a7adb11888145e0e33b779a1ed"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#a6f38e6a7adb11888145e0e33b779a1ed">SCIComPortUart::Send</a></div><div class="ttdeci">int Send(unsigned char *buffer, size_t length, size_t offset)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00066">uart_sils_sci_if.cpp:66</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ae9cf8346633a82327d6f7c68244da99b"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ae9cf8346633a82327d6f7c68244da99b">SCIComPortUart::init_success</a></div><div class="ttdeci">bool init_success</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00024">uart_sils_sci_if.hpp:24</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ab21021890a03c46bd23706095a5de2e8"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ab21021890a03c46bd23706095a5de2e8">SCIComPortUart::~SCIComPortUart</a></div><div class="ttdeci">~SCIComPortUart(void)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00058">uart_sils_sci_if.cpp:58</a></div></div>
-<div class="ttc" id="auart__sils__sci__if_8cpp_html_a5411cf2dc79ba205191a074971dca066"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#a5411cf2dc79ba205191a074971dca066">SILS_SCI_UART_IF_TX</a></div><div class="ttdeci">int SILS_SCI_UART_IF_TX(unsigned char *data_v, int count)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00020">uart_sils_sci_if.cpp:20</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ab67ea2292c1c6c3f65d570cf5b357918"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ab67ea2292c1c6c3f65d570cf5b357918">SCIComPortUart::SCIComPortUart</a></div><div class="ttdeci">SCIComPortUart(void)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00032">uart_sils_sci_if.cpp:32</a></div></div>
-<div class="ttc" id="auart__sils__sci__if_8cpp_html_abfa1d3b7852658b98fc0f5dd2f45a58a"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#abfa1d3b7852658b98fc0f5dd2f45a58a">sci_com_uart_</a></div><div class="ttdeci">static SCIComPortUart sci_com_uart_</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00013">uart_sils_sci_if.cpp:13</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ae448fc44eb27ffac92bed251fd5591a8"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ae448fc44eb27ffac92bed251fd5591a8">SCIComPortUart::Receive</a></div><div class="ttdeci">int Receive(unsigned char *buffer, size_t length, size_t offset)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00083">uart_sils_sci_if.cpp:83</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_ab975654ff10bd0b48f44588bb1a6b14e"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#ab975654ff10bd0b48f44588bb1a6b14e">SCIComPortUart::myHComPort_</a></div><div class="ttdeci">HANDLE myHComPort_</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00022">uart_sils_sci_if.hpp:22</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html_a3ee5c1079552b6b3b4b01ea4353443b6"><div class="ttname"><a href="class_s_c_i_com_port_uart.html#a3ee5c1079552b6b3b4b01ea4353443b6">SCIComPortUart::config_</a></div><div class="ttdeci">DCB config_</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00023">uart_sils_sci_if.hpp:23</a></div></div>
-<div class="ttc" id="auart__sils__sci__if_8cpp_html_a26bf5d42727c6500fc68acf56946ce31"><div class="ttname"><a href="uart__sils__sci__if_8cpp.html#a26bf5d42727c6500fc68acf56946ce31">SILS_SCI_UART_IF_init</a></div><div class="ttdeci">int SILS_SCI_UART_IF_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8cpp_source.html#l00015">uart_sils_sci_if.cpp:15</a></div></div>
-<div class="ttc" id="aclass_s_c_i_com_port_uart_html"><div class="ttname"><a href="class_s_c_i_com_port_uart.html">SCIComPortUart</a></div><div class="ttdef"><b>Definition:</b> <a href="uart__sils__sci__if_8hpp_source.html#l00012">uart_sils_sci_if.hpp:12</a></div></div>
-<div class="ttc" id="auart__sils__sci__if_8hpp_html"><div class="ttname"><a href="uart__sils__sci__if_8hpp.html">uart_sils_sci_if.hpp</a></div><div class="ttdoc">uart_sils_sci_if</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_82a6d08b74acde068a893bd36b924818.html">IfWrapper</a></li><li class="navelem"><a class="el" href="dir_95bd36b56c408dd37cca77aa41f9b072.html">Sils</a></li><li class="navelem"><a class="el" href="uart__sils__sci__if_8cpp.html">uart_sils_sci_if.cpp</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

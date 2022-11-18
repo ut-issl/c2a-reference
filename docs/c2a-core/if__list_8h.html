@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_user/IfWrapper/if_list.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -99,7 +99,7 @@ if_list.h の依存先関係図:</div>
 </div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="if__list_8h__dep__incl.svg" width="2019" height="751"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="if__list_8h__dep__incl.svg" width="1996" height="751"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -107,9 +107,9 @@ if_list.h の依存先関係図:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
-<tr class="memitem:ab5f5f490541a10960ef592a061c74408"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408">IF_LIST_ENUM</a> { <a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408a1310d5243a96b9b2268e72689e2d6149">CCSDS</a>, 
-<a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408ab81270ba54ae4586a18415e5a579633d">UART</a>, 
-<a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408a0af9761a69e0a7d2c7b881a09c4fe5c3">IF_LIST_MAX</a>
+<tr class="memitem:ab5f5f490541a10960ef592a061c74408"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408">IF_LIST_ENUM</a> { <a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408a1310d5243a96b9b2268e72689e2d6149">CCSDS</a>
+, <a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408ab81270ba54ae4586a18415e5a579633d">UART</a>
+, <a class="el" href="if__list_8h.html#ab5f5f490541a10960ef592a061c74408a0af9761a69e0a7d2c7b881a09c4fe5c3">IF_LIST_MAX</a>
  }</td></tr>
 <tr class="separator:ab5f5f490541a10960ef592a061c74408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa565cb00320ffdac33b105164fd2dcc4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="if__list_8h.html#aa565cb00320ffdac33b105164fd2dcc4">IF_REOPEN_REASON</a> { <a class="el" href="if__list_8h.html#aa565cb00320ffdac33b105164fd2dcc4a1c6965c2b0dad1dc5fc22cbf13c21249">IF_REOPEN_TLM_DISRUPTION</a> = 100
@@ -174,11 +174,23 @@ if_list.h の依存先関係図:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int(* IF_init[])(void *my_if)</td>
+          <td class="memname">int(* IF_init[])(void *my_if) </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_if</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="if__list_8c_source.html">if_list.c</a> の <a class="el" href="if__list_8c_source.html#l00006">6</a> 行目に定義があります。</p>
@@ -190,11 +202,33 @@ if_list.h の依存先関係図:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int(* IF_reopen[])(void *my_if, int reason)</td>
+          <td class="memname">int(* IF_reopen[])(void *my_if, int reason) </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_if</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="if__list_8c_source.html">if_list.c</a> の <a class="el" href="if__list_8c_source.html#l00012">12</a> 行目に定義があります。</p>
@@ -206,11 +240,39 @@ if_list.h の依存先関係図:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int(* IF_RX[])(void *my_if, void *data_v, int buffer_size)</td>
+          <td class="memname">int(* IF_RX[])(void *my_if, void *data_v, int buffer_size) </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_if</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buffer_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="if__list_8c_source.html">if_list.c</a> の <a class="el" href="if__list_8c_source.html#l00008">8</a> 行目に定義があります。</p>
@@ -222,11 +284,39 @@ if_list.h の依存先関係図:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int(* IF_TX[])(void *my_if, void *data_v, int data_size)</td>
+          <td class="memname">int(* IF_TX[])(void *my_if, void *data_v, int data_size) </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>my_if</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data_v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="if__list_8c_source.html">if_list.c</a> の <a class="el" href="if__list_8c_source.html#l00010">10</a> 行目に定義があります。</p>
@@ -239,9 +329,7 @@ if_list.h の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_82a6d08b74acde068a893bd36b924818.html">IfWrapper</a></li><li class="navelem"><a class="el" href="if__list_8h.html">if_list.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

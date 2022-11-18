@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_user/IfWrapper/if_list.c ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -90,37 +90,35 @@ $(document).ready(function(){initNavTree('if__list_8c_source.html',''); initResi
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="if__list_8h.html#a76c66cc5f505840553fcf03deaa67ede">    6</a></span>&#160;int (*<a class="code" href="if__list_8c.html#a76c66cc5f505840553fcf03deaa67ede">IF_init</a>[])(<span class="keywordtype">void</span>* my_if) = { <a class="code" href="ccsds_8h.html#a56a19fe9cab1f813caef3bb1c5170c1c">CCSDS_init</a>, <a class="code" href="uart_8h.html#a1a7950b01305890cb8b48d8ee74c2133">UART_init</a>};</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="if__list_8c.html#a76c66cc5f505840553fcf03deaa67ede">    6</a></span>&#160;int (*<a class="code" href="if__list_8c.html#a76c66cc5f505840553fcf03deaa67ede">IF_init</a>[])(<span class="keywordtype">void</span>* my_if) = { <a class="code" href="ccsds_8h.html#a56a19fe9cab1f813caef3bb1c5170c1c">CCSDS_init</a>, <a class="code" href="uart_8h.html#a1a7950b01305890cb8b48d8ee74c2133">UART_init</a>};</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="if__list_8h.html#a695c21768b3a91f7c5fa17affcedce5b">    8</a></span>&#160;int (*<a class="code" href="if__list_8c.html#a695c21768b3a91f7c5fa17affcedce5b">IF_RX</a>[])(<span class="keywordtype">void</span>* my_if, <span class="keywordtype">void</span>* data_v, <span class="keywordtype">int</span> buffer_size) = { <a class="code" href="ccsds_8h.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a>, <a class="code" href="uart_8h.html#ae3c60be4aa418a3d4abb73b83a49d093">UART_rx</a>};</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="if__list_8c.html#a695c21768b3a91f7c5fa17affcedce5b">    8</a></span>&#160;int (*<a class="code" href="if__list_8c.html#a695c21768b3a91f7c5fa17affcedce5b">IF_RX</a>[])(<span class="keywordtype">void</span>* my_if, <span class="keywordtype">void</span>* data_v, <span class="keywordtype">int</span> buffer_size) = { <a class="code" href="ccsds_8h.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a>, <a class="code" href="uart_8h.html#ae3c60be4aa418a3d4abb73b83a49d093">UART_rx</a>};</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="if__list_8h.html#ae28da865a8fb442c8a6970302e06d179">   10</a></span>&#160;int (*<a class="code" href="if__list_8c.html#ae28da865a8fb442c8a6970302e06d179">IF_TX</a>[])(<span class="keywordtype">void</span>* my_if, <span class="keywordtype">void</span>* data_v, <span class="keywordtype">int</span> data_size) = { <a class="code" href="ccsds_8h.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a>, <a class="code" href="uart_8h.html#a632db0edd9d931de93163df758ee3eae">UART_tx</a>};</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="if__list_8c.html#ae28da865a8fb442c8a6970302e06d179">   10</a></span>&#160;int (*<a class="code" href="if__list_8c.html#ae28da865a8fb442c8a6970302e06d179">IF_TX</a>[])(<span class="keywordtype">void</span>* my_if, <span class="keywordtype">void</span>* data_v, <span class="keywordtype">int</span> data_size) = { <a class="code" href="ccsds_8h.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a>, <a class="code" href="uart_8h.html#a632db0edd9d931de93163df758ee3eae">UART_tx</a>};</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="if__list_8h.html#a88e6657e4a5022d12e6b55fb09ff3361">   12</a></span>&#160;int (*<a class="code" href="if__list_8c.html#a88e6657e4a5022d12e6b55fb09ff3361">IF_reopen</a>[])(<span class="keywordtype">void</span>* my_if, <span class="keywordtype">int</span> reason) = { <a class="code" href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a>, <a class="code" href="uart_8h.html#a19a534cedcefff43590c260f621a29bb">UART_reopen</a>};</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="if__list_8c.html#a88e6657e4a5022d12e6b55fb09ff3361">   12</a></span>&#160;int (*<a class="code" href="if__list_8c.html#a88e6657e4a5022d12e6b55fb09ff3361">IF_reopen</a>[])(<span class="keywordtype">void</span>* my_if, <span class="keywordtype">int</span> reason) = { <a class="code" href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a>, <a class="code" href="uart_8h.html#a19a534cedcefff43590c260f621a29bb">UART_reopen</a>};</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma section</span></div>
-</div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="accsds_8h_html_aa179f5ce8b2954a51602282f977f55e6"><div class="ttname"><a href="ccsds_8h.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a></div><div class="ttdeci">int CCSDS_rx(void *my_ccsds_v, void *data_v, int buffer_size)</div><div class="ttdoc">CCSDS 受信. API を呼び出し, buffer に受信結果をコピーする</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00034">ccsds_sils.cpp:34</a></div></div>
-<div class="ttc" id="aif__list_8c_html_a88e6657e4a5022d12e6b55fb09ff3361"><div class="ttname"><a href="if__list_8c.html#a88e6657e4a5022d12e6b55fb09ff3361">IF_reopen</a></div><div class="ttdeci">int(* IF_reopen[])(void *my_if, int reason)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00012">if_list.c:12</a></div></div>
-<div class="ttc" id="accsds_8h_html_ad48a0947151ed3b335b0d717fc97d464"><div class="ttname"><a href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a></div><div class="ttdeci">int CCSDS_reopen(void *my_ccsds_v, int reason)</div><div class="ttdoc">CCSDS reopen</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00063">ccsds_sils.cpp:63</a></div></div>
 <div class="ttc" id="accsds_8h_html_a56a19fe9cab1f813caef3bb1c5170c1c"><div class="ttname"><a href="ccsds_8h.html#a56a19fe9cab1f813caef3bb1c5170c1c">CCSDS_init</a></div><div class="ttdeci">int CCSDS_init(void *my_ccsds_v)</div><div class="ttdoc">CCSDS の init</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00022">ccsds_sils.cpp:22</a></div></div>
+<div class="ttc" id="accsds_8h_html_aa179f5ce8b2954a51602282f977f55e6"><div class="ttname"><a href="ccsds_8h.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a></div><div class="ttdeci">int CCSDS_rx(void *my_ccsds_v, void *data_v, int buffer_size)</div><div class="ttdoc">CCSDS 受信. API を呼び出し, buffer に受信結果をコピーする</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00034">ccsds_sils.cpp:34</a></div></div>
+<div class="ttc" id="accsds_8h_html_ab1d8a2ef0a54d2f5e95061502b7d0b06"><div class="ttname"><a href="ccsds_8h.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a></div><div class="ttdeci">int CCSDS_tx(void *my_ccsds_v, void *data_v, int data_size)</div><div class="ttdoc">CCSDS 送信. API を呼び出し, 送信を行う</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00046">ccsds_sils.cpp:46</a></div></div>
+<div class="ttc" id="accsds_8h_html_ad48a0947151ed3b335b0d717fc97d464"><div class="ttname"><a href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a></div><div class="ttdeci">int CCSDS_reopen(void *my_ccsds_v, int reason)</div><div class="ttdoc">CCSDS reopen</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00063">ccsds_sils.cpp:63</a></div></div>
+<div class="ttc" id="aif__list_8c_html_a695c21768b3a91f7c5fa17affcedce5b"><div class="ttname"><a href="if__list_8c.html#a695c21768b3a91f7c5fa17affcedce5b">IF_RX</a></div><div class="ttdeci">int(* IF_RX[])(void *my_if, void *data_v, int buffer_size)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00008">if_list.c:8</a></div></div>
 <div class="ttc" id="aif__list_8c_html_a76c66cc5f505840553fcf03deaa67ede"><div class="ttname"><a href="if__list_8c.html#a76c66cc5f505840553fcf03deaa67ede">IF_init</a></div><div class="ttdeci">int(* IF_init[])(void *my_if)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00006">if_list.c:6</a></div></div>
+<div class="ttc" id="aif__list_8c_html_a88e6657e4a5022d12e6b55fb09ff3361"><div class="ttname"><a href="if__list_8c.html#a88e6657e4a5022d12e6b55fb09ff3361">IF_reopen</a></div><div class="ttdeci">int(* IF_reopen[])(void *my_if, int reason)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00012">if_list.c:12</a></div></div>
+<div class="ttc" id="aif__list_8c_html_ae28da865a8fb442c8a6970302e06d179"><div class="ttname"><a href="if__list_8c.html#ae28da865a8fb442c8a6970302e06d179">IF_TX</a></div><div class="ttdeci">int(* IF_TX[])(void *my_if, void *data_v, int data_size)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00010">if_list.c:10</a></div></div>
+<div class="ttc" id="aif__list_8h_html"><div class="ttname"><a href="if__list_8h.html">if_list.h</a></div></div>
 <div class="ttc" id="auart_8h_html_a19a534cedcefff43590c260f621a29bb"><div class="ttname"><a href="uart_8h.html#a19a534cedcefff43590c260f621a29bb">UART_reopen</a></div><div class="ttdeci">int UART_reopen(void *my_uart_v, int reason)</div><div class="ttdoc">指定されたchを開きなおす</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils_8cpp_source.html#l00060">uart_sils.cpp:60</a></div></div>
 <div class="ttc" id="auart_8h_html_a1a7950b01305890cb8b48d8ee74c2133"><div class="ttname"><a href="uart_8h.html#a1a7950b01305890cb8b48d8ee74c2133">UART_init</a></div><div class="ttdeci">int UART_init(void *my_uart_v)</div><div class="ttdoc">UART_CONFIG構造体をグローバルインスタンスとして定義し, ポインタを渡すことでポートを初期化する.</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils_8cpp_source.html#l00012">uart_sils.cpp:12</a></div></div>
-<div class="ttc" id="accsds_8h_html_ab1d8a2ef0a54d2f5e95061502b7d0b06"><div class="ttname"><a href="ccsds_8h.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a></div><div class="ttdeci">int CCSDS_tx(void *my_ccsds_v, void *data_v, int data_size)</div><div class="ttdoc">CCSDS 送信. API を呼び出し, 送信を行う</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00046">ccsds_sils.cpp:46</a></div></div>
 <div class="ttc" id="auart_8h_html_a632db0edd9d931de93163df758ee3eae"><div class="ttname"><a href="uart_8h.html#a632db0edd9d931de93163df758ee3eae">UART_tx</a></div><div class="ttdeci">int UART_tx(void *my_uart_v, void *data_v, int data_size)</div><div class="ttdoc">UART_CONFIG構造体にて指定されたchへデータを送信します</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils_8cpp_source.html#l00033">uart_sils.cpp:33</a></div></div>
-<div class="ttc" id="aif__list_8c_html_a695c21768b3a91f7c5fa17affcedce5b"><div class="ttname"><a href="if__list_8c.html#a695c21768b3a91f7c5fa17affcedce5b">IF_RX</a></div><div class="ttdeci">int(* IF_RX[])(void *my_if, void *data_v, int buffer_size)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00008">if_list.c:8</a></div></div>
-<div class="ttc" id="aif__list_8c_html_ae28da865a8fb442c8a6970302e06d179"><div class="ttname"><a href="if__list_8c.html#ae28da865a8fb442c8a6970302e06d179">IF_TX</a></div><div class="ttdeci">int(* IF_TX[])(void *my_if, void *data_v, int data_size)</div><div class="ttdef"><b>Definition:</b> <a href="if__list_8c_source.html#l00010">if_list.c:10</a></div></div>
 <div class="ttc" id="auart_8h_html_ae3c60be4aa418a3d4abb73b83a49d093"><div class="ttname"><a href="uart_8h.html#ae3c60be4aa418a3d4abb73b83a49d093">UART_rx</a></div><div class="ttdeci">int UART_rx(void *my_uart_v, void *data_v, int buffer_size)</div><div class="ttdoc">UART_CONFIG構造体にて指定されたchからデータを受信します</div><div class="ttdef"><b>Definition:</b> <a href="uart__sils_8cpp_source.html#l00017">uart_sils.cpp:17</a></div></div>
-<div class="ttc" id="aif__list_8h_html"><div class="ttname"><a href="if__list_8h.html">if_list.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_82a6d08b74acde068a893bd36b924818.html">IfWrapper</a></li><li class="navelem"><a class="el" href="if__list_8c.html">if_list.c</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

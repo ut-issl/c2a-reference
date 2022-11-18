@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_user/IfWrapper/Sils/wdt_sils.cpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('wdt__sils_8cpp_source.html',''); initR
 <div class="contents">
 <a href="wdt__sils_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="wdt_8h.html">src_core/IfWrapper/wdt.h</a>&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="wdt__sils_8cpp.html#a9a8311bd52077f109af8fecfeb69b81e">    3</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#a9a8311bd52077f109af8fecfeb69b81e">WDT_initialize</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="wdt_8h.html#a9a8311bd52077f109af8fecfeb69b81e">    3</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#a9a8311bd52077f109af8fecfeb69b81e">WDT_initialize</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <a class="code" href="struct_w_d_t___config.html">WDT_Config</a>* my_wdt = (<a class="code" href="struct_w_d_t___config.html">WDT_Config</a>*)<a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <a class="code" href="wdt__sils_8cpp.html#a6f6b0db21070c6b1128db97af5cc6e52">WDT_set_timer</a>(<a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>, 7);</div>
@@ -97,47 +97,45 @@ $(document).ready(function(){initNavTree('wdt__sils_8cpp_source.html',''); initR
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="wdt__sils_8cpp.html#af3567f91375b210554b07571f3a5120b">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#af3567f91375b210554b07571f3a5120b">WDT_clear</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="wdt_8h.html#af3567f91375b210554b07571f3a5120b">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#af3567f91375b210554b07571f3a5120b">WDT_clear</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="wdt__sils_8cpp.html#a39393ed268d27180f33a72a876cb3f31">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#a39393ed268d27180f33a72a876cb3f31">WDT_enable</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="wdt_8h.html#a39393ed268d27180f33a72a876cb3f31">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#a39393ed268d27180f33a72a876cb3f31">WDT_enable</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="wdt__sils_8cpp.html#ad7563877133c3f84fc3e4c54e97bd8e7">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#ad7563877133c3f84fc3e4c54e97bd8e7">WDT_disable</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="wdt_8h.html#ad7563877133c3f84fc3e4c54e97bd8e7">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#ad7563877133c3f84fc3e4c54e97bd8e7">WDT_disable</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>)</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="wdt__sils_8cpp.html#a6f6b0db21070c6b1128db97af5cc6e52">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#a6f6b0db21070c6b1128db97af5cc6e52">WDT_set_timer</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>, <span class="keywordtype">int</span> time)</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="wdt_8h.html#a6f6b0db21070c6b1128db97af5cc6e52">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wdt__sils_8cpp.html#a6f6b0db21070c6b1128db97af5cc6e52">WDT_set_timer</a>(<span class="keywordtype">void</span>* <a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>, <span class="keywordtype">int</span> time)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="struct_w_d_t___config.html">WDT_Config</a>* my_wdt = (<a class="code" href="struct_w_d_t___config.html">WDT_Config</a>*)<a class="code" href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  my_wdt-&gt;<a class="code" href="struct_w_d_t___config.html#a1f7dbd381538ce8365882dd85c670171">timer_setting</a> = time;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="astruct_w_d_t___config_html"><div class="ttname"><a href="struct_w_d_t___config.html">WDT_Config</a></div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00010">wdt.h:11</a></div></div>
+<div class="ttc" id="astruct_w_d_t___config_html_a1f7dbd381538ce8365882dd85c670171"><div class="ttname"><a href="struct_w_d_t___config.html#a1f7dbd381538ce8365882dd85c670171">WDT_Config::timer_setting</a></div><div class="ttdeci">int timer_setting</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00012">wdt.h:12</a></div></div>
+<div class="ttc" id="astruct_w_d_t___config_html_ac86d594cabdaf3ef5010e8d1d5cefc94"><div class="ttname"><a href="struct_w_d_t___config.html#ac86d594cabdaf3ef5010e8d1d5cefc94">WDT_Config::is_clear_enable</a></div><div class="ttdeci">uint8_t is_clear_enable</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00014">wdt.h:14</a></div></div>
+<div class="ttc" id="astruct_w_d_t___config_html_ad69597a5bf2ad3b61a3c0efd946ea93b"><div class="ttname"><a href="struct_w_d_t___config.html#ad69597a5bf2ad3b61a3c0efd946ea93b">WDT_Config::is_wdt_enable</a></div><div class="ttdeci">uint8_t is_wdt_enable</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00013">wdt.h:13</a></div></div>
+<div class="ttc" id="awatchdog__timer_8c_html_aa4b6de6a44e18410c23db259d68e1ec2"><div class="ttname"><a href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a></div><div class="ttdeci">const WDT_Config *const wdt_config</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00012">watchdog_timer.c:12</a></div></div>
+<div class="ttc" id="awdt_8h_html"><div class="ttname"><a href="wdt_8h.html">wdt.h</a></div><div class="ttdoc">watchdog timer の IF wapper</div></div>
+<div class="ttc" id="awdt__sils_8cpp_html_a39393ed268d27180f33a72a876cb3f31"><div class="ttname"><a href="wdt__sils_8cpp.html#a39393ed268d27180f33a72a876cb3f31">WDT_enable</a></div><div class="ttdeci">int WDT_enable(void *wdt_config)</div><div class="ttdoc">WDTの有効化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00018">wdt_sils.cpp:18</a></div></div>
+<div class="ttc" id="awdt__sils_8cpp_html_a6f6b0db21070c6b1128db97af5cc6e52"><div class="ttname"><a href="wdt__sils_8cpp.html#a6f6b0db21070c6b1128db97af5cc6e52">WDT_set_timer</a></div><div class="ttdeci">int WDT_set_timer(void *wdt_config, int time)</div><div class="ttdoc">WDTの時間設定</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00028">wdt_sils.cpp:28</a></div></div>
+<div class="ttc" id="awdt__sils_8cpp_html_a9a8311bd52077f109af8fecfeb69b81e"><div class="ttname"><a href="wdt__sils_8cpp.html#a9a8311bd52077f109af8fecfeb69b81e">WDT_initialize</a></div><div class="ttdeci">int WDT_initialize(void *wdt_config)</div><div class="ttdoc">WDTの初期化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00003">wdt_sils.cpp:3</a></div></div>
+<div class="ttc" id="awdt__sils_8cpp_html_ad7563877133c3f84fc3e4c54e97bd8e7"><div class="ttname"><a href="wdt__sils_8cpp.html#ad7563877133c3f84fc3e4c54e97bd8e7">WDT_disable</a></div><div class="ttdeci">int WDT_disable(void *wdt_config)</div><div class="ttdoc">WDTの有効化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00023">wdt_sils.cpp:23</a></div></div>
+<div class="ttc" id="awdt__sils_8cpp_html_af3567f91375b210554b07571f3a5120b"><div class="ttname"><a href="wdt__sils_8cpp.html#af3567f91375b210554b07571f3a5120b">WDT_clear</a></div><div class="ttdeci">int WDT_clear(void *wdt_config)</div><div class="ttdoc">WDTのカウンタクリア</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00013">wdt_sils.cpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="awdt__sils_8cpp_html_a6f6b0db21070c6b1128db97af5cc6e52"><div class="ttname"><a href="wdt__sils_8cpp.html#a6f6b0db21070c6b1128db97af5cc6e52">WDT_set_timer</a></div><div class="ttdeci">int WDT_set_timer(void *wdt_config, int time)</div><div class="ttdoc">WDTの時間設定</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00028">wdt_sils.cpp:28</a></div></div>
-<div class="ttc" id="awdt_8h_html"><div class="ttname"><a href="wdt_8h.html">wdt.h</a></div><div class="ttdoc">watchdog timer の IF wapper</div></div>
-<div class="ttc" id="awatchdog__timer_8c_html_aa4b6de6a44e18410c23db259d68e1ec2"><div class="ttname"><a href="watchdog__timer_8c.html#aa4b6de6a44e18410c23db259d68e1ec2">wdt_config</a></div><div class="ttdeci">const WDT_Config *const wdt_config</div><div class="ttdef"><b>Definition:</b> <a href="watchdog__timer_8c_source.html#l00012">watchdog_timer.c:12</a></div></div>
-<div class="ttc" id="astruct_w_d_t___config_html_ac86d594cabdaf3ef5010e8d1d5cefc94"><div class="ttname"><a href="struct_w_d_t___config.html#ac86d594cabdaf3ef5010e8d1d5cefc94">WDT_Config::is_clear_enable</a></div><div class="ttdeci">uint8_t is_clear_enable</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00014">wdt.h:14</a></div></div>
-<div class="ttc" id="astruct_w_d_t___config_html_a1f7dbd381538ce8365882dd85c670171"><div class="ttname"><a href="struct_w_d_t___config.html#a1f7dbd381538ce8365882dd85c670171">WDT_Config::timer_setting</a></div><div class="ttdeci">int timer_setting</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00012">wdt.h:12</a></div></div>
-<div class="ttc" id="awdt__sils_8cpp_html_a9a8311bd52077f109af8fecfeb69b81e"><div class="ttname"><a href="wdt__sils_8cpp.html#a9a8311bd52077f109af8fecfeb69b81e">WDT_initialize</a></div><div class="ttdeci">int WDT_initialize(void *wdt_config)</div><div class="ttdoc">WDTの初期化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00003">wdt_sils.cpp:3</a></div></div>
-<div class="ttc" id="astruct_w_d_t___config_html_ad69597a5bf2ad3b61a3c0efd946ea93b"><div class="ttname"><a href="struct_w_d_t___config.html#ad69597a5bf2ad3b61a3c0efd946ea93b">WDT_Config::is_wdt_enable</a></div><div class="ttdeci">uint8_t is_wdt_enable</div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00013">wdt.h:13</a></div></div>
-<div class="ttc" id="awdt__sils_8cpp_html_af3567f91375b210554b07571f3a5120b"><div class="ttname"><a href="wdt__sils_8cpp.html#af3567f91375b210554b07571f3a5120b">WDT_clear</a></div><div class="ttdeci">int WDT_clear(void *wdt_config)</div><div class="ttdoc">WDTのカウンタクリア</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00013">wdt_sils.cpp:13</a></div></div>
-<div class="ttc" id="awdt__sils_8cpp_html_ad7563877133c3f84fc3e4c54e97bd8e7"><div class="ttname"><a href="wdt__sils_8cpp.html#ad7563877133c3f84fc3e4c54e97bd8e7">WDT_disable</a></div><div class="ttdeci">int WDT_disable(void *wdt_config)</div><div class="ttdoc">WDTの有効化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00023">wdt_sils.cpp:23</a></div></div>
-<div class="ttc" id="awdt__sils_8cpp_html_a39393ed268d27180f33a72a876cb3f31"><div class="ttname"><a href="wdt__sils_8cpp.html#a39393ed268d27180f33a72a876cb3f31">WDT_enable</a></div><div class="ttdeci">int WDT_enable(void *wdt_config)</div><div class="ttdoc">WDTの有効化</div><div class="ttdef"><b>Definition:</b> <a href="wdt__sils_8cpp_source.html#l00018">wdt_sils.cpp:18</a></div></div>
-<div class="ttc" id="astruct_w_d_t___config_html"><div class="ttname"><a href="struct_w_d_t___config.html">WDT_Config</a></div><div class="ttdef"><b>Definition:</b> <a href="wdt_8h_source.html#l00010">wdt.h:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_82a6d08b74acde068a893bd36b924818.html">IfWrapper</a></li><li class="navelem"><a class="el" href="dir_95bd36b56c408dd37cca77aa41f9b072.html">Sils</a></li><li class="navelem"><a class="el" href="wdt__sils_8cpp.html">wdt_sils.cpp</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/System/EventManager/event_logger.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -110,7 +110,7 @@ event_logger.h の依存先関係図:</div>
 </div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h__dep__incl.svg" width="2902" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="event__logger_8h__dep__incl.svg" width="2459" height="364"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -220,66 +220,66 @@ event_logger.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:a66edf6d5dc4a12fbd8565ed752559c33"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33">EL_CORE_GROUP</a> { <br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33ae0ba294238c1577b3391f91f0e28ea7e">EL_CORE_GROUP_NULL</a> = 0, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a1c86fb4bff288acd348171209d984f02">EL_CORE_GROUP_EVENT_LOGGER</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aafd9394151eaa23c9bad51ccea2ee6c8">EL_CORE_GROUP_MODE_MANAGER</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aba6e6b4c86e67b9f14181f9fee81c11f">EL_CORE_GROUP_TASK_DISPATCHER</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aac45665fd5ab764421f0ce921b9edb62">EL_CORE_GROUP_APP_MANAGER</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aaadab0938661b88d85ff391d367412a0">EL_CORE_GROUP_TLCD_PAST_TIME</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af208f89a56c7baa8b98336fadff0b200">EL_CORE_GROUP_TLCD_DEPLOY_BLOCK</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a15476b039c7faff69f65fd6c2fba316c">EL_CORE_GROUP_DCU</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af3cd26d75fdc29c868b4d66c9531fb06">EL_CORE_GROUP_EVENT_HANDLER</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a604f2f69e947ae16d2381a13f768d0e0">EL_CORE_GROUP_EH_MATCH_RULE</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a2e8132e7a397fc01908de8be8058ea2e">EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a3a131063ef30aab8c655a12228edfd4a">EL_CORE_GROUP_COMMAND_ANALYZE</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a328dc2ccd0e4a3d9771887d1bc7a610d">EL_CORE_GROUP_CDIS_INTERNAL_ERR</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a7cf05e9fc3af52d827f5d9cf9917d7e5">EL_CORE_GROUP_CDIS_EXEC_ERR_STS</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aa26e8ef8616bc9cca8ecd254590b4f85">EL_CORE_GROUP_CDIS_EXEC_ERR_CODE</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872">EL_CORE_GROUP_EL_DROP_CLOG1</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe">EL_CORE_GROUP_EL_DROP_CLOG2</a>, 
-<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6">EL_CORE_GROUP_MAX</a>
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33ae0ba294238c1577b3391f91f0e28ea7e">EL_CORE_GROUP_NULL</a> = 0
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a1c86fb4bff288acd348171209d984f02">EL_CORE_GROUP_EVENT_LOGGER</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aafd9394151eaa23c9bad51ccea2ee6c8">EL_CORE_GROUP_MODE_MANAGER</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aba6e6b4c86e67b9f14181f9fee81c11f">EL_CORE_GROUP_TASK_DISPATCHER</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aac45665fd5ab764421f0ce921b9edb62">EL_CORE_GROUP_APP_MANAGER</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aaadab0938661b88d85ff391d367412a0">EL_CORE_GROUP_TLCD_PAST_TIME</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af208f89a56c7baa8b98336fadff0b200">EL_CORE_GROUP_TLCD_DEPLOY_BLOCK</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a15476b039c7faff69f65fd6c2fba316c">EL_CORE_GROUP_DCU</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33af3cd26d75fdc29c868b4d66c9531fb06">EL_CORE_GROUP_EVENT_HANDLER</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a604f2f69e947ae16d2381a13f768d0e0">EL_CORE_GROUP_EH_MATCH_RULE</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a2e8132e7a397fc01908de8be8058ea2e">EL_CORE_GROUP_EH_RESPOND_WITH_HIGHER_LEVEL_RULE</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a3a131063ef30aab8c655a12228edfd4a">EL_CORE_GROUP_COMMAND_ANALYZE</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a328dc2ccd0e4a3d9771887d1bc7a610d">EL_CORE_GROUP_CDIS_INTERNAL_ERR</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a7cf05e9fc3af52d827f5d9cf9917d7e5">EL_CORE_GROUP_CDIS_EXEC_ERR_STS</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33aa26e8ef8616bc9cca8ecd254590b4f85">EL_CORE_GROUP_CDIS_EXEC_ERR_CODE</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a86edcec4d058709fb8b8cdbdfb589872">EL_CORE_GROUP_EL_DROP_CLOG1</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33a437371a5a38f14d8b5a84df671f49ebe">EL_CORE_GROUP_EL_DROP_CLOG2</a>
+, <a class="el" href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33abc0a4d57f6bf8774a2c11afe2aae47f6">EL_CORE_GROUP_MAX</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a66edf6d5dc4a12fbd8565ed752559c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の Event Group の C2A core 使用分  <a href="event__logger_8h.html#a66edf6d5dc4a12fbd8565ed752559c33">[詳解]</a><br /></td></tr>
 <tr class="separator:a66edf6d5dc4a12fbd8565ed752559c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9ce022007a3fee570838f8d0af4c00a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00a">EL_EVENT_LOCAL</a> { <br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa59325b5aae01d83965ad87a9b072a834">EL_EVENT_LOCAL_UNKNOWN_ERR</a>, 
-<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa36bc11742710cbd87f7f11dbbfd78f23">EL_EVENT_LOCAL_TLOG_HIGH_HALF_FULL</a>, 
-<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa922831dd0a03b26767d727f299c3912a">EL_EVENT_LOCAL_TLOG_HIGH_FULL</a>, 
-<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa2fb2216c4f4b6ce2932f0a51eb54233c">EL_EVENT_LOCAL_TLOG_MIDDLE_HALF_FULL</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa35f144c0a6b2d058673d4ff276870081">EL_EVENT_LOCAL_TLOG_MIDDLE_FULL</a>, 
-<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa561a0d4b8306dc7c295ce12f3f9aac36">EL_EVENT_LOCAL_TLOG_LOW_HALF_FULL</a>, 
-<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa62d5cb38f23f7eb56f5387383b455246">EL_EVENT_LOCAL_TLOG_LOW_FULL</a>, 
-<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aaf49d1ef7e4e961b2398337cc38dc0aaf">EL_EVENT_LOCAL_MAX</a>
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa59325b5aae01d83965ad87a9b072a834">EL_EVENT_LOCAL_UNKNOWN_ERR</a>
+, <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa36bc11742710cbd87f7f11dbbfd78f23">EL_EVENT_LOCAL_TLOG_HIGH_HALF_FULL</a>
+, <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa922831dd0a03b26767d727f299c3912a">EL_EVENT_LOCAL_TLOG_HIGH_FULL</a>
+, <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa2fb2216c4f4b6ce2932f0a51eb54233c">EL_EVENT_LOCAL_TLOG_MIDDLE_HALF_FULL</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa35f144c0a6b2d058673d4ff276870081">EL_EVENT_LOCAL_TLOG_MIDDLE_FULL</a>
+, <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa561a0d4b8306dc7c295ce12f3f9aac36">EL_EVENT_LOCAL_TLOG_LOW_HALF_FULL</a>
+, <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aa62d5cb38f23f7eb56f5387383b455246">EL_EVENT_LOCAL_TLOG_LOW_FULL</a>
+, <a class="el" href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00aaf49d1ef7e4e961b2398337cc38dc0aaf">EL_EVENT_LOCAL_MAX</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ae9ce022007a3fee570838f8d0af4c00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">EL_CORE_GROUP_EVENT_LOGGER の local id  <a href="event__logger_8h.html#ae9ce022007a3fee570838f8d0af4c00a">[詳解]</a><br /></td></tr>
 <tr class="separator:ae9ce022007a3fee570838f8d0af4c00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae574b6e1365b0b0c0af97f6f8abd7af0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">EL_ERROR_LEVEL</a> { <br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a2f31ef7ac735fbc6484f9a6277e3b934">EL_ERROR_LEVEL_HIGH</a> = 0, 
-<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a25b47724843e3a08bd06fffd74918d6b">EL_ERROR_LEVEL_MIDDLE</a>, 
-<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a653dda7718442dd2ad5cf51a224c5c13">EL_ERROR_LEVEL_LOW</a>, 
-<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0ad920427ef302d463b3a72ef4f6e9390f">EL_ERROR_LEVEL_EL</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a2cb57d9084afeb9f5cbe8a7dd1268a6b">EL_ERROR_LEVEL_EH</a>, 
-<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a00ec2f0b002fdb180a9d565dca3314c0">EL_ERROR_LEVEL_MAX</a>
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a2f31ef7ac735fbc6484f9a6277e3b934">EL_ERROR_LEVEL_HIGH</a> = 0
+, <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a25b47724843e3a08bd06fffd74918d6b">EL_ERROR_LEVEL_MIDDLE</a>
+, <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a653dda7718442dd2ad5cf51a224c5c13">EL_ERROR_LEVEL_LOW</a>
+, <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0ad920427ef302d463b3a72ef4f6e9390f">EL_ERROR_LEVEL_EL</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a2cb57d9084afeb9f5cbe8a7dd1268a6b">EL_ERROR_LEVEL_EH</a>
+, <a class="el" href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0a00ec2f0b002fdb180a9d565dca3314c0">EL_ERROR_LEVEL_MAX</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ae574b6e1365b0b0c0af97f6f8abd7af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の エラーレベル  <a href="event__logger_8h.html#ae574b6e1365b0b0c0af97f6f8abd7af0">[詳解]</a><br /></td></tr>
 <tr class="separator:ae574b6e1365b0b0c0af97f6f8abd7af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89b9c600633a7f6780f59741c4cc9a0e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">EL_ACK</a> { <br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ead50309d986f45ede550b4ca4bcf9d9cb">EL_ACK_OK</a>, 
-<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea69caf5b7b5c0cfb054719976ae608783">EL_ACK_ILLEGAL_GROUP</a>, 
-<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea8e43bab40a180855a96cc2a500ea90ab">EL_ACK_ILLEGAL_ERROR_LEVEL</a>, 
-<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea2931f20fe2063f23fb89b93353dadc22">EL_ACK_DISABLE_LOGGING</a>, 
-<br />
-&#160;&#160;<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0eaf8c49f8e049bbf61292a52a2c35175f2">EL_ACK_TLOG_FULL</a>, 
-<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea6edd485965053b329ad0d0bda75449cb">EL_ACK_OTHER_ERR</a>
+&#160;&#160;<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ead50309d986f45ede550b4ca4bcf9d9cb">EL_ACK_OK</a>
+, <a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea69caf5b7b5c0cfb054719976ae608783">EL_ACK_ILLEGAL_GROUP</a>
+, <a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea8e43bab40a180855a96cc2a500ea90ab">EL_ACK_ILLEGAL_ERROR_LEVEL</a>
+, <a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea2931f20fe2063f23fb89b93353dadc22">EL_ACK_DISABLE_LOGGING</a>
+, <br />
+&#160;&#160;<a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0eaf8c49f8e049bbf61292a52a2c35175f2">EL_ACK_TLOG_FULL</a>
+, <a class="el" href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0ea6edd485965053b329ad0d0bda75449cb">EL_ACK_OTHER_ERR</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a89b9c600633a7f6780f59741c4cc9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">event_logger の汎用返り値  <a href="event__logger_8h.html#a89b9c600633a7f6780f59741c4cc9a0e">[詳解]</a><br /></td></tr>
@@ -576,7 +576,7 @@ CLog (<a class="el" href="struct_e_l___cumulative_log.html" title="累積ログ 
 </div><div class="memdoc">
 <p>EL_ERROR_LEVEL_EL を有効にするか？ 再帰呼び出し &amp; 無限ループを防ぐために，EL内部のイベントは別の専用のエラーレベルで記録される． これを有効化すると，EL内部のアノマリを記録できる． </p>
 
-<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00070">70</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="event__logger_8h_source.html">event_logger.h</a> の <a class="el" href="event__logger_8h_source.html#l00072">72</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2149,11 +2149,19 @@ err_level が不正な場合は， EL_ERROR_LEVEL_HIGH のものを返す </dd>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="struct_event_logger.html">EventLogger</a>* const event_logger</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="event__logger_8c_source.html">event_logger.c</a> の <a class="el" href="event__logger_8c_source.html#l00155">155</a> 行目に定義があります。</p>
@@ -2166,9 +2174,7 @@ err_level が不正な場合は， EL_ERROR_LEVEL_HIGH のものを返す </dd>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6b45b0e7f9199277896746cad9df186b.html">System</a></li><li class="navelem"><a class="el" href="dir_9c060f6614f66753f784535d0ca0f362.html">EventManager</a></li><li class="navelem"><a class="el" href="event__logger_8h.html">event_logger.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

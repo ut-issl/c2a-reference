@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/Library/majority_vote_for3.c ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -86,11 +86,10 @@ $(document).ready(function(){initNavTree('majority__vote__for3_8c_source.html','
 </div><!--header-->
 <div class="contents">
 <a href="majority__vote__for3_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="majority__vote__for3_8h.html">majority_vote_for3.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span>               <span class="comment">// for memcpy;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="majority__vote__for3_8h.html#abefd8e69379cdc2f6947e1be1d3740a9">    9</a></span>&#160;<a class="code" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> <a class="code" href="majority__vote__for3_8c.html#abefd8e69379cdc2f6947e1be1d3740a9">majority_vote_for3_copy</a>(<span class="keywordtype">void</span>* res_arg,</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="majority__vote__for3_8c.html#abefd8e69379cdc2f6947e1be1d3740a9">    9</a></span>&#160;<a class="code" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> <a class="code" href="majority__vote__for3_8c.html#abefd8e69379cdc2f6947e1be1d3740a9">majority_vote_for3_copy</a>(<span class="keywordtype">void</span>* res_arg,</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                                  <span class="keywordtype">void</span>* array1_arg,</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                                  <span class="keywordtype">void</span>* array2_arg,</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                  <span class="keywordtype">void</span>* array3_arg,</div>
@@ -149,7 +148,7 @@ $(document).ready(function(){initNavTree('majority__vote__for3_8c_source.html','
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="majority__vote__for3_8h.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">   68</a></span>&#160;<a class="code" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> <a class="code" href="majority__vote__for3_8c.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">majority_vote_for3_sync</a>(<span class="keywordtype">void</span>* array1_arg,</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="majority__vote__for3_8c.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">   68</a></span>&#160;<a class="code" href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a> <a class="code" href="majority__vote__for3_8c.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">majority_vote_for3_sync</a>(<span class="keywordtype">void</span>* array1_arg,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                  <span class="keywordtype">void</span>* array2_arg,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                                  <span class="keywordtype">void</span>* array3_arg,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                                  <span class="keywordtype">size_t</span> type_len,</div>
@@ -199,23 +198,21 @@ $(document).ready(function(){initNavTree('majority__vote__for3_8c_source.html','
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#pragma section</span></div>
-</div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="amajority__vote__for3_8h_html_a813a14e23b536804ecaf06cd93863c84ac809963476758f4d761fd355effadd7b"><div class="ttname"><a href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84ac809963476758f4d761fd355effadd7b">MAJORITY_VOTE_ERROR</a></div><div class="ttdeci">@ MAJORITY_VOTE_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8h_source.html#l00015">majority_vote_for3.h:15</a></div></div>
+<div class="ttc" id="amajority__vote__for3_8c_html_abefd8e69379cdc2f6947e1be1d3740a9"><div class="ttname"><a href="majority__vote__for3_8c.html#abefd8e69379cdc2f6947e1be1d3740a9">majority_vote_for3_copy</a></div><div class="ttdeci">MAJORITY_VOTE_FOR3_STATUS majority_vote_for3_copy(void *res_arg, void *array1_arg, void *array2_arg, void *array3_arg, size_t type_len, uint32_t length)</div><div class="ttdoc">3重冗長用汎用多数決関数 (コピー)</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8c_source.html#l00009">majority_vote_for3.c:9</a></div></div>
 <div class="ttc" id="amajority__vote__for3_8c_html_ac11bcfe7bba6a077b824bd1e3a0c62f4"><div class="ttname"><a href="majority__vote__for3_8c.html#ac11bcfe7bba6a077b824bd1e3a0c62f4">majority_vote_for3_sync</a></div><div class="ttdeci">MAJORITY_VOTE_FOR3_STATUS majority_vote_for3_sync(void *array1_arg, void *array2_arg, void *array3_arg, size_t type_len, uint32_t length)</div><div class="ttdoc">3重冗長用汎用多数決関数 (同期)</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8c_source.html#l00068">majority_vote_for3.c:68</a></div></div>
-<div class="ttc" id="amajority__vote__for3_8h_html_a813a14e23b536804ecaf06cd93863c84"><div class="ttname"><a href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a></div><div class="ttdeci">MAJORITY_VOTE_FOR3_STATUS</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8h_source.html#l00011">majority_vote_for3.h:11</a></div></div>
+<div class="ttc" id="amajority__vote__for3_8h_html"><div class="ttname"><a href="majority__vote__for3_8h.html">majority_vote_for3.h</a></div><div class="ttdoc">3重冗長用汎用多数決関数</div></div>
+<div class="ttc" id="amajority__vote__for3_8h_html_a813a14e23b536804ecaf06cd93863c84"><div class="ttname"><a href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84">MAJORITY_VOTE_FOR3_STATUS</a></div><div class="ttdeci">MAJORITY_VOTE_FOR3_STATUS</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8h_source.html#l00011">majority_vote_for3.h:12</a></div></div>
 <div class="ttc" id="amajority__vote__for3_8h_html_a813a14e23b536804ecaf06cd93863c84a3d73716fa9dc6fc93d69b5a28044084c"><div class="ttname"><a href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84a3d73716fa9dc6fc93d69b5a28044084c">MAJORITY_VOTE_MAJORITY</a></div><div class="ttdeci">@ MAJORITY_VOTE_MAJORITY</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8h_source.html#l00014">majority_vote_for3.h:14</a></div></div>
 <div class="ttc" id="amajority__vote__for3_8h_html_a813a14e23b536804ecaf06cd93863c84aba72c94444f8813a15dc573b058cea28"><div class="ttname"><a href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84aba72c94444f8813a15dc573b058cea28">MAJORITY_VOTE_MATCH</a></div><div class="ttdeci">@ MAJORITY_VOTE_MATCH</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8h_source.html#l00013">majority_vote_for3.h:13</a></div></div>
-<div class="ttc" id="amajority__vote__for3_8h_html"><div class="ttname"><a href="majority__vote__for3_8h.html">majority_vote_for3.h</a></div><div class="ttdoc">3重冗長用汎用多数決関数</div></div>
-<div class="ttc" id="amajority__vote__for3_8c_html_abefd8e69379cdc2f6947e1be1d3740a9"><div class="ttname"><a href="majority__vote__for3_8c.html#abefd8e69379cdc2f6947e1be1d3740a9">majority_vote_for3_copy</a></div><div class="ttdeci">MAJORITY_VOTE_FOR3_STATUS majority_vote_for3_copy(void *res_arg, void *array1_arg, void *array2_arg, void *array3_arg, size_t type_len, uint32_t length)</div><div class="ttdoc">3重冗長用汎用多数決関数 (コピー)</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8c_source.html#l00009">majority_vote_for3.c:9</a></div></div>
+<div class="ttc" id="amajority__vote__for3_8h_html_a813a14e23b536804ecaf06cd93863c84ac809963476758f4d761fd355effadd7b"><div class="ttname"><a href="majority__vote__for3_8h.html#a813a14e23b536804ecaf06cd93863c84ac809963476758f4d761fd355effadd7b">MAJORITY_VOTE_ERROR</a></div><div class="ttdeci">@ MAJORITY_VOTE_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="majority__vote__for3_8h_source.html#l00016">majority_vote_for3.h:15</a></div></div>
 <div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="majority__vote__for3_8c.html">majority_vote_for3.c</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/Applications/utility_command.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('utility__command_8h_source.html',''); 
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../IfWrapper/uart.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../System/ApplicationManager/app_info.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="utility__command_8h.html#ac6d69b063077570cd2db65cc0bd3a5ea">   10</a></span>&#160;<span class="preprocessor">#define UTIL_CMD_SIZE_MAX (256) // 256Bytes以上コマンドとして送ることはないはず．．．ICOUPS_PARAM_BLより長いし</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="utility__command_8h.html#ac6d69b063077570cd2db65cc0bd3a5ea">   10</a></span>&#160;<span class="preprocessor">#define UTIL_CMD_SIZE_MAX (256) </span><span class="comment">// 256Bytes以上コマンドとして送ることはないはず．．．ICOUPS_PARAM_BLより長いし</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// 汎用コマンド用構造体</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_utility_command.html">   13</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
@@ -116,30 +116,28 @@ $(document).ready(function(){initNavTree('utility__command_8h_source.html',''); 
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> <a class="code" href="utility__command_8h.html#a612ef825880739654ddd125577fff1ee">Cmd_UTIL_CMD_RESET</a>(<span class="keyword">const</span> <a class="code" href="struct_cmd_space_packet.html">CommonCmdPacket</a>* packet);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
-</div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
+<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00010">app_info.h:11</a></div></div>
+<div class="ttc" id="astruct_c_c_p___cmd_ret_html"><div class="ttname"><a href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a></div><div class="ttdoc">コマンド返り値</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00078">common_cmd_packet.h:79</a></div></div>
+<div class="ttc" id="astruct_cmd_space_packet_html"><div class="ttname"><a href="struct_cmd_space_packet.html">CmdSpacePacket</a></div><div class="ttdoc">Space Packet (コマンド用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00053">space_packet_typedef.h:54</a></div></div>
+<div class="ttc" id="astruct_u_a_r_t___config_html"><div class="ttname"><a href="struct_u_a_r_t___config.html">UART_Config</a></div><div class="ttdoc">UARTポートの初期化、データ送信、データ受信の際に必要となる設定情報を格納する構造体</div><div class="ttdef"><b>Definition:</b> <a href="uart_8h_source.html#l00080">uart.h:81</a></div></div>
+<div class="ttc" id="astruct_utility_command_html"><div class="ttname"><a href="struct_utility_command.html">UtilityCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00013">utility_command.h:14</a></div></div>
 <div class="ttc" id="astruct_utility_command_html_a3bb44739a7461d63de8c8d775a5b57b6"><div class="ttname"><a href="struct_utility_command.html#a3bb44739a7461d63de8c8d775a5b57b6">UtilityCommand::pointer</a></div><div class="ttdeci">unsigned int pointer</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00018">utility_command.h:18</a></div></div>
+<div class="ttc" id="astruct_utility_command_html_ac297d475b2c5ddf50a1fb4d8e5754d09"><div class="ttname"><a href="struct_utility_command.html#ac297d475b2c5ddf50a1fb4d8e5754d09">UtilityCommand::cmd_size</a></div><div class="ttdeci">unsigned int cmd_size</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00017">utility_command.h:17</a></div></div>
 <div class="ttc" id="astruct_utility_command_html_ac580c56cab75bdb13893032d9bad2c61"><div class="ttname"><a href="struct_utility_command.html#ac580c56cab75bdb13893032d9bad2c61">UtilityCommand::uart_config_dummy</a></div><div class="ttdeci">UART_Config uart_config_dummy</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00015">utility_command.h:15</a></div></div>
+<div class="ttc" id="astruct_utility_command_html_ad0201b2b99b761c7e3efdec8a4efd751"><div class="ttname"><a href="struct_utility_command.html#ad0201b2b99b761c7e3efdec8a4efd751">UtilityCommand::uart_err_code</a></div><div class="ttdeci">int uart_err_code</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00019">utility_command.h:19</a></div></div>
+<div class="ttc" id="autility__command_8h_html_a0ca85438733e4876582f8105919c1d8c"><div class="ttname"><a href="utility__command_8h.html#a0ca85438733e4876582f8105919c1d8c">Cmd_UTIL_CMD_SEND</a></div><div class="ttdeci">CCP_CmdRet Cmd_UTIL_CMD_SEND(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00108">utility_command.c:108</a></div></div>
+<div class="ttc" id="autility__command_8h_html_a612ef825880739654ddd125577fff1ee"><div class="ttname"><a href="utility__command_8h.html#a612ef825880739654ddd125577fff1ee">Cmd_UTIL_CMD_RESET</a></div><div class="ttdeci">CCP_CmdRet Cmd_UTIL_CMD_RESET(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00129">utility_command.c:129</a></div></div>
+<div class="ttc" id="autility__command_8h_html_a7d4585daf2c82da6c13c08d6bac72533"><div class="ttname"><a href="utility__command_8h.html#a7d4585daf2c82da6c13c08d6bac72533">UTIL_CMD_create_app</a></div><div class="ttdeci">AppInfo UTIL_CMD_create_app(void)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00019">utility_command.c:19</a></div></div>
+<div class="ttc" id="autility__command_8h_html_ac6d69b063077570cd2db65cc0bd3a5ea"><div class="ttname"><a href="utility__command_8h.html#ac6d69b063077570cd2db65cc0bd3a5ea">UTIL_CMD_SIZE_MAX</a></div><div class="ttdeci">#define UTIL_CMD_SIZE_MAX</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00010">utility_command.h:10</a></div></div>
 <div class="ttc" id="autility__command_8h_html_af71655a41bc6949fb2576b7bf904cdd9"><div class="ttname"><a href="utility__command_8h.html#af71655a41bc6949fb2576b7bf904cdd9">Cmd_UTIL_CMD_ADD</a></div><div class="ttdeci">CCP_CmdRet Cmd_UTIL_CMD_ADD(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00081">utility_command.c:81</a></div></div>
 <div class="ttc" id="autility__command_8h_html_afb023f5dc00e4ed0ee9eb099cf80467a"><div class="ttname"><a href="utility__command_8h.html#afb023f5dc00e4ed0ee9eb099cf80467a">utility_command</a></div><div class="ttdeci">const UtilityCommand *const utility_command</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00011">utility_command.c:11</a></div></div>
-<div class="ttc" id="autility__command_8h_html_ac6d69b063077570cd2db65cc0bd3a5ea"><div class="ttname"><a href="utility__command_8h.html#ac6d69b063077570cd2db65cc0bd3a5ea">UTIL_CMD_SIZE_MAX</a></div><div class="ttdeci">#define UTIL_CMD_SIZE_MAX</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00010">utility_command.h:10</a></div></div>
-<div class="ttc" id="astruct_u_a_r_t___config_html"><div class="ttname"><a href="struct_u_a_r_t___config.html">UART_Config</a></div><div class="ttdoc">UARTポートの初期化、データ送信、データ受信の際に必要となる設定情報を格納する構造体</div><div class="ttdef"><b>Definition:</b> <a href="uart_8h_source.html#l00080">uart.h:80</a></div></div>
-<div class="ttc" id="astruct_utility_command_html_ad0201b2b99b761c7e3efdec8a4efd751"><div class="ttname"><a href="struct_utility_command.html#ad0201b2b99b761c7e3efdec8a4efd751">UtilityCommand::uart_err_code</a></div><div class="ttdeci">int uart_err_code</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00019">utility_command.h:19</a></div></div>
-<div class="ttc" id="autility__command_8h_html_a612ef825880739654ddd125577fff1ee"><div class="ttname"><a href="utility__command_8h.html#a612ef825880739654ddd125577fff1ee">Cmd_UTIL_CMD_RESET</a></div><div class="ttdeci">CCP_CmdRet Cmd_UTIL_CMD_RESET(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00129">utility_command.c:129</a></div></div>
-<div class="ttc" id="astruct_utility_command_html_ac297d475b2c5ddf50a1fb4d8e5754d09"><div class="ttname"><a href="struct_utility_command.html#ac297d475b2c5ddf50a1fb4d8e5754d09">UtilityCommand::cmd_size</a></div><div class="ttdeci">unsigned int cmd_size</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00017">utility_command.h:17</a></div></div>
-<div class="ttc" id="astruct_utility_command_html"><div class="ttname"><a href="struct_utility_command.html">UtilityCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8h_source.html#l00013">utility_command.h:13</a></div></div>
-<div class="ttc" id="autility__command_8h_html_a7d4585daf2c82da6c13c08d6bac72533"><div class="ttname"><a href="utility__command_8h.html#a7d4585daf2c82da6c13c08d6bac72533">UTIL_CMD_create_app</a></div><div class="ttdeci">AppInfo UTIL_CMD_create_app(void)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00019">utility_command.c:19</a></div></div>
-<div class="ttc" id="astruct_cmd_space_packet_html"><div class="ttname"><a href="struct_cmd_space_packet.html">CmdSpacePacket</a></div><div class="ttdoc">Space Packet (コマンド用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00053">space_packet_typedef.h:53</a></div></div>
-<div class="ttc" id="autility__command_8h_html_a0ca85438733e4876582f8105919c1d8c"><div class="ttname"><a href="utility__command_8h.html#a0ca85438733e4876582f8105919c1d8c">Cmd_UTIL_CMD_SEND</a></div><div class="ttdeci">CCP_CmdRet Cmd_UTIL_CMD_SEND(const CommonCmdPacket *packet)</div><div class="ttdef"><b>Definition:</b> <a href="utility__command_8c_source.html#l00108">utility_command.c:108</a></div></div>
-<div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00010">app_info.h:10</a></div></div>
-<div class="ttc" id="astruct_c_c_p___cmd_ret_html"><div class="ttname"><a href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a></div><div class="ttdoc">コマンド返り値</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00078">common_cmd_packet.h:78</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_bac5c72f08f800c1dcf30d4637be4edf.html">Applications</a></li><li class="navelem"><a class="el" href="utility__command_8h.html">utility_command.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/IfWrapper/i2c.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -110,16 +110,16 @@ i2c.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:a1bade39338cb585131bc42ebd87d0045"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045">I2C_ERR_CODE</a> { <br />
-&#160;&#160;<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a3036ec409699ed29da89bdabc37cfb9e">I2C_UNKNOWN_ERR</a> = -20, 
-<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a37c489b074ff8d5c9fd296c5166555e2">I2C_RX_BUFFER_SMALL</a> = -14, 
-<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a5d3aa5bd93933a99f027c10c6f863e70">I2C_DATA_NEGA_ERR</a> = -13, 
-<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a1056d6a4b037e383132309c2898a2fc8">I2C_TIMEOUT</a> = -10, 
-<br />
-&#160;&#160;<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a65848ad7f6be610fc595271358d837ae">I2C_YET_ERR</a> = -4, 
-<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a8ef84683f2da4b3c304d5207ae4326de">I2C_ALREADY_ERR</a> = -3, 
-<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045ab8f8a46d5aee34aa571c961c756cbb95">I2C_FREQUENCY_ERR</a> = -2, 
-<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a08786796c0109cecc28d3b2e27a4fea6">I2C_CH_ERR</a> = -1, 
-<br />
+&#160;&#160;<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a3036ec409699ed29da89bdabc37cfb9e">I2C_UNKNOWN_ERR</a> = -20
+, <a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a37c489b074ff8d5c9fd296c5166555e2">I2C_RX_BUFFER_SMALL</a> = -14
+, <a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a5d3aa5bd93933a99f027c10c6f863e70">I2C_DATA_NEGA_ERR</a> = -13
+, <a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a1056d6a4b037e383132309c2898a2fc8">I2C_TIMEOUT</a> = -10
+, <br />
+&#160;&#160;<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a65848ad7f6be610fc595271358d837ae">I2C_YET_ERR</a> = -4
+, <a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a8ef84683f2da4b3c304d5207ae4326de">I2C_ALREADY_ERR</a> = -3
+, <a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045ab8f8a46d5aee34aa571c961c756cbb95">I2C_FREQUENCY_ERR</a> = -2
+, <a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045a08786796c0109cecc28d3b2e27a4fea6">I2C_CH_ERR</a> = -1
+, <br />
 &#160;&#160;<a class="el" href="i2c_8h.html#a1bade39338cb585131bc42ebd87d0045aeceba296bdda2b90e8835c431fe7a72a">I2C_OK</a> = 0
 <br />
  }</td></tr>
@@ -437,9 +437,7 @@ i2c.h の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_8e763dae40fd04f364fce2c27a9d1042.html">IfWrapper</a></li><li class="navelem"><a class="el" href="i2c_8h.html">i2c.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

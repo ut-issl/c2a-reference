@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/System/EventManager/event_manager.c ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -86,12 +86,11 @@ $(document).ready(function(){initNavTree('event__manager_8c_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="event__manager_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event__manager_8h.html">event_manager.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event__logger_8h.html">event_logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event__handler_8h.html">event_handler.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="event__manager_8h.html#ab1482d1d3615e189486d853e1f0209dd">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="event__manager_8c.html#ab1482d1d3615e189486d853e1f0209dd">EM_initialize</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="event__manager_8c.html#ab1482d1d3615e189486d853e1f0209dd">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="event__manager_8c.html#ab1482d1d3615e189486d853e1f0209dd">EM_initialize</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="event__logger_8c.html#a5b3f522390f30515e9561d47da40bcec">EL_initialize</a>();</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef EL_IS_ENABLE_TLOG</span></div>
@@ -100,21 +99,19 @@ $(document).ready(function(){initNavTree('event__manager_8c_source.html',''); in
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="ttc" id="aevent__handler_8c_html_a4d66371d471058e8e45db1071e09b654"><div class="ttname"><a href="event__handler_8c.html#a4d66371d471058e8e45db1071e09b654">EH_initialize</a></div><div class="ttdeci">void EH_initialize(void)</div><div class="ttdoc">event_handler の初期化</div><div class="ttdef"><b>Definition:</b> <a href="event__handler_8c_source.html#l00293">event_handler.c:293</a></div></div>
+<div class="ttc" id="aevent__handler_8h_html"><div class="ttname"><a href="event__handler_8h.html">event_handler.h</a></div><div class="ttdoc">イベント発火型処理を行う</div></div>
+<div class="ttc" id="aevent__logger_8c_html_a5b3f522390f30515e9561d47da40bcec"><div class="ttname"><a href="event__logger_8c.html#a5b3f522390f30515e9561d47da40bcec">EL_initialize</a></div><div class="ttdeci">void EL_initialize(void)</div><div class="ttdoc">event_logger の初期化</div><div class="ttdef"><b>Definition:</b> <a href="event__logger_8c_source.html#l00187">event_logger.c:187</a></div></div>
+<div class="ttc" id="aevent__logger_8h_html"><div class="ttname"><a href="event__logger_8h.html">event_logger.h</a></div><div class="ttdoc">アノマリやエラーなどの各種イベントを記録する</div></div>
+<div class="ttc" id="aevent__manager_8c_html_ab1482d1d3615e189486d853e1f0209dd"><div class="ttname"><a href="event__manager_8c.html#ab1482d1d3615e189486d853e1f0209dd">EM_initialize</a></div><div class="ttdeci">void EM_initialize(void)</div><div class="ttdoc">event_manager の初期化</div><div class="ttdef"><b>Definition:</b> <a href="event__manager_8c_source.html#l00011">event_manager.c:11</a></div></div>
+<div class="ttc" id="aevent__manager_8h_html"><div class="ttname"><a href="event__manager_8h.html">event_manager.h</a></div><div class="ttdoc">C2A全体のイベントを管理する</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aevent__manager_8c_html_ab1482d1d3615e189486d853e1f0209dd"><div class="ttname"><a href="event__manager_8c.html#ab1482d1d3615e189486d853e1f0209dd">EM_initialize</a></div><div class="ttdeci">void EM_initialize(void)</div><div class="ttdoc">event_manager の初期化</div><div class="ttdef"><b>Definition:</b> <a href="event__manager_8c_source.html#l00011">event_manager.c:11</a></div></div>
-<div class="ttc" id="aevent__handler_8h_html"><div class="ttname"><a href="event__handler_8h.html">event_handler.h</a></div><div class="ttdoc">イベント発火型処理を行う</div></div>
-<div class="ttc" id="aevent__handler_8c_html_a4d66371d471058e8e45db1071e09b654"><div class="ttname"><a href="event__handler_8c.html#a4d66371d471058e8e45db1071e09b654">EH_initialize</a></div><div class="ttdeci">void EH_initialize(void)</div><div class="ttdoc">event_handler の初期化</div><div class="ttdef"><b>Definition:</b> <a href="event__handler_8c_source.html#l00293">event_handler.c:293</a></div></div>
-<div class="ttc" id="aevent__manager_8h_html"><div class="ttname"><a href="event__manager_8h.html">event_manager.h</a></div><div class="ttdoc">C2A全体のイベントを管理する</div></div>
-<div class="ttc" id="aevent__logger_8h_html"><div class="ttname"><a href="event__logger_8h.html">event_logger.h</a></div><div class="ttdoc">アノマリやエラーなどの各種イベントを記録する</div></div>
-<div class="ttc" id="aevent__logger_8c_html_a5b3f522390f30515e9561d47da40bcec"><div class="ttname"><a href="event__logger_8c.html#a5b3f522390f30515e9561d47da40bcec">EL_initialize</a></div><div class="ttdeci">void EL_initialize(void)</div><div class="ttdoc">event_logger の初期化</div><div class="ttdef"><b>Definition:</b> <a href="event__logger_8c_source.html#l00187">event_logger.c:187</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6b45b0e7f9199277896746cad9df186b.html">System</a></li><li class="navelem"><a class="el" href="dir_9c060f6614f66753f784535d0ca0f362.html">EventManager</a></li><li class="navelem"><a class="el" href="event__manager_8c.html">event_manager.c</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

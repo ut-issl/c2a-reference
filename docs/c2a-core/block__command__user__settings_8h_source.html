@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_user/TlmCmd/block_command_user_settings.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -91,31 +91,29 @@ $(document).ready(function(){initNavTree('block__command__user__settings_8h_sour
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__table_8h.html">src_core/TlmCmd/block_command_table.h</a>&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__executor_8h.html">src_core/TlmCmd/block_command_executor.h</a>&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="block__command__user__settings_8h.html#a988fece792e9618a2307d9ab24367e43">    7</a></span>&#160;<span class="preprocessor">#define BCUS_MRAM_BCT_BLOCKS (10) // MRAMに確保する</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="block__command__user__settings_8h.html#a988fece792e9618a2307d9ab24367e43">    7</a></span>&#160;<span class="preprocessor">#define BCUS_MRAM_BCT_BLOCKS (10) </span><span class="comment">// MRAMに確保する</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="block__command__user__settings_8h.html#a36a089866a37d7384c0dae41c4b2c916">BCUS_load_user_settings</a>(<a class="code" href="struct_block_command_table.html">BlockCommandTable</a>* <a class="code" href="block__command__table_8c.html#a9505fde3e675731e8d22907a71bb06ca">block_command_table</a>, <a class="code" href="struct_block_command_executor.html">BlockCommandExecutor</a>* <a class="code" href="block__command__executor_8c.html#a780595859b0f396fbb2bb91a2c60de07">block_command_executor</a>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="block__command__user__settings_8h.html#acad63bc03e951b4d820f56acd23269a5">BCUS_bc_should_clear</a>(<span class="keyword">const</span> <a class="code" href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a> block);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
-</div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
+<div class="ttc" id="ablock__command__executor_8c_html_a780595859b0f396fbb2bb91a2c60de07"><div class="ttname"><a href="block__command__executor_8c.html#a780595859b0f396fbb2bb91a2c60de07">block_command_executor</a></div><div class="ttdeci">const BlockCommandExecutor *const block_command_executor</div><div class="ttdef"><b>Definition:</b> <a href="block__command__executor_8c_source.html#l00022">block_command_executor.c:22</a></div></div>
+<div class="ttc" id="ablock__command__executor_8h_html"><div class="ttname"><a href="block__command__executor_8h.html">block_command_executor.h</a></div><div class="ttdoc">BCTの実行周りの関数, パラメーター</div></div>
+<div class="ttc" id="ablock__command__table_8c_html_a9505fde3e675731e8d22907a71bb06ca"><div class="ttname"><a href="block__command__table_8c.html#a9505fde3e675731e8d22907a71bb06ca">block_command_table</a></div><div class="ttdeci">const BlockCommandTable *const block_command_table</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8c_source.html#l00028">block_command_table.c:28</a></div></div>
+<div class="ttc" id="ablock__command__table_8h_html"><div class="ttname"><a href="block__command__table_8h.html">block_command_table.h</a></div><div class="ttdoc">BCTの定義, BCT周りの関数</div></div>
+<div class="ttc" id="ablock__command__table_8h_html_ac59bf9456699df5fd82e711b1c0347cc"><div class="ttname"><a href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a></div><div class="ttdeci">uint16_t bct_id_t</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8h_source.html#l00031">block_command_table.h:31</a></div></div>
 <div class="ttc" id="ablock__command__user__settings_8h_html_a36a089866a37d7384c0dae41c4b2c916"><div class="ttname"><a href="block__command__user__settings_8h.html#a36a089866a37d7384c0dae41c4b2c916">BCUS_load_user_settings</a></div><div class="ttdeci">void BCUS_load_user_settings(BlockCommandTable *block_command_table, BlockCommandExecutor *block_command_executor)</div><div class="ttdoc">BCT, BCE に関してのメモリ確保や getter, setter を user settings として上書きする</div><div class="ttdef"><b>Definition:</b> <a href="block__command__user__settings_8c_source.html#l00008">block_command_user_settings.c:8</a></div></div>
 <div class="ttc" id="ablock__command__user__settings_8h_html_acad63bc03e951b4d820f56acd23269a5"><div class="ttname"><a href="block__command__user__settings_8h.html#acad63bc03e951b4d820f56acd23269a5">BCUS_bc_should_clear</a></div><div class="ttdeci">int BCUS_bc_should_clear(const bct_id_t block)</div><div class="ttdoc">その block をクリアすべきかどうか判別する</div><div class="ttdef"><b>Definition:</b> <a href="block__command__user__settings_8c_source.html#l00019">block_command_user_settings.c:19</a></div></div>
-<div class="ttc" id="ablock__command__executor_8h_html"><div class="ttname"><a href="block__command__executor_8h.html">block_command_executor.h</a></div><div class="ttdoc">BCTの実行周りの関数, パラメーター</div></div>
-<div class="ttc" id="astruct_block_command_executor_html"><div class="ttname"><a href="struct_block_command_executor.html">BlockCommandExecutor</a></div><div class="ttdoc">実行周り全体の struct</div><div class="ttdef"><b>Definition:</b> <a href="block__command__executor_8h_source.html#l00053">block_command_executor.h:53</a></div></div>
-<div class="ttc" id="ablock__command__table_8h_html_ac59bf9456699df5fd82e711b1c0347cc"><div class="ttname"><a href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a></div><div class="ttdeci">uint16_t bct_id_t</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8h_source.html#l00031">block_command_table.h:31</a></div></div>
-<div class="ttc" id="ablock__command__executor_8c_html_a780595859b0f396fbb2bb91a2c60de07"><div class="ttname"><a href="block__command__executor_8c.html#a780595859b0f396fbb2bb91a2c60de07">block_command_executor</a></div><div class="ttdeci">const BlockCommandExecutor *const block_command_executor</div><div class="ttdef"><b>Definition:</b> <a href="block__command__executor_8c_source.html#l00022">block_command_executor.c:22</a></div></div>
-<div class="ttc" id="astruct_block_command_table_html"><div class="ttname"><a href="struct_block_command_table.html">BlockCommandTable</a></div><div class="ttdoc">BCT 全体の構造体</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8h_source.html#l00116">block_command_table.h:116</a></div></div>
-<div class="ttc" id="ablock__command__table_8h_html"><div class="ttname"><a href="block__command__table_8h.html">block_command_table.h</a></div><div class="ttdoc">BCTの定義, BCT周りの関数</div></div>
-<div class="ttc" id="ablock__command__table_8c_html_a9505fde3e675731e8d22907a71bb06ca"><div class="ttname"><a href="block__command__table_8c.html#a9505fde3e675731e8d22907a71bb06ca">block_command_table</a></div><div class="ttdeci">const BlockCommandTable *const block_command_table</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8c_source.html#l00028">block_command_table.c:28</a></div></div>
+<div class="ttc" id="astruct_block_command_executor_html"><div class="ttname"><a href="struct_block_command_executor.html">BlockCommandExecutor</a></div><div class="ttdoc">実行周り全体の struct</div><div class="ttdef"><b>Definition:</b> <a href="block__command__executor_8h_source.html#l00053">block_command_executor.h:54</a></div></div>
+<div class="ttc" id="astruct_block_command_table_html"><div class="ttname"><a href="struct_block_command_table.html">BlockCommandTable</a></div><div class="ttdoc">BCT 全体の構造体</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8h_source.html#l00116">block_command_table.h:117</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_8db6de9170c801ae5a17095202f7349c.html">TlmCmd</a></li><li class="navelem"><a class="el" href="block__command__user__settings_8h.html">block_command_user_settings.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/Applications/telemetry_manager.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -137,25 +137,25 @@ telemetry_manager.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:aff6fb9386ce120410801a18b2c6cc630"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">TLM_MGR_ERR_CODE</a> { <br />
-&#160;&#160;<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630ad21b51210a3809cb12c304f997081c83">TLM_MGR_ERR_CODE_OK</a>, 
-<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630ae402eee14353eaba06d6e4b2ee740b88">TLM_MGR_ERR_CODE_MASTER_DUPLICATED</a>, 
-<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a7f1068976e9d3d29dadeb7836f0eb79e">TLM_MGR_ERR_CODE_MASTER_IS_ABSENT</a>, 
-<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a6463354a092ff4d3e81d3a7863abe89e">TLM_MGR_ERR_CODE_REGISTER_INFO_BC_FULL</a>, 
-<br />
-&#160;&#160;<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a0afd8bfaf504c4c18dcacd226c533d5b">TLM_MGR_ERR_CODE_CMD_FULL</a>, 
-<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a7bd1ff7b7a32d4950b99d81535d29952">TLM_MGR_ERR_CODE_OTHER_ERR</a>
+&#160;&#160;<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630ad21b51210a3809cb12c304f997081c83">TLM_MGR_ERR_CODE_OK</a>
+, <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630ae402eee14353eaba06d6e4b2ee740b88">TLM_MGR_ERR_CODE_MASTER_DUPLICATED</a>
+, <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a7f1068976e9d3d29dadeb7836f0eb79e">TLM_MGR_ERR_CODE_MASTER_IS_ABSENT</a>
+, <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a6463354a092ff4d3e81d3a7863abe89e">TLM_MGR_ERR_CODE_REGISTER_INFO_BC_FULL</a>
+, <br />
+&#160;&#160;<a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a0afd8bfaf504c4c18dcacd226c533d5b">TLM_MGR_ERR_CODE_CMD_FULL</a>
+, <a class="el" href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630a7bd1ff7b7a32d4950b99d81535d29952">TLM_MGR_ERR_CODE_OTHER_ERR</a>
 <br />
  }</td></tr>
 <tr class="memdesc:aff6fb9386ce120410801a18b2c6cc630"><td class="mdescLeft">&#160;</td><td class="mdescRight">汎用エラーコード  <a href="telemetry__manager_8h.html#aff6fb9386ce120410801a18b2c6cc630">[詳解]</a><br /></td></tr>
 <tr class="separator:aff6fb9386ce120410801a18b2c6cc630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab259e66461fe36ec5c438e5787e91f0f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0f">TLM_MGR_BC_TYPE</a> { <br />
-&#160;&#160;<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fa31316fd442477ee278729cea017aa158">TLM_MGR_BC_TYPE_MASTER</a>, 
-<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fa078b57523132bdffae61e759bc24033f">TLM_MGR_BC_TYPE_HK_TLM</a>, 
-<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fad4ce6da8e3c6247d49abfdf58df8fad8">TLM_MGR_BC_TYPE_SYSTEM_TLM</a>, 
-<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fa02aa9aad64b600cf6f0e7bb91577d2cf">TLM_MGR_BC_TYPE_HIGH_FREQ_TLM</a>, 
-<br />
-&#160;&#160;<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0faf43fc486c186ac96dfb4dfe94f34b83b">TLM_MGR_BC_TYPE_LOW_FREQ_TLM</a>, 
-<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0faf1f9ae52ed864cb7b2f6bbc8adde1b4c">TLM_MGR_BC_TYPE_RESERVE</a>
+&#160;&#160;<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fa31316fd442477ee278729cea017aa158">TLM_MGR_BC_TYPE_MASTER</a>
+, <a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fa078b57523132bdffae61e759bc24033f">TLM_MGR_BC_TYPE_HK_TLM</a>
+, <a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fad4ce6da8e3c6247d49abfdf58df8fad8">TLM_MGR_BC_TYPE_SYSTEM_TLM</a>
+, <a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0fa02aa9aad64b600cf6f0e7bb91577d2cf">TLM_MGR_BC_TYPE_HIGH_FREQ_TLM</a>
+, <br />
+&#160;&#160;<a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0faf43fc486c186ac96dfb4dfe94f34b83b">TLM_MGR_BC_TYPE_LOW_FREQ_TLM</a>
+, <a class="el" href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0faf1f9ae52ed864cb7b2f6bbc8adde1b4c">TLM_MGR_BC_TYPE_RESERVE</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ab259e66461fe36ec5c438e5787e91f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">BCのタイプ．これにて実行種別が変わる  <a href="telemetry__manager_8h.html#ab259e66461fe36ec5c438e5787e91f0f">[詳解]</a><br /></td></tr>
@@ -766,11 +766,19 @@ Cmd_TLCD_CLEAR_ALL_TIMELINE / Cmd_TLM_MGR_CLEAR_TLM_TL のほうが適切な場�
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="struct_telemetry_manager.html">TelemetryManager</a>* const telemetry_manager</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="telemetry__manager_8c_source.html">telemetry_manager.c</a> の <a class="el" href="telemetry__manager_8c_source.html#l00108">108</a> 行目に定義があります。</p>
@@ -783,9 +791,7 @@ Cmd_TLCD_CLEAR_ALL_TIMELINE / Cmd_TLM_MGR_CLEAR_TLM_TL のほうが適切な場�
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_bac5c72f08f800c1dcf30d4637be4edf.html">Applications</a></li><li class="navelem"><a class="el" href="telemetry__manager_8h.html">telemetry_manager.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

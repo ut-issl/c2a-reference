@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>C2A_Core: src/src_core/IfWrapper/ccsds.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -106,25 +106,23 @@ $(document).ready(function(){initNavTree('ccsds_8h_source.html',''); initResizab
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a>(<span class="keywordtype">void</span>* my_ccsds_v, <span class="keywordtype">int</span> reason);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="accsds_8h_html_a56a19fe9cab1f813caef3bb1c5170c1c"><div class="ttname"><a href="ccsds_8h.html#a56a19fe9cab1f813caef3bb1c5170c1c">CCSDS_init</a></div><div class="ttdeci">int CCSDS_init(void *my_ccsds_v)</div><div class="ttdoc">CCSDS の init</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00022">ccsds_sils.cpp:22</a></div></div>
+<div class="ttc" id="accsds_8h_html_aa179f5ce8b2954a51602282f977f55e6"><div class="ttname"><a href="ccsds_8h.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a></div><div class="ttdeci">int CCSDS_rx(void *my_ccsds_v, void *data_v, int buffer_size)</div><div class="ttdoc">CCSDS 受信. API を呼び出し, buffer に受信結果をコピーする</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00034">ccsds_sils.cpp:34</a></div></div>
+<div class="ttc" id="accsds_8h_html_ab1d8a2ef0a54d2f5e95061502b7d0b06"><div class="ttname"><a href="ccsds_8h.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a></div><div class="ttdeci">int CCSDS_tx(void *my_ccsds_v, void *data_v, int data_size)</div><div class="ttdoc">CCSDS 送信. API を呼び出し, 送信を行う</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00046">ccsds_sils.cpp:46</a></div></div>
+<div class="ttc" id="accsds_8h_html_ad48a0947151ed3b335b0d717fc97d464"><div class="ttname"><a href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a></div><div class="ttdeci">int CCSDS_reopen(void *my_ccsds_v, int reason)</div><div class="ttdoc">CCSDS reopen</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00063">ccsds_sils.cpp:63</a></div></div>
+<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
+<div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="astruct_c_c_s_d_s___config_html"><div class="ttname"><a href="struct_c_c_s_d_s___config.html">CCSDS_Config</a></div><div class="ttdoc">CCSDS ポートの初期化, データ送信, データ受信の際に必要となる設定情報を格納する構造体</div><div class="ttdef"><b>Definition:</b> <a href="ccsds_8h_source.html#l00021">ccsds.h:22</a></div></div>
+<div class="ttc" id="astruct_c_c_s_d_s___config_html_a32678c62007e0748dae550bd1007a07d"><div class="ttname"><a href="struct_c_c_s_d_s___config.html#a32678c62007e0748dae550bd1007a07d">CCSDS_Config::bitrate</a></div><div class="ttdeci">uint32_t bitrate</div><div class="ttdoc">継承先の機器のビットレート値 (bps)</div><div class="ttdef"><b>Definition:</b> <a href="ccsds_8h_source.html#l00024">ccsds.h:24</a></div></div>
+<div class="ttc" id="astruct_c_c_s_d_s___config_html_acbcf5f8de7895ca456bb39fbcccde1d1"><div class="ttname"><a href="struct_c_c_s_d_s___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">CCSDS_Config::ch</a></div><div class="ttdeci">uint8_t ch</div><div class="ttdoc">将来的にchが追加されることを想定して</div><div class="ttdef"><b>Definition:</b> <a href="ccsds_8h_source.html#l00023">ccsds.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
-<div class="ttc" id="accsds_8h_html_aa179f5ce8b2954a51602282f977f55e6"><div class="ttname"><a href="ccsds_8h.html#aa179f5ce8b2954a51602282f977f55e6">CCSDS_rx</a></div><div class="ttdeci">int CCSDS_rx(void *my_ccsds_v, void *data_v, int buffer_size)</div><div class="ttdoc">CCSDS 受信. API を呼び出し, buffer に受信結果をコピーする</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00034">ccsds_sils.cpp:34</a></div></div>
-<div class="ttc" id="astruct_c_c_s_d_s___config_html"><div class="ttname"><a href="struct_c_c_s_d_s___config.html">CCSDS_Config</a></div><div class="ttdoc">CCSDS ポートの初期化, データ送信, データ受信の際に必要となる設定情報を格納する構造体</div><div class="ttdef"><b>Definition:</b> <a href="ccsds_8h_source.html#l00021">ccsds.h:21</a></div></div>
-<div class="ttc" id="accsds_8h_html_ad48a0947151ed3b335b0d717fc97d464"><div class="ttname"><a href="ccsds_8h.html#ad48a0947151ed3b335b0d717fc97d464">CCSDS_reopen</a></div><div class="ttdeci">int CCSDS_reopen(void *my_ccsds_v, int reason)</div><div class="ttdoc">CCSDS reopen</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00063">ccsds_sils.cpp:63</a></div></div>
-<div class="ttc" id="accsds_8h_html_a56a19fe9cab1f813caef3bb1c5170c1c"><div class="ttname"><a href="ccsds_8h.html#a56a19fe9cab1f813caef3bb1c5170c1c">CCSDS_init</a></div><div class="ttdeci">int CCSDS_init(void *my_ccsds_v)</div><div class="ttdoc">CCSDS の init</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00022">ccsds_sils.cpp:22</a></div></div>
-<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
-<div class="ttc" id="accsds_8h_html_ab1d8a2ef0a54d2f5e95061502b7d0b06"><div class="ttname"><a href="ccsds_8h.html#ab1d8a2ef0a54d2f5e95061502b7d0b06">CCSDS_tx</a></div><div class="ttdeci">int CCSDS_tx(void *my_ccsds_v, void *data_v, int data_size)</div><div class="ttdoc">CCSDS 送信. API を呼び出し, 送信を行う</div><div class="ttdef"><b>Definition:</b> <a href="ccsds__sils_8cpp_source.html#l00046">ccsds_sils.cpp:46</a></div></div>
-<div class="ttc" id="astruct_c_c_s_d_s___config_html_a32678c62007e0748dae550bd1007a07d"><div class="ttname"><a href="struct_c_c_s_d_s___config.html#a32678c62007e0748dae550bd1007a07d">CCSDS_Config::bitrate</a></div><div class="ttdeci">uint32_t bitrate</div><div class="ttdoc">継承先の機器のビットレート値 (bps)</div><div class="ttdef"><b>Definition:</b> <a href="ccsds_8h_source.html#l00024">ccsds.h:24</a></div></div>
-<div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
-<div class="ttc" id="astruct_c_c_s_d_s___config_html_acbcf5f8de7895ca456bb39fbcccde1d1"><div class="ttname"><a href="struct_c_c_s_d_s___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">CCSDS_Config::ch</a></div><div class="ttdeci">uint8_t ch</div><div class="ttdoc">将来的にchが追加されることを想定して</div><div class="ttdef"><b>Definition:</b> <a href="ccsds_8h_source.html#l00023">ccsds.h:23</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_8e763dae40fd04f364fce2c27a9d1042.html">IfWrapper</a></li><li class="navelem"><a class="el" href="ccsds_8h.html">ccsds.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
