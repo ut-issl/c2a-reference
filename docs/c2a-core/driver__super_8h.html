@@ -397,7 +397,14 @@ driver_super.h の依存先関係図:</div>
     各制御センサ・アクチュエータ等とのインターフェースを実現し，
     初期化，コマンド発行，テレメトリリクエスト，テレメトリ受信，テレメトリ解析などを行う，ドライバ群のスーパークラスです．
     個々の機器のインターフェースドライバに継承させて使用します．
-</pre> <dl class="section note"><dt>覚え書き</dt><dd>バッファのサイズ設定について FIXME: 直す．DS_IF_RX_BUFFER_SIZE の可変化など メモ IF_RX での最大サイズは規定したとして， DS ごとに小さくすることは可能にする で，小さくしたものよりも rx_buffer がデカくないとだめにする！！！ </dd></dl>
+</pre> <dl class="section note"><dt>覚え書き</dt><dd><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> で与える受信バッファサイズについて このバッファに受信データを格納していき，フレームを確定していく． したがって，最低限のバッファサイズは，<ul>
+<li>非同期通信の場合: 受信フレーム最大長 x 2 以上</li>
+<li>同期通信の場合: 受信フレーム最大長 以上 が望ましい． メモリに余力がある場合，さらに</li>
+<li>DS_IF_RX_BUFFER_SIZE x 2 以上 FIXME: これは可変になるので直す があると，さらに受信漏れを防ぐことができる． </li>
+</ul>
+</dd>
+<dd>
+バッファのサイズ設定について FIXME: 直す．DS_IF_RX_BUFFER_SIZE の可変化など メモ IF_RX での最大サイズは規定したとして， DS ごとに小さくすることは可能にする で，小さくしたものよりも rx_buffer がデカくないとだめにする！！！ </dd></dl>
 
 <p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> に定義があります。</p>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
@@ -414,7 +421,7 @@ driver_super.h の依存先関係図:</div>
 </div><div class="memdoc">
 <p>IF_RX で受信するときの一次バッファ IF_RX から受信できる最大数を規定する OBC の物理的な信号ラインのバッファサイズ以上とするともっともパフォーマンスが出る </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00035">35</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -432,7 +439,7 @@ driver_super.h の依存先関係図:</div>
 <p>DS_StreamConfigの最大数 uint8_t を想定 <br  />
  </p>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00032">32</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -502,7 +509,7 @@ CCP_EXEC_STS への変換は DS_conv_cmd_err_to_ccp_cmd_ret を用いる </dd></
 <tr><td class="fieldname"><a id="a81f032590771b0c11b9190ad7004cd6baa8aeec4604c96081282578baac057656"></a>DS_CMD_UNKNOWN_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00090">90</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00099">99</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -546,7 +553,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00055">55</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -572,7 +579,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <tr><td class="fieldname"><a id="aabdd3dd293d1c92926eedb042673c165a757cf24e5dd8eaaeb1e0554ad1a3203a"></a>DS_ERR_CODE_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00106">106</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00115">115</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -603,7 +610,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00069">69</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -634,7 +641,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00074">74</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00083">83</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -659,7 +666,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00117">117</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00126">126</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -697,7 +704,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <tr><td class="fieldname"><a id="a3f1d9e8a08d67a25845b0f48d19ccaa8a0d2ea2811c14e096e9d75bafe4112e03"></a>DS_STREAM_REC_STATUS_OTHER_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00163">163</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00172">172</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -725,7 +732,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 <tr><td class="fieldname"><a id="ae0e20317c0a0480f3e294e4383ff644aa6767787e46cfa954d71e1bd53abca55a"></a>DS_STREAM_SEND_STATUS_OTHER_ERR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00138">138</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00147">147</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -747,7 +754,7 @@ CCP_EXEC_STS への変換は DS_conv_driver_err_to_ccp_cmd_ret を用いる </dd
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00186">186</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00195">195</a> 行目に定義があります。</p>
 
 </div>
 </div>
