@@ -1,5 +1,10 @@
 var NAVTREEINDEX8 =
 {
+"event__logger_8c.html#ac5e9c3b7d0def1c166f028712b351a0e":[1,0,0,0,4,2,2,34],
+"event__logger_8c.html#ac60dfbbbe89f7683bbe54d425e9eb217":[1,0,0,0,4,2,2,56],
+"event__logger_8c.html#acbfe5cde6286f88550a76ebf005dbf12":[1,0,0,0,4,2,2,28],
+"event__logger_8c.html#ad37040d63fcfc47f3a4342cff0018562":[1,0,0,0,4,2,2,8],
+"event__logger_8c.html#ad48e45a0f924cff91ca49f4c15528de2":[1,0,0,0,4,2,2,12],
 "event__logger_8c.html#ae9c7257da26c3e33f78ea716184daa63":[1,0,0,0,4,2,2,14],
 "event__logger_8c.html#aead38472b600bf959eda603915a0612e":[1,0,0,0,4,2,2,16],
 "event__logger_8c.html#aeae14f21b4e29006f709a61e7de52d67":[1,0,0,0,4,2,2,19],
@@ -235,8 +240,8 @@ var NAVTREEINDEX8 =
 "git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b":[1,0,0,1,3,1,1],
 "git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64":[1,0,0,1,3,1,2],
 "git__revision_8h_source.html":[1,0,0,1,3,1],
-"globals.html":[1,1,0,0],
 "globals.html":[1,1,0],
+"globals.html":[1,1,0,0],
 "globals_b.html":[1,1,0,1],
 "globals_c.html":[1,1,0,2],
 "globals_d.html":[1,1,0,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX8 =
 "globals_defs.html":[1,1,6,0],
 "globals_defs_b.html":[1,1,6,1],
 "globals_defs_c.html":[1,1,6,2],
-"globals_defs_d.html":[1,1,6,3],
-"globals_defs_e.html":[1,1,6,4],
-"globals_defs_g.html":[1,1,6,5],
-"globals_defs_m.html":[1,1,6,6],
-"globals_defs_o.html":[1,1,6,7],
-"globals_defs_p.html":[1,1,6,8]
+"globals_defs_d.html":[1,1,6,3]
 };

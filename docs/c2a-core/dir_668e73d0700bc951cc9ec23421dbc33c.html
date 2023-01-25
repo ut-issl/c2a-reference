@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C2A_Core: src/src_core/TlmCmd/Ccsds -&gt; src_user 関係</title>
+<title>C2A_Core: src/src_core/Library/libc ディレクトリリファレンス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('dir_65c4a3a645d640a6a1bd0ea47afea00a.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('dir_668e73d0700bc951cc9ec23421dbc33c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -80,13 +80,27 @@ $(document).ready(function(){initNavTree('dir_65c4a3a645d640a6a1bd0ea47afea00a.h
 </iframe>
 </div>
 
+<div class="header">
+  <div class="headertitle">
+<div class="title">libc ディレクトリリファレンス</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h3>Ccsds &rarr; src_user 関係</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">src/src_core/TlmCmd/Ccsdsにあるファイル</th><th class="dirtab">src/src_userにあるファイルを include している</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="cmd__space__packet_8h.html">cmd_space_packet.h</a></td><td class="dirtab"><a class="el" href="dir_a6c80cab417eca370553d013a38aa3d8.html">Settings</a>&#160;/&#160;<a class="el" href="dir_be6ad26deaebdd13cd48446e1afccf23.html">TlmCmd</a>&#160;/&#160;<a class="el" href="dir_d1a4c3bd32807fca0ed7d5ad10548c07.html">Ccsds</a>&#160;/&#160;<a class="el" href="cmd__space__packet__params_8h.html">cmd_space_packet_params.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="cmd__space__packet_8h.html">cmd_space_packet.h</a></td><td class="dirtab"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a>&#160;/&#160;<a class="el" href="stdint_8h.html">stdint.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="space__packet_8h.html">space_packet.h</a></td><td class="dirtab"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a>&#160;/&#160;<a class="el" href="stdint_8h.html">stdint.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="space__packet__typedef_8h.html">space_packet_typedef.h</a></td><td class="dirtab"><a class="el" href="dir_a6c80cab417eca370553d013a38aa3d8.html">Settings</a>&#160;/&#160;<a class="el" href="dir_be6ad26deaebdd13cd48446e1afccf23.html">TlmCmd</a>&#160;/&#160;<a class="el" href="dir_d1a4c3bd32807fca0ed7d5ad10548c07.html">Ccsds</a>&#160;/&#160;<a class="el" href="space__packet__typedef__params_8h.html">space_packet_typedef_params.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="space__packet__typedef_8h.html">space_packet_typedef.h</a></td><td class="dirtab"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a>&#160;/&#160;<a class="el" href="stdint_8h.html">stdint.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="tlm__space__packet_8h.html">tlm_space_packet.h</a></td><td class="dirtab"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a>&#160;/&#160;<a class="el" href="stdint_8h.html">stdint.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="tlm__space__packet_8h.html">tlm_space_packet.h</a></td><td class="dirtab"><a class="el" href="dir_a6c80cab417eca370553d013a38aa3d8.html">Settings</a>&#160;/&#160;<a class="el" href="dir_be6ad26deaebdd13cd48446e1afccf23.html">TlmCmd</a>&#160;/&#160;<a class="el" href="dir_d1a4c3bd32807fca0ed7d5ad10548c07.html">Ccsds</a>&#160;/&#160;<a class="el" href="tlm__space__packet__params_8h.html">tlm_space_packet_params.h</a></td></tr></table></div><!-- contents -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
+ファイル</h2></td></tr>
+<tr class="memitem:bsearch_8c"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsearch_8c.html">bsearch.c</a> <a href="bsearch_8c_source.html">[コード]</a></td></tr>
+<tr class="memdesc:bsearch_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A が依存する libc 関数 bsearch を自前実装し，c2a-core から提供することで，C2A の移植性を高める． これにより，ベアメタル環境でも C2A を libc 無しに（newlib などを持ち出してくることなく）ビルド・動作させることができる． <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:memchr_8c"><td class="memItemLeft" align="right" valign="top">ファイル &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memchr_8c.html">memchr.c</a> <a href="memchr_8c_source.html">[コード]</a></td></tr>
+<tr class="memdesc:memchr_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A が依存する libc 関数 memchr を自前実装し，c2a-core から提供することで，C2A の移植性を高める． これにより，ベアメタル環境でも C2A を libc 無しに（newlib などを持ち出してくることなく）ビルド・動作させることができる． <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_43c499926d30da83a4105ced0951a3ae.html">TlmCmd</a></li><li class="navelem"><a class="el" href="dir_65c4a3a645d640a6a1bd0ea47afea00a.html">Ccsds</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="dir_668e73d0700bc951cc9ec23421dbc33c.html">libc</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

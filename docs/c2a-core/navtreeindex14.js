@@ -1,5 +1,13 @@
 var NAVTREEINDEX14 =
 {
+"struct_mode_manager.html#a40848bd725e482b7287795b4d035b5d3":[0,0,68,3],
+"struct_mode_manager.html#a5219bd1701695e82790a03392fb6f9df":[0,0,68,4],
+"struct_mode_manager.html#adc38de19e5e423c652f6be4cc9bb8c54":[0,0,68,1],
+"struct_obc_time.html":[0,0,69],
+"struct_obc_time.html#a995233df4884e293857b1fdf1b896b0c":[0,0,69,2],
+"struct_obc_time.html#acc32368fe8e02cd2e50eec5201906d35":[0,0,69,0],
+"struct_obc_time.html#ad16a47c0d80bd55be442003a3be6d46c":[0,0,69,1],
+"struct_p_a___config.html":[0,0,70],
 "struct_p_a___config.html#aee69968d238510d52cd8dac949c184e7":[0,0,70,0],
 "struct_p_l___node.html":[0,0,72],
 "struct_p_l___node.html#a4a67b6bcd4c91559e906f630372be040":[0,0,72,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX14 =
 "telemetry__definitions_8c.html#a84f310ab422df1969e02ebd4c195fcab":[1,0,0,1,5,12,2],
 "telemetry__definitions_8c.html#a8f40022ca3187a40fcde3bee9bca9f94":[1,0,0,1,5,12,4],
 "telemetry__definitions_8c.html#a91def2fbe43510d233815f51bfa65268":[1,0,0,1,5,12,0],
-"telemetry__definitions_8c.html#a9566cae5d0cb45f9bb237969603c28f5":[1,0,0,1,5,12,15],
-"telemetry__definitions_8c.html#a9fe1910e686cb76e200c3c9241df388f":[1,0,0,1,5,12,6],
-"telemetry__definitions_8c.html#aa4c5d6e0622643f0dc2264ebb1686018":[1,0,0,1,5,12,23],
-"telemetry__definitions_8c.html#aab5382005f103052632c6f6aa2c86eb1":[1,0,0,1,5,12,9],
-"telemetry__definitions_8c.html#abae3bcd2497941bc76efcea7822623c0":[1,0,0,1,5,12,5],
-"telemetry__definitions_8c.html#abeb688f0f66e6d3870869fa430fbb3a7":[1,0,0,1,5,12,20],
-"telemetry__definitions_8c.html#ac95100512da538e1281c6a8af4013d49":[1,0,0,1,5,12,19],
-"telemetry__definitions_8c.html#acc22f1f917f90410cafd614631fc3c9b":[1,0,0,1,5,12,14],
-"telemetry__definitions_8c.html#acfe87f442fbed8cf6723a087471e7702":[1,0,0,1,5,12,7]
+"telemetry__definitions_8c.html#a9566cae5d0cb45f9bb237969603c28f5":[1,0,0,1,5,12,15]
 };
