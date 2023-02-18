@@ -113,15 +113,17 @@ $(document).ready(function(){initNavTree('apid__define_8c_source.html',''); init
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">switch</span> (apid)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="common__tlm__packet__define_8h.html#aa30894f91d3a3a6a27fe5a6bc5100a51">CTP_APID_FROM_ME</a>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// FIXME: 2nd obc の場合は変更しなければいけないが， https://github.com/ut-issl/c2a-core/issues/489 で消えるので一旦このまま</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaec358d03dbbe4cbd94a94a34f2abcde4">APID_AOBC_TLM</a>:   <span class="comment">// FALLTHROUGH</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaa936b30583731201b4ff0d56e9ed913a">APID_TOBC_TLM</a>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#pragma section</span></div>
 <div class="ttc" id="aapid__define_8c_html_a4bd093b65066361f2713f85254eb52c3"><div class="ttname"><a href="apid__define_8c.html#a4bd093b65066361f2713f85254eb52c3">APID_is_other_obc_tlm_apid</a></div><div class="ttdeci">int APID_is_other_obc_tlm_apid(APID apid)</div><div class="ttdoc">入力した APID が他の OBC で生成された TLM の APID かどうか</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8c_source.html#l00030">apid_define.c:30</a></div></div>
 <div class="ttc" id="aapid__define_8c_html_aa1f9bb843cdcbfc94507bd35d70138e6"><div class="ttname"><a href="apid__define_8c.html#aa1f9bb843cdcbfc94507bd35d70138e6">APID_get_apid_from_uint16</a></div><div class="ttdeci">APID APID_get_apid_from_uint16(uint16_t apid)</div><div class="ttdoc">バイト列から APID を取得</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8c_source.html#l00010">apid_define.c:10</a></div></div>
 <div class="ttc" id="aapid__define_8h_html"><div class="ttname"><a href="apid__define_8h.html">apid_define.h</a></div><div class="ttdoc">CCSDS の APID を定義する</div></div>
@@ -136,7 +138,6 @@ $(document).ready(function(){initNavTree('apid__define_8c_source.html',''); init
 <div class="ttc" id="aapid__define_8h_html_ae86084e0da0f3d82d3572285760217acae4a71e721c1d60307983dce13f7e2196"><div class="ttname"><a href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acae4a71e721c1d60307983dce13f7e2196">APID_TOBC_CMD</a></div><div class="ttdeci">@ APID_TOBC_CMD</div><div class="ttdoc">01000010010b: APID for TOBC 宛の CMD</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8h_source.html#l00020">apid_define.h:20</a></div></div>
 <div class="ttc" id="aapid__define_8h_html_ae86084e0da0f3d82d3572285760217acaec358d03dbbe4cbd94a94a34f2abcde4"><div class="ttname"><a href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaec358d03dbbe4cbd94a94a34f2abcde4">APID_AOBC_TLM</a></div><div class="ttdeci">@ APID_AOBC_TLM</div><div class="ttdoc">10100010001b: APID for AOBC で生成される TLM</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8h_source.html#l00023">apid_define.h:23</a></div></div>
 <div class="ttc" id="aapid__define_8h_html_ae86084e0da0f3d82d3572285760217acaf33adcb0fbd9028efde991f15f6dcdd9"><div class="ttname"><a href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaf33adcb0fbd9028efde991f15f6dcdd9">APID_FILL_PKT</a></div><div class="ttdeci">@ APID_FILL_PKT</div><div class="ttdoc">11111111111b: APID for FILL PACKET</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8h_source.html#l00026">apid_define.h:26</a></div></div>
-<div class="ttc" id="acommon__tlm__packet__define_8h_html_aa30894f91d3a3a6a27fe5a6bc5100a51"><div class="ttname"><a href="common__tlm__packet__define_8h.html#aa30894f91d3a3a6a27fe5a6bc5100a51">CTP_APID_FROM_ME</a></div><div class="ttdeci">#define CTP_APID_FROM_ME</div><div class="ttdef"><b>Definition:</b> <a href="common__tlm__packet__define_8h_source.html#l00018">common_tlm_packet_define.h:18</a></div></div>
 <div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00019">stdint.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
