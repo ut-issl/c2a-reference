@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('struct_d_s___stream_config.html',''); 
 </div><!--header-->
 <div class="contents">
 
-<p>DriverSuperStreamの設定  
+<p>DriverSuperStream の設定  
  <a href="struct_d_s___stream_config.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="driver__super_8h_source.html">driver_super.h</a>&gt;</code></p>
@@ -188,7 +188,7 @@ DS_StreamConfig 連携図</div>
 <tr class="separator:a1650f075a4f0d480aedfb0fe48f1769c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>DriverSuperStreamの設定 </p>
+<div class="textblock"><p>DriverSuperStream の設定 </p>
 <pre class="fragment">    DS_StreamConfig のメンバはすべての Driver から非公開とし， getter / setter でアクセスする
 </pre> 
 <p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00273">273</a> 行目に定義があります。</p>
@@ -306,9 +306,9 @@ DS_StreamConfig 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>厳格なフレーム探索が有効か？ ノイズ発生時や複数stream使用時にフレーム受信漏れを完全になくすモード</p><ul>
+<p>厳格なフレーム探索が有効か？ ノイズ発生時や複数 stream 使用時にフレーム受信漏れを完全になくすモード</p><ul>
 <li>OFFの場合（通常はこちら） ヘッダを見つけて，フレーム候補を見つけた後，次のフレームはフレーム候補から探索する</li>
-<li>ONの場合 ヘッダを見つけて，フレーム候補を見つけた後，次のフレームは，見つけたヘッダ先頭の次バイトから探索する 実行時間は長くなる 複数streamやノイズが入ってしまった場合など，本来ヘッダでない部分をヘッダとして認識してしまう場合に有効化すると， 論理的なフレーム受信漏れの確率を限りなく 0 に近づけることができる． ヘッダがあるフレームの場合のみ，有効にできる 初期値: 0 (OFF) </li>
+<li>ONの場合 ヘッダを見つけて，フレーム候補を見つけた後，次のフレームは，見つけたヘッダ先頭の次バイトから探索する 実行時間は長くなる 複数 stream やノイズが入ってしまった場合など，本来ヘッダでない部分をヘッダとして認識してしまう場合に有効化すると， 論理的なフレーム受信漏れの確率を限りなく 0 に近づけることができる． ヘッダがあるフレームの場合のみ，有効にできる 初期値: 0 (OFF) </li>
 </ul>
 
 <p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00280">280</a> 行目に定義があります。</p>
@@ -572,7 +572,7 @@ DS_StreamConfig 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>フレームサイズデータのオフセット値 受信データが可変長の場合のみ使用される フレームサイズデータによる可変長データの解析は「フレームの全サイズ」により行われるが， 機器の中にはヘッダとフッタの分は除いたデータ数としてサイズが表現される場合がある その場合のサイズ調整のために使う フレームサイズデータが「フレームの全サイズ」を示している場合には0に設定する 初期値: 0 </p>
+<p>フレームサイズデータのオフセット値 受信データが可変長の場合のみ使用される フレームサイズデータによる可変長データの解析は「フレームの全サイズ」により行われるが， 機器の中にはヘッダとフッタの分は除いたデータ数としてサイズが表現される場合がある その場合のサイズ調整のために使う フレームサイズデータが「フレームの全サイズ」を示している場合には 0 に設定する 初期値: 0 </p>
 
 <p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00340">340</a> 行目に定義があります。</p>
 
@@ -606,7 +606,7 @@ DS_StreamConfig 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>フレームサイズデータの型サイズ [Byte] 受信データが可変長の場合のみ使用される． 例えば uint8 なら 1， uint32 なら 4 初期値: 0 </p>
+<p>フレームサイズデータの型サイズ [byte] 受信データが可変長の場合のみ使用される． 例えば uint8 なら 1， uint32 なら 4 初期値: 0 </p>
 
 <p class="definition"> <a class="el" href="driver__super_8h_source.html">driver_super.h</a> の <a class="el" href="driver__super_8h_source.html#l00336">336</a> 行目に定義があります。</p>
 
