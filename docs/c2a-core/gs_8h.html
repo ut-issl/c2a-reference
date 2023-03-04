@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('gs_8h.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
 <a href="#enum-members">列挙型</a> &#124;
 <a href="#func-members">関数</a>  </div>
   <div class="headertitle">
@@ -123,6 +124,11 @@ gs.h の依存先関係図:</div>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GroundStation Driver  <a href="struct_g_s___driver.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ac29ee9b451a18e018810774134772e70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs_8h.html#ac29ee9b451a18e018810774134772e70">GS_RX_HEADER_NUM</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:ac29ee9b451a18e018810774134772e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:a6e434698e4c842fb9a3d15fa772deb09"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs_8h.html#a6e434698e4c842fb9a3d15fa772deb09">GS_PORT_TYPE</a> { <a class="el" href="gs_8h.html#a6e434698e4c842fb9a3d15fa772deb09a8283be95349cac01b1c591107fa25a81">GS_PORT_TYPE_CCSDS</a>
@@ -134,9 +140,9 @@ gs.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a9213e29f09dd1ec3df3a01f2d6620aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs_8h.html#a9213e29f09dd1ec3df3a01f2d6620aa3">GS_init</a> (<a class="el" href="struct_g_s___driver.html">GS_Driver</a> *<a class="el" href="di__gs_8h.html#a6cc7f6f83757709fb44d51b49db03714">gs_driver</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> uart_ch)</td></tr>
-<tr class="memdesc:a9213e29f09dd1ec3df3a01f2d6620aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver の初期化  <a href="gs_8h.html#a9213e29f09dd1ec3df3a01f2d6620aa3">[詳解]</a><br /></td></tr>
-<tr class="separator:a9213e29f09dd1ec3df3a01f2d6620aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6888bc1931410614492718ca074bcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs_8h.html#abb6888bc1931410614492718ca074bcc">GS_init</a> (<a class="el" href="struct_g_s___driver.html">GS_Driver</a> *<a class="el" href="di__gs_8h.html#a6cc7f6f83757709fb44d51b49db03714">gs_driver</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> uart_ch, <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *ccsds_rx_buffers[<a class="el" href="driver__super__params_8h.html#a6de2adaf747f15e857f8270e62ee7a1e">DS_STREAM_MAX</a>], <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *uart_rx_buffers[<a class="el" href="driver__super__params_8h.html#a6de2adaf747f15e857f8270e62ee7a1e">DS_STREAM_MAX</a>])</td></tr>
+<tr class="memdesc:abb6888bc1931410614492718ca074bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver の初期化  <a href="gs_8h.html#abb6888bc1931410614492718ca074bcc">[詳解]</a><br /></td></tr>
+<tr class="separator:abb6888bc1931410614492718ca074bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56f8d1a93700e975b1233b271d82b618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a73c6f1b4d0bfa0367859ec847407e04d">DS_REC_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gs_8h.html#a56f8d1a93700e975b1233b271d82b618">GS_rec_tctf</a> (<a class="el" href="struct_g_s___driver.html">GS_Driver</a> *<a class="el" href="di__gs_8h.html#a6cc7f6f83757709fb44d51b49db03714">gs_driver</a>)</td></tr>
 <tr class="memdesc:a56f8d1a93700e975b1233b271d82b618"><td class="mdescLeft">&#160;</td><td class="mdescRight">地上から CMD を受信する. 形式は TC Transer Frame  <a href="gs_8h.html#a56f8d1a93700e975b1233b271d82b618">[詳解]</a><br /></td></tr>
 <tr class="separator:a56f8d1a93700e975b1233b271d82b618"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +154,24 @@ gs.h の依存先関係図:</div>
 <div class="textblock"><p>Ground Station との通信用の Driver </p>
 
 <p class="definition"> <a class="el" href="gs_8h_source.html">gs.h</a> に定義があります。</p>
-</div><h2 class="groupheader">列挙型詳解</h2>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ac29ee9b451a18e018810774134772e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29ee9b451a18e018810774134772e70">&#9670;&nbsp;</a></span>GS_RX_HEADER_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GS_RX_HEADER_NUM&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="gs_8h_source.html">gs.h</a> の <a class="el" href="gs_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
 <a id="a6e434698e4c842fb9a3d15fa772deb09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e434698e4c842fb9a3d15fa772deb09">&#9670;&nbsp;</a></span>GS_PORT_TYPE</h2>
 
@@ -172,13 +195,13 @@ gs.h の依存先関係図:</div>
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="gs_8h_source.html">gs.h</a> の <a class="el" href="gs_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs_8h_source.html">gs.h</a> の <a class="el" href="gs_8h_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a9213e29f09dd1ec3df3a01f2d6620aa3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9213e29f09dd1ec3df3a01f2d6620aa3">&#9670;&nbsp;</a></span>GS_init()</h2>
+<a id="abb6888bc1931410614492718ca074bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6888bc1931410614492718ca074bcc">&#9670;&nbsp;</a></span>GS_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +216,19 @@ gs.h の依存先関係図:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
-          <td class="paramname"><em>uart_ch</em>&#160;</td>
+          <td class="paramname"><em>uart_ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>ccsds_rx_buffers</em>[DS_STREAM_MAX], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>uart_rx_buffers</em>[DS_STREAM_MAX]&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -206,23 +241,26 @@ gs.h の依存先関係図:</div>
 <p>Driver の初期化 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gs_driver</td><td>ドライバー </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">uart_ch</td><td>有線通信時の CH </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ccsds_rx_buffers</td><td>CCSDS 用受信バッファ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uart_rx_buffers</td><td>UART 用受信バッファ </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_INIT_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00064">64</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00058">58</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs_8h_a9213e29f09dd1ec3df3a01f2d6620aa3_cgraph.svg" width="1478" height="1032"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs_8h_abb6888bc1931410614492718ca074bcc_cgraph.svg" width="1478" height="1255"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gs_8h_a9213e29f09dd1ec3df3a01f2d6620aa3_icgraph.svg" width="1303" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gs_8h_abb6888bc1931410614492718ca074bcc_icgraph.svg" width="1447" height="134"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -253,7 +291,7 @@ gs.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_REC_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00166">166</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00165">165</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -308,7 +346,7 @@ TLM 送信, 形式は <a class="el" href="struct_v_c_d_u.html">VCDU</a> </dd></d
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_CMD_ERR_CODE: 送信結果 </dd></dl>
 
-<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00257">257</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gs_8c_source.html">gs.c</a> の <a class="el" href="gs_8c_source.html#l00256">256</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

@@ -96,10 +96,11 @@ $(document).ready(function(){initNavTree('di__uart__test_8c.html',''); initResiz
 <code>#include &lt;<a class="el" href="print_8h_source.html">src_core/Library/print.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="common__cmd__packet__util_8h_source.html">src_core/TlmCmd/common_cmd_packet_util.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="port__config_8h_source.html">../../Settings/port_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="driver__buffer__define_8h_source.html">../../Settings/DriverSuper/driver_buffer_define.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 di_uart_test.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="di__uart__test_8c__incl.svg" width="2503" height="900"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__uart__test_8c__incl.svg" width="2206" height="900"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -124,10 +125,18 @@ di_uart_test.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a550e126a9e4e0abcb87168a390cea6cd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd">uart_test_instance_</a></td></tr>
-<tr class="separator:a550e126a9e4e0abcb87168a390cea6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6133150d5fa512d101162ff13d1438c7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#a6133150d5fa512d101162ff13d1438c7">uart_test_instance</a></td></tr>
-<tr class="separator:a6133150d5fa512d101162ff13d1438c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af658b5070287b70942e00d1b6736bc81"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#af658b5070287b70942e00d1b6736bc81">uart_test_driver_</a></td></tr>
+<tr class="separator:af658b5070287b70942e00d1b6736bc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcae8c80ec42e45f731c258598fbe3a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#a6fcae8c80ec42e45f731c258598fbe3a">uart_test_driver</a> = &amp;<a class="el" href="di__uart__test_8c.html#af658b5070287b70942e00d1b6736bc81">uart_test_driver_</a></td></tr>
+<tr class="separator:a6fcae8c80ec42e45f731c258598fbe3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f140bef1671f7f69b402c8777cd8ade"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#a3f140bef1671f7f69b402c8777cd8ade">DI_UART_TEST_rx_buffer_0_</a></td></tr>
+<tr class="separator:a3f140bef1671f7f69b402c8777cd8ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52cbc348795e578b8ed3b4bdbd4a0a75"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#a52cbc348795e578b8ed3b4bdbd4a0a75">DI_UART_TEST_rx_buffer_1_</a></td></tr>
+<tr class="separator:a52cbc348795e578b8ed3b4bdbd4a0a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b838965a8e0516df6a01d05a4326f0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#af0b838965a8e0516df6a01d05a4326f0">DI_UART_TEST_rx_buffer_allocation_0_</a> [<a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>]</td></tr>
+<tr class="separator:af0b838965a8e0516df6a01d05a4326f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e02ea357c47384d3f1805e4c2f1df52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__uart__test_8c.html#a1e02ea357c47384d3f1805e4c2f1df52">DI_UART_TEST_rx_buffer_allocation_1_</a> [<a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>]</td></tr>
+<tr class="separator:a1e02ea357c47384d3f1805e4c2f1df52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>UART と <a class="el" href="struct_driver_super.html" title="DriverSuper の設定 各 IF はこれを継承してつかう．">DriverSuper</a> テスト用 </p>
@@ -150,11 +159,11 @@ di_uart_test.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00072">72</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00102">102</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="di__uart__test_8c_aee9d038befc8e899bdb037ca9cbf5b8f_cgraph.svg" width="1784" height="1158"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__uart__test_8c_aee9d038befc8e899bdb037ca9cbf5b8f_cgraph.svg" width="1800" height="898"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -182,7 +191,7 @@ di_uart_test.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00092">92</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00122">122</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -214,7 +223,7 @@ di_uart_test.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00082">82</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00112">112</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -254,11 +263,11 @@ di_uart_test.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00045">45</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00048">48</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="di__uart__test_8c_a480c3ad63adf77375e50cf42ea37422d_cgraph.svg" width="1447" height="971"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__uart__test_8c_a480c3ad63adf77375e50cf42ea37422d_cgraph.svg" width="1490" height="972"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -294,7 +303,7 @@ di_uart_test.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00039">39</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00042">42</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -320,7 +329,7 @@ di_uart_test.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00033">33</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00036">36</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -360,7 +369,7 @@ di_uart_test.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00061">61</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00091">91</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -377,24 +386,8 @@ di_uart_test.c の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="a6133150d5fa512d101162ff13d1438c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6133150d5fa512d101162ff13d1438c7">&#9670;&nbsp;</a></span>uart_test_instance</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a>* uart_test_instance</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00016">16</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a550e126a9e4e0abcb87168a390cea6cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a550e126a9e4e0abcb87168a390cea6cd">&#9670;&nbsp;</a></span>uart_test_instance_</h2>
+<a id="a3f140bef1671f7f69b402c8777cd8ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f140bef1671f7f69b402c8777cd8ade">&#9670;&nbsp;</a></span>DI_UART_TEST_rx_buffer_0_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +396,7 @@ di_uart_test.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a> uart_test_instance_</td>
+          <td class="memname"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> DI_UART_TEST_rx_buffer_0_</td>
         </tr>
       </table>
   </td>
@@ -413,7 +406,119 @@ di_uart_test.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a52cbc348795e578b8ed3b4bdbd4a0a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52cbc348795e578b8ed3b4bdbd4a0a75">&#9670;&nbsp;</a></span>DI_UART_TEST_rx_buffer_1_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> DI_UART_TEST_rx_buffer_1_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af0b838965a8e0516df6a01d05a4326f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b838965a8e0516df6a01d05a4326f0">&#9670;&nbsp;</a></span>DI_UART_TEST_rx_buffer_allocation_0_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> DI_UART_TEST_rx_buffer_allocation_0_[<a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1e02ea357c47384d3f1805e4c2f1df52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e02ea357c47384d3f1805e4c2f1df52">&#9670;&nbsp;</a></span>DI_UART_TEST_rx_buffer_allocation_1_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> DI_UART_TEST_rx_buffer_allocation_1_[<a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6fcae8c80ec42e45f731c258598fbe3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fcae8c80ec42e45f731c258598fbe3a">&#9670;&nbsp;</a></span>uart_test_driver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a>* const uart_test_driver = &amp;<a class="el" href="di__uart__test_8c.html#af658b5070287b70942e00d1b6736bc81">uart_test_driver_</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00024">24</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af658b5070287b70942e00d1b6736bc81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af658b5070287b70942e00d1b6736bc81">&#9670;&nbsp;</a></span>uart_test_driver_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_u_a_r_t___t_e_s_t___driver.html">UART_TEST_Driver</a> uart_test_driver_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__uart__test_8c_source.html">di_uart_test.c</a> の <a class="el" href="di__uart__test_8c_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>

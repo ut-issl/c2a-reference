@@ -11,7 +11,7 @@ var aobc_8h =
       [ "AOBC_TX_ERR_CODE_OK", "aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4a0079f507bb7b049cdc80f2e8488c49de", null ],
       [ "AOBC_TX_ERR_CODE_CMD_NOT_FOUND", "aobc_8h.html#a3fdf74bd6aee154b130fb254179088d4aeb3243603167e006761debe2aa48cd29", null ]
     ] ],
-    [ "AOBC_init", "aobc_8h.html#a20e32b3490955158653ced576349e612", null ],
+    [ "AOBC_init", "aobc_8h.html#ad57ac68788eec32299ab4a5070251380", null ],
     [ "AOBC_rec", "aobc_8h.html#a96bd416cc06f354cc0886712d02687be", null ],
     [ "AOBC_send_cmd", "aobc_8h.html#a21bc4dfcbc36f4c3db4c9f59cd020414", null ]
 ];

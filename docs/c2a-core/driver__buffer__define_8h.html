@@ -90,10 +90,17 @@ $(document).ready(function(){initNavTree('driver__buffer__define_8h.html',''); i
 
 <p>Driver の各種バッファサイズなどの定義  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;<a class="el" href="driver__super__params_8h_source.html">./driver_super_params.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+driver_buffer_define.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__buffer__define_8h__incl.svg" width="202" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="driver__buffer__define_8h__dep__incl.svg" width="511" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="driver__buffer__define_8h__dep__incl.svg" width="655" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -101,8 +108,7 @@ $(document).ready(function(){initNavTree('driver__buffer__define_8h.html',''); i
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a6f317143b1b3d65790f2ac291a775cd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>&#160;&#160;&#160;(1024 * 2)</td></tr>
-<tr class="memdesc:a6f317143b1b3d65790f2ac291a775cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> のバッファサイズのデフォルト値  <a href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">[詳解]</a><br /></td></tr>
+<tr class="memitem:a6f317143b1b3d65790f2ac291a775cd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>&#160;&#160;&#160;(<a class="el" href="driver__super__params_8h.html#afb4c42a77e962be67ed2e5cc24a3163c">DS_IF_RX_BUFFER_SIZE</a> * 2)</td></tr>
 <tr class="separator:a6f317143b1b3d65790f2ac291a775cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -117,14 +123,13 @@ $(document).ready(function(){initNavTree('driver__buffer__define_8h.html',''); i
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DS_STREAM_REC_BUFFER_SIZE_DEFAULT&#160;&#160;&#160;(1024 * 2)</td>
+          <td class="memname">#define DS_STREAM_REC_BUFFER_SIZE_DEFAULT&#160;&#160;&#160;(<a class="el" href="driver__super__params_8h.html#afb4c42a77e962be67ed2e5cc24a3163c">DS_IF_RX_BUFFER_SIZE</a> * 2)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> のバッファサイズのデフォルト値 UART などの非同期通信はメモリに余力があれば DS_IF_RX_BUFFER_SIZE * 2 を推奨 詳細は dirver_super.c の </p><dl class="section note"><dt>覚え書き</dt><dd>を参照 </dd></dl>
 
-<p><a class="el" href="struct_d_s___stream_rec_buffer.html" title="フレーム受信バッファ">DS_StreamRecBuffer</a> のバッファサイズのデフォルト値 </p>
-
-<p class="definition"> <a class="el" href="driver__buffer__define_8h_source.html">driver_buffer_define.h</a> の <a class="el" href="driver__buffer__define_8h_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="driver__buffer__define_8h_source.html">driver_buffer_define.h</a> の <a class="el" href="driver__buffer__define_8h_source.html#l00012">12</a> 行目に定義があります。</p>
 
 </div>
 </div>

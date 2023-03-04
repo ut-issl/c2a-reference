@@ -6,15 +6,11 @@ var uart__test_8c =
     [ "UART_TEST_STREAM_VAR", "uart__test_8c.html#ad58a47dc7353bd162a3e33923ca52321", null ],
     [ "UART_TEST_TX_FRAME_SIZE_MAX", "uart__test_8c.html#a442dcfec47352ae3c80bedeaa87c143d", null ],
     [ "UART_TEST_analyze_rec_data_", "uart__test_8c.html#a62c9d0bbe2a9712d01bb459993d57952", null ],
-    [ "UART_TEST_init", "uart__test_8c.html#a0793b2accdbca92a28f5a0ae8852d06c", null ],
+    [ "UART_TEST_init", "uart__test_8c.html#a77024ec4ff3b5707e74c2672f75903be", null ],
     [ "UART_TEST_load_driver_super_init_settings_", "uart__test_8c.html#a9e7c2b2c8647f39bf6081d6c3af7a1fe", null ],
-    [ "UART_TEST_rec", "uart__test_8c.html#abb8834a562ff20b065ccb3c8ac8815d5", null ],
-    [ "UART_TEST_send", "uart__test_8c.html#a2a62d5adc6376f2be5f38edef8aa1165", null ],
+    [ "UART_TEST_rec", "uart__test_8c.html#aae80d6a9c8ea1fe1d1479bd6b7fce3b6", null ],
+    [ "UART_TEST_send", "uart__test_8c.html#a515fee0061a72319cf331e110b285e91", null ],
     [ "UART_TEST_footer_", "uart__test_8c.html#a4cc976940d06a79e01e497668e23957c", null ],
     [ "UART_TEST_header_", "uart__test_8c.html#a59e3fee2971cb79578610f05a2d68a24", null ],
-    [ "UART_TEST_rx_buffer_0_", "uart__test_8c.html#a9671950103bf1c62aee68b74447ee93f", null ],
-    [ "UART_TEST_rx_buffer_1_", "uart__test_8c.html#ade404d453344a245efe9dfe3f0779856", null ],
-    [ "UART_TEST_rx_buffer_allocation_0_", "uart__test_8c.html#a81a69265e8574eb7f865f4daad175853", null ],
-    [ "UART_TEST_rx_buffer_allocation_1_", "uart__test_8c.html#ab1fe64488e83070eeb5e66c4a16a011b", null ],
     [ "UART_TEST_tx_frame_", "uart__test_8c.html#ae6257aaa1d7acbda3c30b3e2b44758a0", null ]
 ];

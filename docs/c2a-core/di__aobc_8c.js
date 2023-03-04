@@ -12,5 +12,7 @@ var di__aobc_8c =
     [ "aobc_driver", "di__aobc_8c.html#abf78def11c9b69c67a7feb596753a323", null ],
     [ "aobc_driver_", "di__aobc_8c.html#a7b3e0c8f9eb7443290bbcf53fa2841ac", null ],
     [ "DI_AOBC_cdis", "di__aobc_8c.html#a78e5c1aa6f0f66f303aa8c65e4d8f963", null ],
-    [ "DI_AOBC_cdis_", "di__aobc_8c.html#a391d9ca7d749d303a7a5c77e90c98a1c", null ]
+    [ "DI_AOBC_cdis_", "di__aobc_8c.html#a391d9ca7d749d303a7a5c77e90c98a1c", null ],
+    [ "DI_AOBC_rx_buffer_", "di__aobc_8c.html#a199dc6f0391eedd673ed7f3493205c73", null ],
+    [ "DI_AOBC_rx_buffer_allocation_", "di__aobc_8c.html#ab149e6ee32152b04657f5ccb3b862207", null ]
 ];

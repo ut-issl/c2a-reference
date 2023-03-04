@@ -12,6 +12,7 @@ var di__gs_8c =
     [ "DI_GS_cmd_packet_handler", "di__gs_8c.html#a9db482e4676bf373c0f84561058f1f91", null ],
     [ "DI_GS_cmd_packet_handler_", "di__gs_8c.html#a8f20dcd562d4598cd177d1435dafeea4", null ],
     [ "DI_GS_cmd_packet_handler_init_", "di__gs_8c.html#aac505df7423e0f4abedbc661040be341", null ],
+    [ "DI_GS_init_", "di__gs_8c.html#a04fc98703a68e3bcc4ab9f6ba7f4f879", null ],
     [ "DI_GS_mst_packet_handler", "di__gs_8c.html#acdcbf3a0e68de63d2078e808e87cd0e7", null ],
     [ "DI_GS_mst_packet_handler_", "di__gs_8c.html#ab60fae9ad2c806b6ba10cb8a076d07c0", null ],
     [ "DI_GS_mst_packet_handler_init_", "di__gs_8c.html#aa06e5f52d9972c3617d75234be9a49f0", null ],
@@ -19,10 +20,14 @@ var di__gs_8c =
     [ "DI_GS_rpt_packet_handler_", "di__gs_8c.html#ab2b3fada377f7de06881f4654946baeb", null ],
     [ "DI_GS_rpt_packet_handler_init_", "di__gs_8c.html#a806c9eecac67ea833df9f9b9f88d37b1", null ],
     [ "DI_GS_set_t2m_flush_interval_", "di__gs_8c.html#a64f73486afd9ed964eba2e06a31d31e7", null ],
+    [ "DI_GS_ccsds_rx_buffer_", "di__gs_8c.html#a9b3d98f8ed777a4a4746234cf4022726", null ],
+    [ "DI_GS_ccsds_rx_buffer_allocation_", "di__gs_8c.html#a8c86ea4bf7dc142e39c5abd5dbc66bd1", null ],
     [ "DI_GS_ms_tlm_packet_handler", "di__gs_8c.html#a358c285edee97dd289bcc4d336460cca", null ],
     [ "DI_GS_ms_tlm_packet_handler_", "di__gs_8c.html#aca2b1c7715a5e078ecbd995e4e043b97", null ],
     [ "DI_GS_rp_tlm_packet_handler", "di__gs_8c.html#a416b337ddeaf32b064a7e1966b21fcd5", null ],
     [ "DI_GS_rp_tlm_packet_handler_", "di__gs_8c.html#aa33f6832c0a9c1f249019195686104fe", null ],
+    [ "DI_GS_uart_rx_buffer_", "di__gs_8c.html#ab031005d8c5e1551b7ed320843e029ee", null ],
+    [ "DI_GS_uart_rx_buffer_allocation_", "di__gs_8c.html#a902ced9e7810374691dc6d26fda1c7d1", null ],
     [ "gs_driver", "di__gs_8c.html#a6cc7f6f83757709fb44d51b49db03714", null ],
     [ "gs_driver_", "di__gs_8c.html#ac10f6ff9cc2eadb7e349b5085ed995b2", null ]
 ];

@@ -97,10 +97,11 @@ $(document).ready(function(){initNavTree('di__aobc_8c.html',''); initResizable()
 <code>#include &lt;<a class="el" href="print_8h_source.html">src_core/Library/print.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="common__cmd__packet__util_8h_source.html">src_core/TlmCmd/common_cmd_packet_util.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="port__config_8h_source.html">../../Settings/port_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="driver__buffer__define_8h_source.html">../../Settings/DriverSuper/driver_buffer_define.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 di_aobc.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c__incl.svg" width="2667" height="1064"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c__incl.svg" width="2648" height="1064"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -142,6 +143,10 @@ di_aobc.c の依存先関係図:</div>
 <tr class="memitem:a78e5c1aa6f0f66f303aa8c65e4d8f963"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_command_dispatcher.html">CommandDispatcher</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a78e5c1aa6f0f66f303aa8c65e4d8f963">DI_AOBC_cdis</a> = &amp;<a class="el" href="di__aobc_8c.html#a391d9ca7d749d303a7a5c77e90c98a1c">DI_AOBC_cdis_</a></td></tr>
 <tr class="memdesc:a78e5c1aa6f0f66f303aa8c65e4d8f963"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC cmd dispatcher  <a href="di__aobc_8c.html#a78e5c1aa6f0f66f303aa8c65e4d8f963">[詳解]</a><br /></td></tr>
 <tr class="separator:a78e5c1aa6f0f66f303aa8c65e4d8f963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199dc6f0391eedd673ed7f3493205c73"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#a199dc6f0391eedd673ed7f3493205c73">DI_AOBC_rx_buffer_</a></td></tr>
+<tr class="separator:a199dc6f0391eedd673ed7f3493205c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab149e6ee32152b04657f5ccb3b862207"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="di__aobc_8c.html#ab149e6ee32152b04657f5ccb3b862207">DI_AOBC_rx_buffer_allocation_</a> [<a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>]</td></tr>
+<tr class="separator:ab149e6ee32152b04657f5ccb3b862207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>AOBC の DI と AOBC の cmd dispatcher </p>
@@ -165,7 +170,7 @@ di_aobc.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00104">104</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00118">118</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -191,7 +196,7 @@ di_aobc.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00113">113</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00127">127</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -226,7 +231,7 @@ di_aobc.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00057">57</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00071">71</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -266,7 +271,7 @@ di_aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00071">71</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00085">85</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -306,7 +311,7 @@ di_aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00065">65</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00079">79</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -356,7 +361,7 @@ di_aobc.c の依存先関係図:</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00077">77</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00091">91</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -396,11 +401,11 @@ di_aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00035">35</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00039">39</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ac004552dc331c8fea7b0b6f2acd75a15_cgraph.svg" width="1900" height="1016"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_ac004552dc331c8fea7b0b6f2acd75a15_cgraph.svg" width="1819" height="1043"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -437,11 +442,11 @@ di_aobc.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00033">33</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a78f30ebb5b71301c1da6d10eac787db4_cgraph.svg" width="1631" height="1446"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="di__aobc_8c_a78f30ebb5b71301c1da6d10eac787db4_cgraph.svg" width="1692" height="1431"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -477,7 +482,7 @@ di_aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00046">46</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00060">60</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -508,7 +513,7 @@ di_aobc.c の依存先関係図:</div>
 
 <p>AOBC driver </p>
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00017">17</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -532,7 +537,7 @@ di_aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00016">16</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00022">22</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -550,7 +555,7 @@ di_aobc.c の依存先関係図:</div>
 
 <p>AOBC cmd dispatcher </p>
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00026">26</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -574,7 +579,55 @@ di_aobc.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00025">25</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a199dc6f0391eedd673ed7f3493205c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a199dc6f0391eedd673ed7f3493205c73">&#9670;&nbsp;</a></span>DI_AOBC_rx_buffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> DI_AOBC_rx_buffer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab149e6ee32152b04657f5ccb3b862207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab149e6ee32152b04657f5ccb3b862207">&#9670;&nbsp;</a></span>DI_AOBC_rx_buffer_allocation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> DI_AOBC_rx_buffer_allocation_[<a class="el" href="driver__buffer__define_8h.html#a6f317143b1b3d65790f2ac291a775cd9">DS_STREAM_REC_BUFFER_SIZE_DEFAULT</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="di__aobc_8c_source.html">di_aobc.c</a> の <a class="el" href="di__aobc_8c_source.html#l00030">30</a> 行目に定義があります。</p>
 
 </div>
 </div>

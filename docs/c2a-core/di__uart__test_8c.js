@@ -7,6 +7,10 @@ var di__uart__test_8c =
     [ "UART_TEST_init_by_AM_", "di__uart__test_8c.html#a649eb3a1621b9766bffaef3609ef520a", null ],
     [ "UART_TEST_update", "di__uart__test_8c.html#ac2cadb32ca03377583d0cc1d5b0f39cc", null ],
     [ "UART_TEST_update_", "di__uart__test_8c.html#a8f76f956fd20e62e8cac93ad593cfcd5", null ],
-    [ "uart_test_instance", "di__uart__test_8c.html#a6133150d5fa512d101162ff13d1438c7", null ],
-    [ "uart_test_instance_", "di__uart__test_8c.html#a550e126a9e4e0abcb87168a390cea6cd", null ]
+    [ "DI_UART_TEST_rx_buffer_0_", "di__uart__test_8c.html#a3f140bef1671f7f69b402c8777cd8ade", null ],
+    [ "DI_UART_TEST_rx_buffer_1_", "di__uart__test_8c.html#a52cbc348795e578b8ed3b4bdbd4a0a75", null ],
+    [ "DI_UART_TEST_rx_buffer_allocation_0_", "di__uart__test_8c.html#af0b838965a8e0516df6a01d05a4326f0", null ],
+    [ "DI_UART_TEST_rx_buffer_allocation_1_", "di__uart__test_8c.html#a1e02ea357c47384d3f1805e4c2f1df52", null ],
+    [ "uart_test_driver", "di__uart__test_8c.html#a6fcae8c80ec42e45f731c258598fbe3a", null ],
+    [ "uart_test_driver_", "di__uart__test_8c.html#af658b5070287b70942e00d1b6736bc81", null ]
 ];

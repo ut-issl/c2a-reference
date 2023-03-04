@@ -136,14 +136,14 @@ aobc.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a20e32b3490955158653ced576349e612"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8h.html#a20e32b3490955158653ced576349e612">AOBC_init</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ch)</td></tr>
-<tr class="memdesc:a20e32b3490955158653ced576349e612"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC 初期化  <a href="aobc_8h.html#a20e32b3490955158653ced576349e612">[詳解]</a><br /></td></tr>
-<tr class="separator:a20e32b3490955158653ced576349e612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57ac68788eec32299ab4a5070251380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8h.html#ad57ac68788eec32299ab4a5070251380">AOBC_init</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ch, <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *rx_buffer)</td></tr>
+<tr class="memdesc:ad57ac68788eec32299ab4a5070251380"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC 初期化  <a href="aobc_8h.html#ad57ac68788eec32299ab4a5070251380">[詳解]</a><br /></td></tr>
+<tr class="separator:ad57ac68788eec32299ab4a5070251380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96bd416cc06f354cc0886712d02687be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a73c6f1b4d0bfa0367859ec847407e04d">DS_REC_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8h.html#a96bd416cc06f354cc0886712d02687be">AOBC_rec</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>)</td></tr>
 <tr class="memdesc:a96bd416cc06f354cc0886712d02687be"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC のデータ（テレメ）受信  <a href="aobc_8h.html#a96bd416cc06f354cc0886712d02687be">[詳解]</a><br /></td></tr>
 <tr class="separator:a96bd416cc06f354cc0886712d02687be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21bc4dfcbc36f4c3db4c9f59cd020414"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a81f032590771b0c11b9190ad7004cd6b">DS_CMD_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8h.html#a21bc4dfcbc36f4c3db4c9f59cd020414">AOBC_send_cmd</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>, const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
-<tr class="memdesc:a21bc4dfcbc36f4c3db4c9f59cd020414"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOB Cへのコマンド送信  <a href="aobc_8h.html#a21bc4dfcbc36f4c3db4c9f59cd020414">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a21bc4dfcbc36f4c3db4c9f59cd020414"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC へのコマンド送信  <a href="aobc_8h.html#a21bc4dfcbc36f4c3db4c9f59cd020414">[詳解]</a><br /></td></tr>
 <tr class="separator:a21bc4dfcbc36f4c3db4c9f59cd020414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -199,8 +199,8 @@ aobc.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a20e32b3490955158653ced576349e612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20e32b3490955158653ced576349e612">&#9670;&nbsp;</a></span>AOBC_init()</h2>
+<a id="ad57ac68788eec32299ab4a5070251380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57ac68788eec32299ab4a5070251380">&#9670;&nbsp;</a></span>AOBC_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +215,13 @@ aobc.h の依存先関係図:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
-          <td class="paramname"><em>ch</em>&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *&#160;</td>
+          <td class="paramname"><em>rx_buffer</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -230,23 +236,24 @@ aobc.h の依存先関係図:</div>
 </pre> <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aobc_driver</td><td>初期化する <a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> 構造体へのポインタ </td></tr>
-    <tr><td class="paramname">ch</td><td>: AOBC が接続されている UART ポート番号 </td></tr>
+    <tr><td class="paramname">ch</td><td>AOBC が接続されている UART ポート番号 </td></tr>
+    <tr><td class="paramname">rx_buffer</td><td>受信バッファ </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_INIT_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00031">31</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00026">26</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a20e32b3490955158653ced576349e612_cgraph.svg" width="1936" height="1190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_ad57ac68788eec32299ab4a5070251380_cgraph.svg" width="1794" height="1035"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_a20e32b3490955158653ced576349e612_icgraph.svg" width="1163" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8h_ad57ac68788eec32299ab4a5070251380_icgraph.svg" width="1163" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -277,7 +284,7 @@ aobc.h の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_REC_ERR_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00075">75</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00067">67</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -319,18 +326,18 @@ aobc.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>AOB Cへのコマンド送信 </p>
+<p>AOBC へのコマンド送信 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">aobc_driver</td><td><a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> 構造体へのポインタ </td></tr>
-    <tr><td class="paramname">packet</td><td>: 送信する packet </td></tr>
+    <tr><td class="paramname">packet</td><td>送信する packet </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>DS_CMD_ERR_CODE </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>これを受信した AOBC C2A は， packet をそのまま PH_analyze_cmd_packet に流せばよい． </dd></dl>
 
-<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00136">136</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="aobc_8c_source.html">aobc.c</a> の <a class="el" href="aobc_8c_source.html#l00128">128</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">

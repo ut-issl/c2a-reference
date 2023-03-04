@@ -4,6 +4,7 @@ var struct_d_s___config =
     [ "internal", "struct_d_s___config.html#a252bd0db5fa2bed619bc0a0684088a5c", null ],
     [ "load_init_setting", "struct_d_s___config.html#a043eed1e3e20995ae74f57dd932ff86b", null ],
     [ "rec_status_", "struct_d_s___config.html#a58d900a563f500804b18637e373fb1c6", null ],
+    [ "rx_buffer_size_in_if_rx_", "struct_d_s___config.html#adb70c37735d4f826680307c0f0f26719", null ],
     [ "rx_call_count_", "struct_d_s___config.html#a8851441bcec2964fac1fd60221989793", null ],
     [ "rx_count_", "struct_d_s___config.html#a7a70fd58861ceac15a5ec34396a71fb2", null ],
     [ "rx_time_", "struct_d_s___config.html#a24adf564678b3834c4b5532af372f279", null ],
