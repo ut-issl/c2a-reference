@@ -9,6 +9,7 @@ var struct_d_s___stream_config =
     [ "is_strict_frame_search_", "struct_d_s___stream_config.html#af966a780ca9b47f990656cb371f41a21", null ],
     [ "is_validation_needed_for_rec_", "struct_d_s___stream_config.html#a03659e2304682a4e415c302ceaf9dc57", null ],
     [ "is_validation_needed_for_send_", "struct_d_s___stream_config.html#a9f03f387ca4cb3c92f74b2d22d388c81", null ],
+    [ "max_rx_frame_size_", "struct_d_s___stream_config.html#acbb35c4e1f806a4f9ce988671e17bc2a", null ],
     [ "rec_status_", "struct_d_s___stream_config.html#a633af7911182146b7a603ca2ea931203", null ],
     [ "req_tlm_cmd_tx_count_", "struct_d_s___stream_config.html#a10b16bacba530b45086e9c0d7592bb96", null ],
     [ "req_tlm_cmd_tx_count_after_last_tx_", "struct_d_s___stream_config.html#ad274f0933333c074d41c2283c848aa03", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"event__logger_8c.html#a66033c45c35cee62b607546096968762":[1,0,0,0,4,2,2,25],
+"event__logger_8c.html#a69fb9dbc85ad467d048f1c9f31d2442c":[1,0,0,0,4,2,2,43],
+"event__logger_8c.html#a6a28bc080687939cab97cdebaab7c772":[1,0,0,0,4,2,2,13],
+"event__logger_8c.html#a720be26ef63ab991d5633311bb328e37":[1,0,0,0,4,2,2,22],
 "event__logger_8c.html#a78457cc2ac865cb3419da49ec78fff60":[1,0,0,0,4,2,2,55],
 "event__logger_8c.html#a7b8f05677120f9f27a7b6e2df7f0ec50":[1,0,0,0,4,2,2,48],
 "event__logger_8c.html#a7e00285999d4372055ae10dc0a2ea1e4":[1,0,0,0,4,2,2,24],
@@ -222,8 +226,8 @@ var NAVTREEINDEX8 =
 "functions_t.html":[0,2,0,17],
 "functions_u.html":[0,2,0,18],
 "functions_v.html":[0,2,0,19],
-"functions_vars.html":[0,2,2,0],
 "functions_vars.html":[0,2,2],
+"functions_vars.html":[0,2,2,0],
 "functions_vars_b.html":[0,2,2,1],
 "functions_vars_c.html":[0,2,2,2],
 "functions_vars_d.html":[0,2,2,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "functions_vars_v.html":[0,2,2,19],
 "functions_vars_w.html":[0,2,2,20],
 "functions_w.html":[0,2,0,20],
-"functions_~.html":[0,2,0,21],
-"git__revision_8c.html":[1,0,0,1,3,0],
-"git__revision_8c.html#a6a80c38667063635c8000379c55a7ecc":[1,0,0,1,3,0,3],
-"git__revision_8c.html#a8510dd62fb5d5ef8cc222282e17035d5":[1,0,0,1,3,0,0],
-"git__revision_8c.html#abf9bc37acbbc3b9f66b84acb0d24667b":[1,0,0,1,3,0,1]
+"functions_~.html":[0,2,0,21]
 };

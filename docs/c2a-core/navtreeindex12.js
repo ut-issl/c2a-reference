@@ -1,5 +1,9 @@
 var NAVTREEINDEX12 =
 {
+"spi_8h.html#a4cc0618574dd43ba6afda790cef52bfda635838ff704e347cb898e40c385be0ee":[1,0,0,0,2,6,1,0],
+"spi_8h.html#a6395306623693930e5bf04a9344e60ea":[1,0,0,0,2,6,8],
+"spi_8h.html#a71fd23d892018160d87da023a34b2946":[1,0,0,0,2,6,5],
+"spi_8h.html#aa6d9d6a915c0397663329902bf3d3eab":[1,0,0,0,2,6,4],
 "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4":[1,0,0,0,2,6,2],
 "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a019ae6da96c84752614e1b62c97f54b9":[1,0,0,0,2,6,2,2],
 "spi_8h.html#ab195a56405a0a879b91ade9b23439ff4a16385836cc84abb0794515da1653e376":[1,0,0,0,2,6,2,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX12 =
 "struct_b_c_t___cmd_data.html":[0,0,10],
 "struct_b_c_t___cmd_data.html#a3056b6f3c55f0c110216bd4fdcc7599d":[0,0,10,0],
 "struct_b_c_t___func.html":[0,0,11],
-"struct_b_c_t___func.html#a14d8a442099db372d99cdc886efeceff":[0,0,11,3],
-"struct_b_c_t___func.html#a94c29adf60814f074a12cf4420fe0b65":[0,0,11,2],
-"struct_b_c_t___func.html#ab16f59a30a7cc2edbc9324f74f3b9baf":[0,0,11,1],
-"struct_b_c_t___func.html#afa4efaaa0ae1babd5a68390a58329c6c":[0,0,11,0],
-"struct_b_c_t___pos.html":[0,0,12]
+"struct_b_c_t___func.html#a14d8a442099db372d99cdc886efeceff":[0,0,11,3]
 };
