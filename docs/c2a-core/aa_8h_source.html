@@ -89,11 +89,11 @@ $(document).ready(function(){initNavTree('aa_8h_source.html',''); initResizable(
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef AA_H_</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define AA_H_</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">src_user/Library/stdint.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_a_a___config.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_a_a___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">   23</a></span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="struct_a_a___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">ch</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_a_a___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">   23</a></span>&#160;  uint8_t <a class="code" href="struct_a_a___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">ch</a>; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="struct_a_a___config.html">AA_Config</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
@@ -105,8 +105,7 @@ $(document).ready(function(){initNavTree('aa_8h_source.html',''); initResizable(
 <div class="ttc" id="aaa_8h_html_a1c62485a9b9c302375087f91c63c3b91"><div class="ttname"><a href="aa_8h.html#a1c62485a9b9c302375087f91c63c3b91">AA_init</a></div><div class="ttdeci">int AA_init(void *my_aa_v)</div></div>
 <div class="ttc" id="aaa_8h_html_a228e7ae22c0dbf53c946e1a521f8a00f"><div class="ttname"><a href="aa_8h.html#a228e7ae22c0dbf53c946e1a521f8a00f">AA_tx</a></div><div class="ttdeci">int AA_tx(void *my_aa_v, void *data_v, int data_size)</div></div>
 <div class="ttc" id="aaa_8h_html_ab209e0f953fd116a05f8d9aa5d3c43a0"><div class="ttname"><a href="aa_8h.html#ab209e0f953fd116a05f8d9aa5d3c43a0">AA_rx</a></div><div class="ttdeci">int AA_rx(void *my_aa_v, void *data_v, int buffer_size)</div></div>
-<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">C89 環境用 stdint.h</div></div>
 <div class="ttc" id="astruct_a_a___config_html"><div class="ttname"><a href="struct_a_a___config.html">AA_Config</a></div><div class="ttdoc">AAポートの初期化、電圧値取得の際に必要となる設定情報を格納する構造体です。</div><div class="ttdef"><b>Definition:</b> <a href="aa_8h_source.html#l00021">aa.h:22</a></div></div>
 <div class="ttc" id="astruct_a_a___config_html_acbcf5f8de7895ca456bb39fbcccde1d1"><div class="ttname"><a href="struct_a_a___config.html#acbcf5f8de7895ca456bb39fbcccde1d1">AA_Config::ch</a></div><div class="ttdeci">uint8_t ch</div><div class="ttdoc">チャネル指定のbit0がポート1に、bit7がポート8に対応し、1を設定したポートの電圧値だけを取得します。</div><div class="ttdef"><b>Definition:</b> <a href="aa_8h_source.html#l00023">aa.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

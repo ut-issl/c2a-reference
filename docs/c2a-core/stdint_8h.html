@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C2A_Core: src/src_user/Library/stdint.h ファイル</title>
+<title>C2A_Core: src/src_core/Library/stdint_wrapper/stdint.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,17 +81,18 @@ $(document).ready(function(){initNavTree('stdint_8h.html',''); initResizable(); 
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#typedef-members">型定義</a>  </div>
   <div class="headertitle">
 <div class="title">stdint.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="sils__define_8h_source.html">../Settings/sils_define.h</a>&quot;</code><br />
+
+<p>C89 環境用 <a class="el" href="stdint_8h.html" title="C89 環境用 stdint.h">stdint.h</a>  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;src_user/Library/stdint_impl.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 stdint.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="stdint_8h__incl.svg" width="183" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="stdint_8h__incl.svg" width="187" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -102,161 +103,17 @@ stdint.h の依存先関係図:</div>
 </div>
 </div>
 <p><a href="stdint_8h_source.html">[ソースコード]</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-型定義</h2></td></tr>
-<tr class="memitem:aef44329758059c91c76d334e8fc09700"><td class="memItemLeft" align="right" valign="top">typedef signed char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#aef44329758059c91c76d334e8fc09700">int8_t</a></td></tr>
-<tr class="separator:aef44329758059c91c76d334e8fc09700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a269259c924dce846340ddbb810db2e3c"><td class="memItemLeft" align="right" valign="top">typedef signed short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td></tr>
-<tr class="separator:a269259c924dce846340ddbb810db2e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ba621978a511250f7250fb10e05ffbe"><td class="memItemLeft" align="right" valign="top">typedef signed long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#a2ba621978a511250f7250fb10e05ffbe">int32_t</a></td></tr>
-<tr class="separator:a2ba621978a511250f7250fb10e05ffbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a831d6234342279926bb11bad3a37add9"><td class="memItemLeft" align="right" valign="top">typedef signed long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#a831d6234342279926bb11bad3a37add9">int64_t</a></td></tr>
-<tr class="separator:a831d6234342279926bb11bad3a37add9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba7bc1797add20fe3efdf37ced1182c5"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td></tr>
-<tr class="separator:aba7bc1797add20fe3efdf37ced1182c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a273cf69d639a59973b6019625df33e30"><td class="memItemLeft" align="right" valign="top">typedef unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td></tr>
-<tr class="separator:a273cf69d639a59973b6019625df33e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06896e8c53f721507066c079052171f8"><td class="memItemLeft" align="right" valign="top">typedef unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></td></tr>
-<tr class="separator:a06896e8c53f721507066c079052171f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad27ed092432b64ff558d2254c278720f"><td class="memItemLeft" align="right" valign="top">typedef unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdint_8h.html#ad27ed092432b64ff558d2254c278720f">uint64_t</a></td></tr>
-<tr class="separator:ad27ed092432b64ff558d2254c278720f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">型定義詳解</h2>
-<a id="a269259c924dce846340ddbb810db2e3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a269259c924dce846340ddbb810db2e3c">&#9670;&nbsp;</a></span>int16_t</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>C89 環境用 <a class="el" href="stdint_8h.html" title="C89 環境用 stdint.h">stdint.h</a> </p>
+<dl class="section note"><dt>覚え書き</dt><dd>真に C89 で，stdint.h が提供されない環境では，このパスを include path に追加し， src_user/Library/stdint_impl.h を自前で用意すること </dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef signed short <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00014">14</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a2ba621978a511250f7250fb10e05ffbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ba621978a511250f7250fb10e05ffbe">&#9670;&nbsp;</a></span>int32_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef signed long <a class="el" href="stdint_8h.html#a2ba621978a511250f7250fb10e05ffbe">int32_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00015">15</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a831d6234342279926bb11bad3a37add9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a831d6234342279926bb11bad3a37add9">&#9670;&nbsp;</a></span>int64_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef signed long long int <a class="el" href="stdint_8h.html#a831d6234342279926bb11bad3a37add9">int64_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00016">16</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aef44329758059c91c76d334e8fc09700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef44329758059c91c76d334e8fc09700">&#9670;&nbsp;</a></span>int8_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef signed char <a class="el" href="stdint_8h.html#aef44329758059c91c76d334e8fc09700">int8_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00013">13</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a273cf69d639a59973b6019625df33e30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a273cf69d639a59973b6019625df33e30">&#9670;&nbsp;</a></span>uint16_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef unsigned short <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00019">19</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a06896e8c53f721507066c079052171f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06896e8c53f721507066c079052171f8">&#9670;&nbsp;</a></span>uint32_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef unsigned long <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00020">20</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad27ed092432b64ff558d2254c278720f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad27ed092432b64ff558d2254c278720f">&#9670;&nbsp;</a></span>uint64_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef unsigned long long int <a class="el" href="stdint_8h.html#ad27ed092432b64ff558d2254c278720f">uint64_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00021">21</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aba7bc1797add20fe3efdf37ced1182c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba7bc1797add20fe3efdf37ced1182c5">&#9670;&nbsp;</a></span>uint8_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef unsigned char <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> の <a class="el" href="stdint_8h_source.html#l00018">18</a> 行目に定義があります。</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p class="definition"> <a class="el" href="stdint_8h_source.html">stdint.h</a> に定義があります。</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a></li><li class="navelem"><a class="el" href="stdint_8h.html">stdint.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="dir_03f4528c2d20d980cb406c6369415834.html">stdint_wrapper</a></li><li class="navelem"><a class="el" href="stdint_8h.html">stdint.h</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

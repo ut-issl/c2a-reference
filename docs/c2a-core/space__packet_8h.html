@@ -93,13 +93,13 @@ $(document).ready(function(){initNavTree('space__packet_8h.html',''); initResiza
 
 <p>CCSDS で規定される Space Packet の実装  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">stdint.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="space__packet__typedef_8h_source.html">space_packet_typedef.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="common__tlm__cmd__packet_8h_source.html">../common_tlm_cmd_packet.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 space_packet.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="space__packet_8h__incl.svg" width="1680" height="603"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="space__packet_8h__incl.svg" width="1680" height="618"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -180,22 +180,22 @@ space_packet.h の依存先関係図:</div>
 <tr class="memitem:a87c32edde9091b947e50ed99e16e6310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a87c32edde9091b947e50ed99e16e6310">SP_set_seq_flag</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, <a class="el" href="space__packet_8h.html#a813829df0a8d8f66bfe097e160f77f34">SP_SEQ_FLAG</a> flag)</td></tr>
 <tr class="memdesc:a87c32edde9091b947e50ed99e16e6310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Flag を設定  <a href="space__packet_8h.html#a87c32edde9091b947e50ed99e16e6310">[詳解]</a><br /></td></tr>
 <tr class="separator:a87c32edde9091b947e50ed99e16e6310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d6ae957a4e36f16d146275a580e510e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a1d6ae957a4e36f16d146275a580e510e">SP_get_seq_count</a> (const <a class="el" href="struct_space_packet.html">SpacePacket</a> *sp)</td></tr>
+<tr class="memitem:a1d6ae957a4e36f16d146275a580e510e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a1d6ae957a4e36f16d146275a580e510e">SP_get_seq_count</a> (const <a class="el" href="struct_space_packet.html">SpacePacket</a> *sp)</td></tr>
 <tr class="memdesc:a1d6ae957a4e36f16d146275a580e510e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Count を取得  <a href="space__packet_8h.html#a1d6ae957a4e36f16d146275a580e510e">[詳解]</a><br /></td></tr>
 <tr class="separator:a1d6ae957a4e36f16d146275a580e510e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89427fc91a39c1d05b8bc03135d4b9a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a89427fc91a39c1d05b8bc03135d4b9a1">SP_set_seq_count</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> count)</td></tr>
+<tr class="memitem:a89427fc91a39c1d05b8bc03135d4b9a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a89427fc91a39c1d05b8bc03135d4b9a1">SP_set_seq_count</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, uint16_t count)</td></tr>
 <tr class="memdesc:a89427fc91a39c1d05b8bc03135d4b9a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence Count を設定  <a href="space__packet_8h.html#a89427fc91a39c1d05b8bc03135d4b9a1">[詳解]</a><br /></td></tr>
 <tr class="separator:a89427fc91a39c1d05b8bc03135d4b9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5dd44fdb4e6c00e7dbb311d3aaee3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#ad5dd44fdb4e6c00e7dbb311d3aaee3d3">SP_get_packet_data_len</a> (const <a class="el" href="struct_space_packet.html">SpacePacket</a> *sp)</td></tr>
+<tr class="memitem:ad5dd44fdb4e6c00e7dbb311d3aaee3d3"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#ad5dd44fdb4e6c00e7dbb311d3aaee3d3">SP_get_packet_data_len</a> (const <a class="el" href="struct_space_packet.html">SpacePacket</a> *sp)</td></tr>
 <tr class="memdesc:ad5dd44fdb4e6c00e7dbb311d3aaee3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Data Length を取得  <a href="space__packet_8h.html#ad5dd44fdb4e6c00e7dbb311d3aaee3d3">[詳解]</a><br /></td></tr>
 <tr class="separator:ad5dd44fdb4e6c00e7dbb311d3aaee3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03e63eb8f8570b389b15eb44c5071af9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a03e63eb8f8570b389b15eb44c5071af9">SP_set_packet_data_len</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memitem:a03e63eb8f8570b389b15eb44c5071af9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a03e63eb8f8570b389b15eb44c5071af9">SP_set_packet_data_len</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, uint16_t len)</td></tr>
 <tr class="memdesc:a03e63eb8f8570b389b15eb44c5071af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Data Length を設定  <a href="space__packet_8h.html#a03e63eb8f8570b389b15eb44c5071af9">[詳解]</a><br /></td></tr>
 <tr class="separator:a03e63eb8f8570b389b15eb44c5071af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25afed909fb67da49f5ac9921a23744f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a25afed909fb67da49f5ac9921a23744f">SP_get_packet_len</a> (const <a class="el" href="struct_space_packet.html">SpacePacket</a> *sp)</td></tr>
+<tr class="memitem:a25afed909fb67da49f5ac9921a23744f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#a25afed909fb67da49f5ac9921a23744f">SP_get_packet_len</a> (const <a class="el" href="struct_space_packet.html">SpacePacket</a> *sp)</td></tr>
 <tr class="memdesc:a25afed909fb67da49f5ac9921a23744f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Length を取得  <a href="space__packet_8h.html#a25afed909fb67da49f5ac9921a23744f">[詳解]</a><br /></td></tr>
 <tr class="separator:a25afed909fb67da49f5ac9921a23744f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addad7908c3c2db6b1ab2546971373bb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#addad7908c3c2db6b1ab2546971373bb7">SP_set_packet_len</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> len)</td></tr>
+<tr class="memitem:addad7908c3c2db6b1ab2546971373bb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#addad7908c3c2db6b1ab2546971373bb7">SP_set_packet_len</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *sp, uint16_t len)</td></tr>
 <tr class="memdesc:addad7908c3c2db6b1ab2546971373bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packet Length を設定  <a href="space__packet_8h.html#addad7908c3c2db6b1ab2546971373bb7">[詳解]</a><br /></td></tr>
 <tr class="separator:addad7908c3c2db6b1ab2546971373bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2e7ada2c7544c10e11bb9c7473485fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="space__packet_8h.html#af2e7ada2c7544c10e11bb9c7473485fa">SP_copy_packet</a> (<a class="el" href="struct_space_packet.html">SpacePacket</a> *dest, const <a class="el" href="struct_space_packet.html">SpacePacket</a> *src)</td></tr>
@@ -550,7 +550,7 @@ packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | P
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> SP_get_packet_data_len </td>
+          <td class="memname">uint16_t SP_get_packet_data_len </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_space_packet.html">SpacePacket</a> *&#160;</td>
           <td class="paramname"><em>sp</em></td><td>)</td>
@@ -591,7 +591,7 @@ packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | P
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> SP_get_packet_len </td>
+          <td class="memname">uint16_t SP_get_packet_len </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_space_packet.html">SpacePacket</a> *&#160;</td>
           <td class="paramname"><em>sp</em></td><td>)</td>
@@ -632,7 +632,7 @@ packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | P
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> SP_get_seq_count </td>
+          <td class="memname">uint16_t SP_get_seq_count </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_space_packet.html">SpacePacket</a> *&#160;</td>
           <td class="paramname"><em>sp</em></td><td>)</td>
@@ -967,7 +967,7 @@ packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | P
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
@@ -1020,7 +1020,7 @@ packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | P
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
@@ -1072,7 +1072,7 @@ packet 構造 |------&mdash;+----&mdash;+----&mdash;+---------------&mdash;| | P
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>count</em>&#160;</td>
         </tr>
         <tr>

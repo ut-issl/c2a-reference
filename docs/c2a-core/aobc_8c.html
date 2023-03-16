@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('aobc_8c.html',''); initResizable(); })
 </div><div class="textblock"><div class="dynheader">
 aobc.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c__incl.svg" width="2238" height="886"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="aobc_8c__incl.svg" width="2238" height="900"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -122,7 +122,7 @@ aobc.c の依存先関係図:</div>
 <tr class="separator:ace8c524e6d1fe0054e4db53f9fbc0a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb166b8bf407374a9f89f7cce4dd9f44"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#abb166b8bf407374a9f89f7cce4dd9f44">AOBC_analyze_rec_data_</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, void *p_driver)</td></tr>
 <tr class="separator:abb166b8bf407374a9f89f7cce4dd9f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad57ac68788eec32299ab4a5070251380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#ad57ac68788eec32299ab4a5070251380">AOBC_init</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> ch, <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *rx_buffer)</td></tr>
+<tr class="memitem:ad57ac68788eec32299ab4a5070251380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a63557647f0cd8721358a239372a9eae4">DS_INIT_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#ad57ac68788eec32299ab4a5070251380">AOBC_init</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>, uint8_t ch, <a class="el" href="struct_d_s___stream_rec_buffer.html">DS_StreamRecBuffer</a> *rx_buffer)</td></tr>
 <tr class="memdesc:ad57ac68788eec32299ab4a5070251380"><td class="mdescLeft">&#160;</td><td class="mdescRight">AOBC 初期化  <a href="aobc_8c.html#ad57ac68788eec32299ab4a5070251380">[詳解]</a><br /></td></tr>
 <tr class="separator:ad57ac68788eec32299ab4a5070251380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96bd416cc06f354cc0886712d02687be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#a73c6f1b4d0bfa0367859ec847407e04d">DS_REC_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#a96bd416cc06f354cc0886712d02687be">AOBC_rec</a> (<a class="el" href="struct_a_o_b_c___driver.html">AOBC_Driver</a> *<a class="el" href="di__aobc_8h.html#abf78def11c9b69c67a7feb596753a323">aobc_driver</a>)</td></tr>
@@ -134,7 +134,7 @@ aobc.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a49cc9011df60a29fc505f6b77faa3519"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#a49cc9011df60a29fc505f6b77faa3519">AOBC_tx_frame_</a> [<a class="el" href="eb90__frame__for__driver__super_8h.html#a3100dfef2e877e39325d48f58ee0da5b">EB90_FRAME_HEADER_SIZE</a>+<a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+<a class="el" href="eb90__frame__for__driver__super_8h.html#a814077e0ce7ffa6a9488044cdfb3279b">EB90_FRAME_FOOTER_SIZE</a>]</td></tr>
+<tr class="memitem:a49cc9011df60a29fc505f6b77faa3519"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aobc_8c.html#a49cc9011df60a29fc505f6b77faa3519">AOBC_tx_frame_</a> [<a class="el" href="eb90__frame__for__driver__super_8h.html#a3100dfef2e877e39325d48f58ee0da5b">EB90_FRAME_HEADER_SIZE</a>+<a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+<a class="el" href="eb90__frame__for__driver__super_8h.html#a814077e0ce7ffa6a9488044cdfb3279b">EB90_FRAME_FOOTER_SIZE</a>]</td></tr>
 <tr class="separator:a49cc9011df60a29fc505f6b77faa3519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
@@ -226,7 +226,7 @@ aobc.c の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>ch</em>, </td>
         </tr>
         <tr>
@@ -416,7 +416,7 @@ aobc.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> AOBC_tx_frame_[<a class="el" href="eb90__frame__for__driver__super_8h.html#a3100dfef2e877e39325d48f58ee0da5b">EB90_FRAME_HEADER_SIZE</a>+ <a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+ <a class="el" href="eb90__frame__for__driver__super_8h.html#a814077e0ce7ffa6a9488044cdfb3279b">EB90_FRAME_FOOTER_SIZE</a>]</td>
+          <td class="memname">uint8_t AOBC_tx_frame_[<a class="el" href="eb90__frame__for__driver__super_8h.html#a3100dfef2e877e39325d48f58ee0da5b">EB90_FRAME_HEADER_SIZE</a>+ <a class="el" href="common__tlm__cmd__packet__define_8h.html#a1d452a28150006df7656763823713d8d">CTCP_MAX_LEN</a>+ <a class="el" href="eb90__frame__for__driver__super_8h.html#a814077e0ce7ffa6a9488044cdfb3279b">EB90_FRAME_FOOTER_SIZE</a>]</td>
         </tr>
       </table>
   </td>

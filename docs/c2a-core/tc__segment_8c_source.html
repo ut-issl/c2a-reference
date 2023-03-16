@@ -90,16 +90,16 @@ $(document).ready(function(){initNavTree('tc__segment_8c_source.html',''); initR
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="tc__segment_8c.html#adbd2c01336c142c65a17e94a4e0cc39e">    8</a></span>&#160;<a class="code" href="tc__segment_8h.html#ac3f65f5104afde4429c691a896fe2740">TCS_SEQ_FLAG</a> <a class="code" href="tc__segment_8c.html#adbd2c01336c142c65a17e94a4e0cc39e">TCS_get_seq_flag</a>(<span class="keyword">const</span> <a class="code" href="struct_tc_segment.html">TcSegment</a>* tcs)</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pos = 0;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0xc0; <span class="comment">// 1100 0000b</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  uint8_t pos = 0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  uint8_t mask = 0xc0; <span class="comment">// 1100 0000b</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">return</span> (<a class="code" href="tc__segment_8h.html#ac3f65f5104afde4429c691a896fe2740">TCS_SEQ_FLAG</a>)((tcs-&gt;<a class="code" href="struct_tc_segment.html#a871360e7a06474ad165a37ac90c0b98e">packet</a>[pos] &amp; mask) &gt;&gt; 6);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="tc__segment_8c.html#ab83f0216e7e3edf7f1d4e82de1662293">   16</a></span>&#160;<a class="code" href="tc__segment_8h.html#a5d4714d02318b1436d3ec1abffe345dd">TCS_MAP_ID</a> <a class="code" href="tc__segment_8c.html#ab83f0216e7e3edf7f1d4e82de1662293">TCS_get_map_id</a>(<span class="keyword">const</span> <a class="code" href="struct_tc_segment.html">TcSegment</a>* tcs)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pos = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x3f; <span class="comment">// 0011 1111b</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  uint8_t pos = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  uint8_t mask = 0x3f; <span class="comment">// 0011 1111b</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="tc__segment_8h.html#a5d4714d02318b1436d3ec1abffe345dd">TCS_MAP_ID</a> map_id = (<a class="code" href="tc__segment_8h.html#a5d4714d02318b1436d3ec1abffe345dd">TCS_MAP_ID</a>)(tcs-&gt;<a class="code" href="struct_tc_segment.html#a871360e7a06474ad165a37ac90c0b98e">packet</a>[pos] &amp; mask);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
@@ -121,7 +121,6 @@ $(document).ready(function(){initNavTree('tc__segment_8c_source.html',''); initR
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#pragma section</span></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
 <div class="ttc" id="astruct_cmd_space_packet_html"><div class="ttname"><a href="struct_cmd_space_packet.html">CmdSpacePacket</a></div><div class="ttdoc">Space Packet (コマンド用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00053">space_packet_typedef.h:54</a></div></div>
 <div class="ttc" id="astruct_tc_segment_html"><div class="ttname"><a href="struct_tc_segment.html">TcSegment</a></div><div class="ttdoc">TC Segment のパケット構造体</div><div class="ttdef"><b>Definition:</b> <a href="tc__segment_8h_source.html#l00033">tc_segment.h:34</a></div></div>
 <div class="ttc" id="astruct_tc_segment_html_a871360e7a06474ad165a37ac90c0b98e"><div class="ttname"><a href="struct_tc_segment.html#a871360e7a06474ad165a37ac90c0b98e">TcSegment::packet</a></div><div class="ttdeci">uint8_t packet[TCS_PACKET_MAX_LENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="tc__segment_8h_source.html#l00035">tc_segment.h:35</a></div></div>

@@ -92,11 +92,11 @@ $(document).ready(function(){initNavTree('i2c_8h.html',''); initResizable(); });
 
 <p>I2C通信(Master側)のラッパークラスです。  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">src_user/Library/stdint.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">stdint.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 i2c.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="i2c_8h__incl.svg" width="190" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="i2c_8h__incl.svg" width="178" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -146,10 +146,10 @@ i2c.h の依存先関係図:</div>
 <tr class="memitem:a21b35cbb52d52c25ad51f43adc845d30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a21b35cbb52d52c25ad51f43adc845d30">I2C_reopen</a> (void *my_i2c_v, int reason)</td></tr>
 <tr class="memdesc:a21b35cbb52d52c25ad51f43adc845d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたchを開きなおす  <a href="i2c_8h.html#a21b35cbb52d52c25ad51f43adc845d30">[詳解]</a><br /></td></tr>
 <tr class="separator:a21b35cbb52d52c25ad51f43adc845d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf3b649f6c5b3a766236eb4a42b7780"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#afdf3b649f6c5b3a766236eb4a42b7780">I2C_set_stop_flag</a> (void *my_i2c_v, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> stop_flag)</td></tr>
+<tr class="memitem:afdf3b649f6c5b3a766236eb4a42b7780"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#afdf3b649f6c5b3a766236eb4a42b7780">I2C_set_stop_flag</a> (void *my_i2c_v, const uint8_t stop_flag)</td></tr>
 <tr class="memdesc:afdf3b649f6c5b3a766236eb4a42b7780"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop_flagを設定する  <a href="i2c_8h.html#afdf3b649f6c5b3a766236eb4a42b7780">[詳解]</a><br /></td></tr>
 <tr class="separator:afdf3b649f6c5b3a766236eb4a42b7780"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e9b63d8f479493de2356f25b09e68f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a43e9b63d8f479493de2356f25b09e68f">I2C_set_rx_length</a> (void *my_i2c_v, const <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> rx_length)</td></tr>
+<tr class="memitem:a43e9b63d8f479493de2356f25b09e68f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a43e9b63d8f479493de2356f25b09e68f">I2C_set_rx_length</a> (void *my_i2c_v, const uint32_t rx_length)</td></tr>
 <tr class="memdesc:a43e9b63d8f479493de2356f25b09e68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">rx_lengthを設定する  <a href="i2c_8h.html#a43e9b63d8f479493de2356f25b09e68f">[詳解]</a><br /></td></tr>
 <tr class="separator:a43e9b63d8f479493de2356f25b09e68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -339,7 +339,7 @@ i2c.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>rx_length</em>&#160;</td>
         </tr>
         <tr>
@@ -384,7 +384,7 @@ i2c.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramtype">const uint8_t&#160;</td>
           <td class="paramname"><em>stop_flag</em>&#160;</td>
         </tr>
         <tr>
@@ -403,8 +403,6 @@ i2c.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>なし </dd></dl>
-
-<p class="definition"> <a class="el" href="i2c__sils_8cpp_source.html">i2c_sils.cpp</a> の <a class="el" href="i2c__sils_8cpp_source.html#l00033">33</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">

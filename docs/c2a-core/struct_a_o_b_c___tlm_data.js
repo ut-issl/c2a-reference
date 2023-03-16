@@ -12,7 +12,7 @@ var struct_a_o_b_c___tlm_data =
     [ "current_id", "struct_a_o_b_c___tlm_data.html#ad7adc75147576879f304a00d1dae2313", null ],
     [ "current_id", "struct_a_o_b_c___tlm_data.html#a214060b6a5e5a3ce71b89dde2727780a", null ],
     [ "dest_flags", "struct_a_o_b_c___tlm_data.html#a93ab7b2dc03e9ee47e278494888894c3", null ],
-    [ "dr_partition", "struct_a_o_b_c___tlm_data.html#a2d2d582d4971cf16608da64e5864156a", null ],
+    [ "dest_info", "struct_a_o_b_c___tlm_data.html#aed899c002400a5727f71d86e14a25dfe", null ],
     [ "dummy_data0", "struct_a_o_b_c___tlm_data.html#a916d85ca5529a7875291b31723a50990", null ],
     [ "dummy_data1", "struct_a_o_b_c___tlm_data.html#a7f829ed3b8ec5a662eab99a816f2417a", null ],
     [ "dummy_data10", "struct_a_o_b_c___tlm_data.html#aafb2e6b8e5ee398c4f805e6c11600590", null ],

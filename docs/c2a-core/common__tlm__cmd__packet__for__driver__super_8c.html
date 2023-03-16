@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('common__tlm__cmd__packet__for__driver_
 </div><div class="textblock"><div class="dynheader">
 common_tlm_cmd_packet_for_driver_super.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c__incl.svg" width="2148" height="811"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__cmd__packet__for__driver__super_8c__incl.svg" width="2148" height="826"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -113,7 +113,7 @@ common_tlm_cmd_packet_for_driver_super.c の依存先関係図:</div>
 <tr class="memitem:a40adc5e0e6a976c720682df078eb7876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a40adc5e0e6a976c720682df078eb7876">CCP_get_ccp_from_dssc</a> (const <a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *received_packet)</td></tr>
 <tr class="memdesc:a40adc5e0e6a976c720682df078eb7876"><td class="mdescLeft">&#160;</td><td class="mdescRight">CommonCmdPacket を受信データからコピーして取得する  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#a40adc5e0e6a976c720682df078eb7876">[詳解]</a><br /></td></tr>
 <tr class="separator:a40adc5e0e6a976c720682df078eb7876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1621fe9ac5069a84bdc5135c83afcc41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a1621fe9ac5069a84bdc5135c83afcc41">CTCP_init_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *tx_frame_buffer, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> tx_frame_buffer_size, <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*data_analyzer)(<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, void *p_driver))</td></tr>
+<tr class="memitem:a1621fe9ac5069a84bdc5135c83afcc41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a1621fe9ac5069a84bdc5135c83afcc41">CTCP_init_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, uint8_t *tx_frame_buffer, int16_t tx_frame_buffer_size, <a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>(*data_analyzer)(<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, void *p_driver))</td></tr>
 <tr class="memdesc:a1621fe9ac5069a84bdc5135c83afcc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">C2A 間通信など， CTCP をコンポ間通信に用いるとき，DS_init で渡す初期化関数内部用の Init Util  <a href="common__tlm__cmd__packet__for__driver__super_8c.html#a1621fe9ac5069a84bdc5135c83afcc41">[詳解]</a><br /></td></tr>
 <tr class="separator:a1621fe9ac5069a84bdc5135c83afcc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc762f650c863090e34ad515967efc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="driver__super_8h.html#aabdd3dd293d1c92926eedb042673c165">DS_ERR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__cmd__packet__for__driver__super_8c.html#a9dc762f650c863090e34ad515967efc9">CTCP_set_tx_frame_to_dssc</a> (<a class="el" href="struct_d_s___stream_config.html">DS_StreamConfig</a> *p_stream_config, const <a class="el" href="common__tlm__cmd__packet__define_8h.html#a4e667a6ed26472e50c02d4d0006873dc">CommonTlmCmdPacket</a> *send_packet)</td></tr>
@@ -315,13 +315,13 @@ packet 構造 などは <a class="el" href="common__tlm__cmd__packet_8h.html" ti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>tx_frame_buffer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>&#160;</td>
+          <td class="paramtype">int16_t&#160;</td>
           <td class="paramname"><em>tx_frame_buffer_size</em>, </td>
         </tr>
         <tr>

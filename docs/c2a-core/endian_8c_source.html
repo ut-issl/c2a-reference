@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('endian_8c_source.html',''); initResiza
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma section REPRO</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="endian_8h.html">endian.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="build__settings_8h.html">src_user/Settings/build_settings.h</a>&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">src_user/Library/stdint.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">   10</a></span>&#160;<span class="keywordtype">void</span>* <a class="code" href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">ENDIAN_memcpy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('endian_8c_source.html',''); initResiza
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a>(<span class="keywordtype">void</span>* after, <span class="keyword">const</span> <span class="keywordtype">void</span>* before, <span class="keywordtype">size_t</span> size)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">const</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* bef = (<span class="keyword">const</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>*)before;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* aft = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>*)after;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">const</span> uint8_t* bef = (<span class="keyword">const</span> uint8_t*)before;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  uint8_t* aft = (uint8_t*)after;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (size &lt; 0) <span class="keywordflow">return</span>;</div>
@@ -125,8 +125,7 @@ $(document).ready(function(){initNavTree('endian_8c_source.html',''); initResiza
 <div class="ttc" id="aendian_8c_html_a3f28de556ac6792695854c7b4f437925"><div class="ttname"><a href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a></div><div class="ttdeci">void ENDIAN_conv(void *after, const void *before, size_t size)</div><div class="ttdoc">エンディアンの変更</div><div class="ttdef"><b>Definition:</b> <a href="endian_8c_source.html#l00022">endian.c:22</a></div></div>
 <div class="ttc" id="aendian_8c_html_af3c71c10af16134e94da32e1e0d8d0f8"><div class="ttname"><a href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">ENDIAN_memcpy</a></div><div class="ttdeci">void * ENDIAN_memcpy(void *dest, const void *src, size_t size)</div><div class="ttdoc">エンディアンを考慮した memcpy</div><div class="ttdef"><b>Definition:</b> <a href="endian_8c_source.html#l00010">endian.c:10</a></div></div>
 <div class="ttc" id="aendian_8h_html"><div class="ttname"><a href="endian_8h.html">endian.h</a></div><div class="ttdoc">エンディアンに関するものを定義する</div></div>
-<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">C89 環境用 stdint.h</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

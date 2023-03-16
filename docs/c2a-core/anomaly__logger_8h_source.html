@@ -145,8 +145,8 @@ $(document).ready(function(){initNavTree('anomaly__logger_8h_source.html',''); i
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> group;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> local;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  uint32_t group;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  uint32_t local;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;} AL_AnomalyCode;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
@@ -161,9 +161,9 @@ $(document).ready(function(){initNavTree('anomaly__logger_8h_source.html',''); i
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">size_t</span> counter;           <span class="comment">// AL_add_anomaly された回数</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">size_t</span> header;            <span class="comment">// 次にaddされると書き込まれる位置．ARはリングバッファではなく，Fullでとまる．</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  AL_AnomalyRecord records[<a class="code" href="anomaly__logger__params_8h.html#a2e53a3176e38caebfa96665cfd8d07ba">AL_RECORD_MAX</a>];</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> page_no;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> is_logging_enable[<a class="code" href="anomaly__logger__group_8h.html#aad9420f68b2e0ef01e398f88e3ff4714af0f132ee58c85bb36dfdaf2c13254b5c">AL_GROUP_MAX</a> / 8];    <span class="comment">// bit単位で情報を保持する</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> threshold_of_nearly_full;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  uint8_t page_no;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  uint8_t is_logging_enable[<a class="code" href="anomaly__logger__group_8h.html#aad9420f68b2e0ef01e398f88e3ff4714af0f132ee58c85bb36dfdaf2c13254b5c">AL_GROUP_MAX</a> / 8];    <span class="comment">// bit単位で情報を保持する</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  uint16_t threshold_of_nearly_full;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} AnomalyLogger;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> AnomalyLogger* <span class="keyword">const</span> anomaly_logger;</div>
@@ -174,13 +174,13 @@ $(document).ready(function(){initNavTree('anomaly__logger_8h_source.html',''); i
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> AL_initialize(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">int</span> AL_add_anomaly(<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> group, <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> local);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">int</span> AL_add_anomaly(uint32_t group, uint32_t local);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">int</span> AL_enable_logging(<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> group);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">int</span> AL_enable_logging(uint32_t group);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">int</span> AL_disable_logging(<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> group);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">int</span> AL_disable_logging(uint32_t group);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">int</span>  AL_is_logging_enable(<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> group);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">int</span>  AL_is_logging_enable(uint32_t group);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> AL_clear(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
@@ -208,9 +208,6 @@ $(document).ready(function(){initNavTree('anomaly__logger_8h_source.html',''); i
 <div class="ttc" id="aanomaly__logger__group_8h_html_aad9420f68b2e0ef01e398f88e3ff4714af0f132ee58c85bb36dfdaf2c13254b5c"><div class="ttname"><a href="anomaly__logger__group_8h.html#aad9420f68b2e0ef01e398f88e3ff4714af0f132ee58c85bb36dfdaf2c13254b5c">AL_GROUP_MAX</a></div><div class="ttdeci">@ AL_GROUP_MAX</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__logger__group_8h_source.html#l00020">anomaly_logger_group.h:19</a></div></div>
 <div class="ttc" id="aanomaly__logger__params_8h_html"><div class="ttname"><a href="anomaly__logger__params_8h.html">anomaly_logger_params.h</a></div><div class="ttdoc">ALのCoreパラメタのオーバーライド用ヘッダー</div></div>
 <div class="ttc" id="aanomaly__logger__params_8h_html_a2e53a3176e38caebfa96665cfd8d07ba"><div class="ttname"><a href="anomaly__logger__params_8h.html#a2e53a3176e38caebfa96665cfd8d07ba">AL_RECORD_MAX</a></div><div class="ttdeci">#define AL_RECORD_MAX</div><div class="ttdef"><b>Definition:</b> <a href="anomaly__logger__params_8h_source.html#l00014">anomaly_logger_params.h:14</a></div></div>
-<div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
-<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00019">stdint.h:19</a></div></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
 <div class="ttc" id="astruct_c_c_p___cmd_ret_html"><div class="ttname"><a href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a></div><div class="ttdoc">コマンド返り値</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00078">common_cmd_packet.h:79</a></div></div>
 <div class="ttc" id="astruct_cmd_space_packet_html"><div class="ttname"><a href="struct_cmd_space_packet.html">CmdSpacePacket</a></div><div class="ttdoc">Space Packet (コマンド用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00053">space_packet_typedef.h:54</a></div></div>
 <div class="ttc" id="astruct_obc_time_html"><div class="ttname"><a href="struct_obc_time.html">ObcTime</a></div><div class="ttdoc">OBCの時刻情報を保持する構造体</div><div class="ttdef"><b>Definition:</b> <a href="obc__time_8h_source.html#l00025">obc_time.h:26</a></div></div>

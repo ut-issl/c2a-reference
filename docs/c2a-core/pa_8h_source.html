@@ -89,11 +89,11 @@ $(document).ready(function(){initNavTree('pa_8h_source.html',''); initResizable(
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef PA_H_</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define PA_H_</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">src_user/Library/stdint.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_p_a___config.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_p_a___config.html#aee69968d238510d52cd8dac949c184e7">   23</a></span>&#160;  <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>  <a class="code" href="struct_p_a___config.html#aee69968d238510d52cd8dac949c184e7">ch</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_p_a___config.html#aee69968d238510d52cd8dac949c184e7">   23</a></span>&#160;  uint16_t  <a class="code" href="struct_p_a___config.html#aee69968d238510d52cd8dac949c184e7">ch</a>; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="struct_p_a___config.html">PA_Config</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
@@ -105,8 +105,7 @@ $(document).ready(function(){initNavTree('pa_8h_source.html',''); initResizable(
 <div class="ttc" id="apa_8h_html_a106528051ddafb4fccc2c62a66b505eb"><div class="ttname"><a href="pa_8h.html#a106528051ddafb4fccc2c62a66b505eb">PA_init</a></div><div class="ttdeci">int PA_init(void *my_pa_v)</div></div>
 <div class="ttc" id="apa_8h_html_ab8ded082a766f19f55a8abe3c69e7e83"><div class="ttname"><a href="pa_8h.html#ab8ded082a766f19f55a8abe3c69e7e83">PA_rx</a></div><div class="ttdeci">int PA_rx(void *my_pa_v, void *data_v, int buffer_size)</div></div>
 <div class="ttc" id="apa_8h_html_adad6f77b6d8dbf3c53c7660bdd948fb2"><div class="ttname"><a href="pa_8h.html#adad6f77b6d8dbf3c53c7660bdd948fb2">PA_tx</a></div><div class="ttdeci">int PA_tx(void *my_pa_v, void *data_v, int data_size)</div></div>
-<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
-<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00019">stdint.h:19</a></div></div>
+<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">C89 環境用 stdint.h</div></div>
 <div class="ttc" id="astruct_p_a___config_html"><div class="ttname"><a href="struct_p_a___config.html">PA_Config</a></div><div class="ttdoc">PAポートの初期化、電流値取得の際に必要となる設定情報を格納する構造体です。</div><div class="ttdef"><b>Definition:</b> <a href="pa_8h_source.html#l00021">pa.h:22</a></div></div>
 <div class="ttc" id="astruct_p_a___config_html_aee69968d238510d52cd8dac949c184e7"><div class="ttname"><a href="struct_p_a___config.html#aee69968d238510d52cd8dac949c184e7">PA_Config::ch</a></div><div class="ttdeci">uint16_t ch</div><div class="ttdoc">チャネル指定のbit0がポート1に、bit15がポート16に対応し、1を設定したポートの電圧値だけを取得します。</div><div class="ttdef"><b>Definition:</b> <a href="pa_8h_source.html#l00023">pa.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

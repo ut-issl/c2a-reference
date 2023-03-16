@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('anomaly__handler_8h_source.html',''); 
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">size_t</span>     latest_id;             <span class="comment">// tlmではunit8_tだ....</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">size_t</span>     action_counter;        <span class="comment">// tlmではunit8_tだ....</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">size_t</span>     latest_run_length;     <span class="comment">// tlmではunit8_tだ....</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>    page_no;               <span class="comment">// tlmではunit8_tだ....</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  uint8_t    page_no;               <span class="comment">// tlmではunit8_tだ....</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} AnomalyHandler;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('anomaly__handler_8h_source.html',''); 
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  AH_AnomalyRespond log[<a class="code" href="anomaly__handler__params_8h.html#ae00c564a585eea3fbd01b605af73c542">AH_LOG_MAX</a>];</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">size_t</span>            pointer;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>           page_no;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  uint8_t           page_no;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} AH_AnomalyRespondLog;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('anomaly__handler_8h_source.html',''); 
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// staticな方はデフォルトでは無効だが，</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// こいつは初期化時に使われるので，選択制にした</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> AH_add_rule(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> AH_Rule* ahr, <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> is_active);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> AH_add_rule(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> AH_Rule* ahr, uint8_t is_active);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a> Cmd_AH_REGISTER_RULE(<span class="keyword">const</span> <a class="code" href="struct_cmd_space_packet.html">CommonCmdPacket</a>* packet);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
@@ -206,7 +206,6 @@ $(document).ready(function(){initNavTree('anomaly__handler_8h_source.html',''); 
 <div class="ttc" id="aanomaly__logger__group_8h_html"><div class="ttname"><a href="anomaly__logger__group_8h.html">anomaly_logger_group.h</a></div></div>
 <div class="ttc" id="ablock__command__definitions_8h_html"><div class="ttname"><a href="block__command__definitions_8h.html">block_command_definitions.h</a></div><div class="ttdoc">ブロックコマンド定義</div></div>
 <div class="ttc" id="ablock__command__table_8h_html_ac59bf9456699df5fd82e711b1c0347cc"><div class="ttname"><a href="block__command__table_8h.html#ac59bf9456699df5fd82e711b1c0347cc">bct_id_t</a></div><div class="ttdeci">uint16_t bct_id_t</div><div class="ttdef"><b>Definition:</b> <a href="block__command__table_8h_source.html#l00031">block_command_table.h:31</a></div></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
 <div class="ttc" id="astruct_app_info_html"><div class="ttname"><a href="struct_app_info.html">AppInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="app__info_8h_source.html#l00010">app_info.h:11</a></div></div>
 <div class="ttc" id="astruct_c_c_p___cmd_ret_html"><div class="ttname"><a href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a></div><div class="ttdoc">コマンド返り値</div><div class="ttdef"><b>Definition:</b> <a href="common__cmd__packet_8h_source.html#l00078">common_cmd_packet.h:79</a></div></div>
 <div class="ttc" id="astruct_cmd_space_packet_html"><div class="ttname"><a href="struct_cmd_space_packet.html">CmdSpacePacket</a></div><div class="ttdoc">Space Packet (コマンド用)</div><div class="ttdef"><b>Definition:</b> <a href="space__packet__typedef_8h_source.html#l00053">space_packet_typedef.h:54</a></div></div>

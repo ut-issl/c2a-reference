@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#a2d355871787f0fb884d2b0daf89ac571">VCDU_clear_spare_</a>(<a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu);</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="vcdu_8c.html#aa0036a3bd47665896c744295427b6689">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#aa0036a3bd47665896c744295427b6689">VCDU_generate_byte_stream</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                               <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> byte_stream[<a class="code" href="vcdu_8h.html#aa3ed3a3cb957aa2745118d044a49ddd1">VCDU_LEN</a>])</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                               uint8_t byte_stream[<a class="code" href="vcdu_8h.html#aa3ed3a3cb957aa2745118d044a49ddd1">VCDU_LEN</a>])</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  memcpy(byte_stream, vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>, <a class="code" href="vcdu_8h.html#aeedbe60e5870d030b890fe8849bb3bbe">VCDU_HEADER_SIZE</a>);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  byte_stream += <a class="code" href="vcdu_8h.html#aeedbe60e5870d030b890fe8849bb3bbe">VCDU_HEADER_SIZE</a>;</div>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a14324b6a9e7fd2f05eea88b40ff04385">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#a14324b6a9e7fd2f05eea88b40ff04385">VCDU_setup_realtime_vcdu_hdr</a>(<a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                  <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                  uint32_t counter)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="vcdu_8c.html#a8a036d0b06e3ee3749bfe4011d383ce6">VCDU_set_common_hdr_</a>(vcdu);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="vcdu_8c.html#a9eb2b7a9918da51af20a5f64ccbf7f95">VCDU_set_vcid</a>(vcdu, <a class="code" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3aaac0c0f4039f1935a82802e657fc2bc9">VCDU_VCID_REALTIME</a>);</div>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a52327e9419edb19e22336dc4d17212fc">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#a52327e9419edb19e22336dc4d17212fc">VCDU_setup_replay_vcdu_hdr</a>(<a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                uint32_t counter)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="vcdu_8c.html#a8a036d0b06e3ee3749bfe4011d383ce6">VCDU_set_common_hdr_</a>(vcdu);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="vcdu_8c.html#af839100f63734de14013577d4796db53">VCDU_set_replay_flag</a>(vcdu, <a class="code" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6a10cf500a14cc2004542e2ad0662e3512">VCDU_REPLAY_TRUE</a>);</div>
@@ -140,15 +140,15 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a2d355871787f0fb884d2b0daf89ac571">   53</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#a2d355871787f0fb884d2b0daf89ac571">VCDU_clear_spare_</a>(<a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 5;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x7f; <span class="comment">// 01111111b</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  uint8_t mask = 0x7f; <span class="comment">// 01111111b</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(~mask);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (uint8_t)(~mask);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a8612d86fba9a429417dbbd9239be249b">   61</a></span>&#160;<a class="code" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a> <a class="code" href="vcdu_8c.html#a8612d86fba9a429417dbbd9239be249b">VCDU_get_ver</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0xc0; <span class="comment">// 11000000b</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  uint8_t mask = 0xc0; <span class="comment">// 11000000b</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a> ver = (<a class="code" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a>)((vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp; mask) &gt;&gt; 6);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
@@ -166,18 +166,18 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                  <a class="code" href="vcdu_8h.html#af0f3d73576d772450feecac860872a9c">VCDU_VER</a> ver)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0xc0; <span class="comment">// 11000000b</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> val = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((ver &lt;&lt; 6) &amp; mask);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  uint8_t mask = 0xc0; <span class="comment">// 11000000b</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  uint8_t val = (uint8_t)((ver &lt;&lt; 6) &amp; mask);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(~mask);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (uint8_t)(~mask);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= val;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="vcdu_8c.html#ac0d10add9f59a69fff247ff408783515">   89</a></span>&#160;<a class="code" href="vcdu_8h.html#a1248b848499fc287a5d5a25ffcc768ca">VCDU_SCID</a> <a class="code" href="vcdu_8c.html#ac0d10add9f59a69fff247ff408783515">VCDU_get_scdi</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask1 = 0x3f; <span class="comment">// 00111111b</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask2 = 0xc0; <span class="comment">// 11000000b</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  uint8_t mask1 = 0x3f; <span class="comment">// 00111111b</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  uint8_t mask2 = 0xc0; <span class="comment">// 11000000b</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">int</span> scid = (vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp; mask1);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  scid &lt;&lt;= 2;</div>
@@ -197,19 +197,19 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                   <a class="code" href="vcdu_8h.html#a1248b848499fc287a5d5a25ffcc768ca">VCDU_SCID</a> scid)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask1 = 0x3f; <span class="comment">// 00111111b</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask2 = 0xc0; <span class="comment">// 11000000b</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  uint8_t mask1 = 0x3f; <span class="comment">// 00111111b</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  uint8_t mask2 = 0xc0; <span class="comment">// 11000000b</span></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(~mask1);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((scid &gt;&gt; 2) &amp; mask1);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1] &amp;= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(~mask2);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1] |= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((scid &lt;&lt; 6) &amp; mask2);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (uint8_t)(~mask1);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= (uint8_t)((scid &gt;&gt; 2) &amp; mask1);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1] &amp;= (uint8_t)(~mask2);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1] |= (uint8_t)((scid &lt;&lt; 6) &amp; mask2);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="vcdu_8c.html#af9108bc384af5e105709d4df0a9295b1">  122</a></span>&#160;<a class="code" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a> <a class="code" href="vcdu_8c.html#af9108bc384af5e105709d4df0a9295b1">VCDU_get_vcid</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 1;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x3f; <span class="comment">// 00111111b</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  uint8_t mask = 0x3f; <span class="comment">// 00111111b</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a> vcid = (<a class="code" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a>)(vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp; mask);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
@@ -229,17 +229,17 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                   <a class="code" href="vcdu_8h.html#a1bc75a65980f91e20fb8ee6bf776c0c3">VCDU_VCID</a> vcid)</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 1;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x3f; <span class="comment">// 00111111b</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  uint8_t mask = 0x3f; <span class="comment">// 00111111b</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(~mask);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(vcid &amp; mask);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (uint8_t)(~mask);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= (uint8_t)(vcid &amp; mask);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a5e60ee31e4f4540b0da058c9eeeb7e33">  151</a></span>&#160;<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> <a class="code" href="vcdu_8c.html#a5e60ee31e4f4540b0da058c9eeeb7e33">VCDU_get_vcdu_counter</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a5e60ee31e4f4540b0da058c9eeeb7e33">  151</a></span>&#160;uint32_t <a class="code" href="vcdu_8c.html#a5e60ee31e4f4540b0da058c9eeeb7e33">VCDU_get_vcdu_counter</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 2;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter = vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos];</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  uint32_t counter = vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos];</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  counter &lt;&lt;= 8;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  counter |=  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1];</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  counter &lt;&lt;= 8;</div>
@@ -249,19 +249,19 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
 <div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="vcdu_8c.html#aec3412413236b6da283bbbb3ed685ec6">  164</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#aec3412413236b6da283bbbb3ed685ec6">VCDU_set_vcdu_counter</a>(<a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu,</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                           <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> counter)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                           uint32_t counter)</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 2;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((counter &gt;&gt; 16) &amp; 0xff);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((counter &gt;&gt; 8) &amp; 0xff);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 2] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(counter &amp; 0xff);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] = (uint8_t)((counter &gt;&gt; 16) &amp; 0xff);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 1] = (uint8_t)((counter &gt;&gt; 8) &amp; 0xff);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos + 2] = (uint8_t)(counter &amp; 0xff);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a5d35c9ae9dbe88ed97324b369df47820">  174</a></span>&#160;<a class="code" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a> <a class="code" href="vcdu_8c.html#a5d35c9ae9dbe88ed97324b369df47820">VCDU_get_replay_flag</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 5;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x80; <span class="comment">// 10000000b</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  uint8_t mask = 0x80; <span class="comment">// 10000000b</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">return</span> (<a class="code" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a>)((vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp; mask) &gt;&gt; 7);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
@@ -270,17 +270,17 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                          <a class="code" href="vcdu_8h.html#a6829cceaf6db30585d5f55c5b492b7f6">VCDU_REPLAY_FLAG</a> flag)</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 5;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> mask = 0x80; <span class="comment">// 10000000b</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  uint8_t mask = 0x80; <span class="comment">// 10000000b</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(~mask);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((flag &lt;&lt; 7) &amp; mask);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] &amp;= (uint8_t)(~mask);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">header</a>[pos] |= (uint8_t)((flag &lt;&lt; 7) &amp; mask);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a07c295a8afd0fd1b8f033cd2c40bf6c5">  192</a></span>&#160;<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> <a class="code" href="vcdu_8c.html#a07c295a8afd0fd1b8f033cd2c40bf6c5">VCDU_get_clcw</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a07c295a8afd0fd1b8f033cd2c40bf6c5">  192</a></span>&#160;uint32_t <a class="code" href="vcdu_8c.html#a07c295a8afd0fd1b8f033cd2c40bf6c5">VCDU_get_clcw</a>(<span class="keyword">const</span> <a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu)</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> clcw = vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  uint32_t clcw = vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos];</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  clcw &lt;&lt;= 8;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  clcw |= vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 1];</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  clcw &lt;&lt;= 8;</div>
@@ -292,26 +292,24 @@ $(document).ready(function(){initNavTree('vcdu_8c_source.html',''); initResizabl
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a1dd2902c840cc2a52736b8fee9d4bee4">  207</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="vcdu_8c.html#a1dd2902c840cc2a52736b8fee9d4bee4">VCDU_set_clcw</a>(<a class="code" href="struct_v_c_d_u.html">VCDU</a>* vcdu,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                   <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> clcw)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                   uint32_t clcw)</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((clcw &gt;&gt; 24) &amp; 0xff);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 1] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((clcw &gt;&gt; 16) &amp; 0xff);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 2] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)((clcw &gt;&gt; 8) &amp; 0xff);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 3] = (<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>)(clcw &amp; 0xff);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos] = (uint8_t)((clcw &gt;&gt; 24) &amp; 0xff);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 1] = (uint8_t)((clcw &gt;&gt; 16) &amp; 0xff);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 2] = (uint8_t)((clcw &gt;&gt; 8) &amp; 0xff);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  vcdu-&gt;<a class="code" href="struct_v_c_d_u.html#a5b50a9a2a53c379dac32446b0de68b3c">trailer</a>[pos + 3] = (uint8_t)(clcw &amp; 0xff);</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a984334aeaa482d753cf0b74251d50d4c">  218</a></span>&#160;<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> <a class="code" href="vcdu_8c.html#a984334aeaa482d753cf0b74251d50d4c">VCDU_calc_next_counter</a>(<a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> prev)</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="vcdu_8c.html#a984334aeaa482d753cf0b74251d50d4c">  218</a></span>&#160;uint32_t <a class="code" href="vcdu_8c.html#a984334aeaa482d753cf0b74251d50d4c">VCDU_calc_next_counter</a>(uint32_t prev)</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">return</span> (prev + 1) % <a class="code" href="vcdu_8h.html#ac6ce6c84fc79ae5ff4fb1d86b56c12e8">VCDU_COUNTER_MAX</a>;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#pragma section</span></div>
 <div class="ttc" id="am__pdu_8c_html_a210e6af756b22dc135433739e5d258a7"><div class="ttname"><a href="m__pdu_8c.html#a210e6af756b22dc135433739e5d258a7">M_PDU_setup_idle_m_pdu</a></div><div class="ttdeci">void M_PDU_setup_idle_m_pdu(M_PDU *m_pdu)</div><div class="ttdef"><b>Definition:</b> <a href="m__pdu_8c_source.html#l00017">m_pdu.c:17</a></div></div>
 <div class="ttc" id="am__pdu_8c_html_add00bb794fcff6db79d723ee0ce4895c"><div class="ttname"><a href="m__pdu_8c.html#add00bb794fcff6db79d723ee0ce4895c">M_PDU_generate_byte_stream</a></div><div class="ttdeci">void M_PDU_generate_byte_stream(const M_PDU *m_pdu, uint8_t byte_stream[M_PDU_LEN])</div><div class="ttdef"><b>Definition:</b> <a href="m__pdu_8c_source.html#l00008">m_pdu.c:8</a></div></div>
-<div class="ttc" id="am__pdu_8h_html_a5817379783fbfbf977ce476a88d95aa9"><div class="ttname"><a href="m__pdu_8h.html#a5817379783fbfbf977ce476a88d95aa9">M_PDU_LEN</a></div><div class="ttdeci">#define M_PDU_LEN</div><div class="ttdef"><b>Definition:</b> <a href="m__pdu_8h_source.html#l00012">m_pdu.h:12</a></div></div>
-<div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
+<div class="ttc" id="am__pdu_8h_html_a5817379783fbfbf977ce476a88d95aa9"><div class="ttname"><a href="m__pdu_8h.html#a5817379783fbfbf977ce476a88d95aa9">M_PDU_LEN</a></div><div class="ttdeci">#define M_PDU_LEN</div><div class="ttdef"><b>Definition:</b> <a href="m__pdu_8h_source.html#l00011">m_pdu.h:11</a></div></div>
 <div class="ttc" id="astruct_v_c_d_u_html"><div class="ttname"><a href="struct_v_c_d_u.html">VCDU</a></div><div class="ttdef"><b>Definition:</b> <a href="vcdu_8h_source.html#l00011">vcdu.h:12</a></div></div>
 <div class="ttc" id="astruct_v_c_d_u_html_a5302027b3a0247641ac952b5eaff5f8f"><div class="ttname"><a href="struct_v_c_d_u.html#a5302027b3a0247641ac952b5eaff5f8f">VCDU::m_pdu</a></div><div class="ttdeci">M_PDU m_pdu</div><div class="ttdef"><b>Definition:</b> <a href="vcdu_8h_source.html#l00014">vcdu.h:14</a></div></div>
 <div class="ttc" id="astruct_v_c_d_u_html_a541adc026ab952b7c04c69bc96cb4d55"><div class="ttname"><a href="struct_v_c_d_u.html#a541adc026ab952b7c04c69bc96cb4d55">VCDU::header</a></div><div class="ttdeci">uint8_t header[VCDU_HEADER_SIZE]</div><div class="ttdef"><b>Definition:</b> <a href="vcdu_8h_source.html#l00013">vcdu.h:13</a></div></div>

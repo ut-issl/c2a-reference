@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C2A_Core: src/src_user/Library/stdint.h ソースファイル</title>
+<title>C2A_Core: src/src_core/Library/stdint_wrapper/stdint.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,49 +85,27 @@ $(document).ready(function(){initNavTree('stdint_8h_source.html',''); initResiza
 <div class="title">stdint.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="stdint_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STDINT_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define STDINT_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Settings/sils_define.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// HEWや外部ライブラリヘッダーとの重複typedefをガード</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _TYPEDEFINE_H_</span></div>
+<a href="stdint_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef STDINT_H_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define STDINT_H_</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef SILS_FW</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// HEWに標準ヘッダstdint.hに相当するヘッダがなかったため、必要機能を自前で定義。</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// bit幅指定の整数型をひとまず定義</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="stdint_8h.html#aef44329758059c91c76d334e8fc09700">   13</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span>           <a class="code" href="stdint_8h.html#aef44329758059c91c76d334e8fc09700">int8_t</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">signed</span> <span class="keywordtype">short</span>          <a class="code" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="stdint_8h.html#a2ba621978a511250f7250fb10e05ffbe">   15</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">signed</span> <span class="keywordtype">long</span>           <a class="code" href="stdint_8h.html#a2ba621978a511250f7250fb10e05ffbe">int32_t</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="stdint_8h.html#a831d6234342279926bb11bad3a37add9">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">signed</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>  <a class="code" href="stdint_8h.html#a831d6234342279926bb11bad3a37add9">int64_t</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// C99 stdint.h ないしはそれと同等のヘッダへのラッパー用ヘッダ</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// 実機向けのコンパイラが C89 であるときのみ使用すること（CMake では C2A_USE_C99_STDINT=OFF すること）</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef SILS_FW</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span> <span class="comment">// このヘッダを使う OBC であっても，SILS 環境下では C99 stdint.h が存在することが期待できる</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;src_user/Library/stdint_impl.h&gt;</span>   <span class="comment">// 真に C89 環境下では C2A user で C99 stdint.h と同等の型を提供する</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SILS_FW</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>           <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>          <a class="code" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>           <a class="code" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="stdint_8h.html#ad27ed092432b64ff558d2254c278720f">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>  <a class="code" href="stdint_8h.html#ad27ed092432b64ff558d2254c278720f">uint64_t</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SILS_FW</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _TYPEDEFINE_H_</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STDINT_H_</span></div>
-<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div></div>
-<div class="ttc" id="astdint_8h_html_a06896e8c53f721507066c079052171f8"><div class="ttname"><a href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a></div><div class="ttdeci">unsigned long uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00020">stdint.h:20</a></div></div>
-<div class="ttc" id="astdint_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed short int16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00014">stdint.h:14</a></div></div>
-<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00019">stdint.h:19</a></div></div>
-<div class="ttc" id="astdint_8h_html_a2ba621978a511250f7250fb10e05ffbe"><div class="ttname"><a href="stdint_8h.html#a2ba621978a511250f7250fb10e05ffbe">int32_t</a></div><div class="ttdeci">signed long int32_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00015">stdint.h:15</a></div></div>
-<div class="ttc" id="astdint_8h_html_a831d6234342279926bb11bad3a37add9"><div class="ttname"><a href="stdint_8h.html#a831d6234342279926bb11bad3a37add9">int64_t</a></div><div class="ttdeci">signed long long int int64_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00016">stdint.h:16</a></div></div>
-<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00018">stdint.h:18</a></div></div>
-<div class="ttc" id="astdint_8h_html_ad27ed092432b64ff558d2254c278720f"><div class="ttname"><a href="stdint_8h.html#ad27ed092432b64ff558d2254c278720f">uint64_t</a></div><div class="ttdeci">unsigned long long int uint64_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00021">stdint.h:21</a></div></div>
-<div class="ttc" id="astdint_8h_html_aef44329758059c91c76d334e8fc09700"><div class="ttname"><a href="stdint_8h.html#aef44329758059c91c76d334e8fc09700">int8_t</a></div><div class="ttdeci">signed char int8_t</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00013">stdint.h:13</a></div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STDINT_H_</span></div>
+<div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">C89 環境用 stdint.h</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a></li><li class="navelem"><a class="el" href="stdint_8h.html">stdint.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="dir_03f4528c2d20d980cb406c6369415834.html">stdint_wrapper</a></li><li class="navelem"><a class="el" href="stdint_8h.html">stdint.h</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

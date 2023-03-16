@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('packet__list_8h.html',''); initResizab
 </div><div class="textblock"><div class="dynheader">
 packet_list.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8h__incl.svg" width="994" height="588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="packet__list_8h__incl.svg" width="994" height="603"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -156,25 +156,25 @@ packet_list.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ac14f05103e3a110380db3720e971c1dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#ac14f05103e3a110380db3720e971c1dc">PL_initialize</a> (<a class="el" href="struct_p_l___node.html">PL_Node</a> *pl_node_stock, void *packet_stock, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> node_num, <a class="el" href="packet__list_8h.html#ab8c2e97b0ebfb34a61a22902d6157205">PL_PACKET_TYPE</a> packet_type, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> packet_size, <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memitem:ac14f05103e3a110380db3720e971c1dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#a0f593604ea9892afdb5e5efffcd01cd6">PL_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#ac14f05103e3a110380db3720e971c1dc">PL_initialize</a> (<a class="el" href="struct_p_l___node.html">PL_Node</a> *pl_node_stock, void *packet_stock, uint16_t node_num, <a class="el" href="packet__list_8h.html#ab8c2e97b0ebfb34a61a22902d6157205">PL_PACKET_TYPE</a> packet_type, uint16_t packet_size, <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:ac14f05103e3a110380db3720e971c1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">static に確保された <a class="el" href="struct_p_l___node.html" title="片方向リストを構成する各 Node">PL_Node</a> 配列と packet 配列を受け取りその領域を使用して PL を初期化  <a href="packet__list_8h.html#ac14f05103e3a110380db3720e971c1dc">[詳解]</a><br /></td></tr>
 <tr class="separator:ac14f05103e3a110380db3720e971c1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30838b1a60fd841ab737f565a4ad9d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a30838b1a60fd841ab737f565a4ad9d69">PL_clear_list</a> (<a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:a30838b1a60fd841ab737f565a4ad9d69"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> をクリア  <a href="packet__list_8h.html#a30838b1a60fd841ab737f565a4ad9d69">[詳解]</a><br /></td></tr>
 <tr class="separator:a30838b1a60fd841ab737f565a4ad9d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd903b77e7c86ec54da1f8f06599fffa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#acd903b77e7c86ec54da1f8f06599fffa">PL_count_executed_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memitem:acd903b77e7c86ec54da1f8f06599fffa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#acd903b77e7c86ec54da1f8f06599fffa">PL_count_executed_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:acd903b77e7c86ec54da1f8f06599fffa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で実行された Node 数を返す  <a href="packet__list_8h.html#acd903b77e7c86ec54da1f8f06599fffa">[詳解]</a><br /></td></tr>
 <tr class="separator:acd903b77e7c86ec54da1f8f06599fffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36eff6978c7906200cea8d5f90c8d07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#ab36eff6978c7906200cea8d5f90c8d07">PL_count_active_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memitem:ab36eff6978c7906200cea8d5f90c8d07"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#ab36eff6978c7906200cea8d5f90c8d07">PL_count_active_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:ab36eff6978c7906200cea8d5f90c8d07"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で有効な（実行待ち） Node 数を返す  <a href="packet__list_8h.html#ab36eff6978c7906200cea8d5f90c8d07">[詳解]</a><br /></td></tr>
 <tr class="separator:ab36eff6978c7906200cea8d5f90c8d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad57b69af66d040d88a302e79221fb26b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#ad57b69af66d040d88a302e79221fb26b">PL_count_inactive_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memitem:ad57b69af66d040d88a302e79221fb26b"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#ad57b69af66d040d88a302e79221fb26b">PL_count_inactive_nodes</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:ad57b69af66d040d88a302e79221fb26b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で使用されていない Node 数を返す  <a href="packet__list_8h.html#ad57b69af66d040d88a302e79221fb26b">[詳解]</a><br /></td></tr>
 <tr class="separator:ad57b69af66d040d88a302e79221fb26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f366746f6a795cacc1d0459827456d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a4f366746f6a795cacc1d0459827456d4">PL_get_total_node_num</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memitem:a4f366746f6a795cacc1d0459827456d4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a4f366746f6a795cacc1d0459827456d4">PL_get_total_node_num</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:a4f366746f6a795cacc1d0459827456d4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> の全 Node 数を返す  <a href="packet__list_8h.html#a4f366746f6a795cacc1d0459827456d4">[詳解]</a><br /></td></tr>
 <tr class="separator:a4f366746f6a795cacc1d0459827456d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a545eaf48e9ef5ade04668d4b3f7eadbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a545eaf48e9ef5ade04668d4b3f7eadbe">PL_get_packet_size</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
+<tr class="memitem:a545eaf48e9ef5ade04668d4b3f7eadbe"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a545eaf48e9ef5ade04668d4b3f7eadbe">PL_get_packet_size</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
 <tr class="memdesc:a545eaf48e9ef5ade04668d4b3f7eadbe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_packet_list.html" title="パケットリスト本体">PacketList</a> で使用される packet の型サイズを返す  <a href="packet__list_8h.html#a545eaf48e9ef5ade04668d4b3f7eadbe">[詳解]</a><br /></td></tr>
 <tr class="separator:a545eaf48e9ef5ade04668d4b3f7eadbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851b28b14c9bdadc9dc9e9b4bc8e5681"><td class="memItemLeft" align="right" valign="top"><a class="el" href="packet__list_8h.html#ab8c2e97b0ebfb34a61a22902d6157205">PL_PACKET_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="packet__list_8h.html#a851b28b14c9bdadc9dc9e9b4bc8e5681">PL_get_packet_type</a> (const <a class="el" href="struct_packet_list.html">PacketList</a> *pl)</td></tr>
@@ -423,7 +423,7 @@ packet_list.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> PL_count_active_nodes </td>
+          <td class="memname">uint16_t PL_count_active_nodes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
           <td class="paramname"><em>pl</em></td><td>)</td>
@@ -458,7 +458,7 @@ packet_list.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a06896e8c53f721507066c079052171f8">uint32_t</a> PL_count_executed_nodes </td>
+          <td class="memname">uint32_t PL_count_executed_nodes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
           <td class="paramname"><em>pl</em></td><td>)</td>
@@ -493,7 +493,7 @@ packet_list.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> PL_count_inactive_nodes </td>
+          <td class="memname">uint16_t PL_count_inactive_nodes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
           <td class="paramname"><em>pl</em></td><td>)</td>
@@ -786,7 +786,7 @@ packet_list.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> PL_get_packet_size </td>
+          <td class="memname">uint16_t PL_get_packet_size </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
           <td class="paramname"><em>pl</em></td><td>)</td>
@@ -885,7 +885,7 @@ packet_list.h の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> PL_get_total_node_num </td>
+          <td class="memname">uint16_t PL_get_total_node_num </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_packet_list.html">PacketList</a> *&#160;</td>
           <td class="paramname"><em>pl</em></td><td>)</td>
@@ -928,7 +928,7 @@ packet_list.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>node_num</em>, </td>
         </tr>
         <tr>
@@ -940,7 +940,7 @@ packet_list.h の依存先関係図:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>packet_size</em>, </td>
         </tr>
         <tr>
