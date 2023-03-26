@@ -14,7 +14,6 @@ var app__registry_8h =
       [ "AR_TLC_DISPATCHER_BC", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8af142303ba1a6d5b610ef203c5061a67d", null ],
       [ "AR_TLC_DISPATCHER_TLM", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a91feff4b017329b4a2fb97be265ee1df", null ],
       [ "AR_EVENT_UTILITY", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8aa4195a2d302c4d58c6fd4c128c7183ee", null ],
-      [ "AR_ANOMALY_HANDLER", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a9f2c4c93708cc029f1e8f843e1df786b", null ],
       [ "AR_MEM_DUMP", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a677bbb34f3ff61a34ff81be764b33687", null ],
       [ "AR_TELEMETRY_MANAGER", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a6e9cf3b4a28c4cdf0cbc612852e0783c", null ],
       [ "AR_DIVIDED_CMD_UTILITY", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a4112526a6ab44fd3e60e02b9bfe0e9ce", null ],

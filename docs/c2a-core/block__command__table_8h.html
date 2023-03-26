@@ -1112,7 +1112,7 @@ block_command_table.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>BCT_ACK 実行結果 </dd></dl>
-<dl class="section note"><dt>覚え書き</dt><dd>ID1:HK:SRAM, ID2:AH:MRAM があった時に ID1:AH:MRAM, ID2:HK:SRAM が出来る <code>BCT_swap_contents</code> と組み合わせることで番号 - 中身はそのままで RAM だけを切り替えることが出来る 必ず <code>BCE_swap_address</code> と共に使用すること </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>ID1:HK:SRAM, ID2:EH:MRAM があった時に ID1:EH:MRAM, ID2:HK:SRAM が出来る <code>BCT_swap_contents</code> と組み合わせることで番号 - 中身はそのままで RAM だけを切り替えることが出来る 必ず <code>BCE_swap_address</code> と共に使用すること </dd></dl>
 
 <p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00329">329</a> 行目に定義があります。</p>
 <div class="dynheader">
@@ -1159,7 +1159,7 @@ block_command_table.h の依存先関係図:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>BCT_ACK 実行結果 </dd></dl>
-<dl class="section note"><dt>覚え書き</dt><dd>ID1:AH:MRAM, ID2:HK:SRAM があった時に ID1:HK:MRAM, ID2:AH:SRAM が出来る <code>BCT_swap_ram</code> と組み合わせることで番号 - 中身はそのままで RAM だけを切り替えることが出来る 必ず <code>BCE_swap_contents</code> と共に使用すること </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>ID1:EH:MRAM, ID2:HK:SRAM があった時に ID1:HK:MRAM, ID2:EH:SRAM が出来る <code>BCT_swap_ram</code> と組み合わせることで番号 - 中身はそのままで RAM だけを切り替えることが出来る 必ず <code>BCE_swap_contents</code> と共に使用すること </dd></dl>
 
 <p class="definition"> <a class="el" href="block__command__table_8c_source.html">block_command_table.c</a> の <a class="el" href="block__command__table_8c_source.html#l00348">348</a> 行目に定義があります。</p>
 <div class="dynheader">
