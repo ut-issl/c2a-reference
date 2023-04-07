@@ -1,6 +1,7 @@
 var struct_command_dispatcher =
 [
     [ "error_counter", "struct_command_dispatcher.html#a587ecbde44e3eed05de1aff4134bfb06", null ],
+    [ "idx", "struct_command_dispatcher.html#a266732d9c228f9bac150e7554734d112", null ],
     [ "lockout", "struct_command_dispatcher.html#a544a53d129adc72fffeba2e27fd705df", null ],
     [ "pl", "struct_command_dispatcher.html#afd506e5f14b4ce8e2cbe13f8cbde85b5", null ],
     [ "prev", "struct_command_dispatcher.html#abb0c84e92b7a9ee5504e6114b9b8dc3a", null ],
