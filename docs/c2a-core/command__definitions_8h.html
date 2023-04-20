@@ -135,126 +135,136 @@ $(document).ready(function(){initNavTree('command__definitions_8h.html',''); ini
 &#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9908758472685ff671ca7008a238ad02">Cmd_CODE_TLCD_SET_ID_FOR_TLM</a> = 0x0018
 , <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa09509ed5eaba847be54a7490a69d0c4">Cmd_CODE_TLCD_SET_PAGE_FOR_TLM</a> = 0x0019
 , <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a345e8d88c956eba68da4ef6d0dc5c693">Cmd_CODE_GENERATE_TLM</a> = 0x001A
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aaebe28fd0afdbe92cecf96948d390f0d">Cmd_CODE_BCT_CLEAR_BLOCK</a> = 0x001B
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae5f9718ee49e35ab219be4fd46262cbf">Cmd_CODE_TG_GENERATE_TLM</a> = 0x001B
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1c2315ee8a2da3332a5f371f135c9ff1">Cmd_CODE_BCT_SET_BLOCK_POSITION</a> = 0x001C
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a901edee5ce023942f0bccb55f03b39b1">Cmd_CODE_BCT_COPY_BCT</a> = 0x001D
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1ce82c6e016283182dc13d1fee9bb37a">Cmd_CODE_BCT_OVERWRITE_CMD</a> = 0x001E
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a06100d73048cb51a13abf3d4d880e45b">Cmd_CODE_BCT_FILL_NOP</a> = 0x001F
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a97b743c77bba7a1d3f0e695a3da2a468">Cmd_CODE_TG_GENERATE_HK_TLM</a> = 0x001C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a6290ccb1d68bb0b915fa34b2f34a00b9">Cmd_CODE_TG_GENERATE_MS_TLM</a> = 0x001D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a232b9adc40acaa315422206f006302f3">Cmd_CODE_TG_GENERATE_ST_TLM</a> = 0x001E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa6a21111ed23517666eedceac95b0d82">Cmd_CODE_TG_FORWARD_TLM</a> = 0x001F
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae86dabca1937a2d33afd6abb68fdeccf">Cmd_CODE_BCE_ACTIVATE_BLOCK</a> = 0x0020
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aecbf20b40ae1e37d60b2fb485f32a7d8">Cmd_CODE_BCE_ACTIVATE_BLOCK_BY_ID</a> = 0x0021
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a34c7251a06f1d39c7ef0520e207f87c4">Cmd_CODE_BCE_INACTIVATE_BLOCK_BY_ID</a> = 0x0022
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a813b16ba1b57127a0ee6ee229c19643a">Cmd_CODE_BCE_ROTATE_BLOCK</a> = 0x0023
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a902bd3cb30f8b68424a2af323b124ffa">Cmd_CODE_TG_FORWARD_AS_HK_TLM</a> = 0x0020
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a54e4c50b211a13391197be57c8add31e">Cmd_CODE_TG_FORWARD_AS_MS_TLM</a> = 0x0021
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a29ec783d535531e888e292c3bc9d780d">Cmd_CODE_TG_FORWARD_AS_ST_TLM</a> = 0x0022
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aaebe28fd0afdbe92cecf96948d390f0d">Cmd_CODE_BCT_CLEAR_BLOCK</a> = 0x0023
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7b9c52b22d5812fd9d62366d6e96b770">Cmd_CODE_BCE_COMBINE_BLOCK</a> = 0x0024
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3adc78cba0c8c37bc0374fd583fbd28627">Cmd_CODE_BCE_TIMELIMIT_COMBINE_BLOCK</a> = 0x0025
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a31d47380cd6d03e45bc56102cc9d904a">Cmd_CODE_BCE_RESET_ROTATOR_INFO</a> = 0x0026
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad16f188923118711266078b597b68adf">Cmd_CODE_BCE_RESET_COMBINER_INFO</a> = 0x0027
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1c2315ee8a2da3332a5f371f135c9ff1">Cmd_CODE_BCT_SET_BLOCK_POSITION</a> = 0x0024
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a901edee5ce023942f0bccb55f03b39b1">Cmd_CODE_BCT_COPY_BCT</a> = 0x0025
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1ce82c6e016283182dc13d1fee9bb37a">Cmd_CODE_BCT_OVERWRITE_CMD</a> = 0x0026
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a06100d73048cb51a13abf3d4d880e45b">Cmd_CODE_BCT_FILL_NOP</a> = 0x0027
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac7b059326bfa00a3f0be5803e6b626ba">Cmd_CODE_BCE_SET_ROTATE_INTERVAL</a> = 0x0028
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a47d78e1e99cf0ff7420d772a0988d6c0">Cmd_CODE_GSCD_CLEAR_ERR_LOG</a> = 0x0029
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7e6db241dd10b6032edc457d33047b71">Cmd_CODE_RTCD_CLEAR_ALL_REALTIME</a> = 0x002A
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a17981fe54942a9f8b280e034c447b8a3">Cmd_CODE_RTCD_CLEAR_ERR_LOG</a> = 0x002B
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae86dabca1937a2d33afd6abb68fdeccf">Cmd_CODE_BCE_ACTIVATE_BLOCK</a> = 0x0028
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aecbf20b40ae1e37d60b2fb485f32a7d8">Cmd_CODE_BCE_ACTIVATE_BLOCK_BY_ID</a> = 0x0029
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a34c7251a06f1d39c7ef0520e207f87c4">Cmd_CODE_BCE_INACTIVATE_BLOCK_BY_ID</a> = 0x002A
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a813b16ba1b57127a0ee6ee229c19643a">Cmd_CODE_BCE_ROTATE_BLOCK</a> = 0x002B
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1a9543b2b0ad81d6d676a33a323fe62d">Cmd_CODE_MEM_SET_REGION</a> = 0x002C
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a854d2a5409dca834f8145091fa437a24">Cmd_CODE_MEM_LOAD</a> = 0x002D
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a6a31d9bea9a2326a931b57ff134fe62e">Cmd_CODE_MEM_SET_DESTINATION</a> = 0x002E
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a03345fe9ec02970f1622da203812006f">Cmd_CODE_MEM_COPY_REGION_SEQ</a> = 0x002F
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7b9c52b22d5812fd9d62366d6e96b770">Cmd_CODE_BCE_COMBINE_BLOCK</a> = 0x002C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3adc78cba0c8c37bc0374fd583fbd28627">Cmd_CODE_BCE_TIMELIMIT_COMBINE_BLOCK</a> = 0x002D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a31d47380cd6d03e45bc56102cc9d904a">Cmd_CODE_BCE_RESET_ROTATOR_INFO</a> = 0x002E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad16f188923118711266078b597b68adf">Cmd_CODE_BCE_RESET_COMBINER_INFO</a> = 0x002F
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a2f736b18192c7bba5a6d1d71b98dce51">Cmd_CODE_EL_INIT</a> = 0x0030
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5d7ee8a74a8bd72a034bb4cadf5f3a21">Cmd_CODE_EL_CLEAR_LOG_ALL</a> = 0x0031
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af8c47bd63c204f6317c553d1dee894ee">Cmd_CODE_EL_CLEAR_LOG_BY_ERR_LEVEL</a> = 0x0032
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a76950a9dfc435bcab6648c9326a39707">Cmd_CODE_EL_CLEAR_STATISTICS</a> = 0x0033
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac7b059326bfa00a3f0be5803e6b626ba">Cmd_CODE_BCE_SET_ROTATE_INTERVAL</a> = 0x0030
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a47d78e1e99cf0ff7420d772a0988d6c0">Cmd_CODE_GSCD_CLEAR_ERR_LOG</a> = 0x0031
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7e6db241dd10b6032edc457d33047b71">Cmd_CODE_RTCD_CLEAR_ALL_REALTIME</a> = 0x0032
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a17981fe54942a9f8b280e034c447b8a3">Cmd_CODE_RTCD_CLEAR_ERR_LOG</a> = 0x0033
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a362579dc5c6786a5c8bbfbe4dcfb5008">Cmd_CODE_EL_CLEAR_TLOG</a> = 0x0034
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a875b315d4a0269c0f3409ddf9fe84fee">Cmd_CODE_EL_CLEAR_CLOG</a> = 0x0035
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ace1a754d14e9ca001622cf5ad52d21dd">Cmd_CODE_EL_RECORD_EVENT</a> = 0x0036
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac5faef83e2bb198179d529eed897f672">Cmd_CODE_EL_TLOG_SET_PAGE_FOR_TLM</a> = 0x0037
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1a9543b2b0ad81d6d676a33a323fe62d">Cmd_CODE_MEM_SET_REGION</a> = 0x0034
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a854d2a5409dca834f8145091fa437a24">Cmd_CODE_MEM_LOAD</a> = 0x0035
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a6a31d9bea9a2326a931b57ff134fe62e">Cmd_CODE_MEM_SET_DESTINATION</a> = 0x0036
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a03345fe9ec02970f1622da203812006f">Cmd_CODE_MEM_COPY_REGION_SEQ</a> = 0x0037
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9a09dc2b6960e0e677b21c3c64431045">Cmd_CODE_EL_CLOG_SET_PAGE_FOR_TLM</a> = 0x0038
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a8d1ca820d6d72f6080a3ae923f57b60d">Cmd_CODE_EL_INIT_LOGGING_SETTINGS</a> = 0x0039
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab609397b068af119b09067ccd1bff60b">Cmd_CODE_EL_ENABLE_LOGGING</a> = 0x003A
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a23613a09af592d1eb86d050df9ec304d">Cmd_CODE_EL_DISABLE_LOGGING</a> = 0x003B
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a2f736b18192c7bba5a6d1d71b98dce51">Cmd_CODE_EL_INIT</a> = 0x0038
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5d7ee8a74a8bd72a034bb4cadf5f3a21">Cmd_CODE_EL_CLEAR_LOG_ALL</a> = 0x0039
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af8c47bd63c204f6317c553d1dee894ee">Cmd_CODE_EL_CLEAR_LOG_BY_ERR_LEVEL</a> = 0x003A
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a76950a9dfc435bcab6648c9326a39707">Cmd_CODE_EL_CLEAR_STATISTICS</a> = 0x003B
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae50898367aa7c988a6c93907b45d8b81">Cmd_CODE_EL_ENABLE_LOGGING_ALL</a> = 0x003C
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4e7e1a3cdefafc41a03e68138627bd1b">Cmd_CODE_EL_DISABLE_LOGGING_ALL</a> = 0x003D
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a394aa2c852ac8a0cf90be6a6ebeeabe2">Cmd_CODE_EL_ENABLE_TLOG_OVERWRITE</a> = 0x003E
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af87f65bd629450e515a63cbd465a93a4">Cmd_CODE_EL_DISABLE_TLOG_OVERWRITE</a> = 0x003F
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a362579dc5c6786a5c8bbfbe4dcfb5008">Cmd_CODE_EL_CLEAR_TLOG</a> = 0x003C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a875b315d4a0269c0f3409ddf9fe84fee">Cmd_CODE_EL_CLEAR_CLOG</a> = 0x003D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ace1a754d14e9ca001622cf5ad52d21dd">Cmd_CODE_EL_RECORD_EVENT</a> = 0x003E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac5faef83e2bb198179d529eed897f672">Cmd_CODE_EL_TLOG_SET_PAGE_FOR_TLM</a> = 0x003F
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab48705202dc8c7a0a45d8b1fd7fb9ab7">Cmd_CODE_EL_ENABLE_TLOG_OVERWRITE_ALL</a> = 0x0040
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a257ea1ec1af09b1b64c11b0a31008183">Cmd_CODE_EL_DISABLE_TLOG_OVERWRITE_ALL</a> = 0x0041
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a11c053ebd9b91c9728962807406c6ea9">Cmd_CODE_EH_INIT</a> = 0x0042
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad62107fd1bbff96e0f3c5374850284c9">Cmd_CODE_EH_CLEAR_ALL_RULE</a> = 0x0043
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a9a09dc2b6960e0e677b21c3c64431045">Cmd_CODE_EL_CLOG_SET_PAGE_FOR_TLM</a> = 0x0040
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a8d1ca820d6d72f6080a3ae923f57b60d">Cmd_CODE_EL_INIT_LOGGING_SETTINGS</a> = 0x0041
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab609397b068af119b09067ccd1bff60b">Cmd_CODE_EL_ENABLE_LOGGING</a> = 0x0042
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a23613a09af592d1eb86d050df9ec304d">Cmd_CODE_EL_DISABLE_LOGGING</a> = 0x0043
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a63b6a36528048442526dcb9c702a4a08">Cmd_CODE_EH_LOAD_DEFAULT_RULE</a> = 0x0044
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a52c2898acd534360663a240df652e7c4">Cmd_CODE_EH_SET_REGISTER_RULE_EVENT_PARAM</a> = 0x0045
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7934660fbf201fa6f4e47197ae2ed60">Cmd_CODE_EH_SET_REGISTER_RULE_CONDITION_PARAM</a> = 0x0046
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae3feee3338af2a3f227795781871bd6d">Cmd_CODE_EH_REGISTER_RULE</a> = 0x0047
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae50898367aa7c988a6c93907b45d8b81">Cmd_CODE_EL_ENABLE_LOGGING_ALL</a> = 0x0044
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4e7e1a3cdefafc41a03e68138627bd1b">Cmd_CODE_EL_DISABLE_LOGGING_ALL</a> = 0x0045
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a394aa2c852ac8a0cf90be6a6ebeeabe2">Cmd_CODE_EL_ENABLE_TLOG_OVERWRITE</a> = 0x0046
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af87f65bd629450e515a63cbd465a93a4">Cmd_CODE_EL_DISABLE_TLOG_OVERWRITE</a> = 0x0047
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a478ae988e270827dabf4b7ab79530610">Cmd_CODE_EH_DELETE_RULE</a> = 0x0048
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aef77f5e2e1d54e0db2273117028578ce">Cmd_CODE_EH_INIT_RULE</a> = 0x0049
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a33516e7813746865e0b08595da241eb8">Cmd_CODE_EH_INIT_RULE_FOR_MULTI_LEVEL</a> = 0x004A
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5076a6c6eb2d230505f338d511e378eb">Cmd_CODE_EH_ACTIVATE_RULE</a> = 0x004B
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab48705202dc8c7a0a45d8b1fd7fb9ab7">Cmd_CODE_EL_ENABLE_TLOG_OVERWRITE_ALL</a> = 0x0048
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a257ea1ec1af09b1b64c11b0a31008183">Cmd_CODE_EL_DISABLE_TLOG_OVERWRITE_ALL</a> = 0x0049
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a11c053ebd9b91c9728962807406c6ea9">Cmd_CODE_EH_INIT</a> = 0x004A
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad62107fd1bbff96e0f3c5374850284c9">Cmd_CODE_EH_CLEAR_ALL_RULE</a> = 0x004B
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7f40d87674b361b8f826a7bce1bde5c">Cmd_CODE_EH_INACTIVATE_RULE</a> = 0x004C
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa060e53367c118b2827bdcf404d755eb">Cmd_CODE_EH_ACTIVATE_RULE_FOR_MULTI_LEVEL</a> = 0x004D
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa5ee33a6113911764c297deec6b2821c">Cmd_CODE_EH_INACTIVATE_RULE_FOR_MULTI_LEVEL</a> = 0x004E
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a8797cfa8abdacfe05b7893e4cd4e11da">Cmd_CODE_EH_SET_RULE_COUNTER</a> = 0x004F
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a63b6a36528048442526dcb9c702a4a08">Cmd_CODE_EH_LOAD_DEFAULT_RULE</a> = 0x004C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a52c2898acd534360663a240df652e7c4">Cmd_CODE_EH_SET_REGISTER_RULE_EVENT_PARAM</a> = 0x004D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7934660fbf201fa6f4e47197ae2ed60">Cmd_CODE_EH_SET_REGISTER_RULE_CONDITION_PARAM</a> = 0x004E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae3feee3338af2a3f227795781871bd6d">Cmd_CODE_EH_REGISTER_RULE</a> = 0x004F
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a207faf2e2acb2732ee856e461b41f491">Cmd_CODE_EH_CLEAR_RULE_COUNTER</a> = 0x0050
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a99105f8de965e0b8a4da990efc91db6d">Cmd_CODE_EH_CLEAR_RULE_COUNTER_BY_EVENT</a> = 0x0051
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa1c642d27f886dfd25fab9a57110a48c">Cmd_CODE_EH_CLEAR_LOG</a> = 0x0052
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abd59c6e71c62da29005ddd1b30742c3d">Cmd_CODE_EH_SET_MAX_RESPONSE_NUM</a> = 0x0053
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a478ae988e270827dabf4b7ab79530610">Cmd_CODE_EH_DELETE_RULE</a> = 0x0050
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aef77f5e2e1d54e0db2273117028578ce">Cmd_CODE_EH_INIT_RULE</a> = 0x0051
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a33516e7813746865e0b08595da241eb8">Cmd_CODE_EH_INIT_RULE_FOR_MULTI_LEVEL</a> = 0x0052
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5076a6c6eb2d230505f338d511e378eb">Cmd_CODE_EH_ACTIVATE_RULE</a> = 0x0053
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a22c7f1013cb36bb1eb2e64cb415290e0">Cmd_CODE_EH_SET_MAX_CHECK_EVENT_NUM</a> = 0x0054
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a30e00205bc5ebec62b820a41addda522">Cmd_CODE_EH_SET_MAX_MULTI_LEVEL_NUM</a> = 0x0055
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aaabc0ec29186ef79ed335f030bcef2c8">Cmd_CODE_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM</a> = 0x0056
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac2123c60aedc43425b968a68489764c1">Cmd_CODE_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM</a> = 0x0057
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3af7f40d87674b361b8f826a7bce1bde5c">Cmd_CODE_EH_INACTIVATE_RULE</a> = 0x0054
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa060e53367c118b2827bdcf404d755eb">Cmd_CODE_EH_ACTIVATE_RULE_FOR_MULTI_LEVEL</a> = 0x0055
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa5ee33a6113911764c297deec6b2821c">Cmd_CODE_EH_INACTIVATE_RULE_FOR_MULTI_LEVEL</a> = 0x0056
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a8797cfa8abdacfe05b7893e4cd4e11da">Cmd_CODE_EH_SET_RULE_COUNTER</a> = 0x0057
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1d615bc0bb7070383da6023af7b13eed">Cmd_CODE_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM</a> = 0x0058
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a183549415f9e1c87d6df9037ba2d29e7">Cmd_CODE_EH_SET_TARGET_ID_OF_RULE_TABLE_FOR_TLM</a> = 0x0059
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1ae92433be52f6d0bd77ab0a71a826b1">Cmd_CODE_EH_MATCH_EVENT_COUNTER_TO_EL</a> = 0x005A
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a07b3bb5e54e622afffb5c9089b3a947e">Cmd_CODE_EH_INIT_RULE_BY_EVENT_GROUP</a> = 0x005B
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a207faf2e2acb2732ee856e461b41f491">Cmd_CODE_EH_CLEAR_RULE_COUNTER</a> = 0x0058
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a99105f8de965e0b8a4da990efc91db6d">Cmd_CODE_EH_CLEAR_RULE_COUNTER_BY_EVENT</a> = 0x0059
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aa1c642d27f886dfd25fab9a57110a48c">Cmd_CODE_EH_CLEAR_LOG</a> = 0x005A
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abd59c6e71c62da29005ddd1b30742c3d">Cmd_CODE_EH_SET_MAX_RESPONSE_NUM</a> = 0x005B
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5c286307c7794d6ff80cbda5104c8ab1">Cmd_CODE_EH_INIT_RULE_BY_EVENT_GROUP_FOR_MULTI_LEVEL</a> = 0x005C
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a0614a5d30ab0d2e558eec4fa81479e73">Cmd_CODE_EH_ACTIVATE_RULE_BY_EVENT_GROUP</a> = 0x005D
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abf6d3dbf8c01265416605a22152085cf">Cmd_CODE_EH_INACTIVATE_RULE_BY_EVENT_GROUP</a> = 0x005E
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac574df2b1063977118fdfc67dda0195c">Cmd_CODE_EH_ACTIVATE_RULE_BY_EVENT_GROUP_FOR_MULTI_LEVEL</a> = 0x005F
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a22c7f1013cb36bb1eb2e64cb415290e0">Cmd_CODE_EH_SET_MAX_CHECK_EVENT_NUM</a> = 0x005C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a30e00205bc5ebec62b820a41addda522">Cmd_CODE_EH_SET_MAX_MULTI_LEVEL_NUM</a> = 0x005D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aaabc0ec29186ef79ed335f030bcef2c8">Cmd_CODE_EH_SET_PAGE_OF_RULE_TABLE_FOR_TLM</a> = 0x005E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac2123c60aedc43425b968a68489764c1">Cmd_CODE_EH_SET_PAGE_OF_RULE_SORTED_IDX_FOR_TLM</a> = 0x005F
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a16e2830869bc600e0345d5dbfb10fa63">Cmd_CODE_EH_INACTIVATE_RULE_BY_EVENT_GROUP_FOR_MULTI_LEVEL</a> = 0x0060
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3acc92c3614adbb8cc68eecbfce14af67f">Cmd_CODE_EVENT_UTIL_ENABLE_EH_EXEC</a> = 0x0061
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1fc340c9e82100d78284b9f844ede5fd">Cmd_CODE_EVENT_UTIL_DISABLE_EH_EXEC</a> = 0x0062
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abf16313dfd34ae366ecc08a43168fb80">Cmd_CODE_EVENT_UTIL_EXEC_EH</a> = 0x0063
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1d615bc0bb7070383da6023af7b13eed">Cmd_CODE_EH_SET_PAGE_OF_LOG_TABLE_FOR_TLM</a> = 0x0060
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a183549415f9e1c87d6df9037ba2d29e7">Cmd_CODE_EH_SET_TARGET_ID_OF_RULE_TABLE_FOR_TLM</a> = 0x0061
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1ae92433be52f6d0bd77ab0a71a826b1">Cmd_CODE_EH_MATCH_EVENT_COUNTER_TO_EL</a> = 0x0062
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a07b3bb5e54e622afffb5c9089b3a947e">Cmd_CODE_EH_INIT_RULE_BY_EVENT_GROUP</a> = 0x0063
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3adb3e733ecbc23c898caf6675bc137e8c">Cmd_CODE_TF_INIT</a> = 0x0064
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab61418c11c954878c1cca771590b4888">Cmd_CODE_CA_INIT</a> = 0x0065
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4884ab6ab65fa9e16708cc9f5f9d6448">Cmd_CODE_TF_REGISTER_TLM</a> = 0x0066
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a89ceb731eae1cfab89f6f04d48021f13">Cmd_CODE_CA_REGISTER_CMD</a> = 0x0067
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5c286307c7794d6ff80cbda5104c8ab1">Cmd_CODE_EH_INIT_RULE_BY_EVENT_GROUP_FOR_MULTI_LEVEL</a> = 0x0064
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a0614a5d30ab0d2e558eec4fa81479e73">Cmd_CODE_EH_ACTIVATE_RULE_BY_EVENT_GROUP</a> = 0x0065
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abf6d3dbf8c01265416605a22152085cf">Cmd_CODE_EH_INACTIVATE_RULE_BY_EVENT_GROUP</a> = 0x0066
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ac574df2b1063977118fdfc67dda0195c">Cmd_CODE_EH_ACTIVATE_RULE_BY_EVENT_GROUP_FOR_MULTI_LEVEL</a> = 0x0067
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae040fafee1b2c04b275e2d3f14ca65cf">Cmd_CODE_TF_SET_PAGE_FOR_TLM</a> = 0x0068
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1307858873507a2adc37687db2806775">Cmd_CODE_CA_SET_PAGE_FOR_TLM</a> = 0x0069
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a25e8965bcd62f3d0d41b0d0259562490">Cmd_CODE_TLM_MGR_INIT</a> = 0x006A
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a916a972c9d409828f05c3b22d4ec9135">Cmd_CODE_TLM_MGR_INIT_MASTER_BC</a> = 0x006B
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a16e2830869bc600e0345d5dbfb10fa63">Cmd_CODE_EH_INACTIVATE_RULE_BY_EVENT_GROUP_FOR_MULTI_LEVEL</a> = 0x0068
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3acc92c3614adbb8cc68eecbfce14af67f">Cmd_CODE_EVENT_UTIL_ENABLE_EH_EXEC</a> = 0x0069
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1fc340c9e82100d78284b9f844ede5fd">Cmd_CODE_EVENT_UTIL_DISABLE_EH_EXEC</a> = 0x006A
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3abf16313dfd34ae366ecc08a43168fb80">Cmd_CODE_EVENT_UTIL_EXEC_EH</a> = 0x006B
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad0ae5bbee2a8c0a621d776a78b0d8cbc">Cmd_CODE_TLM_MGR_CLEAR_HK_TLM</a> = 0x006C
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a01dbae415676a6b11b8c00be0ba494fc">Cmd_CODE_TLM_MGR_CLEAR_SYSTEM_TLM</a> = 0x006D
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a155b4e7fdac0f7a6fcdfb99633195728">Cmd_CODE_TLM_MGR_CLEAR_USER_TLM</a> = 0x006E
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a794d385d4b1fad15c5ee6192ef814d10">Cmd_CODE_TLM_MGR_START_TLM</a> = 0x006F
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3adb3e733ecbc23c898caf6675bc137e8c">Cmd_CODE_TF_INIT</a> = 0x006C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ab61418c11c954878c1cca771590b4888">Cmd_CODE_CA_INIT</a> = 0x006D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a4884ab6ab65fa9e16708cc9f5f9d6448">Cmd_CODE_TF_REGISTER_TLM</a> = 0x006E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a89ceb731eae1cfab89f6f04d48021f13">Cmd_CODE_CA_REGISTER_CMD</a> = 0x006F
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a99a7ce95cdcf0d1678afeca11a70d275">Cmd_CODE_TLM_MGR_STOP_TLM</a> = 0x0070
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5d9c21d6471074070efb27a218a7955f">Cmd_CODE_TLM_MGR_CLEAR_TLM_TL</a> = 0x0071
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a74d61a6cd14a97cccb24cb40a17b632f">Cmd_CODE_TLM_MGR_REGISTER_HK_TLM</a> = 0x0072
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a04dfece1e52bebf3e333e4501e72aca7">Cmd_CODE_TLM_MGR_REGISTER_SYSTEM_TLM</a> = 0x0073
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ae040fafee1b2c04b275e2d3f14ca65cf">Cmd_CODE_TF_SET_PAGE_FOR_TLM</a> = 0x0070
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a1307858873507a2adc37687db2806775">Cmd_CODE_CA_SET_PAGE_FOR_TLM</a> = 0x0071
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a25e8965bcd62f3d0d41b0d0259562490">Cmd_CODE_TLM_MGR_INIT</a> = 0x0072
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a916a972c9d409828f05c3b22d4ec9135">Cmd_CODE_TLM_MGR_INIT_MASTER_BC</a> = 0x0073
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7b29277c2a684474732a2f291c3b6db4">Cmd_CODE_TLM_MGR_REGISTER_HIGH_FREQ_TLM</a> = 0x0074
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad9b8c4723bd8be8759a30aa2ce9e04c2">Cmd_CODE_TLM_MGR_REGISTER_LOW_FREQ_TLM</a> = 0x0075
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aff6570679dd9c98b6d6d2937b4371f48">Cmd_CODE_DCU_ABORT_CMD</a> = 0x0076
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a48b3fae2c069a47ffd67de5d3f2b6868">Cmd_CODE_DCU_DOWN_ABORT_FLAG</a> = 0x0077
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad0ae5bbee2a8c0a621d776a78b0d8cbc">Cmd_CODE_TLM_MGR_CLEAR_HK_TLM</a> = 0x0074
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a01dbae415676a6b11b8c00be0ba494fc">Cmd_CODE_TLM_MGR_CLEAR_SYSTEM_TLM</a> = 0x0075
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a155b4e7fdac0f7a6fcdfb99633195728">Cmd_CODE_TLM_MGR_CLEAR_USER_TLM</a> = 0x0076
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a794d385d4b1fad15c5ee6192ef814d10">Cmd_CODE_TLM_MGR_START_TLM</a> = 0x0077
 , <br />
-&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a967e8aba5ae58158ccbe3ea032ac1c89">Cmd_CODE_DCU_CLEAR_LOG</a> = 0x0078
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3add96475c4fcf930f8517f0e21de8cbcc">Cmd_CODE_TEST_CCP_REGISTER_TLC_ASAP</a> = 0x0079
-, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a24c9a7957b9896ed365a19c94d7a8b6a">Cmd_CODE_TEST_CCP_GET_RAW_PARAM_INFO</a> = 0x007A
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a99a7ce95cdcf0d1678afeca11a70d275">Cmd_CODE_TLM_MGR_STOP_TLM</a> = 0x0078
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a5d9c21d6471074070efb27a218a7955f">Cmd_CODE_TLM_MGR_CLEAR_TLM_TL</a> = 0x0079
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a74d61a6cd14a97cccb24cb40a17b632f">Cmd_CODE_TLM_MGR_REGISTER_HK_TLM</a> = 0x007A
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a04dfece1e52bebf3e333e4501e72aca7">Cmd_CODE_TLM_MGR_REGISTER_SYSTEM_TLM</a> = 0x007B
+, <br />
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a7b29277c2a684474732a2f291c3b6db4">Cmd_CODE_TLM_MGR_REGISTER_HIGH_FREQ_TLM</a> = 0x007C
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3ad9b8c4723bd8be8759a30aa2ce9e04c2">Cmd_CODE_TLM_MGR_REGISTER_LOW_FREQ_TLM</a> = 0x007D
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3aff6570679dd9c98b6d6d2937b4371f48">Cmd_CODE_DCU_ABORT_CMD</a> = 0x007E
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a48b3fae2c069a47ffd67de5d3f2b6868">Cmd_CODE_DCU_DOWN_ABORT_FLAG</a> = 0x007F
+, <br />
+&#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a967e8aba5ae58158ccbe3ea032ac1c89">Cmd_CODE_DCU_CLEAR_LOG</a> = 0x0080
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3add96475c4fcf930f8517f0e21de8cbcc">Cmd_CODE_TEST_CCP_REGISTER_TLC_ASAP</a> = 0x0081
+, <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a24c9a7957b9896ed365a19c94d7a8b6a">Cmd_CODE_TEST_CCP_GET_RAW_PARAM_INFO</a> = 0x0082
 , <a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a44bb5e860a1a8e11825a8dc3d26f28f8">Cmd_CODE_DI_GS_DRIVER_RESET</a> = 0x0100
 , <br />
 &#160;&#160;<a class="el" href="command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3adc7c1e2bc9538a7fff01e3d98c050cf6">Cmd_CODE_DI_GS_SET_MS_FLUSH_INTERVAL</a> = 0x0101
@@ -330,6 +340,14 @@ $(document).ready(function(){initNavTree('command__definitions_8h.html',''); ini
 <tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a9908758472685ff671ca7008a238ad02"></a>Cmd_CODE_TLCD_SET_ID_FOR_TLM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3aa09509ed5eaba847be54a7490a69d0c4"></a>Cmd_CODE_TLCD_SET_PAGE_FOR_TLM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a345e8d88c956eba68da4ef6d0dc5c693"></a>Cmd_CODE_GENERATE_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3ae5f9718ee49e35ab219be4fd46262cbf"></a>Cmd_CODE_TG_GENERATE_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a97b743c77bba7a1d3f0e695a3da2a468"></a>Cmd_CODE_TG_GENERATE_HK_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a6290ccb1d68bb0b915fa34b2f34a00b9"></a>Cmd_CODE_TG_GENERATE_MS_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a232b9adc40acaa315422206f006302f3"></a>Cmd_CODE_TG_GENERATE_ST_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3aa6a21111ed23517666eedceac95b0d82"></a>Cmd_CODE_TG_FORWARD_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a902bd3cb30f8b68424a2af323b124ffa"></a>Cmd_CODE_TG_FORWARD_AS_HK_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a54e4c50b211a13391197be57c8add31e"></a>Cmd_CODE_TG_FORWARD_AS_MS_TLM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a29ec783d535531e888e292c3bc9d780d"></a>Cmd_CODE_TG_FORWARD_AS_ST_TLM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3aaebe28fd0afdbe92cecf96948d390f0d"></a>Cmd_CODE_BCT_CLEAR_BLOCK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a1c2315ee8a2da3332a5f371f135c9ff1"></a>Cmd_CODE_BCT_SET_BLOCK_POSITION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6639ec25e74f304060e83582ee67ccc3a901edee5ce023942f0bccb55f03b39b1"></a>Cmd_CODE_BCT_COPY_BCT&#160;</td><td class="fielddoc"></td></tr>

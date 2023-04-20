@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('user__packet__handler_8c.html',''); in
 </div><div class="textblock"><div class="dynheader">
 user_packet_handler.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c__incl.svg" width="2846" height="1079"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c__incl.svg" width="2750" height="1079"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -128,6 +128,9 @@ user_packet_handler.c の依存先関係図:</div>
 <tr class="memitem:a30e628852fd804a52dc0d6ae476a8a01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_c_c_p___cmd_ret.html">CCP_CmdRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a30e628852fd804a52dc0d6ae476a8a01">PH_user_cmd_router</a> (const <a class="el" href="common__cmd__packet__define_8h.html#a6a5d7b04ef1e2c5f716975bad9c7679e">CommonCmdPacket</a> *packet)</td></tr>
 <tr class="memdesc:a30e628852fd804a52dc0d6ae476a8a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">PH の PH_dispatch_command のユーザー処理関数  <a href="user__packet__handler_8c.html#a30e628852fd804a52dc0d6ae476a8a01">[詳解]</a><br /></td></tr>
 <tr class="separator:a30e628852fd804a52dc0d6ae476a8a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172d3a9e04d8b97fc44ee6b1efd1018d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="telemetry__frame_8h.html#aca8455035ad3f4912f5a7a302258e007">TF_TLM_FUNC_ACK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__packet__handler_8c.html#a172d3a9e04d8b97fc44ee6b1efd1018d">PH_user_telemetry_router</a> (<a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid, <a class="el" href="telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20">TLM_CODE</a> tlm_id, uint8_t *packet, uint16_t *len, uint16_t max_len)</td></tr>
+<tr class="memdesc:a172d3a9e04d8b97fc44ee6b1efd1018d"><td class="mdescLeft">&#160;</td><td class="mdescRight">2nd OBC のテレメを転送するために， APID からテレメを判定してルーティングする // FIXME: 命名， router ではない？  <a href="user__packet__handler_8c.html#a172d3a9e04d8b97fc44ee6b1efd1018d">[詳解]</a><br /></td></tr>
+<tr class="separator:a172d3a9e04d8b97fc44ee6b1efd1018d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
@@ -210,7 +213,7 @@ user_packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00069">69</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00085">85</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -250,7 +253,7 @@ user_packet_handler.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00078">78</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00094">94</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -405,6 +408,79 @@ user_packet_handler.c の依存先関係図:</div>
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_afc2a18728b408dce5756d4910d4cf67f_icgraph.svg" width="726" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a172d3a9e04d8b97fc44ee6b1efd1018d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172d3a9e04d8b97fc44ee6b1efd1018d">&#9670;&nbsp;</a></span>PH_user_telemetry_router()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="telemetry__frame_8h.html#aca8455035ad3f4912f5a7a302258e007">TF_TLM_FUNC_ACK</a> PH_user_telemetry_router </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a>&#160;</td>
+          <td class="paramname"><em>apid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20">TLM_CODE</a>&#160;</td>
+          <td class="paramname"><em>tlm_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>max_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2nd OBC のテレメを転送するために， APID からテレメを判定してルーティングする // FIXME: 命名， router ではない？ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">apid</td><td>2nd OBC の Tlm APID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tlm_id</td><td>2nd OBC の Tlm ID </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">packet</td><td>テレメを作る uint8_t にシリアライズされた packet へのポインタ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">len</td><td>転送するテレメのパケット長 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_len</td><td>許容できる最大テレメパケット長 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>TF_TLM_FUNC_ACK </dd></dl>
+
+<p class="definition"> <a class="el" href="user__packet__handler_8c_source.html">user_packet_handler.c</a> の <a class="el" href="user__packet__handler_8c_source.html#l00069">69</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a172d3a9e04d8b97fc44ee6b1efd1018d_cgraph.svg" width="1828" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="user__packet__handler_8c_a172d3a9e04d8b97fc44ee6b1efd1018d_icgraph.svg" width="1514" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

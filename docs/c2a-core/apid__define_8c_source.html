@@ -109,22 +109,7 @@ $(document).ready(function(){initNavTree('apid__define_8c_source.html',''); init
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="apid__define_8c.html#a4bd093b65066361f2713f85254eb52c3">   30</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="apid__define_8c.html#a4bd093b65066361f2713f85254eb52c3">APID_is_other_obc_tlm_apid</a>(<a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">switch</span> (apid)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// FIXME: 2nd obc の場合は変更しなければいけないが， https://github.com/ut-issl/c2a-core/issues/489 で消えるので一旦このまま</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaec358d03dbbe4cbd94a94a34f2abcde4">APID_AOBC_TLM</a>:   <span class="comment">// FALLTHROUGH</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217acaa936b30583731201b4ff0d56e9ed913a">APID_TOBC_TLM</a>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#pragma section</span></div>
-<div class="ttc" id="aapid__define_8c_html_a4bd093b65066361f2713f85254eb52c3"><div class="ttname"><a href="apid__define_8c.html#a4bd093b65066361f2713f85254eb52c3">APID_is_other_obc_tlm_apid</a></div><div class="ttdeci">int APID_is_other_obc_tlm_apid(APID apid)</div><div class="ttdoc">入力した APID が他の OBC で生成された TLM の APID かどうか</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8c_source.html#l00030">apid_define.c:30</a></div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#pragma section</span></div>
 <div class="ttc" id="aapid__define_8c_html_aa1f9bb843cdcbfc94507bd35d70138e6"><div class="ttname"><a href="apid__define_8c.html#aa1f9bb843cdcbfc94507bd35d70138e6">APID_get_apid_from_uint16</a></div><div class="ttdeci">APID APID_get_apid_from_uint16(uint16_t apid)</div><div class="ttdoc">バイト列から APID を取得</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8c_source.html#l00010">apid_define.c:10</a></div></div>
 <div class="ttc" id="aapid__define_8h_html"><div class="ttname"><a href="apid__define_8h.html">apid_define.h</a></div><div class="ttdoc">CCSDS の APID を定義する</div></div>
 <div class="ttc" id="aapid__define_8h_html_ae86084e0da0f3d82d3572285760217ac"><div class="ttname"><a href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a></div><div class="ttdeci">APID</div><div class="ttdoc">Application Process ID</div><div class="ttdef"><b>Definition:</b> <a href="apid__define_8h_source.html#l00016">apid_define.h:17</a></div></div>
