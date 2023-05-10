@@ -8,7 +8,8 @@ var common__cmd__packet__define_8h =
       [ "CCP_DEST_TYPE_TO_MOBC", "common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10fa8f93c5332e93d3c2b689185e18d38f62", null ],
       [ "CCP_DEST_TYPE_TO_AOBC", "common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10facc445ee12681f25c960751b49a3cb0d1", null ],
       [ "CCP_DEST_TYPE_TO_TOBC", "common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10faef3b3f7ba9f1c2bf75f1bb2fc9e95d8a", null ],
-      [ "CCP_DEST_TYPE_TO_UNKOWN", "common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10fa89bcc90a3d301d700c683ea82fc4d6d8", null ]
+      [ "CCP_DEST_TYPE_TO_UNKOWN", "common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10fa89bcc90a3d301d700c683ea82fc4d6d8", null ],
+      [ "CCP_DEST_TYPE_TO_APID", "common__cmd__packet__define_8h.html#aad52282b4b07f16ec5d00cde5a4fd10fab98f16186d9fed1f99c1b2faf864280d", null ]
     ] ],
     [ "CCP_get_dest_type_from_uint8", "common__cmd__packet__define_8h.html#a699c42e6917a0dbcf3a2002f51cf34c2", null ]
 ];

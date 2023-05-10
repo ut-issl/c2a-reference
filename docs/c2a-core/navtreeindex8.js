@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"event__logger_8h.html#a3219c86aff6d952e5c255db675dfb568":[1,0,0,0,4,1,3,52],
 "event__logger_8h.html#a39d4816375ea415c939d1d8b1b6b1c61":[1,0,0,0,4,1,3,7],
 "event__logger_8h.html#a39f86694de0550142a6422012013d597":[1,0,0,0,4,1,3,9],
 "event__logger_8h.html#a3d02c4de5fa10908c428e0e03269379a":[1,0,0,0,4,1,3,55],
@@ -210,8 +211,8 @@ var NAVTREEINDEX8 =
 "git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b":[1,0,0,1,3,1,1],
 "git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64":[1,0,0,1,3,1,2],
 "git__revision_8h_source.html":[1,0,0,1,3,1],
-"globals.html":[1,1,0],
 "globals.html":[1,1,0,0],
+"globals.html":[1,1,0],
 "globals_b.html":[1,1,0,1],
 "globals_c.html":[1,1,0,2],
 "globals_d.html":[1,1,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "globals_eval_v.html":[1,1,5,13],
 "globals_eval_y.html":[1,1,5,14],
 "globals_func.html":[1,1,1,0],
-"globals_func.html":[1,1,1],
-"globals_func_b.html":[1,1,1,1]
+"globals_func.html":[1,1,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"struct_command_dispatcher.html#a587ecbde44e3eed05de1aff4134bfb06":[0,0,26,0],
+"struct_command_dispatcher.html#abb0c84e92b7a9ee5504e6114b9b8dc3a":[0,0,26,4],
 "struct_command_dispatcher.html#afd506e5f14b4ce8e2cbe13f8cbde85b5":[0,0,26,3],
 "struct_d_c___config.html":[0,0,27],
 "struct_d_c___config.html#a61fbb17b80780b5b83b7d8ebd4f9ff37":[0,0,27,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "struct_mode_manager.html#a01455faa7a1ef050ff7aa14613bcc728":[0,0,68,6],
 "struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599":[0,0,68,0],
 "struct_mode_manager.html#a2a659c1274146380cd3ff07df1e14372":[0,0,68,5],
-"struct_mode_manager.html#a31762da022a1166760fdbb54fb5acd75":[0,0,68,2],
-"struct_mode_manager.html#a40848bd725e482b7287795b4d035b5d3":[0,0,68,3],
-"struct_mode_manager.html#a5219bd1701695e82790a03392fb6f9df":[0,0,68,4]
+"struct_mode_manager.html#a31762da022a1166760fdbb54fb5acd75":[0,0,68,2]
 };
