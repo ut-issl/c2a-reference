@@ -90,16 +90,16 @@ $(document).ready(function(){initNavTree('telemetry__source_8h_source.html','');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define TELEMETRY_SOURCE_H_</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;string.h&quot;</span> <span class="comment">// for memcpy</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="app__manager_8h.html">src_core/System/ApplicationManager/app_manager.h</a>&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="task__dispatcher_8h.html">src_core/System/TaskManager/task_dispatcher.h</a>&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="mode__manager_8h.html">src_core/System/ModeManager/mode_manager.h</a>&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="event__logger_8h.html">src_core/System/EventManager/event_logger.h</a>&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="event__handler_8h.html">src_core/System/EventManager/event_handler.h</a>&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="watchdog__timer_8h.html">src_core/System/WatchdogTimer/watchdog_timer.h</a>&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="command__analyze_8h.html">src_core/TlmCmd/command_analyze.h</a>&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__executor_8h.html">src_core/TlmCmd/block_command_executor.h</a>&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../Applications/app_headers.h&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../Library/git_revision.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="git__revision_8h.html">src_core/Library/git_revision.h</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="app__manager_8h.html">src_core/System/ApplicationManager/app_manager.h</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="task__dispatcher_8h.html">src_core/System/TaskManager/task_dispatcher.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="mode__manager_8h.html">src_core/System/ModeManager/mode_manager.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="event__logger_8h.html">src_core/System/EventManager/event_logger.h</a>&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="event__handler_8h.html">src_core/System/EventManager/event_handler.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="watchdog__timer_8h.html">src_core/System/WatchdogTimer/watchdog_timer.h</a>&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="command__analyze_8h.html">src_core/TlmCmd/command_analyze.h</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="block__command__executor_8h.html">src_core/TlmCmd/block_command_executor.h</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../Applications/app_headers.h&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../Drivers/Aocs/aobc_telemetry_buffer.h&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../Drivers/Com/gs_validate.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../Settings/build_settings.h&quot;</span></div>
@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('telemetry__source_8h_source.html','');
 <div class="ttc" id="acommand__analyze_8h_html"><div class="ttname"><a href="command__analyze_8h.html">command_analyze.h</a></div><div class="ttdoc">コマンドの実行・登録，コマンド関連処理</div></div>
 <div class="ttc" id="aevent__handler_8h_html"><div class="ttname"><a href="event__handler_8h.html">event_handler.h</a></div><div class="ttdoc">イベント発火型処理を行う</div></div>
 <div class="ttc" id="aevent__logger_8h_html"><div class="ttname"><a href="event__logger_8h.html">event_logger.h</a></div><div class="ttdoc">アノマリやエラーなどの各種イベントを記録する</div></div>
+<div class="ttc" id="agit__revision_8h_html"><div class="ttname"><a href="git__revision_8h.html">git_revision.h</a></div><div class="ttdoc">git revisionをコードに埋め込むための準備をする</div></div>
 <div class="ttc" id="amode__manager_8h_html"><div class="ttname"><a href="mode__manager_8h.html">mode_manager.h</a></div><div class="ttdoc">モード遷移の制御の定義</div></div>
 <div class="ttc" id="atask__dispatcher_8h_html"><div class="ttname"><a href="task__dispatcher_8h.html">task_dispatcher.h</a></div><div class="ttdoc">task list に設定されたタスクを実行する主体</div></div>
 <div class="ttc" id="awatchdog__timer_8h_html"><div class="ttname"><a href="watchdog__timer_8h.html">watchdog_timer.h</a></div><div class="ttdoc">watchdog timer</div></div>

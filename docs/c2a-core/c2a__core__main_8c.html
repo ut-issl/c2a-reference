@@ -82,12 +82,14 @@ $(document).ready(function(){initNavTree('c2a__core__main_8c.html',''); initResi
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">関数</a>  </div>
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
   <div class="headertitle">
 <div class="title">c2a_core_main.c ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="c2a__core__main_8h_source.html">c2a_core_main.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="git__revision_8h_source.html">./Library/git_revision.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="print_8h_source.html">./Library/print.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="task__dispatcher_8h_source.html">./System/TaskManager/task_dispatcher.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="app__manager_8h_source.html">./System/ApplicationManager/app_manager.h</a>&quot;</code><br />
@@ -103,7 +105,7 @@ $(document).ready(function(){initNavTree('c2a__core__main_8c.html',''); initResi
 </div><div class="textblock"><div class="dynheader">
 c2a_core_main.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="c2a__core__main_8c__incl.svg" width="2891" height="1094"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="c2a__core__main_8c__incl.svg" width="2764" height="1094"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -115,6 +117,18 @@ c2a_core_main.c の依存先関係図:</div>
 <tr class="separator:a65ecdc63d8762ffde4db7f6c6e6f07cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e3c69d223ce8236ab718278b17b195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c2a__core__main_8c.html#a64e3c69d223ce8236ab718278b17b195">C2A_core_main</a> (void)</td></tr>
 <tr class="separator:a64e3c69d223ce8236ab718278b17b195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a8510dd62fb5d5ef8cc222282e17035d5"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c2a__core__main_8c.html#a8510dd62fb5d5ef8cc222282e17035d5">GIT_REV_CORE</a> [41] = GIT_REVISION_C2A_CORE</td></tr>
+<tr class="memdesc:a8510dd62fb5d5ef8cc222282e17035d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; 設定ないしcommit hashを読み込む  <a href="c2a__core__main_8c.html#a8510dd62fb5d5ef8cc222282e17035d5">[詳解]</a><br /></td></tr>
+<tr class="separator:a8510dd62fb5d5ef8cc222282e17035d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9bc37acbbc3b9f66b84acb0d24667b"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c2a__core__main_8c.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a> = GIT_REVISION_C2A_CORE_SHORT</td></tr>
+<tr class="separator:abf9bc37acbbc3b9f66b84acb0d24667b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f47e4cb52f3848fa9ca7fe99f2ef64"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c2a__core__main_8c.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64">GIT_REV_USER</a> [41] = GIT_REVISION_C2A_USER</td></tr>
+<tr class="separator:ad6f47e4cb52f3848fa9ca7fe99f2ef64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a80c38667063635c8000379c55a7ecc"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c2a__core__main_8c.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a> = GIT_REVISION_C2A_USER_SHORT</td></tr>
+<tr class="separator:a6a80c38667063635c8000379c55a7ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
 <a id="a65ecdc63d8762ffde4db7f6c6e6f07cf"></a>
@@ -133,7 +147,7 @@ c2a_core_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00018">18</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00025">25</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -165,7 +179,7 @@ c2a_core_main.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00049">49</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00056">56</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -178,6 +192,78 @@ c2a_core_main.c の依存先関係図:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="c2a__core__main_8c_a64e3c69d223ce8236ab718278b17b195_icgraph.svg" width="483" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a8510dd62fb5d5ef8cc222282e17035d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8510dd62fb5d5ef8cc222282e17035d5">&#9670;&nbsp;</a></span>GIT_REV_CORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char GIT_REV_CORE[41] = GIT_REVISION_C2A_CORE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>&lt; 設定ないしcommit hashを読み込む </p>
+<p>&lt; コンパイルオプションないしuserの設定で定義されたcommit hashを読み込んで埋め込みます git revisionの埋め込みは，以下の定数を通して行われます(経緯: #82)． GIT_REVISION_C2A_CORE C2A coreのcommit hash(文字列) GIT_REVISION_C2A_CORE_SHORT C2A coreのcommit hash short(0xから始まる数値) GIT_REVISION_C2A_USER C2A userのcommit hash(文字列) GIT_REVISION_C2A_USER_SHORT C2A userのcommit hash short(0xから始まる数値) これらの定数は，Cコンパイラの引数からdefine(-Dなど)してもよいですし， <a class="el" href="git__revision__config_8h.html">src_user/Settings/git_revision_config.h</a>でdefineしてもよいです． </p><dl class="section note"><dt>覚え書き</dt><dd>CMakeを使う場合はコマンドラインオプションからのdefineを推奨します． この場合，src_user/Settings/git_revision_config.hでC2A_GIT_REVISION_FROM_OPTIONをdefineしてください(他には何も要りません)． </dd>
+<dd>
+コマンドラインオプションからのdefineが開発環境の都合などにより困難な場合は， src_user/Script/Git/revision.sh/batをビルドパイプライン上で実行するようにします． このスクリプトは上記の定数群をdefineしたsrc_user/Settings/git_revision_config.hを自動生成します． この場合，src_user/Settings/git_revision_config.hはcommit・ビルドの度に変更されるため，gitignoreしておいた方がよいでしょう． </dd>
+<dd>
+ビルドパイプラインをうまく組めないなど，上記２つの手段が使えない，かつ，revisionを埋め込まなくてもよい場合は， <a class="el" href="git__revision__config_8h.html">src_user/Settings/git_revision_config.h</a>でC2A_GIT_REVISION_IGNOREをdefineしてください． こうすると，0が埋め込まれます． </dd></dl>
+
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abf9bc37acbbc3b9f66b84acb0d24667b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9bc37acbbc3b9f66b84acb0d24667b">&#9670;&nbsp;</a></span>GIT_REV_CORE_SHORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t GIT_REV_CORE_SHORT = GIT_REVISION_C2A_CORE_SHORT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad6f47e4cb52f3848fa9ca7fe99f2ef64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f47e4cb52f3848fa9ca7fe99f2ef64">&#9670;&nbsp;</a></span>GIT_REV_USER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char GIT_REV_USER[41] = GIT_REVISION_C2A_USER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00022">22</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6a80c38667063635c8000379c55a7ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a80c38667063635c8000379c55a7ecc">&#9670;&nbsp;</a></span>GIT_REV_USER_SHORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t GIT_REV_USER_SHORT = GIT_REVISION_C2A_USER_SHORT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>

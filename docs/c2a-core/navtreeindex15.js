@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"telemetry__definitions_8c.html#a9fe1910e686cb76e200c3c9241df388f":[1,0,0,1,5,12,4],
 "telemetry__definitions_8c.html#aa4c5d6e0622643f0dc2264ebb1686018":[1,0,0,1,5,12,21],
 "telemetry__definitions_8c.html#aab5382005f103052632c6f6aa2c86eb1":[1,0,0,1,5,12,7],
 "telemetry__definitions_8c.html#abae3bcd2497941bc76efcea7822623c0":[1,0,0,1,5,12,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "time__manager_8h.html#a7aea131eabdf4a9d056ee152cf2ee6c2":[1,0,0,0,4,4,3,6],
 "time__manager_8h.html#a7db7e3a78afb14c960ad0a46dabe4064":[1,0,0,0,4,4,3,7],
 "time__manager_8h.html#a86a4083b25d115816f123201b6ee13f4":[1,0,0,0,4,4,3,9],
-"time__manager_8h.html#a8b7c8185e427826dfa88140833410499":[1,0,0,0,4,4,3,28],
-"time__manager_8h.html#a9d04b4d9b622cbe5a90cf65e58b828bc":[1,0,0,0,4,4,3,15]
+"time__manager_8h.html#a8b7c8185e427826dfa88140833410499":[1,0,0,0,4,4,3,28]
 };

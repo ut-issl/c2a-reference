@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C2A_Core: src/src_user/Library/git_revision.h ファイル</title>
+<title>C2A_Core: src/src_core/Library/git_revision.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,19 +88,20 @@ $(document).ready(function(){initNavTree('git__revision_8h.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
-<p>git revisionをコードに埋め込む  
+<p>git revisionをコードに埋め込むための準備をする  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">stdint.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="git__revision__config_8h_source.html">src_user/Settings/git_revision_config.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 git_revision.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="git__revision_8h__incl.svg" width="178" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="git__revision_8h__incl.svg" width="310" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="git__revision_8h__dep__incl.svg" width="574" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="git__revision_8h__dep__incl.svg" width="788" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -109,6 +110,7 @@ git_revision.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
 <tr class="memitem:a8510dd62fb5d5ef8cc222282e17035d5"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="git__revision_8h.html#a8510dd62fb5d5ef8cc222282e17035d5">GIT_REV_CORE</a> [41]</td></tr>
+<tr class="memdesc:a8510dd62fb5d5ef8cc222282e17035d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; 設定ないしcommit hashを読み込む  <a href="git__revision_8h.html#a8510dd62fb5d5ef8cc222282e17035d5">[詳解]</a><br /></td></tr>
 <tr class="separator:a8510dd62fb5d5ef8cc222282e17035d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9bc37acbbc3b9f66b84acb0d24667b"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a></td></tr>
 <tr class="separator:abf9bc37acbbc3b9f66b84acb0d24667b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +120,7 @@ git_revision.h の依存先関係図:</div>
 <tr class="separator:a6a80c38667063635c8000379c55a7ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>git revisionをコードに埋め込む </p>
+<div class="textblock"><p>git revisionをコードに埋め込むための準備をする </p>
 
 <p class="definition"> <a class="el" href="git__revision_8h_source.html">git_revision.h</a> に定義があります。</p>
 </div><h2 class="groupheader">変数詳解</h2>
@@ -142,7 +144,14 @@ git_revision.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="git__revision_8c_source.html">git_revision.c</a> の <a class="el" href="git__revision_8c_source.html#l00009">9</a> 行目に定義があります。</p>
+<p>&lt; 設定ないしcommit hashを読み込む </p>
+<p>&lt; コンパイルオプションないしuserの設定で定義されたcommit hashを読み込んで埋め込みます git revisionの埋め込みは，以下の定数を通して行われます(経緯: #82)． GIT_REVISION_C2A_CORE C2A coreのcommit hash(文字列) GIT_REVISION_C2A_CORE_SHORT C2A coreのcommit hash short(0xから始まる数値) GIT_REVISION_C2A_USER C2A userのcommit hash(文字列) GIT_REVISION_C2A_USER_SHORT C2A userのcommit hash short(0xから始まる数値) これらの定数は，Cコンパイラの引数からdefine(-Dなど)してもよいですし， <a class="el" href="git__revision__config_8h.html">src_user/Settings/git_revision_config.h</a>でdefineしてもよいです． </p><dl class="section note"><dt>覚え書き</dt><dd>CMakeを使う場合はコマンドラインオプションからのdefineを推奨します． この場合，src_user/Settings/git_revision_config.hでC2A_GIT_REVISION_FROM_OPTIONをdefineしてください(他には何も要りません)． </dd>
+<dd>
+コマンドラインオプションからのdefineが開発環境の都合などにより困難な場合は， src_user/Script/Git/revision.sh/batをビルドパイプライン上で実行するようにします． このスクリプトは上記の定数群をdefineしたsrc_user/Settings/git_revision_config.hを自動生成します． この場合，src_user/Settings/git_revision_config.hはcommit・ビルドの度に変更されるため，gitignoreしておいた方がよいでしょう． </dd>
+<dd>
+ビルドパイプラインをうまく組めないなど，上記２つの手段が使えない，かつ，revisionを埋め込まなくてもよい場合は， <a class="el" href="git__revision__config_8h.html">src_user/Settings/git_revision_config.h</a>でC2A_GIT_REVISION_IGNOREをdefineしてください． こうすると，0が埋め込まれます． </dd></dl>
+
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00020">20</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -166,7 +175,7 @@ git_revision.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="git__revision_8c_source.html">git_revision.c</a> の <a class="el" href="git__revision_8c_source.html#l00010">10</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00021">21</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -190,7 +199,7 @@ git_revision.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="git__revision_8c_source.html">git_revision.c</a> の <a class="el" href="git__revision_8c_source.html#l00011">11</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00022">22</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -214,7 +223,7 @@ git_revision.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="git__revision_8c_source.html">git_revision.c</a> の <a class="el" href="git__revision_8c_source.html#l00012">12</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="c2a__core__main_8c_source.html">c2a_core_main.c</a> の <a class="el" href="c2a__core__main_8c_source.html#l00023">23</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -223,7 +232,7 @@ git_revision.h の依存先関係図:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a></li><li class="navelem"><a class="el" href="git__revision_8h.html">git_revision.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="git__revision_8h.html">git_revision.h</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C2A_Core: src/src_user/Library/git_revision.h ソースファイル</title>
+<title>C2A_Core: src/src_core/Library/git_revision.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,23 +91,44 @@ $(document).ready(function(){initNavTree('git__revision_8h_source.html',''); ini
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="git__revision_8h.html#a8510dd62fb5d5ef8cc222282e17035d5">GIT_REV_CORE</a>[41];</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64">GIT_REV_USER</a>[41];</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="git__revision_8h.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// GIT_REVISION_H_</span></div>
-<div class="ttc" id="agit__revision_8h_html_a6a80c38667063635c8000379c55a7ecc"><div class="ttname"><a href="git__revision_8h.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a></div><div class="ttdeci">const uint32_t GIT_REV_USER_SHORT</div><div class="ttdef"><b>Definition:</b> <a href="git__revision_8c_source.html#l00012">git_revision.c:12</a></div></div>
-<div class="ttc" id="agit__revision_8h_html_a8510dd62fb5d5ef8cc222282e17035d5"><div class="ttname"><a href="git__revision_8h.html#a8510dd62fb5d5ef8cc222282e17035d5">GIT_REV_CORE</a></div><div class="ttdeci">const char GIT_REV_CORE[41]</div><div class="ttdef"><b>Definition:</b> <a href="git__revision_8c_source.html#l00009">git_revision.c:9</a></div></div>
-<div class="ttc" id="agit__revision_8h_html_abf9bc37acbbc3b9f66b84acb0d24667b"><div class="ttname"><a href="git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a></div><div class="ttdeci">const uint32_t GIT_REV_CORE_SHORT</div><div class="ttdef"><b>Definition:</b> <a href="git__revision_8c_source.html#l00010">git_revision.c:10</a></div></div>
-<div class="ttc" id="agit__revision_8h_html_ad6f47e4cb52f3848fa9ca7fe99f2ef64"><div class="ttname"><a href="git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64">GIT_REV_USER</a></div><div class="ttdeci">const char GIT_REV_USER[41]</div><div class="ttdef"><b>Definition:</b> <a href="git__revision_8c_source.html#l00011">git_revision.c:11</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="git__revision__config_8h.html">src_user/Settings/git_revision_config.h</a>&gt;</span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifdef C2A_GIT_REVISION_IGNORE</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// commit hashを埋め込まない場合</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define GIT_REVISION_C2A_CORE         &quot;0000000000000000000000000000000000000000&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define GIT_REVISION_C2A_CORE_SHORT   0x0000000</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define GIT_REVISION_C2A_USER         &quot;0000000000000000000000000000000000000000&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define GIT_REVISION_C2A_USER_SHORT   0x0000000</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// commit hashを埋め込むはずなのにsrc_user/Settings/git_revision_config.hで設定されていない</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#if !defined(C2A_GIT_REVISION_FROM_OPTION) &amp;&amp; !defined(C2A_GIT_REVISION_GENERATED)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#error &quot;please specify git revision config in src_user/Settings/git_revision_config.h&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// error</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// C2A_GIT_REVISION_IGNORE</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// これをc2a_core_main.cで埋め込む</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="git__revision_8h.html#a8510dd62fb5d5ef8cc222282e17035d5">GIT_REV_CORE</a>[41];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64">GIT_REV_USER</a>[41];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> uint32_t <a class="code" href="git__revision_8h.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// GIT_REVISION_H_</span></div>
+<div class="ttc" id="agit__revision_8h_html_a6a80c38667063635c8000379c55a7ecc"><div class="ttname"><a href="git__revision_8h.html#a6a80c38667063635c8000379c55a7ecc">GIT_REV_USER_SHORT</a></div><div class="ttdeci">const uint32_t GIT_REV_USER_SHORT</div><div class="ttdef"><b>Definition:</b> <a href="c2a__core__main_8c_source.html#l00023">c2a_core_main.c:23</a></div></div>
+<div class="ttc" id="agit__revision_8h_html_a8510dd62fb5d5ef8cc222282e17035d5"><div class="ttname"><a href="git__revision_8h.html#a8510dd62fb5d5ef8cc222282e17035d5">GIT_REV_CORE</a></div><div class="ttdeci">const char GIT_REV_CORE[41]</div><div class="ttdoc">&lt; 設定ないしcommit hashを読み込む</div><div class="ttdef"><b>Definition:</b> <a href="c2a__core__main_8c_source.html#l00020">c2a_core_main.c:20</a></div></div>
+<div class="ttc" id="agit__revision_8h_html_abf9bc37acbbc3b9f66b84acb0d24667b"><div class="ttname"><a href="git__revision_8h.html#abf9bc37acbbc3b9f66b84acb0d24667b">GIT_REV_CORE_SHORT</a></div><div class="ttdeci">const uint32_t GIT_REV_CORE_SHORT</div><div class="ttdef"><b>Definition:</b> <a href="c2a__core__main_8c_source.html#l00021">c2a_core_main.c:21</a></div></div>
+<div class="ttc" id="agit__revision_8h_html_ad6f47e4cb52f3848fa9ca7fe99f2ef64"><div class="ttname"><a href="git__revision_8h.html#ad6f47e4cb52f3848fa9ca7fe99f2ef64">GIT_REV_USER</a></div><div class="ttdeci">const char GIT_REV_USER[41]</div><div class="ttdef"><b>Definition:</b> <a href="c2a__core__main_8c_source.html#l00022">c2a_core_main.c:22</a></div></div>
+<div class="ttc" id="agit__revision__config_8h_html"><div class="ttname"><a href="git__revision__config_8h.html">git_revision_config.h</a></div></div>
 <div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">C89 環境用 stdint.h</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_eee969b9b1fd07f6dd15d1b94d8d842d.html">src_user</a></li><li class="navelem"><a class="el" href="dir_c9ae416fc705fb809a1f033648649fff.html">Library</a></li><li class="navelem"><a class="el" href="git__revision_8h.html">git_revision.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_be63cfd930404a85b97e9333ec04cd9e.html">src_core</a></li><li class="navelem"><a class="el" href="dir_6fb10adbb579565acd7b0fde9689e187.html">Library</a></li><li class="navelem"><a class="el" href="git__revision_8h.html">git_revision.h</a></li>
     <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

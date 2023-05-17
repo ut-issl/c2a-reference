@@ -6,6 +6,7 @@ var dir_a6c80cab417eca370553d013a38aa3d8 =
     [ "System", "dir_5b4bcf4daeb74033815e8a5e661de116.html", "dir_5b4bcf4daeb74033815e8a5e661de116" ],
     [ "TlmCmd", "dir_be6ad26deaebdd13cd48446e1afccf23.html", "dir_be6ad26deaebdd13cd48446e1afccf23" ],
     [ "build_settings.h", "build__settings_8h.html", "build__settings_8h" ],
+    [ "git_revision_config.h", "git__revision__config_8h.html", "git__revision__config_8h" ],
     [ "initial_settings.h", "initial__settings_8h.html", null ],
     [ "port_config.h", "port__config_8h.html", "port__config_8h" ],
     [ "sils_define.h", "sils__define_8h.html", null ]

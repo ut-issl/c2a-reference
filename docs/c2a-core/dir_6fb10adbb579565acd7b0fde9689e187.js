@@ -10,6 +10,7 @@ var dir_6fb10adbb579565acd7b0fde9689e187 =
     [ "crc.h", "crc_8h.html", "crc_8h" ],
     [ "endian.c", "endian_8c.html", "endian_8c" ],
     [ "endian.h", "endian_8h.html", "endian_8h" ],
+    [ "git_revision.h", "git__revision_8h.html", "git__revision_8h" ],
     [ "majority_vote_for3.c", "majority__vote__for3_8c.html", "majority__vote__for3_8c" ],
     [ "majority_vote_for3.h", "majority__vote__for3_8h.html", "majority__vote__for3_8h" ],
     [ "print.c", "src__core_2_library_2print_8c.html", "src__core_2_library_2print_8c" ],
