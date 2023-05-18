@@ -62,13 +62,13 @@ var NAVTREEINDEX =
 "event__logger_8h.html#a16cd6ad511fd082d1b447de6f438e713",
 "globals_func.html",
 "mode__definitions_8h.html#a491b02f59bad1f1afab642f2df1c459d",
-"packet__list_8c.html#afefb37c36db47052d2e2b7e4d6c2274b",
-"struct_a_o_b_c___tlm_buffer.html",
-"struct_command_dispatcher.html#a544a53d129adc72fffeba2e27fd705df",
-"struct_mode_manager.html#a31762da022a1166760fdbb54fb5acd75",
-"telemetry__definitions_8c.html#a9fe1910e686cb76e200c3c9241df388f",
-"time__manager_8h.html#a9d04b4d9b622cbe5a90cf65e58b828bc",
-"uart__test_8c.html#a5d06bd62501f1365a227587d7233c698"
+"packet__list_8c.html#aee623fa81c4a8a1f3b0775a3a5d2925b",
+"struct_a_o_b_c___info.html#ac594e4eaf41f03ac2d06a61d52f3114f",
+"struct_command_dispatcher.html#a2f08ec6feed2e1c8dfe306447b530dee",
+"struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599",
+"telemetry__definitions_8c.html#a91def2fbe43510d233815f51bfa65268",
+"time__manager_8h.html#a86a4083b25d115816f123201b6ee13f4",
+"uart__test_8c.html#a515fee0061a72319cf331e110b285e91"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"struct_mode_manager.html#a1e3fffe537bd131701b1d6126871d599":[0,0,68,0],
+"struct_mode_manager.html#a2a659c1274146380cd3ff07df1e14372":[0,0,68,5],
 "struct_mode_manager.html#a31762da022a1166760fdbb54fb5acd75":[0,0,68,2],
 "struct_mode_manager.html#a40848bd725e482b7287795b4d035b5d3":[0,0,68,3],
 "struct_mode_manager.html#a5219bd1701695e82790a03392fb6f9df":[0,0,68,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "telemetry__definitions_8c.html#a52112e1496ee6cb0bdf8b3650d101db8":[1,0,0,1,5,12,10],
 "telemetry__definitions_8c.html#a5bfe725a86cdf3b11c37c014ca94447d":[1,0,0,1,5,12,20],
 "telemetry__definitions_8c.html#a650e435758727c55dc8fd8dacf237a4e":[1,0,0,1,5,12,16],
-"telemetry__definitions_8c.html#a8f40022ca3187a40fcde3bee9bca9f94":[1,0,0,1,5,12,2],
-"telemetry__definitions_8c.html#a91def2fbe43510d233815f51bfa65268":[1,0,0,1,5,12,0],
-"telemetry__definitions_8c.html#a9566cae5d0cb45f9bb237969603c28f5":[1,0,0,1,5,12,13]
+"telemetry__definitions_8c.html#a8f40022ca3187a40fcde3bee9bca9f94":[1,0,0,1,5,12,2]
 };

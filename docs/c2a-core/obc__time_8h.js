@@ -1,10 +1,6 @@
 var obc__time_8h =
 [
     [ "ObcTime", "struct_obc_time.html", "struct_obc_time" ],
-    [ "OBCT_CYCLES_PER_SEC", "obc__time_8h.html#a9aa38c36293579fed0faf15095698906", null ],
-    [ "OBCT_MAX_CYCLE", "obc__time_8h.html#a1f627a5dbe2f7d16f75e7ceeff6fa5c2", null ],
-    [ "OBCT_STEP_IN_MSEC", "obc__time_8h.html#a9b36df3746c314172a6b7740b6301af0", null ],
-    [ "OBCT_STEPS_PER_CYCLE", "obc__time_8h.html#ad4d252a60b3bc45c8b2606765691e613", null ],
     [ "cycle_t", "obc__time_8h.html#ab23c4cc9af553742108d56de692e750f", null ],
     [ "step_t", "obc__time_8h.html#a9b048a26913fc6986ee501a09d35c773", null ],
     [ "OBCT_add", "obc__time_8h.html#a66a185dfe9d335e03678035de616964e", null ],
