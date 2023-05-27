@@ -5,6 +5,7 @@ var common__cmd__packet__util_8c =
     [ "CCP_convert_rtc_to_tlc", "common__cmd__packet__util_8c.html#ae0f356389f15546c7e067db35bde985d", null ],
     [ "CCP_form_and_exec_block_deploy_cmd", "common__cmd__packet__util_8c.html#a667d05b68ff9924ced9b5bf3e419e0f1", null ],
     [ "CCP_form_and_exec_rtc", "common__cmd__packet__util_8c.html#a6647f2fbe6dabb44871bd9216c315a46", null ],
+    [ "CCP_form_and_exec_rtc_to_other_obc", "common__cmd__packet__util_8c.html#abc96a827a712bd57b3fbd1b37d261682", null ],
     [ "CCP_form_app_cmd", "common__cmd__packet__util_8c.html#a7e4a83a103dfa316c08b1570d93df0d1", null ],
     [ "CCP_form_block_deploy_cmd", "common__cmd__packet__util_8c.html#ac4a5c5fca95eda07227b4da1883612fc", null ],
     [ "CCP_form_nop_rtc_", "common__cmd__packet__util_8c.html#a01b352632ca605771f0cfd66a2a149ba", null ],
