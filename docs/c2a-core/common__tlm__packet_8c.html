@@ -92,11 +92,12 @@ $(document).ready(function(){initNavTree('common__tlm__packet_8c.html',''); init
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="common__tlm__packet_8h_source.html">src_core/TlmCmd/common_tlm_packet.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="tlm__space__packet_8h_source.html">src_core/TlmCmd/Ccsds/tlm_space_packet.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="time__manager_8h_source.html">src_core/System/TimeManager/time_manager.h</a>&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 common_tlm_packet.c の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c__incl.svg" width="1818" height="811"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c__incl.svg" width="1992" height="826"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -113,9 +114,18 @@ common_tlm_packet.c の依存先関係図:</div>
 <tr class="memitem:a52c7ef7c91bb3b6047d22ec569656899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8c.html#a52c7ef7c91bb3b6047d22ec569656899">CTP_set_apid</a> (<a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet, <a class="el" href="apid__define_8h.html#ae86084e0da0f3d82d3572285760217ac">APID</a> apid)</td></tr>
 <tr class="memdesc:a52c7ef7c91bb3b6047d22ec569656899"><td class="mdescLeft">&#160;</td><td class="mdescRight">APID を設定  <a href="common__tlm__packet_8c.html#a52c7ef7c91bb3b6047d22ec569656899">[詳解]</a><br /></td></tr>
 <tr class="separator:a52c7ef7c91bb3b6047d22ec569656899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3c53738931fd81c8c64aebeb73d02c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8c.html#aef3c53738931fd81c8c64aebeb73d02c">CTP_get_global_time</a> (const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet)</td></tr>
+<tr class="memdesc:aef3c53738931fd81c8c64aebeb73d02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global Time を取得  <a href="common__tlm__packet_8c.html#aef3c53738931fd81c8c64aebeb73d02c">[詳解]</a><br /></td></tr>
+<tr class="separator:aef3c53738931fd81c8c64aebeb73d02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a538e4de2c8a399d3658f88be6518b85d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8c.html#a538e4de2c8a399d3658f88be6518b85d">CTP_set_global_time</a> (<a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet)</td></tr>
-<tr class="memdesc:a538e4de2c8a399d3658f88be6518b85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の global_time を設定  <a href="common__tlm__packet_8c.html#a538e4de2c8a399d3658f88be6518b85d">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a538e4de2c8a399d3658f88be6518b85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の Global Time を設定  <a href="common__tlm__packet_8c.html#a538e4de2c8a399d3658f88be6518b85d">[詳解]</a><br /></td></tr>
 <tr class="separator:a538e4de2c8a399d3658f88be6518b85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966b3ff0f9252d7af9d1aa7ee719df1e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8c.html#a966b3ff0f9252d7af9d1aa7ee719df1e">CTP_get_on_board_subnet_time</a> (const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet)</td></tr>
+<tr class="memdesc:a966b3ff0f9252d7af9d1aa7ee719df1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-Board Subnetwork Time を取得  <a href="common__tlm__packet_8c.html#a966b3ff0f9252d7af9d1aa7ee719df1e">[詳解]</a><br /></td></tr>
+<tr class="separator:a966b3ff0f9252d7af9d1aa7ee719df1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28ed4a6623f08747bdc30b19aba939f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8c.html#ab28ed4a6623f08747bdc30b19aba939f">CTP_set_on_board_subnet_time</a> (<a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet)</td></tr>
+<tr class="memdesc:ab28ed4a6623f08747bdc30b19aba939f"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の On-Board Subnetwork Time を設定  <a href="common__tlm__packet_8c.html#ab28ed4a6623f08747bdc30b19aba939f">[詳解]</a><br /></td></tr>
+<tr class="separator:ab28ed4a6623f08747bdc30b19aba939f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684c8254afbb7793a92c63bdd9462558"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__tlm__packet_8h.html#a7de368cc12ac6186da51a3ada27dbf63">ctp_dest_flags_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8c.html#a684c8254afbb7793a92c63bdd9462558">CTP_get_dest_flags</a> (const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *packet)</td></tr>
 <tr class="memdesc:a684c8254afbb7793a92c63bdd9462558"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTP_DEST_FLAG の &amp; を取った flags を取得  <a href="common__tlm__packet_8c.html#a684c8254afbb7793a92c63bdd9462558">[詳解]</a><br /></td></tr>
 <tr class="separator:a684c8254afbb7793a92c63bdd9462558"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,7 +191,7 @@ common_tlm_packet.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00067">67</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00085">85</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -222,7 +232,7 @@ common_tlm_packet.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>APID </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00021">21</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -263,7 +273,7 @@ common_tlm_packet.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>Dest Flags </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00037">37</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00055">55</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -274,6 +284,42 @@ common_tlm_packet.c の依存先関係図:</div>
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_a684c8254afbb7793a92c63bdd9462558_icgraph.svg" width="1724" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aef3c53738931fd81c8c64aebeb73d02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3c53738931fd81c8c64aebeb73d02c">&#9670;&nbsp;</a></span>CTP_get_global_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CTP_get_global_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Global Time を取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>何が設定されているかは user 定義 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>CTP </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Global Time </dd></dl>
+
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00031">31</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_aef3c53738931fd81c8c64aebeb73d02c_cgraph.svg" width="947" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -304,7 +350,7 @@ common_tlm_packet.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>TLM_CODE </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00065">65</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -315,6 +361,48 @@ common_tlm_packet.c の依存先関係図:</div>
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_af612c23ebc397085c0f55aaf7f797dbf_icgraph.svg" width="2002" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a966b3ff0f9252d7af9d1aa7ee719df1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966b3ff0f9252d7af9d1aa7ee719df1e">&#9670;&nbsp;</a></span>CTP_get_on_board_subnet_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t CTP_get_on_board_subnet_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>On-Board Subnetwork Time を取得 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>何が設定されているかは user 定義 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>CTP </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>On-Board Subnetwork Time </dd></dl>
+
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00043">43</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_a966b3ff0f9252d7af9d1aa7ee719df1e_cgraph.svg" width="1090" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_a966b3ff0f9252d7af9d1aa7ee719df1e_icgraph.svg" width="2439" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -345,7 +433,7 @@ common_tlm_packet.c の依存先関係図:</div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>packet len </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00057">57</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00075">75</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -386,7 +474,7 @@ common_tlm_packet.c の依存先関係図:</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>FIXME: この関数で取得したポインタ経由で tlm のデータをセットする事があるため， const をつけていない 引数の const を外しても良いかも？ </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00062">62</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00080">80</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -430,7 +518,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00012">12</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00013">13</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -482,7 +570,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00025">25</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00026">26</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -534,7 +622,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00042">42</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00060">60</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -566,7 +654,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
       </table>
 </div><div class="memdoc">
 
-<p>現在の global_time を設定 </p>
+<p>現在の Global Time を設定 </p>
 <dl class="section note"><dt>覚え書き</dt><dd>何を設定するかは user 定義 </dd></dl>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
@@ -576,7 +664,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00030">30</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00036">36</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -628,11 +716,53 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
 
-<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00070">70</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_af7d8e3c1b4059f970d94aceeff4db8c7_cgraph.svg" width="816" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab28ed4a6623f08747bdc30b19aba939f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28ed4a6623f08747bdc30b19aba939f">&#9670;&nbsp;</a></span>CTP_set_on_board_subnet_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTP_set_on_board_subnet_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common__tlm__packet__define_8h.html#ac007d9dcab1a77b680cad3ddb654dabc">CommonTlmPacket</a> *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在の On-Board Subnetwork Time を設定 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>何を設定するかは user 定義 </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">packet</td><td>CTP </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>void </dd></dl>
+
+<p class="definition"> <a class="el" href="common__tlm__packet_8c_source.html">common_tlm_packet.c</a> の <a class="el" href="common__tlm__packet_8c_source.html#l00048">48</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_ab28ed4a6623f08747bdc30b19aba939f_cgraph.svg" width="1072" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8c_ab28ed4a6623f08747bdc30b19aba939f_icgraph.svg" width="2438" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
