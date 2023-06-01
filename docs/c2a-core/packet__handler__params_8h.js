@@ -1,8 +1,8 @@
 var packet__handler__params_8h =
 [
     [ "PH_GSC_LIST_MAX", "packet__handler__params_8h.html#a255fb6cc3f80db73355d64ab31851beb", null ],
-    [ "PH_MS_TLM_LIST_MAX", "packet__handler__params_8h.html#ae660fbf8560d1889dba8bb2d3b1c6af4", null ],
     [ "PH_RP_TLM_LIST_MAX", "packet__handler__params_8h.html#a0fd8fdd3bdde83841cc51d36f0a52276", null ],
+    [ "PH_RT_TLM_LIST_MAX", "packet__handler__params_8h.html#a8b5cfdc54da5ff255f5731260ce0b2fa", null ],
     [ "PH_RTC_LIST_MAX", "packet__handler__params_8h.html#a3025a66a05e853848708569255abc15f", null ],
     [ "PH_ST_TLM_LIST_MAX", "packet__handler__params_8h.html#ae132ad78a3b076d67784a327a35a6e13", null ],
     [ "PH_TLC_BC_LIST_MAX", "packet__handler__params_8h.html#a5a4309deb82a7b5a5ad1a304b4c2dd4b", null ],

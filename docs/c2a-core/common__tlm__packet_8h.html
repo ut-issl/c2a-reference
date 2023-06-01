@@ -120,10 +120,10 @@ common_tlm_packet.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:aa7922822f3e8819fc8d4600caabe1174"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174">CTP_DEST_FLAG</a> { <br />
-&#160;&#160;<a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a19b282ab14ebb1c15ebc9baa6eee0b74">CTP_DEST_FLAG_HK</a> = 0x01
-, <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a4068e9f66e2273fd6869c0eb145b94f6">CTP_DEST_FLAG_MS</a> = 0x02
-, <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174af41798e39196eb40120bd818f77977b4">CTP_DEST_FLAG_ST</a> = 0x04
-, <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174ae5825907aa841bf0a216952e5873ccbb">CTP_DEST_FLAG_RP</a> = 0x08
+&#160;&#160;<a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a453f13e347b51c6eab375c95eee8e3d6">CTP_DEST_FLAG_HP_TLM</a> = 0x01
+, <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a180cdf5f05a172f2bc1ebac5e69bc18f">CTP_DEST_FLAG_RT_TLM</a> = 0x02
+, <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a5987a6048a0634202e4a2942b7853e05">CTP_DEST_FLAG_ST_TLM</a> = 0x04
+, <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174ac3527adc38ed7626647706a118aee9d5">CTP_DEST_FLAG_RP_TLM</a> = 0x08
 , <br />
 &#160;&#160;<a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174aad18b2371ba4aa392fd5a2764b1e24d2">CTP_DEST_FLAG_RESERVE1</a> = 0x10
 , <a class="el" href="common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a8546befaecfe3c97c25dede34c457267">CTP_DEST_FLAG_RESERVE2</a> = 0x20
@@ -221,13 +221,13 @@ common_tlm_packet.h の依存先関係図:</div>
 <dd>
 これらのフラグの &amp; を取ったものの方は ctp_dest_flags_t </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174a19b282ab14ebb1c15ebc9baa6eee0b74"></a>CTP_DEST_FLAG_HK&#160;</td><td class="fielddoc"><p>00000001b: Housekeeping Telemetry </p>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174a453f13e347b51c6eab375c95eee8e3d6"></a>CTP_DEST_FLAG_HP_TLM&#160;</td><td class="fielddoc"><p>00000001b: High Priority Realtime Telemetry </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174a4068e9f66e2273fd6869c0eb145b94f6"></a>CTP_DEST_FLAG_MS&#160;</td><td class="fielddoc"><p>00000010b: Mission Telemetry </p>
+<tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174a180cdf5f05a172f2bc1ebac5e69bc18f"></a>CTP_DEST_FLAG_RT_TLM&#160;</td><td class="fielddoc"><p>00000010b: Realtime Telemetry </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174af41798e39196eb40120bd818f77977b4"></a>CTP_DEST_FLAG_ST&#160;</td><td class="fielddoc"><p>00000100b: Stored Telemetry </p>
+<tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174a5987a6048a0634202e4a2942b7853e05"></a>CTP_DEST_FLAG_ST_TLM&#160;</td><td class="fielddoc"><p>00000100b: Stored Telemetry </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174ae5825907aa841bf0a216952e5873ccbb"></a>CTP_DEST_FLAG_RP&#160;</td><td class="fielddoc"><p>00001000b: Replay Telemetry </p>
+<tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174ac3527adc38ed7626647706a118aee9d5"></a>CTP_DEST_FLAG_RP_TLM&#160;</td><td class="fielddoc"><p>00001000b: Replay Telemetry </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7922822f3e8819fc8d4600caabe1174aad18b2371ba4aa392fd5a2764b1e24d2"></a>CTP_DEST_FLAG_RESERVE1&#160;</td><td class="fielddoc"><p>00010000b: 将来拡張用の確保領域 </p>
 </td></tr>
@@ -373,7 +373,7 @@ common_tlm_packet.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a684c8254afbb7793a92c63bdd9462558_icgraph.svg" width="1724" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a684c8254afbb7793a92c63bdd9462558_icgraph.svg" width="1723" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -492,7 +492,7 @@ common_tlm_packet.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a966b3ff0f9252d7af9d1aa7ee719df1e_icgraph.svg" width="2439" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a966b3ff0f9252d7af9d1aa7ee719df1e_icgraph.svg" width="2438" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -533,7 +533,7 @@ common_tlm_packet.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_ab9f04fbc9871d8fe2639cd46679e33c9_icgraph.svg" width="2603" height="500"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_ab9f04fbc9871d8fe2639cd46679e33c9_icgraph.svg" width="2602" height="500"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -618,7 +618,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a285c1dc53d72a80747d8827c38d7aea4_icgraph.svg" width="2352" height="500"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a285c1dc53d72a80747d8827c38d7aea4_icgraph.svg" width="2351" height="500"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -722,7 +722,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_afddacefa253df08076d9a55613ccd2ab_icgraph.svg" width="2092" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_afddacefa253df08076d9a55613ccd2ab_icgraph.svg" width="2080" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -764,7 +764,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a538e4de2c8a399d3658f88be6518b85d_icgraph.svg" width="1488" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_a538e4de2c8a399d3658f88be6518b85d_icgraph.svg" width="1486" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -852,7 +852,7 @@ OBC の外から来たパケットな可能性もあるので，このC2Aで扱�
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_ab28ed4a6623f08747bdc30b19aba939f_icgraph.svg" width="2438" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__tlm__packet_8h_ab28ed4a6623f08747bdc30b19aba939f_icgraph.svg" width="2436" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

@@ -3,7 +3,8 @@ var telemetry__definitions_8h =
     [ "TLM_CODE", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20", [
       [ "Tlm_CODE_MOBC", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aebe288f0507761299318389d70870ad0", null ],
       [ "Tlm_CODE_MEM", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20afad09f630f107a1caae2a14a1853081f", null ],
-      [ "Tlm_CODE_TLM_MGR", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a9915c352ab446008598d22b593476e03", null ],
+      [ "Tlm_CODE_TLM_MGR1", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aa632d582ae9c5d86eb28128837b5d0c4", null ],
+      [ "Tlm_CODE_TLM_MGR2", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20ae5685894b9b5eb13415c15e813c7709e", null ],
       [ "Tlm_CODE_TL", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20adc3e554c1eaf73664c3053d6bedfa3b9", null ],
       [ "Tlm_CODE_BL", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20a08778e875d9a5a2876fbeeb62d90d722", null ],
       [ "Tlm_CODE_CA", "telemetry__definitions_8h.html#ac70715c848066345425956b5860cec20aa471f2af5f123f90fa57c12d7d5cba84", null ],

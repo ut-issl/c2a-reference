@@ -88,101 +88,77 @@ $(document).ready(function(){initNavTree('struct_t_l_m___m_g_r___register_info.h
 </div><!--header-->
 <div class="contents">
 
-<p>どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報  
+<p>どう BC を管理し，テレメ生成コマンドを登録し，動かしていくかの情報．途中計算などに使う  
  <a href="struct_t_l_m___m_g_r___register_info.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 フィールド</h2></td></tr>
-<tr class="memitem:a5bd0f8c00360a40f91d61e40277ed8e3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#a5bd0f8c00360a40f91d61e40277ed8e3">bc_info_idx</a> [<a class="el" href="telemetry__manager_8h.html#a24496bc5fa44b8043abf575d45c1af68">TLM_MGR_USE_BC_NUM</a>]</td></tr>
-<tr class="memdesc:a5bd0f8c00360a40f91d61e40277ed8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">bc_info のどの idx の BC を使うか．static確保のため，最大数 TLM_MGR_USE_BC_NUM の配列を確保  <a href="struct_t_l_m___m_g_r___register_info.html#a5bd0f8c00360a40f91d61e40277ed8e3">[詳解]</a><br /></td></tr>
-<tr class="separator:a5bd0f8c00360a40f91d61e40277ed8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0500d617c46aeec3958da0fb5bcc266"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#af0500d617c46aeec3958da0fb5bcc266">bc_info_idx_used_num</a></td></tr>
-<tr class="memdesc:af0500d617c46aeec3958da0fb5bcc266"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用している BC 数  <a href="struct_t_l_m___m_g_r___register_info.html#af0500d617c46aeec3958da0fb5bcc266">[詳解]</a><br /></td></tr>
-<tr class="separator:af0500d617c46aeec3958da0fb5bcc266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d2a5df69a4c107a7ce1e039d51c120"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#ad9d2a5df69a4c107a7ce1e039d51c120">tlm_register_pointer_to_idx_of_bc_info_idx</a></td></tr>
-<tr class="memdesc:ad9d2a5df69a4c107a7ce1e039d51c120"><td class="mdescLeft">&#160;</td><td class="mdescRight">次にテレメ生成コマンドを登録した場合に使用される bc_info_idx の配列 idx  <a href="struct_t_l_m___m_g_r___register_info.html#ad9d2a5df69a4c107a7ce1e039d51c120">[詳解]</a><br /></td></tr>
-<tr class="separator:ad9d2a5df69a4c107a7ce1e039d51c120"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dfc412687765d0cae647ed02fcb1284"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#a4dfc412687765d0cae647ed02fcb1284">tlm_register_pointer_to_bc_cmd_idx</a></td></tr>
-<tr class="memdesc:a4dfc412687765d0cae647ed02fcb1284"><td class="mdescLeft">&#160;</td><td class="mdescRight">次にテレメ生成コマンドを登録した場合に登録するBC pos.cmd  <a href="struct_t_l_m___m_g_r___register_info.html#a4dfc412687765d0cae647ed02fcb1284">[詳解]</a><br /></td></tr>
-<tr class="separator:a4dfc412687765d0cae647ed02fcb1284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6dabd7b11585998fceabd4e3435bc43"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#ac6dabd7b11585998fceabd4e3435bc43">cmd_table_idxes</a> [<a class="el" href="telemetry__manager_8h.html#a24496bc5fa44b8043abf575d45c1af68">TLM_MGR_USE_BC_NUM</a>]</td></tr>
+<tr class="memdesc:ac6dabd7b11585998fceabd4e3435bc43"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_t_l_m___m_g_r___cmd_table.html#a6f63a2cf1c89d694e28377ab2f484955" title="BC の各 Block ごとの情報">TLM_MGR_CmdTable.cmd_blocks</a> のどの idx を使うか．static 確保のため，最大数 TLM_MGR_USE_BC_NUM の配列を確保  <a href="struct_t_l_m___m_g_r___register_info.html#ac6dabd7b11585998fceabd4e3435bc43">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6dabd7b11585998fceabd4e3435bc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07600eeafd046cfc75a5d3d4490fb5a0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#a07600eeafd046cfc75a5d3d4490fb5a0">cmd_table_idxes_size</a></td></tr>
+<tr class="memdesc:a07600eeafd046cfc75a5d3d4490fb5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">cmd_table_idxes の配列数  <a href="struct_t_l_m___m_g_r___register_info.html#a07600eeafd046cfc75a5d3d4490fb5a0">[詳解]</a><br /></td></tr>
+<tr class="separator:a07600eeafd046cfc75a5d3d4490fb5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac825fcb98a4e016b388ad231b8edfe82"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_l_m___m_g_r___register_info.html#ac825fcb98a4e016b388ad231b8edfe82">registered_cmd_num</a></td></tr>
+<tr class="separator:ac825fcb98a4e016b388ad231b8edfe82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>どうBCを管理し，テレメ生成コマンドを登録し，動かしていくかの情報 </p>
-<dl class="section note"><dt>覚え書き</dt><dd><a class="el" href="struct_t_l_m___m_g_r___bc_info.html" title="BCの情報">TLM_MGR_BcInfo</a> の情報から生成される </dd></dl>
-
-<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00072">72</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">フィールド詳解</h2>
-<a id="a5bd0f8c00360a40f91d61e40277ed8e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd0f8c00360a40f91d61e40277ed8e3">&#9670;&nbsp;</a></span>bc_info_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t bc_info_idx[<a class="el" href="telemetry__manager_8h.html#a24496bc5fa44b8043abf575d45c1af68">TLM_MGR_USE_BC_NUM</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>bc_info のどの idx の BC を使うか．static確保のため，最大数 TLM_MGR_USE_BC_NUM の配列を確保 </p>
-
-<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00074">74</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af0500d617c46aeec3958da0fb5bcc266"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0500d617c46aeec3958da0fb5bcc266">&#9670;&nbsp;</a></span>bc_info_idx_used_num</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t bc_info_idx_used_num</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>使用している BC 数 </p>
-
-<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00075">75</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a4dfc412687765d0cae647ed02fcb1284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dfc412687765d0cae647ed02fcb1284">&#9670;&nbsp;</a></span>tlm_register_pointer_to_bc_cmd_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t tlm_register_pointer_to_bc_cmd_idx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>次にテレメ生成コマンドを登録した場合に登録するBC pos.cmd </p>
-
-<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00077">77</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad9d2a5df69a4c107a7ce1e039d51c120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9d2a5df69a4c107a7ce1e039d51c120">&#9670;&nbsp;</a></span>tlm_register_pointer_to_idx_of_bc_info_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t tlm_register_pointer_to_idx_of_bc_info_idx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>次にテレメ生成コマンドを登録した場合に使用される bc_info_idx の配列 idx </p>
+<div class="textblock"><p>どう BC を管理し，テレメ生成コマンドを登録し，動かしていくかの情報．途中計算などに使う </p>
 
 <p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00076">76</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">フィールド詳解</h2>
+<a id="ac6dabd7b11585998fceabd4e3435bc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6dabd7b11585998fceabd4e3435bc43">&#9670;&nbsp;</a></span>cmd_table_idxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cmd_table_idxes[<a class="el" href="telemetry__manager_8h.html#a24496bc5fa44b8043abf575d45c1af68">TLM_MGR_USE_BC_NUM</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_t_l_m___m_g_r___cmd_table.html#a6f63a2cf1c89d694e28377ab2f484955" title="BC の各 Block ごとの情報">TLM_MGR_CmdTable.cmd_blocks</a> のどの idx を使うか．static 確保のため，最大数 TLM_MGR_USE_BC_NUM の配列を確保 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00078">78</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a07600eeafd046cfc75a5d3d4490fb5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07600eeafd046cfc75a5d3d4490fb5a0">&#9670;&nbsp;</a></span>cmd_table_idxes_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cmd_table_idxes_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>cmd_table_idxes の配列数 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00079">79</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac825fcb98a4e016b388ad231b8edfe82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac825fcb98a4e016b388ad231b8edfe82">&#9670;&nbsp;</a></span>registered_cmd_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t registered_cmd_num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>すでに登録されているテレメ数．この値から一意に次にコマンドを登録する <a class="el" href="struct_b_c_t___pos.html#a4d43e8212bdc9dbee866506f04effcea" title="そのブロック内でどのコマンドを指すか">BCT_Pos.cmd</a> が決まる コマンドは隙間なく前から詰め込まれている，という想定 </p>
+
+<p class="definition"> <a class="el" href="telemetry__manager_8h_source.html">telemetry_manager.h</a> の <a class="el" href="telemetry__manager_8h_source.html#l00080">80</a> 行目に定義があります。</p>
 
 </div>
 </div>

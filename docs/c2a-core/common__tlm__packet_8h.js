@@ -2,10 +2,10 @@ var common__tlm__packet_8h =
 [
     [ "ctp_dest_flags_t", "common__tlm__packet_8h.html#a7de368cc12ac6186da51a3ada27dbf63", null ],
     [ "CTP_DEST_FLAG", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174", [
-      [ "CTP_DEST_FLAG_HK", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a19b282ab14ebb1c15ebc9baa6eee0b74", null ],
-      [ "CTP_DEST_FLAG_MS", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a4068e9f66e2273fd6869c0eb145b94f6", null ],
-      [ "CTP_DEST_FLAG_ST", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174af41798e39196eb40120bd818f77977b4", null ],
-      [ "CTP_DEST_FLAG_RP", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174ae5825907aa841bf0a216952e5873ccbb", null ],
+      [ "CTP_DEST_FLAG_HP_TLM", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a453f13e347b51c6eab375c95eee8e3d6", null ],
+      [ "CTP_DEST_FLAG_RT_TLM", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a180cdf5f05a172f2bc1ebac5e69bc18f", null ],
+      [ "CTP_DEST_FLAG_ST_TLM", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a5987a6048a0634202e4a2942b7853e05", null ],
+      [ "CTP_DEST_FLAG_RP_TLM", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174ac3527adc38ed7626647706a118aee9d5", null ],
       [ "CTP_DEST_FLAG_RESERVE1", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174aad18b2371ba4aa392fd5a2764b1e24d2", null ],
       [ "CTP_DEST_FLAG_RESERVE2", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174a8546befaecfe3c97c25dede34c457267", null ],
       [ "CTP_DEST_FLAG_RESERVE3", "common__tlm__packet_8h.html#aa7922822f3e8819fc8d4600caabe1174adda7ee3f286a91c6d41c6cfcdd569402", null ],

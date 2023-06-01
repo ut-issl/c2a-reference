@@ -21,6 +21,7 @@ var telemetry__definitions_8c =
     [ "Tlm_MOBC_", "telemetry__definitions_8c.html#abeb688f0f66e6d3870869fa430fbb3a7", null ],
     [ "Tlm_TF_", "telemetry__definitions_8c.html#a0f1b0bdd8b97d577dcf11633b9e45c7b", null ],
     [ "Tlm_TL_", "telemetry__definitions_8c.html#a5bfe725a86cdf3b11c37c014ca94447d", null ],
-    [ "Tlm_TLM_MGR_", "telemetry__definitions_8c.html#aa4c5d6e0622643f0dc2264ebb1686018", null ],
+    [ "Tlm_TLM_MGR1_", "telemetry__definitions_8c.html#ab58ea001e6a5b62cd4d002a54949cad8", null ],
+    [ "Tlm_TLM_MGR2_", "telemetry__definitions_8c.html#a4df22a4e79e07d40ec478ff18f3a36cb", null ],
     [ "Tlm_UART_TEST_", "telemetry__definitions_8c.html#a317507ba85551fc1c75db9839759ce51", null ]
 ];

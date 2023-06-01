@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"block__command__user__settings_8h_source.html":[1,0,0,1,5,5],
+"bsearch_8c.html":[1,0,0,0,3,0,0],
 "bsearch_8c.html#a340f4dc5f8b81be31cead09a0a783add":[1,0,0,0,3,0,0,0],
 "bsearch_8c.html#aefe549690442815bb8fcecfe239f2c6c":[1,0,0,0,3,0,0,1],
 "bsearch_8c_source.html":[1,0,0,0,3,0,0],
@@ -243,10 +245,8 @@ var NAVTREEINDEX2 =
 "command__definitions_8c_source.html":[1,0,0,1,5,6],
 "command__definitions_8h.html":[1,0,0,1,5,7],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3":[1,0,0,1,5,7,0],
-"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a01dbae415676a6b11b8c00be0ba494fc":[1,0,0,1,5,7,0,117],
-"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a02b96bc16bddb6280bdc04e5057510b1":[1,0,0,1,5,7,0,136],
+"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a02b96bc16bddb6280bdc04e5057510b1":[1,0,0,1,5,7,0,142],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a03345fe9ec02970f1622da203812006f":[1,0,0,1,5,7,0,55],
-"command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a04dfece1e52bebf3e333e4501e72aca7":[1,0,0,1,5,7,0,123],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a04e3b01baebda42b802c25d66176a888":[1,0,0,1,5,7,0,20],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a06100d73048cb51a13abf3d4d880e45b":[1,0,0,1,5,7,0,39],
 "command__definitions_8h.html#a6639ec25e74f304060e83582ee67ccc3a0614a5d30ab0d2e558eec4fa81479e73":[1,0,0,1,5,7,0,101]

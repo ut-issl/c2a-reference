@@ -3,8 +3,8 @@ var app__registry_8h =
     [ "AR_APP_ID", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8", [
       [ "AR_NOP", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8afd4215f10982c23674fd3961e217c559", null ],
       [ "AR_DI_GS_CMD_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a3421851d8e1a7c731c3300877c7e1ffc", null ],
-      [ "AR_DI_GS_MST_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a4c76078c6ef98a3b091209bf53035f28", null ],
-      [ "AR_DI_GS_RPT_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a0951ded2926423ddfc28d0b04edbcd7d", null ],
+      [ "AR_DI_GS_RT_TLM_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8af2e597f8cbc36f66700a9c0c9a54c607", null ],
+      [ "AR_DI_GS_RP_TLM_PH", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a6edf4173a8c11d0917203e1725cbddde", null ],
       [ "AR_DI_AOBC", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a99f74f2fe22b56f20b5c1a92d2e1a082", null ],
       [ "AR_DI_AOBC_CDIS", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8addb653a00653c5579a4067d8648a9b86", null ],
       [ "AR_DI_UART_TEST", "app__registry_8h.html#a1feb2c4c9cafd8505ad45193dcb4bde8a64d006ee989a7b56103d9b0bd670344f", null ],
