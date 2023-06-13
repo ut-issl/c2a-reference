@@ -7,7 +7,7 @@ var task__dispatcher_8c =
     [ "TDSP_initialize", "task__dispatcher_8c.html#ab4cccbf9d36945e27f8023f9d613a667", null ],
     [ "TDSP_resync_internal_counter", "task__dispatcher_8c.html#a285d13c7a78d6f0949c33759063d4121", null ],
     [ "TDSP_set_task_list_id", "task__dispatcher_8c.html#ad6d233cacf6325f2f6357566f0360119", null ],
-    [ "task_dispathcer", "task__dispatcher_8c.html#ad439f9497ca625537d69720c1318e245", null ],
-    [ "task_dispathcer_", "task__dispatcher_8c.html#a569ff8f302690df5c8e0f47aedc6620f", null ],
+    [ "task_dispatcher", "task__dispatcher_8c.html#ad933ce73bc883b41342ddc4f82b6b252", null ],
+    [ "task_dispatcher_", "task__dispatcher_8c.html#ae873e517ede8bcd6d875850ce66d8fac", null ],
     [ "TDSP_task_list_", "task__dispatcher_8c.html#a8ba51a0b30c414e2a1ed725a7f13bd65", null ]
 ];

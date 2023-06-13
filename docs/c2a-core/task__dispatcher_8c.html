@@ -121,7 +121,7 @@ task_dispatcher.c の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:aa6835d29f6d61ff30f70aaebdf0d7df9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#aa6835d29f6d61ff30f70aaebdf0d7df9">TDSP_deploy_block_as_task_list_</a> (void)</td></tr>
-<tr class="memdesc:aa6835d29f6d61ff30f70aaebdf0d7df9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>task_dispathcer_.task_list_id</code> に登録された BC を TaskListに展開.  <a href="task__dispatcher_8c.html#aa6835d29f6d61ff30f70aaebdf0d7df9">[詳解]</a><br /></td></tr>
+<tr class="memdesc:aa6835d29f6d61ff30f70aaebdf0d7df9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>task_dispatcher_.task_list_id</code> に登録された BC を TaskListに展開.  <a href="task__dispatcher_8c.html#aa6835d29f6d61ff30f70aaebdf0d7df9">[詳解]</a><br /></td></tr>
 <tr class="separator:aa6835d29f6d61ff30f70aaebdf0d7df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4cccbf9d36945e27f8023f9d613a667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#ab4cccbf9d36945e27f8023f9d613a667">TDSP_initialize</a> (void)</td></tr>
 <tr class="memdesc:ab4cccbf9d36945e27f8023f9d613a667"><td class="mdescLeft">&#160;</td><td class="mdescRight">タスク管理を行うTaskDsipatcher構造体(TaskDsipatcher_)の初期化  <a href="task__dispatcher_8c.html#ab4cccbf9d36945e27f8023f9d613a667">[詳解]</a><br /></td></tr>
@@ -141,10 +141,10 @@ task_dispatcher.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a569ff8f302690df5c8e0f47aedc6620f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#a569ff8f302690df5c8e0f47aedc6620f">task_dispathcer_</a></td></tr>
-<tr class="separator:a569ff8f302690df5c8e0f47aedc6620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad439f9497ca625537d69720c1318e245"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#ad439f9497ca625537d69720c1318e245">task_dispathcer</a> = &amp;<a class="el" href="task__dispatcher_8c.html#a569ff8f302690df5c8e0f47aedc6620f">task_dispathcer_</a></td></tr>
-<tr class="separator:ad439f9497ca625537d69720c1318e245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae873e517ede8bcd6d875850ce66d8fac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#ae873e517ede8bcd6d875850ce66d8fac">task_dispatcher_</a></td></tr>
+<tr class="separator:ae873e517ede8bcd6d875850ce66d8fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad933ce73bc883b41342ddc4f82b6b252"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#ad933ce73bc883b41342ddc4f82b6b252">task_dispatcher</a> = &amp;<a class="el" href="task__dispatcher_8c.html#ae873e517ede8bcd6d875850ce66d8fac">task_dispatcher_</a></td></tr>
+<tr class="separator:ad933ce73bc883b41342ddc4f82b6b252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ba51a0b30c414e2a1ed725a7f13bd65"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_packet_list.html">PacketList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task__dispatcher_8c.html#a8ba51a0b30c414e2a1ed725a7f13bd65">TDSP_task_list_</a></td></tr>
 <tr class="separator:a8ba51a0b30c414e2a1ed725a7f13bd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -229,7 +229,7 @@ task_dispatcher.c の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
-<p><code>task_dispathcer_.task_list_id</code> に登録された BC を TaskListに展開. </p>
+<p><code>task_dispatcher_.task_list_id</code> に登録された BC を TaskListに展開. </p>
 <dl class="section note"><dt>覚え書き</dt><dd>実際に BC の内容を読み込み、展開しているのは <code>PL_ACK PL_deploy_block_cmd(args)</code> </dd></dl>
 
 <p class="definition"> <a class="el" href="task__dispatcher_8c_source.html">task_dispatcher.c</a> の <a class="el" href="task__dispatcher_8c_source.html#l00073">73</a> 行目に定義があります。</p>
@@ -397,14 +397,14 @@ task_dispatcher.c の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="ad439f9497ca625537d69720c1318e245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad439f9497ca625537d69720c1318e245">&#9670;&nbsp;</a></span>task_dispathcer</h2>
+<a id="ad933ce73bc883b41342ddc4f82b6b252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad933ce73bc883b41342ddc4f82b6b252">&#9670;&nbsp;</a></span>task_dispatcher</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a>* const task_dispathcer = &amp;<a class="el" href="task__dispatcher_8c.html#a569ff8f302690df5c8e0f47aedc6620f">task_dispathcer_</a></td>
+          <td class="memname">const <a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a>* const task_dispatcher = &amp;<a class="el" href="task__dispatcher_8c.html#ae873e517ede8bcd6d875850ce66d8fac">task_dispatcher_</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -413,8 +413,8 @@ task_dispatcher.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a569ff8f302690df5c8e0f47aedc6620f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a569ff8f302690df5c8e0f47aedc6620f">&#9670;&nbsp;</a></span>task_dispathcer_</h2>
+<a id="ae873e517ede8bcd6d875850ce66d8fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae873e517ede8bcd6d875850ce66d8fac">&#9670;&nbsp;</a></span>task_dispatcher_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,7 +423,7 @@ task_dispatcher.c の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a> task_dispathcer_</td>
+          <td class="memname"><a class="el" href="struct_task_dsipatcher.html">TaskDsipatcher</a> task_dispatcher_</td>
         </tr>
       </table>
   </td>
