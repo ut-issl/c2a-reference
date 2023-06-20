@@ -90,40 +90,41 @@ $(document).ready(function(){initNavTree('endian_8c_source.html',''); initResiza
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="endian_8h.html">endian.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="build__settings_8h.html">src_user/Settings/build_settings.h</a>&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stdint_8h.html">stdint.h</a>&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">   10</a></span>&#160;<span class="keywordtype">void</span>* <a class="code" href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">ENDIAN_memcpy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef IS_LITTLE_ENDIAN</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">// 内部でcopyと同等のことを行っている</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a>(dest, src, size);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  memcpy(dest, src, size);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">return</span> dest;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a>(<span class="keywordtype">void</span>* after, <span class="keyword">const</span> <span class="keywordtype">void</span>* before, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">const</span> uint8_t* bef = (<span class="keyword">const</span> uint8_t*)before;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  uint8_t* aft = (uint8_t*)after;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (size &lt; 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  size--;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt;= size; i++)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    *(aft + (size - i)) = *(bef + i);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#pragma section</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">   11</a></span>&#160;<span class="keywordtype">void</span>* <a class="code" href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">ENDIAN_memcpy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef IS_LITTLE_ENDIAN</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">// 内部でcopyと同等のことを行っている</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a>(dest, src, size);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  memcpy(dest, src, size);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> dest;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a>(<span class="keywordtype">void</span>* after, <span class="keyword">const</span> <span class="keywordtype">void</span>* before, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">const</span> uint8_t* bef = (<span class="keyword">const</span> uint8_t*)before;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  uint8_t* aft = (uint8_t*)after;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (size &lt; 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  size--;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt;= size; i++)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    *(aft + (size - i)) = *(bef + i);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#pragma section</span></div>
 <div class="ttc" id="abuild__settings_8h_html"><div class="ttname"><a href="build__settings_8h.html">build_settings.h</a></div></div>
-<div class="ttc" id="aendian_8c_html_a3f28de556ac6792695854c7b4f437925"><div class="ttname"><a href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a></div><div class="ttdeci">void ENDIAN_conv(void *after, const void *before, size_t size)</div><div class="ttdoc">エンディアンの変更</div><div class="ttdef"><b>Definition:</b> <a href="endian_8c_source.html#l00022">endian.c:22</a></div></div>
-<div class="ttc" id="aendian_8c_html_af3c71c10af16134e94da32e1e0d8d0f8"><div class="ttname"><a href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">ENDIAN_memcpy</a></div><div class="ttdeci">void * ENDIAN_memcpy(void *dest, const void *src, size_t size)</div><div class="ttdoc">エンディアンを考慮した memcpy</div><div class="ttdef"><b>Definition:</b> <a href="endian_8c_source.html#l00010">endian.c:10</a></div></div>
+<div class="ttc" id="aendian_8c_html_a3f28de556ac6792695854c7b4f437925"><div class="ttname"><a href="endian_8c.html#a3f28de556ac6792695854c7b4f437925">ENDIAN_conv</a></div><div class="ttdeci">void ENDIAN_conv(void *after, const void *before, size_t size)</div><div class="ttdoc">エンディアンの変更</div><div class="ttdef"><b>Definition:</b> <a href="endian_8c_source.html#l00023">endian.c:23</a></div></div>
+<div class="ttc" id="aendian_8c_html_af3c71c10af16134e94da32e1e0d8d0f8"><div class="ttname"><a href="endian_8c.html#af3c71c10af16134e94da32e1e0d8d0f8">ENDIAN_memcpy</a></div><div class="ttdeci">void * ENDIAN_memcpy(void *dest, const void *src, size_t size)</div><div class="ttdoc">エンディアンを考慮した memcpy</div><div class="ttdef"><b>Definition:</b> <a href="endian_8c_source.html#l00011">endian.c:11</a></div></div>
 <div class="ttc" id="aendian_8h_html"><div class="ttname"><a href="endian_8h.html">endian.h</a></div><div class="ttdoc">エンディアンに関するものを定義する</div></div>
 <div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">C89 環境用 stdint.h</div></div>
 </div><!-- fragment --></div><!-- contents -->
